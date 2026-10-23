@@ -483,6 +483,8 @@ class Services:
             kindle.delete_device_book(self.kindle_books,id)
             self.kindle_books=[x for x in self.kindle_books if x['id']!=id]
             return {'device':self.kindle_device,'books':self.kindle_books}
+        if method=='kindleConvert':
+            return kindle.convert_book(self,self.book(args[0]))
         if method=='kindleCover':
             path=args[0]
             data,mime=kindle.book_cover(path)

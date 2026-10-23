@@ -3,6 +3,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import struct
 import time
 from pathlib import Path
@@ -205,6 +206,29 @@ def detect_device():
     return None
 
 
+SIDECAR_DIRS = {'.sdr'}
+SIDECAR_NAMES = {'metadata.kfx'}
+
+
+def is_sidecar(root, path):
+    parts = [p.lower() for p in path.relative_to(root).parts[:-1]]
+    if any(p in SIDECAR_DIRS for p in parts):
+        return True
+    name = path.name
+    if name.lower() in SIDECAR_NAMES:
+        return True
+    return name.startswith('CR!')
+
+
+def fallback_title(path):
+    stem = path.stem
+    stem = re.sub(r'[_\s]+sample$', '', stem, flags=re.I)
+    stem = re.sub(r'\s+-\s+unknown$', '', stem, flags=re.I)
+    stem = re.sub(r'[_\s]+[A-Z0-9]{10}$', '', stem)
+    title = re.sub(r'\s+', ' ', stem.replace('_', ' ')).strip()
+    return title or path.stem
+
+
 def scan_device(device_path):
     if not device_path:
         return []
@@ -215,14 +239,19 @@ def scan_device(device_path):
         for f in sorted(root.rglob(f'*{ext}')):
             if not f.is_file():
                 continue
-            if f.stat().st_size < 1024:
+            if f.stat().st_size < 1024 or is_sidecar(root, f):
                 continue
             book_id = hashlib.sha256(str(f.resolve()).lower().encode()).hexdigest()[:24]
             if book_id in seen_ids:
                 continue
             seen_ids.add(book_id)
-            try:
-                meta = parse_book(f)
+            meta = None
+            if f.suffix.lower() != '.kfx':
+                try:
+                    meta = parse_book(f)
+                except Exception:
+                    logging.exception('Kindle scan %s', f)
+            if meta is not None:
                 books.append({
                     'id': book_id,
                     'title': meta['title'],
@@ -239,11 +268,10 @@ def scan_device(device_path):
                     'size': f.stat().st_size,
                     'hasCover': meta['coverData'] is not None,
                 })
-            except Exception:
-                logging.exception('Kindle scan %s', f)
+            else:
                 books.append({
                     'id': book_id,
-                    'title': f.stem.replace('_', ' '),
+                    'title': fallback_title(f),
                     'author': '',
                     'format': f.suffix.lstrip('.').upper(),
                     'drm': False,
@@ -294,7 +322,12 @@ def import_books(services, device_books, selected_ids):
         }
         if sb.get('drm'):
             b['kindleDrm'] = True
-        meta = parse_book(str(dest))
+        meta = {}
+        if dest.suffix.lower() != '.kfx':
+            try:
+                meta = parse_book(str(dest))
+            except Exception:
+                logging.exception('Kindle import %s', dest)
         if meta.get('coverData') and meta.get('coverMime'):
             ext = 'jpg' if meta['coverMime'] == 'image/jpeg' else 'png'
             cover_path = folder / f'cover.{ext}'
@@ -322,7 +355,7 @@ def find_calibre():
     return None
 
 
-def convert_to_azw3(src_path, dest_path, calibre_exe):
+def convert_book_file(src_path, dest_path, calibre_exe):
     import subprocess
     result = subprocess.run(
         [calibre_exe, str(src_path), str(dest_path), '--prefer-metadata-cover'],
@@ -333,6 +366,27 @@ def convert_to_azw3(src_path, dest_path, calibre_exe):
         raise ValueError(result.stderr.strip() or 'Conversion failed.')
     if not Path(dest_path).is_file():
         raise ValueError('Conversion produced no output file.')
+
+
+def convert_book(services, book):
+    src = Path(book.get('path') or '')
+    if book.get('kind') != 'Kindle' and src.suffix.lower() not in KINDLE_EXTS:
+        return services.view(book)
+    if not src.is_file():
+        raise ValueError('The book file is missing from its folder.')
+    if src.suffix.lower() == '.kfx':
+        raise ValueError('KFX books are copy-protected by Amazon and cannot be read here.')
+    dest = src.with_suffix('.epub')
+    if not dest.is_file():
+        calibre = find_calibre()
+        if not calibre:
+            raise ValueError('Calibre is needed to convert Kindle formats to EPUB.')
+        convert_book_file(src, dest, calibre)
+    book['kindleFormat'] = book.get('kindleFormat') or src.suffix.lstrip('.').upper()
+    book['path'] = str(dest)
+    book['kind'] = 'EPUB'
+    services.save()
+    return services.view(book)
 
 
 def export_to_device(services, book_ids, device_path):
@@ -365,7 +419,7 @@ def export_to_device(services, book_ids, device_path):
                 if not calibre:
                     skipped.append({'title': b['title'], 'reason': 'Calibre not found — install calibre to convert EPUB'})
                     continue
-                convert_to_azw3(src, dest, calibre)
+                convert_book_file(src, dest, calibre)
             else:
                 skipped.append({'title': b['title'], 'reason': f'{suffix} not supported for Kindle'})
                 continue

@@ -48,5 +48,8 @@ body.playing .transcript p{font-size:16px;line-height:1.6;margin:10px 0}
 .kindle-col-mid{display:flex;flex-direction:column;justify-content:center;gap:14px;padding-top:60px}
 .kindle-col-mid button{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;padding:0;font-size:20px}
 @media(max-width:900px){.kindle-two-col{grid-template-columns:1fr}.kindle-col-mid{flex-direction:row;justify-content:center;padding-top:0}.kindle-col-mid button{transform:rotate(90deg)}}
-.kindle-col .book-row strong{display:block;font:700 17px Averia,serif;margin-bottom:4px}
-.kindle-col .book-row small{display:block;font-size:12px}
+.kindle-col .book-row{gap:12px}
+.kindle-col .book-row .grow{min-width:0;overflow:hidden}
+.kindle-col .book-row strong{display:block;font:700 17px Averia,serif;margin-bottom:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kindle-col .book-row small{display:block;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kindle-col .book-row label,.kindle-col .book-row .subtle{flex:0 0 auto}
