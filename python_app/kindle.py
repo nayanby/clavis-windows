@@ -9,12 +9,11 @@ from pathlib import Path
 
 KINDLE_EXTS = {'.mobi', '.azw', '.azw3', '.kfx'}
 EXTH_TYPES = {
-    100: 'author', 102: 'publisher', 103: 'language', 104: 'asin',
-    105: 'isbn', 109: 'subject', 110: 'publishDate', 113: 'asin',
-    201: 'description', 202: 'contributor', 203: 'rights',
-    204: 'subject', 205: 'review', 206: 'source', 207: 'asin',
-    208: 'asin', 501: 'coverOffset', 502: 'thumbOffset', 503: 'hasFakeCover',
-    504: 'sampleStart', 505: 'sampleEnd', 521: 'genre',
+    100: 'author', 101: 'publisher', 103: 'description', 104: 'isbn',
+    105: 'subject', 106: 'publishDate', 107: 'review', 108: 'contributor',
+    109: 'rights', 112: 'source', 113: 'asin', 121: 'kf8Boundary',
+    122: 'fixedLayout', 201: 'coverOffset', 202: 'thumbOffset',
+    203: 'hasFakeCover', 503: 'title', 524: 'language',
 }
 
 
@@ -49,33 +48,32 @@ def parse_exth(data, offset, length):
             key = EXTH_TYPES[rtype]
             text = value.decode('utf-8', errors='replace').strip()
             if text:
-                if key in meta and isinstance(meta[key], str):
-                    meta[key] = [meta[key], text]
+                if key not in meta:
+                    meta[key] = text
                 elif isinstance(meta[key], list):
                     meta[key].append(text)
                 else:
-                    meta[key] = text
+                    meta[key] = [meta[key], text]
         pos += rlen
     return meta
 
 
 def parse_mobi_header(record):
-    if len(record) < 16 + 232:
+    if len(record) < 16 + 232 or record[16:20] != b'MOBI':
         return {}, {}
-    palm = record[:16]
-    compression, unused, text_len, text_records, enc = struct.unpack_from('>HHIII', palm)
-    mobi = record[16:]
-    ml = struct.unpack_from('>I', mobi, 20)[0]
-    if ml < 232:
+    ml = struct.unpack_from('>I', record, 20)[0]
+    if ml < 232 or 16 + ml > len(record):
         return {}, {}
-    kind = struct.unpack_from('>I', mobi, 24)[0]
-    enc_val = struct.unpack_from('>I', mobi, 28)[0]
-    exth_flag = mobi[31] if len(mobi) > 31 else 0
-    title_off = struct.unpack_from('>I', mobi, 84)[0]
-    title_len = struct.unpack_from('>I', mobi, 88)[0]
-    locale = struct.unpack_from('>I', mobi, 92)[0] if len(mobi) > 95 else 0
-    meta = {'encoding': enc_val, 'kind': kind, 'locale': locale}
-    if title_off < len(record) and title_len:
+    kind = struct.unpack_from('>I', record, 24)[0]
+    enc_val = struct.unpack_from('>I', record, 28)[0]
+    title_off = struct.unpack_from('>I', record, 84)[0]
+    title_len = struct.unpack_from('>I', record, 88)[0]
+    locale = struct.unpack_from('>I', record, 92)[0]
+    first_image = struct.unpack_from('>I', record, 108)[0]
+    exth_flag = struct.unpack_from('>I', record, 128)[0]
+    meta = {'encoding': enc_val, 'kind': kind, 'locale': locale,
+            'headerLength': ml, 'firstImage': first_image}
+    if 0 < title_off < len(record) and title_len:
         end = min(title_off + title_len, len(record))
         raw = record[title_off:end].split(b'\x00')[0]
         try:
@@ -85,80 +83,47 @@ def parse_mobi_header(record):
         if t:
             meta['title'] = t
     exth = {}
-    if exth_flag & 0x40 and ml >= 152:
-        eo = 16 + ml
-        el = struct.unpack_from('>I', mobi, 148)[0] if ml >= 152 else 0
-        if eo + el <= len(record) and el > 0:
+    eo = 16 + ml
+    if exth_flag & 0x40 and eo + 12 <= len(record) and record[eo:eo + 4] == b'EXTH':
+        el = struct.unpack_from('>I', record, eo + 4)[0]
+        if el > 0 and eo + el <= len(record):
             exth = parse_exth(record, eo, el)
     return meta, exth
 
 
 def parse_kf8_header(records, boundary):
-    if boundary >= len(records):
+    if boundary is None or boundary < 0 or boundary >= len(records):
         return {}
-    rec = records[boundary]
-    if len(rec) < 256:
-        return {}
-    if rec[:4] != b'KF8\x00' and rec[:8] != b'\x00\x00\x00\x00':
-        pass
-    ml = struct.unpack_from('>I', rec, 20)[0] if len(rec) > 20 else 0
-    if ml < 232:
-        return {}
-    meta = {}
-    title_off = struct.unpack_from('>I', rec, 84)[0] if ml > 87 else 0
-    title_len = struct.unpack_from('>I', rec, 88)[0] if ml > 91 else 0
-    if title_off < len(rec) and title_len:
-        end = min(title_off + title_len, len(rec))
-        raw = rec[title_off:end].split(b'\x00')[0]
-        try:
-            t = raw.decode('utf-8').strip()
-        except UnicodeDecodeError:
-            t = raw.decode('latin-1', errors='replace').strip()
-        if t:
-            meta['title'] = t
-    if ml >= 152:
-        el = struct.unpack_from('>I', rec, 148)[0]
-        eo = 16 + ml
-        if eo + el <= len(rec) and el > 0:
-            exth = parse_exth(rec, eo, el)
-            for k, v in exth.items():
-                if k not in meta or k in ('author', 'subject'):
-                    meta[k] = v
-    return meta
+    meta, exth = parse_mobi_header(records[boundary])
+    out = dict(exth)
+    if meta.get('title'):
+        out['title'] = meta['title']
+    return out
 
 
-def find_boundary(records, mobi_meta):
-    if mobi_meta.get('kind') == 8:
-        if len(records) > 1:
-            rec0 = records[0]
-            if len(rec0) >= 16 + 232:
-                ml = struct.unpack_from('>I', rec0, 16 + 20)[0]
-                if ml >= 108:
-                    offset = struct.unpack_from('>I', rec0, 16 + 108)[0]
-                    if offset < len(records):
-                        return offset
+def find_boundary(records, mobi_meta, exth=None):
+    raw = (exth or {}).get('kf8Boundary')
+    try:
+        index = int(raw)
+    except (TypeError, ValueError):
+        index = -1
+    if 0 < index < len(records):
+        return index
     return None
 
 
 def extract_cover(records, mobi_meta, exth):
-    cover_off = None
-    try:
-        cover_off = int(exth.get('coverOffset', -1))
-    except (ValueError, TypeError):
-        cover_off = None
-    if cover_off is not None and 0 <= cover_off < len(records):
-        data = records[cover_off]
-        if data[:3] == b'\xff\xd8\xff':
-            return data, 'image/jpeg'
-        if data[:8] == b'\x89PNG\r\n\x1a\n':
-            return data, 'image/png'
-    thumb_off = None
-    try:
-        thumb_off = int(exth.get('thumbOffset', -1))
-    except (ValueError, TypeError):
-        thumb_off = None
-    if thumb_off is not None and 0 <= thumb_off < len(records):
-        data = records[thumb_off]
+    first_image = mobi_meta.get('firstImage')
+    base = first_image if isinstance(first_image, int) and 0 <= first_image < len(records) else 0
+    for key in ('coverOffset', 'thumbOffset'):
+        try:
+            offset = int(exth.get(key, -1))
+        except (ValueError, TypeError):
+            continue
+        index = base + offset
+        if not 0 <= index < len(records):
+            continue
+        data = records[index]
         if data[:3] == b'\xff\xd8\xff':
             return data, 'image/jpeg'
         if data[:8] == b'\x89PNG\r\n\x1a\n':
@@ -167,15 +132,13 @@ def extract_cover(records, mobi_meta, exth):
 
 
 def has_drm(mobi_meta, records):
-    if mobi_meta.get('kind') is not None and len(records) > 0:
-        rec0 = records[0]
-        if len(rec0) >= 16 + 232:
-            ml = struct.unpack_from('>I', rec0, 16 + 20)[0]
-            if ml >= 200:
-                drm_off = struct.unpack_from('>I', rec0, 16 + 168)[0]
-                if drm_off != 0xFFFFFFFF and drm_off > 0:
-                    return True
-    return False
+    if not records:
+        return False
+    rec0 = records[0]
+    if len(rec0) < 16 + 232 or mobi_meta.get('headerLength', 0) < 172:
+        return False
+    drm_offset, drm_count = struct.unpack_from('>II', rec0, 164)
+    return drm_offset not in (0, 0xFFFFFFFF) or drm_count not in (0, 0xFFFFFFFF)
 
 
 def parse_book(filepath):
@@ -185,7 +148,7 @@ def parse_book(filepath):
     if not records:
         raise ValueError('This file contains no readable records.')
     mobi_meta, exth = parse_mobi_header(records[0])
-    boundary = find_boundary(records, mobi_meta)
+    boundary = find_boundary(records, mobi_meta, exth)
     if boundary is not None:
         kf8 = parse_kf8_header(records, boundary)
         for k, v in kf8.items():
@@ -205,6 +168,15 @@ def parse_book(filepath):
     language = exth.get('language', '')
     cover_data, cover_mime = extract_cover(records, mobi_meta, exth)
     drm = has_drm(mobi_meta, records)
+    ext = filepath.suffix.lower()
+    if ext == '.azw3' or boundary is not None or mobi_meta.get('kind') == 8:
+        fmt = 'AZW3'
+    elif ext == '.azw':
+        fmt = 'AZW'
+    elif ext == '.kfx':
+        fmt = 'KFX'
+    else:
+        fmt = 'MOBI'
     return {
         'title': title,
         'author': author,
@@ -217,7 +189,7 @@ def parse_book(filepath):
         'coverData': cover_data,
         'coverMime': cover_mime,
         'drm': drm,
-        'format': 'AZW3' if boundary is not None else 'MOBI',
+        'format': fmt,
     }
 
 
@@ -335,15 +307,25 @@ def import_books(services, device_books, selected_ids):
 
 
 def find_calibre():
+    import os
     import shutil as _sh
-    return _sh.which('ebook-convert')
+    exe = _sh.which('ebook-convert')
+    if exe:
+        return exe
+    for base in (os.environ.get('ProgramFiles'), os.environ.get('ProgramFiles(x86)'), os.environ.get('LOCALAPPDATA')):
+        if not base:
+            continue
+        for sub in ('Calibre2', 'Calibre 2', os.path.join('Programs', 'Calibre2')):
+            candidate = Path(base) / sub / 'ebook-convert.exe'
+            if candidate.is_file():
+                return str(candidate)
+    return None
 
 
 def convert_to_azw3(src_path, dest_path, calibre_exe):
     import subprocess
     result = subprocess.run(
-        [calibre_exe, str(src_path), str(dest_path),
-         '--no-default-epub-cover', '--prefer-metadata-cover'],
+        [calibre_exe, str(src_path), str(dest_path), '--prefer-metadata-cover'],
         capture_output=True, text=True, timeout=300,
         creationflags=0x08000000,
     )
