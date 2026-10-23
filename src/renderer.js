@@ -20,6 +20,7 @@ const categories=[
 ];
 let state={books:[],settings:{},notes:[]},feeds=[],directory=[],route='Home',query='',activeFeed=null,current=null,chapter=0,playerContext='Audio',reader=null,readerGeneration=0,toastTimer,sleepTimer,saveTimer,noteTimer,activeNote=null,downloadState=[];
 let kindleDevice=null,kindleBooks=[],kindleScanning=false;
+const kindleArtCache=new Map(),pdfThumbCache=new Map();
 let ink={},inkTool='navigate',inkColor='#7971ae',inkWidth=3;
 let transcriptVisible=false,transcriptData={},transcriptStatus='',equalizer=[0,0,0,0,0],voiceGain=1;
 let audioLoading=false,audioGeneration=0,seekDragging=false,lastSeek=null,advancing=false;
@@ -238,11 +239,6 @@ async function kindleScan(){
   }catch(e){toast(e.message);}
   finally{kindleScanning=false;renderKindle();}
 }
-function loadKindleCover(path,imgEl){
-  api.kindleCover(path).then(dataUri=>{
-    if(dataUri&&imgEl)imgEl.src=dataUri;
-  }).catch(()=>{});
-}
 async function importDeviceBooks(ids){
   if(!ids.length)return toast('Select at least one book to import.');
   try{
@@ -256,8 +252,14 @@ function kindleImportSelected(){
 function kindleMenu(id){
   const b=kindleBooks.find(x=>x.id===id);
   if(!b)return;
-  modal(b.title,`<div class="stack"><button id="device-import">Import to library</button><button id="device-remove" class="danger">Remove from Kindle…</button></div>`,()=>{
+  const editable=String(b.format||'').toUpperCase()!=='KFX';
+  const details=editable?'<button id="device-edit">Edit details…</button><button id="device-online">Download details…</button>':'';
+  modal(b.title,`<div class="stack"><button id="device-import">Import to library</button>${details}<button id="device-remove" class="danger">Remove from Kindle…</button></div>`,()=>{
     on('device-import','click',()=>{closeModal();importDeviceBooks([id]);});
+    if(editable){
+      on('device-edit','click',()=>{closeModal();editDeviceMetadata(id);});
+      on('device-online','click',()=>{closeModal();openMetadataLookup(b,candidate=>editDeviceMetadata(id,candidate));});
+    }
     on('device-remove','click',async()=>{
       closeModal();
       try{
@@ -267,56 +269,218 @@ function kindleMenu(id){
     });
   });
 }
-function libraryMetadataDialog(id){
-  const b=state.books.find(x=>x.id===id);
-  if(!b)return;
-  modal('Edit book details',`<label for="lm-title">Title</label><input id="lm-title" value="${esc(b.title)}"><label for="lm-author">Author</label><input id="lm-author" value="${esc(b.author||'')}">${b.kind==='Kindle'?`<label for="lm-series">Series</label><input id="lm-series" value="${esc(b.series||'')}"><label for="lm-series-index">Series number</label><input id="lm-series-index" type="number" min="0" step="0.1" value="${b.seriesIndex||''}">`:''}<div class="row" style="margin-top:16px"><div><small class="muted">Cover image</small><br><img id="lm-cover-preview" src="${esc(b.cover||art(b.kind))}" style="width:60px;height:72px;object-fit:contain;border-radius:6px;border:1px solid var(--line);margin-top:6px"></div></div><div class="row"><button id="lm-change-cover">Change cover…</button></div><div class="row"><button id="lm-save" class="primary">Save</button><button id="lm-cancel">Cancel</button></div>`,()=>{
-    let coverDataUri=null;
-    on('lm-change-cover','click',async()=>{
+function libraryMetadataDialog(id){return editBookMetadata(id);}
+function kindleBookRow(b){
+  const known=kindleArtCache.get('dev:'+b.path)||art(b.format==='PDF'?'PDF':'EPUB');
+  return `<div class="book-row"><img class="book-cover" data-device-art="${b.id}" src="${esc(known)}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${b.format?' · '+esc(b.format):''}${b.drm?' · DRM':''}</small></span><label class="row" style="gap:6px"><input type="checkbox" data-device-select="${b.id}" style="width:auto">Select</label><button class="subtle" data-kindle-menu="${b.id}" aria-label="Options for ${esc(b.title)}">•••</button></div>`;
+}
+function libBookRow(b){
+  const fmt=b.kind==='Kindle'?(b.kindleFormat||'MOBI').toUpperCase():b.kind==='PDF'?'PDF':'EPUB';
+  const needsConvert=b.kind==='EPUB'?' · → AZW3':'';
+  const known=b.cover||kindleArtCache.get('lib:'+b.id)||art(b.kind);
+  return `<div class="book-row"><img class="book-cover" data-lib-art="${b.id}" src="${esc(known)}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${fmt?' · '+esc(fmt):''}${needsConvert}</small></span><label class="row" style="gap:6px"><input type="checkbox" data-lib-select="${b.id}" style="width:auto">Select</label><button class="subtle" data-lib-menu="${b.id}" aria-label="Options for ${esc(b.title)}">•••</button></div>`;
+}
+async function pdfThumbnail(url,width=96){
+  if(!url)return null;
+  const key=url+'|'+width;
+  if(!pdfThumbCache.has(key)){
+    pdfThumbCache.set(key,(async()=>{
+      try{
+        const probe=await fetch(url,{method:'HEAD'}).catch(()=>null);
+        const size=Number(probe?.headers.get('content-length')||0);
+        if(size>80*1024*1024)return null;
+        const response=await fetch(url);
+        if(!response.ok)return null;
+        const bytes=new Uint8Array(await response.arrayBuffer());
+        const doc=await pdfjs.getDocument({data:bytes,isEvalSupported:false}).promise;
+        try{
+          const page=await doc.getPage(1),base=page.getViewport({scale:1});
+          if(!base.width)return null;
+          const view=page.getViewport({scale:width/base.width});
+          const canvas=document.createElement('canvas');
+          canvas.width=Math.max(1,Math.round(view.width));
+          canvas.height=Math.max(1,Math.round(view.height));
+          await page.render({canvasContext:canvas.getContext('2d'),viewport:view}).promise;
+          return canvas.toDataURL('image/jpeg',.7);
+        }finally{doc.destroy();}
+      }catch{return null;}
+    })());
+  }
+  return pdfThumbCache.get(key);
+}
+function libraryMatch(b){
+  const wanted=String(b.title||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+  return state.books.find(x=>{
+    if(!['EPUB','Kindle','PDF'].includes(x.kind))return false;
+    if(b.asin&&x.asin===b.asin)return true;
+    if(!wanted)return false;
+    const title=String(x.title||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+    if(!title)return false;
+    return title===wanted||(wanted.length>6&&title.length>6&&(title.includes(wanted)||wanted.includes(title)));
+  })||null;
+}
+async function kindleLibraryArt(book){
+  if(book.cover)return book.cover;
+  const cached=kindleArtCache.get('lib:'+book.id);
+  if(cached)return cached;
+  let src=null;
+  if(book.kind==='PDF'&&book.url)src=await pdfThumbnail(book.url);
+  if(!src)src=await api.bookCover(book.id).catch(()=>null);
+  if(src)kindleArtCache.set('lib:'+book.id,src);
+  return src;
+}
+async function loadKindleArtwork(){
+  const queue=[];
+  document.querySelectorAll('[data-lib-art]').forEach(img=>{
+    const book=state.books.find(x=>x.id===img.dataset.libArt);
+    if(!book||book.cover)return;
+    queue.push(async()=>{const src=await kindleLibraryArt(book);if(src&&img.isConnected)img.src=src;});
+  });
+  document.querySelectorAll('[data-device-art]').forEach(img=>{
+    const book=kindleBooks.find(x=>x.id===img.dataset.deviceArt);
+    if(!book)return;
+    const cached=kindleArtCache.get('dev:'+book.path);
+    if(cached){img.src=cached;return;}
+    queue.push(async()=>{
+      let src=null;
+      if(book.hasCover)src=await api.kindleCover(book.path).catch(()=>null);
+      if(!src&&String(book.format).toUpperCase()==='PDF'){
+        const url=await api.kindleMediaUrl(book.path).catch(()=>null);
+        src=await pdfThumbnail(url);
+      }
+      if(!src){const library=libraryMatch(book);if(library)src=await kindleLibraryArt(library);}
+      if(src){kindleArtCache.set('dev:'+book.path,src);if(img.isConnected)img.src=src;}
+    });
+  });
+  const workers=Array.from({length:3},async()=>{while(queue.length)await queue.shift()();});
+  await Promise.all(workers);
+}
+function bookDraft(b){
+  return {title:b.title||'',author:b.author||'',series:b.series||'',seriesIndex:b.seriesIndex??'',publisher:b.publisher||'',published:b.published||'',isbn:b.isbn||'',subject:b.subject||'',description:b.description||'',cover:b.cover||'',coverData:null};
+}
+function seedFields(seed){
+  return Object.fromEntries(Object.entries(seed||{}).filter(([,value])=>value!==undefined&&value!==null));
+}
+function readEditor(draft){
+  draft.title=$('me-title').value.trim();
+  draft.author=$('me-author').value.trim();
+  draft.series=$('me-series').value.trim();
+  draft.seriesIndex=$('me-series-index').value;
+  draft.publisher=$('me-publisher').value.trim();
+  draft.published=$('me-published').value.trim();
+  draft.isbn=$('me-isbn').value.trim();
+  draft.subject=$('me-subject').value.trim();
+  draft.description=$('me-description').value.trim();
+  return draft;
+}
+function editMetadataDialog(draft,save){
+  const preview=draft.coverData||draft.cover||art('EPUB');
+  modal('Edit book details',`<div class="meta-editor"><div class="meta-cover"><img id="me-cover" src="${esc(preview)}" alt=""><button id="me-cover-pick">Choose cover…</button></div><div class="meta-fields"><label for="me-title">Title</label><input id="me-title" value="${esc(draft.title)}"><label for="me-author">Author(s)</label><input id="me-author" value="${esc(draft.author)}"><div class="meta-pair"><div><label for="me-series">Series</label><input id="me-series" value="${esc(draft.series)}"></div><div><label for="me-series-index">Number</label><input id="me-series-index" type="number" min="0" step="0.1" value="${draft.seriesIndex??''}"></div></div><div class="meta-pair"><div><label for="me-publisher">Publisher</label><input id="me-publisher" value="${esc(draft.publisher)}"></div><div><label for="me-published">Published</label><input id="me-published" value="${esc(draft.published)}"></div></div><label for="me-isbn">ISBN</label><input id="me-isbn" value="${esc(draft.isbn)}"><label for="me-subject">Tags</label><input id="me-subject" value="${esc(draft.subject)}"><label for="me-description">Description</label><textarea id="me-description" rows="5">${esc(draft.description)}</textarea></div></div><div class="row meta-actions"><button id="me-online">Download metadata…</button><span class="grow"></span><button id="me-save" class="primary">Save</button><button id="me-cancel">Cancel</button></div>`,()=>{
+    on('me-cover-pick','click',()=>{
       const input=document.createElement('input');
       input.type='file';input.accept='image/jpeg,image/png,image/webp';
       input.onchange=()=>{
         const file=input.files[0];if(!file)return;
         const reader=new FileReader();
-        reader.onload=()=>{coverDataUri=reader.result;$('lm-cover-preview').src=reader.result;};
+        reader.onload=()=>{draft.coverData=reader.result;draft.cover=reader.result;$('me-cover').src=reader.result;};
         reader.readAsDataURL(file);
       };
       input.click();
     });
-    on('lm-cancel','click',closeModal);
-    on('lm-save','click',async()=>{
-      const patch={title:$('lm-title').value,author:$('lm-author').value};
-      if(b.kind==='Kindle'){
-        patch.series=$('lm-series')?.value||'';
-        const idx=$('lm-series-index')?.value;
-        if(idx!=='')patch.seriesIndex=Number(idx);
-      }
-      if(coverDataUri)patch.cover=coverDataUri;
-      try{
-        const updated=await api.updateBookMetadata(b.id,patch);
-        const i=state.books.findIndex(x=>x.id===b.id);
-        if(i>=0)state.books[i]=updated;
-        if(current?.id===b.id)Object.assign(current,updated);
-        closeModal();render();toast('Book details updated.');
-      }catch(e){toast(e.message);}
+    on('me-cancel','click',closeModal);
+    on('me-online','click',()=>{
+      readEditor(draft);
+      openMetadataLookup(draft,candidate=>{
+        Object.assign(draft,{title:candidate.title,author:candidate.author,publisher:candidate.publisher,published:candidate.published,isbn:candidate.isbn,subject:candidate.subject,description:candidate.description});
+        if(candidate.series){draft.series=candidate.series;draft.seriesIndex=candidate.seriesIndex??draft.seriesIndex;}
+        if(candidate.coverData){draft.coverData=candidate.coverData;draft.cover=candidate.coverData;}
+        editMetadataDialog(draft,save);
+      });
+    });
+    on('me-save','click',async()=>{
+      readEditor(draft);
+      if(!draft.title)return toast('A title is required.');
+      const patch={title:draft.title,author:draft.author,series:draft.series,publisher:draft.publisher,published:draft.published,isbn:draft.isbn,subject:draft.subject,description:draft.description};
+      if(draft.seriesIndex!=='')patch.seriesIndex=Number(draft.seriesIndex);
+      if(draft.coverData)patch.cover=draft.coverData;
+      const button=$('me-save');button.disabled=true;
+      try{await save(patch);closeModal();}
+      catch(e){button.disabled=false;toast(e.message);}
     });
   });
 }
-function kindleBookRow(b){
-  return `<div class="book-row"><img class="book-cover" data-device-cover="${esc(b.path)}" src="${art('EPUB')}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${b.format?' · '+esc(b.format):''}${b.drm?' · DRM':''}</small></span><label class="row" style="gap:6px"><input type="checkbox" data-device-select="${b.id}" style="width:auto">Select</label><button class="subtle" data-kindle-menu="${b.id}" aria-label="Options for ${esc(b.title)}">•••</button></div>`;
+async function editBookMetadata(id,seed){
+  const book=state.books.find(x=>x.id===id);
+  if(!book)return;
+  const draft=Object.assign(bookDraft(book),seedFields(seed));
+  editMetadataDialog(draft,async patch=>{
+    const updated=await api.updateBookMetadata(book.id,patch);
+    const index=state.books.findIndex(x=>x.id===book.id);
+    if(index>=0)state.books[index]=updated;
+    if(current?.id===book.id)Object.assign(current,updated);
+    if(patch.cover)kindleArtCache.set('lib:'+book.id,patch.cover);
+    renderKindle();toast('Book details saved.');
+  });
 }
-function libBookRow(b){
-  const fmt=b.kind==='Kindle'?(b.kindleFormat||'MOBI').toUpperCase():b.kind==='PDF'?'PDF':'EPUB';
-  const needsConvert=b.kind==='EPUB'?' · → AZW3':'';
-  return `<div class="book-row"><img class="book-cover" src="${esc(b.cover||art(b.kind))}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${fmt?' · '+esc(fmt):''}${needsConvert}</small></span><label class="row" style="gap:6px"><input type="checkbox" data-lib-select="${b.id}" style="width:auto">Select</label></div>`;
+function editDeviceMetadata(id,seed){
+  const book=kindleBooks.find(x=>x.id===id);
+  if(!book)return;
+  const draft=Object.assign(bookDraft(book),{cover:kindleArtCache.get('dev:'+book.path)||''},seedFields(seed));
+  editMetadataDialog(draft,async patch=>{
+    const result=await api.kindleUpdateMetadata(book.path,patch);
+    if(result){kindleBooks=result.books||kindleBooks;kindleArtCache.delete('dev:'+book.path);if(patch.cover)kindleArtCache.set('dev:'+book.path,patch.cover);renderKindle();toast('Details saved to the Kindle.');}
+  });
 }
-async function kindleExportSelected(){
-  const ids=[...document.querySelectorAll('[data-lib-select]:checked')].map(el=>el.dataset.libSelect);
+async function useCandidate(candidate,apply){
+  let cover=candidate.coverData||null;
+  if(!cover&&candidate.coverUrl){
+    cover=await api.metadataCover(candidate.coverUrl).catch(()=>null);
+  }
+  apply({title:candidate.title||'',author:candidate.author||'',publisher:candidate.publisher||'',published:candidate.published||'',isbn:candidate.isbn||'',subject:candidate.subject||'',description:candidate.description||'',coverData:cover,cover:cover||candidate.coverThumb||''});
+}
+function openMetadataLookup(seed,onPick){
+  let title=String(seed.title||'').trim();
+  const author=String(seed.author||'').trim();
+  const last=author.split(/[\s,]+/).filter(Boolean).pop();
+  if(last&&title.toLowerCase().includes(last.toLowerCase()))title=title.replace(/\s+[-–—]\s+.*$/,'').trim();
+  const initial=[title,author].filter(Boolean).join(' ')||seed.isbn||'';
+  modal('Download book details',`<p class="muted">Search Open Library, Internet Archive and Crossref, then review the result before saving.</p><div class="row"><input id="ml-query" class="grow" value="${esc(initial)}" placeholder="Title, author or ISBN"><button id="ml-search" class="primary">Search</button></div><div id="ml-results" class="meta-results"><p class="muted">Searching…</p></div>`,()=>{
+    const search=async()=>{
+      const query=$('ml-query').value.trim();
+      if(!query)return;
+      $('ml-results').innerHTML='<p class="muted">Searching Open Library, Internet Archive and Crossref…</p>';
+      try{
+        const results=await api.metadataLookup(query);
+        if(!$('ml-results'))return;
+        if(!results.length){$('ml-results').innerHTML='<p class="muted">No matches. Try the title and author, or paste the ISBN.</p>';return;}
+        $('ml-results').innerHTML=results.map((c,i)=>`<button class="meta-result" data-meta="${i}">${c.coverThumb?`<img src="${c.coverThumb}" alt="">`:`<img src="${art('EPUB')}" alt="">`}<span class="grow"><strong>${esc(c.title)}</strong><small>${esc([c.author,(c.published||'').slice(0,10),c.publisher].filter(Boolean).join(' · ')||'Unknown author')}</small><small class="muted">${esc([c.source,c.isbn].filter(Boolean).join(' · '))}</small></span></button>`).join('');
+        document.querySelectorAll('[data-meta]').forEach(el=>el.addEventListener('click',run(async()=>{
+          el.disabled=true;
+          await useCandidate(results[Number(el.dataset.meta)],candidate=>{closeModal();onPick(candidate);});
+        })));
+      }catch(e){if($('ml-results'))$('ml-results').innerHTML=`<p class="notice">${esc(e.message)}</p>`;}
+    };
+    on('ml-search','click',search);
+    $('ml-query').addEventListener('keydown',e=>{if(e.key==='Enter')search();});
+    if(initial)search();
+  });
+}
+function openLibraryMenu(id){
+  const book=state.books.find(x=>x.id===id);
+  if(!book)return;
+  modal(book.title,`<div class="stack"><button id="lib-open">Open book</button><button id="lib-edit">Edit details…</button><button id="lib-online">Download details…</button><button id="lib-send">Send to Kindle</button></div>`,()=>{
+    on('lib-open','click',()=>{closeModal();return openBook(id);});
+    on('lib-edit','click',()=>{closeModal();editBookMetadata(id);});
+    on('lib-online','click',()=>{closeModal();openMetadataLookup(book,candidate=>editBookMetadata(id,candidate));});
+    on('lib-send','click',async()=>{closeModal();await sendBooks([id]);});
+  });
+}
+async function sendBooks(ids){
   if(!ids.length)return toast('Select at least one book to send.');
   if(!kindleDevice)return toast('No Kindle device detected.');
   try{
     const result=await api.kindleExport(ids,kindleDevice);
-    document.querySelectorAll('[data-lib-select]').forEach(el=>el.checked=false);
+    document.querySelectorAll('[data-lib-select]').forEach(el=>{if(ids.includes(el.dataset.libSelect))el.checked=false;});
     const parts=[];
     if(result.copied?.length)parts.push(result.copied.length+' sent');
     if(result.skipped?.length)parts.push(result.skipped.length+' skipped');
@@ -328,6 +492,9 @@ async function kindleExportSelected(){
     }
     await kindleScan();
   }catch(e){toast(e.message);}
+}
+function kindleExportSelected(){
+  return sendBooks([...document.querySelectorAll('[data-lib-select]:checked')].map(el=>el.dataset.libSelect));
 }
 function syncKindleSelectAll(){
   for(const [all,rows] of [['kindle-all-lib','[data-lib-select]'],['kindle-all-device','[data-device-select]']]){
@@ -413,11 +580,11 @@ function renderKindle(){
   document.querySelectorAll('[data-device-select],[data-lib-select]').forEach(el=>el.addEventListener('change',syncKindleSelectAll));
   on('kindle-add-pdf','click',kindlePdfDialog);
   on('kindle-delete-selected','click',kindleDeleteSelected);
-  document.querySelectorAll('[data-device-cover]').forEach(img=>loadKindleCover(img.dataset.deviceCover,img));
+  void loadKindleArtwork();
 }
 
 const actions={'undo-seek':undoSeek,'detect-chapters':detectChapters,import:importFiles,folder:importFolder,play:togglePlay,'skip-back':()=>skip(-1),'skip-forward':()=>skip(1),previous:()=>changeChapter(-1),next:()=>changeChapter(1),speed:speedDialog,sleep:sleepDialog,'add-audio-bookmark':addAudioBookmark,'audio-bookmarks':audioBookmarks,'show-player':async()=>{if(reader)await cleanupReader();route='Player';render();},'sources-back':()=>{articleOpen=false;activeFeed=null;renderFeeds();},'feed-add':feedAdd,'browse-sources':browseSources,files:()=>api.openFiles(),'new-note':newNote,'add-download':addDownload};
-document.addEventListener('click',run(async e=>{const el=e.target.closest('button');if(!el||el.disabled)return;const d=el.dataset;if(d.route)return navigate(d.route);if(d.action)return actions[d.action]?.();if(d.open)return openBook(d.open);if(d.bookMenu)return bookMenu(d.bookMenu);if(d.kindleMenu)return kindleMenu(d.kindleMenu);if(d.chapter!==undefined){await startBook(current,true,Number(d.chapter),0);return renderPlayer();}if(d.feed)return openFeed(d.feed);if(d.refresh)return refreshFeed(d.refresh);if(d.removeFeed){modal('Unsubscribe?',`<p>Remove this source and its saved feed entries?</p><div class="row"><button id="confirm-unsubscribe">Unsubscribe</button><button id="keep-subscription">Keep source</button></div>`,()=>{on('keep-subscription','click',closeModal);on('confirm-unsubscribe','click',async()=>{feeds=await api.feedRemove(d.removeFeed);activeFeed=null;closeModal();renderFeeds();});});return;}if(d.episode)return playEpisode(d.episode);if(d.article)return readArticle(d.article);if(d.external)return api.openURL(d.external);if(d.note){await flushNote();activeNote=d.note;renderNotes();return;}if(d.downloadAction){downloadState=await api.downloadAction(d.id,d.downloadAction);if(Array.isArray(downloadState))renderDownloads();return;}}));
+document.addEventListener('click',run(async e=>{const el=e.target.closest('button');if(!el||el.disabled)return;const d=el.dataset;if(d.route)return navigate(d.route);if(d.action)return actions[d.action]?.();if(d.open)return openBook(d.open);if(d.bookMenu)return bookMenu(d.bookMenu);if(d.kindleMenu)return kindleMenu(d.kindleMenu);if(d.libMenu)return openLibraryMenu(d.libMenu);if(d.chapter!==undefined){await startBook(current,true,Number(d.chapter),0);return renderPlayer();}if(d.feed)return openFeed(d.feed);if(d.refresh)return refreshFeed(d.refresh);if(d.removeFeed){modal('Unsubscribe?',`<p>Remove this source and its saved feed entries?</p><div class="row"><button id="confirm-unsubscribe">Unsubscribe</button><button id="keep-subscription">Keep source</button></div>`,()=>{on('keep-subscription','click',closeModal);on('confirm-unsubscribe','click',async()=>{feeds=await api.feedRemove(d.removeFeed);activeFeed=null;closeModal();renderFeeds();});});return;}if(d.episode)return playEpisode(d.episode);if(d.article)return readArticle(d.article);if(d.external)return api.openURL(d.external);if(d.note){await flushNote();activeNote=d.note;renderNotes();return;}if(d.downloadAction){downloadState=await api.downloadAction(d.id,d.downloadAction);if(Array.isArray(downloadState))renderDownloads();return;}}));
 document.addEventListener('click',e=>{const a=e.target.closest('.article-content a');if(a){e.preventDefault();run(()=>api.openURL(a.href))();}});
 document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement){e.target.removeAttribute('src');e.target.style.visibility='hidden';}},true);
 on('dialog-close','click',closeModal);on('import','click',importFiles);on('files','click',()=>api.openFiles());on('search','input',()=>{query=$('search').value;render();});

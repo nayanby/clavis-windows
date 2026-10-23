@@ -22,7 +22,9 @@ import feedparser
 import requests
 from readability import Document
 
+import bookart
 import kindle
+import metadata
 
 AUDIO = {'.mp3', '.m4a', '.m4b', '.ogg', '.wav', '.flac', '.opus', '.aac'}
 def uid(value): return hashlib.sha256(str(value).lower().encode()).hexdigest()[:24]
@@ -166,6 +168,16 @@ class Services:
                     b['kindleFormat']=meta['format']
                     if meta['drm']: b['kindleDrm']=True
                 except Exception: logging.exception('Kindle metadata %s',p)
+            elif kind=='PDF':
+                try:
+                    meta=kindle.pdf_metadata(str(p))
+                    b['title']=meta.get('title') or b['title']
+                    if meta.get('author'): b['author']=meta['author']
+                    if meta.get('subject'): b['subject']=meta['subject']
+                    if meta.get('publisher'): b['publisher']=meta['publisher']
+                    if meta.get('isbn'): b['isbn']=meta['isbn']
+                    if meta.get('published'): b['published']=meta['published']
+                except Exception: logging.exception('PDF metadata %s',p)
         return b
     def scan_folder(self,folder):
         groups={}; docs=[]
@@ -503,9 +515,53 @@ class Services:
             return kindle.convert_book(self,self.book(args[0]))
         if method=='kindleCover':
             path=args[0]
-            data,mime=kindle.book_cover(path)
+            if not any(b.get('path')==path for b in self.kindle_books): return None
+            try: data,mime=kindle.book_cover(path)
+            except Exception:
+                logging.exception('Kindle cover %s',path)
+                return None
             if not data: return None
-            import base64
+            return f'data:{mime};base64,{base64.b64encode(data).decode()}'
+        if method=='kindleMediaUrl':
+            path=args[0]
+            if not any(b.get('path')==path for b in self.kindle_books): raise ValueError('That file is not on the connected Kindle.')
+            return self.media_url(path)
+        if method=='kindleUpdateMetadata':
+            path,patch=args[0],args[1]
+            if not any(b.get('path')==path for b in self.kindle_books): raise ValueError('That file is not on the connected Kindle.')
+            kindle.write_device_metadata(path,patch)
+            self.kindle_books=kindle.scan_device(self.kindle_device)
+            return {'device':self.kindle_device,'books':self.kindle_books}
+        if method=='bookCover':
+            b=self.book(args[0])
+            cover=b.get('cover')
+            if isinstance(cover,str) and cover.lower().startswith(('http://','https://')): return cover
+            # Books can share a folder, so a generic cover.jpg would leak between them.
+            if cover and Path(cover).is_file() and sum(1 for x in self.store['books'] if x.get('cover')==cover)>1:
+                cover=None; b['cover']=None
+            if not cover or not Path(cover).is_file():
+                data,mime=bookart.for_book(b)
+                if (not data or not mime) and Path(b.get('path') or '').suffix.lower() in kindle.PARSE_EXTS:
+                    try: data,mime=kindle.book_cover(b['path'])
+                    except Exception: logging.exception('Book cover %s',b.get('path'))
+                if not data or not mime: return None
+                source=b.get('path')
+                folder=Path(source).parent if source else Path(b.get('source') or self.booksdir)
+                ext={'image/png':'png','image/webp':'webp','image/gif':'gif'}.get(mime,'jpg')
+                target=folder/f"cover-{b['id']}.{ext}"
+                try:
+                    target.write_bytes(data); b['cover']=str(target); self.save(); cover=str(target)
+                except OSError:
+                    return f'data:{mime};base64,{base64.b64encode(data).decode()}'
+            try: data=Path(cover).read_bytes()
+            except OSError: return None
+            suffix=Path(cover).suffix.lower()
+            mime='image/png' if suffix=='.png' else 'image/webp' if suffix=='.webp' else 'image/gif' if suffix=='.gif' else 'image/jpeg'
+            return f'data:{mime};base64,{base64.b64encode(data).decode()}'
+        if method=='metadataLookup':
+            return metadata.search(str(args[0] or ''))
+        if method=='metadataCover':
+            data,mime=metadata.cover(str(args[0]))
             return f'data:{mime};base64,{base64.b64encode(data).decode()}'
         if method=='updateBookMetadata':
             b=self.book(args[0]); patch=args[1]
@@ -516,16 +572,16 @@ class Services:
             if isinstance(patch.get('publisher'),str): b['publisher']=patch['publisher'][:300]
             if isinstance(patch.get('isbn'),str): b['isbn']=patch['isbn'][:100]
             if isinstance(patch.get('subject'),str): b['subject']=patch['subject'][:300]
+            if isinstance(patch.get('published'),str): b['published']=patch['published'][:40]
             if isinstance(patch.get('description'),str): b['description']=patch['description'][:2000]
             if patch.get('cover'):
-                import base64
                 raw=patch['cover']
                 if raw.startswith('data:'):
                     header,b64=raw.split(',',1)
                     ext='png' if 'png' in header else 'jpg'
                     cover_dir=Path(b.get('source',self.booksdir))
                     cover_dir.mkdir(parents=True,exist_ok=True)
-                    cover_path=cover_dir/f'cover.{ext}'
+                    cover_path=cover_dir/f"cover-{b['id']}.{ext}"
                     cover_path.write_bytes(base64.b64decode(b64))
                     b['cover']=str(cover_path)
             self.save(); return self.view(b)
