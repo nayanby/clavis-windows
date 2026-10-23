@@ -1,5 +1,6 @@
 """Kindle device detection, MOBI/AZW3 metadata parsing, import and export."""
 import hashlib
+import html
 import json
 import logging
 import os
@@ -9,6 +10,8 @@ import time
 from pathlib import Path
 
 KINDLE_EXTS = {'.mobi', '.azw', '.azw3', '.kfx'}
+PARSE_EXTS = {'.mobi', '.azw', '.azw3'}
+DEVICE_EXTS = KINDLE_EXTS | {'.pdf'}
 EXTH_TYPES = {
     100: 'author', 101: 'publisher', 103: 'description', 104: 'isbn',
     105: 'subject', 106: 'publishDate', 107: 'review', 108: 'contributor',
@@ -221,9 +224,10 @@ def is_sidecar(root, path):
 
 
 def fallback_title(path):
-    stem = path.stem
+    stem = html.unescape(path.stem)
     stem = re.sub(r'[_\s]+sample$', '', stem, flags=re.I)
     stem = re.sub(r'\s+-\s+unknown$', '', stem, flags=re.I)
+    stem = re.sub(r'\.pdf-cdeKey(_[0-9A-F]{8,})?$', '', stem, flags=re.I)
     stem = re.sub(r'[_\s]+[A-Z0-9]{10}$', '', stem)
     title = re.sub(r'\s+', ' ', stem.replace('_', ' ')).strip()
     return title or path.stem
@@ -233,10 +237,13 @@ def scan_device(device_path):
     if not device_path:
         return []
     root = Path(device_path)
+    base = root / 'documents'
+    if not base.is_dir():
+        base = root
     books = []
     seen_ids = set()
-    for ext in KINDLE_EXTS:
-        for f in sorted(root.rglob(f'*{ext}')):
+    for ext in DEVICE_EXTS:
+        for f in sorted(base.rglob(f'*{ext}')):
             if not f.is_file():
                 continue
             if f.stat().st_size < 1024 or is_sidecar(root, f):
@@ -246,7 +253,7 @@ def scan_device(device_path):
                 continue
             seen_ids.add(book_id)
             meta = None
-            if f.suffix.lower() != '.kfx':
+            if f.suffix.lower() in PARSE_EXTS:
                 try:
                     meta = parse_book(f)
                 except Exception:
@@ -300,7 +307,8 @@ def import_books(services, device_books, selected_ids):
         dest = folder / src.name
         import shutil
         shutil.copy2(str(src), str(dest))
-        kind = 'Kindle'
+        is_pdf = src.suffix.lower() == '.pdf'
+        kind = 'PDF' if is_pdf else 'Kindle'
         b = {
             'id': sb['id'],
             'title': sb['title'],
@@ -318,12 +326,13 @@ def import_books(services, device_books, selected_ids):
             'progress': 0,
             'bookmarks': [],
             'lastActive': 0,
-            'kindleFormat': sb.get('format', 'MOBI'),
         }
+        if not is_pdf:
+            b['kindleFormat'] = sb.get('format', 'MOBI')
         if sb.get('drm'):
             b['kindleDrm'] = True
         meta = {}
-        if dest.suffix.lower() != '.kfx':
+        if dest.suffix.lower() in PARSE_EXTS:
             try:
                 meta = parse_book(str(dest))
             except Exception:
@@ -413,7 +422,7 @@ def export_to_device(services, book_ids, device_path):
         dest_name = src.stem + ('.azw3' if suffix == '.epub' else suffix)
         dest = dest_dir / dest_name
         try:
-            if suffix in KINDLE_EXTS:
+            if suffix in KINDLE_EXTS or suffix == '.pdf':
                 shutil.copy2(str(src), str(dest))
             elif suffix == '.epub':
                 if not calibre:

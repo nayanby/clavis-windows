@@ -306,7 +306,7 @@ function kindleBookRow(b){
   return `<div class="book-row"><img class="book-cover" data-device-cover="${esc(b.path)}" src="${art('EPUB')}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${b.format?' · '+esc(b.format):''}${b.drm?' · DRM':''}</small></span><label class="row" style="gap:6px"><input type="checkbox" data-device-select="${b.id}" style="width:auto">Select</label><button class="subtle" data-kindle-menu="${b.id}" aria-label="Options for ${esc(b.title)}">•••</button></div>`;
 }
 function libBookRow(b){
-  const fmt=b.kind==='Kindle'?(b.kindleFormat||'MOBI').toUpperCase():'EPUB';
+  const fmt=b.kind==='Kindle'?(b.kindleFormat||'MOBI').toUpperCase():b.kind==='PDF'?'PDF':'EPUB';
   const needsConvert=b.kind==='EPUB'?' · → AZW3':'';
   return `<div class="book-row"><img class="book-cover" src="${esc(b.cover||art(b.kind))}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${fmt?' · '+esc(fmt):''}${needsConvert}</small></span><label class="row" style="gap:6px"><input type="checkbox" data-lib-select="${b.id}" style="width:auto">Select</label></div>`;
 }
@@ -329,6 +329,43 @@ async function kindleExportSelected(){
     await kindleScan();
   }catch(e){toast(e.message);}
 }
+function syncKindleSelectAll(){
+  for(const [all,rows] of [['kindle-all-lib','[data-lib-select]'],['kindle-all-device','[data-device-select]']]){
+    const box=$(all);
+    if(!box)continue;
+    const items=[...document.querySelectorAll(rows)];
+    box.checked=items.length>0&&items.every(el=>el.checked);
+  }
+}
+function kindlePdfDialog(){
+  const pdfs=state.books.filter(b=>b.kind==='PDF');
+  const body=pdfs.length
+    ?'<div class="stack">'+pdfs.map(b=>'<button data-send-pdf="'+b.id+'"><strong>'+esc(b.title)+'</strong><small>'+esc(b.author||'Unknown author')+'</small></button>').join('')+'</div>'
+    :'<p class="muted">No PDF books in your library yet.</p>';
+  modal('Send a PDF to Kindle',body,()=>{
+    document.querySelectorAll('[data-send-pdf]').forEach(el=>el.onclick=run(async()=>{
+      el.disabled=true;
+      const result=await api.kindleExport([el.dataset.sendPdf],kindleDevice);
+      closeModal();
+      if(result.copied?.length){toast('PDF sent to Kindle.');await kindleScan();}
+      else toast((result.skipped?.[0]||result.errors?.[0])?.reason||'The PDF could not be sent.');
+    }));
+  });
+}
+function kindleDeleteSelected(){
+  const ids=[...document.querySelectorAll('[data-device-select]:checked')].map(el=>el.dataset.deviceSelect);
+  if(!ids.length)return toast('Select at least one book to remove.');
+  modal('Remove from Kindle?',`<p>Move ${ids.length} selected file(s) to the Recycle Bin? They will no longer appear on the device.</p><div class="row"><button id="confirm-device-delete" class="danger">Remove ${ids.length} file(s)</button><button id="cancel-device-delete">Cancel</button></div>`,()=>{
+    on('cancel-device-delete','click',closeModal);
+    on('confirm-device-delete','click',async()=>{
+      closeModal();
+      try{
+        const s=await api.kindleDeleteDeviceBooks(ids);
+        if(s){kindleBooks=s.books||[];toast(ids.length+' file(s) removed from Kindle (Recycle Bin).');renderKindle();}
+      }catch(e){toast(e.message);}
+    });
+  });
+}
 function renderKindle(){
   if(!kindleDevice){
     $('main').innerHTML=`<div class="empty"><h2>Connect your Kindle</h2><p>Plug in your Kindle via USB to browse, import, and export books.</p><div class="row" style="justify-content:center;margin-top:16px"><button id="kindle-refresh" class="primary">Detect Kindle</button></div></div>`;
@@ -339,7 +376,7 @@ function renderKindle(){
     });
     return;
   }
-  const exportable=state.books.filter(b=>b.kind==='EPUB'||b.kind==='Kindle');
+  const exportable=state.books.filter(b=>['EPUB','Kindle','PDF'].includes(b.kind));
   const libBody=exportable.length
     ?exportable.map(libBookRow).join('')
     :'<p class="muted" style="padding:20px;text-align:center">No exportable books in library.<br>Import Kindle books or add EPUB files.</p>';
@@ -347,9 +384,9 @@ function renderKindle(){
     ?kindleBooks.map(kindleBookRow).join('')
     :'<p class="muted" style="padding:20px;text-align:center">No books found on device.</p>';
   const columns='<div class="kindle-two-col">'
-    +'<div class="kindle-col"><div class="kindle-col-head"><h3>Clavis Library</h3><span class="muted">'+exportable.length+' book(s)</span></div><div class="kindle-col-body">'+libBody+'</div></div>'
+    +'<div class="kindle-col"><div class="kindle-col-head"><h3>Clavis Library</h3><span class="muted">'+exportable.length+' book(s)</span></div><div class="kindle-col-tools"><label><input type="checkbox" id="kindle-all-lib">Select all</label></div><div class="kindle-col-body">'+libBody+'</div></div>'
     +'<div class="kindle-col-mid"><button id="kindle-to-device" class="primary" title="Send selected books to Kindle">→</button><button id="kindle-to-library" title="Import selected books to library">←</button></div>'
-    +'<div class="kindle-col"><div class="kindle-col-head"><h3>On Kindle</h3><span class="muted">'+kindleBooks.length+' book(s)</span></div><div class="kindle-col-body">'+deviceBody+'</div></div>'
+    +'<div class="kindle-col"><div class="kindle-col-head"><h3>On Kindle</h3><span class="muted">'+kindleBooks.length+' book(s)</span></div><div class="kindle-col-tools"><label><input type="checkbox" id="kindle-all-device">Select all</label><button id="kindle-add-pdf" title="Send a PDF from your library">＋ PDF</button><button id="kindle-delete-selected" class="danger">Delete</button></div><div class="kindle-col-body">'+deviceBody+'</div></div>'
     +'</div>';
   const toolbar='<div class="toolbar"><span class="muted">Kindle at '+esc(kindleDevice)+'</span><div class="row"><button id="kindle-rescan">↻ Rescan</button><button id="kindle-disconnect">Disconnect</button></div></div>';
   const body=kindleScanning?'<div class="loading">Scanning your Kindle…</div>':columns;
@@ -358,6 +395,11 @@ function renderKindle(){
   on('kindle-disconnect','click',()=>{kindleDevice=null;kindleBooks=[];renderKindle();});
   on('kindle-to-device','click',kindleExportSelected);
   on('kindle-to-library','click',kindleImportSelected);
+  on('kindle-all-lib','change',()=>{const on_=$('kindle-all-lib').checked;document.querySelectorAll('[data-lib-select]').forEach(el=>el.checked=on_);});
+  on('kindle-all-device','change',()=>{const on_=$('kindle-all-device').checked;document.querySelectorAll('[data-device-select]').forEach(el=>el.checked=on_);});
+  document.querySelectorAll('[data-device-select],[data-lib-select]').forEach(el=>el.addEventListener('change',syncKindleSelectAll));
+  on('kindle-add-pdf','click',kindlePdfDialog);
+  on('kindle-delete-selected','click',kindleDeleteSelected);
   document.querySelectorAll('[data-device-cover]').forEach(img=>loadKindleCover(img.dataset.deviceCover,img));
 }
 

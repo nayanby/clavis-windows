@@ -483,6 +483,12 @@ class Services:
             kindle.delete_device_book(self.kindle_books,id)
             self.kindle_books=[x for x in self.kindle_books if x['id']!=id]
             return {'device':self.kindle_device,'books':self.kindle_books}
+        if method=='kindleDeleteDeviceBooks':
+            ids=args[0]
+            if not ids: raise ValueError('Select at least one book to remove.')
+            for id in ids: kindle.delete_device_book(self.kindle_books,id)
+            self.kindle_books=[x for x in self.kindle_books if x['id'] not in ids]
+            return {'device':self.kindle_device,'books':self.kindle_books}
         if method=='kindleConvert':
             return kindle.convert_book(self,self.book(args[0]))
         if method=='kindleCover':
