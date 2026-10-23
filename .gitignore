@@ -1,0 +1,14 @@
+node_modules/
+release/
+Data/
+ui/bundle.js
+ui/pdf.worker.mjs
+ui/vosk-worker.js
+ui/wasm/
+ui/cmaps/
+ui/standard_fonts/
+test-output/
+*.log
+python_vendor/
+__pycache__/
+*.pyc

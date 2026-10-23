@@ -1,0 +1,72 @@
+# Clavis for Windows
+
+**Current release: Python 0.2.0.** See [README-Python.md](README-Python.md) for the current architecture, storage and build instructions. The delivered app now uses Python + pywebview + Edge WebView2, packaged with PyInstaller. Keep `Clavis.exe` and its `_internal` directory together. The Electron notes below describe the archived 0.1.x implementation.
+
+A self-contained Windows desktop port based on the supplied Clavis Android project at `Audiobook/Reson`. Uses the original home artwork, Averia font and indigo palette. The Android project is unchanged.
+
+## Run
+
+Open `Clavis.exe` in the delivered application folder. Keep its supporting files and `resources` folder beside it. An optional `Clavis-Setup-0.1.4.exe` installer is also provided.
+
+The interface opens at 80% scale in a normal window occupying 70% of the primary display’s work area.
+
+## All data stays beside the app
+
+Clavis creates a `Data` folder beside `Clavis.exe`:
+
+| Location | Contents |
+| --- | --- |
+| `Data/Books/<actual book or folder name>` | Both imported EPUB/PDF/audio copies and downloaded books, in readable named folders |
+| `Data/library.json` | Library, subscriptions, bookmarks, progress, settings and journal entries |
+| `Data/ink` | PDF pen/highlighter/underline strokes |
+| `Data/transcripts` | Cached offline audio transcription |
+| `Data/Session` | Desktop browser cache, IndexedDB and speech-model cache |
+| `Data/Logs`, `Data/CrashDumps` | App diagnostics |
+
+Original imports are copied, not moved. Keep the whole app folder together when moving it to another location; library references inside `Data` are rebased on startup. Choose a writable folder. Running from a read-only directory is unsupported. Test runs use a separate profile under the source project's `test-output` folder.
+
+Existing app-owned copies in the old `Library` and `Downloads` locations migrate to `Books` on startup, with progress, bookmarks and transfer paths retained. Disc subfolders and original filenames are retained. Names that Windows does not allow are sanitized; duplicate book names receive a readable `(2)` suffix. A magnet without a display name uses `New download` until completion, then receives its torrent name.
+
+Removing a book from the library keeps its copied files. The separate file-removal action confirms moving the copied files to the Windows Recycle Bin. Original source files are untouched. Exporting a journal or drawing writes to a location selected explicitly in the Save dialog.
+
+## Included
+
+- Seven home categories: EPUB, PDF, Audio Books, News, Podcasts, Articles and Journalling.
+- EPUB pagination, font size, spacing, margins, outline, search, bookmarks, saved position and text highlights.
+- PDF page rendering, lazy loading, page jump, outline, text search, zoom, saved position, bookmarks, pen, highlighter, straight underline and undo. Ink is saved separately from the PDF.
+- Audio file and folder import, nested folders and disc grouping, natural chapter order, nearby and embedded cover images.
+- Audio playback with byte-range streaming, chapter-relative seeking, cross-chapter skips, undo seek, speed, volume, bookmarks, sleep timer, media keys, equalizer and voice gain.
+- Automatic MP3 ID3 CHAP and M4B/MP4 chapter discovery, including Nero `chpl` and supported QuickTime chapter tracks. Existing books are checked on first playback. Detect chapters rechecks metadata and offers a cancellable offline English spoken-heading scan when markers are missing; results are reviewed before being applied.
+- Bundled offline Vosk English speech model and live-text panel. Finalized text is cached. Speech is processed locally; no microphone or API key is used.
+- Thirty original starter RSS sources, offline feed entries, namespace-aware RSS/Atom parsing, source directory, subscribe/unsubscribe, automatic refresh on opening a category or source, visible refresh errors, newest-first entries, clean article extraction, publisher links and separate podcast playback.
+- Typed journal entries and a handwriting page with pen/highlighter/underline, undo, text export and PNG export.
+- Magnet downloads with progress, speed and peer counts, pause/resume, persisted jobs and automatic completed-book import. Restarted active jobs wait paused until resumed. Removing a job keeps its files.
+- Compact Now Playing: artwork, seek bar, transport, speed, sleep timer, bookmarks, volume and chapter tools fit in the window. Long chapter lists and live text scroll inside their own panels.
+- Native Clavis executable, installer and taskbar icons.
+- Light, dark and Windows themes.
+
+## Differences from Android
+
+This is a first desktop port, not complete feature parity. Scheduled themes, motion-triggered sleep resume and playback rewind-after-pause are not ported. Offline live text follows playback instead of prefetching text ahead; recognition accuracy and throughput depend on audio and hardware. Spoken chapter scans can be slow, miss headings, or suggest spoken references as headings; review before applying. Handwriting uses one page per journal entry rather than Android's full notebook system. PDF text selection and embedded annotation export are not implemented. Journal PDF attachments open via their publisher link. Online podcast directory search is not included; use the bundled directory or an RSS address. Feed snapshots are historical; opening categories/sources refreshes them automatically. Publisher access restrictions remain in effect.
+
+The Windows installer is unsigned. This build has not been submitted to the Microsoft Store.
+
+## Develop and build
+
+Node.js 24 or later:
+
+```powershell
+npm install
+npm start
+npm test
+npm run test:desktop
+npm run dist
+```
+
+`npm run dist` produces an NSIS installer and an unpacked runnable app in `release`. The bundled speech model was repackaged from the supplied Android source with `scripts/prepare-model.mjs`; it is included in `assets/english-model.tar.gz`.
+
+## Credits and licenses
+
+Original Android project identifies Audivo as its source lineage. Clavis home artwork and fonts are reused from the user-supplied project. Averia font OFL and Vosk Apache notices are in `licenses`. Reader engines in this Windows port are EPUB.js (BSD-2-Clause) and PDF.js (Apache-2.0); audio metadata uses music-metadata (MIT), article extraction uses Mozilla Readability (Apache-2.0) and jsdom (MIT), HTML sanitization uses DOMPurify (Apache-2.0/MPL-2.0), and torrents use WebTorrent (MIT). Packaged Node dependencies retain their license files. Electron ships Chromium and bundled third-party notices. MuPDF and Android libtorrent native libraries are not included in this desktop app.
+
+FFmpeg is bundled for offline audio decoding during spoken chapter scans. Its binary license, build information and source links are included in `resources/ffmpeg-LICENSE.txt` and `resources/ffmpeg-README.txt`; see https://github.com/eugeneware/ffmpeg-static and https://ffmpeg.org/ for upstream information.

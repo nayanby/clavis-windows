@@ -1,0 +1,84 @@
+{
+  "name": "clavis-windows",
+  "productName": "Clavis",
+  "version": "0.1.4",
+  "description": "Clavis library, reading and listening for Windows",
+  "author": "Clavis",
+  "private": true,
+  "main": "src/main.cjs",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "npm run build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run-python.ps1",
+    "start:electron-legacy": "npm run build && electron .",
+    "test": "node --test test/*.test.cjs",
+    "test:desktop": "npm run build && node test/desktop.cjs",
+    "dist": "npm run build && electron-builder --win nsis --x64"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "dompurify": "^3.2.6",
+    "epubjs": "^0.3.93",
+    "jsdom": "^26.1.0",
+    "music-metadata": "^11.0.0",
+    "pdfjs-dist": "^5.4.54",
+    "rss-parser": "^3.13.0",
+    "tar": "^7.5.22",
+    "uint8-util": "2.2.5",
+    "vosk-browser": "^0.0.8",
+    "webtorrent": "2.5.19"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0",
+    "electron-builder": "^26.0.12",
+    "esbuild": "^0.25.0",
+    "ffmpeg-static": "^5.3.0",
+    "playwright": "^1.56.0"
+  },
+  "build": {
+    "appId": "com.clavis.reader.windows",
+    "productName": "Clavis",
+    "directories": {
+      "output": "release/0.1.4-final"
+    },
+    "files": [
+      "src/**",
+      "ui/**",
+      "assets/**",
+      "licenses/**",
+      "package.json",
+      "README.md"
+    ],
+    "asar": true,
+    "npmRebuild": false,
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "signExecutable": false,
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "artifactName": "Clavis-Setup-${version}.${ext}",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico"
+    },
+    "extraResources": [
+      {
+        "from": "node_modules/ffmpeg-static/ffmpeg.exe",
+        "to": "ffmpeg.exe"
+      },
+      {
+        "from": "node_modules/ffmpeg-static/ffmpeg.exe.LICENSE",
+        "to": "ffmpeg-LICENSE.txt"
+      },
+      {
+        "from": "node_modules/ffmpeg-static/ffmpeg.exe.README",
+        "to": "ffmpeg-README.txt"
+      }
+    ],
+    "electronDist": "node_modules/electron/dist"
+  }
+}

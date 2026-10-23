@@ -1,0 +1,15 @@
+body #sidebar,body.playing #sidebar{width:180px;height:100dvh;padding:14px 10px 10px;overflow:hidden;gap:12px}
+#sidebar .brand{flex-shrink:0;margin:0 6px 3px;gap:8px}
+#sidebar .brand img{width:31px;height:31px;border-radius:9px}
+#sidebar .brand span{font-size:25px}
+#sidebar .brand small{font-size:7px;letter-spacing:1px;margin-top:3px}
+#sidebar .sidebar-scroll{display:flex;flex-direction:column;gap:12px;flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+#sidebar nav{flex-shrink:0;gap:3px}
+#sidebar nav button,#sidebar .sidebar-bottom button{min-height:35px;padding:7px 8px;gap:9px;font-size:13px;border-radius:8px;line-height:1.4;white-space:nowrap}
+#sidebar .nav-icon{display:flex;align-items:center;justify-content:center;flex:0 0 21px;width:21px;height:21px;color:var(--ink)}
+#sidebar .nav-icon svg,#sidebar .nav-icon img{display:block;width:21px;height:21px;object-fit:contain}
+#sidebar nav .nav-label{margin:11px 8px 5px;font-size:9px;letter-spacing:1.5px}
+#sidebar .sidebar-bottom{flex-shrink:0;margin-top:auto;padding-top:9px;border-top:1px solid var(--line)}
+#sidebar .sidebar-bottom p{font-size:11px;margin:12px 7px 2px}
+#workspace{margin-left:180px}
+#mini{left:200px}

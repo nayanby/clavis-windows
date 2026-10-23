@@ -1,0 +1,172 @@
+[
+  {
+    "kind": "Podcasts",
+    "title": "The Daily",
+    "url": "https://feeds.simplecast.com/54nAGcIl"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "This American Life",
+    "url": "https://www.thisamericanlife.org/podcast/rss.xml"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "Radiolab",
+    "url": "https://feeds.simplecast.com/EmVW7VGp"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "Stuff You Should Know",
+    "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/a91018a4-ea4f-4130-bf55-ae270180c327/44710ecc-10bb-48d1-93c7-ae270180c33e/podcast.rss"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "Huberman Lab",
+    "url": "https://feeds.megaphone.fm/hubermanlab"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "Lex Fridman Podcast",
+    "url": "https://lexfridman.com/feed/podcast/"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "99% Invisible",
+    "url": "https://feeds.simplecast.com/BqbsxVfO"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "Hidden Brain",
+    "url": "https://feeds.npr.org/510308/podcast.xml"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "TED Talks Daily",
+    "url": "https://feeds.feedburner.com/TEDTalks_audio"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "Planet Money",
+    "url": "https://feeds.npr.org/510289/podcast.xml"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "TED Radio Hour",
+    "url": "https://feeds.npr.org/510298/podcast.xml"
+  },
+  {
+    "kind": "Podcasts",
+    "title": "Science Friday",
+    "url": "https://feeds.simplecast.com/y1LF_sn2"
+  },
+  {
+    "kind": "News",
+    "title": "BBC News",
+    "url": "https://feeds.bbci.co.uk/news/rss.xml"
+  },
+  {
+    "kind": "News",
+    "title": "The Guardian World",
+    "url": "https://www.theguardian.com/world/rss"
+  },
+  {
+    "kind": "News",
+    "title": "Al Jazeera",
+    "url": "https://www.aljazeera.com/xml/rss/all.xml"
+  },
+  {
+    "kind": "News",
+    "title": "NPR News",
+    "url": "https://feeds.npr.org/1001/rss.xml"
+  },
+  {
+    "kind": "News",
+    "title": "The New York Times",
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+  },
+  {
+    "kind": "News",
+    "title": "The Hindu",
+    "url": "https://www.thehindu.com/news/national/feeder/default.rss"
+  },
+  {
+    "kind": "News",
+    "title": "The Indian Express",
+    "url": "https://indianexpress.com/feed/"
+  },
+  {
+    "kind": "News",
+    "title": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml"
+  },
+  {
+    "kind": "News",
+    "title": "Deutsche Welle",
+    "url": "https://rss.dw.com/rdf/rss-en-all"
+  },
+  {
+    "kind": "News",
+    "title": "Sky News",
+    "url": "https://feeds.skynews.com/feeds/rss/home.xml"
+  },
+  {
+    "kind": "News",
+    "title": "BBC Science",
+    "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"
+  },
+  {
+    "kind": "News",
+    "title": "The Guardian Science",
+    "url": "https://www.theguardian.com/science/rss"
+  },
+  {
+    "kind": "Journals",
+    "title": "NEJM",
+    "url": "https://www.nejm.org/action/showFeed?jc=nejm&type=etoc&feed=rss"
+  },
+  {
+    "kind": "Journals",
+    "title": "JAMA",
+    "url": "https://jamanetwork.com/rss/site_3/67.xml"
+  },
+  {
+    "kind": "Journals",
+    "title": "The Lancet",
+    "url": "https://www.thelancet.com/rssfeed/lancet_current.xml"
+  },
+  {
+    "kind": "Journals",
+    "title": "Nature Medicine",
+    "url": "https://www.nature.com/nm.rss"
+  },
+  {
+    "kind": "Journals",
+    "title": "Annals of Internal Medicine",
+    "url": "https://www.acpjournals.org/action/showFeed?jc=aim&type=etoc&feed=rss"
+  },
+  {
+    "kind": "Journals",
+    "title": "BMJ Open",
+    "url": "https://bmjopen.bmj.com/rss/current.xml"
+  },
+  {
+    "kind": "Journals",
+    "title": "PLOS Medicine",
+    "url": "https://journals.plos.org/plosmedicine/feed/atom"
+  },
+  {
+    "kind": "Journals",
+    "title": "Journal of Clinical Investigation",
+    "url": "https://www.jci.org/rss"
+  },
+  {
+    "kind": "Journals",
+    "title": "eLife",
+    "url": "https://elifesciences.org/rss/recent.xml"
+  },
+  {
+    "kind": "Journals",
+    "title": "Nature Reviews Cardiology",
+    "url": "https://www.nature.com/nrcardio.rss"
+  }
+]

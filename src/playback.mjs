@@ -1,0 +1,4 @@
+export const trackStart=t=>Math.max(0,t?.start||0);
+export function trackDuration(t,fileDuration){if(Number.isFinite(t?.end))return Math.max(0,t.end-trackStart(t));if(Number.isFinite(t?.duration))return Math.max(0,t.duration);return Number.isFinite(fileDuration)?Math.max(0,fileDuration-trackStart(t)):0;}
+export function relativePosition(t,absolute,fileDuration){return Math.max(0,Math.min(trackDuration(t,fileDuration)||Infinity,absolute-trackStart(t)));}
+export function listeningProgress(tracks,index,position,fileDuration){const lengths=tracks.map((t,i)=>trackDuration(t,i===index?fileDuration:undefined));if(lengths.every(n=>n>0)){const total=lengths.reduce((a,b)=>a+b,0);return Math.min(100,(lengths.slice(0,index).reduce((a,b)=>a+b,0)+position)/total*100);}const length=lengths[index];return Math.min(100,(index+(length?position/length:0))/Math.max(1,tracks.length)*100);}

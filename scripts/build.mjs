@@ -1,0 +1,13 @@
+import {build} from 'esbuild';
+import {cp,mkdir,readFile,writeFile} from 'node:fs/promises';
+await mkdir('ui',{recursive:true});
+const voskSource=await readFile('node_modules/vosk-browser/dist/vosk.js','utf8');
+const workerMatch=voskSource.match(/var WorkerFactory = createBase64WorkerFactory\('([^']+)', null, false\);/);
+if(!workerMatch)throw Error('Vosk worker layout changed. Review the isolated worker build.');
+const workerSource=Buffer.from(workerMatch[1],'base64').toString('utf8');
+await writeFile('ui/vosk-worker.js',workerSource.substring(workerSource.indexOf('\n',10)+1));
+await build({entryPoints:['src/renderer.js'],outfile:'ui/bundle.js',bundle:true,format:'esm',platform:'browser',target:'chrome140',logLevel:'info',plugins:[{name:'isolated-vosk-worker',setup(b){b.onLoad({filter:/vosk-browser[\\/]dist[\\/]vosk\.js$/},()=>({contents:voskSource.replace(workerMatch[0],"var WorkerFactory = function(options) { return new Worker(new URL('./vosk-worker.js', location.href), options); };"),loader:'js'}));}}]});
+await cp('node_modules/pdfjs-dist/build/pdf.worker.mjs','ui/pdf.worker.mjs');
+await cp('node_modules/pdfjs-dist/cmaps','ui/cmaps',{recursive:true});
+await cp('node_modules/pdfjs-dist/standard_fonts','ui/standard_fonts',{recursive:true});
+await cp('node_modules/pdfjs-dist/wasm','ui/wasm',{recursive:true});
