@@ -387,5 +387,6 @@ def delete_device_book(device_books, book_id):
         raise ValueError('Book not found on Kindle device.')
     p = Path(b['path'])
     if p.is_file():
-        p.unlink()
+        from send2trash import send2trash
+        send2trash(str(p))
     return True

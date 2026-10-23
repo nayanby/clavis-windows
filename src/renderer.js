@@ -331,6 +331,23 @@ function kindleBookRow(b){
   const checked=b._checked!==false?'checked':'';
   return `<div class="book-row"><label class="row" style="flex:1;gap:17px;cursor:pointer"><input type="checkbox" data-kindle-import="${b.id}" ${checked} style="width:auto;flex-shrink:0"><img class="book-cover" data-kindle-cover="${esc(b.path)}" src="${art('EPUB')}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${b.format?' · '+esc(b.format):''}${b.drm?' · DRM':''}</small></span></label><button class="subtle" data-kindle-menu="${b.id}" aria-label="Details for ${esc(b.title)}">•••</button></div>`;
 }
+function kindleMenu(id){
+  const b=kindleBooks.find(x=>x.id===id);
+  if(!b)return;
+  modal(b.title,`<div class="stack"><button id="kindle-book-import">Import to library</button><button id="kindle-book-edit">Edit details & import…</button><button id="kindle-book-delete" class="danger">Remove from Kindle…</button></div>`,()=>{
+    on('kindle-book-import','click',async()=>{
+      try{const s=await api.kindleImport([id]);if(s){state=s;kindleBooks=kindleBooks.filter(x=>x.id!==id);closeModal();render();toast('Book imported.');}}catch(e){toast(e.message);}
+    });
+    on('kindle-book-edit','click',()=>{closeModal();kindleMetadataDialog(id);});
+    on('kindle-book-delete','click',async()=>{
+      try{
+        await api.kindleDeleteDeviceBook(id);
+        kindleBooks=kindleBooks.filter(x=>x.id!==id);
+        closeModal();renderKindle();toast('Removed from Kindle.');
+      }catch(e){toast(e.message);}
+    });
+  });
+}
 function renderKindle(){
   if(!kindleDevice){
     $('main').innerHTML=`<div class="empty"><h2>Connect your Kindle</h2><p>Plug in your Kindle via USB to browse, import, and export books.</p><div class="row" style="justify-content:center;margin-top:16px"><button id="kindle-refresh" class="primary">Detect Kindle</button></div></div>`;
@@ -361,7 +378,7 @@ function renderKindle(){
 }
 
 const actions={'undo-seek':undoSeek,'detect-chapters':detectChapters,import:importFiles,folder:importFolder,play:togglePlay,'skip-back':()=>skip(-1),'skip-forward':()=>skip(1),previous:()=>changeChapter(-1),next:()=>changeChapter(1),speed:speedDialog,sleep:sleepDialog,'add-audio-bookmark':addAudioBookmark,'audio-bookmarks':audioBookmarks,'show-player':async()=>{if(reader)await cleanupReader();route='Player';render();},'sources-back':()=>{articleOpen=false;activeFeed=null;renderFeeds();},'feed-add':feedAdd,'browse-sources':browseSources,files:()=>api.openFiles(),'new-note':newNote,'add-download':addDownload};
-document.addEventListener('click',run(async e=>{const el=e.target.closest('button');if(!el||el.disabled)return;const d=el.dataset;if(d.route)return navigate(d.route);if(d.action)return actions[d.action]?.();if(d.open)return openBook(d.open);if(d.bookMenu)return bookMenu(d.bookMenu);if(d.chapter!==undefined){await startBook(current,true,Number(d.chapter),0);return renderPlayer();}if(d.feed)return openFeed(d.feed);if(d.refresh)return refreshFeed(d.refresh);if(d.removeFeed){modal('Unsubscribe?',`<p>Remove this source and its saved feed entries?</p><div class="row"><button id="confirm-unsubscribe">Unsubscribe</button><button id="keep-subscription">Keep source</button></div>`,()=>{on('keep-subscription','click',closeModal);on('confirm-unsubscribe','click',async()=>{feeds=await api.feedRemove(d.removeFeed);activeFeed=null;closeModal();renderFeeds();});});return;}if(d.episode)return playEpisode(d.episode);if(d.article)return readArticle(d.article);if(d.external)return api.openURL(d.external);if(d.note){await flushNote();activeNote=d.note;renderNotes();return;}if(d.downloadAction){downloadState=await api.downloadAction(d.id,d.downloadAction);if(Array.isArray(downloadState))renderDownloads();return;}}));
+document.addEventListener('click',run(async e=>{const el=e.target.closest('button');if(!el||el.disabled)return;const d=el.dataset;if(d.route)return navigate(d.route);if(d.action)return actions[d.action]?.();if(d.open)return openBook(d.open);if(d.bookMenu)return bookMenu(d.bookMenu);if(d.kindleMenu)return kindleMenu(d.kindleMenu);if(d.chapter!==undefined){await startBook(current,true,Number(d.chapter),0);return renderPlayer();}if(d.feed)return openFeed(d.feed);if(d.refresh)return refreshFeed(d.refresh);if(d.removeFeed){modal('Unsubscribe?',`<p>Remove this source and its saved feed entries?</p><div class="row"><button id="confirm-unsubscribe">Unsubscribe</button><button id="keep-subscription">Keep source</button></div>`,()=>{on('keep-subscription','click',closeModal);on('confirm-unsubscribe','click',async()=>{feeds=await api.feedRemove(d.removeFeed);activeFeed=null;closeModal();renderFeeds();});});return;}if(d.episode)return playEpisode(d.episode);if(d.article)return readArticle(d.article);if(d.external)return api.openURL(d.external);if(d.note){await flushNote();activeNote=d.note;renderNotes();return;}if(d.downloadAction){downloadState=await api.downloadAction(d.id,d.downloadAction);if(Array.isArray(downloadState))renderDownloads();return;}}));
 document.addEventListener('click',e=>{const a=e.target.closest('.article-content a');if(a){e.preventDefault();run(()=>api.openURL(a.href))();}});
 document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement){e.target.removeAttribute('src');e.target.style.visibility='hidden';}},true);
 on('dialog-close','click',closeModal);on('import','click',importFiles);on('files','click',()=>api.openFiles());on('search','input',()=>{query=$('search').value;render();});
