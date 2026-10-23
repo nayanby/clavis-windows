@@ -243,51 +243,26 @@ function loadKindleCover(path,imgEl){
     if(dataUri&&imgEl)imgEl.src=dataUri;
   }).catch(()=>{});
 }
-async function kindleImportSelected(){
-  const checked=[...document.querySelectorAll('[data-kindle-import]:checked')].map(el=>el.dataset.kindleImport);
-  if(!checked.length)return toast('Select at least one book to import.');
+async function importDeviceBooks(ids){
+  if(!ids.length)return toast('Select at least one book to import.');
   try{
-    const s=await api.kindleImport(checked);
-    if(s){state=s;kindleBooks=kindleBooks.filter(b=>!checked.includes(b.id));toast(checked.length+' book(s) imported.');render();}
+    const s=await api.kindleImport(ids);
+    if(s){state=s;kindleBooks=kindleBooks.filter(b=>!ids.includes(b.id));toast(ids.length+' book(s) imported to library.');render();}
   }catch(e){toast(e.message);}
 }
-function kindleExportDialog(){
-  const exportable=state.books.filter(b=>b.kind==='Kindle'||(b.path&&/\.(mobi|azw3?|kfx)$/i.test(b.path||'')));
-  if(!exportable.length)return toast('No Kindle-format books in your library.');
-  modal('Export to Kindle',`<p class="muted">Select books to copy to your Kindle's documents folder.</p><div class="directory">${exportable.map(b=>`<label class="row"><input type="checkbox" data-kindle-export="${b.id}" checked style="width:auto"><span><strong>${esc(b.title)}</strong><br><small>${esc(b.author||'Unknown author')}</small></span></label>`).join('')}</div><div class="row"><button id="do-export" class="primary">Copy to Kindle</button></div>`,()=>{
-    on('do-export','click',async()=>{
-      const ids=[...document.querySelectorAll('[data-kindle-export]:checked')].map(el=>el.dataset.kindleExport);
-      if(!ids.length)return toast('Select at least one book.');
-      try{
-        const copied=await api.kindleExport(ids,kindleDevice);
-        closeModal();
-        toast(copied.length+' book(s) copied to Kindle.');
-      }catch(e){toast(e.message);}
-    });
-  });
+function kindleImportSelected(){
+  return importDeviceBooks([...document.querySelectorAll('[data-device-select]:checked')].map(el=>el.dataset.deviceSelect));
 }
-function kindleMetadataDialog(id){
+function kindleMenu(id){
   const b=kindleBooks.find(x=>x.id===id);
   if(!b)return;
-  modal('Edit book details',`<label for="km-title">Title</label><input id="km-title" value="${esc(b.title)}"><label for="km-author">Author</label><input id="km-author" value="${esc(b.author||'')}"><label for="km-publisher">Publisher</label><input id="km-publisher" value="${esc(b.publisher||'')}"><label for="km-isbn">ISBN</label><input id="km-isbn" value="${esc(b.isbn||'')}"><label for="km-subject">Subject</label><input id="km-subject" value="${esc(b.subject||'')}"><p class="muted" style="margin-top:12px">Format: ${esc(b.format||'Unknown')} · ${b.drm?'DRM-protected (limited editing)':'No DRM'}</p><div class="row"><button id="km-save" class="primary">Save to library</button></div>`,()=>{
-    on('km-save','click',async()=>{
-      const book={
-        id:b.id,title:$('km-title').value,author:$('km-author').value,
-        publisher:$('km-publisher').value,isbn:$('km-isbn').value,
-        subject:$('km-subject').value,format:b.format,path:b.path,
-        drm:b.drm,size:b.size,hasCover:b.hasCover,
-      };
+  modal(b.title,`<div class="stack"><button id="device-import">Import to library</button><button id="device-remove" class="danger">Remove from Kindle…</button></div>`,()=>{
+    on('device-import','click',()=>{closeModal();importDeviceBooks([id]);});
+    on('device-remove','click',async()=>{
+      closeModal();
       try{
-        const s=await api.kindleImport([b.id]);
-        if(s){
-          const imported=s.books.find(x=>x.id===b.id);
-          if(imported){
-            await api.updateBookMetadata(imported.id,{
-              title:book.title,author:book.author,
-            });
-          }
-          state=s;closeModal();toast('Book imported with updated metadata.');render();
-        }
+        const s=await api.kindleDeleteDeviceBook(id);
+        if(s){kindleBooks=s.books||[];toast('Removed from Kindle (Recycle Bin).');renderKindle();}
       }catch(e){toast(e.message);}
     });
   });
@@ -328,25 +303,32 @@ function libraryMetadataDialog(id){
   });
 }
 function kindleBookRow(b){
-  const checked=b._checked!==false?'checked':'';
-  return `<div class="book-row"><label class="row" style="flex:1;gap:17px;cursor:pointer"><input type="checkbox" data-kindle-import="${b.id}" ${checked} style="width:auto;flex-shrink:0"><img class="book-cover" data-kindle-cover="${esc(b.path)}" src="${art('EPUB')}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${b.format?' · '+esc(b.format):''}${b.drm?' · DRM':''}</small></span></label><button class="subtle" data-kindle-menu="${b.id}" aria-label="Details for ${esc(b.title)}">•••</button></div>`;
+  return `<div class="book-row"><img class="book-cover" data-device-cover="${esc(b.path)}" src="${art('EPUB')}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${b.format?' · '+esc(b.format):''}${b.drm?' · DRM':''}</small></span><label class="row" style="gap:6px"><input type="checkbox" data-device-select="${b.id}" style="width:auto">Select</label><button class="subtle" data-kindle-menu="${b.id}" aria-label="Options for ${esc(b.title)}">•••</button></div>`;
 }
-function kindleMenu(id){
-  const b=kindleBooks.find(x=>x.id===id);
-  if(!b)return;
-  modal(b.title,`<div class="stack"><button id="kindle-book-import">Import to library</button><button id="kindle-book-edit">Edit details & import…</button><button id="kindle-book-delete" class="danger">Remove from Kindle…</button></div>`,()=>{
-    on('kindle-book-import','click',async()=>{
-      try{const s=await api.kindleImport([id]);if(s){state=s;kindleBooks=kindleBooks.filter(x=>x.id!==id);closeModal();render();toast('Book imported.');}}catch(e){toast(e.message);}
-    });
-    on('kindle-book-edit','click',()=>{closeModal();kindleMetadataDialog(id);});
-    on('kindle-book-delete','click',async()=>{
-      try{
-        await api.kindleDeleteDeviceBook(id);
-        kindleBooks=kindleBooks.filter(x=>x.id!==id);
-        closeModal();renderKindle();toast('Removed from Kindle.');
-      }catch(e){toast(e.message);}
-    });
-  });
+function libBookRow(b){
+  const ext=b.path?b.path.split('.').pop().toLowerCase():'';
+  const fmt=b.kind==='Kindle'?(b.kindleFormat||ext).toUpperCase():ext.toUpperCase();
+  const needsConvert=ext==='epub'?' · → AZW3':'';
+  return `<div class="book-row"><img class="book-cover" src="${esc(b.cover||art(b.kind))}" alt="" style="width:55px;height:66px;object-fit:contain;border-radius:7px;background:var(--soft);padding:5px"><span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.author||'Unknown author')}${fmt?' · '+esc(fmt):''}${needsConvert}</small></span><label class="row" style="gap:6px"><input type="checkbox" data-lib-select="${b.id}" style="width:auto">Select</label></div>`;
+}
+async function kindleExportSelected(){
+  const ids=[...document.querySelectorAll('[data-lib-select]:checked')].map(el=>el.dataset.libSelect);
+  if(!ids.length)return toast('Select at least one book to send.');
+  if(!kindleDevice)return toast('No Kindle device detected.');
+  try{
+    const result=await api.kindleExport(ids,kindleDevice);
+    document.querySelectorAll('[data-lib-select]').forEach(el=>el.checked=false);
+    const parts=[];
+    if(result.copied?.length)parts.push(result.copied.length+' sent');
+    if(result.skipped?.length)parts.push(result.skipped.length+' skipped');
+    if(result.errors?.length)parts.push(result.errors.length+' failed');
+    toast(parts.join(', ')||'Export complete.');
+    if(result.skipped?.length||result.errors?.length){
+      const details=[...(result.skipped||[]).map(s=>s.title+': '+s.reason),...(result.errors||[]).map(e=>e.title+': '+e.reason)];
+      if(details.length)console.warn('Export details:',details);
+    }
+    await kindleScan();
+  }catch(e){toast(e.message);}
 }
 function renderKindle(){
   if(!kindleDevice){
@@ -358,23 +340,30 @@ function renderKindle(){
     });
     return;
   }
-  const libBooks=state.books.filter(b=>b.kind==='Kindle');
-  $('main').innerHTML=`<div class="toolbar"><span class="muted">Kindle at ${esc(kindleDevice)} · ${kindleBooks.length} book(s) on device</span><div class="row"><button id="kindle-rescan">↻ Rescan</button><button id="kindle-disconnect">Disconnect</button></div></div>${kindleScanning?'<div class="loading">Scanning your Kindle…</div>':kindleBooks.length?`<div class="section-head"><h2>Books on Kindle</h2><div class="row"><button id="kindle-import-selected" class="primary">Import selected</button><button id="kindle-import-all">Import all</button></div></div>${kindleBooks.map(kindleBookRow).join('')}`:'<div class="empty"><h2>No books found on Kindle</h2><p>Transfer books to your Kindle\'s documents folder, then rescan.</p></div>'}<div class="section-head" style="margin-top:30px"><h2>Export to Kindle</h2><span class="muted">${libBooks.length} Kindle book(s) in library</span></div>${libBooks.length?`<p class="notice">Copy books from your Clavis library back to your Kindle's documents folder.</p><div class="row"><button id="kindle-export-btn">Choose books to export…</button></div>`:'<p class="muted">Import Kindle books to see them here for export.</p>'}`;
+  const exportable=state.books.filter(b=>{
+    if(b.kind==='Kindle')return true;
+    const ext=b.path?b.path.split('.').pop().toLowerCase():'';
+    return ['epub','mobi','azw','azw3'].includes(ext);
+  });
+  const libBody=exportable.length
+    ?exportable.map(libBookRow).join('')
+    :'<p class="muted" style="padding:20px;text-align:center">No exportable books in library.<br>Import Kindle books or add EPUB files.</p>';
+  const deviceBody=kindleBooks.length
+    ?kindleBooks.map(kindleBookRow).join('')
+    :'<p class="muted" style="padding:20px;text-align:center">No books found on device.</p>';
+  const columns='<div class="kindle-two-col">'
+    +'<div class="kindle-col"><div class="kindle-col-head"><h3>Clavis Library</h3><span class="muted">'+exportable.length+' book(s)</span></div><div class="kindle-col-body">'+libBody+'</div></div>'
+    +'<div class="kindle-col-mid"><button id="kindle-to-device" class="primary" title="Send selected books to Kindle">→</button><button id="kindle-to-library" title="Import selected books to library">←</button></div>'
+    +'<div class="kindle-col"><div class="kindle-col-head"><h3>On Kindle</h3><span class="muted">'+kindleBooks.length+' book(s)</span></div><div class="kindle-col-body">'+deviceBody+'</div></div>'
+    +'</div>';
+  const toolbar='<div class="toolbar"><span class="muted">Kindle at '+esc(kindleDevice)+'</span><div class="row"><button id="kindle-rescan">↻ Rescan</button><button id="kindle-disconnect">Disconnect</button></div></div>';
+  const body=kindleScanning?'<div class="loading">Scanning your Kindle…</div>':columns;
+  $('main').innerHTML=toolbar+body;
   on('kindle-rescan','click',kindleScan);
   on('kindle-disconnect','click',()=>{kindleDevice=null;kindleBooks=[];renderKindle();});
-  on('kindle-import-selected','click',kindleImportSelected);
-  on('kindle-import-all','click',async()=>{
-    if(!kindleBooks.length)return;
-    try{
-      const ids=kindleBooks.map(b=>b.id);
-      const s=await api.kindleImport(ids);
-      if(s){state=s;kindleBooks=[];toast('All books imported.');render();}
-    }catch(e){toast(e.message);}
-  });
-  on('kindle-export-btn','click',kindleExportDialog);
-  document.querySelectorAll('[data-kindle-cover]').forEach(img=>{
-    loadKindleCover(img.dataset.kindleCover,img);
-  });
+  on('kindle-to-device','click',kindleExportSelected);
+  on('kindle-to-library','click',kindleImportSelected);
+  document.querySelectorAll('[data-device-cover]').forEach(img=>loadKindleCover(img.dataset.deviceCover,img));
 }
 
 const actions={'undo-seek':undoSeek,'detect-chapters':detectChapters,import:importFiles,folder:importFolder,play:togglePlay,'skip-back':()=>skip(-1),'skip-forward':()=>skip(1),previous:()=>changeChapter(-1),next:()=>changeChapter(1),speed:speedDialog,sleep:sleepDialog,'add-audio-bookmark':addAudioBookmark,'audio-bookmarks':audioBookmarks,'show-player':async()=>{if(reader)await cleanupReader();route='Player';render();},'sources-back':()=>{articleOpen=false;activeFeed=null;renderFeeds();},'feed-add':feedAdd,'browse-sources':browseSources,files:()=>api.openFiles(),'new-note':newNote,'add-download':addDownload};
@@ -398,3 +387,5 @@ run(boot)();
 Object.defineProperty(window,'clavisTransport',{value:Object.freeze({state:()=>({ready:!!current?.tracks?.length&&!audioLoading,playing:!audio.paused,skip:state.settings.skip||30}),command:async action=>{if(!current||audioLoading)return;if(action==='play')await togglePlay();else if(action==='back')await skip(-1);else if(action==='forward')await skip(1);}})});
 
 illustrateEmptyStates(()=>route);
+
+// MARKER_TEST_12345

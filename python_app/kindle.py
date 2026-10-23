@@ -334,6 +334,25 @@ def import_books(services, device_books, selected_ids):
     return services.state()
 
 
+def find_calibre():
+    import shutil as _sh
+    return _sh.which('ebook-convert')
+
+
+def convert_to_azw3(src_path, dest_path, calibre_exe):
+    import subprocess
+    result = subprocess.run(
+        [calibre_exe, str(src_path), str(dest_path),
+         '--no-default-epub-cover', '--prefer-metadata-cover'],
+        capture_output=True, text=True, timeout=300,
+        creationflags=0x08000000,
+    )
+    if result.returncode != 0:
+        raise ValueError(result.stderr.strip() or 'Conversion failed.')
+    if not Path(dest_path).is_file():
+        raise ValueError('Conversion produced no output file.')
+
+
 def export_to_device(services, book_ids, device_path):
     if not device_path:
         raise ValueError('No Kindle device detected.')
@@ -341,44 +360,37 @@ def export_to_device(services, book_ids, device_path):
     if not dest_dir.is_dir():
         raise ValueError('Kindle documents folder not found.')
     import shutil
+    calibre = find_calibre()
     copied = []
+    skipped = []
+    errors = []
     for bid in book_ids:
         b = next((x for x in services.store['books'] if x['id'] == bid), None)
         if not b:
             continue
         src = b.get('path')
         if not src or not Path(src).is_file():
+            skipped.append({'title': b['title'], 'reason': 'File not found'})
             continue
         src = Path(src)
-        if src.suffix.lower() not in KINDLE_EXTS:
-            continue
-        dest = dest_dir / src.name
-        if dest.exists() and dest.stat().st_size == src.stat().st_size:
+        suffix = src.suffix.lower()
+        dest_name = src.stem + ('.azw3' if suffix == '.epub' else suffix)
+        dest = dest_dir / dest_name
+        try:
+            if suffix in KINDLE_EXTS:
+                shutil.copy2(str(src), str(dest))
+            elif suffix == '.epub':
+                if not calibre:
+                    skipped.append({'title': b['title'], 'reason': 'Calibre not found — install calibre to convert EPUB'})
+                    continue
+                convert_to_azw3(src, dest, calibre)
+            else:
+                skipped.append({'title': b['title'], 'reason': f'{suffix} not supported for Kindle'})
+                continue
             copied.append(b['title'])
-            continue
-        shutil.copy2(str(src), str(dest))
-        copied.append(b['title'])
-    return copied
-
-
-def export_to_folder(services, book_ids, dest_dir):
-    dest_dir = Path(dest_dir)
-    if not dest_dir.is_dir():
-        raise ValueError('Target folder not found.')
-    import shutil
-    copied = []
-    for bid in book_ids:
-        b = next((x for x in services.store['books'] if x['id'] == bid), None)
-        if not b:
-            continue
-        src = b.get('path')
-        if not src or not Path(src).is_file():
-            continue
-        src = Path(src)
-        dest = dest_dir / src.name
-        shutil.copy2(str(src), str(dest))
-        copied.append(b['title'])
-    return copied
+        except Exception as e:
+            errors.append({'title': b['title'], 'reason': str(e)})
+    return {'copied': copied, 'skipped': skipped, 'errors': errors}
 
 
 def delete_device_book(device_books, book_id):

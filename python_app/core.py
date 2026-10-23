@@ -478,13 +478,6 @@ class Services:
                 device=kindle.detect_device()
                 if not device: raise ValueError('No Kindle device detected. Connect your Kindle and try again.')
             return kindle.export_to_device(self,ids,device)
-        if method=='kindleExportFolder':
-            ids=args[0]
-            import webview
-            folder=self.window.create_file_dialog(webview.FOLDER_DIALOG)
-            if not folder: return []
-            dest_dir=Path(folder[0] if isinstance(folder,(list,tuple)) else folder)
-            return kindle.export_to_folder(self,ids,dest_dir)
         if method=='kindleDeleteDeviceBook':
             id=args[0]
             kindle.delete_device_book(self.kindle_books,id)
