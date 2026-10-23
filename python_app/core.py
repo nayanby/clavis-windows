@@ -489,6 +489,16 @@ class Services:
             for id in ids: kindle.delete_device_book(self.kindle_books,id)
             self.kindle_books=[x for x in self.kindle_books if x['id'] not in ids]
             return {'device':self.kindle_device,'books':self.kindle_books}
+        if method=='kindleAddPDF':
+            device=args[0] if args else self.kindle_device
+            if not device: raise ValueError('No Kindle device detected.')
+            selected=self.window.create_file_dialog(webview.OPEN_DIALOG,allow_multiple=True,file_types=('PDF books (*.pdf)',))
+            if not selected: return None
+            items=[b for b in (self.new_book(p) for p in selected) if b and b['kind']=='PDF']
+            if not items: raise ValueError('Choose PDF files to send.')
+            with self.lock: state=self.add(items)
+            result=kindle.export_to_device(self,[b['id'] for b in items],device)
+            return {'state':state,'result':result}
         if method=='kindleConvert':
             return kindle.convert_book(self,self.book(args[0]))
         if method=='kindleCover':

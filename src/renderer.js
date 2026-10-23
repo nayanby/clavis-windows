@@ -339,10 +339,23 @@ function syncKindleSelectAll(){
 }
 function kindlePdfDialog(){
   const pdfs=state.books.filter(b=>b.kind==='PDF');
-  const body=pdfs.length
-    ?'<div class="stack">'+pdfs.map(b=>'<button data-send-pdf="'+b.id+'"><strong>'+esc(b.title)+'</strong><small>'+esc(b.author||'Unknown author')+'</small></button>').join('')+'</div>'
-    :'<p class="muted">No PDF books in your library yet.</p>';
+  const body=(pdfs.length
+    ?'<div class="stack">'+pdfs.map(b=>'<button data-send-pdf="'+b.id+'"><strong>'+esc(b.title)+'</strong><small style="display:block;margin-top:3px">'+esc(b.author||'Unknown author')+'</small></button>').join('')+'</div>'
+    :'<p class="muted">No PDF books in your library yet.</p>')
+    +'<div class="stack" style="margin-top:12px"><button id="kindle-pdf-browse" class="primary">Choose PDF files from your computer…</button></div>';
   modal('Send a PDF to Kindle',body,()=>{
+    on('kindle-pdf-browse','click',async()=>{
+      closeModal();
+      try{
+        const res=await api.kindleAddPDF(kindleDevice);
+        if(!res)return;
+        if(res.state)state=res.state;
+        const result=res.result||{};
+        if(result.copied?.length)toast(result.copied.length+' PDF(s) added to your library and sent to Kindle.');
+        else toast((result.skipped?.[0]||result.errors?.[0])?.reason||'The PDF could not be sent.');
+        await kindleScan();
+      }catch(e){toast(e.message);}
+    });
     document.querySelectorAll('[data-send-pdf]').forEach(el=>el.onclick=run(async()=>{
       el.disabled=true;
       const result=await api.kindleExport([el.dataset.sendPdf],kindleDevice);
