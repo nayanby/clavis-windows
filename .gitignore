@@ -12,3 +12,4 @@ test-output/
 python_vendor/
 __pycache__/
 *.pyc
+assets/english-model.tar.gz

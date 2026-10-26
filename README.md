@@ -63,7 +63,7 @@ npm run test:desktop
 npm run dist
 ```
 
-`npm run dist` produces an NSIS installer and an unpacked runnable app in `release`. The bundled speech model was repackaged from the supplied Android source with `scripts/prepare-model.mjs`; it is included in `assets/english-model.tar.gz`.
+`npm run dist` produces an NSIS installer and an unpacked runnable app in `release`. The speech model archive is excluded from this repository. Offline speech recognition requires a separately supplied model at `assets/english-model.tar.gz`; `scripts/prepare-model.mjs` can prepare it from the supplied Android source.
 
 ## Credits and licenses
 
