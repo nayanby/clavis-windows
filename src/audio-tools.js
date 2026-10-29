@@ -2,7 +2,17 @@ import {createModel} from 'vosk-browser';
 let context,source,recognizer,model,processor,filters,gain,modelPromise;
 let enabled=false,callback=()=>{},activeKey='';
 function graph(audio){if(context)return;context=new AudioContext({sampleRate:16000});source=context.createMediaElementSource(audio);filters=[100,350,1000,3500,10000].map(f=>{const filter=context.createBiquadFilter();filter.type='peaking';filter.frequency.value=f;filter.Q.value=1;return filter;});gain=context.createGain();let tail=source;for(const f of filters){tail.connect(f);tail=f;}tail.connect(gain);gain.connect(context.destination);}
-export async function effects(audio,values,voiceGain){graph(audio);await context.resume();values.forEach((db,i)=>filters[i].gain.value=db);gain.gain.value=voiceGain;}
+const narrationGraphs=new WeakMap();
+export async function effects(audio,values,voiceGain,separate=false){
+  if(separate){
+    let graph=narrationGraphs.get(audio);
+    if(!graph){
+      const ctx=new AudioContext(),input=ctx.createMediaElementSource(audio),bands=[100,350,1000,3500,10000].map(hz=>{const filter=ctx.createBiquadFilter();filter.type='peaking';filter.frequency.value=hz;filter.Q.value=1;return filter;}),level=ctx.createGain();
+      let tail=input;for(const band of bands){tail.connect(band);tail=band;}tail.connect(level);level.connect(ctx.destination);graph={ctx,bands,level};narrationGraphs.set(audio,graph);
+    }
+    await graph.ctx.resume();values.forEach((db,i)=>graph.bands[i].gain.value=db);graph.level.gain.value=voiceGain;return;
+  }
+  graph(audio);await context.resume();values.forEach((db,i)=>filters[i].gain.value=db);gain.gain.value=voiceGain;}
 export async function transcribe(audio,key,onResult,onStatus){
   graph(audio);await context.resume();enabled=true;callback=onResult;
   if(!model){onStatus('Loading bundled English model… First use can take a minute.');modelPromise||=createModel(new URL('../assets/english-model.tar.gz',location.href).href,-1);try{model=await modelPromise;}catch(e){modelPromise=null;enabled=false;throw e;}}

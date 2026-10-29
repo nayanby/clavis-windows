@@ -146,3 +146,7 @@ body.listening main{padding-bottom:210px}
 .reader-toolbar{position:relative;z-index:3}
 @media(max-width:700px){body.listening .listen-panel{left:190px;right:10px}.listen-head .row{gap:4px}.reader-width-control input{width:70px}}
 .reader-canvas .reader-stage{height:var(--reading-height,17cm)}
+
+.listen-volume-row{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}
+.listen-volume-row input{flex:1;min-width:60px}
+.listen-volume-row progress{width:80px;height:4px;accent-color:var(--accent)}

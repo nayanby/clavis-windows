@@ -18,6 +18,7 @@ from pathlib import Path
 VOICE = 'kitten-micro-en-v0_8'
 VOICE_URL = f'https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/{VOICE}.tar.bz2'
 VOICE_SHA = '85faaea7511ca9d1d2f251fed0a4553bdf0d1ee046102fa60ddd8046c751f76f'
+PROSODY_VERSION = 'clavis-plus-pauses-v1'
 SPEAKERS = [{'id': 1, 'label': 'Original voice'}, {'id': 0, 'label': 'Hugo · male'}]
 # Speaker ids are the model's own: sid 0 is the original 1:06 voice, sid 4 is Hugo.
 SPEAKER_IDS = {1: 0, 0: 4}
@@ -83,6 +84,43 @@ def spoken(value):
         return label.capitalize() + ' ' + number_words(count)
 
     return re.sub(r'\b(chapter|book|part)\s+([IVXLCDM]+|\d+)\b(?!\.\d)', announce, text, flags=re.I)
+
+
+def speech_plan(chunk, paragraph_end=False, headings=()):
+    """Clavis+ paragraph phrasing and minimum pauses, in milliseconds.
+
+    Keep punctuation intact for the neural model's intonation. Never split on
+    commas or decimals, or add punctuation that changes questions into statements.
+    """
+    paragraphs = [part.strip() for part in re.split(r'\n[ \t]*\n+', chunk) if part.strip()]
+    labels = {str(label).strip().casefold() for label in headings}
+    plan = []
+    for index, paragraph in enumerate(paragraphs):
+        heading = len(paragraph) < 120 and (
+            paragraph.casefold() in labels or
+            re.fullmatch(r'(chapter|book|part)\s+[\w -]+[.!:]?', paragraph, re.I))
+        boundary = index < len(paragraphs) - 1 or paragraph_end or chunk.endswith('\n\n')
+        pause = 1200 if heading else 900 if boundary else 450 if paragraph[-1] in '.!?\u201d"' else 0
+        plan.append((spoken(paragraph), pause))
+    return plan
+
+
+def generate_phrased(engine, plan, sample_rate, rate, speaker):
+    """Retain natural model pauses; pad only when shorter than Clavis+ timing."""
+    output = array.array('f')
+    for text, pause in plan:
+        samples = engine.generate(text, sid=SPEAKER_IDS[speaker], speed=rate).samples
+        if not len(samples) or not any(abs(value) > .002 for value in samples):
+            raise ValueError('The offline voice returned no audio. Try Play again.')
+        minimum = int(sample_rate * pause / 1000 / max(.75, min(1.5, rate)))
+        tail = 0
+        for value in reversed(samples):
+            if abs(value) > .003:
+                break
+            tail += 1
+        output.extend(samples)
+        output.extend(array.array('f', [0]) * max(0, minimum - tail))
+    return output
 
 
 def _abbreviation(text, point):
@@ -365,15 +403,15 @@ class Narration:
         rate = max(.5, min(2.5, float(rate or 1)))
         speaker = 1 if int(speaker or 0) == 1 else 0
         chunk = text[start:end]
-        name = hashlib.sha1(f'{VOICE}|{SPEAKER_IDS[speaker]}|{rate:.2f}|{chunk}'.encode('utf-8')).hexdigest()[:40]
+        paragraph_end = bool(re.match(r'[ \t]*\n[ \t]*\n', text[end:]))
+        plan = speech_plan(chunk, paragraph_end, (chapter['label'] for chapter in document['chapters']))
+        name = hashlib.sha1(f'{VOICE}|{PROSODY_VERSION}|{SPEAKER_IDS[speaker]}|{rate:.2f}|{plan!r}'.encode('utf-8')).hexdigest()[:40]
         path = self.audio / f'{name}.wav'
         if not path.is_file():
             engine, sample_rate = self._load_engine()
             with self._speak_lock:
                 if not path.is_file():
-                    samples = engine.generate(self._spoken_text(chunk), sid=SPEAKER_IDS[speaker], speed=rate).samples
-                    if not samples or not any(abs(value) > .002 for value in samples):
-                        raise ValueError('The offline voice returned no audio. Try Play again.')
+                    samples = generate_phrased(engine, plan, sample_rate, rate, speaker)
                     self._write_wav(path, samples, sample_rate)
                     self._prune()
         seconds = max(.05, (path.stat().st_size - 44) / 2 / self._rate)
