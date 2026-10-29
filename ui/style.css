@@ -102,3 +102,17 @@ dialog:has(.meta-editor){width:780px;max-width:calc(100vw - 60px)}
 .listen-status-row button{padding:5px 12px;font-size:12px;border-radius:20px}
 body.listening #mini{display:none}
 @media(max-width:1100px){.listen-panel{left:190px;padding:12px 18px 16px}.listen-stage{padding:24px 26px}}
+
+/* Shared adjustable reading surface, capped at 20 CSS centimetres. */
+.reader-stage:has(.epub-host){width:min(100%,var(--reading-width,20cm));max-width:20cm;align-self:center;box-sizing:border-box}
+.reader-width-control{display:flex;align-items:center;gap:7px;white-space:nowrap;font-size:12px}
+.reader-width-control input{width:100px;padding:0;cursor:ew-resize}
+.reader-width-control output{min-width:48px}
+.reader-tools{flex-wrap:wrap;justify-content:flex-end}
+.listen-stage{width:min(100%,var(--reading-width,20cm));max-width:20cm;align-self:center;box-sizing:border-box;padding:0;scrollbar-gutter:auto}
+.listen-text{max-width:none;width:100%;white-space:pre-wrap;box-sizing:border-box;padding:var(--listen-margin,32px);font:var(--listen-size,19px)/var(--listen-leading,1.7) Averia,Georgia,serif}
+.listen-text:has(.listen-book-frame){padding:0;white-space:normal}
+.listen-book-frame{display:block;width:100%;border:0;min-height:100px;background:var(--card)}
+@media(max-width:1100px){.listen-stage{padding:0}}
+
+.listen-panel{left:180px}

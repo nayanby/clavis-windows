@@ -1,3 +1,4 @@
+import {readingWidth,readingTheme,readingFontCSS,themeCSS,markSentences} from './reading-layout.mjs';
 import {illustration,illustrateEmptyStates,dialogArt} from './illustrations.js';
 import {uiIcons as clavisIcons,transportIcon} from './ui-icons.js';
 import ePub from 'epubjs';
@@ -65,7 +66,7 @@ function renderNavigation(){document.querySelectorAll('[data-icon]').forEach(el=
   $('navigation').innerHTML=`<button data-route="Home" class="${route==='Home'?'active':''}"><span class="nav-icon">${clavisIcons.Home}</span>Home</button><p class="nav-label">YOUR LIBRARY</p>`+categories.map(([kind,title,,,symbol])=>`<button data-route="${kind}" class="${route===kind?'active':''}"><span class="nav-icon">${clavisIcons[kind]}</span>${title}</button>`).join('');
   document.querySelectorAll('.sidebar-bottom [data-route]').forEach(b=>b.classList.toggle('active',b.dataset.route===route));
 }
-async function cleanupReader(){if(listening)await closeListen();readerGeneration++;if(reader){reader.epub?.destroy();reader.pdf?.destroy();reader.observer?.disconnect();reader=null;}document.body.classList.remove('reading');}
+async function cleanupReader(){if(listening)await closeListen();readerGeneration++;if(reader){reader.epub?.destroy();reader.pdf?.destroy();reader.observer?.disconnect();reader.listenObserver?.disconnect();reader=null;}document.body.classList.remove('reading');}
 async function navigate(next){await persistAudio();await flushNote();if(reader)await cleanupReader();route=next;activeFeed=null;articleOpen=false;query='';$('search').value='';$('search').placeholder=['News','Podcasts','Journals'].includes(route)?'Search sources and stories':'Search your library';render();$('main').scrollTop=0;window.scrollTo(0,0);if(['News','Podcasts','Journals'].includes(next))void refreshCategory(next);}
 function render(){document.body.classList.toggle('playing',route==='Player');renderNavigation();$('heading').textContent=route==='Home'?'Clavis':route==='Kindle'?'Kindle':categories.find(c=>c[0]===route)?.[1]||route;$('eyebrow').textContent=route==='Home'?'YOUR PERSONAL LIBRARY':route==='Player'?'NOW PLAYING':route==='Kindle'?'KINDLE LIBRARY':'CLAVIS FOR WINDOWS';$('import').hidden=!['Home','EPUB','PDF','Audio','Kindle'].includes(route);$('search').hidden=['Player','Reader','Settings','Journalling','Downloads'].includes(route);renderMini();
   if(route==='Home')renderHome();else if(['EPUB','PDF','Audio'].includes(route))renderLibrary();else if(['News','Podcasts','Journals'].includes(route))renderFeeds();else if(route==='Player')renderPlayer();else if(route==='Settings')renderSettings();else if(route==='Journalling')renderNotes();else if(route==='Downloads')renderDownloads();else if(route==='Kindle')renderKindle();
@@ -168,22 +169,56 @@ function addDownload(){modal('Add a download','<label for="magnet">Magnet link</
 async function openReader(b){
   await cleanupReader();document.body.classList.remove('playing');route='Reader';renderNavigation();document.body.classList.add('reading');$('heading').textContent=b.title;$('eyebrow').textContent=b.kind+' READER';$('import').hidden=true;$('search').hidden=true;renderMini();
   const generation=readerGeneration;
-  $('main').innerHTML=`<div class="reader-shell"><div class="reader-toolbar"><button id="reader-back">‹ Library</button><div class="reader-tools"><input id="reader-find" class="reader-find" type="search" placeholder="Search book" aria-label="Search book"><button id="reader-search">Find</button><button id="reader-bookmark" aria-label="Bookmark current page">⚑ Bookmark</button><button id="reader-marks">Bookmarks</button>${b.kind==='EPUB'?'<button id="reader-type">Aa</button><button id="reader-highlight">Highlight selection</button>':'<button id="ink-toggle">✎ Pen</button><select id="ink-kind" aria-label="Drawing tool"><option value="pen">Pen</option><option value="highlight">Highlighter</option><option value="underline">Underliner</option></select><input id="ink-color" class="ink-color" type="color" value="#7971ae" aria-label="Ink color"><button id="ink-undo">Undo</button><button id="pdf-zoom-out" aria-label="Zoom out">−</button><button id="pdf-zoom-in" aria-label="Zoom in">＋</button>'}</div></div><div class="reader-stage" id="reader-stage"><div class="loading">Opening ${b.kind}…</div></div><div class="reader-footer"><div class="row"><button id="reader-listen" class="listen-pill">♪ Listen</button><button id="reader-outline">☷ Outline</button></div><div class="row"><button id="reader-previous">‹ Previous</button><span id="reader-position" class="muted"></span><button id="reader-next">Next ›</button><button id="reader-jump">Go to…</button></div><span class="muted" id="reader-percent"></span></div><section id="listen-panel" class="listen-panel" aria-label="Listen to this book" hidden><div class="listen-head"><button id="listen-back">‹ Back to reading</button><div class="row"><span id="listen-chapter-label" class="pill">CHAPTER</span><button id="listen-outline">☷ Chapters</button><button id="listen-settings">Listen settings</button></div></div><div id="listen-stage" class="listen-stage"><article id="listen-text" class="listen-text"></article></div><div class="listen-dock"><div class="row spread"><span id="listen-location" class="muted"></span><span id="listen-percent" class="muted"></span></div><input id="listen-progress" type="range" min="0" max="1000" value="0" aria-label="Reading position"><div class="listen-transport"><button id="listen-prev" aria-label="Previous chapter">${transportIcon('previous')}</button><button id="listen-back30" aria-label="Back 30 words">−30</button><button id="listen-play" class="listen-play" aria-label="Play narration">${transportIcon('play')}</button><button id="listen-forward30" aria-label="Forward 30 words">+30</button><button id="listen-next" aria-label="Next chapter">${transportIcon('next')}</button></div><div class="listen-status-row"><p id="listen-status" class="listen-status"></p><button id="listen-download" hidden>Download offline voice · 44 MB</button></div></div></section></div>`;
+  $('main').innerHTML=`<div class="reader-shell"><div class="reader-toolbar"><button id="reader-back">‹ Library</button><div class="reader-tools"><label class="reader-width-control">Width <input id="reader-width" type="range" min="8" max="20" step="0.1" aria-label="Reader width in centimetres"><output id="reader-width-value"></output></label><input id="reader-find" class="reader-find" type="search" placeholder="Search book" aria-label="Search book"><button id="reader-search">Find</button><button id="reader-bookmark" aria-label="Bookmark current page">⚑ Bookmark</button><button id="reader-marks">Bookmarks</button>${b.kind==='EPUB'?'<button id="reader-type">Aa</button><button id="reader-highlight">Highlight selection</button>':'<button id="ink-toggle">✎ Pen</button><select id="ink-kind" aria-label="Drawing tool"><option value="pen">Pen</option><option value="highlight">Highlighter</option><option value="underline">Underliner</option></select><input id="ink-color" class="ink-color" type="color" value="#7971ae" aria-label="Ink color"><button id="ink-undo">Undo</button><button id="pdf-zoom-out" aria-label="Zoom out">−</button><button id="pdf-zoom-in" aria-label="Zoom in">＋</button>'}</div></div><div class="reader-stage" id="reader-stage"><div class="loading">Opening ${b.kind}…</div></div><div class="reader-footer"><div class="row"><button id="reader-listen" class="listen-pill">♪ Listen</button><button id="reader-outline">☷ Outline</button></div><div class="row"><button id="reader-previous">‹ Previous</button><span id="reader-position" class="muted"></span><button id="reader-next">Next ›</button><button id="reader-jump">Go to…</button></div><span class="muted" id="reader-percent"></span></div><section id="listen-panel" class="listen-panel" aria-label="Listen to this book" hidden><div class="listen-head"><button id="listen-back">‹ Back to reading</button><div class="row"><span id="listen-chapter-label" class="pill">CHAPTER</span><button id="listen-outline">☷ Chapters</button><button id="listen-settings">Listen settings</button></div></div><div id="listen-stage" class="listen-stage"><article id="listen-text" class="listen-text"></article></div><div class="listen-dock"><div class="row spread"><span id="listen-location" class="muted"></span><span id="listen-percent" class="muted"></span></div><input id="listen-progress" type="range" min="0" max="1000" value="0" aria-label="Reading position"><div class="listen-transport"><button id="listen-prev" aria-label="Previous chapter">${transportIcon('previous')}</button><button id="listen-back30" aria-label="Back 30 words">−30</button><button id="listen-play" class="listen-play" aria-label="Play narration">${transportIcon('play')}</button><button id="listen-forward30" aria-label="Forward 30 words">+30</button><button id="listen-next" aria-label="Next chapter">${transportIcon('next')}</button></div><div class="listen-status-row"><p id="listen-status" class="listen-status"></p><button id="listen-download" hidden>Download offline voice · 44 MB</button></div></div></section></div>`;
   reader={book:b,page:Math.floor(b.page)||1,selected:null,generation};
+  bindReadingWidth();
   on('reader-back','click',()=>navigate(b.kind));on('reader-bookmark','click',readerBookmark);on('reader-marks','click',readerBookmarks);on('reader-outline','click',readerOutline);on('reader-search','click',readerSearch);on('reader-find','keydown',e=>{if(e.key==='Enter')return readerSearch();});on('reader-jump','click',readerJump);on('reader-previous','click',()=>readerMove(-1));on('reader-next','click',()=>readerMove(1));on('reader-listen','click',listenFromReader);on('listen-back','click',()=>closeListen());on('listen-outline','click',listenOutline);on('listen-settings','click',listenSettingsDialog);on('listen-prev','click',()=>listenChapter(-1));on('listen-next','click',()=>listenChapter(1));on('listen-back30','click',()=>listenSkip(-30));on('listen-forward30','click',()=>listenSkip(30));on('listen-play','click',toggleListenPlay);on('listen-download','click',downloadListenVoice);bindListenProgress();
   try{
     const response=await fetch(b.url);if(!response.ok)throw Error('The source file could not be opened.');const bytes=new Uint8Array(await response.arrayBuffer());if(generation!==readerGeneration)return;
     if(b.kind==='PDF')await openPDF(bytes,generation);else await openEPUB(bytes,generation);
   }catch(e){if(generation===readerGeneration){$('reader-stage').innerHTML=`<div class="empty"><h2>This book could not be opened.</h2><p>${esc(e.message)}</p><p>Check that the file is still in its original location and available offline.</p></div>`;toast(e.message);}}
 }
+function applyReadingWidth(){
+  const width=readingWidth(state.settings.readerWidth);
+  document.querySelector('.reader-shell')?.style.setProperty('--reading-width',width+'cm');
+  const panel=$('listen-panel');
+  if(panel){panel.style.setProperty('--reading-width',width+'cm');panel.style.setProperty('--listen-size',(state.settings.fontSize||19)+'px');panel.style.setProperty('--listen-leading',state.settings.lineHeight||1.7);panel.style.setProperty('--listen-margin',(state.settings.margin??32)+'px');}
+  if($('reader-width-value'))$('reader-width-value').textContent=width.toFixed(1)+' cm';
+  if($('reader-width'))$('reader-width').value=width;
+}
+function bindReadingWidth(){
+  applyReadingWidth();
+  on('reader-width','input',()=>{state.settings.readerWidth=readingWidth($('reader-width').value);applyReadingWidth();requestAnimationFrame(()=>reader?.rendition?.resize());});
+  on('reader-width','change',async()=>{state.settings=await api.settings({readerWidth:readingWidth($('reader-width').value)});applyReadingWidth();});
+}
+function renderFormattedListen(index,chapter){
+  const s=listening,markup=reader?.listenMarkup?.[index];
+  if(!s||!markup||reader.book.kind!=='EPUB')return;
+  reader.listenObserver?.disconnect();
+  const frame=document.createElement('iframe');frame.className='listen-book-frame';frame.title=chapter.label;
+  frame.setAttribute('sandbox','allow-same-origin');
+  frame.onload=()=>{
+    if(listening!==s||s.chapter!==index||!frame.isConnected)return;
+    const doc=frame.contentDocument,style=doc.createElement('style');
+    style.textContent=readingFontCSS(new URL('../assets/',location.href).href)+themeCSS(readingTheme(state.settings,document.body.classList.contains('dark')))+
+      '\nhtml{height:auto!important;overflow:hidden!important}body{box-sizing:border-box;margin:0!important;min-width:0!important;max-width:100%!important}img,svg{max-width:100%;height:auto}.listen-sentence.active{background:#dcd5f1;border-radius:3px}';
+    doc.head.append(style);
+    s.sentenceEls=markSentences(doc.body,s.doc.text,chapter);
+    doc.addEventListener('click',event=>{const link=event.target.closest('a');if(link){event.preventDefault();if(/^https?:/.test(link.href))run(()=>api.openURL(link.href))();}});
+    const resize=()=>{frame.style.height=Math.ceil(doc.documentElement.getBoundingClientRect().height)+'px';};
+    reader.listenObserver=new ResizeObserver(resize);reader.listenObserver.observe(doc.body);resize();
+    s.lastSentence=-1;updateListenHighlight(true);
+  };
+  $('listen-text').replaceChildren(frame);frame.srcdoc=markup;
+}
 async function openEPUB(bytes,generation){
   $('reader-stage').innerHTML='<div id="epub-host" class="epub-host"></div>';
   const book=ePub(bytes.buffer);reader.epub=book;
   const rendition=book.renderTo('epub-host',{width:'100%',height:'100%',spread:'none',flow:'paginated',allowScriptedContent:false});reader.rendition=rendition;
-  rendition.themes.default({'body':{'color':document.body.classList.contains('dark')?'#dddff3':'#292664','background':document.body.classList.contains('dark')?'#252632':'#ffffff','font-family':'Georgia, serif','font-size':`${state.settings.fontSize||19}px`,'line-height':`${state.settings.lineHeight||1.7}`,'padding':`${state.settings.margin??32}px !important`},'p':{'line-height':`${state.settings.lineHeight||1.7} !important`}});
+  rendition.themes.default(readingTheme(state.settings,document.body.classList.contains('dark')));
   rendition.on('relocated',location=>{if(generation!==readerGeneration)return;reader.location=location;const percent=book.locations.length()?book.locations.percentageFromCfi(location.start.cfi)*100:Math.min(99,location.start.index/Math.max(1,book.spine.length)*100);$('reader-position').textContent=`Section ${location.start.index+1} of ${book.spine.length}`;$('reader-percent').textContent=Math.round(percent)+'%';clearTimeout(reader.saveTimer);reader.saveTimer=setTimeout(run(()=>updateBook(reader.book,{cfi:location.start.cfi,progress:percent})),400);});
   rendition.on('selected',(cfiRange,contents)=>{if(generation!==readerGeneration)return;reader.selected=cfiRange;reader.selectionText=contents.window.getSelection()?.toString()||'';toast('Text selected. Choose Highlight selection to save it.');});
-  rendition.hooks.content.register(contents=>{contents.document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')run(()=>rendition.next())();if(e.key==='ArrowLeft')run(()=>rendition.prev())();});contents.document.addEventListener('click',e=>{const a=e.target.closest('a');if(a&&/^https?:/.test(a.href)){e.preventDefault();run(()=>api.openURL(a.href))();}});});
+  rendition.hooks.content.register(contents=>{const fontStyle=contents.document.createElement('style');fontStyle.textContent=readingFontCSS(new URL('../assets/',location.href).href);contents.document.head.append(fontStyle);contents.document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')run(()=>rendition.next())();if(e.key==='ArrowLeft')run(()=>rendition.prev())();});contents.document.addEventListener('click',e=>{const a=e.target.closest('a');if(a&&/^https?:/.test(a.href)){e.preventDefault();run(()=>api.openURL(a.href))();}});});
   await rendition.display(reader.book.cfi||undefined);if(generation!==readerGeneration)return;
   reader.outline=(await book.loaded.navigation).toc;
   for(const cfi of reader.book.highlights||[])try{rendition.annotations.highlight(cfi,{},null,'saved-highlight',{'fill':'#e7c36b','fill-opacity':'.4'});}catch{}
@@ -245,16 +280,16 @@ function renderListenChapter(force=false){
   const index=listenChapterIndex(s.position);
   const chapter=s.doc.chapters[index];
   if(!chapter)return;
-  if(force||s.chapter!==index){const text=s.doc.text;let at=chapter.start,html='';for(const [start,finish] of chapter.sentences){if(start>at)html+=esc(text.slice(at,start));html+=`<span class="listen-sentence">${esc(text.slice(start,finish))}</span>`;at=finish;}if(at<chapter.end)html+=esc(text.slice(at,chapter.end));$('listen-text').innerHTML=html;s.sentenceEls=[...$('listen-text').querySelectorAll('.listen-sentence')];s.lastSentence=-1;s.followedSentence=-1;s.chapter=index;const label=$('listen-chapter-label');if(label)label.textContent=chapter.label;const stage=$('listen-stage');if(stage)stage.scrollTop=0;force=true;}
+  if(force||s.chapter!==index){const text=s.doc.text;let at=chapter.start,html='';for(const [start,finish] of chapter.sentences){if(start>at)html+=esc(text.slice(at,start));html+=`<span class="listen-sentence">${esc(text.slice(start,finish))}</span>`;at=finish;}if(at<chapter.end)html+=esc(text.slice(at,chapter.end));$('listen-text').innerHTML=html;s.sentenceEls=[...$('listen-text').querySelectorAll('.listen-sentence')].map(el=>[el]);renderFormattedListen(index,chapter);s.lastSentence=-1;s.followedSentence=-1;s.chapter=index;const label=$('listen-chapter-label');if(label)label.textContent=chapter.label;const stage=$('listen-stage');if(stage)stage.scrollTop=0;force=true;}
   updateListenHighlight(force);
 }
 function updateListenHighlight(force=false){
   const s=listening;if(!s)return;const chapter=s.doc.chapters[s.chapter];if(!chapter)return;
   const index=chapter.sentences.findIndex(([a,b])=>s.position>=a&&s.position<b);
   if(index<0)return;
-  if(index!==s.lastSentence){s.sentenceEls[s.lastSentence]?.classList.remove('active');s.sentenceEls[index]?.classList.add('active');s.lastSentence=index;}
-  if(force){s.sentenceEls[index]?.scrollIntoView({block:'center'});}
-  else if(s.follow&&!listenAudio.paused&&Date.now()>=s.holdUntil&&index!==s.followedSentence){s.followedSentence=index;s.sentenceEls[index]?.scrollIntoView({block:'center',behavior:'smooth'});}
+  if(index!==s.lastSentence){s.sentenceEls[s.lastSentence]?.forEach(el=>el.classList.remove('active'));s.sentenceEls[index]?.forEach(el=>el.classList.add('active'));s.lastSentence=index;}
+  if(force){s.sentenceEls[index]?.[0]?.scrollIntoView({block:'center'});}
+  else if(s.follow&&!listenAudio.paused&&Date.now()>=s.holdUntil&&index!==s.followedSentence){s.followedSentence=index;s.sentenceEls[index]?.[0]?.scrollIntoView({block:'center',behavior:'smooth'});}
 }
 function renderListenDock(){
   const s=listening;if(!s)return;
@@ -506,7 +541,7 @@ async function collectEPUBText(from,note,cancelled){
   const labels=new Map(),base=new Map();
   const flatten=list=>{for(const item of list||[]){if(item.href){const href=String(item.href).split('#')[0].replace(/^\.\//,'');if(!labels.has(href))labels.set(href,item.label||'');base.set(href.split('/').pop(),item.label||'');}flatten(item.subitems||item.items||[]);}};
   flatten(reader.outline||[]);
-  const chapters=[];let size=0;
+  const chapters=[];let size=0;reader.listenMarkup=[];
   for(let index=Math.max(0,from);index<book.spine.length;index++){
     if(cancelled())return [];
     note(`Reading section ${index+1} of ${book.spine.length}…`);
@@ -515,6 +550,8 @@ async function collectEPUBText(from,note,cancelled){
     const doc=await book.load(section.href);
     if(!doc?.body)continue;
     let text='';
+    const publication=await section.render(book.load.bind(book));
+    const markup=DOMPurify.sanitize(publication,{WHOLE_DOCUMENT:true,ADD_TAGS:['link'],ADD_ATTR:['rel'],FORBID_TAGS:['script','iframe','object','embed','form','base','meta']});
     const clone=doc.body.cloneNode(true);
     clone.querySelectorAll('script,style,noscript,svg').forEach(el=>el.remove());
     clone.querySelectorAll('br').forEach(el=>el.replaceWith('\n'));
@@ -522,6 +559,7 @@ async function collectEPUBText(from,note,cancelled){
     text=clone.textContent||'';
     if(!text.trim())continue;
     const href=String(section.href||'').split('#')[0].replace(/^\.\//,'');
+    reader.listenMarkup.push(markup);
     chapters.push({label:labels.get(href)||base.get(href.split('/').pop())||`Section ${index+1}`,text});
     size+=text.length;
     if(size>MAX_LISTEN_TEXT)break;
@@ -579,7 +617,7 @@ function openListen(doc,options={}){
   const panel=$('listen-panel');
   if(!panel||!reader)return;
   listening={doc,position:Math.max(0,Math.min(doc.text.length,doc.position||0)),chapter:-1,chunk:null,prefetch:null,gen:0,intent:false,rate:state.settings.listenRate||1,speaker:state.settings.listenSpeaker??1,follow:state.settings.listenFollow!==false,holdUntil:0,sleepTimer:null,sleepLabel:'',stopAfterChapter:false,dragging:false,resumeAfterSeek:false,saveTimer:null,voice:doc.voice||{installed:false},lastSentence:-1,followedSentence:-1,sentenceEls:[]};
-  document.body.classList.add('listening');panel.hidden=false;
+  document.body.classList.add('listening');panel.hidden=false;applyReadingWidth();
   if(!audio.paused)audio.pause();
   renderListenChapter(true);renderListenDock();renderListenVoice();
   if(options.note)toast(options.note);
