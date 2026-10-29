@@ -2,7 +2,7 @@ $ErrorActionPreference='Stop'
 $workspace=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $target='C:\Users\ANT-PC\OneDrive\Clavis Windows'
 $exe=Join-Path $target 'Clavis.exe'
-$files=@('bundle.js','index.html','pastel.css')
+$files=@('bundle.js','index.html','style.css','pastel.css')
 foreach($name in $files){if(!(Test-Path -LiteralPath (Join-Path $workspace ('ui\'+$name)))){throw "Missing UI file: $name"}}
 foreach($process in @(Get-Process -Name Clavis -ErrorAction SilentlyContinue | Where-Object {$_.Path -eq $exe})){
     if($process.MainWindowHandle -ne 0){[void]$process.CloseMainWindow();[void]$process.WaitForExit(30000)}
