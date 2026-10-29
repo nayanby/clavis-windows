@@ -3,7 +3,7 @@ from PyInstaller.utils.hooks import collect_all
 from pathlib import Path
 import ssl
 datas=[]; binaries=[]; hidden=[]
-for package in ('webview','pythonnet','clr_loader','libtorrent','readability'):
+for package in ('webview','pythonnet','clr_loader','libtorrent','readability','sherpa_onnx'):
     d,b,h=collect_all(package); datas+=d; binaries+=b; hidden+=h
 datas += [('ui','ui'),('assets/rss/catalog.json','assets/rss'),('licenses','licenses'),('README-Python.md','.'),('node_modules/ffmpeg-static/ffmpeg.exe.LICENSE','licenses'),('node_modules/ffmpeg-static/ffmpeg.exe.README','licenses')]
 # Bundle interface assets, but never the saved RSS XML/article snapshots.

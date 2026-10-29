@@ -24,6 +24,7 @@ from readability import Document
 
 import bookart
 import kindle
+import listen
 import metadata
 
 AUDIO = {'.mp3', '.m4a', '.m4b', '.ogg', '.wav', '.flac', '.opus', '.aac'}
@@ -84,7 +85,7 @@ class Services:
             self.store=json.loads(self.file.read_text(encoding='utf-8-sig'))
             if not isinstance(self.store.get('books'),list) or not isinstance(self.store.get('feeds'),list): raise ValueError('Library is invalid. Your existing data has been preserved.')
         else:
-            self.store={'books':[],'feeds':[],'notes':[],'downloads':[],'settings':{'theme':'system','fontSize':19,'lineHeight':1.7,'margin':32,'skip':30,'volume':.8,'speed':1}}
+            self.store={'books':[],'feeds':[],'notes':[],'downloads':[],'settings':{'theme':'system','fontSize':19,'lineHeight':1.7,'margin':32,'skip':30,'volume':.8,'speed':1,'listenRate':1,'listenSpeaker':1,'listenFollow':True}}
             catalog=json.loads((self.root/'assets/rss/catalog.json').read_text(encoding='utf-8'))
             self.store['feeds']=[{'id':uid(source['url']),'kind':source['kind'],'title':source['title'],'url':source['url'],'entries':[],'updated':None} for source in catalog]
         self.store['directory']=json.loads((self.root/'assets/rss/catalog.json').read_text(encoding='utf-8'))
@@ -94,6 +95,7 @@ class Services:
             feed.update(entries=[],updated=None,refreshError=None)
             feed.pop('asset',None); feed.pop('preload',None)
         for key in ('notes','downloads'): self.store.setdefault(key,[])
+        for key,value in {'listenRate':1,'listenSpeaker':1,'listenFollow':True}.items(): self.store['settings'].setdefault(key,value)
         old=self.store.get('dataRoot')
         if old and Path(old)!=self.data:
             def rebase(value): return str(self.data/Path(value).relative_to(old)) if value and inside(value,old) else value
@@ -104,6 +106,7 @@ class Services:
                     if track.get('path'): track['path']=rebase(track['path'])
             for job in self.store['downloads']: job['dir']=rebase(job['dir'])
         self.store['dataRoot']=str(self.data)
+        self.listen=listen.Narration(self.data/'listen',self.media_url)
         for job in self.store['downloads']:
             if job.get('status')!='Complete': job['status']='Paused'
         self.save()
@@ -402,9 +405,11 @@ class Services:
                     if p and inside(p,self.booksdir) and not any(x['id']!=b['id'] and (x.get('path')==p or any(t.get('path')==p for t in x.get('tracks',[]))) for x in self.store['books']): send2trash(p)
             self.store['books'].remove(b); self.save(); return self.state()
         if method=='settings':
-            for k,(lo,hi) in {'fontSize':(10,40),'lineHeight':(1,3),'margin':(0,100),'skip':(5,120),'volume':(0,1),'speed':(.5,3)}.items():
+            for k,(lo,hi) in {'fontSize':(10,40),'lineHeight':(1,3),'margin':(0,100),'skip':(5,120),'volume':(0,1),'speed':(.5,3),'listenRate':(.5,2.5)}.items():
                 v=args[0].get(k)
                 if isinstance(v,(int,float)): self.store['settings'][k]=max(lo,min(hi,v))
+            if args[0].get('listenSpeaker') in (0,1): self.store['settings']['listenSpeaker']=int(args[0]['listenSpeaker'])
+            if isinstance(args[0].get('listenFollow'),bool): self.store['settings']['listenFollow']=args[0]['listenFollow']
             if args[0].get('theme') in ('light','dark','system'): self.store['settings']['theme']=args[0]['theme']
             self.save(); return self.store['settings']
         if method=='feeds': return {'feeds':copy.deepcopy(self.store['feeds']),'directory':self.store.get('directory',[])}
@@ -440,6 +445,13 @@ class Services:
             b=self.book(args[0])
             if b['kind']=='Audio' and (len(args)>1 and args[1] or not b.get('chaptersVersion')): self.metadata(b); self.save()
             return self.view(b)
+        if method=='listenPrepare': return self.listen.prepare(args[0])
+        if method=='listenResume': return self.listen.resume()
+        if method=='listenPosition': return self.listen.position(*args)
+        if method=='listenSpeak': return self.listen.speak(*args)
+        if method=='listenSave': return self.listen.save_position(*args)
+        if method=='listenVoice': return self.listen.voice()
+        if method=='listenVoiceDownload': return self.listen.download()
         if method=='chapterScanStart': return self.start_scan(args[0])
         if method=='chapterScanRead': return self.read_scan(args[0])
         if method=='chapterScanCancel': return self.cancel_scan(args[0])
@@ -589,5 +601,6 @@ class Services:
     def close(self):
         self.stopping.set()
         for id in list(self.scans): self.cancel_scan(id)
+        self.listen.close()
         if self.torrent: self.torrent.pause()
         self.save()

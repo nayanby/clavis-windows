@@ -8,6 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT/'python_vendor'),str(ROOT/'python_app')]
 from core import Services, inside, public_url
 from host import Server
+import listen
 import requests
 
 class BackendTests(unittest.TestCase):
@@ -71,5 +72,79 @@ class BackendTests(unittest.TestCase):
         self.assertEqual(result['availability'],'publisher-blocked')
         self.assertEqual(result['status'],403)
         self.assertIsNone(result['content'])
+    def test_narration_text_utilities(self):
+        self.assertEqual(listen.spoken('Mr. Smith read Chapter IV.'),'Mister Smith read Chapter four.')
+        self.assertEqual(listen.spoken('Book 12 begins.'),'Book twelve begins.')
+        self.assertEqual(listen.clean('hyphen-\nated\ttabs\r\n\r\n\r\nend'),'hyphenated tabs\n\nend')
+        text='Mr. Smith paid 1.50 dollars. He left.'
+        ranges=listen.sentence_ranges(text,0,len(text))
+        self.assertEqual(len(ranges),2)
+        self.assertEqual(text[ranges[0][0]:ranges[0][1]],'Mr. Smith paid 1.50 dollars.')
+        text='one two three four five'
+        self.assertEqual(listen.skip_words(text,0,2),text.index('three'))
+        self.assertEqual(listen.skip_words(text,0,-1),0)
+        self.assertEqual(listen.skip_words(text,text.index('five'),-2),text.index('three'))
+        self.assertEqual(listen.skip_words(text,len(text),9),len(text))
+        self.assertEqual(listen.word_start(text,text.index('three')+2),text.index('three'))
+    def test_narration_passages_cover_every_character(self):
+        text='Alpha beta gamma delta. '*40
+        sentences=listen.sentence_ranges(text,0,len(text))
+        parts=listen.passages(text,sentences)
+        self.assertLessEqual(parts[0][1]-parts[0][0],160)
+        self.assertEqual(parts[0][0],sentences[0][0])
+        self.assertEqual(parts[-1][1],sentences[-1][1])
+        for (a,b),(c,d) in zip(parts,parts[1:]):
+            self.assertGreaterEqual(c,b)
+            self.assertEqual(text[b:c].strip(),'')
+            self.assertLessEqual(d-c,600)
+        wordy='word '*600
+        long=listen.passages(wordy,[[0,len(wordy)-1]])
+        self.assertGreater(len(long),1)
+        self.assertTrue(all(0<=d-c<=listen.MAX_SPAN for c,d in long))
+        self.assertEqual(''.join(wordy[c:d] for c,d in long).replace(' ',''),'word'*600)
+    def test_narration_prepare_positions_and_resume(self):
+        doc=self.s.listen.prepare({'bookId':'book1','key':'unit:book','title':' Unit  Book ','chapters':[{'label':'One','text':'Mr. Smith went home. Chapter IV begins here.\n\nHe slept.'},{'label':'Two','text':'Second chapter text.'}]})
+        self.assertEqual(doc['title'],'Unit Book'); self.assertEqual(len(doc['chapters']),2)
+        self.assertTrue(all(c['sentences'] and c['passages'] for c in doc['chapters']))
+        self.assertFalse(doc['truncated']); self.assertFalse(doc['voice']['installed'])
+        self.assertEqual(doc['chapters'][1]['start'],doc['chapters'][0]['end']+2)
+        self.assertEqual(self.s.dispatch('listenPosition',doc['id'],0,1)['position'],doc['text'].index('Smith'))
+        self.s.dispatch('listenSave',doc['id'],12)
+        self.assertEqual(self.s.listen.resume()['position'],12)
+        other=self.s.listen.prepare({'bookId':'book2','key':'unit:book:2','chapters':[{'text':'A different reading.'}]})
+        self.assertNotEqual(other['id'],doc['id'])
+        self.assertEqual(self.s.listen.resume()['id'],doc['id'])
+        self.s.dispatch('listenSave',other['id'],3)
+        self.assertEqual(self.s.listen.resume()['id'],other['id'])
+        with self.assertRaises(ValueError): self.s.listen.prepare({'key':'unit:empty','chapters':[{'text':'   '}]})
+        with self.assertRaises(ValueError): self.s.listen.load('../progress')
+    def test_narration_speech_cache_and_voice_state(self):
+        class Engine:
+            def __init__(self): self.calls=0
+            def generate(self,text,sid=0,speed=1.0):
+                self.calls+=1
+                class Result: samples=[.1,-.1]*2400
+                return Result()
+        doc=self.s.listen.prepare({'bookId':'book1','key':'unit:speech','chapters':[{'text':'A short chapter to read aloud. Second sentence follows.'}]})
+        chapter=doc['chapters'][0]; start,end=chapter['sentences'][0]; engine=Engine()
+        self.s.listen._load_engine=lambda:(engine,24000)
+        first=self.s.dispatch('listenSpeak',doc['id'],start,end,1.0,1)
+        self.assertEqual(engine.calls,1); self.assertGreater(first['seconds'],0)
+        self.assertTrue(inside(self.s.media[first['url'].split('/media/')[1]],self.s.listen.audio))
+        cached=self.s.dispatch('listenSpeak',doc['id'],start,end,1.0,1)
+        self.assertEqual(engine.calls,1); self.assertEqual(cached['url'],first['url'])
+        self.s.dispatch('listenSpeak',doc['id'],start,end,1.0,0)
+        self.assertEqual(engine.calls,2)
+        self.assertFalse(self.s.dispatch('listenVoice')['installed'])
+        with patch('requests.get') as get, patch('listen.logging.exception'):
+            class Response:
+                headers={'content-length':'4'}
+                def __enter__(self): return self
+                def __exit__(self,*args): return False
+                def raise_for_status(self): pass
+                def iter_content(self,size): return iter([b'junk'])
+            get.return_value=Response(); self.s.listen._download()
+        self.assertTrue(self.s.listen.voice()['error'])
+        self.assertFalse(self.s.listen.installed())
 
 if __name__=='__main__': unittest.main(verbosity=2)

@@ -6,3 +6,4 @@ requests==2.34.2
 readability-lxml==0.9.0
 libtorrent==2.1.1
 Send2Trash==2.1.0
+sherpa-onnx==1.13.8

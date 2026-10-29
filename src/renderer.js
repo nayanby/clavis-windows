@@ -42,6 +42,8 @@ async function refreshCategory(kind){const ids=feeds.filter(f=>f.kind===kind).ma
 function openFeed(id){articleOpen=false;activeFeed=id;query='';$('search').value='';renderFeeds();void fetchLatestFeed(id);}
 const audio=$('audio');
 audio.crossOrigin='anonymous';
+const listenAudio=$('listen-audio');
+let listening=null;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const plain=s=>new DOMParser().parseFromString(s||'','text/html').body.textContent||'';
 const short=(s,n=180)=>s.length>n?s.slice(0,n)+'…':s;
@@ -63,7 +65,7 @@ function renderNavigation(){document.querySelectorAll('[data-icon]').forEach(el=
   $('navigation').innerHTML=`<button data-route="Home" class="${route==='Home'?'active':''}"><span class="nav-icon">${clavisIcons.Home}</span>Home</button><p class="nav-label">YOUR LIBRARY</p>`+categories.map(([kind,title,,,symbol])=>`<button data-route="${kind}" class="${route===kind?'active':''}"><span class="nav-icon">${clavisIcons[kind]}</span>${title}</button>`).join('');
   document.querySelectorAll('.sidebar-bottom [data-route]').forEach(b=>b.classList.toggle('active',b.dataset.route===route));
 }
-async function cleanupReader(){readerGeneration++;if(reader){reader.epub?.destroy();reader.pdf?.destroy();reader.observer?.disconnect();reader=null;}document.body.classList.remove('reading');}
+async function cleanupReader(){if(listening)await closeListen();readerGeneration++;if(reader){reader.epub?.destroy();reader.pdf?.destroy();reader.observer?.disconnect();reader=null;}document.body.classList.remove('reading');}
 async function navigate(next){await persistAudio();await flushNote();if(reader)await cleanupReader();route=next;activeFeed=null;articleOpen=false;query='';$('search').value='';$('search').placeholder=['News','Podcasts','Journals'].includes(route)?'Search sources and stories':'Search your library';render();$('main').scrollTop=0;window.scrollTo(0,0);if(['News','Podcasts','Journals'].includes(next))void refreshCategory(next);}
 function render(){document.body.classList.toggle('playing',route==='Player');renderNavigation();$('heading').textContent=route==='Home'?'Clavis':route==='Kindle'?'Kindle':categories.find(c=>c[0]===route)?.[1]||route;$('eyebrow').textContent=route==='Home'?'YOUR PERSONAL LIBRARY':route==='Player'?'NOW PLAYING':route==='Kindle'?'KINDLE LIBRARY':'CLAVIS FOR WINDOWS';$('import').hidden=!['Home','EPUB','PDF','Audio','Kindle'].includes(route);$('search').hidden=['Player','Reader','Settings','Journalling','Downloads'].includes(route);renderMini();
   if(route==='Home')renderHome();else if(['EPUB','PDF','Audio'].includes(route))renderLibrary();else if(['News','Podcasts','Journals'].includes(route))renderFeeds();else if(route==='Player')renderPlayer();else if(route==='Settings')renderSettings();else if(route==='Journalling')renderNotes();else if(route==='Downloads')renderDownloads();else if(route==='Kindle')renderKindle();
@@ -75,6 +77,7 @@ async function importFolder(){closeModal();toast('Choose an audiobook folder. Su
 function bookMenu(id){const b=state.books.find(b=>b.id===id);const isKindle=b.kind==='Kindle';modal(b.title,`<div class="stack"><button id="book-open">Open book</button>${isKindle?`<button id="book-edit">Edit details…</button>`:''}<button id="book-remove">Remove from library · keep files</button><button id="book-delete" class="danger">Move book files to Recycle Bin…</button></div>`,()=>{on('book-open','click',()=>{closeModal();return openBook(id);});if(isKindle)on('book-edit','click',()=>{closeModal();libraryMetadataDialog(id);});on('book-remove','click',async()=>{if(current?.id===id){audio.pause();current=null;audio.removeAttribute('src');}state=await api.removeBook(id);closeModal();await navigate(route==='Reader'?'Home':route);});on('book-delete','click',async()=>{const s=await api.deleteBook(id);if(s){if(current?.id===id){audio.pause();current=null;}state=s;closeModal();await navigate('Home');}});});}
 async function openBook(id){const b=state.books.find(b=>b.id===id);if(!b)return;await flushNote();if(b.kind==='Audio'||b.kind==='Podcast'){if(reader)await cleanupReader();await startBook(b,false);route='Player';render();}else{let book=b;if(book.kind==='Kindle'){try{toast('Preparing this Kindle book for reading…');const updated=await api.kindleConvert(book.id);const i=state.books.findIndex(x=>x.id===book.id);if(i>=0)state.books[i]=updated;book=updated;}catch(e){toast(e.message);return;}}await openReader(book);}}
 async function startBook(b,autoplay=true,index,position){
+  if(listening)await closeListen();
   await persistAudio();const generation=++audioGeneration;audioLoading=true;audio.pause();stopTranscription();transcriptVisible=false;
   try{
     if(b.kind==='Audio'&&!b.chaptersVersion){b=await api.prepareAudio(b.id);const i=state.books.findIndex(x=>x.id===b.id);if(i>=0)state.books[i]=b;}
@@ -149,7 +152,7 @@ async function readArticle(id){
     else show(article.title||e.title,article.content);
   }catch(error){if(visible())show(e.title,e.content,'RSS preview only. The article could not be loaded from the publisher. '+error.message,true);}
 }
-function renderSettings(){$('main').innerHTML=`<div class="settings"><div class="surface-heading">${illustration('settings','surface-art')}<div><h2>Make yourself at home.</h2><p class="muted">Reading and playback preferences are saved on this computer.</p></div></div><div class="setting"><div><h3>Appearance</h3><p>A quiet space, day or night.</p></div><select id="theme"><option value="system">Follow Windows</option><option value="light">Light</option><option value="dark">Dark</option></select></div><div class="setting"><div><h3>Skip interval</h3><p>Rewind and forward buttons.</p></div><select id="skip-setting">${[5,10,15,30,60,120].map(n=>`<option value="${n}">${n} seconds</option>`).join('')}</select></div><div class="setting"><div><h3>EPUB font size</h3><p>Applied to your reflowable books.</p></div><input id="font-setting" type="number" min="10" max="40" value="${state.settings.fontSize||19}" aria-label="EPUB font size"></div><div class="setting"><div><h3>Downloads</h3><p>Imports and downloads share Data / Books in named folders.</p></div><button data-action="files">Open folder ↗</button></div><div class="setting"><div><h3>Clavis for Windows</h3><p>Python desktop edition 0.2.5 · Based on your Clavis Android project.</p></div></div><p class="notice" style="margin-top:25px">This first desktop build includes local books, playback, PDF ink, EPUB highlights, feeds, typed journals and magnet transfers. Offline English live text and audio equalizer are included. Journals also support handwriting. Embedded chapters and reviewed offline spoken-heading scans are supported.</p></div>`;$('theme').value=state.settings.theme||'system';$('skip-setting').value=state.settings.skip||30;on('theme','change',()=>settings({theme:$('theme').value}));on('skip-setting','change',()=>settings({skip:Number($('skip-setting').value)}));on('font-setting','change',()=>settings({fontSize:Number($('font-setting').value)}));}
+function renderSettings(){$('main').innerHTML=`<div class="settings"><div class="surface-heading">${illustration('settings','surface-art')}<div><h2>Make yourself at home.</h2><p class="muted">Reading and playback preferences are saved on this computer.</p></div></div><div class="setting"><div><h3>Appearance</h3><p>A quiet space, day or night.</p></div><select id="theme"><option value="system">Follow Windows</option><option value="light">Light</option><option value="dark">Dark</option></select></div><div class="setting"><div><h3>Skip interval</h3><p>Rewind and forward buttons.</p></div><select id="skip-setting">${[5,10,15,30,60,120].map(n=>`<option value="${n}">${n} seconds</option>`).join('')}</select></div><div class="setting"><div><h3>EPUB font size</h3><p>Applied to your reflowable books.</p></div><input id="font-setting" type="number" min="10" max="40" value="${state.settings.fontSize||19}" aria-label="EPUB font size"></div><div class="setting"><div><h3>Downloads</h3><p>Imports and downloads share Data / Books in named folders.</p></div><button data-action="files">Open folder ↗</button></div><div class="setting"><div><h3>Clavis for Windows</h3><p>Python desktop edition 0.2.5 · Based on your Clavis Android project.</p></div></div><p class="notice" style="margin-top:25px">This first desktop build includes local books, playback, PDF ink, EPUB highlights, feeds, typed journals and magnet transfers. EPUB and PDF books can be read aloud offline from the current chapter or page with the built-in Kitten voice. Journals also support handwriting. Embedded chapters and reviewed offline spoken-heading scans are supported.</p></div>`;$('theme').value=state.settings.theme||'system';$('skip-setting').value=state.settings.skip||30;on('theme','change',()=>settings({theme:$('theme').value}));on('skip-setting','change',()=>settings({skip:Number($('skip-setting').value)}));on('font-setting','change',()=>settings({fontSize:Number($('font-setting').value)}));}
 function renderNotes(){renderNotesContent();journalDrawingControls();}
 function renderNotesContent(){const n=state.notes.find(n=>n.id===activeNote);$('main').innerHTML=`<div class="toolbar"><span class="muted">A place for your thoughts.</span><button class="primary" data-action="new-note">＋ New journal entry</button></div><div class="note-layout"><div class="note-list">${state.notes.map(n=>`<button data-note="${n.id}"><strong>${esc(n.title)}</strong><br><small>${date(n.updated)}</small></button>`).join('')||'<p class="muted">No entries yet.</p>'}</div><div>${n?`<div class="note-editor"><input id="note-title" value="${esc(n.title)}" placeholder="Entry title" aria-label="Entry title"><textarea id="note-text" placeholder="Start writing…" aria-label="Journal entry">${esc(n.text)}</textarea><div class="row spread"><small id="note-status">Saved on this computer</small><div class="row"><button id="note-export">Export text</button><button id="note-delete" class="danger">Delete entry</button></div></div></div>`:'<div class="empty"><img class="ui-illustration empty-art" src="../assets/pastel/bookmarks.png" alt=""><h2>Leave a little room to reflect.</h2><p>Create an entry and start writing.</p></div>'}</div></div>`;if(n){const changed=()=>{n.title=$('note-title').value;n.text=$('note-text').value;$('note-status').textContent='Saving…';clearTimeout(noteTimer);noteTimer=setTimeout(run(async()=>{await api.saveNote(n);if($('note-status'))$('note-status').textContent='Saved on this computer';}),600);};on('note-title','input',changed);on('note-text','input',changed);on('note-export','click',async()=>{await flushNote();if(await api.exportNote(n.id))toast('Entry exported.');});on('note-delete','click',()=>modal('Delete journal entry?',`<p>Delete “${esc(n.title)}” permanently?</p><div class="row"><button id="confirm-delete-note" class="danger">Delete entry</button><button id="keep-note">Keep entry</button></div>`,()=>{on('keep-note','click',closeModal);on('confirm-delete-note','click',async()=>{clearTimeout(noteTimer);state.notes=await api.deleteNote(n.id);activeNote=null;closeModal();renderNotes();});}));}}
 async function flushNote(){clearTimeout(noteTimer);const n=state.notes.find(n=>n.id===activeNote);if(n&&route==='Journalling')await api.saveNote(n);}
@@ -165,9 +168,9 @@ function addDownload(){modal('Add a download','<label for="magnet">Magnet link</
 async function openReader(b){
   await cleanupReader();document.body.classList.remove('playing');route='Reader';renderNavigation();document.body.classList.add('reading');$('heading').textContent=b.title;$('eyebrow').textContent=b.kind+' READER';$('import').hidden=true;$('search').hidden=true;renderMini();
   const generation=readerGeneration;
-  $('main').innerHTML=`<div class="reader-shell"><div class="reader-toolbar"><button id="reader-back">‹ Library</button><div class="reader-tools"><input id="reader-find" class="reader-find" type="search" placeholder="Search book" aria-label="Search book"><button id="reader-search">Find</button><button id="reader-bookmark" aria-label="Bookmark current page">⚑ Bookmark</button><button id="reader-marks">Bookmarks</button>${b.kind==='EPUB'?'<button id="reader-type">Aa</button><button id="reader-highlight">Highlight selection</button>':'<button id="ink-toggle">✎ Pen</button><select id="ink-kind" aria-label="Drawing tool"><option value="pen">Pen</option><option value="highlight">Highlighter</option><option value="underline">Underliner</option></select><input id="ink-color" class="ink-color" type="color" value="#7971ae" aria-label="Ink color"><button id="ink-undo">Undo</button><button id="pdf-zoom-out" aria-label="Zoom out">−</button><button id="pdf-zoom-in" aria-label="Zoom in">＋</button>'}</div></div><div class="reader-stage" id="reader-stage"><div class="loading">Opening ${b.kind}…</div></div><div class="reader-footer"><button id="reader-outline">☷ Outline</button><div class="row"><button id="reader-previous">‹ Previous</button><span id="reader-position" class="muted"></span><button id="reader-next">Next ›</button><button id="reader-jump">Go to…</button></div><span class="muted" id="reader-percent"></span></div></div>`;
+  $('main').innerHTML=`<div class="reader-shell"><div class="reader-toolbar"><button id="reader-back">‹ Library</button><div class="reader-tools"><input id="reader-find" class="reader-find" type="search" placeholder="Search book" aria-label="Search book"><button id="reader-search">Find</button><button id="reader-bookmark" aria-label="Bookmark current page">⚑ Bookmark</button><button id="reader-marks">Bookmarks</button>${b.kind==='EPUB'?'<button id="reader-type">Aa</button><button id="reader-highlight">Highlight selection</button>':'<button id="ink-toggle">✎ Pen</button><select id="ink-kind" aria-label="Drawing tool"><option value="pen">Pen</option><option value="highlight">Highlighter</option><option value="underline">Underliner</option></select><input id="ink-color" class="ink-color" type="color" value="#7971ae" aria-label="Ink color"><button id="ink-undo">Undo</button><button id="pdf-zoom-out" aria-label="Zoom out">−</button><button id="pdf-zoom-in" aria-label="Zoom in">＋</button>'}</div></div><div class="reader-stage" id="reader-stage"><div class="loading">Opening ${b.kind}…</div></div><div class="reader-footer"><div class="row"><button id="reader-listen" class="listen-pill">♪ Listen</button><button id="reader-outline">☷ Outline</button></div><div class="row"><button id="reader-previous">‹ Previous</button><span id="reader-position" class="muted"></span><button id="reader-next">Next ›</button><button id="reader-jump">Go to…</button></div><span class="muted" id="reader-percent"></span></div><section id="listen-panel" class="listen-panel" aria-label="Listen to this book" hidden><div class="listen-head"><button id="listen-back">‹ Back to reading</button><div class="row"><span id="listen-chapter-label" class="pill">CHAPTER</span><button id="listen-outline">☷ Chapters</button><button id="listen-settings">Listen settings</button></div></div><div id="listen-stage" class="listen-stage"><article id="listen-text" class="listen-text"></article></div><div class="listen-dock"><div class="row spread"><span id="listen-location" class="muted"></span><span id="listen-percent" class="muted"></span></div><input id="listen-progress" type="range" min="0" max="1000" value="0" aria-label="Reading position"><div class="listen-transport"><button id="listen-prev" aria-label="Previous chapter">${transportIcon('previous')}</button><button id="listen-back30" aria-label="Back 30 words">−30</button><button id="listen-play" class="listen-play" aria-label="Play narration">${transportIcon('play')}</button><button id="listen-forward30" aria-label="Forward 30 words">+30</button><button id="listen-next" aria-label="Next chapter">${transportIcon('next')}</button></div><div class="listen-status-row"><p id="listen-status" class="listen-status"></p><button id="listen-download" hidden>Download offline voice · 44 MB</button></div></div></section></div>`;
   reader={book:b,page:Math.floor(b.page)||1,selected:null,generation};
-  on('reader-back','click',()=>navigate(b.kind));on('reader-bookmark','click',readerBookmark);on('reader-marks','click',readerBookmarks);on('reader-outline','click',readerOutline);on('reader-search','click',readerSearch);on('reader-find','keydown',e=>{if(e.key==='Enter')return readerSearch();});on('reader-jump','click',readerJump);on('reader-previous','click',()=>readerMove(-1));on('reader-next','click',()=>readerMove(1));
+  on('reader-back','click',()=>navigate(b.kind));on('reader-bookmark','click',readerBookmark);on('reader-marks','click',readerBookmarks);on('reader-outline','click',readerOutline);on('reader-search','click',readerSearch);on('reader-find','keydown',e=>{if(e.key==='Enter')return readerSearch();});on('reader-jump','click',readerJump);on('reader-previous','click',()=>readerMove(-1));on('reader-next','click',()=>readerMove(1));on('reader-listen','click',listenFromReader);on('listen-back','click',()=>closeListen());on('listen-outline','click',listenOutline);on('listen-settings','click',listenSettingsDialog);on('listen-prev','click',()=>listenChapter(-1));on('listen-next','click',()=>listenChapter(1));on('listen-back30','click',()=>listenSkip(-30));on('listen-forward30','click',()=>listenSkip(30));on('listen-play','click',toggleListenPlay);on('listen-download','click',downloadListenVoice);bindListenProgress();
   try{
     const response=await fetch(b.url);if(!response.ok)throw Error('The source file could not be opened.');const bytes=new Uint8Array(await response.arrayBuffer());if(generation!==readerGeneration)return;
     if(b.kind==='PDF')await openPDF(bytes,generation);else await openEPUB(bytes,generation);
@@ -224,6 +227,381 @@ async function readerSearch(){if(!reader)return;const term=$('reader-find').valu
   else{for(const section of r.epub.spine.spineItems){if(generation!==readerGeneration||!$('dialog').open)return;await section.load(r.epub.load.bind(r.epub));for(const found of section.find(term))results.push({label:found.excerpt,cfi:found.cfi});section.unload();if(results.length>=100)break;}}
   if(generation!==readerGeneration||!$('dialog').open||!$('book-search-results'))return;$('search-progress').textContent=`${results.length}${results.length>=100?'+':''} matches`;$('book-search-results').innerHTML=results.slice(0,100).map((r,i)=>`<button data-search-result="${i}">${esc(r.label)}</button>`).join('');document.querySelectorAll('[data-search-result]').forEach(el=>el.onclick=run(async()=>{const found=results[Number(el.dataset.searchResult)];closeModal();if(r.pdf)pdfGo(found.page);else await r.rendition.display(found.cfi);}));
 }
+// ---- Listen: offline narration for EPUB and PDF books ----
+const MAX_LISTEN_TEXT=7.5*1024*1024;
+let listenVoiceTimer=null;
+
+function setListenStatus(text){const el=$('listen-status');if(el)el.textContent=text||'';}
+function listenChapterIndex(position){const chapters=listening.doc.chapters;let index=0;for(let i=0;i<chapters.length;i++){if(chapters[i].start<=position)index=i;else break;}return index;}
+function listenRangeAt(position){
+  const chapters=listening.doc.chapters;let current=null;
+  for(const chapter of chapters){if(position<chapter.start)break;current=chapter;if(position<=chapter.end)break;}
+  if(current){const passages=current.passages||[];const found=passages.find(([a,b])=>position>=a&&position<b)||passages.find(([a])=>a>=position);if(found)return found;}
+  const later=chapters.find(chapter=>chapter.start>position);
+  return later?.passages?.[0]||null;
+}
+function renderListenChapter(force=false){
+  const s=listening;if(!s)return;
+  const index=listenChapterIndex(s.position);
+  const chapter=s.doc.chapters[index];
+  if(!chapter)return;
+  if(force||s.chapter!==index){const text=s.doc.text;let at=chapter.start,html='';for(const [start,finish] of chapter.sentences){if(start>at)html+=esc(text.slice(at,start));html+=`<span class="listen-sentence">${esc(text.slice(start,finish))}</span>`;at=finish;}if(at<chapter.end)html+=esc(text.slice(at,chapter.end));$('listen-text').innerHTML=html;s.sentenceEls=[...$('listen-text').querySelectorAll('.listen-sentence')];s.lastSentence=-1;s.followedSentence=-1;s.chapter=index;const label=$('listen-chapter-label');if(label)label.textContent=chapter.label;const stage=$('listen-stage');if(stage)stage.scrollTop=0;force=true;}
+  updateListenHighlight(force);
+}
+function updateListenHighlight(force=false){
+  const s=listening;if(!s)return;const chapter=s.doc.chapters[s.chapter];if(!chapter)return;
+  const index=chapter.sentences.findIndex(([a,b])=>s.position>=a&&s.position<b);
+  if(index<0)return;
+  if(index!==s.lastSentence){s.sentenceEls[s.lastSentence]?.classList.remove('active');s.sentenceEls[index]?.classList.add('active');s.lastSentence=index;}
+  if(force){s.sentenceEls[index]?.scrollIntoView({block:'center'});}
+  else if(s.follow&&!listenAudio.paused&&Date.now()>=s.holdUntil&&index!==s.followedSentence){s.followedSentence=index;s.sentenceEls[index]?.scrollIntoView({block:'center',behavior:'smooth'});}
+}
+function renderListenDock(){
+  const s=listening;if(!s)return;
+  const chapter=s.doc.chapters[s.chapter];const total=s.doc.text.length||1;
+  const location=$('listen-location');if(location)location.textContent=chapter?.label||'';
+  const percent=$('listen-percent');if(percent)percent.textContent=Math.round(s.position/total*100)+'%';
+  const bar=$('listen-progress');if(bar&&!s.dragging)bar.value=Math.round(s.position/total*1000);
+  const play=$('listen-play');if(play){play.innerHTML=transportIcon(listenAudio.paused?'play':'pause');play.setAttribute('aria-label',listenAudio.paused?'Play narration':'Pause narration');}
+  const previous=$('listen-prev');if(previous)previous.disabled=s.chapter<=0;
+  const next=$('listen-next');if(next)next.disabled=s.chapter>=s.doc.chapters.length-1;
+}
+function renderListenVoice(){
+  const s=listening;if(!s)return;const voice=s.voice||{};
+  const button=$('listen-download');if(button)button.hidden=!!(voice.installed||voice.downloading);
+  if(voice.downloading)setListenStatus(`Downloading the offline voice… ${voice.progress||0}%`);
+}
+function watchListenVoice(){
+  clearTimeout(listenVoiceTimer);
+  const check=async()=>{
+    if(!listening)return;let voice;
+    try{voice=await api.listenVoice();}catch{return;}
+    if(!listening)return;
+    const wasInstalled=listening.voice?.installed;
+    listening.voice=voice;renderListenVoice();
+    if(voice.downloading){listenVoiceTimer=setTimeout(check,1200);return;}
+    if(voice.installed&&!wasInstalled)setListenStatus('Offline voice ready.');
+  };
+  listenVoiceTimer=setTimeout(check,500);
+}
+async function downloadListenVoice(){
+  if(!listening)return;
+  listening.voice=await api.listenVoiceDownload();
+  renderListenVoice();watchListenVoice();
+}
+function queueListenSave(){
+  const s=listening;if(!s||s.saveTimer)return;
+  s.saveTimer=setTimeout(()=>{s.saveTimer=null;if(listening===s)api.listenSave(s.doc.id,s.position).catch(()=>{});},2000);
+}
+async function listenChunkAt(position){
+  const range=listenRangeAt(position);
+  if(!range)return null;
+  const prefetch=listening.prefetch;
+  if(prefetch&&prefetch.range[0]===range[0]&&prefetch.range[1]===range[1]){
+    listening.prefetch=null;
+    try{return await prefetch.promise;}catch{return api.listenSpeak(listening.doc.id,range[0],range[1],listening.rate,listening.speaker);}
+  }
+  return api.listenSpeak(listening.doc.id,range[0],range[1],listening.rate,listening.speaker);
+}
+function listenPrefetch(chunk){
+  const s=listening;if(!s)return;
+  const range=listenRangeAt(chunk.end);
+  if(!range)return;
+  const promise=api.listenSpeak(s.doc.id,range[0],range[1],s.rate,s.speaker);
+  promise.catch(()=>{});
+  s.prefetch={range,promise};
+}
+function stopListenAudio(){
+  const s=listening;if(!s)return;
+  s.gen++;s.chunk=null;s.prefetch=null;
+  listenAudio.pause();listenAudio.removeAttribute('src');listenAudio.load();
+  setListenStatus('');
+}
+async function listenPlay(){
+  const s=listening;if(!s)return;
+  if(!s.voice?.installed){setListenStatus('Download the offline voice once to listen.');renderListenVoice();return;}
+  if(!audio.paused)audio.pause();
+  s.intent=true;
+  if(s.position>=s.doc.text.length){s.position=0;renderListenChapter(true);}
+  const generation=++s.gen;
+  setListenStatus('Preparing speech…');renderListenDock();
+  try{
+    const chunk=await listenChunkAt(s.position);
+    if(listening!==s||generation!==s.gen)return;
+    if(!chunk){finishListen();return;}
+    s.chunk=chunk;
+    listenAudio.src=chunk.url;listenAudio.volume=state.settings.volume??.8;
+    await listenAudio.play();
+    if(generation===s.gen)setListenStatus('');
+    listenPrefetch(chunk);
+  }catch(e){
+    if(listening===s&&generation===s.gen){
+      if(e.name==='NotAllowedError')setListenStatus('Press Play to begin.');
+      else{setListenStatus(e.message);toast(e.message);}
+    }
+  }finally{
+    if(listening===s&&generation===s.gen)renderListenDock();
+  }
+}
+function listenPause(){
+  const s=listening;if(!s)return;
+  s.intent=false;
+  if(listenAudio.paused)return;
+  const chunk=s.chunk;
+  if(chunk&&Number.isFinite(listenAudio.duration)&&listenAudio.duration>0){const fraction=Math.min(1,listenAudio.currentTime/listenAudio.duration);s.position=Math.min(chunk.end,chunk.start+Math.round((chunk.end-chunk.start)*fraction));}
+  listenAudio.pause();
+  queueListenSave();renderListenChapter();renderListenDock();
+}
+async function toggleListenPlay(){
+  if(!listening)return;
+  if(listenAudio.paused)await listenPlay();else listenPause();
+}
+async function listenSeek(position,autoplay){
+  const s=listening;if(!s)return;
+  const target=Math.max(0,Math.min(s.doc.text.length,Math.round(position)));
+  const chunk=s.chunk;
+  if(chunk&&target>=chunk.start&&target<chunk.end&&listenAudio.src&&listenAudio.readyState>0){
+    listenAudio.pause();
+    const duration=Number.isFinite(listenAudio.duration)&&listenAudio.duration>0?listenAudio.duration:chunk.seconds||0;
+    if(duration)listenAudio.currentTime=Math.min(duration-.05,Math.max(0,(target-chunk.start)/(chunk.end-chunk.start)*duration));
+    s.position=target;renderListenChapter();renderListenDock();queueListenSave();
+    if(autoplay)await listenAudio.play().catch(()=>{});
+    return;
+  }
+  stopListenAudio();
+  s.position=target;renderListenChapter();renderListenDock();queueListenSave();
+  if(autoplay)await listenPlay();
+}
+async function listenSkip(words){
+  const s=listening;if(!s)return;
+  const playing=s.intent;
+  const result=await api.listenPosition(s.doc.id,s.position,words);
+  if(listening!==s)return;
+  await listenSeek(result.position,playing);
+}
+async function listenChapter(delta){
+  const s=listening;if(!s)return;
+  const index=listenChapterIndex(s.position)+delta;
+  if(index<0||index>=s.doc.chapters.length)return;
+  const playing=s.intent;
+  await listenSeek(s.doc.chapters[index].start,playing);
+}
+function listenTick(){
+  const s=listening;if(!s||!s.chunk||listenAudio.paused)return;
+  const chunk=s.chunk;
+  if(!Number.isFinite(listenAudio.duration)||listenAudio.duration<=0)return;
+  const fraction=Math.min(1,listenAudio.currentTime/listenAudio.duration);
+  s.position=Math.min(chunk.end,chunk.start+Math.round((chunk.end-chunk.start)*fraction));
+  renderListenChapter();renderListenDock();queueListenSave();
+}
+function finishListen(){
+  const s=listening;if(!s)return;
+  s.intent=false;
+  s.position=s.doc.text.length;s.chunk=null;
+  listenAudio.pause();listenAudio.removeAttribute('src');
+  setListenStatus('Finished · Play to listen again.');
+  renderListenChapter();renderListenDock();queueListenSave();
+}
+async function listenEnded(){
+  const s=listening;if(!s||!s.chunk)return;
+  const chunk=s.chunk;
+  s.position=chunk.end;s.chunk=null;queueListenSave();
+  if(s.stopAfterChapter&&listenChapterIndex(chunk.end)!==listenChapterIndex(chunk.start)){s.stopAfterChapter=false;s.sleepLabel='';setListenStatus('Stopped at the end of the chapter.');renderListenChapter();renderListenDock();return;}
+  if(chunk.end>=s.doc.text.length||!listenRangeAt(chunk.end)){finishListen();return;}
+  await listenPlay();
+}
+async function restartListen(){
+  const s=listening;if(!s)return;
+  const playing=s.intent;
+  stopListenAudio();renderListenChapter();renderListenDock();
+  if(playing)await listenPlay();
+}
+async function setListenRate(rate){
+  if(!listening)return;
+  listening.rate=Math.max(.5,Math.min(2.5,rate));
+  state.settings=await api.settings({listenRate:listening.rate});
+  toast(`Narration speed: ${listening.rate}×.`);
+  await restartListen();
+}
+async function setListenSpeaker(id){
+  if(!listening)return;
+  listening.speaker=id===1?1:0;
+  state.settings=await api.settings({listenSpeaker:listening.speaker});
+  toast(listening.speaker===1?'Narrator: Original voice.':'Narrator: Hugo, male voice.');
+  await restartListen();
+}
+async function toggleListenFollow(){
+  if(!listening)return;
+  listening.follow=!listening.follow;listening.holdUntil=0;
+  state.settings=await api.settings({listenFollow:listening.follow});
+  toast(`Follow spoken text ${listening.follow?'on':'off'}.`);
+}
+function setListenSleep(minutes,atChapter=false){
+  const s=listening;if(!s)return;
+  clearTimeout(s.sleepTimer);s.sleepTimer=null;
+  s.stopAfterChapter=atChapter;
+  s.sleepLabel=atChapter?'end of chapter':minutes?`${minutes} min`:'';
+  if(minutes)s.sleepTimer=setTimeout(()=>{if(!listening)return;listenPause();setListenStatus('Sleep timer finished.');listening.sleepLabel='';},minutes*60000);
+  toast(atChapter?'Listening stops at the end of this chapter.':minutes?`Sleep timer: ${minutes} minutes.`:'Sleep timer off.');
+}
+function bindListenProgress(){
+  const slider=$('listen-progress');if(!slider)return;
+  const stage=$('listen-stage');
+  if(stage&&!stage.dataset.listenBound){stage.dataset.listenBound='1';const hold=()=>{if(listening)listening.holdUntil=Date.now()+8000;};stage.addEventListener('wheel',hold,{passive:true});stage.addEventListener('pointerdown',hold);}
+  slider.addEventListener('pointerdown',()=>{if(!listening)return;listening.dragging=true;listening.resumeAfterSeek=listening.intent;listenAudio.pause();});
+  slider.addEventListener('input',()=>{
+    if(!listening)return;
+    const chapter=listening.doc.chapters[listenChapterIndex(Number(slider.value)/1000*listening.doc.text.length)];
+    const location=$('listen-location');if(location&&chapter)location.textContent=chapter.label;
+    const percent=$('listen-percent');if(percent)percent.textContent=Math.round(Number(slider.value)/10)+'%';
+  });
+  slider.addEventListener('change',run(async()=>{
+    if(!listening)return;
+    const resume=listening.resumeAfterSeek;listening.dragging=false;
+    await listenSeek(Number(slider.value)/1000*listening.doc.text.length,resume);
+  }));
+}
+function listenSpeedDialog(){
+  const rates=[.5,.75,1,1.25,1.5,2,2.5];
+  modal('Narration speed',`<div class="stack">${rates.map(n=>`<button data-listen-rate="${n}"${n===listening.rate?' class="primary"':''}>${n}×${n===1?' · Normal':''}</button>`).join('')}</div>`,()=>{$('dialog-content').querySelectorAll('[data-listen-rate]').forEach(button=>button.onclick=run(async()=>{closeModal();await setListenRate(Number(button.dataset.listenRate));}));});
+}
+function listenSleepDialog(){
+  modal('Sleep timer',`<div class="stack"><button data-listen-sleep="15">15 minutes</button><button data-listen-sleep="30">30 minutes</button><button data-listen-sleep="60">60 minutes</button><button id="listen-sleep-chapter">End of chapter</button><button id="listen-sleep-off">Turn off timer</button></div>`,()=>{
+    document.querySelectorAll('[data-listen-sleep]').forEach(button=>button.onclick=()=>{closeModal();setListenSleep(Number(button.dataset.listenSleep));});
+    on('listen-sleep-chapter','click',()=>{closeModal();setListenSleep(0,true);});
+    on('listen-sleep-off','click',()=>{closeModal();setListenSleep(0);});
+  });
+}
+function listenVoiceDialog(){
+  const s=listening;if(!s)return;const voice=s.voice||{};
+  const speakers=voice.speakers||[{id:1,label:'Original voice'},{id:0,label:'Hugo · male'}];
+  modal('Narrator voice',`<p class="muted">The neural voice runs on this computer. The first use downloads 44 MB once.</p><div class="stack">${speakers.map(speaker=>`<button data-listen-speaker="${speaker.id}"${speaker.id===s.speaker?' class="primary"':''}>${esc(speaker.label)}</button>`).join('')}${voice.installed?'':`<button id="listen-voice-get" class="primary">${voice.downloading?`Downloading… ${voice.progress||0}%`:'Download offline voice · 44 MB'}</button>`}</div>`,()=>{
+    document.querySelectorAll('[data-listen-speaker]').forEach(button=>button.onclick=run(async()=>{closeModal();await setListenSpeaker(Number(button.dataset.listenSpeaker));}));
+    on('listen-voice-get','click',async()=>{closeModal();await downloadListenVoice();});
+  });
+}
+function listenOutline(){
+  const s=listening;if(!s)return;const chapters=s.doc.chapters;
+  modal('Chapters',`<div class="outline">${chapters.map((chapter,index)=>`<button data-listen-chapter="${index}"${index===s.chapter?' class="active"':''}>${esc(chapter.label)}</button>`).join('')}</div>`,()=>{
+    document.querySelectorAll('[data-listen-chapter]').forEach(button=>button.onclick=run(async()=>{closeModal();await listenSeek(chapters[Number(button.dataset.listenChapter)].start,s.intent);}));
+  });
+}
+function listenSettingsDialog(){
+  if(!listening)return;
+  const sleep=listening.sleepLabel?' · '+listening.sleepLabel:'';
+  modal('Listen settings',`<div class="stack"><button data-listen-setting="speed">Speed · ${listening.rate}×</button><button data-listen-setting="sleep">Sleep timer${sleep}</button><button data-listen-setting="follow">Follow spoken text · ${listening.follow?'On':'Off'}</button><button data-listen-setting="voice">Narrator voice · ${listening.speaker===1?'Original':'Hugo · male'}</button><button data-listen-setting="stop">Stop listening</button></div>`,()=>{
+    $('dialog-content').querySelectorAll('[data-listen-setting]').forEach(button=>button.onclick=()=>{
+      const choice=button.dataset.listenSetting;
+      if(choice==='speed')listenSpeedDialog();
+      else if(choice==='sleep')listenSleepDialog();
+      else if(choice==='follow'){closeModal();return toggleListenFollow();}
+      else if(choice==='voice')listenVoiceDialog();
+      else{closeModal();return closeListen();}
+    });
+  });
+}
+async function collectEPUBText(from,note,cancelled){
+  const book=reader?.epub;
+  if(!book)throw Error('Open the book again to prepare listening.');
+  const labels=new Map(),base=new Map();
+  const flatten=list=>{for(const item of list||[]){if(item.href){const href=String(item.href).split('#')[0].replace(/^\.\//,'');if(!labels.has(href))labels.set(href,item.label||'');base.set(href.split('/').pop(),item.label||'');}flatten(item.subitems||item.items||[]);}};
+  flatten(reader.outline||[]);
+  const chapters=[];let size=0;
+  for(let index=Math.max(0,from);index<book.spine.length;index++){
+    if(cancelled())return [];
+    note(`Reading section ${index+1} of ${book.spine.length}…`);
+    const section=book.spine.get(index);
+    if(!section)continue;
+    const doc=await book.load(section.href);
+    if(!doc?.body)continue;
+    let text='';
+    const clone=doc.body.cloneNode(true);
+    clone.querySelectorAll('script,style,noscript,svg').forEach(el=>el.remove());
+    clone.querySelectorAll('br').forEach(el=>el.replaceWith('\n'));
+    clone.querySelectorAll('p,h1,h2,h3,h4,h5,h6,li,blockquote,pre,div,section,article,tr,figcaption').forEach(el=>el.append('\n\n'));
+    text=clone.textContent||'';
+    if(!text.trim())continue;
+    const href=String(section.href||'').split('#')[0].replace(/^\.\//,'');
+    chapters.push({label:labels.get(href)||base.get(href.split('/').pop())||`Section ${index+1}`,text});
+    size+=text.length;
+    if(size>MAX_LISTEN_TEXT)break;
+  }
+  return chapters;
+}
+async function collectPDFText(from,note,cancelled){
+  const pdf=reader?.pdf;
+  if(!pdf)throw Error('Open the PDF again to prepare listening.');
+  const chapters=[];let size=0,skipped=0;
+  for(let page=Math.max(1,from);page<=pdf.numPages;page++){
+    if(cancelled())return {chapters:[],skipped:0};
+    note(`Reading page ${page} of ${pdf.numPages}…`);
+    const item=await pdf.getPage(page);
+    let content;
+    try{content=await item.getTextContent();}
+    finally{item.cleanup();}
+    let text='';
+    for(const part of content.items){if(typeof part.str!=='string')continue;text+=part.str+(part.hasEOL?'\n':' ');}
+    if(!text.trim()){skipped++;continue;}
+    chapters.push({label:`Page ${page}`,text});
+    size+=text.length;
+    if(size>MAX_LISTEN_TEXT)break;
+  }
+  return {chapters,skipped};
+}
+async function listenFromReader(){
+  const book=reader?.book;
+  if(!book)return;
+  if(!['EPUB','PDF'].includes(book.kind))return toast('Listening is available for EPUB and PDF books.');
+  const from=book.kind==='PDF'?Math.max(1,reader.page||1):Math.max(0,reader.location?.start.index||0);
+  let cancelled=false;
+  const onClose=()=>{cancelled=true;};
+  $('dialog').addEventListener('close',onClose,{once:true});
+  modal('Preparing reading',`<p class="muted" id="listen-prep">Collecting text from this ${book.kind==='PDF'?'page':'chapter'}…</p><div class="row"><button id="listen-prep-cancel">Cancel</button></div>`,()=>on('listen-prep-cancel','click',()=>{cancelled=true;closeModal();}));
+  const note=text=>{if($('listen-prep'))$('listen-prep').textContent=text;};
+  try{
+    let chapters=[],skipped=0;
+    if(book.kind==='PDF')({chapters,skipped}=await collectPDFText(from,note,()=>cancelled));
+    else chapters=await collectEPUBText(from,note,()=>cancelled);
+    if(cancelled)return;
+    if(!chapters.length)throw Error(book.kind==='PDF'?'No selectable text from this page. Scanned PDFs need OCR before listening.':'No readable text from this chapter onward.');
+    note('Preparing the offline reading…');
+    const doc=await api.listenPrepare({bookId:book.id,key:`book:${book.id}:${book.kind==='PDF'?'pdf':'epub'}:${from}`,title:book.title,chapters});
+    if(cancelled)return;
+    $('dialog').removeEventListener('close',onClose);
+    closeModal();
+    openListen(doc,{note:skipped?`${skipped} page${skipped===1?'':'s'} without selectable text skipped.`:''});
+  }catch(e){
+    $('dialog').removeEventListener('close',onClose);
+    if(!cancelled&&$('dialog').open)modal('Listen',`<p>${esc(e.message)}</p>`);
+  }
+}
+function openListen(doc,options={}){
+  const panel=$('listen-panel');
+  if(!panel||!reader)return;
+  listening={doc,position:Math.max(0,Math.min(doc.text.length,doc.position||0)),chapter:-1,chunk:null,prefetch:null,gen:0,intent:false,rate:state.settings.listenRate||1,speaker:state.settings.listenSpeaker??1,follow:state.settings.listenFollow!==false,holdUntil:0,sleepTimer:null,sleepLabel:'',stopAfterChapter:false,dragging:false,resumeAfterSeek:false,saveTimer:null,voice:doc.voice||{installed:false},lastSentence:-1,followedSentence:-1,sentenceEls:[]};
+  document.body.classList.add('listening');panel.hidden=false;
+  if(!audio.paused)audio.pause();
+  renderListenChapter(true);renderListenDock();renderListenVoice();
+  if(options.note)toast(options.note);
+  setListenStatus(options.note||'');
+  if(!listening.voice.installed){setListenStatus('Download the offline voice once to listen.');watchListenVoice();}
+  else void listenPlay();
+}
+async function closeListen(){
+  const s=listening;if(!s)return;
+  listening=null;s.gen++;
+  clearTimeout(s.sleepTimer);clearTimeout(s.saveTimer);clearTimeout(listenVoiceTimer);
+  listenAudio.pause();listenAudio.removeAttribute('src');
+  document.body.classList.remove('listening');
+  const panel=$('listen-panel');if(panel)panel.hidden=true;
+  try{await api.listenSave(s.doc.id,s.position);}catch{}
+  renderMini();
+}
+listenAudio.addEventListener('timeupdate',listenTick);
+listenAudio.addEventListener('ended',()=>run(listenEnded)());
+listenAudio.addEventListener('play',renderListenDock);
+listenAudio.addEventListener('pause',renderListenDock);
+
 async function kindleDetect(){
   const result=await api.kindleDetect();
   kindleDevice=result.connected?result.device:null;
@@ -593,9 +971,9 @@ audio.addEventListener('timeupdate',()=>{if(audioLoading)return;updateTimes();if
 audio.addEventListener('play',()=>{renderMini();updatePlayButtons();});audio.addEventListener('pause',()=>{if(audioLoading)return;renderMini();updatePlayButtons();run(persistAudio)();});
 audio.addEventListener('ended',run(completeAudioChapter));
 audio.addEventListener('error',()=>toast('This audio could not be played. Check the file or connection; try MP3, M4A, M4B, WAV, OGG or FLAC.'));
-document.addEventListener('keydown',run(async e=>{if($('dialog').open||e.target.closest('input,textarea,select,[contenteditable]'))return;if(reader){if(e.key==='ArrowRight'){e.preventDefault();await readerMove(1);}if(e.key==='ArrowLeft'){e.preventDefault();await readerMove(-1);}}else if(e.code==='Space'&&current){e.preventDefault();await togglePlay();}}));
+document.addEventListener('keydown',run(async e=>{if($('dialog').open||e.target.closest('input,textarea,select,[contenteditable]'))return;if(listening){if(e.code==='Space'){e.preventDefault();await toggleListenPlay();}return;}if(reader){if(e.key==='ArrowRight'){e.preventDefault();await readerMove(1);}if(e.key==='ArrowLeft'){e.preventDefault();await readerMove(-1);}}else if(e.code==='Space'&&current){e.preventDefault();await togglePlay();}}));
 setInterval(()=>{if(current&&!audioLoading&&!audio.paused&&Number.isFinite(activeTrack()?.end)&&audio.currentTime>=activeTrack().end)run(completeAudioChapter)();},100);
-window.addEventListener('beforeunload',()=>{run(persistAudio)();run(flushNote)();});
+window.addEventListener('beforeunload',()=>{run(persistAudio)();run(flushNote)();if(listening)api.listenSave(listening.doc.id,listening.position).catch(()=>{});});
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyTheme);
 api.onDownloads(jobs=>{downloadState=jobs;if(route==='Downloads'&&!$('dialog').open)renderDownloads();});
 async function boot(){state=await api.load();const f=await api.feeds();feeds=f.feeds;directory=f.directory;downloadState=await api.downloads();applyTheme();render();void (async()=>{for(const kind of ['News','Podcasts','Journals'])await refreshCategory(kind);})();const recent=state.books.filter(b=>['Audio','Podcast'].includes(b.kind)&&b.lastActive).sort((a,b)=>b.lastActive-a.lastActive)[0];if(recent)await startBook(recent,false);}

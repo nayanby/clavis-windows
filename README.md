@@ -34,6 +34,7 @@ Removing a book from the library keeps its copied files. The separate file-remov
 - Seven home categories: EPUB, PDF, Audio Books, News, Podcasts, Articles and Journalling.
 - EPUB pagination, font size, spacing, margins, outline, search, bookmarks, saved position and text highlights.
 - PDF page rendering, lazy loading, page jump, outline, text search, zoom, saved position, bookmarks, pen, highlighter, straight underline and undo. Ink is saved separately from the PDF.
+- Offline read-aloud for EPUB and PDF from the current chapter or page: Kitten neural voice, play/pause, 30-word skips, chapter navigation, speed, sleep timer, live sentence highlight, follow option and saved listening position. Scanned PDFs are identified and skipped.
 - Audio file and folder import, nested folders and disc grouping, natural chapter order, nearby and embedded cover images.
 - Audio playback with byte-range streaming, chapter-relative seeking, cross-chapter skips, undo seek, speed, volume, bookmarks, sleep timer, media keys, equalizer and voice gain.
 - Automatic MP3 ID3 CHAP and M4B/MP4 chapter discovery, including Nero `chpl` and supported QuickTime chapter tracks. Existing books are checked on first playback. Detect chapters rechecks metadata and offers a cancellable offline English spoken-heading scan when markers are missing; results are reviewed before being applied.
