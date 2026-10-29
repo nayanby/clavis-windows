@@ -24,7 +24,7 @@ export function themeCSS(theme) {
 
 // Match narration offsets to the original DOM without flattening its markup.
 // Preparation removes soft hyphens, joins wrapped words and normalizes whitespace.
-export function markSentences(root, text, chapter) {
+export function markSentences(root, text, chapter, rangesOnly = false) {
   const document = root.ownerDocument;
   const walker = document.createTreeWalker(root, 4);
   const nodes = [];
@@ -59,6 +59,15 @@ export function markSentences(root, text, chapter) {
   }
   const groups = chapter.sentences.map(() => []);
   for (const [node, parts] of pieces) {
+    if (rangesOnly) {
+      for (const part of parts) {
+        const range = document.createRange();
+        range.setStart(node, part.start);
+        range.setEnd(node, part.end);
+        groups[part.sentence].push(range);
+      }
+      continue;
+    }
     const fragment = document.createDocumentFragment();
     let offset = 0;
     for (const part of parts) {

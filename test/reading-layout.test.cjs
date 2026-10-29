@@ -34,3 +34,14 @@ test('highlight mapping handles soft hyphens, wrapped words and Unicode offsets'
   assert.equal(groups[0].length,1);
   assert.equal(document.body.textContent,'A\u00ad word split-\nword 😀.');
 });
+
+test('reader emphasis uses ranges without changing its DOM or pagination anchors',async()=>{
+  const {markSentences}=await import('../src/reading-layout.mjs');
+  const {document}=new JSDOM('<body><h1>Chapter I</h1><p>Hello <em>beautiful</em> world.</p></body>').window;
+  const original=document.body.innerHTML;
+  const text='Chapter I\n\nHello beautiful world.';
+  const groups=markSentences(document.body,text,{start:0,end:text.length,sentences:[[0,9],[11,text.length]]},true);
+  assert.equal(document.body.innerHTML,original);
+  assert.equal(groups[1].map(range=>range.toString()).join(''),'Hellobeautifulworld.');
+  assert.equal(document.querySelectorAll('.listen-sentence').length,0);
+});

@@ -124,3 +124,14 @@ body.listening #mini{display:none}
 .listen-sentence{opacity:.5;background:transparent!important;box-shadow:none!important}
 .listen-sentence.active{opacity:1;background:transparent!important;box-shadow:none!important}
 .listen-head .row{flex-wrap:wrap;justify-content:flex-end}
+
+/* Narration lives below the original reader; opening it never replaces the page. */
+.reader-shell{height:auto;min-height:calc(100vh - 125px)}
+.reader-stage:has(.epub-host){height:min(var(--reading-height,17cm),max(160px,calc(100dvh - 350px)))}
+.listen-panel{position:static;inset:auto;z-index:auto;display:block;padding:0;margin-top:12px;background:transparent;flex:none}
+.listen-panel .listen-stage,.listen-panel #listen-page-prev,.listen-panel #listen-page-next,.listen-panel #listen-page-label{display:none}
+.listen-head{justify-content:space-between}
+.listen-head button{padding:5px 10px;font-size:12px}
+.listen-dock{margin-top:6px;padding:6px 14px}
+.listen-transport .listen-play{height:40px;width:40px}
+.listen-transport button{padding:5px 10px}
