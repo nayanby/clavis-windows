@@ -405,7 +405,7 @@ class Services:
                     if p and inside(p,self.booksdir) and not any(x['id']!=b['id'] and (x.get('path')==p or any(t.get('path')==p for t in x.get('tracks',[]))) for x in self.store['books']): send2trash(p)
             self.store['books'].remove(b); self.save(); return self.state()
         if method=='settings':
-            for k,(lo,hi) in {'readerHeight':(6,30),'readerWidth':(8,20),'fontSize':(10,40),'lineHeight':(1,3),'margin':(0,100),'skip':(5,120),'volume':(0,1),'speed':(.5,3),'listenRate':(.5,2.5)}.items():
+            for k,(lo,hi) in {'readerHeight':(6,60),'readerWidth':(8,60),'fontSize':(10,40),'lineHeight':(1,3),'margin':(0,100),'skip':(5,120),'volume':(0,1),'speed':(.5,3),'listenRate':(.5,2.5)}.items():
                 v=args[0].get(k)
                 if isinstance(v,(int,float)): self.store['settings'][k]=max(lo,min(hi,v))
             if args[0].get('listenSpeaker') in (0,1): self.store['settings']['listenSpeaker']=int(args[0]['listenSpeaker'])

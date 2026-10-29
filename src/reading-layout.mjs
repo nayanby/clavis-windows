@@ -1,6 +1,6 @@
 export function readingWidth(value) {
   const width = Number(value);
-  return Number.isFinite(width) && width > 0 ? Math.max(8, Math.min(20, width)) : 20;
+  return Number.isFinite(width) && width > 0 ? Math.max(8, Math.min(60, width)) : 20;
 }
 
 export function readingTheme(settings, dark = false) {

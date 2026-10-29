@@ -2,10 +2,11 @@ const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {JSDOM}=require('jsdom');
 
-test('reading width is capped and both views share Averia typography',async()=>{
+test('reading width can expand and both views share Averia typography',async()=>{
   const {readingWidth,readingTheme,readingFontCSS}=await import('../src/reading-layout.mjs');
   assert.equal(readingWidth(undefined),20);
-  assert.equal(readingWidth(30),20);
+  assert.equal(readingWidth(30),30);
+  assert.equal(readingWidth(90),60);
   assert.equal(readingWidth(2),8);
   assert.equal(readingWidth(14.5),14.5);
   assert.match(readingTheme({fontSize:24,lineHeight:2,margin:12}).body['font-family'],/Averia/);

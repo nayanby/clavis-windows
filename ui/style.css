@@ -135,3 +135,14 @@ body.listening #mini{display:none}
 .listen-dock{margin-top:6px;padding:6px 14px}
 .listen-transport .listen-play{height:40px;width:40px}
 .listen-transport button{padding:5px 10px}
+
+/* Expandable page with reader-owned navigation at its sides. */
+.reader-canvas{display:flex;justify-content:center;align-items:flex-start;gap:8px;min-width:0}
+.reader-canvas .reader-stage{flex:0 1 var(--reading-width,20cm);width:var(--reading-width,20cm);max-width:calc(100% - 96px);align-self:auto;box-sizing:border-box}
+.reader-canvas .reader-stage:has(.epub-host){height:var(--reading-height,17cm);max-height:none;max-width:calc(100% - 96px)}
+.reader-page-side{position:sticky;top:45vh;flex:0 0 36px;width:36px;height:54px;padding:0;font-size:32px;border-radius:18px;z-index:2}
+body.listening .listen-panel{position:fixed;left:202px;right:22px;bottom:12px;top:auto;z-index:50;margin:0;padding:8px 10px;background:var(--bg);border:1px solid var(--line);border-radius:16px;box-shadow:0 -4px 22px #0001;max-height:42dvh;overflow:auto}
+body.listening main{padding-bottom:210px}
+.reader-toolbar{position:relative;z-index:3}
+@media(max-width:700px){body.listening .listen-panel{left:190px;right:10px}.listen-head .row{gap:4px}.reader-width-control input{width:70px}}
+.reader-canvas .reader-stage{height:var(--reading-height,17cm)}
