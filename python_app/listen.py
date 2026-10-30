@@ -19,9 +19,9 @@ VOICE = 'kitten-micro-en-v0_8'
 VOICE_URL = f'https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/{VOICE}.tar.bz2'
 VOICE_SHA = '85faaea7511ca9d1d2f251fed0a4553bdf0d1ee046102fa60ddd8046c751f76f'
 PROSODY_VERSION = 'clavis-plus-pauses-v1'
-SPEAKERS = [{'id': 1, 'label': 'Original voice'}, {'id': 0, 'label': 'Hugo · male'}]
-# Speaker ids are the model's own: sid 0 is the original 1:06 voice, sid 4 is Hugo.
-SPEAKER_IDS = {1: 0, 0: 4}
+SPEAKERS = [{'id': 1, 'label': 'Original voice'}, {'id': 0, 'label': 'Hugo · male'}, {'id': 2, 'label': 'Deep male'}]
+# Speaker ids are the model's own rows: sid 0 is the original 1:06 voice, sid 4 is Hugo, sid 2 is the lowest male row.
+SPEAKER_IDS = {1: 0, 0: 4, 2: 2}
 
 TEXT_LIMIT = 8 * 1024 * 1024
 MAX_SPAN = 2000
@@ -401,7 +401,8 @@ class Narration:
             raise ValueError('There is nothing to read at this point.')
         end = min(end, start + MAX_SPAN)
         rate = max(.5, min(2.5, float(rate or 1)))
-        speaker = 1 if int(speaker or 0) == 1 else 0
+        speaker = int(speaker or 0)
+        speaker = speaker if speaker in SPEAKER_IDS else 1
         chunk = text[start:end]
         paragraph_end = bool(re.match(r'[ \t]*\n[ \t]*\n', text[end:]))
         plan = speech_plan(chunk, paragraph_end, (chapter['label'] for chapter in document['chapters']))

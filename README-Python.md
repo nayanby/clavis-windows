@@ -8,7 +8,7 @@ The app starts windowed at 70% of the screen working area, with 80% interface sc
 
 Torrent downloads use libtorrent; they resume on request after reopening. Remove stops the job and keeps its files. Delete book sends unshared managed book files to the Recycle Bin after confirmation. Remove from library keeps files.
 
-EPUB and PDF books can be read aloud with the built-in Kitten neural voice. Listen starts at the current chapter or page, with play/pause, back/forward 30 words, previous/next chapter, speed, a sleep timer, live sentence highlighting, optional text following and a saved listening position. Speech is synthesized on the computer into a local cache; the 44 MB voice is downloaded once on first use and checked against a published SHA-256 before installation. PDF listening skips pages without selectable text, and scanned PDFs report that OCR is needed.
+EPUB and PDF books can be read aloud with the built-in Kitten neural voice. Three narrators are available: Original, Hugo and a deeper male voice. Listen starts at the current chapter or page, with play/pause, back/forward 30 words, previous/next chapter, speed, a sleep timer, live sentence highlighting, optional text following and a saved listening position. Speech is synthesized on the computer into a local cache; the 44 MB voice is downloaded once on first use and checked against a published SHA-256 before installation. PDF listening skips pages without selectable text, and scanned PDFs report that OCR is needed.
 
 Hover over the Clavis taskbar icon to show native preview buttons for seeking backward, play/pause, and seeking forward. They work while minimized, follow the skip interval in Settings, and are disabled until audio is loaded.
 

@@ -408,7 +408,7 @@ class Services:
             for k,(lo,hi) in {'readerHeight':(6,60),'readerWidth':(8,60),'fontSize':(10,40),'lineHeight':(1,3),'margin':(0,100),'skip':(5,120),'volume':(0,1),'speed':(.5,3),'listenRate':(.5,2.5)}.items():
                 v=args[0].get(k)
                 if isinstance(v,(int,float)): self.store['settings'][k]=max(lo,min(hi,v))
-            if args[0].get('listenSpeaker') in (0,1): self.store['settings']['listenSpeaker']=int(args[0]['listenSpeaker'])
+            if args[0].get('listenSpeaker') in (0,1,2): self.store['settings']['listenSpeaker']=int(args[0]['listenSpeaker'])
             if isinstance(args[0].get('listenFollow'),bool): self.store['settings']['listenFollow']=args[0]['listenFollow']
             if args[0].get('theme') in ('light','dark','system'): self.store['settings']['theme']=args[0]['theme']
             self.save(); return self.store['settings']

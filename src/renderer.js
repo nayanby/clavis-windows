@@ -518,9 +518,9 @@ async function setListenRate(rate){
 }
 async function setListenSpeaker(id){
   if(!listening)return;
-  listening.speaker=id===1?1:0;
+  listening.speaker=[0,1,2].includes(id)?id:1;
   state.settings=await api.settings({listenSpeaker:listening.speaker});
-  toast(listening.speaker===1?'Narrator: Original voice.':'Narrator: Hugo, male voice.');
+  toast(`Narrator: ${listening.speaker===1?'Original voice':listening.speaker===2?'Deep male voice':'Hugo, male voice'}.`);
   await restartListen();
 }
 async function toggleListenFollow(){
@@ -567,7 +567,7 @@ function listenSleepDialog(){
 }
 function listenVoiceDialog(){
   const s=listening;if(!s)return;const voice=s.voice||{};
-  const speakers=voice.speakers||[{id:1,label:'Original voice'},{id:0,label:'Hugo · male'}];
+  const speakers=voice.speakers||[{id:1,label:'Original voice'},{id:0,label:'Hugo · male'},{id:2,label:'Deep male'}];
   modal('Narrator voice',`<p class="muted">The neural voice runs on this computer. The first use downloads 44 MB once.</p><div class="stack">${speakers.map(speaker=>`<button data-listen-speaker="${speaker.id}"${speaker.id===s.speaker?' class="primary"':''}>${esc(speaker.label)}</button>`).join('')}${voice.installed?'':`<button id="listen-voice-get" class="primary">${voice.downloading?`Downloading… ${voice.progress||0}%`:'Download offline voice · 44 MB'}</button>`}</div>`,()=>{
     document.querySelectorAll('[data-listen-speaker]').forEach(button=>button.onclick=run(async()=>{closeModal();await setListenSpeaker(Number(button.dataset.listenSpeaker));}));
     on('listen-voice-get','click',async()=>{closeModal();await downloadListenVoice();});
@@ -576,7 +576,7 @@ function listenVoiceDialog(){
 function listenSettingsDialog(){
   if(!listening)return;
   const sleep=listening.sleepLabel?' · '+listening.sleepLabel:'';
-  modal('Listen settings',`<div class="stack"><button data-listen-setting="speed">Speed · ${listening.rate}×</button><button data-listen-setting="sleep">Sleep timer${sleep}</button><button data-listen-setting="follow">Follow spoken text · ${listening.follow?'On':'Off'}</button>${reader?.rendition?'<button data-listen-setting="appearance">Text and spacing</button>':''}<button data-listen-setting="effects">Equalizer &amp; voice gain</button><button data-listen-setting="voice">Narrator voice · ${listening.speaker===1?'Original':'Hugo · male'}</button><button data-listen-setting="stop">Stop listening</button></div>`,()=>{
+  modal('Listen settings',`<div class="stack"><button data-listen-setting="speed">Speed · ${listening.rate}×</button><button data-listen-setting="sleep">Sleep timer${sleep}</button><button data-listen-setting="follow">Follow spoken text · ${listening.follow?'On':'Off'}</button>${reader?.rendition?'<button data-listen-setting="appearance">Text and spacing</button>':''}<button data-listen-setting="effects">Equalizer &amp; voice gain</button><button data-listen-setting="voice">Narrator voice · ${listening.speaker===1?'Original':listening.speaker===2?'Deep male':'Hugo · male'}</button><button data-listen-setting="stop">Stop listening</button></div>`,()=>{
     $('dialog-content').querySelectorAll('[data-listen-setting]').forEach(button=>button.onclick=()=>{
       const choice=button.dataset.listenSetting;
       if(choice==='speed')listenSpeedDialog();

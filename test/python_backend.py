@@ -135,6 +135,13 @@ class BackendTests(unittest.TestCase):
         self.assertEqual(engine.calls,1); self.assertEqual(cached['url'],first['url'])
         self.s.dispatch('listenSpeak',doc['id'],start,end,1.0,0)
         self.assertEqual(engine.calls,2)
+        deep=self.s.dispatch('listenSpeak',doc['id'],start,end,1.0,2)
+        self.assertEqual(engine.calls,3); self.assertNotEqual(deep['url'],first['url'])
+        self.assertEqual(deep['speaker'],2)
+        voice=self.s.listen.voice()
+        self.assertEqual([s['id'] for s in voice['speakers']],[1,0,2])
+        self.assertEqual(self.s.dispatch('settings',{'listenSpeaker':2})['listenSpeaker'],2)
+        self.assertEqual(self.s.dispatch('settings',{'listenSpeaker':7})['listenSpeaker'],2)
         self.assertFalse(self.s.dispatch('listenVoice')['installed'])
         with patch('requests.get') as get, patch('listen.logging.exception'):
             class Response:
