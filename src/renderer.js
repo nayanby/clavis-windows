@@ -392,6 +392,8 @@ function slidePost(post,delta){
   // the card changes height when it opens; reading its box flushes layout, so no frame is needed
   centerPost(post);
 }
+let centreFrame=0;
+function stopCentre(){if(centreFrame){cancelAnimationFrame(centreFrame);centreFrame=0;}}
 function centerPost(post){
   if(!post.isConnected)return;
   const box=post.getBoundingClientRect(),margin=16,mini=$('mini');
@@ -400,7 +402,18 @@ function centerPost(post){
   if(box.top>=margin&&box.bottom<=view-margin)return;
   // explicit window maths: scrollIntoView walks every nested scroller and overshoots when the stream re-renders mid-scroll
   const offset=box.height+margin*2<=view?(view-box.height)/2:margin;
-  window.scrollTo({top:window.scrollY+box.top-offset,behavior:'smooth'});
+  const from=window.scrollY,to=Math.max(0,Math.round(from+box.top-offset)),distance=to-from;
+  stopCentre();
+  // an occluded window throttles frames, so there it arrives in one step instead of crawling
+  if(!distance||document.visibilityState!=='visible'){window.scrollTo(0,to);return;}
+  const start=performance.now(),duration=Math.min(700,Math.max(300,Math.abs(distance)*.8));
+  const step=now=>{
+    centreFrame=0;
+    const t=Math.min(1,(now-start)/duration),ease=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+    window.scrollTo(0,from+distance*ease);
+    if(t<1)centreFrame=requestAnimationFrame(step);
+  };
+  centreFrame=requestAnimationFrame(step);
 }
 function markFeedOpened(key){
   if(!key)return;
@@ -1430,6 +1443,8 @@ document.addEventListener('keydown',e=>{const row=e.target.closest?.('.source-ro
 document.addEventListener('pointerdown',e=>{const pages=e.target.closest?.('.post-pages');if(!pages||e.button!==0||e.target.closest('.post-flow'))return;postDrag={pages,x:e.clientX,y:e.clientY,pointer:e.pointerId};});
 document.addEventListener('pointerup',e=>{const drag=postDrag;postDrag=null;if(!drag||drag.pointer!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)<48||Math.abs(dx)<Math.abs(dy)*1.2)return;const selection=window.getSelection();if(selection&&!selection.isCollapsed)return;const post=drag.pages.closest('.post');if(post)slidePost(post,dx<0?1:-1);});
 document.addEventListener('pointercancel',()=>{postDrag=null;});
+// a reader's own scroll wins over the auto-centre glide
+addEventListener('wheel',stopCentre,{passive:true});addEventListener('touchstart',stopCentre,{passive:true});
 document.addEventListener('click',e=>{const a=e.target.closest('.article-content a');if(a){e.preventDefault();run(()=>api.openURL(a.href))();}});
 document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement){e.target.removeAttribute('src');e.target.style.visibility='hidden';}},true);
 on('dialog-close','click',closeModal);on('import','click',importFiles);on('files','click',()=>api.openFiles());on('search','input',()=>{query=$('search').value;render();});bindListenPanel();
