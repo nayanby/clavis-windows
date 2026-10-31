@@ -389,8 +389,8 @@ function slidePost(post,delta){
   const total=1+Number(post.dataset.pages||1);
   post.dataset.slide=String(Math.max(0,Math.min(total-1,Number(post.dataset.slide||0)+delta)));
   updatePost(post);
-  // the card changes height when it opens, so centre it after the layout settles
-  requestAnimationFrame(()=>centerPost(post));
+  // the card changes height when it opens; reading its box flushes layout, so no frame is needed
+  centerPost(post);
 }
 function centerPost(post){
   if(!post.isConnected)return;
