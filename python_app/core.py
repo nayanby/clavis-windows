@@ -1,7 +1,9 @@
 """Clavis native services. All persistent data lives beside Clavis.exe."""
 import base64
+import calendar
 import copy
 import hashlib
+import html as htmllib
 import ipaddress
 import json
 import logging
@@ -15,7 +17,7 @@ import subprocess
 import threading
 import time
 import uuid
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urljoin, urlparse, parse_qs
 import webbrowser
 
 import feedparser
@@ -28,6 +30,12 @@ import listen
 import metadata
 
 AUDIO = {'.mp3', '.m4a', '.m4b', '.ogg', '.wav', '.flac', '.opus', '.aac'}
+FEED_KINDS = ('News', 'Podcasts', 'Journals')
+FEED_TOPICS = ['Medical','Technology','Science','Environment','Business','Politics','India','World','Culture','Education','Social sciences','Engineering','Mathematics','Physics','Chemistry','Biology','Space']
+FEED_IMAGE_LOGO = re.compile(r'(logo|favicon|sprite|avatar|icon)[-_./]', re.I)
+FEED_NON_IMAGE = re.compile(r'\.(mp3|m4a|m4b|ogg|oga|opus|wav|aac|flac|m3u8|pdf|epub|zip|html?)([?#]|$)', re.I)
+FEED_FETCH_LIMIT = 8*1024*1024
+FEED_CONTENT_LIMIT = 256*1024
 def uid(value): return hashlib.sha256(str(value).lower().encode()).hexdigest()[:24]
 def now(): return int(time.time()*1000)
 def natural(value): return [int(x) if x.isdigit() else x.lower() for x in re.split(r'(\d+)',str(value))]
@@ -53,7 +61,8 @@ def public_url(url):
     return url
 
 def fetch(url,stream=False,headers=None,max_bytes=12*1024*1024):
-    for _ in range(6):
+    # Podcast hosts such as podtrac chain six or more tracking redirects before the audio file.
+    for _ in range(15):
         public_url(url)
         response=requests.get(url,headers={'User-Agent':'Clavis/0.2.0','Cache-Control':'no-cache','Pragma':'no-cache',**(headers or {})},timeout=(15,30),allow_redirects=False,stream=True)
         if response.status_code in (301,302,303,307,308):
@@ -71,6 +80,25 @@ def fetch(url,stream=False,headers=None,max_bytes=12*1024*1024):
         finally: response.close()
     raise ValueError('Too many redirects.')
 
+def plain_text(value):
+    text=re.sub(r'<(script|style)[^>]*>.*?</\1>',' ',value or '',flags=re.I|re.S)
+    return re.sub(r'\s+',' ',htmllib.unescape(re.sub(r'<[^>]+>',' ',text))).strip()
+
+def absolute_markup(value,base):
+    def fix(match):
+        try: target=urljoin(base,htmllib.unescape(match.group(2)).strip())
+        except ValueError: return match.group(0)
+        return f'{match.group(1)}="{target}"'
+    return re.sub(r'(?i)\b(src|href)\s*=\s*["\']([^"\']+)["\']',fix,value or '')
+
+def meta_content(raw,*names):
+    for name in names:
+        pattern=re.escape(name)
+        for regex in (rf'<meta[^>]+(?:property|name)\s*=\s*["\']{pattern}["\'][^>]*?content\s*=\s*["\']([^"\']*)', rf'<meta[^>]+content\s*=\s*["\']([^"\']*)["\'][^>]*?(?:property|name)\s*=\s*["\']{pattern}["\']'):
+            match=re.search(regex,raw,re.I)
+            if match and match.group(1).strip(): return htmllib.unescape(match.group(1).strip())
+    return ''
+
 class Services:
     def __init__(self,root,data):
         self.root=Path(root); self.data=Path(data); self.booksdir=self.data/'Books'
@@ -80,22 +108,23 @@ class Services:
         self.kindle_device=None; self.kindle_books=[]
         self.ffmpeg=self.root/'ffmpeg.exe'
         if not self.ffmpeg.exists(): self.ffmpeg=self.root/'node_modules/ffmpeg-static/ffmpeg.exe'
+        self.catalog=json.loads((self.root/'assets/rss/catalog.json').read_text(encoding='utf-8'))
+        self.feedsdir=self.data/'feed-cache'; self.feedsdir.mkdir(parents=True,exist_ok=True)
+        self.articledir=self.data/'articles'; self.articledir.mkdir(parents=True,exist_ok=True)
+        self.activityfile=self.data/'feed-activity.json'
+        try: self.activity=json.loads(self.activityfile.read_text(encoding='utf-8'))
+        except (OSError,ValueError): self.activity={}
         self.file=self.data/'library.json'
         if self.file.exists():
             self.store=json.loads(self.file.read_text(encoding='utf-8-sig'))
             if not isinstance(self.store.get('books'),list) or not isinstance(self.store.get('feeds'),list): raise ValueError('Library is invalid. Your existing data has been preserved.')
         else:
-            self.store={'books':[],'feeds':[],'notes':[],'downloads':[],'settings':{'theme':'system','fontSize':19,'lineHeight':1.7,'margin':32,'skip':30,'volume':.8,'speed':1,'listenRate':1,'listenSpeaker':1,'listenFollow':True}}
-            catalog=json.loads((self.root/'assets/rss/catalog.json').read_text(encoding='utf-8'))
-            self.store['feeds']=[{'id':uid(source['url']),'kind':source['kind'],'title':source['title'],'url':source['url'],'entries':[],'updated':None} for source in catalog]
-        self.store['directory']=json.loads((self.root/'assets/rss/catalog.json').read_text(encoding='utf-8'))
-        # Feed content is live for this session only. Never restore old bundled
-        # articles or persist fetched articles as an offline content bundle.
-        for feed in self.store['feeds']:
-            feed.update(entries=[],updated=None,refreshError=None)
-            feed.pop('asset',None); feed.pop('preload',None)
+            self.store={'books':[],'feeds':[],'notes':[],'downloads':[],'settings':{}}
+        settings=self.store.setdefault('settings',{})
+        for key,value in {'theme':'system','fontSize':19,'lineHeight':1.7,'margin':32,'skip':30,'volume':.8,'speed':1,'listenRate':1,'listenSpeaker':1,'listenFollow':True,'feedTopics':{},'feedOrder':{'News':'latest','Journals':'latest'}}.items(): settings.setdefault(key,value)
+        self.store['directory']=self.catalog
         for key in ('notes','downloads'): self.store.setdefault(key,[])
-        for key,value in {'listenRate':1,'listenSpeaker':1,'listenFollow':True}.items(): self.store['settings'].setdefault(key,value)
+        self.reconcile_feeds()
         old=self.store.get('dataRoot')
         if old and Path(old)!=self.data:
             def rebase(value): return str(self.data/Path(value).relative_to(old)) if value and inside(value,old) else value
@@ -114,10 +143,104 @@ class Services:
 
     def save(self):
         with self.lock:
-            snapshot=copy.deepcopy(self.store)
-            for feed in snapshot['feeds']:
-                feed.pop('entries',None); feed.pop('updated',None)
+            snapshot={**self.store,'feeds':[{k:v for k,v in feed.items() if k not in ('entries','updated','lastAttempt','refreshError')} for feed in self.store['feeds']]}
             atomic(self.file,snapshot)
+    def feed_cache_file(self,id): return self.feedsdir/(re.sub(r'[^0-9a-f]','',str(id))[:64]+'.json')
+    def load_feed_cache(self,feed):
+        try: data=json.loads(self.feed_cache_file(feed['id']).read_text(encoding='utf-8'))
+        except (OSError,ValueError): return
+        if isinstance(data,list): feed['entries']=data
+        elif isinstance(data,dict):
+            feed['entries']=data.get('entries') if isinstance(data.get('entries'),list) else []
+            feed['updated']=data.get('updated') or feed.get('updated')
+            feed['lastAttempt']=data.get('lastAttempt') or feed.get('lastAttempt')
+            feed['refreshError']=data.get('refreshError')
+    def save_feed_cache(self,feed):
+        atomic(self.feed_cache_file(feed['id']),{'entries':feed.get('entries',[]),'updated':feed.get('updated'),'lastAttempt':feed.get('lastAttempt'),'refreshError':feed.get('refreshError')})
+    def reconcile_feeds(self):
+        active={(source.get('kind'),source.get('url')) for source in self.catalog}
+        retired=set()
+        for name in ('legacy-defaults-v1.json','legacy-defaults-v2.json'):
+            try: rows=json.loads((self.root/'assets/rss'/name).read_text(encoding='utf-8'))
+            except (OSError,ValueError): rows=[]
+            for row in rows if isinstance(rows,list) else []:
+                key=(row.get('kind'),row.get('url'))
+                if key not in active: retired.add(key)
+        try: legacy_podcasts=json.loads((self.root/'assets/rss/legacy-podcasts-v3.json').read_text(encoding='utf-8'))
+        except (OSError,ValueError): legacy_podcasts=[]
+        for url in legacy_podcasts if isinstance(legacy_podcasts,list) else []:
+            if ('Podcasts',url) not in active: retired.add(('Podcasts',url))
+        feeds=[feed for feed in self.store['feeds'] if (feed.get('kind'),feed.get('url')) not in retired]
+        seeded=self.store.get('feedCatalog')=='clavis-plus-1'
+        for source in self.catalog:
+            feed=next((item for item in feeds if item.get('kind')==source['kind'] and item.get('url')==source['url']),None)
+            if feed is None:
+                if seeded or not source.get('preload'): continue
+                feed={'id':uid(source['kind']+source['url']),'kind':source['kind'],'url':source['url']}
+                feeds.append(feed)
+            feed['title']=source.get('title') or feed.get('title') or 'Source'
+            for key in ('tags','contentMode','policy','image','artist','website'):
+                if source.get(key) is not None: feed[key]=source[key]
+        for feed in feeds:
+            feed.setdefault('tags',[]); feed.setdefault('contentMode','open-access'); feed.setdefault('policy','')
+            feed.setdefault('entries',[]); feed.setdefault('updated',None); feed.setdefault('refreshError',None)
+            if not feed.get('entries'): self.load_feed_cache(feed)
+        self.store['feedCatalog']='clavis-plus-1'
+        self.store['feeds']=feeds
+    def feeds_payload(self):
+        return {'feeds':copy.deepcopy(self.store['feeds']),'directory':copy.deepcopy(self.catalog),'activity':copy.deepcopy(self.activity)}
+    def feed_opened(self,key):
+        key=str(key or '')[:2048]
+        if not key: return copy.deepcopy(self.activity)
+        with self.lock:
+            self.activity[key]=min(100000,int(self.activity.get(key,0))+1)
+            atomic(self.activityfile,self.activity)
+        return copy.deepcopy(self.activity)
+    def article(self,url):
+        public_url(url)
+        path=self.articledir/(hashlib.sha256(url.encode('utf-8')).hexdigest()+'.json')
+        saved=None
+        try: saved=json.loads(path.read_text(encoding='utf-8'))
+        except (OSError,ValueError): pass
+        if saved and time.time()-float(saved.get('time',0) or 0)<6*3600: return saved
+        try: raw,final=fetch(url,max_bytes=FEED_FETCH_LIMIT)
+        except requests.HTTPError as error:
+            status=error.response.status_code if error.response is not None else None
+            if status in (401,403):
+                return {'availability':'publisher-blocked','status':status,'url':url,'content':None}
+            if saved: return saved
+            raise
+        except Exception:
+            if saved: return saved
+            raise
+        text=raw.decode('utf-8',errors='replace')
+        try:
+            doc=Document(text,url=final)
+            title=htmllib.unescape(doc.short_title() or doc.title() or '')[:600]
+            content=absolute_markup(doc.summary(html_partial=True),final)
+        except Exception:
+            logging.exception('Article extraction %s',url)
+            if saved: return saved
+            raise ValueError('This story could not be read. Open the website to read it.')
+        content=re.sub(r'(?is)<(script|style|iframe|form|button|input|svg|video|audio)[^>]*>.*?</\1>',' ',content)
+        content=re.sub(r'(?is)<(script|style|iframe|form|button|input|svg|video|audio)[^>]*/?>',' ',content)
+        characters=len(plain_text(content))
+        if saved and characters<120: return saved
+        image=meta_content(text,'og:image','twitter:image','twitter:image:src')
+        if not image:
+            match=re.search(r'<img[^>]+src=["\']([^"\']+)',content,re.I)
+            image=match[1] if match else ''
+        if image:
+            try: image=urljoin(final,image)
+            except ValueError: image=''
+        result={'availability':'available','title':title,'content':content if characters>=120 else '','characters':characters,
+                'byline':meta_content(text,'author','article:author','bylines','citation_author')[:300],
+                'published':meta_content(text,'article:published_time','citation_publication_date','datePublished','date')[:80],
+                'image':image[:2000] if image.startswith('https://') else '',
+                'preview':'you have a preview view of this article' in text.lower(),
+                'url':final,'time':int(time.time())}
+        if characters>=120: atomic(path,result)
+        return result
     def book(self,id):
         return next(b for b in self.store['books'] if b['id']==id)
     def media_url(self,path):
@@ -246,28 +369,92 @@ class Services:
             if b['kind']=='Audio': self.metadata(b)
             self.store['books'].append(b)
         self.save(); return self.state()
+    @staticmethod
+    def entry_seconds(value):
+        try:
+            seconds=0
+            for part in str(value or '').strip().split(':'): seconds=seconds*60+float(part)
+            return max(0,int(seconds))
+        except (TypeError,ValueError): return 0
+    @staticmethod
+    def usable_image(value):
+        if not value: return False
+        url=str(value.get('url','') if isinstance(value,dict) else value)
+        kind=str(value.get('type','') if isinstance(value,dict) else '')
+        if kind and not kind.startswith('image/'): return False
+        return bool(url) and not FEED_NON_IMAGE.search(url)
     def parse_feed(self,f,raw):
         parsed=feedparser.parse(raw)
         if not parsed.entries and not parsed.feed.get('title'): raise ValueError('This address did not return an RSS or Atom feed.')
+        base=f['url']
+        def absolute(value):
+            try: return urljoin(base,htmllib.unescape(str(value))) if value else ''
+            except ValueError: return ''
+        def pick_image(values):
+            # WebView2's CSP only permits https images, and podcast feeds put audio files in media:content.
+            def url_of(value): return value.get('url','') if isinstance(value,dict) else value
+            candidates=[re.sub(r'^http://','https://',absolute(url_of(value))) for value in values if self.usable_image(value)]
+            return next((value for value in candidates if not FEED_IMAGE_LOGO.search(value)),candidates[0] if candidates else '')
         entries=[]
         for i,e in enumerate(parsed.entries):
-            enclosure=next((x for x in e.get('enclosures',[]) if x.get('type','').startswith('audio')),next(iter(e.get('enclosures',[])),{}))
-            image=e.get('image',{}).get('href','') or next(iter(e.get('media_thumbnail',[])),{}).get('url','')
+            content=next(iter(e.get('content',[])),{}).get('value') or e.get('summary','') or e.get('description','')
+            content=str(content)
+            link=absolute(e.get('link',''))
+            if not link:
+                alternative=next((x.get('href') for x in e.get('links',[]) if x.get('rel') in (None,'alternate') and x.get('type') in (None,'text/html') and x.get('href')),'')
+                link=absolute(alternative)
+            images=[]
+            for key in ('media_content','media_thumbnail'):
+                images.extend(item for item in e.get(key,[]) if isinstance(item,dict))
+            images.append((e.get('image') or {}).get('href','') if isinstance(e.get('image'),dict) else '')
+            image=pick_image(images)
+            if not image:
+                match=re.search(r'<img[^>]+src=["\']([^"\']+)',content,re.I)
+                if match: image=pick_image([match[1]])
+            audio=''; document=''
+            for enclosure in e.get('enclosures',[]):
+                url=absolute(enclosure.get('href','')); kind=str(enclosure.get('type',''))
+                if not audio and (kind.startswith('audio/') or re.search(r'\.(mp3|m4a|m4b|ogg|opus|wav)(\?|$)',url,re.I)): audio=url
+                elif not document and kind=='application/pdf': document=url
             stamp=e.get('published_parsed') or e.get('updated_parsed')
-            import calendar
-            date=time.strftime('%Y-%m-%dT%H:%M:%SZ',stamp) if stamp else e.get('published',e.get('updated',''))
-            entries.append({'id':uid(f['id']+str(e.get('id',e.get('link',i)))),'title':e.get('title','Untitled'),'link':e.get('link',''),'date':date,'content':next(iter(e.get('content',[])),{}).get('value',e.get('summary','')),'audio':enclosure.get('href',''),'enclosure':{'url':enclosure.get('href',''),'type':enclosure.get('type','')} if enclosure else None,'image':image,'duration':e.get('itunes_duration',''),'_date':calendar.timegm(stamp) if stamp else 0})
+            date=time.strftime('%Y-%m-%dT%H:%M:%SZ',stamp) if stamp else str(e.get('published') or e.get('updated') or '')
+            author=''
+            if e.get('author_detail',{}).get('name'): author=e['author_detail']['name']
+            elif e.get('authors'): author='; '.join(str(x.get('name','')) for x in e['authors'] if isinstance(x,dict) and x.get('name'))
+            elif e.get('author'): author=str(e['author'])
+            key=str(e.get('id') or link or e.get('title') or i)
+            entries.append({'id':uid(f['id']+key),'feed':f['id'],'title':re.sub(r'\s+',' ',str(e.get('title') or 'Untitled'))[:1000],'link':link,'date':date,'content':content[:FEED_CONTENT_LIMIT],'summary':plain_text(content)[:600],'audio':audio,'document':document,'image':image,'duration':self.entry_seconds(e.get('itunes_duration','')),'author':author[:300],'rights':str(e.get('rights') or e.get('copyright') or '')[:300],'_date':calendar.timegm(stamp) if stamp else 0})
         entries.sort(key=lambda e:e['_date'],reverse=True)
-        for e in entries: e.pop('_date',None)
-        return {**f,'title':parsed.feed.get('title',f.get('title','Feed')),'image':parsed.feed.get('image',{}).get('href',''),'description':parsed.feed.get('subtitle',''),'entries':entries[:300],'updated':now(),'lastAttempt':now(),'refreshError':None}
+        seen=set(); unique=[]
+        for e in entries:
+            if e['id'] in seen: continue
+            seen.add(e['id']); unique.append(e)
+        limit=50 if f.get('kind')=='Podcasts' else 20
+        kept=[]; characters=0
+        for e in unique:
+            if kept and (len(kept)>=limit or characters+len(e['content'])+len(e['title'])>FEED_CONTENT_LIMIT): break
+            kept.append(e); characters+=len(e['content'])+len(e['title'])
+        for e in kept: e.pop('_date',None)
+        feed_image=pick_image([(parsed.feed.get('image') or {}).get('href','') if isinstance(parsed.feed.get('image'),dict) else ''])
+        for e in kept:
+            if not e['image']: e['image']=feed_image
+        return {**f,'title':f.get('title') or parsed.feed.get('title') or 'Source','image':feed_image or f.get('image',''),'description':str(parsed.feed.get('subtitle') or '')[:1000],'entries':kept,'updated':now(),'lastAttempt':now(),'refreshError':None}
     def refresh(self,id):
         f=next(f for f in self.store['feeds'] if f['id']==id)
         try:
-            raw,_=fetch(f['url'],max_bytes=64*1024*1024); fresh=self.parse_feed(f,raw)
-            with self.lock: f.update(fresh); self.save()
+            raw,_=fetch(f['url'],max_bytes=FEED_FETCH_LIMIT)
+            fresh=self.parse_feed(f,raw)
+            if not fresh['entries'] and f.get('entries'):
+                fresh['entries']=f['entries']
+                fresh['refreshError']='Publisher returned no entries; showing saved stories.'
+            with self.lock:
+                f.update(fresh)
+                self.save_feed_cache(f); self.save()
             return copy.deepcopy(f)
         except Exception as e:
-            f.update(lastAttempt=now(),refreshError=str(e)); self.save(); raise
+            f['lastAttempt']=now(); f['refreshError']=str(e) or type(e).__name__
+            with self.lock: self.save_feed_cache(f); self.save()
+            raise
     def cache(self,folder,id,value=None):
         self.book(id); file=self.data/folder/(id+'.json')
         if value is None: return json.loads(file.read_text(encoding='utf-8')) if file.exists() else {}
@@ -411,31 +598,51 @@ class Services:
             if args[0].get('listenSpeaker') in (0,1,2): self.store['settings']['listenSpeaker']=int(args[0]['listenSpeaker'])
             if isinstance(args[0].get('listenFollow'),bool): self.store['settings']['listenFollow']=args[0]['listenFollow']
             if args[0].get('theme') in ('light','dark','system'): self.store['settings']['theme']=args[0]['theme']
+            topics=args[0].get('feedTopics')
+            if isinstance(topics,dict):
+                selection=self.store['settings'].setdefault('feedTopics',{})
+                for kind in ('News','Journals'):
+                    if isinstance(topics.get(kind),list): selection[kind]=[topic for topic in dict.fromkeys(str(x) for x in topics[kind]) if topic in FEED_TOPICS]
+            order=args[0].get('feedOrder')
+            if isinstance(order,dict):
+                current=self.store['settings'].setdefault('feedOrder',{})
+                for kind in ('News','Journals'):
+                    if order.get(kind) in ('latest','popular'): current[kind]=order[kind]
             self.save(); return self.store['settings']
-        if method=='feeds': return {'feeds':copy.deepcopy(self.store['feeds']),'directory':self.store.get('directory',[])}
+        if method=='feeds': return self.feeds_payload()
         if method=='feedRefresh': return self.refresh(args[0])
         if method=='feedAdd':
-            kind,url=args
-            if kind not in ('News','Podcasts','Journals'): raise ValueError('Invalid category.')
-            if not any(f['kind']==kind and f['url']==url for f in self.store['feeds']):
-                raw,_=fetch(url,max_bytes=64*1024*1024); f=self.parse_feed({'id':uid(kind+url),'kind':kind,'url':url},raw); self.store['feeds'].append(f); self.save()
-            return self.store['feeds']
+            kind,url=args[0],str(args[1] if len(args)>1 else '').strip()
+            if kind not in FEED_KINDS: raise ValueError('Invalid category.')
+            public_url(url)
+            if any(f['kind']==kind and f['url']==url for f in self.store['feeds']): return self.feeds_payload()
+            source=next((item for item in self.catalog if item.get('kind')==kind and item.get('url')==url),None)
+            raw,_=fetch(url,max_bytes=FEED_FETCH_LIMIT)
+            feed=self.parse_feed({'id':uid(kind+url),'kind':kind,'url':url},raw)
+            if source:
+                feed['title']=source.get('title') or feed['title']
+                for key in ('tags','contentMode','policy','image','artist','website'):
+                    if source.get(key) is not None: feed[key]=source[key]
+            with self.lock:
+                feed.setdefault('tags',[]); feed.setdefault('contentMode','open-access'); feed.setdefault('policy','')
+                self.store['feeds'].append(feed); self.save_feed_cache(feed); self.save()
+            return self.feeds_payload()
         if method=='feedRemove':
-            self.store['feeds']=[f for f in self.store['feeds'] if f['id']!=args[0]]; self.save(); return self.store['feeds']
-        if method=='article':
-            try: raw,url=fetch(args[0])
-            except requests.HTTPError as error:
-                status=error.response.status_code if error.response is not None else None
-                if status in (401,403):
-                    return {'availability':'publisher-blocked','status':status,'url':args[0],'content':None}
-                raise
-            doc=Document(raw.decode('utf-8',errors='replace'),url=url)
-            return {'availability':'available','title':doc.title(),'content':doc.summary(),'byline':'','url':url}
+            feed=next((f for f in self.store['feeds'] if f['id']==args[0]),None)
+            if feed:
+                self.store['feeds']=[f for f in self.store['feeds'] if f['id']!=args[0]]
+                try: self.feed_cache_file(feed['id']).unlink()
+                except OSError: pass
+                self.save()
+            return self.feeds_payload()
+        if method=='feedOpened': return self.feed_opened(args[0])
+        if method=='article': return self.article(args[0])
         if method=='playEpisode':
             f=next(f for f in self.store['feeds'] if f['id']==args[0]); e=next(e for e in f['entries'] if e['id']==args[1]); public_url(e['audio'])
             b=next((b for b in self.store['books'] if b['id']==e['id']),None)
             if b is None:
                 b={'id':e['id'],'title':e['title'],'author':f['title'],'kind':'Podcast','remoteCover':e.get('image') or f.get('image'),'tracks':[{'remote':e['audio'],'title':e['title']}],'chapter':0,'position':0,'progress':0,'bookmarks':[],'lastActive':0}; self.store['books'].append(b); self.save()
+            self.feed_opened(e.get('audio') or e.get('link') or e['id'])
             return self.view(b)
         if method=='getInk': return self.cache('ink',args[0])
         if method=='saveInk': return self.cache('ink',*args)

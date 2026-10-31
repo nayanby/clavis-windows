@@ -28,19 +28,125 @@ let audioLoading=false,audioGeneration=0,seekDragging=false,lastSeek=null,advanc
 const activeTrack=()=>current?.tracks?.[chapter];
 const audioDuration=()=>trackDuration(activeTrack(),audio.duration);
 const audioPosition=()=>relativePosition(activeTrack(),audio.currentTime,audio.duration);
-const refreshingFeeds=new Map();
-let articleOpen=false;
-function feedStatus(f){return refreshingFeeds.has(f.id)?'Fetching latest entries…':f.refreshError?'Refresh failed · retry to fetch live RSS':f.updated?'Updated '+new Date(f.updated).toLocaleString():'Not fetched yet · open to fetch live RSS';}
-function redrawFeeds(){if(['News','Podcasts','Journals'].includes(route)&&!articleOpen)renderFeeds();}
-async function fetchLatestFeed(id,notify=false){
-  if(refreshingFeeds.has(id))return refreshingFeeds.get(id);
-  const work=(async()=>{try{const fresh=await api.feedRefresh(id);feeds=feeds.map(f=>f.id===id?fresh:f);if(notify)toast('Latest entries fetched.');return fresh;}
-    catch(e){feeds=feeds.map(f=>f.id===id?{...f,refreshError:e.message}:f);if(notify)toast('Could not refresh this source: '+e.message);}
-    finally{refreshingFeeds.delete(id);redrawFeeds();}
-  })();refreshingFeeds.set(id,work);redrawFeeds();return work;
+const FEED_KINDS=['News','Podcasts','Journals'];
+const FEED_TOPIC_WORDS={
+  Medical:['health','medicin','clinical','patient','disease','cancer','hospital','surgery','vaccine','diabet','cardio','mental health','psychiatr','public health'],
+  Technology:['software','computer','digital','artificial intelligence','cyber','android','linux','internet','technology','machine learning'],
+  Science:['science','scientist','research','discovery','experiment'],
+  Environment:['climate','environment','warming','ecolog','biodiversity','conservation','pollution','renewable','sustainab'],
+  Business:['business','econom','finance','market','trade','investment','inflation'],
+  Politics:['politic','election','government','parliament','congress','democra','policy'],
+  India:['india','indian','delhi','mumbai','bengaluru','chennai'],
+  World:['international','global','world','diploma'],
+  Culture:['culture','artists','literature','music','cinema','history','museum'],
+  Education:['education','school','teaching','student','learning','university'],
+  'Social sciences':['sociolog','psycholog','society','inequality','humanities','social'],
+  Engineering:['engineering','robot','manufactur','materials','infrastructure'],
+  Mathematics:['mathematic','statistics','algorithm','geometry'],
+  Physics:['physics','quantum','particle','relativity'],
+  Chemistry:['chemistry','chemical','molecule','catalys'],
+  Biology:['biology','genom','genetic','organism','microb','plant','protein'],
+  Space:['space','astronom','planet','galaxy','cosmos','nasa','telescope']
+};
+let feedActivity={},feedView={},feedBrowseTopic='',feedPosts=[],feedRefreshingIds=new Set(),feedRefreshKind=null,feedRefreshQueue=new Map(),feedRedrawTimer=null,postObserver=null;
+const FEED_TOPICS=Object.keys(FEED_TOPIC_WORDS);
+const feedLocks=new Map(),postBodies=new Map();
+let postDrag=null;
+const feedLabel=kind=>kind==='Journals'?'Articles':kind;
+const feedTab=kind=>feedView[kind]||'popular';
+const feedTopics=kind=>state.settings?.feedTopics?.[kind]||[];
+const feedOrder=kind=>state.settings?.feedOrder?.[kind]||'latest';
+const feedKey=item=>item.audio||item.link||item.id;
+const feedDateValue=value=>{const stamp=Date.parse(value||'');return Number.isFinite(stamp)?stamp:0;};
+const feedWhen=value=>{const stamp=Date.parse(value||'');return Number.isFinite(stamp)?new Date(stamp).toLocaleString(undefined,{day:'numeric',month:'short',year:'numeric',hour:'numeric',minute:'2-digit'}):'';};
+function feedStatus(feed){
+  if(!feed)return '';
+  if(feedRefreshingIds.has(feed.id))return 'Fetching latest stories…';
+  if(feed.refreshError)return feed.entries?.length?'Saved stories · '+feed.refreshError:feed.refreshError;
+  return feed.updated?'Updated '+new Date(feed.updated).toLocaleString():'Not fetched yet';
 }
-async function refreshCategory(kind){const ids=feeds.filter(f=>f.kind===kind).map(f=>f.id);let next=0;await Promise.all(Array.from({length:Math.min(3,ids.length)},async()=>{while(next<ids.length)await fetchLatestFeed(ids[next++]);}));}
-function openFeed(id){articleOpen=false;activeFeed=id;query='';$('search').value='';renderFeeds();void fetchLatestFeed(id);}
+function feedTopicMatch(feed,item){
+  const selected=feedTopics(feed.kind);
+  if(!selected.length||feed.kind==='Podcasts')return true;
+  const text=(plain(item.title)+' '+(item.summary||plain(item.content))).toLowerCase();
+  return selected.some(topic=>(feed.tags||[]).includes(topic)||(FEED_TOPIC_WORDS[topic]||[]).some(word=>text.includes(word)));
+}
+function feedSourceMatches(feed){
+  const selected=feedTopics(feed.kind);
+  if(!selected.length||feed.kind==='Podcasts')return true;
+  return (feed.tags||[]).some(tag=>selected.includes(tag))||(feed.entries||[]).some(item=>feedTopicMatch(feed,item));
+}
+function feedStream(kind){
+  const seen=new Set(),rows=[];
+  for(const feed of feeds){
+    if(feed.kind!==kind)continue;
+    let position=0;
+    for(const item of feed.entries||[]){
+      if(kind==='Podcasts'&&!item.audio)continue;
+      if(!feedTopicMatch(feed,item))continue;
+      const key=feedKey(item)||feed.url+item.title;
+      if(seen.has(key))continue;
+      seen.add(key);rows.push({feed,item,position:position++,opens:feedActivity[key]||0,time:feedDateValue(item.date)});
+    }
+  }
+  if(feedOrder(kind)==='latest'&&kind!=='Podcasts')rows.sort((a,b)=>b.time-a.time||a.position-b.position);
+  else rows.sort((a,b)=>b.opens-a.opens||a.position-b.position);
+  return rows.slice(0,150);
+}
+function scheduleFeedRedraw(){
+  if(feedRedrawTimer||!FEED_KINDS.includes(route))return;
+  feedRedrawTimer=setTimeout(()=>{
+    feedRedrawTimer=null;
+    if(!FEED_KINDS.includes(route))return;
+    if(document.querySelector('.post-reading'))return;
+    const top=$('main').scrollTop;
+    renderFeeds();
+    $('main').scrollTop=top;
+  },350);
+}
+function redrawFeeds(){scheduleFeedRedraw();}
+async function fetchLatestFeed(id,notify=false){
+  if(feedLocks.has(id))return feedLocks.get(id);
+  const work=(async()=>{
+    feedRefreshingIds.add(id);scheduleFeedRedraw();
+    try{
+      const fresh=await api.feedRefresh(id);
+      const at=feeds.findIndex(f=>f.id===id);
+      if(at>=0)feeds[at]=fresh;
+      if(notify)toast('Latest stories fetched.');
+      return fresh;
+    }catch(e){
+      const feed=feeds.find(f=>f.id===id);
+      if(feed)feed.refreshError=e.message;
+      if(notify)toast('Could not refresh '+(feed?.title||'this source')+': '+e.message);
+    }finally{
+      feedRefreshingIds.delete(id);feedLocks.delete(id);scheduleFeedRedraw();
+    }
+  })();
+  feedLocks.set(id,work);return work;
+}
+async function refreshCategory(kind,{force=false}={}){
+  if(!feeds.some(f=>f.kind===kind))return;
+  if(feedRefreshKind){feedRefreshQueue.set(kind,force||feedRefreshQueue.get(kind)===true);return;}
+  const targets=feeds.filter(f=>f.kind===kind);
+  if(!force){
+    const latest=Math.max(0,...targets.map(f=>Number(f.lastAttempt)||0));
+    if(Date.now()-latest<30*60*1000&&targets.some(f=>(f.entries||[]).length))return;
+  }
+  feedRefreshKind=kind;scheduleFeedRedraw();
+  const ids=targets.map(f=>f.id);let next=0;
+  await Promise.all(Array.from({length:Math.min(5,ids.length)},async()=>{while(next<ids.length)await fetchLatestFeed(ids[next++]);}));
+  feedRefreshKind=null;scheduleFeedRedraw();
+  const queued=[...feedRefreshQueue.entries()][0];
+  if(queued){feedRefreshQueue.delete(queued[0]);await refreshCategory(queued[0],{force:queued[1]});}
+}
+function applyFeedPayload(data){
+  if(!data)return;
+  if(Array.isArray(data.feeds))feeds=data.feeds;
+  if(Array.isArray(data.directory))directory=data.directory;
+  if(data.activity)feedActivity=data.activity;
+}
+function openFeed(id){activeFeed=id;feedView[route]='mine';query='';$('search').value='';renderFeeds();const feed=feeds.find(f=>f.id===id);if(feed&&!(feed.entries||[]).length)void fetchLatestFeed(id);}
 const audio=$('audio');
 audio.crossOrigin='anonymous';
 const listenAudio=$('listen-audio');
@@ -60,14 +166,14 @@ function safeHTML(html){return DOMPurify.sanitize(html,{FORBID_TAGS:['script','s
 function applyTheme(){const dark=state.settings.theme==='dark'||(state.settings.theme==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);document.body.classList.toggle('dark',dark);}
 async function settings(patch){state.settings=await api.settings(patch);applyTheme();return state.settings;}
 async function updateBook(b,patch){Object.assign(b,patch);const saved=await api.updateBook(b.id,patch);const i=state.books.findIndex(x=>x.id===b.id);if(i>=0)state.books[i]=saved;if(current?.id===b.id)Object.assign(current,saved);return saved;}
-function cover(b,cls='book-cover'){return `<img class="${cls}" src="${esc(b.cover||art(b.kind))}" alt="" loading="lazy">`;}
+function cover(b,cls='book-cover'){return `<img class="${cls}" src="${esc(artURL(b.cover)||art(b.kind))}" alt="" loading="lazy">`;}
 function bookRow(b){return `<div class="book-row"><button class="book-open" data-open="${b.id}">${cover(b)}<span class="grow"><strong>${esc(b.title)}</strong><small>${esc(b.kind==='Audio'?`${b.tracks?.length||1} chapters · Chapter ${(b.chapter||0)+1}`:b.kind==='Podcast'?b.author:b.kind+' book')}${b.progress?` · ${Math.round(b.progress)}%`:''}</small><span class="progress"><span style="width:${Math.min(100,b.progress||0)}%"></span></span></span></button><button class="subtle" data-book-menu="${b.id}" aria-label="Options for ${esc(b.title)}">•••</button></div>`;}
 function renderNavigation(){document.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=clavisIcons[el.dataset.icon]||'');
   $('navigation').innerHTML=`<button data-route="Home" class="${route==='Home'?'active':''}"><span class="nav-icon">${clavisIcons.Home}</span>Home</button><p class="nav-label">YOUR LIBRARY</p>`+categories.map(([kind,title,,,symbol])=>`<button data-route="${kind}" class="${route===kind?'active':''}"><span class="nav-icon">${clavisIcons[kind]}</span>${title}</button>`).join('');
   document.querySelectorAll('.sidebar-bottom [data-route]').forEach(b=>b.classList.toggle('active',b.dataset.route===route));
 }
 async function cleanupReader(){if(listening)await closeListen();readerGeneration++;if(reader){reader.epub?.destroy();reader.pdf?.destroy();reader.observer?.disconnect();reader=null;}document.body.classList.remove('reading');}
-async function navigate(next){await persistAudio();await flushNote();if(reader)await cleanupReader();route=next;activeFeed=null;articleOpen=false;query='';$('search').value='';$('search').placeholder=['News','Podcasts','Journals'].includes(route)?'Search sources and stories':'Search your library';render();$('main').scrollTop=0;window.scrollTo(0,0);if(['News','Podcasts','Journals'].includes(next))void refreshCategory(next);}
+async function navigate(next){await persistAudio();await flushNote();if(reader)await cleanupReader();route=next;activeFeed=null;feedBrowseTopic='';query='';$('search').value='';$('search').placeholder=['News','Podcasts','Journals'].includes(route)?'Search sources and stories':'Search your library';render();$('main').scrollTop=0;window.scrollTo(0,0);if(['News','Podcasts','Journals'].includes(next))void refreshCategory(next);}
 function render(){document.body.classList.toggle('playing',route==='Player');renderNavigation();$('heading').textContent=route==='Home'?'Clavis':route==='Kindle'?'Kindle':categories.find(c=>c[0]===route)?.[1]||route;$('eyebrow').textContent=route==='Home'?'YOUR PERSONAL LIBRARY':route==='Player'?'NOW PLAYING':route==='Kindle'?'KINDLE LIBRARY':'CLAVIS FOR WINDOWS';$('import').hidden=!['Home','EPUB','PDF','Audio','Kindle'].includes(route);$('search').hidden=['Player','Reader','Settings','Journalling','Downloads'].includes(route);renderMini();
   if(route==='Home')renderHome();else if(['EPUB','PDF','Audio'].includes(route))renderLibrary();else if(['News','Podcasts','Journals'].includes(route))renderFeeds();else if(route==='Player')renderPlayer();else if(route==='Settings')renderSettings();else if(route==='Journalling')renderNotes();else if(route==='Downloads')renderDownloads();else if(route==='Kindle')renderKindle();
 }
@@ -127,32 +233,241 @@ function speedDialog(){modal('Playback speed',`<div class="stack">${[.5,.75,1,1.
 function sleepDialog(){modal('Sleep timer','<p class="muted">Pause playback after a set time or at the end of this chapter.</p><div class="stack"><button data-minutes="15">15 minutes</button><button data-minutes="30">30 minutes</button><button data-minutes="60">60 minutes</button><button id="end-chapter">End of chapter</button><button id="cancel-sleep">Turn off timer</button></div>',()=>{document.querySelectorAll('[data-minutes]').forEach(b=>b.onclick=()=>{clearTimeout(sleepTimer);audio.dataset.sleepEnd='';sleepTimer=setTimeout(()=>{audio.pause();sleepTimer=null;toast('Sleep timer finished.');renderPlayer();},Number(b.dataset.minutes)*60000);closeModal();renderPlayer();toast(`Sleep timer: ${b.dataset.minutes} minutes.`);});on('end-chapter','click',()=>{clearTimeout(sleepTimer);sleepTimer=null;audio.dataset.sleepEnd='yes';closeModal();toast('Playback will stop at the end of this chapter.');});on('cancel-sleep','click',()=>{clearTimeout(sleepTimer);sleepTimer=null;audio.dataset.sleepEnd='';closeModal();renderPlayer();});});}
 function addAudioBookmark(){modal('Bookmark this moment',`<p class="muted">Chapter ${chapter+1} · ${time(audioPosition())}</p><input id="bookmark-name" placeholder="Bookmark name" maxlength="200"><div class="row"><button id="save-bookmark" class="primary">Save bookmark</button></div>`,()=>on('save-bookmark','click',async()=>{await updateBook(current,{bookmarks:[...(current.bookmarks||[]),{name:$('bookmark-name').value||`Chapter ${chapter+1} · ${time(audioPosition())}`,chapter,position:audioPosition()}]});closeModal();toast('Bookmark saved.');}));}
 function audioBookmarks(){if(!current)return;modal('Audio bookmarks',`<div class="stack">${(current.bookmarks||[]).map((b,i)=>`<div class="row"><button class="grow" data-jump-bookmark="${i}">${esc(b.name)} · ${time(b.position)}</button><button data-remove-bookmark="${i}" aria-label="Delete bookmark">✕</button></div>`).join('')||'<p class="muted">Save a moment to find it again.</p>'}<button id="new-bookmark">＋ Bookmark current position</button></div>`,()=>{on('new-bookmark','click',addAudioBookmark);document.querySelectorAll('[data-jump-bookmark]').forEach(b=>b.onclick=run(async()=>{const mark=current.bookmarks[Number(b.dataset.jumpBookmark)];await startBook(current,true,mark.chapter,mark.position);closeModal();if(route==='Player')renderPlayer();}));document.querySelectorAll('[data-remove-bookmark]').forEach(b=>b.onclick=run(async()=>{await updateBook(current,{bookmarks:current.bookmarks.filter((_,i)=>i!==Number(b.dataset.removeBookmark))});audioBookmarks();}));});}
-function sourceArt(f){return f.image?`<img class="source-art" src="${esc(f.image)}" alt="" loading="lazy">`:`<span class="source-art source-placeholder">${illustration('feeds')}<span class="source-initials">${esc(f.title.split(/\s+/).slice(0,3).map(w=>w[0]).join(''))}</span></span>`;}
-function renderFeeds(){if(activeFeed){const f=feeds.find(f=>f.id===activeFeed);if(!f){activeFeed=null;return renderFeeds();}const entries=f.entries.filter(e=>(e.title+' '+plain(e.content)).toLowerCase().includes(query.toLowerCase()));$('main').innerHTML=`<div class="toolbar"><button data-action="sources-back">‹ All sources</button><div class="row"><span class="muted">${esc(feedStatus(f))}</span><button data-refresh="${f.id}" ${refreshingFeeds.has(f.id)?'disabled':''}>↻ Refresh</button><button data-remove-feed="${f.id}">Unsubscribe</button></div></div><div class="row" style="margin-bottom:25px">${sourceArt(f)}<div><h2 style="margin:0 0 7px">${esc(f.title)}</h2><span class="muted">${f.entries.length} stories${f.kind==='Podcasts'?' and episodes':''}</span>${f.refreshError?`<p class="notice">Could not fetch the RSS feed: ${esc(f.refreshError)}. Use Refresh to fetch this RSS source again.</p>`:''}</div></div>${entries.map(e=>`<div class="entry">${e.image?sourceArt({image:e.image,title:e.title}):''}<div class="entry-copy"><small>${esc(date(e.date))}${e.duration?' · '+esc(e.duration):''}</small><h3>${esc(e.title)}</h3><p>${esc(short(plain(e.content),200))}</p><div class="row">${e.audio?`<button class="primary" data-episode="${e.id}">▶ Listen</button>`:''}<button data-article="${e.id}">Read ${e.audio?'show notes':'article'} →</button>${e.enclosure?.url&&e.enclosure?.type?.includes('pdf')?`<button data-external="${esc(e.enclosure.url)}">Open PDF ↗</button>`:''}</div></div></div>`).join('')||'<div class="empty"><h3>No matching stories</h3></div>'}`;return;}
-  const matching=feeds.filter(f=>f.kind===route&&(f.title.toLowerCase().includes(query.toLowerCase())||f.entries.some(e=>e.title.toLowerCase().includes(query.toLowerCase()))));$('main').innerHTML=`<div class="toolbar"><span class="muted">${matching.length} subscriptions · RSS & Atom</span><div class="row"><button data-action="feed-add">＋ RSS address</button><button class="primary" data-action="browse-sources">Browse sources</button></div></div><p class="notice">Latest entries are fetched automatically when you open this section or a source. Only live RSS content is shown for the current session.</p><div class="source-grid">${matching.map(f=>`<button class="source-card" data-feed="${f.id}">${sourceArt(f)}<span><h3>${esc(f.title)}</h3><small>${f.entries.length} ${f.kind==='Podcasts'?'episodes':'stories'}<br>${esc(feedStatus(f))}</small></span></button>`).join('')}</div>${matching.length?'':'<div class="empty"><h2>Your reading list, your interests.</h2><p>Add an RSS address or browse the source directory.</p><button data-action="browse-sources">Browse sources</button></div>'}`;
+const artURL=value=>String(value||'').replace(/^http:\/\//,'https://');
+function sourceArt(source){
+  const image=source.image?artURL(source.image):'';
+  const initials=esc(plain(source.title).split(/\s+/).slice(0,3).map(word=>word[0]).join(''));
+  return image?`<img class="source-art" src="${esc(image)}" alt="" loading="lazy" referrerpolicy="no-referrer">`:`<span class="source-art source-placeholder"><span class="source-initials">${initials}</span></span>`;
 }
-function feedAdd(){modal('Subscribe with RSS',`<p class="muted">Add a public RSS or Atom feed to ${route==='Journals'?'Articles':route}.</p><label for="feed-url">Feed address</label><input id="feed-url" type="url" placeholder="https://example.com/feed.xml"><div class="row"><button id="subscribe" class="primary">Subscribe</button><span id="feed-status" class="muted"></span></div>`,()=>on('subscribe','click',async()=>{$('subscribe').disabled=true;$('feed-status').textContent='Fetching feed…';try{feeds=await api.feedAdd(route,$('feed-url').value.trim());closeModal();renderFeeds();toast('Source added.');}finally{if($('subscribe'))$('subscribe').disabled=false;}}));}
-function browseSources(){const list=directory.filter(f=>f.kind===route);modal('Browse sources',`<input id="directory-search" type="search" placeholder="Find a source"><div id="directory-list" class="directory"></div><div class="row"><button id="custom-feed">＋ Add another RSS address</button></div>`,()=>{const draw=()=>{$('directory-list').innerHTML=list.filter(f=>f.title.toLowerCase().includes($('directory-search').value.toLowerCase())).map(f=>`<button data-subscribe="${esc(f.url)}"><strong>${esc(f.title)}</strong><small>${feeds.some(s=>s.url===f.url&&s.kind===route)?'Subscribed · open to read':'＋ Subscribe'}</small></button>`).join('');$('directory-list').querySelectorAll('[data-subscribe]').forEach(b=>b.onclick=run(async()=>{const existing=feeds.find(f=>f.url===b.dataset.subscribe&&f.kind===route);if(existing){closeModal();openFeed(existing.id);return;}b.disabled=true;b.textContent='Fetching feed…';try{feeds=await api.feedAdd(route,b.dataset.subscribe);draw();toast('Subscribed.');}finally{b.disabled=false;}}));};draw();on('directory-search','input',draw);on('custom-feed','click',feedAdd);});}
-async function refreshFeed(id){return fetchLatestFeed(id,true);}
-async function playEpisode(id){const b=await api.playEpisode(activeFeed,id);const i=state.books.findIndex(x=>x.id===b.id);if(i<0)state.books.push(b);else state.books[i]=b;await startBook(b,true);route='Player';render();}
-async function readArticle(id){
-  const f=feeds.find(f=>f.id===activeFeed),e=f?.entries.find(x=>x.id===id);if(!e)return;
-  articleOpen=true;const back=activeFeed;let live=true;
-  const show=(title,content,status='',publisherAction=false)=>{
-    $('main').innerHTML=`<div class="toolbar"><button id="article-back">‹ Back to ${esc(f.title)}</button><button id="article-website" ${e.link?'':'disabled'}>Website ↗</button></div><article class="article"><small>${esc(f.title)} · ${esc(date(e.date))}</small><h1>${esc(title)}</h1>${status?`<p class="notice">${esc(status)}</p>`:''}<div class="article-content">${safeHTML(content||'')}</div>${publisherAction&&e.link?'<p><button id="article-publisher" class="primary">Open publisher website ↗</button></p>':''}</article>`;
-    on('article-back','click',()=>{live=false;articleOpen=false;activeFeed=back;renderFeeds();});
-    on('article-website','click',()=>api.openURL(e.link));
-    if(publisherAction&&e.link)on('article-publisher','click',()=>api.openURL(e.link));
-  };
-  const visible=()=>live&&activeFeed===back&&['News','Journals','Podcasts'].includes(route);
-  show(e.title,e.content,'Fetching article from publisher…');
-  if(!e.link)return show(e.title,e.content,'This RSS entry does not include an article link.');
+function feedHtml(raw){
+  const box=document.createElement('div');box.innerHTML=safeHTML(raw||'');
+  box.querySelectorAll('script,style,img,picture,figure,video,audio,iframe,svg,form,button,input,aside,nav,footer,header').forEach(el=>el.remove());
+  box.querySelectorAll('a').forEach(link=>{if(!link.textContent.trim())link.remove();});
+  box.querySelectorAll('p,div,section').forEach(el=>{if(!el.textContent.trim()&&!el.querySelector('img,table,ul,ol'))el.remove();});
+  return box.innerHTML.trim();
+}
+function postCover(row){
+  const image=artURL(row.item.image||row.feed.image);
+  return image?`<img src="${esc(image)}" alt="" loading="lazy" referrerpolicy="no-referrer">`:`<div class="post-cover-fallback"><strong>${esc(plain(row.item.title))}</strong></div>`;
+}
+function postCredit(row){return [row.item.author?'By '+plain(row.item.author):'',row.item.rights||''].filter(Boolean).join(' · ');}
+function postCard(row,index){
+  const when=feedWhen(row.item.date);
+  const credit=postCredit(row);
+  const plainPost=!(row.item.image||row.feed.image);
+  return `<article class="post${plainPost?' post-no-image':''}" data-post="${index}" data-title-in-cover="${plainPost?'1':''}" data-key="${esc(feedKey(row.item))}"><div class="post-meta"><span class="post-source">${esc(row.feed.title)}</span>${when?`<time>${esc(when)}</time>`:''}</div><div class="post-pages" data-pages><div class="post-cover" data-cover>${postCover(row)}</div><div class="post-text" data-text hidden><div class="post-flow" data-flow></div></div></div><h2 class="post-title"${plainPost?' hidden':''}>${esc(plain(row.item.title))}</h2><div class="post-nav"><button data-slide="-1" aria-label="Previous story slide" disabled>‹</button><span data-count>Loading story…</span><button data-slide="1" aria-label="Next story slide" disabled>›</button></div><p class="post-status" data-status></p><button class="post-credits" data-credits>${esc(credit||'Source credits')}</button><div class="post-actions"><button data-listen>♪ Listen</button>${row.item.link?'<button data-web>Open website ↗</button>':''}</div></article>`;
+}
+function renderPostStream(rows){
+  feedPosts=rows;
+  return `<div class="post-stream">${rows.map((row,index)=>postCard(row,index)).join('')}</div>`;
+}
+function renderEpisodeStream(rows){
+  feedPosts=rows;
+  return `<div class="episode-stream">${rows.map(row=>{
+    const when=feedWhen(row.item.date),duration=row.item.duration?time(row.item.duration):'';
+    const image=artURL(row.item.image||row.feed.image);
+    return `<button class="episode-row" data-play-feed="${esc(row.feed.id)}" data-play-item="${esc(row.item.id)}">${image?`<img class="episode-art" src="${esc(image)}" alt="" loading="lazy" referrerpolicy="no-referrer">`:`<span class="episode-art source-placeholder"><span class="source-initials">${esc(plain(row.feed.title).split(/\s+/).slice(0,2).map(word=>word[0]).join(''))}</span></span>`}<span class="episode-copy"><small>${esc(row.feed.title)}${when?' · '+esc(when):''}${duration?' · '+duration:''}</small><strong>${esc(plain(row.item.title))}</strong><span>${esc(short(plain(row.item.summary||row.item.content),180))}</span></span><span class="episode-play" aria-hidden="true">▶</span></button>`;
+  }).join('')}</div>`;
+}
+function feedTabs(kind){
+  const tabs=[['popular','Popular'],['mine',kind==='Podcasts'?'My podcasts':'My list'],['browse','Browse']];
+  return `<div class="feed-tabs">${tabs.map(([key,label])=>`<button data-feed-tab="${key}" class="${feedTab(kind)===key?'active':''}">${label}</button>`).join('')}</div>`;
+}
+function feedControls(kind,count){
+  const topics=feedTopics(kind);
+  const topicLabel=!topics.length?'All topics':topics.length===1?topics[0]:topics.length+' selected';
+  const refreshing=feedRefreshKind===kind;
+  return `<div class="feed-controls">${['News','Journals'].includes(kind)?`<button data-topics>Topics · ${esc(topicLabel)}</button><button data-order>${feedOrder(kind)==='latest'?'Latest first':'Popular first'}</button>`:''}<button data-refresh-kind ${refreshing?'disabled':''}>${refreshing?'Refreshing…':'↻ Refresh'}</button><button data-custom-feed>＋ RSS address</button></div><p class="feed-note">${count} ${kind==='Podcasts'?'episodes':'stories'} from ${feeds.filter(f=>f.kind===kind).length} sources · saved stories stay available offline</p>`;
+}
+function renderMyList(kind){
+  const term=query.toLowerCase();
+  const list=feeds.filter(f=>f.kind===kind&&feedSourceMatches(f)&&(!term||f.title.toLowerCase().includes(term)||(f.entries||[]).some(item=>item.title.toLowerCase().includes(term))));
+  if(!list.length)return `<div class="empty">${illustration('feeds','empty-art')}<h2>${feeds.some(f=>f.kind===kind)?'No sources match these topics':'Follow your favourite '+feedLabel(kind).toLowerCase()}</h2><p>Browse the ${feedLabel(kind).toLowerCase()} directory or add an RSS address.</p><button class="primary" data-feed-tab="browse">Browse sources</button></div>`;
+  return `<div class="source-list">${list.map(feed=>{const latest=(feed.entries||[])[0];return `<div class="source-row" data-feed-open="${esc(feed.id)}" role="button" tabindex="0">${sourceArt(feed)}<div class="source-copy"><strong>${esc(plain(feed.title))}</strong><small>${(feed.entries||[]).length} ${kind==='Podcasts'?'episodes':'articles'}${feed.refreshError?' · saved stories':''}</small>${latest?`<span>${esc(plain(latest.title))}</span>`:''}</div><button class="source-remove" data-remove-feed="${esc(feed.id)}" aria-label="Remove ${esc(plain(feed.title))}">✕</button></div>`;}).join('')}</div>`;
+}
+function renderBrowse(kind){
+  const term=query.toLowerCase();
+  const sources=directory.filter(source=>source.kind===kind&&(!term||(source.title+' '+(source.tags||[]).join(' ')).toLowerCase().includes(term))&&(!feedBrowseTopic||(source.tags||[]).includes(feedBrowseTopic)));
+  return `<div class="browse-tags"><button data-browse-topic="" class="${feedBrowseTopic?'':'active'}">All topics</button>${FEED_TOPICS.map(topic=>`<button data-browse-topic="${esc(topic)}" class="${feedBrowseTopic===topic?'active':''}">${esc(topic)}</button>`).join('')}</div><p class="feed-note">${sources.length} ${feedLabel(kind).toLowerCase()} sources · follow as many as you like</p><div class="browse-list">${sources.map(source=>{const image=source.image?artURL(source.image):'';const followed=feeds.some(feed=>feed.kind===kind&&feed.url===source.url);return `<div class="browse-row">${image?`<img class="source-art" src="${esc(image)}" alt="" loading="lazy" referrerpolicy="no-referrer">`:`<span class="source-art source-placeholder"><span class="source-initials">${esc(source.title.split(/\s+/).slice(0,2).map(word=>word[0]).join(''))}</span></span>`}<div class="browse-copy"><strong>${esc(source.title)}</strong><small>${esc((source.tags||[]).join(' · '))}${source.artist?' · '+esc(source.artist):''}</small></div><button class="${followed?'':'primary'}" data-subscribe="${esc(source.url)}" data-subscribe-kind="${kind}">${followed?'Open':'＋ Follow'}</button></div>`;}).join('')||'<div class="empty"><h3>No matching sources</h3><p>Try another publisher, topic or website name.</p></div>'}</div>`;
+}
+function renderFeedSource(feed){
+  const rows=(feed.entries||[]).map((item,index)=>({feed,item,position:index,opens:feedActivity[feedKey(item)]||0,time:feedDateValue(item.date)}));
+  const filtered=query?rows.filter(row=>(row.item.title+' '+(row.item.summary||row.item.content)).toLowerCase().includes(query.toLowerCase())):rows;
+  return `<div class="source-head"><button data-feed-back>‹ ${esc(feed.kind==='Podcasts'?'My podcasts':'My list')}</button><div class="source-identity">${sourceArt(feed)}<div><h2>${esc(plain(feed.title))}</h2><small>${esc(feedStatus(feed))}</small></div></div><div class="feed-controls"><button data-refresh="${esc(feed.id)}" ${feedRefreshingIds.has(feed.id)?'disabled':''}>${feedRefreshingIds.has(feed.id)?'Refreshing…':'↻ Refresh'}</button><button data-remove-feed="${esc(feed.id)}">Remove</button></div>${feed.refreshError?`<p class="notice">Saved stories are shown. ${esc(feed.refreshError)}</p>`:''}</div>`+(filtered.length?(feed.kind==='Podcasts'?renderEpisodeStream(filtered):renderPostStream(filtered)):`<div class="empty"><h3>No ${feed.kind==='Podcasts'?'episodes':'stories'} yet</h3><p>Refresh this source to check for updates.</p></div>`);
+}
+function renderFeeds(){
+  if(!FEED_KINDS.includes(route))return;
+  const kind=route;
+  if(activeFeed){const feed=feeds.find(f=>f.id===activeFeed);if(feed&&feed.kind===kind){$('main').innerHTML=renderFeedSource(feed);if(kind!=='Podcasts')observePosts();return;}activeFeed=null;}
+  const tab=feedTab(kind);
+  if(tab==='browse'){$('main').innerHTML=feedTabs(kind)+renderBrowse(kind);return;}
+  if(tab==='mine'){$('main').innerHTML=feedTabs(kind)+renderMyList(kind);return;}
+  const rows=feedStream(kind);
+  const filtered=query?rows.filter(row=>(row.item.title+' '+(row.item.summary||row.item.content)+' '+row.feed.title).toLowerCase().includes(query.toLowerCase())):rows;
+  const refreshing=feeds.filter(f=>f.kind===kind&&feedRefreshingIds.has(f.id)).length;
+  const body=filtered.length?(kind==='Podcasts'?renderEpisodeStream(filtered):renderPostStream(filtered)):`<div class="empty">${illustration('feeds','empty-art')}<h2>${refreshing||feedRefreshKind===kind?'Fetching the latest stories…':query?'No matching stories':'No entries yet'}</h2><p>${refreshing||feedRefreshKind===kind?'Publishers are being checked in the background. Saved stories stay available offline.':query?'Try a different search.':'Refresh your sources or browse the directory to follow more.'}</p><button data-refresh-kind>↻ Refresh sources</button></div>`;
+  $('main').innerHTML=feedTabs(kind)+feedControls(kind,filtered.length)+body;
+  if(kind!=='Podcasts'&&filtered.length)observePosts();
+}
+function observePosts(){
+  postObserver?.disconnect();
+  postObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){postObserver.unobserve(entry.target);void hydratePost(entry.target);}},{root:$('main'),rootMargin:'900px 0px'});
+  document.querySelectorAll('.post').forEach(post=>postObserver.observe(post));
+}
+async function hydratePost(post){
+  const row=feedPosts[Number(post.dataset.post)];if(!row)return;
+  const key=post.dataset.key||feedKey(row.item);
+  const known=postBodies.get(key);
+  if(known&&!known.loading){paintPost(post,known);return;}
+  if(known?.loading)return;
+  const record={loading:true,loaded:false,html:'',body:'',status:'',image:''};postBodies.set(key,record);
+  let html=feedHtml(row.item.content),body=plain(html),status='';
+  if(!row.item.link)status='Feed text · no publisher link';
+  else if(row.feed.contentMode!=='full-feed'||body.length<400){
+    const line=post.querySelector('[data-status]');if(line)line.textContent='Loading the full story…';
+    try{
+      const article=await api.article(row.item.link);
+      if(article.availability==='publisher-blocked')status='Publisher access required · Open website to read the story';
+      else if((article.characters||0)>=120&&article.content){html=feedHtml(article.content);body=plain(html);status=article.preview?'Publisher preview · Open website for access':'';record.image=article.image||'';}
+      else status='Feed text · open the website for the full story';
+    }catch(e){status='Feed text · the full story may be on the website';}
+  }
+  if(!body.trim())status=status||'This feed has no article text. Open the website to read the story.';
+  record.html=html;record.body=body;record.status=status;record.loading=false;record.loaded=true;
+  const target=post.isConnected?post:postFor(key);
+  if(target)paintPost(target,record);
+}
+function paintPost(post,record){
+  const flow=post.querySelector('[data-flow]');if(!flow)return;
+  flow.innerHTML=record.html||'<p class="muted">This feed has no article text. Use Open website to read the story.</p>';
+  const status=post.querySelector('[data-status]');if(status)status.textContent=record.status||'';
+  if(record.image){
+    const cover=post.querySelector('[data-cover]'),image=cover?.querySelector('img');
+    if(image)image.src=artURL(record.image);
+    else if(cover){
+      cover.innerHTML=`<img src="${esc(artURL(record.image))}" alt="" loading="lazy" referrerpolicy="no-referrer">`;
+      post.classList.remove('post-no-image');post.dataset.titleInCover='';
+      const title=post.querySelector('.post-title');if(title)title.hidden=post.dataset.slide>0;
+    }
+  }
+  requestAnimationFrame(()=>paginatePost(post));
+}
+function paginatePost(post){
+  const pages=post.querySelector('[data-pages]'),text=post.querySelector('[data-text]'),flow=post.querySelector('[data-flow]');
+  if(!pages||!text||!flow)return;
+  if(post.classList.contains('post-no-image'))post.classList.add('post-paginating');
+  text.hidden=false;
+  const style=getComputedStyle(text);
+  const width=flow.clientWidth,height=text.clientHeight-parseFloat(style.paddingTop||0)-parseFloat(style.paddingBottom||0);
+  if(width<40||height<40)return;
+  flow.style.columnWidth=width+'px';flow.style.height=height+'px';
+  const gap=parseFloat(getComputedStyle(flow).columnGap)||36;
+  const total=Math.max(1,Math.round((flow.scrollWidth+gap)/(width+gap)));
+  // Re-measuring must not snap a reader back to the cover when the story finishes hydrating.
+  const wanted=Math.min(Number(post.dataset.slide||0),total);
+  post.dataset.pages=String(total);post.dataset.slide=String(wanted);
+  if(!wanted)flow.style.transform='translateX(0)';
+  post.classList.remove('post-paginating');
+  updatePost(post);
+}
+function updatePost(post){
+  const total=1+Number(post.dataset.pages||1),slide=Math.max(0,Math.min(total-1,Number(post.dataset.slide||0)));
+  post.dataset.slide=String(slide);
+  const cover=post.querySelector('[data-cover]'),text=post.querySelector('[data-text]');
+  if(cover)cover.hidden=slide!==0;
+  if(text)text.hidden=slide===0;
+  const count=post.querySelector('[data-count]');if(count)count.textContent=`${slide+1} / ${total}${slide===0?' · Use the arrows or drag to read':''}`;
+  const previous=post.querySelector('[data-slide="-1"]'),next=post.querySelector('[data-slide="1"]');
+  if(previous)previous.disabled=slide<=0;if(next)next.disabled=slide>=total-1;
+  post.classList.toggle('post-reading',slide>0);
+  const title=post.querySelector('.post-title');if(title)title.hidden=slide>0||post.dataset.titleInCover==='1';
+  if(slide>0){const flow=post.querySelector('[data-flow]'),gap=parseFloat(getComputedStyle(flow).columnGap)||36;flow.style.transform=`translateX(calc(${-(slide-1)} * (100% + ${gap}px)))`;}
+  if(slide>0&&!post.dataset.opened){post.dataset.opened='1';markFeedOpened(post.dataset.key);}
+}
+function slidePost(post,delta){
+  const total=1+Number(post.dataset.pages||1);
+  post.dataset.slide=String(Math.max(0,Math.min(total-1,Number(post.dataset.slide||0)+delta)));
+  updatePost(post);
+}
+function markFeedOpened(key){
+  if(!key)return;
+  void api.feedOpened(key).then(activity=>{if(activity)feedActivity=activity;}).catch(()=>{});
+}
+function postFor(key){return document.querySelector(`.post[data-key="${CSS.escape(key)}"]`);}
+function feedCredits(row){
+  const lines=[plain(row.item.title),row.item.author?'By '+plain(row.item.author):'',row.feed.title,row.item.link,row.item.rights].filter(Boolean);
+  modal('Source credits',`<div class="stack">${lines.map(line=>`<p>${esc(line)}</p>`).join('')}<div class="row">${row.item.link?'<button id="credit-website">Open website ↗</button>':''}${row.feed.policy?'<button id="credit-terms">Source terms ↗</button>':''}</div></div>`,()=>{
+    if(row.item.link)on('credit-website','click',()=>api.openURL(row.item.link));
+    if(row.feed.policy)on('credit-terms','click',()=>api.openURL(row.feed.policy));
+  });
+}
+async function listenPost(row){
+  const state=postBodies.get(feedKey(row.item));
+  const body=state?.body||plain(row.item.content)||plain(row.item.summary);
+  await listenArticle(row.feed,row.item,body);
+  markFeedOpened(feedKey(row.item));
+}
+async function playEpisode(feedId,itemId){
+  await persistAudio();if(listening)await closeListen();
+  const feed=feeds.find(f=>f.id===feedId),item=feed?.entries.find(entry=>entry.id===itemId);
+  const book=await api.playEpisode(feedId,itemId);
+  const at=state.books.findIndex(entry=>entry.id===book.id);
+  if(at<0)state.books.push(book);else state.books[at]=book;
+  markFeedOpened(item?feedKey(item):itemId);
+  await startBook(book,true);route='Player';render();
+}
+async function subscribeSource(url,kind){
+  const existing=feeds.find(feed=>feed.kind===kind&&feed.url===url);
+  if(existing){openFeed(existing.id);return;}
+  const button=document.querySelector(`[data-subscribe="${CSS.escape(url)}"]`);
+  if(button){button.disabled=true;button.textContent='Adding…';}
   try{
-    const article=await api.article(e.link);if(!visible())return;
-    if(article.availability==='publisher-blocked')show(e.title,e.content,`RSS preview only. The publisher refused automated access to the article (HTTP ${article.status}). Open the publisher website to read it; access may require signing in or a subscription.`,true);
-    else show(article.title||e.title,article.content);
-  }catch(error){if(visible())show(e.title,e.content,'RSS preview only. The article could not be loaded from the publisher. '+error.message,true);}
+    const source=directory.find(item=>item.kind===kind&&item.url===url);
+    applyFeedPayload(await api.feedAdd(kind,url));
+    feedView[kind]='mine';renderFeeds();toast((source?.title||'Source')+' added to '+feedLabel(kind)+'.');
+  }catch(e){
+    if(button){button.disabled=false;button.textContent='＋ Follow';}
+    toast('Could not add this source: '+e.message);
+  }
 }
+function feedAddDialog(){
+  const kind=route;
+  modal('Add an RSS feed',`<p class="muted">Add a public RSS or Atom address to ${esc(feedLabel(kind))}.</p><label for="feed-url">Feed address</label><input id="feed-url" type="url" placeholder="https://example.com/feed.xml"><div class="row"><button id="subscribe" class="primary">Add feed</button><span id="feed-add-status" class="muted"></span></div>`,()=>on('subscribe','click',async()=>{
+    $('subscribe').disabled=true;$('feed-add-status').textContent='Fetching feed…';
+    try{applyFeedPayload(await api.feedAdd(kind,$('feed-url').value.trim()));closeModal();feedView[kind]='mine';renderFeeds();toast('Feed added.');}
+    catch(e){$('feed-add-status').textContent=e.message;if($('subscribe'))$('subscribe').disabled=false;}
+  }));
+}
+function feedTopicsDialog(){
+  const kind=route;
+  if(!['News','Journals'].includes(kind))return;
+  const chosen=new Set(feedTopics(kind));
+  modal('Choose topics',`<p class="muted">Topics filter publishers and individual stories. Stories stay saved either way.</p><div class="topic-grid">${FEED_TOPICS.map(topic=>`<label class="topic-choice"><input type="checkbox" value="${esc(topic)}" ${chosen.has(topic)?'checked':''}> ${esc(topic)}</label>`).join('')}</div><div class="row"><button id="topics-apply" class="primary">Apply</button><button id="topics-all">All topics</button></div>`,()=>{
+    on('topics-apply','click',run(async()=>{
+      const selected=[...$('dialog-content').querySelectorAll('input[type=checkbox]:checked')].map(input=>input.value);
+      state.settings=await api.settings({feedTopics:{...(state.settings.feedTopics||{}),[kind]:selected}});
+      closeModal();renderFeeds();
+    }));
+    on('topics-all','click',run(async()=>{
+      state.settings=await api.settings({feedTopics:{...(state.settings.feedTopics||{}),[kind]:[]}});
+      closeModal();renderFeeds();
+    }));
+  });
+}
+async function toggleFeedOrder(){
+  const kind=route;if(!['News','Journals'].includes(kind))return;
+  const next=feedOrder(kind)==='latest'?'popular':'latest';
+  state.settings=await api.settings({feedOrder:{...(state.settings.feedOrder||{}),[kind]:next}});
+  renderFeeds();toast(next==='latest'?'Latest stories first.':'Most opened stories first.');
+}
+function confirmRemoveFeed(id){
+  const feed=feeds.find(f=>f.id===id);if(!feed)return;
+  modal(feed.kind==='Podcasts'?'Remove podcast?':'Remove from My list?',`<p>${esc(plain(feed.title))}</p><p class="muted">Saved stories for this source are removed. Podcast playback positions are kept.</p><div class="row"><button id="confirm-unsubscribe" class="danger">Remove</button><button id="keep-subscription">Cancel</button></div>`,()=>{
+    on('keep-subscription','click',closeModal);
+    on('confirm-unsubscribe','click',run(async()=>{applyFeedPayload(await api.feedRemove(id));if(activeFeed===id)activeFeed=null;closeModal();renderFeeds();}));
+  });
+}
+async function refreshFeed(id){return fetchLatestFeed(id,true);}
 function renderSettings(){$('main').innerHTML=`<div class="settings"><div class="surface-heading">${illustration('settings','surface-art')}<div><h2>Make yourself at home.</h2><p class="muted">Reading and playback preferences are saved on this computer.</p></div></div><div class="setting"><div><h3>Appearance</h3><p>A quiet space, day or night.</p></div><select id="theme"><option value="system">Follow Windows</option><option value="light">Light</option><option value="dark">Dark</option></select></div><div class="setting"><div><h3>Skip interval</h3><p>Rewind and forward buttons.</p></div><select id="skip-setting">${[5,10,15,30,60,120].map(n=>`<option value="${n}">${n} seconds</option>`).join('')}</select></div><div class="setting"><div><h3>EPUB font size</h3><p>Applied to your reflowable books.</p></div><input id="font-setting" type="number" min="10" max="40" value="${state.settings.fontSize||19}" aria-label="EPUB font size"></div><div class="setting"><div><h3>Downloads</h3><p>Imports and downloads share Data / Books in named folders.</p></div><button data-action="files">Open folder ↗</button></div><div class="setting"><div><h3>Clavis for Windows</h3><p>Python desktop edition 0.2.5 · Based on your Clavis Android project.</p></div></div><p class="notice" style="margin-top:25px">This first desktop build includes local books, playback, PDF ink, EPUB highlights, feeds, typed journals and magnet transfers. EPUB and PDF books can be read aloud offline from the current chapter or page with the built-in Kitten voice. Journals also support handwriting. Embedded chapters and reviewed offline spoken-heading scans are supported.</p></div>`;$('theme').value=state.settings.theme||'system';$('skip-setting').value=state.settings.skip||30;on('theme','change',()=>settings({theme:$('theme').value}));on('skip-setting','change',()=>settings({skip:Number($('skip-setting').value)}));on('font-setting','change',()=>settings({fontSize:Number($('font-setting').value)}));}
 function renderNotes(){renderNotesContent();journalDrawingControls();}
 function renderNotesContent(){const n=state.notes.find(n=>n.id===activeNote);$('main').innerHTML=`<div class="toolbar"><span class="muted">A place for your thoughts.</span><button class="primary" data-action="new-note">＋ New journal entry</button></div><div class="note-layout"><div class="note-list">${state.notes.map(n=>`<button data-note="${n.id}"><strong>${esc(n.title)}</strong><br><small>${date(n.updated)}</small></button>`).join('')||'<p class="muted">No entries yet.</p>'}</div><div>${n?`<div class="note-editor"><input id="note-title" value="${esc(n.title)}" placeholder="Entry title" aria-label="Entry title"><textarea id="note-text" placeholder="Start writing…" aria-label="Journal entry">${esc(n.text)}</textarea><div class="row spread"><small id="note-status">Saved on this computer</small><div class="row"><button id="note-export">Export text</button><button id="note-delete" class="danger">Delete entry</button></div></div></div>`:'<div class="empty"><img class="ui-illustration empty-art" src="../assets/pastel/bookmarks.png" alt=""><h2>Leave a little room to reflect.</h2><p>Create an entry and start writing.</p></div>'}</div></div>`;if(n){const changed=()=>{n.title=$('note-title').value;n.text=$('note-text').value;$('note-status').textContent='Saving…';clearTimeout(noteTimer);noteTimer=setTimeout(run(async()=>{await api.saveNote(n);if($('note-status'))$('note-status').textContent='Saved on this computer';}),600);};on('note-title','input',changed);on('note-text','input',changed);on('note-export','click',async()=>{await flushNote();if(await api.exportNote(n.id))toast('Entry exported.');});on('note-delete','click',()=>modal('Delete journal entry?',`<p>Delete “${esc(n.title)}” permanently?</p><div class="row"><button id="confirm-delete-note" class="danger">Delete entry</button><button id="keep-note">Keep entry</button></div>`,()=>{on('keep-note','click',closeModal);on('confirm-delete-note','click',async()=>{clearTimeout(noteTimer);state.notes=await api.deleteNote(n.id);activeNote=null;closeModal();renderNotes();});}));}}
@@ -169,11 +484,10 @@ function addDownload(){modal('Add a download','<label for="magnet">Magnet link</
 async function openReader(b){
   await cleanupReader();document.body.classList.remove('playing');route='Reader';renderNavigation();document.body.classList.add('reading');$('heading').textContent=b.title;$('eyebrow').textContent=b.kind+' READER';$('import').hidden=true;$('search').hidden=true;renderMini();
   const generation=readerGeneration;
-  $('main').innerHTML=`<div class="reader-shell"><div class="reader-toolbar"><button id="reader-back">‹ Library</button><div class="reader-tools"><label class="reader-width-control">Width <input id="reader-width" type="range" min="8" max="60" step="0.1" aria-label="Reader width in centimetres"><output id="reader-width-value"></output></label><label class="reader-width-control">Height <input id="reader-height" type="range" min="6" max="60" step="0.1" aria-label="Reader height in centimetres"><output id="reader-height-value"></output></label><input id="reader-find" class="reader-find" type="search" placeholder="Search book" aria-label="Search book"><button id="reader-search">Find</button><button id="reader-bookmark" aria-label="Bookmark current page">⚑ Bookmark</button><button id="reader-marks">Bookmarks</button>${b.kind==='EPUB'?'<button id="reader-type">Aa</button><button id="reader-highlight">Highlight selection</button>':'<button id="ink-toggle">✎ Pen</button><select id="ink-kind" aria-label="Drawing tool"><option value="pen">Pen</option><option value="highlight">Highlighter</option><option value="underline">Underliner</option></select><input id="ink-color" class="ink-color" type="color" value="#7971ae" aria-label="Ink color"><button id="ink-undo">Undo</button><button id="pdf-zoom-out" aria-label="Zoom out">−</button><button id="pdf-zoom-in" aria-label="Zoom in">＋</button>'}</div></div><div class="reader-canvas"><button id="reader-previous" class="reader-page-side" aria-label="Previous page">‹</button><div class="reader-stage" id="reader-stage"><div class="loading">Opening ${b.kind}…</div></div><button id="reader-next" class="reader-page-side" aria-label="Next page">›</button></div><div class="reader-footer"><div class="row"><button id="reader-listen" class="listen-pill">♪ Listen</button><button id="reader-outline">☷ Outline</button></div><div class="row"><span id="reader-position" class="muted"></span><button id="reader-jump">Go to…</button></div><span class="muted" id="reader-percent"></span></div><section id="listen-panel" class="listen-panel" aria-label="Listen to this book" hidden><div class="listen-head"><button id="listen-back">Stop listening</button><div class="row"><span id="listen-chapter-label" class="pill">CHAPTER</span><button id="listen-page-prev" aria-label="Previous reading page">‹ Page</button><span id="listen-page-label" class="muted"></span><button id="listen-page-next" aria-label="Next reading page">Page ›</button><button id="listen-settings">Listen settings</button></div></div><div id="listen-stage" class="listen-stage"><article id="listen-text" class="listen-text"></article></div><div class="listen-dock"><div class="row spread"><span id="listen-location" class="muted"></span><span id="listen-percent" class="muted"></span></div><div class="listen-volume-row"><label for="listen-volume">Volume</label><input id="listen-volume" type="range" min="0" max="100" value="80" aria-label="Narration volume"><progress id="listen-progress" max="1000" value="0" aria-label="Narration progress"></progress></div><div class="listen-transport"><button id="listen-back30" aria-label="Back 30 words">−30</button><button id="listen-play" class="listen-play" aria-label="Play narration">${transportIcon('play')}</button><button id="listen-forward30" aria-label="Forward 30 words">+30</button></div><div class="listen-status-row"><p id="listen-status" class="listen-status"></p><button id="listen-download" hidden>Download offline voice · 44 MB</button></div></div></section></div>`;
+  $('main').innerHTML=`<div class="reader-shell"><div class="reader-toolbar"><button id="reader-back">‹ Library</button><div class="reader-tools"><label class="reader-width-control">Width <input id="reader-width" type="range" min="8" max="60" step="0.1" aria-label="Reader width in centimetres"><output id="reader-width-value"></output></label><label class="reader-width-control">Height <input id="reader-height" type="range" min="6" max="60" step="0.1" aria-label="Reader height in centimetres"><output id="reader-height-value"></output></label><input id="reader-find" class="reader-find" type="search" placeholder="Search book" aria-label="Search book"><button id="reader-search">Find</button><button id="reader-bookmark" aria-label="Bookmark current page">⚑ Bookmark</button><button id="reader-marks">Bookmarks</button>${b.kind==='EPUB'?'<button id="reader-type">Aa</button><button id="reader-highlight">Highlight selection</button>':'<button id="ink-toggle">✎ Pen</button><select id="ink-kind" aria-label="Drawing tool"><option value="pen">Pen</option><option value="highlight">Highlighter</option><option value="underline">Underliner</option></select><input id="ink-color" class="ink-color" type="color" value="#7971ae" aria-label="Ink color"><button id="ink-undo">Undo</button><button id="pdf-zoom-out" aria-label="Zoom out">−</button><button id="pdf-zoom-in" aria-label="Zoom in">＋</button>'}</div></div><div class="reader-canvas"><button id="reader-previous" class="reader-page-side" aria-label="Previous page">‹</button><div class="reader-stage" id="reader-stage"><div class="loading">Opening ${b.kind}…</div></div><button id="reader-next" class="reader-page-side" aria-label="Next page">›</button></div><div class="reader-footer"><div class="row"><button id="reader-listen" class="listen-pill">♪ Listen</button><button id="reader-outline">☷ Outline</button></div><div class="row"><span id="reader-position" class="muted"></span><button id="reader-jump">Go to…</button></div><span class="muted" id="reader-percent"></span></div></div>`;
   reader={book:b,page:Math.floor(b.page)||1,selected:null,generation};
   bindReadingWidth();$('reader-stage').addEventListener('wheel',()=>{if(listening)listening.holdUntil=Date.now()+8000;},{passive:true});
-  on('reader-back','click',()=>navigate(b.kind));on('reader-bookmark','click',readerBookmark);on('reader-marks','click',readerBookmarks);on('reader-outline','click',readerOutline);on('reader-search','click',readerSearch);on('reader-find','keydown',e=>{if(e.key==='Enter')return readerSearch();});on('reader-jump','click',readerJump);on('reader-previous','click',()=>readerMove(-1));on('reader-next','click',()=>readerMove(1));on('reader-listen','click',listenFromReader);on('listen-back','click',()=>closeListen());on('listen-page-prev','click',()=>{if(listening?.rendition){listening.holdUntil=Date.now()+8000;return listening.rendition.prev();}});on('listen-page-next','click',()=>{if(listening?.rendition){listening.holdUntil=Date.now()+8000;return listening.rendition.next();}});on('listen-settings','click',listenSettingsDialog);on('listen-back30','click',()=>listenSkip(-30));on('listen-forward30','click',()=>listenSkip(30));on('listen-play','click',toggleListenPlay);on('listen-download','click',downloadListenVoice);bindListenProgress();on('listen-volume','input',()=>{const volume=Number($('listen-volume').value)/100;state.settings.volume=volume;listenAudio.volume=volume;});on('listen-volume','change',async()=>{state.settings=await api.settings({volume:Number($('listen-volume').value)/100});});
-  try{
+  on('reader-back','click',()=>navigate(b.kind));on('reader-bookmark','click',readerBookmark);on('reader-marks','click',readerBookmarks);on('reader-outline','click',readerOutline);on('reader-search','click',readerSearch);on('reader-find','keydown',e=>{if(e.key==='Enter')return readerSearch();});on('reader-jump','click',readerJump);on('reader-previous','click',()=>readerMove(-1));on('reader-next','click',()=>readerMove(1));on('reader-listen','click',listenFromReader);  try{
     const response=await fetch(b.url);if(!response.ok)throw Error('The source file could not be opened.');const bytes=new Uint8Array(await response.arrayBuffer());if(generation!==readerGeneration)return;
     if(b.kind==='PDF')await openPDF(bytes,generation);else await openEPUB(bytes,generation);
   }catch(e){if(generation===readerGeneration){$('reader-stage').innerHTML=`<div class="empty"><h2>This book could not be opened.</h2><p>${esc(e.message)}</p><p>Check that the file is still in its original location and available offline.</p></div>`;toast(e.message);}}
@@ -666,17 +980,39 @@ async function listenFromReader(){
     if(!cancelled&&$('dialog').open)modal('Listen',`<p>${esc(e.message)}</p>`);
   }
 }
+async function listenArticle(feed,item,text){
+  const body=String(text||'').trim();
+  if(!body)return toast('Wait for the story to load, then listen.');
+  try{
+    const doc=await api.listenPrepare({bookId:'feed:'+item.id,key:'article:'+(item.link||feed.url+':'+item.id),title:plain(item.title)||feed.title,chapters:[{label:feed.title,text:body}]});
+    openListen(doc);
+  }catch(e){toast(e.message);}
+}
 function openListen(doc,options={}){
   const panel=$('listen-panel');
-  if(!panel||!reader)return;
+  if(!panel)return;
+  const epub=reader?.book.kind==='EPUB';
   listening={doc,position:Math.max(0,Math.min(doc.text.length,doc.position||0)),chapter:-1,chunk:null,prefetch:null,gen:0,intent:false,rate:state.settings.listenRate||1,speaker:state.settings.listenSpeaker??1,follow:state.settings.listenFollow!==false,holdUntil:0,sleepTimer:null,sleepLabel:'',stopAfterChapter:false,dragging:false,resumeAfterSeek:false,saveTimer:null,voice:doc.voice||{installed:false},lastSentence:-1,followedSentence:-1,sentenceEls:[]};
-  document.body.classList.add('listening');panel.hidden=false;panel.classList.toggle('paginated-listen',reader.book.kind==='EPUB');for(const id of ['listen-page-prev','listen-page-next','listen-page-label'])$(id).hidden=reader.book.kind!=='EPUB';applyReadingWidth();
+  document.body.classList.add('listening');panel.hidden=false;panel.classList.toggle('paginated-listen',epub);for(const id of ['listen-page-prev','listen-page-next','listen-page-label'])$(id).hidden=!epub;applyReadingWidth();
   if(!audio.paused)audio.pause();
   renderListenChapter(true);renderListenDock();renderListenVoice();
   if(options.note)toast(options.note);
   setListenStatus(options.note||'');
   if(!listening.voice.installed){setListenStatus('Download the offline voice once to listen.');watchListenVoice();}
   else void listenPlay();
+}
+function bindListenPanel(){
+  on('listen-back','click',()=>closeListen());
+  on('listen-page-prev','click',()=>{if(listening?.rendition){listening.holdUntil=Date.now()+8000;return listening.rendition.prev();}});
+  on('listen-page-next','click',()=>{if(listening?.rendition){listening.holdUntil=Date.now()+8000;return listening.rendition.next();}});
+  on('listen-settings','click',listenSettingsDialog);
+  on('listen-back30','click',()=>listenSkip(-30));
+  on('listen-forward30','click',()=>listenSkip(30));
+  on('listen-play','click',toggleListenPlay);
+  on('listen-download','click',downloadListenVoice);
+  bindListenProgress();
+  on('listen-volume','input',()=>{const volume=Number($('listen-volume').value)/100;state.settings.volume=volume;listenAudio.volume=volume;});
+  on('listen-volume','change',async()=>{state.settings=await api.settings({volume:Number($('listen-volume').value)/100});});
 }
 async function closeListen(){
   const s=listening;if(!s)return;
@@ -685,7 +1021,9 @@ async function closeListen(){
   clearTimeout(s.sleepTimer);clearTimeout(s.saveTimer);clearTimeout(listenVoiceTimer);
   listenAudio.pause();listenAudio.removeAttribute('src');
   document.body.classList.remove('listening');
-  const panel=$('listen-panel');if(panel)panel.hidden=true;
+  const panel=$('listen-panel');if(panel){panel.hidden=true;panel.classList.remove('paginated-listen');}
+  if($('listen-chapter-label'))$('listen-chapter-label').textContent='';
+  if($('listen-location'))$('listen-location').textContent='';
   try{await api.listenSave(s.doc.id,s.position);}catch{}
   renderMini();
 }
@@ -1053,11 +1391,35 @@ function renderKindle(){
   void loadKindleArtwork();
 }
 
-const actions={'undo-seek':undoSeek,'detect-chapters':detectChapters,import:importFiles,folder:importFolder,play:togglePlay,'skip-back':()=>skip(-1),'skip-forward':()=>skip(1),previous:()=>changeChapter(-1),next:()=>changeChapter(1),speed:speedDialog,sleep:sleepDialog,'add-audio-bookmark':addAudioBookmark,'audio-bookmarks':audioBookmarks,'show-player':async()=>{if(reader)await cleanupReader();route='Player';render();},'sources-back':()=>{articleOpen=false;activeFeed=null;renderFeeds();},'feed-add':feedAdd,'browse-sources':browseSources,files:()=>api.openFiles(),'new-note':newNote,'add-download':addDownload};
-document.addEventListener('click',run(async e=>{const el=e.target.closest('button');if(!el||el.disabled)return;const d=el.dataset;if(d.route)return navigate(d.route);if(d.action)return actions[d.action]?.();if(d.open)return openBook(d.open);if(d.bookMenu)return bookMenu(d.bookMenu);if(d.kindleMenu)return kindleMenu(d.kindleMenu);if(d.libMenu)return openLibraryMenu(d.libMenu);if(d.chapter!==undefined){await startBook(current,true,Number(d.chapter),0);return renderPlayer();}if(d.feed)return openFeed(d.feed);if(d.refresh)return refreshFeed(d.refresh);if(d.removeFeed){modal('Unsubscribe?',`<p>Remove this source and its saved feed entries?</p><div class="row"><button id="confirm-unsubscribe">Unsubscribe</button><button id="keep-subscription">Keep source</button></div>`,()=>{on('keep-subscription','click',closeModal);on('confirm-unsubscribe','click',async()=>{feeds=await api.feedRemove(d.removeFeed);activeFeed=null;closeModal();renderFeeds();});});return;}if(d.episode)return playEpisode(d.episode);if(d.article)return readArticle(d.article);if(d.external)return api.openURL(d.external);if(d.note){await flushNote();activeNote=d.note;renderNotes();return;}if(d.downloadAction){downloadState=await api.downloadAction(d.id,d.downloadAction);if(Array.isArray(downloadState))renderDownloads();return;}}));
+const actions={'undo-seek':undoSeek,'detect-chapters':detectChapters,import:importFiles,folder:importFolder,play:togglePlay,'skip-back':()=>skip(-1),'skip-forward':()=>skip(1),previous:()=>changeChapter(-1),next:()=>changeChapter(1),speed:speedDialog,sleep:sleepDialog,'add-audio-bookmark':addAudioBookmark,'audio-bookmarks':audioBookmarks,'show-player':async()=>{if(reader)await cleanupReader();route='Player';render();},files:()=>api.openFiles(),'new-note':newNote,'add-download':addDownload};
+function postRowFor(el){const post=el.closest('.post');return post?feedPosts[Number(post.dataset.post)]:null;}
+document.addEventListener('click',run(async e=>{
+  const el=e.target.closest('button,[data-feed-open]');if(!el||el.disabled)return;const d=el.dataset;
+  if(d.removeFeed){confirmRemoveFeed(d.removeFeed);return;}
+  if(d.subscribe){await subscribeSource(d.subscribe,d.subscribeKind||route);return;}
+  if(d.playFeed){await playEpisode(d.playFeed,d.playItem);return;}
+  if(d.feedOpen){openFeed(d.feedOpen);return;}
+  if(d.feedTab){activeFeed=null;feedBrowseTopic='';query='';$('search').value='';feedView[route]=d.feedTab;renderFeeds();$('main').scrollTop=0;return;}
+  if(d.browseTopic!==undefined){feedBrowseTopic=d.browseTopic;renderFeeds();return;}
+  if(d.slide!==undefined){const post=el.closest('.post');if(post)slidePost(post,Number(d.slide));return;}
+  if(d.credits!==undefined){const row=postRowFor(el);if(row)feedCredits(row);return;}
+  if(d.listen!==undefined){const row=postRowFor(el);if(row)await listenPost(row);return;}
+  if(d.web!==undefined){const row=postRowFor(el);if(row?.item.link)await api.openURL(row.item.link);return;}
+  if(d.feedBack!==undefined){activeFeed=null;renderFeeds();$('main').scrollTop=0;return;}
+  if(d.refresh){await refreshFeed(d.refresh);return;}
+  if(d.refreshKind!==undefined){await refreshCategory(route,{force:true});return;}
+  if(d.customFeed!==undefined){feedAddDialog();return;}
+  if(d.topics!==undefined){feedTopicsDialog();return;}
+  if(d.order!==undefined){await toggleFeedOrder();return;}
+  if(d.route)return navigate(d.route);if(d.action)return actions[d.action]?.();if(d.open)return openBook(d.open);if(d.bookMenu)return bookMenu(d.bookMenu);if(d.kindleMenu)return kindleMenu(d.kindleMenu);if(d.libMenu)return openLibraryMenu(d.libMenu);if(d.chapter!==undefined){await startBook(current,true,Number(d.chapter),0);return renderPlayer();}if(d.external)return api.openURL(d.external);if(d.note){await flushNote();activeNote=d.note;renderNotes();return;}if(d.downloadAction){downloadState=await api.downloadAction(d.id,d.downloadAction);if(Array.isArray(downloadState))renderDownloads();return;}
+}));
+document.addEventListener('keydown',e=>{const row=e.target.closest?.('.source-row[data-feed-open]');if(row&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openFeed(row.dataset.feedOpen);}});
+document.addEventListener('pointerdown',e=>{const pages=e.target.closest?.('.post-pages');if(!pages||e.button!==0||e.target.closest('.post-flow'))return;postDrag={pages,x:e.clientX,y:e.clientY,pointer:e.pointerId};});
+document.addEventListener('pointerup',e=>{const drag=postDrag;postDrag=null;if(!drag||drag.pointer!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)<48||Math.abs(dx)<Math.abs(dy)*1.2)return;const selection=window.getSelection();if(selection&&!selection.isCollapsed)return;const post=drag.pages.closest('.post');if(post)slidePost(post,dx<0?1:-1);});
+document.addEventListener('pointercancel',()=>{postDrag=null;});
 document.addEventListener('click',e=>{const a=e.target.closest('.article-content a');if(a){e.preventDefault();run(()=>api.openURL(a.href))();}});
 document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement){e.target.removeAttribute('src');e.target.style.visibility='hidden';}},true);
-on('dialog-close','click',closeModal);on('import','click',importFiles);on('files','click',()=>api.openFiles());on('search','input',()=>{query=$('search').value;render();});
+on('dialog-close','click',closeModal);on('import','click',importFiles);on('files','click',()=>api.openFiles());on('search','input',()=>{query=$('search').value;render();});bindListenPanel();
 async function completeAudioChapter(){if(!current||audioLoading||advancing)return;advancing=true;try{finishTranscription();const autoplay=audio.dataset.sleepEnd!=='yes';audio.dataset.sleepEnd='';await persistAudio();if(chapter+1<current.tracks.length)await startBook(current,autoplay,chapter+1,0);else{audio.pause();await updateBook(current,{progress:100,position:0});toast('You’ve reached the end.');}}finally{advancing=false;}}
 audio.addEventListener('timeupdate',()=>{if(audioLoading)return;updateTimes();if(!audio.paused&&Number.isFinite(activeTrack()?.end)&&audio.currentTime>=activeTrack().end-.025){run(completeAudioChapter)();return;}if(!saveTimer)saveTimer=setTimeout(run(async()=>{saveTimer=null;await persistAudio();}),5000);});
 audio.addEventListener('play',()=>{renderMini();updatePlayButtons();});audio.addEventListener('pause',()=>{if(audioLoading)return;renderMini();updatePlayButtons();run(persistAudio)();});
@@ -1068,7 +1430,7 @@ setInterval(()=>{if(current&&!audioLoading&&!audio.paused&&Number.isFinite(activ
 window.addEventListener('beforeunload',()=>{run(persistAudio)();run(flushNote)();if(listening)api.listenSave(listening.doc.id,listening.position).catch(()=>{});});
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyTheme);
 api.onDownloads(jobs=>{downloadState=jobs;if(route==='Downloads'&&!$('dialog').open)renderDownloads();});
-async function boot(){state=await api.load();const f=await api.feeds();feeds=f.feeds;directory=f.directory;downloadState=await api.downloads();applyTheme();render();void (async()=>{for(const kind of ['News','Podcasts','Journals'])await refreshCategory(kind);})();const recent=state.books.filter(b=>['Audio','Podcast'].includes(b.kind)&&b.lastActive).sort((a,b)=>b.lastActive-a.lastActive)[0];if(recent)await startBook(recent,false);}
+async function boot(){state=await api.load();applyFeedPayload(await api.feeds());downloadState=await api.downloads();applyTheme();render();if(FEED_KINDS.includes(route))void refreshCategory(route);const recent=state.books.filter(b=>['Audio','Podcast'].includes(b.kind)&&b.lastActive).sort((a,b)=>b.lastActive-a.lastActive)[0];if(recent)await startBook(recent,false);}
 run(boot)();
 
 Object.defineProperty(window,'clavisTransport',{value:Object.freeze({state:()=>({ready:!!current?.tracks?.length&&!audioLoading,playing:!audio.paused,skip:state.settings.skip||30}),command:async action=>{if(!current||audioLoading)return;if(action==='play')await togglePlay();else if(action==='back')await skip(-1);else if(action==='forward')await skip(1);}})});

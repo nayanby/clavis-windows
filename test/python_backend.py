@@ -33,12 +33,58 @@ class BackendTests(unittest.TestCase):
         base=datetime.datetime(2020,1,1,tzinfo=datetime.timezone.utc)
         items=''.join(f'<item><guid>{i}</guid><title>Story {i}</title><pubDate>{(base+datetime.timedelta(days=i)).strftime("%a, %d %b %Y %H:%M:%S GMT")}</pubDate></item>' for i in range(350))
         raw=f'<rss version="2.0"><channel><title>Live feed</title>{items}</channel></rss>'.encode()
-        f={'id':'unitfeed','kind':'News','url':'https://example.com/rss'}; self.s.store['feeds']=[f]
+        f={'id':'unitfeed','kind':'News','url':'https://example.com/rss','title':'Unit feed'}; self.s.store['feeds']=[f]
         with patch('core.fetch',return_value=(raw,f['url'])): result=self.s.refresh(f['id'])
-        self.assertEqual(len(result['entries']),300); self.assertEqual(result['entries'][0]['title'],'Story 349'); self.assertIsNone(result['refreshError'])
+        self.assertEqual(len(result['entries']),20); self.assertEqual(result['entries'][0]['title'],'Story 349'); self.assertIsNone(result['refreshError'])
         with patch('core.fetch',side_effect=ValueError('Offline')):
             with self.assertRaises(ValueError): self.s.refresh(f['id'])
-        self.assertEqual(f['refreshError'],'Offline'); self.assertEqual(len(f['entries']),300)
+        self.assertEqual(f['refreshError'],'Offline'); self.assertEqual(len(f['entries']),20)
+    def test_feed_covers_are_images_only_and_https(self):
+        raw=(b'<rss version="2.0"><channel><title>Art</title>'
+             b'<item><guid>a</guid><title>Story</title>'
+             b'<media:content url="http://cdn.example.com/audio.mp3" type="audio/mpeg"/>'
+             b'<media:thumbnail url="http://cdn.example.com/logo-mark.png"/>'
+             b'<media:content url="http://cdn.example.com/story.jpg" type="image/jpeg"/></item>'
+             b'<item><guid>b</guid><title>Audio only</title><enclosure url="http://cdn.example.com/e.mp3" type="audio/mpeg" length="0"/></item>'
+             b'</channel></rss>')
+        f={'id':'artfeed','kind':'Podcasts','url':'https://example.com/rss','title':'Art feed'}
+        result=self.s.parse_feed(f,raw)
+        self.assertEqual(result['entries'][0]['image'],'https://cdn.example.com/story.jpg')
+        self.assertEqual(result['entries'][1]['audio'],'http://cdn.example.com/e.mp3')
+        self.assertEqual(result['entries'][1]['image'],'')
+        self.assertEqual(result['image'],'')
+    def test_feed_entries_are_cached_per_source(self):
+        self.assertEqual(len(self.s.store['feeds']),150)
+        self.assertEqual({kind:sum(1 for f in self.s.store['feeds'] if f['kind']==kind) for kind in ('News','Podcasts','Journals')},{'News':50,'Podcasts':50,'Journals':50})
+        feed=self.s.store['feeds'][0]
+        raw=b'<rss version="2.0"><channel><title>Saved</title><item><guid>a</guid><title>Cached story</title><description>Saved text</description></item></channel></rss>'
+        with patch('core.fetch',return_value=(raw,feed['url'])): self.s.refresh(feed['id'])
+        self.s.close()
+        self.s=Services(ROOT,self.data)
+        cached=next(f for f in self.s.store['feeds'] if f['id']==feed['id'])
+        self.assertEqual(cached['entries'][0]['title'],'Cached story')
+        disk=json.loads(self.s.file.read_text(encoding='utf-8'))
+        self.assertTrue(all('entries' not in f for f in disk['feeds']))
+        self.assertEqual(self.s.dispatch('feedOpened','https://example.com/story'),{'https://example.com/story':1})
+        self.assertEqual(self.s.feed_opened('https://example.com/story')['https://example.com/story'],2)
+        removed=self.s.dispatch('feedRemove',feed['id'])
+        self.assertEqual(len(removed['feeds']),149)
+        self.s.close(); self.s=Services(ROOT,self.data)
+        self.assertEqual(len(self.s.store['feeds']),149)
+    def test_article_extraction_and_cache(self):
+        body='<html><head><title>Story title</title><meta property="og:image" content="/lead.jpg"><meta property="article:published_time" content="2026-01-02T03:04:05Z"><meta name="author" content="A Writer"></head><body><article><h1>Story title</h1><p>'+('Long paragraph of reporting. '*40)+'</p></article></body></html>'
+        with patch('core.public_url'), patch('core.fetch',return_value=(body.encode(),'https://example.com/story')) as network:
+            first=self.s.dispatch('article','https://example.com/story')
+            second=self.s.dispatch('article','https://example.com/story')
+        self.assertEqual(network.call_count,1)
+        self.assertEqual(first['image'],'https://example.com/lead.jpg')
+        self.assertEqual(first['byline'],'A Writer')
+        self.assertEqual(first['published'],'2026-01-02T03:04:05Z')
+        self.assertEqual(first,second)
+        self.assertTrue(first['characters']>120)
+        with patch('core.public_url'), patch('core.fetch') as network:
+            network.side_effect=ValueError('Offline')
+            self.assertEqual(self.s.dispatch('article','https://example.com/story'),second)
     def test_media_range_and_capability(self):
         import threading
         server=Server(self.s); self.s.origin=f'http://127.0.0.1:{server.server_port}'; threading.Thread(target=server.serve_forever,daemon=True).start()
@@ -57,7 +103,23 @@ class BackendTests(unittest.TestCase):
     def test_private_urls_rejected(self):
         for url in ('http://127.0.0.1/a','file:///C:/Windows/win.ini','http://[::1]/'):
             with self.assertRaises(ValueError): public_url(url)
-    def test_live_feeds_have_no_offline_entries(self):
+    def test_fetch_follows_long_tracking_redirects(self):
+        class Hop:
+            def __init__(self,location): self.status_code=302; self.headers={'Location':location}
+            def close(self): pass
+            def raise_for_status(self): raise AssertionError('redirect body should not be read')
+        class Final:
+            status_code=200; headers={}; url='https://cdn.example.com/episode.mp3'
+            def close(self): pass
+            def raise_for_status(self): pass
+            def iter_content(self,size): yield b'audio bytes'
+        hops=12
+        chain=[Hop(f'https://track{i}.example.com/e.mp3') for i in range(hops)]+[Final()]
+        with patch('core.public_url',side_effect=lambda url: url), patch('core.requests.get',side_effect=chain):
+            from core import fetch
+            body,final=fetch('https://dts.podtrac.com/redirect.mp3/nyt.example.com/e.mp3')
+        self.assertEqual(body,b'audio bytes'); self.assertEqual(final,'https://cdn.example.com/episode.mp3')
+    def test_library_keeps_feed_metadata_only(self):
         self.assertTrue(self.s.store['feeds'])
         self.assertTrue(all(not f['entries'] for f in self.s.store['feeds']))
         self.s.store['feeds'][0]['entries']=[{'title':'Fetched article'}]

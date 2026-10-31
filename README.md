@@ -19,6 +19,9 @@ Clavis creates a `Data` folder beside `Clavis.exe`:
 | `Data/Books/<actual book or folder name>` | Both imported EPUB/PDF/audio copies and downloaded books, in readable named folders |
 | `Data/library.json` | Library, subscriptions, bookmarks, progress, settings and journal entries |
 | `Data/ink` | PDF pen/highlighter/underline strokes |
+| `Data/feed-cache` | Latest entries per news, article and podcast source, kept for offline reading |
+| `Data/articles` | Extracted story text, reused for six hours |
+| `Data/feed-activity.json` | Local count of how often each story is opened, used by Popular ordering |
 | `Data/transcripts` | Cached offline audio transcription |
 | `Data/Session` | Desktop browser cache, IndexedDB and speech-model cache |
 | `Data/Logs`, `Data/CrashDumps` | App diagnostics |
@@ -39,7 +42,7 @@ Removing a book from the library keeps its copied files. The separate file-remov
 - Audio playback with byte-range streaming, chapter-relative seeking, cross-chapter skips, undo seek, speed, volume, bookmarks, sleep timer, media keys, equalizer and voice gain.
 - Automatic MP3 ID3 CHAP and M4B/MP4 chapter discovery, including Nero `chpl` and supported QuickTime chapter tracks. Existing books are checked on first playback. Detect chapters rechecks metadata and offers a cancellable offline English spoken-heading scan when markers are missing; results are reviewed before being applied.
 - Bundled offline Vosk English speech model and live-text panel. Finalized text is cached. Speech is processed locally; no microphone or API key is used.
-- Thirty original starter RSS sources, offline feed entries, namespace-aware RSS/Atom parsing, source directory, subscribe/unsubscribe, automatic refresh on opening a category or source, visible refresh errors, newest-first entries, clean article extraction, publisher links and separate podcast playback.
+- One hundred and fifty Clavis Plus starter sources (50 News, 50 Articles, 50 Podcasts) with namespace-aware RSS/Atom parsing, a Popular / My list / Browse desk in each category, 17 topic filters, latest-or-popular ordering, per-source and combined streams, open-count ranking held on this computer, article text cached for six hours, saved stories that stay readable when a publisher refuses the refresh, cover-first cards that page through the story with arrows or a drag, source credits, Listen narration for any article, publisher links and separate podcast playback.
 - Typed journal entries and a handwriting page with pen/highlighter/underline, undo, text export and PNG export.
 - Magnet downloads with progress, speed and peer counts, pause/resume, persisted jobs and automatic completed-book import. Restarted active jobs wait paused until resumed. Removing a job keeps its files.
 - Compact Now Playing: artwork, seek bar, transport, speed, sleep timer, bookmarks, volume and chapter tools fit in the window. Long chapter lists and live text scroll inside their own panels.
@@ -48,7 +51,7 @@ Removing a book from the library keeps its copied files. The separate file-remov
 
 ## Differences from Android
 
-This is a first desktop port, not complete feature parity. Scheduled themes, motion-triggered sleep resume and playback rewind-after-pause are not ported. Offline live text follows playback instead of prefetching text ahead; recognition accuracy and throughput depend on audio and hardware. Spoken chapter scans can be slow, miss headings, or suggest spoken references as headings; review before applying. Handwriting uses one page per journal entry rather than Android's full notebook system. PDF text selection and embedded annotation export are not implemented. Journal PDF attachments open via their publisher link. Online podcast directory search is not included; use the bundled directory or an RSS address. Feed snapshots are historical; opening categories/sources refreshes them automatically. Publisher access restrictions remain in effect.
+This is a first desktop port, not complete feature parity. Scheduled themes, motion-triggered sleep resume and playback rewind-after-pause are not ported. Offline live text follows playback instead of prefetching text ahead; recognition accuracy and throughput depend on audio and hardware. Spoken chapter scans can be slow, miss headings, or suggest spoken references as headings; review before applying. Handwriting uses one page per journal entry rather than Android's full notebook system. PDF text selection and embedded annotation export are not implemented. Journal PDF attachments open via their publisher link. Online podcast directory search is not included; use the bundled directory or an RSS address. A category refreshes when you open it, then at most every thirty minutes; opening another category while one is refreshing queues it instead of dropping it. Stories whose publisher only publishes a preview are labelled and open on the website. Publisher access restrictions remain in effect.
 
 The Windows installer is unsigned. This build has not been submitted to the Microsoft Store.
 
