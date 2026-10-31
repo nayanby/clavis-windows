@@ -173,7 +173,7 @@ body.listening main{padding-bottom:210px}
 .post-cover-fallback span{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted)}
 .post-cover-fallback strong{font:700 clamp(22px,3.4vw,34px)/1.2 Averia,Georgia,serif}
 .post-text{overflow:hidden;padding:26px 30px;background:var(--card)}
-.post-flow{height:100%;column-gap:36px;column-fill:auto;overflow:hidden;transition:transform .28s ease;font:17px/1.8 Averia,Georgia,serif;color:var(--ink);overflow-wrap:anywhere;user-select:text}
+.post-flow{height:100%;column-gap:36px;column-fill:auto;transition:transform .28s ease;font:17px/1.8 Averia,Georgia,serif;color:var(--ink);overflow-wrap:anywhere;user-select:text}
 .post-flow p{margin:0 0 1em}
 .post-flow h1,.post-flow h2,.post-flow h3,.post-flow h4{font-size:20px;line-height:1.35;margin:0 0 .6em}
 .post-flow li{margin:0 0 .4em}

@@ -311,7 +311,8 @@ function renderFeeds(){
 }
 function observePosts(){
   postObserver?.disconnect();
-  postObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){postObserver.unobserve(entry.target);void hydratePost(entry.target);}},{root:$('main'),rootMargin:'900px 0px'});
+  // the page scrolls in the window, so the viewport is the only useful root: main spans the whole stream
+  postObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){postObserver.unobserve(entry.target);void hydratePost(entry.target);}},{root:null,rootMargin:'900px 0px'});
   document.querySelectorAll('.post').forEach(post=>postObserver.observe(post));
 }
 async function hydratePost(post){
@@ -388,6 +389,18 @@ function slidePost(post,delta){
   const total=1+Number(post.dataset.pages||1);
   post.dataset.slide=String(Math.max(0,Math.min(total-1,Number(post.dataset.slide||0)+delta)));
   updatePost(post);
+  // the card changes height when it opens, so centre it after the layout settles
+  requestAnimationFrame(()=>centerPost(post));
+}
+function centerPost(post){
+  if(!post.isConnected)return;
+  const box=post.getBoundingClientRect(),margin=16,mini=$('mini');
+  // the floating player covers the foot of the page, so the usable view stops above it
+  const view=window.innerHeight-(mini&&mini.hidden===false?mini.getBoundingClientRect().height+margin*2:0);
+  if(box.top>=margin&&box.bottom<=view-margin)return;
+  // explicit window maths: scrollIntoView walks every nested scroller and overshoots when the stream re-renders mid-scroll
+  const offset=box.height+margin*2<=view?(view-box.height)/2:margin;
+  window.scrollTo({top:window.scrollY+box.top-offset,behavior:'smooth'});
 }
 function markFeedOpened(key){
   if(!key)return;
