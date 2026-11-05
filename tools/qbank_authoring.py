@@ -57,7 +57,8 @@ class BalancedHTML(HTMLParser):
 def validate(bank):
     rows=bank['questions']; target=bank['targetQuestions']; stems=set(); ids=set()
     assert len(rows)==target, (len(rows),target)
-    assert Counter(q['correctIndex'] for q in rows)==Counter({i:target//4 for i in range(4)})
+    counts=Counter(q['correctIndex'] for q in rows)
+    assert all(target//4<=counts[i]<=(target+3)//4 for i in range(4)),counts
     for q in rows:
         assert q['question'].strip() and q['question'] not in stems
         stems.add(q['question']); assert q['id'] not in ids; ids.add(q['id'])

@@ -34,8 +34,9 @@ try{
 host.replaceChildren();
 '''
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--subject',default='Cardiology');parser.add_argument('--expected',type=int,default=416);args=parser.parse_args()
- banks=[json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT/'build/topic-based-qbank-replacement/completed'/args.subject).glob('*/*/questions.json'))]
+ parser=argparse.ArgumentParser();parser.add_argument('--subject',default='Cardiology');parser.add_argument('--expected',type=int,default=416);parser.add_argument('--directory',type=Path);args=parser.parse_args()
+ directory=args.directory or ROOT/'build/topic-based-qbank-replacement/completed'/args.subject
+ banks=[json.loads(p.read_text(encoding='utf-8')) for p in sorted(directory.glob('*/*/questions.json'))]
  scripts=''.join('<script>'+ (ROOT/'assets/vendor'/name).read_text(encoding='utf-8')+'</script>' for name in ['study-rich-text.js','qbank-explanations.js'])
  data=json.dumps(banks,ensure_ascii=True).replace('<','\\u003c')
  with tempfile.TemporaryDirectory(prefix='cnl-qbank-render-',ignore_cleanup_errors=True) as tmp:
