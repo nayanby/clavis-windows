@@ -1,5 +1,5 @@
 """Render every staged cardiology explanation in real Chromium without jsdom."""
-import json,re,subprocess,tempfile
+import argparse,json,re,subprocess,tempfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 TEST=r'''
@@ -28,23 +28,25 @@ try{
    answers[q.correctIndex]++;count++;
   }
  }
- check(count===416&&answers.every(n=>n===104),'subject balance');
+ check(count===EXPECTED&&answers.every(n=>n===EXPECTED/4),'subject balance');
  output.textContent=JSON.stringify({result:'PASS',questions:count,answerDistribution:answers,realChromiumRenderer:true,referencesLast:true,tablesAndNestedBullets:true,distractorMapping:true});
 }catch(e){output.textContent='FAIL: '+e.stack;}
 host.replaceChildren();
 '''
 def main():
- banks=[json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT/'build/topic-based-qbank-replacement/completed/Cardiology').glob('*/*/questions.json'))]
+ parser=argparse.ArgumentParser();parser.add_argument('--subject',default='Cardiology');parser.add_argument('--expected',type=int,default=416);args=parser.parse_args()
+ banks=[json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT/'build/topic-based-qbank-replacement/completed'/args.subject).glob('*/*/questions.json'))]
  scripts=''.join('<script>'+ (ROOT/'assets/vendor'/name).read_text(encoding='utf-8')+'</script>' for name in ['study-rich-text.js','qbank-explanations.js'])
  data=json.dumps(banks,ensure_ascii=True).replace('<','\\u003c')
  with tempfile.TemporaryDirectory(prefix='cnl-qbank-render-',ignore_cleanup_errors=True) as tmp:
-  page=Path(tmp)/'check.html';page.write_text('<!doctype html><meta charset="utf-8"><pre id="result"></pre><div id="host"></div>'+scripts+'<script>const BANKS='+data+';'+TEST+'</script>',encoding='utf-8')
+  page=Path(tmp)/'check.html';page.write_text('<!doctype html><meta charset="utf-8"><pre id="result"></pre><div id="host"></div>'+scripts+'<script>const EXPECTED='+str(args.expected)+';const BANKS='+data+';'+TEST+'</script>',encoding='utf-8')
   cmd=['C:/Program Files/Google/Chrome/Application/chrome.exe','--headless=new','--disable-gpu','--no-first-run','--disable-extensions','--user-data-dir='+str(Path(tmp)/'profile'),'--dump-dom',page.as_uri()]
   r=subprocess.run(cmd,capture_output=True,encoding='utf-8',errors='replace',timeout=45)
   match=re.search(r'<pre id="result">(.*?)</pre>',r.stdout,re.S)
   result=match[1] if match else 'FAIL: no browser result '+r.stderr[-1000:]
   print(result)
   if not result.startswith('{"result":"PASS"'):return 1
-  out=ROOT/'build/topic-based-qbank-replacement/cardiology-renderer-validation.json';out.write_text(result,encoding='utf-8')
+  slug=re.sub(r'[^a-z0-9]+','-',args.subject.lower()).strip('-')
+  out=ROOT/'build/topic-based-qbank-replacement'/(slug+'-renderer-validation.json');out.write_text(result,encoding='utf-8')
  return 0
 if __name__=='__main__':raise SystemExit(main())
