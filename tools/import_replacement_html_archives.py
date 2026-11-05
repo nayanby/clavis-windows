@@ -48,6 +48,7 @@ def table(value):
 
 def alternatives(value,options,answer):
     if not value:return ''
+    if isinstance(value,str):return '<h3>Other Options</h3><p>'+rich(value)+'</p>'
     pairs=[]
     wrong=[i for i in range(len(options)) if i!=answer]
     if isinstance(value,dict):
@@ -98,7 +99,7 @@ def convert(item,digest,index):
     parts=[]
     for key in ['title','heading','focus']:
         if item.get(key):parts.append('<h2>'+rich(item[key])+'</h2>')
-    for key in ['lead','why','reason','sections','points','blocks','b','notes','detail','deep','expl','formula','clinical']:
+    for key in ['lead','why','reason','sections','points','blocks','b','notes','note','detail','deep','expl','ex','formula','clinical']:
         value=item.get(key)
         if value is None:continue
         if key=='blocks' and isinstance(value,list):
@@ -110,6 +111,9 @@ def convert(item,digest,index):
     for key in ['table','deep_table']:parts.append(table(item.get(key)))
     for key in ['notes_html','explanationHtml']:
         if item.get(key):parts.append(clean(item[key]))
+    if item.get('explanation'):parts.append(clean(item['explanation']) if isinstance(item['explanation'],str) else block(item['explanation']))
+    if isinstance(item.get('rich'),dict):
+        parts.append(block(item['rich'].get('points')));parts.append(table(item['rich'].get('table')))
     for key in ['other','others','wrongs']:parts.append(alternatives(item.get(key),opts,answer))
     explanation=clean(''.join(parts));plain=LH.fragment_fromstring(explanation,create_parent='div').text_content().strip()
     assert plain,(stem,'Missing explanation')
@@ -153,14 +157,37 @@ def stage():
                   sourceArchive=archive,sourceFile=entry.filename,sourceSha256=digest,madeAt=int(time.time()*1000))
                 banks.append(bank);summary.append(dict(subject=subject,chapter=order,title=label,questions=len(qs),source=entry.filename))
     assert len(banks)==40 and len(duplicates)==3 and len(excluded)==3
+    # Final chapter ZIPs take priority; the broad archive also contains two
+    # separate mixed collections, each with many earlier presentation variants.
+    supplemental=['NEET_SS_GI_Pancreas_200_Interactive_Structured_Notes.html','NEET_SS_GI_Pancreas_50_Interactive_Expanded_Reviews.html']
+    norm=lambda s:re.sub(r'\W+','',str(s).casefold())
+    known={norm(q['question']) for bank in banks for q in bank['questions']};superseded=[]
+    archive='All_Available_Chat_Files.zip'
+    with zipfile.ZipFile(Path('C:/Users/ANT-PC/Downloads')/archive) as z:
+        for entry in z.infolist():
+            if not entry.filename.lower().endswith('.html'):continue
+            if re.search(r'Level_?2|Level_2',entry.filename,re.I):excluded.append(entry.filename);continue
+            raw=z.read(entry);digest=hashlib.sha256(raw).hexdigest()
+            if digest in seen:duplicates.append(dict(file=entry.filename,duplicateOf=seen[digest]));continue
+            if Path(entry.filename).name not in supplemental:
+                superseded.append(entry.filename);continue
+            label='Mixed GI Structured Review' if '_200_' in entry.filename else 'Mixed GI Expanded Review'
+            items=extract(raw.decode('utf-8-sig'));qs=[]
+            for i,item in enumerate(items,1):
+                stem=norm(item.get('stem',item.get('q',item.get('question'))))
+                if stem in known:continue
+                qs.append(convert(item,digest,i));known.add(stem)
+            assert qs and len(qs)<=200
+            bank=dict(folder='GI & pancreas',document='Mixed GI Review',headingText=label,chapterOrder=21,topicOrder=len(banks)-39,headingIndex=0,questions=qs,sourceArchive=archive,sourceFile=entry.filename,sourceSha256=digest,madeAt=int(time.time()*1000))
+            banks.append(bank);summary.append(dict(subject=bank['folder'],chapter=21,title=label,questions=len(qs),source=entry.filename))
     staged=[]
     for bank in banks:
         subject,order=bank['folder'],bank['chapterOrder'];label=study_packs._quiz_component(bank['document'])
-        dest=OUT/'staged'/subject/f'{order:02}. {label}'/'01. Questions';dest.mkdir(parents=True,exist_ok=True)
+        dest=OUT/'staged'/subject/f'{order:02}. {label}'/f'{bank["topicOrder"]:02}. {study_packs._quiz_component(bank["headingText"])}';dest.mkdir(parents=True,exist_ok=True)
         (dest/'questions.json').write_text(json.dumps(bank,ensure_ascii=False,indent=2),encoding='utf-8')
         staged.append(str(dest/'questions.json'))
-    assert len(set(staged))==40
-    report=dict(banks=len(banks),questions=sum(len(b['questions']) for b in banks),duplicates=duplicates,excludedLevel2=excluded,chapters=summary,stagedFiles=staged)
+    assert len(set(staged))==42
+    report=dict(banks=len(banks),questions=sum(len(b['questions']) for b in banks),duplicates=duplicates,excludedLevel2=excluded,supersededVersions=superseded,chapters=summary,stagedFiles=staged)
     (OUT/'staging-report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k not in {'chapters','stagedFiles'}},indent=2));return banks
 
