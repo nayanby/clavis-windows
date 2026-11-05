@@ -95,7 +95,7 @@ def finalize(subject, order, topic, slug, rows, target):
         q['explanationTeaching']['otherOptions'].sort(key=lambda a:a['optionIndex'])
         assert q['options'][pos]==answers[i-1]
         q.update(id=f'{slug}-{i:03}',authorship='Original ChatGPT-authored topic-based question; not an authenticated examination PYQ',
-            reviewStatus='authored_source_checked',sourceCheckedAt='2026-11-05')
+            reviewStatus='authored_source_checked',sourceCheckedAt='2026-11-06')
         render(q)
     bank=dict(folder=subject,document=topic,headingText=topic,chapterOrder=order,topicOrder=1,targetQuestions=target,status='chapter_authored',questions=rows)
     report=validate(bank)
