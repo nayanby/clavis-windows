@@ -41,8 +41,13 @@ class PearlsTests(unittest.TestCase):
         page=html_transform.transform_html((REPO/'assets/app.html').read_text(encoding='utf-8'))
         self.assertIn('cnlInstallPearls();',page)
         self.assertIn('function cnlPaintPearlsPage()',page)
-        self.assertIn('new DocxPrototype(await file.blob())',page)
-        self.assertIn('Jump to heading',page)
+        self.assertIn("frame.src='/pearls/viewer?'",page)
+        self.assertIn('await openPendingDocument(key)',page)
+        clone=pearls.viewer_html(page)
+        self.assertIn('window.cnlPearlsLibraryBoot = loadServerLibrary()',clone)
+        self.assertNotIn('window.cnlPearlsLibraryBoot = loadServerLibrary()',page)
+        self.assertIn('cnlReaderBottomPill',clone)
+        self.assertIn('cnlOutlineBtn',clone)
 
 
 if __name__=='__main__':unittest.main()

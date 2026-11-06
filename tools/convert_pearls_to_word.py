@@ -173,6 +173,8 @@ def convert(source,destination):
     assert main is not None
     main=copy.deepcopy(main)
     for nav in main.xpath('.//nav|.//script|.//style'):nav.drop_tree()
+    # Topic names belong in shelf navigation, not at the top of each Pearl.
+    for title in main.xpath('./h1[1]'):title.drop_tree()
     # The user's Pearls format omits displayed bibliographies.
     for references in main.xpath('.//section[@id="references"]'):references.drop_tree()
     builder=Converter();builder.blocks(builder.doc,main)

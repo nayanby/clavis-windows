@@ -15,12 +15,12 @@ import re
 
 from .save_js import APP_SCOPE_ANCHORS, SAVE_JS
 from .study_navigation import STUDY_BRIDGE_JS, STUDY_NAV_JS
-from .pearls import PEARLS_CSS, PEARLS_JS
+from .pearls import PEARLS_CSS, PEARLS_JS, PEARLS_VIEWER_JS
 from .study_editor import STUDY_EDITOR_JS
 from .quiz_generation import QUIZ_GENERATION_JS, QUIZ_EXPLANATION_SCHEMA_JS, QUIZ_REQUIREMENTS
 
 SAVE_JS = SAVE_JS.replace("cnlInstallHome();\ncnlInstallTopbarHoverReveal();",
-                          STUDY_NAV_JS + PEARLS_JS + "\ncnlInstallHome();\ncnlInstallPearls();\ncnlInstallTopbarHoverReveal();", 1)
+                          STUDY_NAV_JS + PEARLS_JS + PEARLS_VIEWER_JS + "\ncnlInstallHome();\ncnlInstallPearls();\ncnlInstallTopbarHoverReveal();", 1)
 from .view_modes import VIEW_MODES_CSS
 from . import paths
 

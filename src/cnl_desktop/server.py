@@ -407,6 +407,12 @@ class Handler(BaseHTTPRequestHandler):
                 self._serve_library()
             elif route == "/api/pearls":
                 self._send_json(200, pearls.catalog(self.app.data_root))
+            elif route == "/pearls/viewer":
+                target = pearls.resolve(self.app.data_root / 'Pearls', (query.get('id') or [''])[0])
+                if target is None:
+                    self._send_json(404, {'error': 'Pearl not found.'})
+                else:
+                    self._send(200, pearls.viewer_html(self.app.app_html()).encode('utf-8'), 'text/html; charset=utf-8')
             elif route == "/api/pearls/document":
                 target = pearls.resolve(self.app.data_root / 'Pearls', (query.get('id') or [''])[0])
                 if target is None:

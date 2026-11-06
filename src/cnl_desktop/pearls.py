@@ -52,25 +52,10 @@ body[data-cnl-tab="pearls"] #homeScreen{display:none!important}
  padding:10px 12px;min-height:54px;border:1px solid #d6def1;border-radius:12px;
  background:linear-gradient(110deg,#f2f5fc,#eaf0fa);color:#292664;cursor:pointer;font:700 17px/1.25 "Averia Serif Libre",serif}
 #cnlPearlsPage .cnl-pearls-number{display:grid;place-items:center;flex:0 0 32px;height:32px;background:#d9e2f3;border-radius:8px}
-#cnlPearlsPage .cnl-pearls-document{padding:22px;background:#fff;border:1px solid #dce1ed;border-radius:14px;overflow-wrap:anywhere}
-#cnlPearlsPage .cnl-pearls-document .doc-root{max-width:100%;padding:0}
-#cnlPearlsPage .cnl-pearls-document .doc-block{padding:0!important;background:transparent!important;border:0!important}
-#cnlPearlsPage .cnl-pearls-document .doc-p,#cnlPearlsPage .cnl-pearls-document .doc-p span{font-family:"Averia Serif Libre",Georgia,serif!important;font-size:17px!important;line-height:1.37!important}
-#cnlPearlsPage .cnl-pearls-document .doc-p{margin:0 0 8px!important;text-align:left!important}
-#cnlPearlsPage .cnl-pearls-document [data-style-name="Title"],#cnlPearlsPage .cnl-pearls-document [data-style-name="Title"] span{font-size:27px!important;line-height:1.2!important}
-#cnlPearlsPage .cnl-pearls-document [data-style-name="Title"]{margin-bottom:18px!important}
-#cnlPearlsPage .cnl-pearls-document .doc-p.h1{background:#f8dfeb!important;padding:10px!important;margin-top:22px!important;border-radius:8px;border:0!important}
-#cnlPearlsPage .cnl-pearls-document .h1,#cnlPearlsPage .cnl-pearls-document .h1 span{font-size:19px!important;font-weight:700!important;line-height:1.2!important;color:#242348!important}
-#cnlPearlsPage .cnl-pearls-document .doc-p:is(.h2,.h3,.h4){margin-top:16px!important;background:transparent!important;border:0!important}
-#cnlPearlsPage .cnl-pearls-document :is(.h2,.h3,.h4),#cnlPearlsPage .cnl-pearls-document :is(.h2,.h3,.h4) span{font-size:17px!important;font-weight:700!important;line-height:1.2!important;color:#24568c!important}
-#cnlPearlsPage .cnl-pearls-document table{max-width:100%;width:100%!important;table-layout:fixed;border-collapse:collapse;margin:12px 0!important}
-#cnlPearlsPage .cnl-pearls-document td,#cnlPearlsPage .cnl-pearls-document th{overflow-wrap:anywhere;border:1px solid #d6d9e6!important;padding:9px!important}
-#cnlPearlsPage .cnl-pearls-document td .doc-p,#cnlPearlsPage .cnl-pearls-document td .doc-p span{font-size:16px!important}
-#cnlPearlsPage .cnl-pearls-document tr:first-child td{background:#ecf1fa!important}
-#cnlPearlsPage .cnl-pearls-document .doc-p span[style*="vertical-align"]{font-size:.75em!important}
-#cnlPearlsPage .cnl-pearls-document :is(.h1,.h2,.h3,.h4){scroll-margin-top:12px}
-#cnlPearlsPage .cnl-pearls-outline{max-width:min(100%,360px);padding:8px;border:1px solid #cbd5e7;border-radius:8px;background:#fff;color:#292664}
-#cnlPearlsPage .cnl-pearls-word{font-size:14px;color:#24568c}
+#cnlPearlsViewerFrame{position:fixed;inset:0;width:100vw;height:100vh;border:0;z-index:2147480000;background:#f5f4fa}
+body.cnl-pearls-viewer #cnlTabBar{display:none!important}
+.cnl-pearls-loading{position:fixed;inset:0;z-index:2147480001;display:grid;place-content:center;gap:12px;background:#f5f4fa;color:#292664;font:18px "Averia Serif Libre",serif}
+
 """
 
 PEARLS_JS=r"""
@@ -119,29 +104,8 @@ async function cnlPaintPearlsPage(){
         button.append(number,name);button.addEventListener('click',()=>cnlPearlsChoose(subject.name,t.id));list.append(button);
       });host.append(list);return;
     }
-    const url='/api/pearls/document?id='+encodeURIComponent(topic.id);
-    const download=document.createElement('a');download.className='cnl-pearls-word';download.textContent='Save Word file';
-    download.href=url;download.download=topic.id.split('/').pop();bar.append(download);
-    const paper=document.createElement('article');paper.className='cnl-pearls-document';
-    host.append(paper);cnlListHint(paper,'Opening note…');
-    const file=await fetch(url);if(!file.ok)throw new Error('Could not open this Pearl.');
-    const parser=new DocxPrototype(await file.blob());
-    // Pearls retain their authored hierarchy, spacing and colours.
-    parser.applyFixedPalette=()=>{};parser.applyCompactSpacing=()=>{};
-    await parser.init();const root=await parser.render();
-    if(request!==cnlPearlsNav.request)return;
-    paper.replaceChildren(root);
-    const headings=Array.from(root.querySelectorAll('[data-heading-level]'));
-    if(headings.length){
-      const outline=document.createElement('select');outline.className='cnl-pearls-outline';outline.setAttribute('aria-label','Jump to heading');
-      const placeholder=document.createElement('option');placeholder.textContent='Jump to heading';placeholder.value='';outline.append(placeholder);
-      headings.forEach((head,index)=>{
-        const option=document.createElement('option');option.value=String(index);
-        option.textContent=('  '.repeat(Math.max(0,Number(head.dataset.headingLevel)-1)))+head.textContent.trim();outline.append(option);
-      });
-      outline.addEventListener('change',()=>{if(outline.value!=='')headings[Number(outline.value)]?.scrollIntoView({block:'start'});});bar.append(outline);
-    }
-    page.scrollTop=0;
+    cnlOpenPearlsViewer(topic,subject);
+
   }catch(error){
     if(request!==cnlPearlsNav.request)return;
     cnlListHint(host,error.message||'Could not load Pearls.');
@@ -169,3 +133,82 @@ function cnlInstallPearls(){
   cnlSetTab=function(tab){original(tab);if(tab==='pearls')cnlPaintPearlsPage();};
 }
 """
+
+
+PEARLS_VIEWER_JS=r"""
+function cnlClosePearlsViewer(){
+  const frame=cnl$('#cnlPearlsViewerFrame');
+  if(frame)frame.remove();
+  cnlPearlsNav.topic='';
+  cnlPaintPearlsPage();
+}
+
+function cnlOpenPearlsViewer(topic,subject){
+  cnl$('#cnlPearlsViewerFrame')?.remove();
+  const frame=document.createElement('iframe');
+  frame.id='cnlPearlsViewerFrame';frame.title='Pearls viewer — '+topic.label;
+  const query=new URLSearchParams({id:topic.id,subject:subject.name,label:topic.label});
+  frame.src='/pearls/viewer?'+query;
+  document.body.append(frame);
+}
+
+window.addEventListener('message',event=>{
+  const frame=cnl$('#cnlPearlsViewerFrame');
+  if(event.origin!==location.origin||event.source!==frame?.contentWindow)return;
+  if(event.data?.type==='cnl-pearls-close'){
+    if(event.data.home===true){frame.remove();cnlPearlsNav.topic='';cnlHeaderGoHome();}
+    else cnlClosePearlsViewer();
+  }
+});
+
+async function cnlBootPearlsViewer(){
+  if(location.pathname!=='/pearls/viewer')return;
+  document.body.classList.add('cnl-pearls-viewer');
+  const loading=document.createElement('div');loading.className='cnl-pearls-loading';loading.textContent='Opening Pearl…';document.body.append(loading);
+  const close=(home=false)=>{
+    if(window.parent!==window)window.parent.postMessage({type:'cnl-pearls-close',home:home===true},location.origin);
+    else location.href='/';
+  };
+  // Capture at window level before the Notes copy's header handlers, so Back
+  // returns to Pearls without touching the main Notes reader's document or scope.
+  window.addEventListener('click',event=>{
+    if(!event.target.closest?.('#headerBackBtn,#headerHomeBtn'))return;
+    event.preventDefault();event.stopImmediatePropagation();close(!!event.target.closest('#headerHomeBtn'));
+  },true);
+  try{
+    await window.cnlPearlsLibraryBoot;
+    const params=new URLSearchParams(location.search),id=params.get('id')||'';
+    const response=await fetch('/api/pearls/document?id='+encodeURIComponent(id));
+    if(!response.ok)throw new Error('Could not open this Pearl.');
+    const name=id.split('/').pop(),subject=params.get('subject')||id.split('/')[0];
+    const label=params.get('label')||name.replace(/\.docx$/i,'');
+    const blob=new File([await response.blob()],name,{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+    const key='pearls:'+id;
+    const record={pendingKey:key,id:key,key,folderName:'Pearls · '+subject,displayName:label,fileName:name,
+      mimeType:blob.type,blob,file:blob,headings:[],serverPath:'/api/pearls/document?id='+encodeURIComponent(id),
+      serverRelativePath:'Pearls - '+subject+'/'+name,serverFresh:true};
+    pendingDocuments.push(record);
+    currentSubject=record.folderName;currentReaderDocKey=key;
+    await openPendingDocument(key);
+    setAppView('reader');renderReaderSidebar(record);
+    const back=cnl$('#headerBackBtn');if(back){back.hidden=false;back.disabled=false;back.title='Back to Pearls';back.setAttribute('aria-label','Back to Pearls');}
+    document.title=label+' — Pearls';
+    loading.remove();
+  }catch(error){
+    loading.textContent=error.message||'Could not open this Pearl.';
+    cnlStudyButton(loading,'Back to Pearls',close);
+  }
+}
+if(location.pathname==='/pearls/viewer'){
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cnlBootPearlsViewer,{once:true});
+  else setTimeout(cnlBootPearlsViewer,0);
+}
+"""
+
+
+def viewer_html(app_html: str) -> str:
+    """An isolated copy of the Notes viewer, with its own document and UI state."""
+    anchor='loadServerLibrary().catch(err=>{'
+    if app_html.count(anchor)!=1:
+        raise ValueError('Could not locate Notes library bootstrap for the Pearls viewer copy')
+    return app_html.replace(anchor,'window.cnlPearlsLibraryBoot = '+anchor,1)
