@@ -418,7 +418,10 @@ class Handler(BaseHTTPRequestHandler):
                 if target is None:
                     self._send_json(404, {'error': 'Pearl not found.'})
                 else:
-                    self._send_file(target, DOCX_MIME)
+                    try:
+                        self._send(200, pearls.word_document(target), DOCX_MIME)
+                    except ValueError as err:
+                        self._send_json(400, {'error': str(err)})
             elif route == "/api/posters":
                 self._serve_posters()
             elif route == "/api/h1-coverage":
@@ -485,7 +488,14 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self) -> None:  # noqa: N802
         parsed = urllib.parse.urlparse(self.path)
         try:
-            if parsed.path == "/api/poster":
+            if parsed.path == "/api/pearls/save-word":
+                body = self._read_json(16384)
+                if body is not None:
+                    try:
+                        self._send_json(200, pearls.save_word(self.app.data_root / 'Pearls',str(body.get('id') or '')))
+                    except (ValueError,OSError) as err:
+                        self._send_json(400, {'error': str(err)})
+            elif parsed.path == "/api/poster":
                 self._serve_poster_post()
             elif parsed.path == "/api/saved-quiz":
                 self._serve_saved_quiz_post()

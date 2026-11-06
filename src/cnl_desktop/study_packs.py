@@ -692,6 +692,14 @@ def _numbered_record_path(root: Path, row: dict, identity: str, existing: dict |
     for match in matches:
         if match.resolve().is_relative_to(root) and len(match.relative_to(root).parts) in (4, 5):
             return match
+    # General banks use readable filenames. Resolve by stored identity so edits
+    # preserve migrated paths and never create a second hashed copy.
+    if existing is None and 'questions' in row:
+        for match in root.glob('*/General/*/*.json'):
+            if match.resolve().is_relative_to(root):
+                payload = _read_json(match)
+                if isinstance(payload, dict) and _quiz_row_id(payload) == identity:
+                    return match
     subject = root / _quiz_component(row.get('folder') or 'Unfiled')
     if row.get('navigationGroup') == 'general':
         subject = subject / 'General'
@@ -705,6 +713,13 @@ def _numbered_record_path(root: Path, row: dict, identity: str, existing: dict |
         if not chapter_number:
             chapter_number = max((n for n in used if n), default=0) + 1
         chapter = subject / f'{int(chapter_number):02}. {chapter_label}'
+    if row.get('navigationGroup') == 'general':
+        destination = chapter / (_quiz_component(_quiz_label(row.get('headingText') or row.get('document') or 'Questions')) + '.json')
+        if destination.exists() and _quiz_row_id(_read_json(destination) or {}) != identity:
+            destination = chapter / (destination.stem + ' ' + digest[:8] + '.json')
+        if not destination.resolve().is_relative_to(root):
+            raise ValueError('Quiz chapter folder escaped Qbank.')
+        return destination
     topic_label = _quiz_component(row.get('headingText') or 'Untitled')
     topic = next((p for p in sorted(chapter.glob('*')) if p.is_dir()
                   and ((p / f'{digest}.json').is_file() or
@@ -743,8 +758,13 @@ def _read_quiz_records(study_root: Path) -> list[dict]:
         payload = _read_json(path)
         if isinstance(payload, dict) and _quiz_row_id(payload):
             parts = path.relative_to(root).parts
-            if len(parts) == 5 and parts[1] == 'General':
+            if len(parts) in (4, 5) and parts[1] == 'General':
                 payload['navigationGroup'] = 'general'
+                if len(parts) == 4:
+                    payload['chapterOrder'] = _quiz_number(parts[2]) or 1
+                    payload['topicOrder'] = payload.get('topicOrder') or 1
+                    rows.append(payload)
+                    continue
                 parts = (parts[0], *parts[2:])
             if len(parts) == 4:
                 payload['chapterOrder'] = _quiz_number(parts[1]) or 1
@@ -794,8 +814,9 @@ def migrate_saved_quizzes(study_root: Path) -> int:
         destinations = []
         for row in rows:
             destination = _quiz_record_path(study_root, row, existing)
-            row['chapterOrder'] = _quiz_number(destination.parent.parent.name) or 1
-            row['topicOrder'] = _quiz_number(destination.parent.name) or 1
+            flat_general = len(destination.relative_to(root).parts) == 4 and destination.relative_to(root).parts[1] == 'General'
+            row['chapterOrder'] = _quiz_number(destination.parent.name if flat_general else destination.parent.parent.name) or 1
+            row['topicOrder'] = (row.get('topicOrder') or 1) if flat_general else (_quiz_number(destination.parent.name) or 1)
             if not destination.is_file() or _read_json(destination) != row:
                 _write_json(destination, row)
             destinations.append((destination, row))
@@ -872,8 +893,9 @@ def upsert_saved_quiz(study_root: Path, row: dict) -> dict | None:
             'topicOrder': row.get('topicOrder'), 'navigationGroup': row.get('navigationGroup')})
         if 'General' == destination.relative_to(paths.quizzes_dir(Path(study_root).resolve().parent).resolve()).parts[1]:
             stored['navigationGroup'] = 'general'
-        stored['chapterOrder'] = _quiz_number(destination.parent.parent.name) or 1
-        stored['topicOrder'] = _quiz_number(destination.parent.name) or 1
+        flat_general = len(destination.relative_to(paths.quizzes_dir(Path(study_root).resolve().parent)).parts) == 4 and stored.get('navigationGroup') == 'general'
+        stored['chapterOrder'] = _quiz_number(destination.parent.name if flat_general else destination.parent.parent.name) or 1
+        stored['topicOrder'] = (row.get('topicOrder') or 1) if flat_general else (_quiz_number(destination.parent.name) or 1)
         _write_json(destination, stored)
         for source in (
             Path(study_root).resolve() / QUIZ_FILE,

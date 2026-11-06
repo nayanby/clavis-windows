@@ -3,9 +3,10 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {spawn}=require('node:child_process');
 const root=path.resolve(__dirname,'..'),work=path.join(root,'build','pearls-browser-qa');
 const packageRoot=path.join(root,'dist','Clinical Notes Library');
-const data=path.join(work,'data'),port=8976,debugPort=9227;
+const data=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'cnl-pearls-qa-')),port=8976,debugPort=9227;
 fs.mkdirSync(data,{recursive:true});
 fs.cpSync(path.join(root,'build','pearls-word'),path.join(data,'Pearls'),{recursive:true,filter:p=>!p.endsWith('.json')});
+fs.cpSync(path.join(root,'build','qbank-topic-notes'),path.join(data,'Pearls'),{recursive:true,filter:p=>fs.statSync(p).isDirectory()||p.endsWith('.html')});
 const app=spawn(path.join(packageRoot,'Clinical Notes Library.exe'),['--server-only','--port',String(port),'--data-dir',data],{cwd:packageRoot,windowsHide:true,stdio:'ignore'});
 let chrome,ws;
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
@@ -14,7 +15,7 @@ async function until(run,label){for(let i=0;i<160;i++){try{const value=await run
  await until(async()=> (await fetch(`http://127.0.0.1:${port}/api/pearls`)).ok,'app startup');
  const catalog=await (await fetch(`http://127.0.0.1:${port}/api/pearls`)).json();
  assert.equal(catalog.subjects.length,4);assert.equal(catalog.subjects.flatMap(s=>s.topics).length,42);
- const first=catalog.subjects[0].topics[0];
+ const first=catalog.subjects[0].topics[0];assert.equal(first.format,'html');
  const word=await fetch(`http://127.0.0.1:${port}/api/pearls/document?id=${encodeURIComponent(first.id)}`);
  assert.ok(word.headers.get('content-type').includes('wordprocessingml'));
  assert.equal(Buffer.from(await word.arrayBuffer()).subarray(0,2).toString(),'PK');
@@ -32,11 +33,32 @@ async function until(run,label){for(let i=0;i<160;i++){try{const value=await run
  const screenshot=async name=>{const shot=await send('Page.captureScreenshot',{format:'png'});fs.writeFileSync(path.join(work,name+'.png'),Buffer.from(shot.data,'base64'));};
  await send('Runtime.enable');await send('Page.enable');await send('Page.navigate',{url:`http://127.0.0.1:${port}/`});
  await until(()=>evaluate("!!document.querySelector('#cnlTabBar [data-cnl-tab=pearls]')"),'Pearls tab');
+ const downloads='C:/Users/ANT-PC/Downloads';let banksChecked=0,questionsChecked=0;
+ for(const file of fs.readdirSync(downloads).filter(name=>/^(?:NEET_SS_(?:Cardiology|Neurology|Nephrology)|Neurology_Chapter_02)/.test(name)&&/\.html$/i.test(name))){
+  const expected=file.match(/_(\d+)_(?:Interactive|MCQs|REPAIRED|WORKING|Balanced|Exam|REWRITTEN)/i);if(!expected)continue;
+  const html=fs.readFileSync(path.join(downloads,file),'utf8').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,'');
+  const rows=await evaluate('window.cnlParseQbankHtml('+JSON.stringify(html)+')');
+  assert.equal(rows.length,Number(expected[1]),'Extract all questions: '+file);
+  assert.ok(rows.every(q=>q.correctIndex>=0&&!q.answerReviewRequired),'Extract every correct answer: '+file);
+  assert.ok(rows.every(q=>q.explanationHtml&&q.explanation),'Extract every explanation: '+file);
+  banksChecked++;questionsChecked+=rows.length;
+ }
+ assert.ok(banksChecked>=20,'Real interactive banks were checked');
+ console.log(`PASS: ${banksChecked} real HTML banks / ${questionsChecked} questions, all answers and explanations extracted without executing source scripts.`);
+ await evaluate("document.querySelector('#cnlTabBar [data-cnl-tab=quiz]').click()");
+ await until(()=>evaluate("Array.from(document.querySelectorAll('button')).some(b=>b.textContent==='Convert to JSON')"),'Qbank converter button');
+ await evaluate(`window.pywebview={api:{choose_qbank_html:async()=>({files:[{name:'Sample.html',token:'test',html:'<p>Q1. Choose?</p><p>A. First</p><p>B. Second</p><p>Answer: B</p><p>Explanation: Reason.</p>'}]}),save_qbank_json:async(token,questions)=>{window.converterSaved={token,questions};return {path:'Sample/Sample.json',count:questions.length,review:0}}}};
+ Array.from(document.querySelectorAll('button')).find(b=>b.textContent==='Convert to JSON').click();`);
+ await until(()=>evaluate("document.querySelector('dialog[open]')?.textContent.includes('Saved 1 of 1')"),'native conversion result');
+ assert.equal(await evaluate('window.converterSaved.questions[0].correctIndex'),1);
+ assert.ok(await evaluate("document.querySelector('dialog[open]').textContent.includes('Sample/Sample.json')"));
+ await evaluate("document.querySelector('dialog[open] button').click()");
  await evaluate("document.querySelector('#cnlTabBar [data-cnl-tab=pearls]').click()");
  await until(()=>evaluate("document.querySelectorAll('#cnlPearlsPage .subject-card').length===4"),'subjects');
  await screenshot('subjects');
  await evaluate("Array.from(document.querySelectorAll('#cnlPearlsPage .subject-card')).find(b=>b.textContent.includes('Nephrology')).click()");
  await until(()=>evaluate("document.querySelectorAll('#cnlPearlsPage .cnl-pearls-topic').length===10"),'topics');
+ assert.equal(await evaluate("document.querySelectorAll('#cnlPearlsPage .cnl-pearls-format').length"),10);
  await screenshot('topics');
  await evaluate("Array.from(document.querySelectorAll('#cnlPearlsPage .cnl-pearls-topic')).find(b=>b.textContent.includes('Acid Base')).click()");
  await until(()=>evaluate("!!document.querySelector('#cnlPearlsViewerFrame')?.contentDocument?.querySelector('body.view-reader #paper .doc-root')"),'separate Pearls reader');
@@ -46,6 +68,13 @@ async function until(run,label){for(let i=0;i<160;i++){try{const value=await run
  assert.ok(await inReader("return document.querySelectorAll('#paper table').length>0"),'Native Notes tables render');
  assert.ok(await inReader("return !!document.querySelector('#cnlReaderBottomPill')"),'Notes bottom pill is duplicated');
  assert.ok(await inReader("return !!document.querySelector('#cnlTypeBtn')"),'Notes typography controls are duplicated');
+ assert.ok(await inReader("return !!document.querySelector('#cnlPearlsSaveWord')"),'HTML reader offers Save as Word');
+ await inReader("document.querySelector('#cnlPearlsSaveWord').click()");
+ await until(()=>inReader("return !document.querySelector('#cnlPearlsSaveWord').disabled"),'Save Word completes');
+ const savedHtmlId='Nephrology/Acid Base Disorders.html';
+ const saved=await fetch(`http://127.0.0.1:${port}/api/pearls/save-word`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:savedHtmlId})});
+ assert.equal(saved.status,200,await saved.text());
+ assert.equal(Buffer.from(fs.readFileSync(path.join(data,'Pearls','Nephrology','Acid Base Disorders.docx'))).subarray(0,2).toString(),'PK');
  await screenshot('acid-base');
  await inReader("document.querySelector('#cnlReaderBottomPill button[aria-label=\"Next heading\"]').click()");
  await inReader("document.querySelector('#cnlOutlineBtn').click()");
@@ -62,5 +91,5 @@ async function until(run,label){for(let i=0;i<160;i++){try{const value=await run
  await inReader("document.querySelector('#headerHomeBtn').click()");
  await until(()=>evaluate("!document.querySelector('#cnlPearlsViewerFrame')&&document.body.dataset.cnlTab==='home'"),'Home returns to app Home');
  assert.equal(errors.length,0,'Browser has no uncaught exceptions: '+errors.join('; '));
- console.log('PASS: 4 subjects / 42 title-free Word topics; isolated Pearls viewer duplicates Notes toolbar, outline and bottom pill; heading navigation and Back; main Notes state preserved; download and containment.');
+ console.log('PASS: 4 subjects / 42 deduplicated HTML and Word topics; HTML tags and Save as Word; isolated Pearls viewer duplicates Notes toolbar, outline and bottom pill; heading navigation and Back; main Notes state preserved; download and containment.');
 })().catch(err=>{console.error(err);process.exitCode=1;}).finally(()=>{ws?.close();chrome?.kill();app.kill();});

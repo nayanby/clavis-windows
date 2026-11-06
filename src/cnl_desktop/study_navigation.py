@@ -666,6 +666,7 @@ const cnlStudyQuiz = {
   actions(host, state) {
     const nav = state.nav;
     if (state.level === 0) {
+      cnlStudyButton(host, 'Convert to JSON', () => window.cnlConvertQbankHtml());
       cnlStudyButton(host, 'Import HTML Qbank', () => window.cnlImportQbankHtml(() => cnlStudyRender(cnlStudyQuiz)));
       cnlStudyButton(host, 'Create a quiz from a topic', async () => {
         if (!cnlStudyHasKey(cnlStudyQuiz)) return;
