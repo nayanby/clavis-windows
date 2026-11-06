@@ -85,7 +85,11 @@ class Converter:
             pp=OxmlElement('w:pPr');indent=OxmlElement('w:ind')
             indent.set(qn('w:left'),str(300+depth*260));indent.set(qn('w:hanging'),'220')
             pp.append(indent);lvl.append(pp);abstract.append(lvl)
-        numbering=self.doc.part.numbering_part.element;numbering.append(abstract)
+        numbering=self.doc.part.numbering_part.element
+        # OOXML requires every abstractNum before every concrete num. Word can
+        # silently substitute its default bullet format when they are interleaved.
+        first_num=numbering.find(qn('w:num'))
+        numbering.insert(list(numbering).index(first_num) if first_num is not None else len(numbering),abstract)
         num=OxmlElement('w:num');num.set(qn('w:numId'),str(self.num))
         aid=OxmlElement('w:abstractNumId');aid.set(qn('w:val'),str(self.num));num.append(aid)
         override=OxmlElement('w:lvlOverride');override.set(qn('w:ilvl'),'0')
