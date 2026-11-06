@@ -113,6 +113,8 @@ body[data-cnl-tab="pearls"] #homeScreen{display:none!important}
 .cnl-pearls-format{display:inline-block;padding:3px 7px;border-radius:6px;background:#e0e9f7;color:#28467c;font:700 11px/1.2 system-ui,sans-serif}
 #cnlPearlsViewerFrame{position:fixed;inset:0;width:100vw;height:100vh;border:0;z-index:2147480000;background:#f5f4fa}
 body.cnl-pearls-viewer #cnlTabBar{display:none!important}
+body.cnl-pearls-viewer #paper .cnl-pearl-card{display:block;background:#fff;border:1px solid #d8dfef;border-radius:14px;padding:18px 20px;margin:0 0 18px;min-width:0;box-sizing:border-box}
+body.cnl-pearls-viewer #paper .cnl-pearl-card>.doc-block.h1:first-child{margin-top:0!important}
 .cnl-pearls-loading{position:fixed;inset:0;z-index:2147480001;display:grid;place-content:center;gap:12px;background:#f5f4fa;color:#292664;font:18px "Averia Serif Libre",serif}
 
 """
@@ -196,6 +198,20 @@ function cnlInstallPearls(){
 
 
 PEARLS_VIEWER_JS=r"""
+window.cnlBuildPearlCards=function(root){
+  if(!document.body.classList.contains('cnl-pearls-viewer')||!root||root.querySelector(':scope > .cnl-pearl-card'))return;
+  let card=null;
+  for(const child of [...root.children]){
+    if(child.matches('.cnl-ink-wash,.cnl-ink-pen,.cnl-layout-grip'))continue;
+    const head=child.matches('.doc-p.h1')?child:child.querySelector('.doc-p.h1');
+    if(head){
+      card=document.createElement('section');card.className='cnl-pearl-card';
+      card.setAttribute('aria-label',head.dataset.headingText||head.textContent.trim());
+      root.insertBefore(card,child);
+    }
+    if(card)card.append(child);
+  }
+};
 function cnlClosePearlsViewer(){
   const frame=cnl$('#cnlPearlsViewerFrame');
   if(frame)frame.remove();

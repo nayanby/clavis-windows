@@ -63,6 +63,15 @@ aiPersistCurrentFlashcardSession=async function(){
 """
 
 STUDY_NAV_JS = r"""
+cnlOpenSavedQuiz=function(row,options={}){
+  if(!row?.questions?.length)return;
+  const mount=cnlStudyMountFor('cnlQuizPage');
+  mount?.querySelector(':scope > .folder-btn')?.remove();
+  cnlMountStudyResult(mount);window.aiSetInterfaceMode?.('quiz');
+  window.cnlRenderSavedQbank(row,{...options,onExit:options.onExit||(()=>{
+    cnlRestoreStudyResult();cnlStudyMountFor('cnlQuizPage')?.replaceChildren();cnlStudyRender(cnlStudyQuiz);
+  })});
+};
 const cnlStudyStyle=document.createElement('style');
 cnlStudyStyle.textContent=`
 .cnl-study-setup{display:grid;gap:12px;margin:0 0 14px}
@@ -144,7 +153,9 @@ async function cnlStudySaved(kind) {
       push(entry.folderName || folder, entry.documentName, entry.scopeLabel, entry)));
     return { rows };
   }
-  const pack = await cnlFetchStudyPack('quizzes');
+  let pack;
+  try{[pack]=await Promise.all([cnlFetchStudyPack('quizzes'),window.cnlQbank.load()]);}
+  catch(error){cnlToast(error.message);return null;}
   if (!pack) return null;
   (pack.quizzes || []).forEach(row => {
     if ((row.questions || []).length) push(row.folder, row.document, row.headingText, row);
@@ -359,7 +370,11 @@ async function cnlStudyRender(spec) {
     back.title = 'Back';
     back.textContent = '\u2190';
     back.addEventListener('click', () => {
-      if (level === 2) nav.chapter = ''; else nav.subject = '';
+      if(spec.nav==='quiz'&&nav.bookmarks){
+        if(nav.bookmarks.bank){nav.bookmarks.bank='';nav.bookmarks.bankLabel='';}
+        else if(nav.bookmarks.chapter){nav.bookmarks.chapter='';nav.bookmarks.chapterLabel='';}
+        else nav.bookmarks=null;
+      }else if (level === 2) nav.chapter = ''; else nav.subject = '';
       cnlStudyRender(spec);
     });
     bar.appendChild(back);
@@ -371,7 +386,13 @@ async function cnlStudyRender(spec) {
     setup.appendChild(bar);
   }
 
-  if (spec.fields) {
+  if(spec.nav==='quiz'&&nav.bookmarks){
+    const path=setup.querySelector('.cnl-study-path');
+    if(path)path.textContent=[spec.root,nav.subject,'Bookmarks',nav.bookmarks.chapterLabel,nav.bookmarks.bankLabel].filter(Boolean).join(' › ');
+    cnlStudyPaintBookmarks(list,group,spec);return;
+  }
+
+  if (spec.fields && !(spec.nav==='quiz'&&chapter?.isGeneral)) {
     const fields = document.createElement('div');
     fields.className = 'cnl-study-fields';
     spec.fields(fields, nav);
@@ -426,6 +447,7 @@ function cnlStudyPaintSubjects(host, tree, spec) {
     card.addEventListener('click', () => {
       const nav = cnlStudyNav[spec.nav];
       nav.subject = group.name;
+      if(spec.nav==='quiz')nav.bookmarks=null;
       nav.chapter = '';
       nav.chapterLabel = '';
       cnlStudyRender(spec);
@@ -436,6 +458,12 @@ function cnlStudyPaintSubjects(host, tree, spec) {
 }
 
 function cnlStudyPaintChapters(host, group, spec) {
+  if(spec.nav==='quiz'){
+    const modules=cnlStudyQuizModules(group),count=modules.reduce((n,{row})=>n+window.cnlQbank.marked(row.item).length,0);
+    const tile=cnlStudyRow('★ Bookmarks',cnlCount(count,'bookmarked question'),()=>{
+      cnlStudyNav.quiz.bookmarks={chapter:'',bank:''};cnlStudyRender(spec);
+    });tile.classList.add('cnl-qbank-bookmarks-tile');host.append(tile);
+  }
   if (!group.chapters.length) {
     cnlListHint(host, 'No notes in this subject yet.');
     return;
@@ -507,8 +535,7 @@ function cnlStudyPaintQuizModules(host, group, spec) {
     // Ordering comes from numbered chapter/topic folders; the displayed module
     // number is sequential even when a note has more than one saved bank.
     cnlLibraryNumberRow(card,index+1,name);
-    card.addEventListener('click', () =>
-      cnlStudyOpen(spec, () => cnlOpenSavedQuiz(row.item)));
+    window.cnlQbank.decorate(card,row.item,options=>cnlStudyOpen(spec,()=>cnlOpenSavedQuiz(row.item,options)),()=>cnlStudyRender(spec));
     grid.appendChild(card);
   });
   host.appendChild(grid);
@@ -537,6 +564,42 @@ function cnlStudyPaintHeadings(host, chapter, spec) {
     const match=label?.textContent.match(/^\s*(\d+)[. _-]+/);
     cnlLibraryNumberRow(row,match ? Number(match[1]) : index + 1,label);
     host.appendChild(row);
+  });
+}
+
+function cnlStudyPaintBookmarks(host, group, spec){
+  const nav=cnlStudyNav.quiz.bookmarks,Q=window.cnlQbank,chapters=new Map();
+  cnlStudyQuizModules(group).forEach(({row})=>{
+    const indices=Q.marked(row.item);if(!indices.length)return;
+    const key=JSON.stringify([row.item.navigationGroup||'legacy',row.item.document||'']);
+    if(!chapters.has(key))chapters.set(key,{key,label:row.item.document||row.label,banks:[]});
+    chapters.get(key).banks.push({row,indices});
+  });
+  if(!chapters.size){cnlListHint(host,'No bookmarked questions in this subject yet.');return;}
+  const selected=chapters.get(nav.chapter);
+  if(nav.chapter&&!selected){nav.chapter='';nav.chapterLabel='';nav.bank='';nav.bankLabel='';cnlStudyRender(spec);return;}
+  if(!selected){
+    chapters.forEach(chapter=>host.append(cnlStudyRow(chapter.label,
+      cnlCount(chapter.banks.reduce((n,bank)=>n+bank.indices.length,0),'bookmarked question'),()=>{
+        nav.chapter=chapter.key;nav.chapterLabel=chapter.label;cnlStudyRender(spec);
+      })));
+    return;
+  }
+  const bank=selected.banks.find(bank=>bank.row.key===nav.bank);
+  if(nav.bank&&!bank){nav.bank='';nav.bankLabel='';cnlStudyRender(spec);return;}
+  if(!bank){
+    selected.banks.forEach(bank=>host.append(cnlStudyRow(bank.row.label,cnlCount(bank.indices.length,'bookmarked question'),()=>{
+      nav.bank=bank.row.key;nav.bankLabel=bank.row.label;cnlStudyRender(spec);
+    })));
+    return;
+  }
+  const attempt=Q.attempt(bank.row.item);
+  bank.indices.forEach(index=>{
+    const question=bank.row.item.questions[index],answer=attempt?.answers[index];
+    const detail=answer==null?'Your answer: Not answered':answer===-1?'Reviewed as recall':'Your answer: '+String.fromCharCode(65+answer)+'. '+question.options[answer];
+    host.append(cnlStudyRow((index+1)+'. '+question.question,detail,()=>{
+      cnlStudyOpen(spec,()=>cnlOpenSavedQuiz(bank.row.item,{review:true,bookmarksOnly:true,questionIndices:[index]}));
+    }));
   });
 }
 
@@ -649,19 +712,20 @@ const cnlStudyQuiz = {
   load: () => cnlStudySaved('quizzes'),
   options: () => ({ count: cnlStudyNav.quiz.count, depth: cnlStudyNav.quiz.depth }),
   fields(host, nav) {
-    cnlStudyField(host, 'Number of questions', [['5', '5'], ['8', '8'], ['12', '12'], ['20', '20']],
+    cnlStudyField(host, 'Questions per new quiz', [['5', '5'], ['8', '8'], ['12', '12'], ['20', '20']],
       nav.count, value => { nav.count = value; });
-    cnlStudyField(host, 'Depth', [['basic', 'Basic'], ['standard', 'Standard'],
+    cnlStudyField(host, 'New quiz depth', [['basic', 'Basic'], ['standard', 'Standard'],
       ['advanced', 'Advanced'], ['ini_ss', 'INI-SS']], nav.depth, value => { nav.depth = value; });
   },
   savedRow(chapter, label, row) {
     const questions = row.item.questions || [];
     const exams = Array.from(new Set(questions.map(question =>
       String(question.exam || row.item.exam || '').trim()))).filter(Boolean);
-    return cnlStudyRow(label,
-      questions.length + ' question' + (questions.length === 1 ? '' : 's')
-        + (exams.length ? ' \u00b7 ' + exams.join(' / ') : ''),
-      () => cnlStudyOpen(cnlStudyQuiz, () => cnlOpenSavedQuiz(row.item)));
+    const tile=document.createElement('article');tile.className='cnl-study-row';
+    const content=document.createElement('div'),name=document.createElement('b'),detail=document.createElement('small');
+    name.textContent=label;detail.textContent=questions.length+' questions'+(exams.length?' · '+exams.join(' / '):'');content.append(name,detail);tile.append(content);
+    window.cnlQbank.decorate(tile,row.item,options=>cnlStudyOpen(cnlStudyQuiz,()=>cnlOpenSavedQuiz(row.item,options)),()=>cnlStudyRender(cnlStudyQuiz));
+    return tile;
   },
   actions(host, state) {
     const nav = state.nav;
@@ -677,10 +741,7 @@ const cnlStudyQuiz = {
         button.textContent = 'Creating quiz\u2026';
         try {
           const row = await window.cnlGenerateTopicQuiz(keyword, nav.count, nav.depth);
-          cnlStudyOpen(cnlStudyQuiz, () => {
-            window.aiSetInterfaceMode?.('quiz');
-            window.aiRenderQuiz(row);
-          });
+          cnlStudyOpen(cnlStudyQuiz, () => cnlOpenSavedQuiz(row));
         } catch (err) {
           cnlToast(err.message || 'Could not create that quiz.');
         } finally {
@@ -701,17 +762,6 @@ const cnlStudyQuiz = {
       return;
     }
     if (state.chapter.isGeneral) return;
-    const questions = cnlStudyChapterQuestions(state.chapter);
-    if (questions.length) {
-      cnlStudyButton(host, 'Solve ' + Math.min(questions.length, Number(nav.count) || 8)
-        + ' saved questions from this chapter', () => cnlStudyOpen(cnlStudyQuiz, () => {
-          window.aiSetInterfaceMode?.('quiz');
-          window.aiRenderQuiz({
-            questions: cnlStudySample(questions, nav.count),
-            studyLabel: nav.subject + ' \u00b7 ' + nav.chapterLabel
-          });
-        }), true);
-    }
     if (state.chapter.record) {
       cnlStudyButton(host, 'Write a quiz for every heading in this note', () => cnlStudyRunNotes(
         cnlStudyQuiz,

@@ -29,6 +29,7 @@ from . import (
     listen,
     paper,
     pearls,
+    qbank_progress,
     paths,
     pdf_engine,
     posters,
@@ -407,6 +408,8 @@ class Handler(BaseHTTPRequestHandler):
                 self._serve_library()
             elif route == "/api/pearls":
                 self._send_json(200, pearls.catalog(self.app.data_root))
+            elif route == "/api/qbank-progress":
+                self._send_json(200, qbank_progress.read(self.app.data_root))
             elif route == "/pearls/viewer":
                 target = pearls.resolve(self.app.data_root / 'Pearls', (query.get('id') or [''])[0])
                 if target is None:
@@ -488,7 +491,12 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self) -> None:  # noqa: N802
         parsed = urllib.parse.urlparse(self.path)
         try:
-            if parsed.path == "/api/pearls/save-word":
+            if parsed.path == "/api/qbank-progress":
+                body=self._read_json(1024*1024)
+                if body is not None:
+                    try:self._send_json(200,qbank_progress.update(self.app.data_root,body))
+                    except (ValueError,OSError) as err:self._send_json(400,{'error':str(err)})
+            elif parsed.path == "/api/pearls/save-word":
                 body = self._read_json(16384)
                 if body is not None:
                     try:

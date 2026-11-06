@@ -19,6 +19,33 @@ from .pearls import PEARLS_CSS, PEARLS_JS, PEARLS_VIEWER_JS
 from .study_editor import STUDY_EDITOR_JS
 from .quiz_generation import QUIZ_GENERATION_JS, QUIZ_EXPLANATION_SCHEMA_JS, QUIZ_REQUIREMENTS
 
+# Keep Pearls card behavior isolated from the ordinary Notes section view.
+def _saved_viewer_patch(anchor: str, replacement: str) -> None:
+    global SAVE_JS
+    if SAVE_JS.count(anchor)!=1:
+        raise ValueError('Could not locate the Notes viewer hook for Pearls cards.')
+    SAVE_JS=SAVE_JS.replace(anchor,replacement,1)
+
+_saved_viewer_patch("    try { cnlSectionPaper(cnl$('#paper')); } catch (_) {}",
+    "    try { cnlSectionPaper(cnl$('#paper')); } catch (_) {}\n"
+    "    try { window.cnlBuildPearlCards?.(root); } catch (_) {}")
+_saved_viewer_patch('    const headings = headingElements(root), index = headings.indexOf(node);',
+    '''    const headings = headingElements(root), index = headings.indexOf(node);
+    if(document.body.classList.contains('cnl-pearls-viewer')){
+      window.cnlBuildPearlCards?.(root);
+      window.cnlCurrentHeadingIndex=index;
+      activeSectionH1Index=containingH1HeadingIndex(index,root);
+      selected=node;renderOutline();window.cnlSeekReaderHeading(node);
+      return true;
+    }''')
+_saved_viewer_patch("    const rows = nodes.slice(nodes.indexOf(heads[first]),end).filter(el => el === heads[first] || el.matches('.h2,.h3,.boldside1'));",
+    "    const rows = document.body.classList.contains('cnl-pearls-viewer')\n"
+    "      ? nodes.filter(el=>el.matches('.h1,.h2,.h3,.boldside1'))\n"
+    "      : nodes.slice(nodes.indexOf(heads[first]),end).filter(el => el === heads[first] || el.matches('.h2,.h3,.boldside1'));")
+_saved_viewer_patch("button.dataset.scopeDepth = node === heads[first] ? '0'", "button.dataset.scopeDepth = node === heads[first] || node.matches('.h1') ? '0'")
+_saved_viewer_patch('Subjects, then chapters, then the Heading 1s inside one - the way Deep Dive lists them. Open a heading to take its quiz or to write one.',
+    'Choose a subject and Qbank. Pause to save progress, submit for a result, or revisit bookmarked questions.')
+
 SAVE_JS = SAVE_JS.replace("cnlInstallHome();\ncnlInstallTopbarHoverReveal();",
                           STUDY_NAV_JS + PEARLS_JS + PEARLS_VIEWER_JS + "\ncnlInstallHome();\ncnlInstallPearls();\ncnlInstallTopbarHoverReveal();", 1)
 from .view_modes import VIEW_MODES_CSS
@@ -2819,7 +2846,7 @@ _SAVE_SPLICE = (
     "    await aiGenerate('quiz');\n"
     "  });\n"
     "\n"
-    + QUIZ_GENERATION_JS + "\n" + STUDY_BRIDGE_JS + "\n" + STUDY_EDITOR_JS + "\n"
+    + QUIZ_GENERATION_JS + "\n" + STUDY_BRIDGE_JS + "\n" + STUDY_EDITOR_JS + "\nwindow.cnlAddSavedQuizEditor=cnlAddQuizEditor;\n"
     "})();\n"
     "\n" + SAVE_JS + "\n"
     "})();\n"
@@ -3098,6 +3125,7 @@ def transform_html(html: str) -> str:
             + (paths.resource_root() / "vendor" / "qbank-html-import.js").read_text(encoding="utf-8")
             + "</script><script>"
             + (paths.resource_root() / "vendor" / "qbank-explanations.js").read_text(encoding="utf-8")
+            + (paths.resource_root() / "vendor" / "qbank-progress.js").read_text(encoding="utf-8")
             + "</script><script>"
             + (paths.resource_root() / "vendor" / "reader-listen.js").read_text(encoding="utf-8")
             + "</script></body>" + after)
