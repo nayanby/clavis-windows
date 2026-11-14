@@ -136,6 +136,15 @@ def install(source,data=DATA):
     path=ROOT/'progress.json';plan=json.loads(path.read_text(encoding='utf-8'))
     row=next(x for x in plan['chapters'] if x['subject']==bank['folder'] and x['document']==bank['document'])
     row.update(status='installed_verified',installedSha256=hashlib.sha256(dest.read_bytes()).hexdigest())
+    # Reconcile completed banks against runtime readback, including the initial chapter.
+    for other in plan['chapters']:
+        sourcefile=ROOT/other.get('file','__pending__')
+        if sourcefile.is_file():
+            sourcebank=json.loads(sourcefile.read_text(encoding='utf-8'))
+            matches=[x for x in loaded if study_packs._quiz_row_id(x)==study_packs._quiz_row_id(sourcebank)]
+            if len(matches)==1 and matches[0]['questions']==sourcebank['questions']:other['status']='installed_verified'
+    pending=next((x for x in plan['chapters'] if x['status']=='pending'),None)
+    plan['currentChapter']=(pending['subject']+' '+pending['document']) if pending else 'All planned chapters installed'
     path.write_text(json.dumps(plan,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(dict(installed=str(dest),preservedOtherBanks=len(before)-bool(previous),**report),indent=2))
 

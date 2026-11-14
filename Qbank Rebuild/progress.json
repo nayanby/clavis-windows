@@ -16,13 +16,13 @@
   "defaultQuestions": 30,
   "broadChapterQuestions": 40,
   "selectionPolicy": "Use canonical numbered sets. Exclude older overlapping Endocrine/GI sets, duplicate Biostatistics folder and unnamed placeholders. Oncology currently has one source chapter (Basics); expand its coverage explicitly if needed.",
-  "currentChapter": "Neurology 02. Cerebrovascular Diseases",
+  "currentChapter": "Neurology 04. Headache Disorders & Cranial Neuralgias",
   "chapters": [
     {
       "subject": "Neurology",
       "chapter": 1,
       "document": "01. Neuroanatomy, Clinical Localization & Neurological Examination",
-      "status": "authored_validated",
+      "status": "installed_verified",
       "file": "Neurology/01. Neuroanatomy, Clinical Localization & Neurological Examination.json",
       "validation": {
         "questions": 30,
@@ -69,7 +69,25 @@
       "subject": "Neurology",
       "chapter": 3,
       "document": "03. Epilepsy & Status Epilepticus",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/03. Epilepsy & Status Epilepticus.json",
+      "validation": {
+        "questions": 40,
+        "answerDistribution": {
+          "A": 10,
+          "B": 10,
+          "C": 10,
+          "D": 10
+        },
+        "minimumExplanationWords": 225,
+        "distractorRationales": 120,
+        "questionStyles": {
+          "clinical_scenario": 28,
+          "direct": 12
+        },
+        "status": "passed"
+      },
+      "installedSha256": "42c2ff2141d644f5808f062b9ed9d2778919c28acd57ac3b71c7250ae736d563"
     },
     {
       "subject": "Neurology",
