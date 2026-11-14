@@ -5,14 +5,11 @@ from copy import deepcopy
 import json
 from lxml import etree as E
 from docx import Document
+from docx.opc.packuri import PackURI
 
 SOURCE = Path(r'C:\Users\ANT-PC\OneDrive\Cortex Windows\data\files\Rheumatology')
 OUT = Path(__file__).resolve().parents[1] / 'build/rheumatology-arranged'
 W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'
-files = sorted(SOURCE.glob('*.docx'))
-assert len(files) == 5
-packages = [dict((n, z.read(n)) for n in z.namelist()) for p in files for z in [ZipFile(p)]]
-bodies = [E.fromstring(p['word/document.xml']).find(f'{{{W}}}body') for p in packages]
 specs = [
  ('01. Autoimmunity, Immunological Tests, Autoinflammatory Diseases & Immunodeficiency', [(2,0,867),(1,573,870),(3,0,70)]),
  ('02. Rheumatoid Arthritis', [(0,0,361)]),
@@ -48,6 +45,11 @@ def write(path, slices):
   for name,data in package.items(): z.writestr(name,data)
 
 def main():
+ global files,packages,bodies
+ files = sorted(SOURCE.glob('*.docx'))
+ assert len(files) == 5
+ packages = [dict((n, z.read(n)) for n in z.namelist()) for p in files for z in [ZipFile(p)]]
+ bodies = [E.fromstring(p['word/document.xml']).find(f'{{{W}}}body') for p in packages]
  OUT.mkdir(parents=True,exist_ok=True)
  coverage=[[] for _ in files]
  report=[]
@@ -67,9 +69,15 @@ def main():
 
 def merge_parts(parts, target):
  doc=Document(parts/'0.docx')
- for index in (1,2):
+ for index in range(1,len(list(parts.glob('*.docx')))):
   other=Document(parts/f'{index}.docx')
   prefix=f'import{index}_'
+  # Imported relationship graphs must not reuse another source's media names.
+  for part in other.part.package.parts:
+   name=str(part.partname)
+   if '/media/' in name or '/embeddings/' in name:
+    folder,leaf=name.rsplit('/',1)
+    part._partname=PackURI(folder+'/'+prefix+leaf)
   stylemap={s.style_id:prefix+s.style_id for s in other.styles}
   for style in other.styles:
    node=deepcopy(style.element)
