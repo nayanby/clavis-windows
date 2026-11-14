@@ -1,0 +1,777 @@
+{
+  "subjectOrder": [
+    "Neurology",
+    "Cardiology",
+    "Rheumatology",
+    "Endocrine",
+    "Nephrology",
+    "Critical Care",
+    "Infectious disease",
+    "GI & pancreas",
+    "Liver",
+    "Oncology",
+    "Research Methodology & Biostatistics"
+  ],
+  "delivery": "JSON only; one chapter at a time",
+  "defaultQuestions": 30,
+  "broadChapterQuestions": 40,
+  "selectionPolicy": "Use canonical numbered sets. Exclude older overlapping Endocrine/GI sets, duplicate Biostatistics folder and unnamed placeholders. Oncology currently has one source chapter (Basics); expand its coverage explicitly if needed.",
+  "currentChapter": "Neurology 02. Cerebrovascular Diseases",
+  "chapters": [
+    {
+      "subject": "Neurology",
+      "chapter": 1,
+      "document": "01. Neuroanatomy, Clinical Localization & Neurological Examination",
+      "status": "authored_validated",
+      "file": "Neurology/01. Neuroanatomy, Clinical Localization & Neurological Examination.json",
+      "validation": {
+        "questions": 30,
+        "answerDistribution": {
+          "A": 8,
+          "B": 8,
+          "C": 7,
+          "D": 7
+        },
+        "minimumExplanationWords": 211,
+        "distractorRationales": 90,
+        "questionStyles": {
+          "clinical_scenario": 25,
+          "direct": 5
+        },
+        "status": "passed"
+      }
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 2,
+      "document": "02. Cerebrovascular Diseases",
+      "status": "installed_verified",
+      "file": "Neurology/02. Cerebrovascular Diseases.json",
+      "validation": {
+        "questions": 40,
+        "answerDistribution": {
+          "A": 10,
+          "B": 10,
+          "C": 10,
+          "D": 10
+        },
+        "minimumExplanationWords": 227,
+        "distractorRationales": 120,
+        "questionStyles": {
+          "clinical_scenario": 37,
+          "direct": 3
+        },
+        "status": "passed"
+      },
+      "installedSha256": "02188de3d4b93a2200233390b5740a23bc3efbcc1e9f02437457b5e0cef217da"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 3,
+      "document": "03. Epilepsy & Status Epilepticus",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 4,
+      "document": "04. Headache Disorders & Cranial Neuralgias",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 5,
+      "document": "05. Central Nervous System Infections",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 6,
+      "document": "06. Multiple Sclerosis & Other CNS Demyelinating Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 7,
+      "document": "07. Movement Disorders & Cerebellar Ataxias",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 8,
+      "document": "08. Dementia & Cognitive Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 9,
+      "document": "09. Peripheral Neuropathies & Polyradiculoneuropathies",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 10,
+      "document": "10. Neuromuscular Junction Disorders & Muscle Diseases",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 11,
+      "document": "11. Spinal Cord Disorders, Myelopathy & Cauda Equina Syndromes",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 12,
+      "document": "12. Autoimmune, Paraneoplastic & Systemic Neurological Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 13,
+      "document": "13. Neuro-oncology, Intracranial Hypertension & Neurogenetic Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Neurology",
+      "chapter": 14,
+      "document": "14. Neurocritical Care, Coma, Brain Death & Miscellaneous Neurology",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 1,
+      "document": "Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 2,
+      "document": "Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 3,
+      "document": "Chapter_03_Valvular_Heart_Diseases",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 4,
+      "document": "Chapter_04_Heart_Failure_and_Cardiogenic_Shock",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 5,
+      "document": "Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 6,
+      "document": "Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 7,
+      "document": "Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 8,
+      "document": "Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 9,
+      "document": "Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 10,
+      "document": "Chapter_10_Infective_Endocarditis",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 11,
+      "document": "Chapter_11_Systemic_Hypertension_and_Hypertensive_Emergencies",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 12,
+      "document": "Chapter_12_Adult_Congenital_Heart_Diseases",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 13,
+      "document": "Chapter_13_Aortic_Diseases_and_Peripheral_Vascular_Diseases",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 14,
+      "document": "Chapter_14_Advanced_ECG_Interpretation_and_Electrophysiology",
+      "status": "pending"
+    },
+    {
+      "subject": "Cardiology",
+      "chapter": 15,
+      "document": "Chapter_15_Cardiovascular_Pharmacology_Antithrombotic_Therapy_and_Landmark_Trials",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 1,
+      "document": "01. Autoimmunity, Immunological Tests & Immunodeficiency",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 2,
+      "document": "02. Rheumatoid Arthritis",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 3,
+      "document": "03. Spondyloarthritis & Psoriatic Arthritis",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 4,
+      "document": "04. Systemic Lupus Erythematosus & Antiphospholipid Syndrome",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 5,
+      "document": "05. Systemic Sclerosis, Sjögren Syndrome & Overlap Syndromes",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 6,
+      "document": "06. Idiopathic Inflammatory Myopathies",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 7,
+      "document": "07. Large-, Medium- & Small-Vessel Vasculitis",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 8,
+      "document": "08. Crystal Arthropathies & Osteoarthritis",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 9,
+      "document": "09. Biologics",
+      "status": "pending"
+    },
+    {
+      "subject": "Rheumatology",
+      "chapter": 10,
+      "document": "10. Others",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 1,
+      "document": "Chapter_01_Diabetes_Diagnosis_Classification_Pathophysiology_and_MODY",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 2,
+      "document": "Chapter_02_Diabetes_Pharmacotherapy_Insulin_and_Technology",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 3,
+      "document": "Chapter_03_Acute_Diabetic_Emergencies_DKA_HHS_and_Hypoglycemia",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 4,
+      "document": "Chapter_04_Chronic_Diabetic_Complications",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 5,
+      "document": "Chapter_05_Thyroid_Disorders_Hypothyroidism_Hyperthyroidism_and_Thyroiditis",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 6,
+      "document": "Chapter_06_Thyroid_Nodules_and_Thyroid_Cancer",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 7,
+      "document": "Chapter_07_Anterior_Pituitary_Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 8,
+      "document": "Chapter_08_Posterior_Pituitary_Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 9,
+      "document": "Chapter_09_Adrenal_Insufficiency_Cushing_Syndrome_and_Incidentaloma",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 10,
+      "document": "Chapter_10_Primary_Aldosteronism_Pheochromocytoma_and_Adrenal_Hypertension",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 11,
+      "document": "Chapter_11_Calcium_PTH_and_Parathyroid_Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 12,
+      "document": "Chapter_12_Metabolic_Bone_Disease",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 13,
+      "document": "Chapter_13_Reproductive_Endocrinology",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 14,
+      "document": "Chapter_14_MEN1_MEN2A_MEN2B_MEN4_and_Hereditary_Endocrine_Neoplasia",
+      "status": "pending"
+    },
+    {
+      "subject": "Endocrine",
+      "chapter": 15,
+      "document": "Chapter_15_Obesity_Dyslipidemia_and_Endocrine_Disorders_of_Pregnancy",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 1,
+      "document": "Chapter_01_Acute_Kidney_Injury",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 2,
+      "document": "Chapter_02_Chronic_Kidney_Disease",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 3,
+      "document": "Chapter_03_Glomerular_Diseases",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 4,
+      "document": "Chapter_04_Sodium_and_Water_Balance",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 5,
+      "document": "Chapter_05_Potassium_Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 6,
+      "document": "Chapter_06_Acid_Base_Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 7,
+      "document": "Chapter_07_Tubulointerstitial_and_Cystic_Kidney_Diseases",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 8,
+      "document": "Chapter_08_Nephrolithiasis_and_Obstructive_Uropathy",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 9,
+      "document": "Chapter_09_Dialysis_and_Renal_Replacement_Therapy",
+      "status": "pending"
+    },
+    {
+      "subject": "Nephrology",
+      "chapter": 10,
+      "document": "Chapter_10_Kidney_Transplantation",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 1,
+      "document": "01. ICU Fundamentals, Severity Scores & Supportive Care",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 2,
+      "document": "02. Hemodynamic Monitoring, Fluid Therapy & Shock",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 3,
+      "document": "03. Sepsis, Septic Shock & Multiorgan Dysfunction",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 4,
+      "document": "04. Mechanical Ventilation & Respiratory Support",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 5,
+      "document": "05. Cardiopulmonary Resuscitation & Post-Cardiac Arrest Care",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 7,
+      "document": "07. Sedation, Analgesia, Delirium & ECMO",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 8,
+      "document": "08. General Toxicology, Toxidromes, Decontamination & Antidotes",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 9,
+      "document": "09. Drug Poisoning, Toxic Alcohols, Chemical & Heavy Metal Toxicity",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 10,
+      "document": "10. Pesticide Poisoning, Envenomation & Biological Toxins",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 11,
+      "document": "11. Thermal, Electrical & Radiation Emergencies",
+      "status": "pending"
+    },
+    {
+      "subject": "Critical Care",
+      "chapter": 12,
+      "document": "12. Asphyxial & Environmental Emergencies",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 1,
+      "document": "chapter 1 FEVER AND PUO",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 2,
+      "document": "Chapter_02_Sepsis_Septic_Shock_Severe_Infections_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 3,
+      "document": "Chapter_03_HIV_Infection_AIDS_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 4,
+      "document": "Chapter_04_Tuberculosis_Nontuberculous_Mycobacteria_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 5,
+      "document": "Chapter_05_CNS_Infections_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 6,
+      "document": "Chapter_06_Respiratory_ENT_Infections_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 7,
+      "document": "Chapter_07_Endocarditis_Bacteremia_Cardiovascular_Infections_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 8,
+      "document": "Chapter_08_GI_Intra_Abdominal_Hepatobiliary_Infections_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 9,
+      "document": "Chapter_09_UTI_Genitourinary_Infections_STIs_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 10,
+      "document": "Chapter_10_Skin_Soft_Tissue_Bone_Joint_Infections_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 11,
+      "document": "Chapter_11_Tropical, Zoonotic and Vector_Borne_Infections_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 12,
+      "document": "Chapter_12_Fungal_Infections_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 13,
+      "document": "Chapter_13_Parasitic_Helminthic_Infections_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 14,
+      "document": "Chapter_14_Infections_in_Special_Hosts_Infection_Control_ORIGINAL",
+      "status": "pending"
+    },
+    {
+      "subject": "Infectious disease",
+      "chapter": 15,
+      "document": "CH 15 Antimicrobial Therap",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 1,
+      "document": "01. Esophageal Disorders & GERD",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 2,
+      "document": "02. Gastritis, Peptic Ulcer Disease & H. pylori",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 3,
+      "document": "03. Upper & Lower Gastrointestinal Bleeding",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 4,
+      "document": "04. Malabsorption, Celiac Disease & Chronic Diarrhea",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 5,
+      "document": "05. Inflammatory Bowel Disease",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 6,
+      "document": "06. Functional GI & Motility Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 7,
+      "document": "07. Acute & Chronic Pancreatitis",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 8,
+      "document": "08. Pancreatic Cystic Lesions & Neoplasms",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 9,
+      "document": "09. Biliary Tract Disorders & Cholangitis",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 10,
+      "document": "10. GI Polyps, NETs & GI Malignancies",
+      "status": "pending"
+    },
+    {
+      "subject": "GI & pancreas",
+      "chapter": 11,
+      "document": "11. GI Endoscopy, Imaging & Miscellaneous Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 1,
+      "document": "I. LFT interpretation",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 2,
+      "document": "II. Hyperbilirubinemia",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 3,
+      "document": "III. Viral hepatitis",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 4,
+      "document": "IV. AUD and ALD",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 5,
+      "document": "V. MASLD, Autoimmune hepatitis & Metabolic Liver Diseases",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 6,
+      "document": "VI. CLD and cirrhosis",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 7,
+      "document": "VII. Portal hypertension",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 8,
+      "document": "VIII. Budd Chiari syndrome",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 9,
+      "document": "IX. Drug induced liver injury",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 10,
+      "document": "X. Acute liver failure",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 11,
+      "document": "XI. Liver abscess",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 12,
+      "document": "XII. Biliary disease",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 13,
+      "document": "XIII. Hepatocellular carcinoma",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 14,
+      "document": "XIV. Liver diseased in pregnancy",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 1,
+      "document": "Basics",
+      "status": "pending"
+    },
+    {
+      "subject": "Research Methodology & Biostatistics",
+      "chapter": 1,
+      "document": "01. Research Methodology, Epidemiology & Study Designs",
+      "status": "pending"
+    },
+    {
+      "subject": "Research Methodology & Biostatistics",
+      "chapter": 2,
+      "document": "02. Clinical Trials, Bias, Ethics & Measures of Association",
+      "status": "pending"
+    },
+    {
+      "subject": "Research Methodology & Biostatistics",
+      "chapter": 3,
+      "document": "03. Descriptive & Inferential Biostatistics",
+      "status": "pending"
+    },
+    {
+      "subject": "Research Methodology & Biostatistics",
+      "chapter": 4,
+      "document": "04. Diagnostic Tests, Evidence-Based Medicine & Meta-analysis",
+      "status": "pending"
+    }
+  ]
+}

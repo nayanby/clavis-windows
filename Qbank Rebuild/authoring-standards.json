@@ -1,0 +1,42 @@
+{
+  "delivery": "One JSON file per chapter; preserve app-compatible questions, options, correctIndex, explanation and explanationHtml fields",
+  "audience": "MD/DNB Medicine graduates preparing for NEET-SS Medical Group",
+  "sequence": "Finish one chapter before starting the next. Finish subjects in progress.json subjectOrder.",
+  "questions": {
+    "distribution": "Continuous logical topic progression; no random alternation or unnecessary repeated concepts",
+    "difficulty": "Clinical reasoning with four closely competing medically plausible alternatives; one defensible best answer",
+    "types": "Use clinical vignettes where context matters and direct questions for criteria, mechanisms, pharmacology, classification and characteristic findings",
+    "avoid": "Giveaway wording, unrelated or absurd options, excessive stem length, answer-length cues, obscure trivia and forced vignettes",
+    "key": "Distribute A–D approximately evenly and independently check questionable keys"
+  },
+  "explanations": {
+    "scope": "Individualized standalone postgraduate teaching notes, not answer-only rationales or generic filler",
+    "title": "Actual medical topic",
+    "headings": "Relevant medical headings; do not repeat a heading as the first bold phrase below it",
+    "structure": "Genuine nested HTML lists with bold medical concepts; coherent sentences",
+    "tables": "Compact specific comparisons, classifications, criteria, scores or doses when useful; do not force tables into every answer",
+    "diagnosis": "Relevant criteria, thresholds, confirmation rules, typical findings, differentials and limitations",
+    "treatment": "Indications, first-line treatment, exact relevant doses and durations, contraindications, alternatives, monitoring and escalation",
+    "drugs": "Mechanism, indications, important adverse effects, interactions, contraindications and comparisons",
+    "distractors": "Explain each individually: what it represents, when appropriate and why less suitable here. Numerical calculations instead require formula, substitution, result and clinical interpretation.",
+    "standalone": "No deferral to another chapter; include related high-yield material without padding"
+  },
+  "references": "Use established textbooks, authoritative societies, primary trials and systematic reviews. Browse to verify decision-sensitive thresholds, doses, criteria and current guidance. State guideline year, conflicting frameworks and source-access limits honestly. Do not claim independent clinician review.",
+  "typography": {
+    "family": "Arial, Helvetica, sans-serif",
+    "bodyPx": 17,
+    "mainTitlePx": 18,
+    "boldAndSubheadingPx": 17,
+    "mainTitleColor": "#6F3D5D",
+    "mainTitleBackgroundOnly": "#E7E1E4",
+    "subheadingsAndBold": "#233D6B",
+    "tableHeader": "Burgundy with white text",
+    "thresholdHighlight": "#FFF2B3",
+    "paragraphBottomPx": 8,
+    "mainBulletSpacingPx": 3,
+    "nestedBulletSpacingPx": 2.83,
+    "headingTopPx": 4,
+    "tables": "Thin borders, subtle alternating rows and horizontal scroll wrapper"
+  },
+  "installation": "Add each validated chapter without deleting previously completed chapters. Verify runtime readback and unchanged hashes of other banks. Keep user data and backups out of Git. Commit locally and attempt configured remote push after every install. Record any failure and retain local commits."
+}
