@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 08. Dementia & Cognitive Disorders",
+  "currentChapter": "Neurology 09. Peripheral Neuropathies & Polyradiculoneuropathies",
   "chapters": [
     {
       "subject": "Neurology",
@@ -292,7 +292,27 @@
       "subject": "Neurology",
       "chapter": 8,
       "document": "08. Dementia & Cognitive Disorders",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/08. Dementia & Cognitive Disorders.json",
+      "validation": {
+        "questions": 44,
+        "answerDistribution": {
+          "A": 11,
+          "B": 11,
+          "C": 11,
+          "D": 11
+        },
+        "minimumExplanationWords": 231,
+        "distractorRationales": 132,
+        "questionStyles": {
+          "clinical_scenario": 36,
+          "direct": 8
+        },
+        "status": "passed"
+      },
+      "installedSha256": "a271261abcd8fd2d119448a4059563a1dcaf7ee88253617e90b294e5678c565a",
+      "coverageMap": "Neurology/08. Dementia & Cognitive Disorders.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",

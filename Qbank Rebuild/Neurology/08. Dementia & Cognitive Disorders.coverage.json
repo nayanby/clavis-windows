@@ -1,0 +1,330 @@
+{
+  "chapter": "08. Dementia & Cognitive Disorders",
+  "status": "installed_verified",
+  "plannedQuestions": 44,
+  "countBasis": "One MCQ per distinct high-yield decision. The original 43-item map expanded to 44 after review identified a missing NMDAR encephalitis recognition/confirmation decision; this is not an official examination weight or uniform quota.",
+  "sections": [
+    {
+      "section": "Cognitive syndrome assessment",
+      "questions": 6,
+      "decisions": [
+        "Distinguish MCI from dementia using independence rather than a screening-score cutoff",
+        "Diagnose a major cognitive syndrome while separating functional loss from physical disability",
+        "Recognize delirium superimposed on dementia and prioritize reversible precipitants",
+        "Evaluate depression-associated cognitive symptoms without assuming mutually exclusive neurodegeneration",
+        "Interpret cognitive-domain patterns and account for language, education and sensory confounders",
+        "Select initial laboratory and structural imaging evaluation before specialized etiologic testing"
+      ]
+    },
+    {
+      "section": "Alzheimer disease",
+      "questions": 14,
+      "decisions": [
+        "Recognize a typical progressive amnestic Alzheimer clinical syndrome",
+        "Recognize posterior cortical atrophy and distinguish syndrome from underlying pathology",
+        "Distinguish deterministic familial Alzheimer genes from APOE susceptibility and treatment-risk information",
+        "Apply the 2024 biological criteria while distinguishing diagnosis from clinical stage and screening policy",
+        "Interpret CSF amyloid/tau ratios with assay-specific cutoffs and competing pathology",
+        "Apply the 2025 blood-biomarker triage versus confirmatory performance framework",
+        "Use amyloid PET when it resolves an appropriate diagnostic or treatment question",
+        "Select and titrate a cholinesterase inhibitor for an appropriate symptomatic stage",
+        "Respond to cholinesterase-inhibitor bradycardia, syncope and other adverse effects",
+        "Select memantine by clinical severity, tolerability and renal function",
+        "Identify the early symptomatic, amyloid-confirmed population for anti-amyloid treatment",
+        "Apply current lecanemab dosing and scheduled MRI surveillance rather than an outdated schedule",
+        "Recognize ARIA and distinguish a treatment complication from a presumed ischemic event",
+        "Interpret donanemab trial benefit, current dose escalation and MRI monitoring without claiming cure"
+      ]
+    },
+    {
+      "section": "Lewy body cognitive disorders",
+      "questions": 5,
+      "decisions": [
+        "Apply probable versus possible DLB criteria using core clinical features",
+        "Distinguish indicative from supportive DLB biomarkers",
+        "Use the one-year clinical convention for DLB versus Parkinson disease dementia",
+        "Recognize antipsychotic sensitivity and choose a cautious symptom-driven approach",
+        "Use cholinesterase inhibition and integrated cognitive/autonomic care in Lewy body disease"
+      ]
+    },
+    {
+      "section": "Frontotemporal and language-led syndromes",
+      "questions": 5,
+      "decisions": [
+        "Apply possible/probable behavioral-variant FTD criteria and exclude psychiatric mimics",
+        "Recognize semantic-variant PPA and its anterior temporal pattern",
+        "Recognize nonfluent/agrammatic PPA and apraxia-of-speech distinctions",
+        "Recognize logopenic PPA and its frequent Alzheimer association without treating phenotype as pathological proof",
+        "Select familial FTD genetic evaluation for C9orf72, GRN and MAPT contexts"
+      ]
+    },
+    {
+      "section": "Vascular cognitive impairment",
+      "questions": 3,
+      "decisions": [
+        "Recognize vascular cognitive impairment without requiring a stepwise amnestic course",
+        "Interpret small-vessel disease, microbleed distribution and mixed pathology",
+        "Prioritize indicated vascular prevention without prescribing antithrombotics solely for a dementia label"
+      ]
+    },
+    {
+      "section": "Treatable and rapidly progressive disorders",
+      "questions": 8,
+      "decisions": [
+        "Recognize idiopathic normal-pressure hydrocephalus and evaluate supportive imaging rather than the triad alone",
+        "Interpret an objective CSF tap-test response and the limitations of a negative result",
+        "Investigate suspected sporadic CJD using MRI and CSF RT-QuIC rather than nonspecific injury markers alone",
+        "Recognize LGI1-associated cognitive disease with faciobrachial dystonic seizures",
+        "Apply possible autoimmune encephalitis criteria and urgently exclude infection",
+        "Recognize NMDAR encephalitis and confirm a compatible syndrome with appropriate CSF antibody testing",
+        "Treat suspected Wernicke encephalopathy promptly without waiting for the complete triad or an assay",
+        "Evaluate drug, metabolic and nutritional contributors without promising complete reversal of every dementia"
+      ]
+    },
+    {
+      "section": "Behavior, function and prevention",
+      "questions": 3,
+      "decisions": [
+        "Manage agitation by identifying distress triggers and restricting antipsychotics to appropriate indications",
+        "Assess decision-specific capacity, medication safety and driving function without a universal test-score rule",
+        "Counsel on modifiable risk and multidomain intervention evidence without claiming guaranteed dementia prevention"
+      ]
+    }
+  ],
+  "crossChapterBoundaries": [
+    "PD motor therapy and RBD treatment were covered in Chapter 7; this chapter focuses on cognitive classification and Lewy body dementia care.",
+    "CNS infection treatment was covered in Chapter 5; infection exclusion remains explicit when discussing autoimmune encephalitis and rapid decline.",
+    "Vascular cognitive decisions do not repeat the full reperfusion and stroke-prevention algorithms.",
+    "Anti-amyloid dosing, MRI surveillance and ARIA are included because they directly change cognitive-disorder management."
+  ],
+  "requiredFinalReview": [
+    "Recheck current anti-amyloid labels and distinguish trial populations, regulator indications and local access.",
+    "State biomarker criterion versions and assay limitations; do not present all commercial blood tests as interchangeable.",
+    "Verify exact doses, renal adjustments and contraindications for symptomatic treatments.",
+    "Review every distractor for plausible competition and every explanation for independent teaching value.",
+    "Install only a complete validated chapter and document clinical-review and source-access limits."
+  ],
+  "authoredQuestions": 44,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Mild Cognitive Impairment and Independence",
+      "decision": "Distinguish MCI from dementia using independence rather than a screening-score cutoff"
+    },
+    {
+      "question": 2,
+      "title": "When Cognitive Decline Becomes a Major Syndrome",
+      "decision": "Diagnose a major cognitive syndrome while separating functional loss from physical disability"
+    },
+    {
+      "question": 3,
+      "title": "Delirium Superimposed on Dementia",
+      "decision": "Recognize delirium superimposed on dementia and prioritize reversible precipitants"
+    },
+    {
+      "question": 4,
+      "title": "Depression and Cognitive Symptoms Can Coexist",
+      "decision": "Evaluate depression-associated cognitive symptoms without assuming mutually exclusive neurodegeneration"
+    },
+    {
+      "question": 5,
+      "title": "A Screening Score Is Not the Whole Diagnosis",
+      "decision": "Interpret cognitive-domain patterns and account for language, education and sensory confounders"
+    },
+    {
+      "question": 6,
+      "title": "Initial Investigation of Cognitive Decline",
+      "decision": "Select initial laboratory and structural imaging evaluation before specialized etiologic testing"
+    },
+    {
+      "question": 7,
+      "title": "A Progressive Amnestic Alzheimer Syndrome",
+      "decision": "Recognize a typical progressive amnestic Alzheimer clinical syndrome"
+    },
+    {
+      "question": 8,
+      "title": "Posterior Cortical Atrophy",
+      "decision": "Recognize posterior cortical atrophy and distinguish syndrome from underlying pathology"
+    },
+    {
+      "question": 9,
+      "title": "Familial Alzheimer Genes and APOE",
+      "decision": "Distinguish deterministic familial Alzheimer genes from APOE susceptibility and treatment-risk information"
+    },
+    {
+      "question": 10,
+      "title": "The 2024 Biological Alzheimer Framework",
+      "decision": "Apply the 2024 biological criteria while distinguishing diagnosis from clinical stage and screening policy"
+    },
+    {
+      "question": 11,
+      "title": "Interpreting CSF Alzheimer Biomarkers",
+      "decision": "Interpret CSF amyloid/tau ratios with assay-specific cutoffs and competing pathology"
+    },
+    {
+      "question": 12,
+      "title": "Blood Biomarker Triage Versus Confirmation",
+      "decision": "Apply the 2025 blood-biomarker triage versus confirmatory performance framework"
+    },
+    {
+      "question": 13,
+      "title": "When Amyloid PET Can Change Management",
+      "decision": "Use amyloid PET when it resolves an appropriate diagnostic or treatment question"
+    },
+    {
+      "question": 14,
+      "title": "Starting Donepezil for Symptomatic AD",
+      "decision": "Select and titrate a cholinesterase inhibitor for an appropriate symptomatic stage"
+    },
+    {
+      "question": 15,
+      "title": "Syncope During Cholinesterase-Inhibitor Treatment",
+      "decision": "Respond to cholinesterase-inhibitor bradycardia, syncope and other adverse effects"
+    },
+    {
+      "question": 16,
+      "title": "Memantine and Severe Renal Impairment",
+      "decision": "Select memantine by clinical severity, tolerability and renal function"
+    },
+    {
+      "question": 17,
+      "title": "Selecting an Early Symptomatic Anti-Amyloid Candidate",
+      "decision": "Identify the early symptomatic, amyloid-confirmed population for anti-amyloid treatment"
+    },
+    {
+      "question": 18,
+      "title": "Lecanemab Dosing and MRI: July 2026 US Label",
+      "decision": "Apply current lecanemab dosing and scheduled MRI surveillance rather than an outdated schedule"
+    },
+    {
+      "question": 19,
+      "title": "ARIA Can Mimic Ischemic Stroke",
+      "decision": "Recognize ARIA and distinguish a treatment complication from a presumed ischemic event"
+    },
+    {
+      "question": 20,
+      "title": "Donanemab: Benefit and Current Escalation",
+      "decision": "Interpret donanemab trial benefit, current dose escalation and MRI monitoring without claiming cure"
+    },
+    {
+      "question": 21,
+      "title": "Probable Dementia with Lewy Bodies",
+      "decision": "Apply probable versus possible DLB criteria using core clinical features"
+    },
+    {
+      "question": 22,
+      "title": "Indicative Versus Supportive DLB Biomarkers",
+      "decision": "Distinguish indicative from supportive DLB biomarkers"
+    },
+    {
+      "question": 23,
+      "title": "The One-Year Clinical Convention",
+      "decision": "Use the one-year clinical convention for DLB versus Parkinson disease dementia"
+    },
+    {
+      "question": 24,
+      "title": "Antipsychotic Sensitivity in DLB",
+      "decision": "Recognize antipsychotic sensitivity and choose a cautious symptom-driven approach"
+    },
+    {
+      "question": 25,
+      "title": "Cognitive Treatment in Lewy Body Disease",
+      "decision": "Use cholinesterase inhibition and integrated cognitive/autonomic care in Lewy body disease"
+    },
+    {
+      "question": 26,
+      "title": "Behavioral-Variant FTD: Possible and Probable",
+      "decision": "Apply possible/probable behavioral-variant FTD criteria and exclude psychiatric mimics"
+    },
+    {
+      "question": 27,
+      "title": "Semantic-Variant Primary Progressive Aphasia",
+      "decision": "Recognize semantic-variant PPA and its anterior temporal pattern"
+    },
+    {
+      "question": 28,
+      "title": "Nonfluent/Agrammatic PPA",
+      "decision": "Recognize nonfluent/agrammatic PPA and apraxia-of-speech distinctions"
+    },
+    {
+      "question": 29,
+      "title": "Logopenic PPA and Alzheimer Pathology",
+      "decision": "Recognize logopenic PPA and its frequent Alzheimer association without treating phenotype as pathological proof"
+    },
+    {
+      "question": 30,
+      "title": "Familial FTD with Motor Neuron Disease",
+      "decision": "Select familial FTD genetic evaluation for C9orf72, GRN and MAPT contexts"
+    },
+    {
+      "question": 31,
+      "title": "Vascular Cognitive Disease Need Not Be Stepwise",
+      "decision": "Recognize vascular cognitive impairment without requiring a stepwise amnestic course"
+    },
+    {
+      "question": 32,
+      "title": "Microbleed Distribution and Mixed Pathology",
+      "decision": "Interpret small-vessel disease, microbleed distribution and mixed pathology"
+    },
+    {
+      "question": 33,
+      "title": "Prevention Is Based on Vascular Indications",
+      "decision": "Prioritize indicated vascular prevention without prescribing antithrombotics solely for a dementia label"
+    },
+    {
+      "question": 34,
+      "title": "Recognizing Idiopathic Normal-Pressure Hydrocephalus",
+      "decision": "Recognize idiopathic normal-pressure hydrocephalus and evaluate supportive imaging rather than the triad alone"
+    },
+    {
+      "question": 35,
+      "title": "Interpreting the CSF Tap Test",
+      "decision": "Interpret an objective CSF tap-test response and the limitations of a negative result"
+    },
+    {
+      "question": 36,
+      "title": "Suspected Sporadic CJD",
+      "decision": "Investigate suspected sporadic CJD using MRI and CSF RT-QuIC rather than nonspecific injury markers alone"
+    },
+    {
+      "question": 37,
+      "title": "LGI1 Cognitive Disease and Brief Face–Arm Seizures",
+      "decision": "Recognize LGI1-associated cognitive disease with faciobrachial dystonic seizures"
+    },
+    {
+      "question": 38,
+      "title": "Possible Autoimmune Encephalitis",
+      "decision": "Apply possible autoimmune encephalitis criteria and urgently exclude infection"
+    },
+    {
+      "question": 39,
+      "title": "NMDAR Encephalitis: A Psychiatric–Neurological Evolution",
+      "decision": "Recognize NMDAR encephalitis and confirm a compatible syndrome with appropriate CSF antibody testing"
+    },
+    {
+      "question": 40,
+      "title": "Suspected Wernicke Encephalopathy",
+      "decision": "Treat suspected Wernicke encephalopathy promptly without waiting for the complete triad or an assay"
+    },
+    {
+      "question": 41,
+      "title": "Reversible Contributors Are Not Always the Sole Cause",
+      "decision": "Evaluate drug, metabolic and nutritional contributors without promising complete reversal of every dementia"
+    },
+    {
+      "question": 42,
+      "title": "Agitation: Treat Distress and Triggers First",
+      "decision": "Manage agitation by identifying distress triggers and restricting antipsychotics to appropriate indications"
+    },
+    {
+      "question": 43,
+      "title": "Capacity and Driving Need Functional Assessment",
+      "decision": "Assess decision-specific capacity, medication safety and driving function without a universal test-score rule"
+    },
+    {
+      "question": 44,
+      "title": "Risk Reduction Without Overstating Prevention",
+      "decision": "Counsel on modifiable risk and multidomain intervention evidence without claiming guaranteed dementia prevention"
+    }
+  ]
+}

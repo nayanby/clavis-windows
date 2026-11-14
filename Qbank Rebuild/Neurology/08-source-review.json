@@ -1,0 +1,176 @@
+{
+  "chapter": 8,
+  "status": "installed_verified",
+  "draftedQuestions": 44,
+  "plannedQuestions": 44,
+  "installed": true,
+  "draftValidation": {
+    "scope": "Complete 44-question chapter",
+    "status": "passed",
+    "answerDistribution": [
+      11,
+      11,
+      11,
+      11
+    ],
+    "minimumExplanationWords": 231,
+    "distractorRationales": 132,
+    "independentClinicianReview": false
+  },
+  "sourceChecks": [
+    {
+      "source": "DETeCD-ADRD guideline, published 2024/2025",
+      "checked": [
+        "Cognitive syndrome, function and etiology distinguished",
+        "Tiered workup and structural imaging",
+        "Language, sensory and education confounders"
+      ]
+    },
+    {
+      "source": "NICE CG103 and NG97",
+      "checked": [
+        "Delirium assessment and manage-delirium-first advice",
+        "Symptomatic medication framework",
+        "Reversible contributors"
+      ]
+    },
+    {
+      "source": "Alzheimer Association revised criteria 2024",
+      "checked": [
+        "Core 1 biomarker diagnosis distinguished from clinical severity",
+        "No unrestricted asymptomatic clinical screening implication",
+        "Assay-specific CSF interpretation"
+      ]
+    },
+    {
+      "source": "Alzheimer Association blood-based biomarker guideline 2025",
+      "checked": [
+        "Triage sensitivity at least 90%, specificity at least 75%",
+        "Confirmatory substitute sensitivity and specificity at least 90%",
+        "Specialty cognitive-impairment population and validation limits"
+      ]
+    },
+    {
+      "source": "AA/SNMMI amyloid/tau PET criteria 2025",
+      "checked": [
+        "Clinically consequential etiologic/treatment question",
+        "Positive amyloid does not exclude mixed pathology"
+      ]
+    },
+    {
+      "source": "Lecanemab July 2026 US FDA label",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/761375s001lbl.pdf",
+      "checked": [
+        "Starting IV 10 mg/kg every two weeks or SC 500 mg weekly",
+        "After 18 months: continued starting dose or IV 10 mg/kg every four weeks / SC 360 mg weekly maintenance",
+        "Baseline MRI and months 1, 2, 3, 6",
+        "ARIA severity-based interruption",
+        "APOE and stroke-mimic warnings"
+      ]
+    },
+    {
+      "source": "Donanemab July 2025 US FDA label and current DailyMed record",
+      "checked": [
+        "350/700/1050/1400 mg staged monthly IV schedule",
+        "MRI before infusions 2, 3, 4 and 7",
+        "Early symptomatic amyloid-confirmed initiation",
+        "Plaque-based consideration of stopping distinguished from cure"
+      ]
+    },
+    {
+      "source": "CLARITY AD and TRAILBLAZER-ALZ 2 primary randomized trials",
+      "checked": [
+        "Absolute outcome differences and average continued decline",
+        "Population/endpoint differences preclude casual cross-trial superiority claims"
+      ]
+    },
+    {
+      "source": "Current donepezil and immediate-release memantine labels",
+      "checked": [
+        "Gradual donepezil initiation and bradyarrhythmia risk",
+        "Memantine renal target and formulation distinctions"
+      ]
+    },
+    {
+      "source": "DLB Consortium 2017, FTD 2011 and PPA 2011 consensus documents",
+      "checked": [
+        "Core versus indicative/supportive biomarker categories",
+        "One-year terminology convention",
+        "Neuroleptic sensitivity and cognitive therapy",
+        "Possible/probable bvFTD criteria",
+        "Language-led phenotype versus pathological etiology"
+      ]
+    },
+    {
+      "source": "C9orf72 GeneReviews, VASCOG and Canadian VCI 2024 guidance",
+      "checked": [
+        "Repeat-expansion testing limitations",
+        "Vascular cognitive profiles and mixed pathology",
+        "Indication-based vascular prevention"
+      ]
+    },
+    {
+      "source": "iNPH 2021 Japanese guideline and PENS 2025 trial",
+      "checked": [
+        "DESH and ventriculomegaly interpretation",
+        "Pressure and drainage-test context",
+        "Negative tap limitations",
+        "Selected-population gait benefit without promised cognitive reversal"
+      ]
+    },
+    {
+      "source": "CDC CJD diagnostic guidance; Graus AE 2016; Canadian AE consensus 2024",
+      "checked": [
+        "Prion-specific versus injury markers",
+        "Possible AE criteria",
+        "LGI1 FBDS recognition",
+        "NMDAR CSF anti-GluN1 confirmation",
+        "First-line severe AE therapy and infection exclusion"
+      ]
+    },
+    {
+      "source": "EFNS Wernicke 2010 and UK acute-hospital alcohol guidance 2025",
+      "checked": [
+        "Different dose frameworks explicitly named",
+        "Prompt parenteral thiamine and no delay of emergency glucose"
+      ]
+    },
+    {
+      "source": "NICE NG97/NG108 and US POINTER 2025 primary trial",
+      "checked": [
+        "BPSD nonpharmacological assessment and restricted antipsychotic role",
+        "Decision-specific capacity with jurisdiction limits",
+        "Cognitive-composite improvement distinguished from lifetime dementia prevention"
+      ]
+    },
+    {
+      "source": "Boston CAA v2.0 2022 and rivastigmine patch label",
+      "checked": [
+        "Lobar hemorrhagic and white-matter combinations",
+        "Cognitive/hemorrhagic context",
+        "Patch initiation, titration and one-patch instruction"
+      ]
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "Full Harrison subscription text was not accessed",
+    "No independent clinician review",
+    "US label examples are explicitly versioned and do not establish local Indian approval or access"
+  ],
+  "coverageRevision": "Added a separate NMDAR encephalitis decision after whole-chapter review; count increased from 43 to 44 for a documented gap.",
+  "editorialReview": [
+    "44 mapped decisions aligned sequentially",
+    "132 individualized distractor rationales",
+    "Weak alternatives replaced by clinically relevant competing interpretations, assays and dosing schedules",
+    "Current anti-amyloid schedules explicitly versioned",
+    "Dose and threshold highlighting applied",
+    "Full schema, balanced-key and HTML validation passed"
+  ],
+  "installationEvidence": {
+    "preservedOtherBanks": 7,
+    "runtimeSourceComparison": "passed",
+    "projectInstalledChapters": 8,
+    "projectInstalledQuestions": 342
+  }
+}

@@ -1,17 +1,17 @@
 {
   "projectStatus": "in_progress",
   "plannedChapters": 129,
-  "installedChapters": 7,
-  "installedQuestions": 298,
+  "installedChapters": 8,
+  "installedQuestions": 342,
   "structurallyValidated": true,
   "runtimeSourceComparison": "passed",
-  "mappedChapters": 4,
+  "mappedChapters": 5,
   "retrospectiveCoverageAudit": [
     "Neurology / 01. Neuroanatomy, Clinical Localization & Neurological Examination",
     "Neurology / 02. Cerebrovascular Diseases",
     "Neurology / 03. Epilepsy & Status Epilepticus"
   ],
   "independentClinicianReview": "not_recorded",
-  "nextChapter": "Neurology 08. Dementia & Cognitive Disorders",
+  "nextChapter": "Neurology 09. Peripheral Neuropathies & Polyradiculoneuropathies",
   "countPolicy": "Coverage-driven: enumerate distinct high-yield decisions per chapter, allocate questions by diagnostic and therapeutic complexity, then remove duplication. The original 30/40 counts were provisional, not official exam weights or completeness evidence."
 }
