@@ -8,15 +8,106 @@
     "Critical Care",
     "Infectious disease",
     "GI & pancreas",
-    "Liver",
+    "Hepatology",
     "Oncology",
     "Research Methodology & Biostatistics"
   ],
   "delivery": "JSON only; one chapter at a time",
-  "defaultQuestions": 30,
-  "broadChapterQuestions": 40,
-  "selectionPolicy": "Use canonical numbered sets. Exclude older overlapping Endocrine/GI sets, duplicate Biostatistics folder and unnamed placeholders. Oncology currently has one source chapter (Basics); expand its coverage explicitly if needed.",
-  "currentChapter": "Neurology 04. Headache Disorders & Cranial Neuralgias",
+  "questionCountPolicy": "Coverage-driven: enumerate distinct high-yield decisions per chapter, allocate questions by diagnostic and therapeutic complexity, then remove duplication. The original 30/40 counts were provisional, not official exam weights or completeness evidence.",
+  "selectionPolicy": "Use current canonical numbered sets; exclude older overlapping Endocrine/GI sets and duplicate Biostatistics folder. Hepatology supersedes the old Liver set. The sole Oncology Basics source is empty, so a full 13-chapter oncology syllabus is planned independently.",
+  "supersededSourceChapters": [
+    {
+      "subject": "Liver",
+      "chapter": 1,
+      "document": "I. LFT interpretation",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 2,
+      "document": "II. Hyperbilirubinemia",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 3,
+      "document": "III. Viral hepatitis",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 4,
+      "document": "IV. AUD and ALD",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 5,
+      "document": "V. MASLD, Autoimmune hepatitis & Metabolic Liver Diseases",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 6,
+      "document": "VI. CLD and cirrhosis",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 7,
+      "document": "VII. Portal hypertension",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 8,
+      "document": "VIII. Budd Chiari syndrome",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 9,
+      "document": "IX. Drug induced liver injury",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 10,
+      "document": "X. Acute liver failure",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 11,
+      "document": "XI. Liver abscess",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 12,
+      "document": "XII. Biliary disease",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 13,
+      "document": "XIII. Hepatocellular carcinoma",
+      "status": "pending"
+    },
+    {
+      "subject": "Liver",
+      "chapter": 14,
+      "document": "XIV. Liver diseased in pregnancy",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 1,
+      "document": "Basics",
+      "status": "pending"
+    }
+  ],
+  "currentChapter": "Neurology 05. Central Nervous System Infections",
   "chapters": [
     {
       "subject": "Neurology",
@@ -39,7 +130,9 @@
           "direct": 5
         },
         "status": "passed"
-      }
+      },
+      "coverageReview": "retrospective_audit_required",
+      "installedSha256": "4cbd5dfdd2ae06dc26bf8d81d4fc1abd44675da9d45bf8cd7660bbd91a4c43b6"
     },
     {
       "subject": "Neurology",
@@ -63,7 +156,8 @@
         },
         "status": "passed"
       },
-      "installedSha256": "02188de3d4b93a2200233390b5740a23bc3efbcc1e9f02437457b5e0cef217da"
+      "installedSha256": "19b9395ed39a08b4997c8f8fc9fbb622297aeaea32ae397ef0c706723c6e6510",
+      "coverageReview": "retrospective_audit_required"
     },
     {
       "subject": "Neurology",
@@ -87,13 +181,34 @@
         },
         "status": "passed"
       },
-      "installedSha256": "42c2ff2141d644f5808f062b9ed9d2778919c28acd57ac3b71c7250ae736d563"
+      "installedSha256": "faed32a52f13449563c8155cb9d5163a1dbfcbc08b6821c1a2a8605f5f4e0b13",
+      "coverageReview": "retrospective_audit_required"
     },
     {
       "subject": "Neurology",
       "chapter": 4,
       "document": "04. Headache Disorders & Cranial Neuralgias",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/04. Headache Disorders & Cranial Neuralgias.json",
+      "validation": {
+        "questions": 42,
+        "answerDistribution": {
+          "A": 11,
+          "B": 11,
+          "C": 10,
+          "D": 10
+        },
+        "minimumExplanationWords": 217,
+        "distractorRationales": 126,
+        "questionStyles": {
+          "clinical_scenario": 35,
+          "direct": 7
+        },
+        "status": "passed"
+      },
+      "installedSha256": "c7e25959a3c4afe85806ea92e37f19500e7daec03802b9dfe3232499f7f21507",
+      "coverageMap": "Neurology/04. Headache Disorders & Cranial Neuralgias.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",
@@ -678,93 +793,147 @@
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 1,
-      "document": "I. LFT interpretation",
+      "document": "01. Liver Function Tests, Acute Viral Hepatitis (HAV, HEV) & Acute Liver Failure",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 2,
-      "document": "II. Hyperbilirubinemia",
+      "document": "02. Hepatitis B — Serology, Natural History, Treatment & Reactivation",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 3,
-      "document": "III. Viral hepatitis",
+      "document": "03. Hepatitis C — Diagnosis, DAAs, Resistance & Special Populations",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 4,
-      "document": "IV. AUD and ALD",
+      "document": "04. MASLD, MASH & Alcohol-Associated Liver Disease",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 5,
-      "document": "V. MASLD, Autoimmune hepatitis & Metabolic Liver Diseases",
+      "document": "05. Autoimmune Hepatitis, PBC & PSC",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 6,
-      "document": "VI. CLD and cirrhosis",
+      "document": "06. Wilson Disease, Hemochromatosis & Alpha-1 Antitrypsin Deficiency",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 7,
-      "document": "VII. Portal hypertension",
+      "document": "07. Drug-Induced Liver Injury & Vascular Liver Diseases",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 8,
-      "document": "VIII. Budd Chiari syndrome",
+      "document": "08. Cirrhosis, Portal Hypertension & Variceal Bleeding",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 9,
-      "document": "IX. Drug induced liver injury",
+      "document": "09. Ascites, SBP, HRS-AKI & Hyponatremia",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 10,
-      "document": "X. Acute liver failure",
+      "document": "10. Hepatic Encephalopathy & Acute-on-Chronic Liver Failure",
       "status": "pending"
     },
     {
-      "subject": "Liver",
+      "subject": "Hepatology",
       "chapter": 11,
-      "document": "XI. Liver abscess",
-      "status": "pending"
-    },
-    {
-      "subject": "Liver",
-      "chapter": 12,
-      "document": "XII. Biliary disease",
-      "status": "pending"
-    },
-    {
-      "subject": "Liver",
-      "chapter": 13,
-      "document": "XIII. Hepatocellular carcinoma",
-      "status": "pending"
-    },
-    {
-      "subject": "Liver",
-      "chapter": 14,
-      "document": "XIV. Liver diseased in pregnancy",
+      "document": "11. HCC, Cholangiocarcinoma, Other Liver Tumors & Liver Transplantation",
       "status": "pending"
     },
     {
       "subject": "Oncology",
       "chapter": 1,
-      "document": "Basics",
+      "document": "01. Cancer Biology, Molecular Pathology, Staging & Screening",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 2,
+      "document": "02. Cytotoxic, Targeted & Endocrine Anticancer Therapy",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 3,
+      "document": "03. Cancer Immunotherapy & Immune-Related Adverse Events",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 4,
+      "document": "04. Oncologic Emergencies",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 5,
+      "document": "05. Lung Cancer, Mesothelioma & Thoracic Malignancies",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 6,
+      "document": "06. Breast Cancer",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 7,
+      "document": "07. Gastrointestinal, Hepatobiliary & Pancreatic Cancers",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 8,
+      "document": "08. Genitourinary & Germ-Cell Malignancies",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 9,
+      "document": "09. Lymphomas",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 10,
+      "document": "10. Acute Leukemias & Myelodysplastic Neoplasms",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 11,
+      "document": "11. Chronic Leukemias & Myeloproliferative Neoplasms",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 12,
+      "document": "12. Plasma-Cell Neoplasms & Related Disorders",
+      "status": "pending"
+    },
+    {
+      "subject": "Oncology",
+      "chapter": 13,
+      "document": "13. Other Solid Tumors, Unknown Primary & Supportive Oncology",
       "status": "pending"
     },
     {

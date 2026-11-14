@@ -7,7 +7,7 @@ from pathlib import Path
 REPO=Path(__file__).resolve().parents[1]
 ROOT=REPO/'Qbank Rebuild'
 DATA=Path('C:/Users/ANT-PC/OneDrive/Cortex Windows/data')
-SUBJECTS=['Neurology','Cardiology','Rheumatology','Endocrine','Nephrology','Critical Care','Infectious disease','GI & pancreas','Liver','Oncology','Research Methodology & Biostatistics']
+SUBJECTS=['Neurology','Cardiology','Rheumatology','Endocrine','Nephrology','Critical Care','Infectious disease','GI & pancreas','Hepatology','Oncology','Research Methodology & Biostatistics']
 
 def rich(s):
     s=re.sub(r'\*\*(.+?)\*\*',r'<strong>\1</strong>',escape(s))
@@ -76,6 +76,7 @@ def save(subject,number,document,rows,refs,source_note):
           questionStyle=r['style'],calculation=r['calculation'],explanation='\n\n'.join(plain),explanationHtml=''.join(html),
           explanationTeaching=dict(title=r['title'],sections=sections,tables=tables,otherOptions=other),references=references,
           sourceCheckedAt='2026-11-15',reviewStatus='source_checked_not_independently_clinician_reviewed'))
+        if r.get('coverageDecision'):qs[-1]['coverageDecision']=r['coverageDecision']
     first=json.loads((ROOT/'Neurology/01. Neuroanatomy, Clinical Localization & Neurological Examination.json').read_text(encoding='utf-8'))
     bank=dict(schemaVersion=1,folder=subject,subject=subject,chapterOrder=number,topicOrder=1,headingIndex=0,document=document,
       headingText=re.sub(r'^\d+[. ]+','',document),targetQuestions=len(qs),status='chapter_authored',

@@ -1,0 +1,314 @@
+{
+  "chapter": "04. Headache Disorders & Cranial Neuralgias",
+  "status": "installed_verified",
+  "countBasis": "One question for each distinct decision below; explanations teach related distinctions. Add or consolidate only if coverage review justifies it. No official NEET-SS chapter weighting is claimed.",
+  "plannedQuestions": 42,
+  "sections": [
+    {
+      "section": "Migraine diagnosis and subtypes",
+      "questions": 7,
+      "decisions": [
+        "Migraine without aura criteria",
+        "Typical aura and temporal evolution",
+        "Brainstem aura",
+        "Hemiplegic migraine and genetics",
+        "Vestibular migraine",
+        "Retinal symptoms and exclusion of vascular disease",
+        "Status migrainosus"
+      ]
+    },
+    {
+      "section": "Acute migraine therapy",
+      "questions": 4,
+      "decisions": [
+        "Triptan plus NSAID strategy",
+        "Nonoral treatment for vomiting",
+        "Nonvasoconstrictive therapy in coronary disease",
+        "Lasmiditan and driving precautions"
+      ]
+    },
+    {
+      "section": "Migraine prevention and counseling",
+      "questions": 6,
+      "decisions": [
+        "Topiramate and comorbidity-based selection",
+        "Amitriptyline and insomnia",
+        "AHS 2024 CGRP first-line position",
+        "CGRP receptor versus ligand antibodies and adverse effects",
+        "OnabotulinumtoxinA protocol",
+        "Aura and estrogen-containing contraception"
+      ]
+    },
+    {
+      "section": "Chronic headache and medication overuse",
+      "questions": 4,
+      "decisions": [
+        "Chronic migraine diagnostic thresholds",
+        "Medication-overuse class thresholds",
+        "Withdrawal strategy and exceptions",
+        "Tension-type headache differentiation and prevention"
+      ]
+    },
+    {
+      "section": "Trigeminal autonomic cephalalgias",
+      "questions": 8,
+      "decisions": [
+        "Cluster attack criteria",
+        "Episodic versus chronic cluster",
+        "Acute oxygen treatment",
+        "Verapamil prevention and ECG",
+        "Transitional treatment",
+        "Paroxysmal hemicrania",
+        "SUNCT and SUNA",
+        "Hemicrania continua"
+      ]
+    },
+    {
+      "section": "Cranial neuralgias",
+      "questions": 6,
+      "decisions": [
+        "Trigeminal neuralgia phenotype",
+        "MRI and secondary causes",
+        "Carbamazepine or oxcarbazepine selection",
+        "Microvascular decompression",
+        "Glossopharyngeal neuralgia",
+        "Occipital neuralgia"
+      ]
+    },
+    {
+      "section": "Secondary headache decisions",
+      "questions": 7,
+      "decisions": [
+        "Giant-cell arteritis and urgent treatment",
+        "Idiopathic intracranial hypertension",
+        "Spontaneous intracranial hypotension",
+        "Reversible cerebral vasoconstriction syndrome",
+        "Cough headache and Chiari evaluation",
+        "Red flags requiring imaging",
+        "Post-dural-puncture headache and blood patch"
+      ]
+    }
+  ],
+  "crossChapterBoundaries": "Do not repeat full stroke, SAH, CVT, CNS infection or neurocritical-care question sets. Include headache-specific diagnostic and treatment decisions with standalone explanations.",
+  "requiredFinalReview": [
+    "No duplicated decision",
+    "No uncovered listed decision",
+    "Single defensible key",
+    "Plausible alternatives",
+    "Exact criteria and doses checked",
+    "Sources and limitations recorded"
+  ],
+  "authoredQuestions": 42,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Migraine Without Aura: Diagnostic Criteria",
+      "decision": "Migraine without aura criteria"
+    },
+    {
+      "question": 2,
+      "title": "Typical Migraine Aura",
+      "decision": "Typical aura and temporal evolution"
+    },
+    {
+      "question": 3,
+      "title": "Migraine With Brainstem Aura",
+      "decision": "Brainstem aura"
+    },
+    {
+      "question": 4,
+      "title": "Familial Hemiplegic Migraine Genetics",
+      "decision": "Hemiplegic migraine and genetics"
+    },
+    {
+      "question": 5,
+      "title": "Vestibular Migraine",
+      "decision": "Vestibular migraine"
+    },
+    {
+      "question": 6,
+      "title": "Retinal Migraine Is a Diagnosis of Exclusion",
+      "decision": "Retinal symptoms and exclusion of vascular disease"
+    },
+    {
+      "question": 7,
+      "title": "Status Migrainosus",
+      "decision": "Status migrainosus"
+    },
+    {
+      "question": 8,
+      "title": "Combining a Triptan With an NSAID",
+      "decision": "Triptan plus NSAID strategy"
+    },
+    {
+      "question": 9,
+      "title": "Nonoral Treatment for Vomiting",
+      "decision": "Nonoral treatment for vomiting"
+    },
+    {
+      "question": 10,
+      "title": "Acute Migraine With Coronary Disease",
+      "decision": "Nonvasoconstrictive therapy in coronary disease"
+    },
+    {
+      "question": 11,
+      "title": "Lasmiditan and Driving",
+      "decision": "Lasmiditan and driving precautions"
+    },
+    {
+      "question": 12,
+      "title": "Comorbidity-Based Selection of Prevention",
+      "decision": "Topiramate and comorbidity-based selection"
+    },
+    {
+      "question": 13,
+      "title": "Amitriptyline With Sleep Disturbance",
+      "decision": "Amitriptyline and insomnia"
+    },
+    {
+      "question": 14,
+      "title": "CGRP Therapies as a First-Line Option",
+      "decision": "AHS 2024 CGRP first-line position"
+    },
+    {
+      "question": 15,
+      "title": "CGRP Receptor Versus Ligand Antibodies",
+      "decision": "CGRP receptor versus ligand antibodies and adverse effects"
+    },
+    {
+      "question": 16,
+      "title": "OnabotulinumtoxinA for Chronic Migraine",
+      "decision": "OnabotulinumtoxinA protocol"
+    },
+    {
+      "question": 17,
+      "title": "Migraine Aura and Estrogen-Containing Contraception",
+      "decision": "Aura and estrogen-containing contraception"
+    },
+    {
+      "question": 18,
+      "title": "Chronic Migraine Thresholds",
+      "decision": "Chronic migraine diagnostic thresholds"
+    },
+    {
+      "question": 19,
+      "title": "Medication-Overuse Headache Thresholds",
+      "decision": "Medication-overuse class thresholds"
+    },
+    {
+      "question": 20,
+      "title": "Withdrawal Strategy in Medication Overuse",
+      "decision": "Withdrawal strategy and exceptions"
+    },
+    {
+      "question": 21,
+      "title": "Chronic Tension-Type Headache",
+      "decision": "Tension-type headache differentiation and prevention"
+    },
+    {
+      "question": 22,
+      "title": "Cluster Headache Attack Pattern",
+      "decision": "Cluster attack criteria"
+    },
+    {
+      "question": 23,
+      "title": "Episodic Versus Chronic Cluster Headache",
+      "decision": "Episodic versus chronic cluster"
+    },
+    {
+      "question": 24,
+      "title": "Oxygen Delivery for Acute Cluster Headache",
+      "decision": "Acute oxygen treatment"
+    },
+    {
+      "question": 25,
+      "title": "Verapamil and ECG Monitoring",
+      "decision": "Verapamil prevention and ECG"
+    },
+    {
+      "question": 26,
+      "title": "Transitional Treatment During a Cluster Bout",
+      "decision": "Transitional treatment"
+    },
+    {
+      "question": 27,
+      "title": "Paroxysmal Hemicrania",
+      "decision": "Paroxysmal hemicrania"
+    },
+    {
+      "question": 28,
+      "title": "SUNCT and SUNA",
+      "decision": "SUNCT and SUNA"
+    },
+    {
+      "question": 29,
+      "title": "Hemicrania Continua",
+      "decision": "Hemicrania continua"
+    },
+    {
+      "question": 30,
+      "title": "Trigeminal Neuralgia Phenotype",
+      "decision": "Trigeminal neuralgia phenotype"
+    },
+    {
+      "question": 31,
+      "title": "MRI in Suspected Trigeminal Neuralgia",
+      "decision": "MRI and secondary causes"
+    },
+    {
+      "question": 32,
+      "title": "First-Choice Pharmacotherapy for Trigeminal Neuralgia",
+      "decision": "Carbamazepine or oxcarbazepine selection"
+    },
+    {
+      "question": 33,
+      "title": "Microvascular Decompression",
+      "decision": "Microvascular decompression"
+    },
+    {
+      "question": 34,
+      "title": "Glossopharyngeal Neuralgia With Syncope",
+      "decision": "Glossopharyngeal neuralgia"
+    },
+    {
+      "question": 35,
+      "title": "Occipital Neuralgia",
+      "decision": "Occipital neuralgia"
+    },
+    {
+      "question": 36,
+      "title": "Giant-Cell Arteritis With Threatened Vision",
+      "decision": "Giant-cell arteritis and urgent treatment"
+    },
+    {
+      "question": 37,
+      "title": "Idiopathic Intracranial Hypertension",
+      "decision": "Idiopathic intracranial hypertension"
+    },
+    {
+      "question": 38,
+      "title": "Spontaneous Intracranial Hypotension",
+      "decision": "Spontaneous intracranial hypotension"
+    },
+    {
+      "question": 39,
+      "title": "Reversible Cerebral Vasoconstriction Syndrome",
+      "decision": "Reversible cerebral vasoconstriction syndrome"
+    },
+    {
+      "question": 40,
+      "title": "Cough Headache and the Craniovertebral Junction",
+      "decision": "Cough headache and Chiari evaluation"
+    },
+    {
+      "question": 41,
+      "title": "Red Flags That Change Imaging Decisions",
+      "decision": "Red flags requiring imaging"
+    },
+    {
+      "question": 42,
+      "title": "Post-Dural-Puncture Headache and Blood Patch",
+      "decision": "Post-dural-puncture headache and blood patch"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
   "delivery": "One JSON file per chapter; preserve app-compatible questions, options, correctIndex, explanation and explanationHtml fields",
   "audience": "MD/DNB Medicine graduates preparing for NEET-SS Medical Group",
   "sequence": "Finish one chapter before starting the next. Finish subjects in progress.json subjectOrder.",
+  "questionCounts": "Determine each chapter's total from a documented map of distinct high-yield concepts and decisions. Do not enforce the original provisional 30/40 targets or imply they reflect official examination weights. Audit existing chapters for coverage gaps before final completion.",
   "questions": {
     "distribution": "Continuous logical topic progression; no random alternation or unnecessary repeated concepts",
     "difficulty": "Clinical reasoning with four closely competing medically plausible alternatives; one defensible best answer",

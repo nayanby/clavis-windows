@@ -2,6 +2,21 @@
 import json,re
 from qbank_json_chapters import ROOT,DATA,SUBJECTS,validate
 
+ONCOLOGY=[
+ '01. Cancer Biology, Molecular Pathology, Staging & Screening',
+ '02. Cytotoxic, Targeted & Endocrine Anticancer Therapy',
+ '03. Cancer Immunotherapy & Immune-Related Adverse Events',
+ '04. Oncologic Emergencies',
+ '05. Lung Cancer, Mesothelioma & Thoracic Malignancies',
+ '06. Breast Cancer',
+ '07. Gastrointestinal, Hepatobiliary & Pancreatic Cancers',
+ '08. Genitourinary & Germ-Cell Malignancies',
+ '09. Lymphomas',
+ '10. Acute Leukemias & Myelodysplastic Neoplasms',
+ '11. Chronic Leukemias & Myeloproliferative Neoplasms',
+ '12. Plasma-Cell Neoplasms & Related Disorders',
+ '13. Other Solid Tumors, Unknown Primary & Supportive Oncology']
+
 def number(name):
     m=re.match(r'(?:Chapter_)?(\d+)',name,re.I)
     if m:return int(m[1])
@@ -16,6 +31,7 @@ def main():
     chapters=[]
     for subject in SUBJECTS:
         names=[p.stem for p in (DATA/'files'/subject).glob('*.docx')]
+        if subject=='Oncology':names=ONCOLOGY
         if subject in {'Cardiology','Endocrine','Nephrology'}:names=[n for n in names if n.startswith('Chapter_')]
         if subject=='GI & pancreas':names=[n for n in names if re.match(r'^\d+[.]',n)]
         for name in sorted(names,key=lambda x:(number(x),x.casefold())):
@@ -26,11 +42,14 @@ def main():
             chapters.append(row)
     # Preserve any later explicitly added chapter rather than dropping it on refresh.
     keys={(x['subject'],x['document']) for x in chapters}
-    chapters.extend(x for k,x in bykey.items() if k not in keys)
+    superseded=[x for k,x in bykey.items() if k not in keys and x['status']=='pending' and (x['subject']=='Liver' or (x['subject']=='Oncology' and x['document']=='Basics'))]
+    chapters.extend(x for k,x in bykey.items() if k not in keys and x not in superseded)
+    pending=next((x for x in chapters if x['status']=='pending'),None)
     plan=dict(subjectOrder=SUBJECTS,delivery='JSON only; one chapter at a time',
-      defaultQuestions=30,broadChapterQuestions=40,
-      selectionPolicy='Use canonical numbered sets. Exclude older overlapping Endocrine/GI sets, duplicate Biostatistics folder and unnamed placeholders. Oncology currently has one source chapter (Basics); expand its coverage explicitly if needed.',
-      currentChapter='Neurology 02. Cerebrovascular Diseases',chapters=chapters)
+      questionCountPolicy='Coverage-driven: enumerate distinct high-yield decisions per chapter, allocate questions by diagnostic and therapeutic complexity, then remove duplication. The original 30/40 counts were provisional, not official exam weights or completeness evidence.',
+      selectionPolicy='Use current canonical numbered sets; exclude older overlapping Endocrine/GI sets and duplicate Biostatistics folder. Hepatology supersedes the old Liver set. The sole Oncology Basics source is empty, so a full 13-chapter oncology syllabus is planned independently.',
+      supersededSourceChapters=existing.get('supersededSourceChapters',[])+superseded,
+      currentChapter=(pending['subject']+' '+pending['document']) if pending else 'All planned chapters installed',chapters=chapters)
     (ROOT/'progress.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(dict(plannedChapters=len(chapters),bySubject={s:sum(x['subject']==s for x in chapters) for s in SUBJECTS}),indent=2))
 
