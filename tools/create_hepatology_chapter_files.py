@@ -5,7 +5,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 from xml.etree import ElementTree as E
 
 ROOT = Path(__file__).resolve().parents[1]
-DEST = Path(r'C:\Users\ANT-PC\OneDrive\Cortex Windows\data\files\Liver')
+DEST = Path(r'C:\Users\ANT-PC\OneDrive\Cortex Windows\data\files\Hepatology')
 TEMPLATE = next((ROOT / 'data/files/Research Methodology & Biostatistics').glob('01.*.docx'))
 TITLES = [
     'Liver Function Tests, Acute Viral Hepatitis (HAV, HEV) & Acute Liver Failure',
