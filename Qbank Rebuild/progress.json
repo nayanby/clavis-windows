@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 07. Movement Disorders & Cerebellar Ataxias",
+  "currentChapter": "Neurology 08. Dementia & Cognitive Disorders",
   "chapters": [
     {
       "subject": "Neurology",
@@ -266,7 +266,27 @@
       "subject": "Neurology",
       "chapter": 7,
       "document": "07. Movement Disorders & Cerebellar Ataxias",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/07. Movement Disorders & Cerebellar Ataxias.json",
+      "validation": {
+        "questions": 52,
+        "answerDistribution": {
+          "A": 13,
+          "B": 13,
+          "C": 13,
+          "D": 13
+        },
+        "minimumExplanationWords": 242,
+        "distractorRationales": 156,
+        "questionStyles": {
+          "direct": 8,
+          "clinical_scenario": 44
+        },
+        "status": "passed"
+      },
+      "installedSha256": "b05cc17541e0047654daabe6a48bd2d5717c269bbb4f0ad68cf06d3b80726a4a",
+      "coverageMap": "Neurology/07. Movement Disorders & Cerebellar Ataxias.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",

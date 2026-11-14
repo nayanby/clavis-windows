@@ -1,0 +1,149 @@
+{
+  "chapter": 7,
+  "status": "installed_verified",
+  "draftedQuestions": 52,
+  "plannedQuestions": 52,
+  "installed": true,
+  "draftValidation": {
+    "scope": "Full 52-question chapter",
+    "status": "passed",
+    "answerDistribution": [
+      13,
+      13,
+      13,
+      13
+    ],
+    "minimumExplanationWords": 242,
+    "distractorRationales": 156,
+    "independentClinicalReview": false
+  },
+  "sourceChecks": [
+    {
+      "source": "MDS Parkinson disease clinical criteria, 2015, and MDS position statement",
+      "checked": [
+        "Motor prerequisite",
+        "Exclusions versus red flags",
+        "Supportive findings",
+        "DAT imaging limitations"
+      ]
+    },
+    {
+      "source": "AAN early dopaminergic therapy guideline, 2021",
+      "checked": [
+        "Levodopa preference",
+        "Age and cognitive vulnerability",
+        "Agonist impulse-control and sleep effects"
+      ]
+    },
+    {
+      "source": "NICE NG71",
+      "checked": [
+        "Fluctuation and dyskinesia management",
+        "Device-aided options",
+        "Psychosis and autonomic care"
+      ]
+    },
+    {
+      "source": "Prescribing information",
+      "checked": [
+        "Carbidopa/levodopa immediate-release 2026",
+        "Rasagiline opioid and CYP1A2 interactions",
+        "Opicapone 2025 regimen",
+        "Amantadine formulation/renal precautions",
+        "Pimavanserin 2026",
+        "Midodrine daytime and bedtime precautions",
+        "FDA foscarbidopa/foslevodopa infusion indication 2024"
+      ]
+    },
+    {
+      "source": "FDA clozapine communication, 2025",
+      "checked": [
+        "REMS removal distinguished from continuing ANC monitoring"
+      ]
+    },
+    {
+      "source": "CNS STN versus GPi guideline, 2018",
+      "checked": [
+        "Medication reduction",
+        "Cognitive and mood concerns",
+        "Dyskinesia goals"
+      ]
+    },
+    {
+      "source": "AASM RBD guideline, 2023",
+      "checked": [
+        "Injury prevention",
+        "Conditional medication recommendations"
+      ]
+    },
+    {
+      "source": "MDS PSP 2017 and MSA 2022 criteria; CBD 2013 criteria",
+      "checked": [
+        "Supranuclear gaze physiology",
+        "Established/probable MSA distinction",
+        "CBS clinicopathological heterogeneity"
+      ]
+    },
+    {
+      "source": "German Society of Neurology akinetic-crisis guidance, 2024",
+      "checked": [
+        "Dopaminergic restoration",
+        "Supportive management",
+        "Withdrawal and infection triggers"
+      ]
+    },
+    {
+      "source": "Tremor/dystonia sources",
+      "checked": [
+        "MDS tremor classification 2018",
+        "AAN ET 2011 versus MDS medical-treatment evidence review 2026 distinguished",
+        "Functional tremor validation study",
+        "AAN botulinum guideline 2016",
+        "Acute dystonia guidance with adult rescue doses",
+        "GCH1 GeneReviews"
+      ]
+    },
+    {
+      "source": "Chorea/tics sources",
+      "checked": [
+        "Huntington GeneReviews repeat ranges and assay caveats",
+        "Huntington international treatment guidance",
+        "Tetrabenazine and valbenazine label warnings",
+        "AASLD 2022 and EASL-ERN Wilson 2025",
+        "CDC tic diagnostic criteria",
+        "AAN tic treatment guideline 2019",
+        "Cortical myoclonus electrophysiology and levetiracetam study"
+      ]
+    },
+    {
+      "source": "Ataxia sources",
+      "checked": [
+        "AHA/ASA 2026 posterior-fossa deterioration management",
+        "GeneReviews FRDA, SCA2, SCA7, FMR1, RFC1, FGF14, EA1 and AVED",
+        "Omaveloxolone 2026 label",
+        "EA2 randomized crossover treatment trial 2021",
+        "PNS diagnostic/screening consensus 2021"
+      ]
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "No independent clinician review",
+    "Full Harrison subscription text not accessed",
+    "US and UK regulatory examples do not establish availability or approval in India"
+  ],
+  "editorialReview": [
+    "52 mapped decisions aligned to 52 questions in sequence",
+    "156 individualized distractor rationales",
+    "Several weak alternatives replaced with clinically realistic competing diagnoses or strategies",
+    "MSA summary-table versus operational-lexicon PVR boundary difference explicitly qualified",
+    "Current evidence ratings and jurisdiction-specific approvals distinguished",
+    "Threshold/dose highlights applied in teaching text; HTML and schema validation passed"
+  ],
+  "installationEvidence": {
+    "preservedOtherBanks": 6,
+    "runtimeSourceComparison": "passed",
+    "projectInstalledChapters": 7,
+    "projectInstalledQuestions": 298
+  }
+}

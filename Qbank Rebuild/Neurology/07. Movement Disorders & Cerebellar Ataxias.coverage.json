@@ -1,0 +1,378 @@
+{
+  "chapter": "07. Movement Disorders & Cerebellar Ataxias",
+  "status": "installed_verified",
+  "plannedQuestions": 52,
+  "countBasis": "Each question tests one distinct high-yield decision. The 52-decision map follows the combined breadth of parkinsonism, hyperkinetic disorders and ataxias; it is not an official NEET-SS weighting or a fixed chapter quota.",
+  "sections": [
+    {
+      "section": "Parkinson disease",
+      "questions": 19,
+      "decisions": [
+        "Establish motor parkinsonism using bradykinesia plus rigidity or rest tremor",
+        "Distinguish PD absolute exclusions, red flags and supportive features",
+        "Interpret dopamine-transporter imaging and its inability to separate degenerative parkinsonian syndromes",
+        "Distinguish important dominant and recessive PD genetic contexts",
+        "Choose initial levodopa for functionally significant motor symptoms without claiming neuroprotection from delay",
+        "Apply carbidopa-levodopa pharmacology and absorption principles",
+        "Recognize dopamine-agonist impulse-control and sleep-related adverse effects",
+        "Use MAO-B inhibitors with attention to serotonergic and opioid interactions",
+        "Compare COMT inhibitors, dosing context and liver toxicity",
+        "Manage predictable end-of-dose wearing-off",
+        "Differentiate peak-dose dyskinesia and select amantadine or dose adjustment appropriately",
+        "Distinguish OFF-related freezing from levodopa-resistant axial dysfunction",
+        "Select a suitable DBS candidate using levodopa responsiveness and cognitive/psychiatric status",
+        "Choose STN versus GPi according to medication-reduction, dyskinesia and cognitive goals",
+        "Treat persistent PD psychosis after reversible causes and medication review",
+        "Manage neurogenic orthostatic hypotension while monitoring supine hypertension",
+        "Confirm REM sleep behavior disorder and choose injury prevention plus suitable medication",
+        "Recognize parkinsonism-hyperpyrexia after interruption of dopaminergic treatment",
+        "Identify continuous levodopa delivery options for advanced motor fluctuations"
+      ]
+    },
+    {
+      "section": "Atypical and secondary parkinsonism",
+      "questions": 5,
+      "decisions": [
+        "Recognize PSP Richardson phenotype and supranuclear vertical gaze dysfunction",
+        "Apply the established-versus-probable 2022 MDS MSA framework",
+        "Interpret MSA MRI and autonomic findings without treating a hot-cross-bun sign as pathognomonic",
+        "Distinguish corticobasal syndrome from a definitive pathological diagnosis",
+        "Evaluate dopamine-blocker-associated parkinsonism and possible unmasking of PD"
+      ]
+    },
+    {
+      "section": "Tremor syndromes",
+      "questions": 5,
+      "decisions": [
+        "Apply the 2018 essential-tremor duration and isolated-syndrome framework",
+        "Choose essential-tremor medication according to comorbidity and dose tolerance",
+        "Recognize high-frequency orthostatic tremor and confirm with surface EMG",
+        "Recognize Holmes tremor after a structural lesion",
+        "Diagnose functional tremor from positive inconsistency and entrainment signs"
+      ]
+    },
+    {
+      "section": "Dystonia",
+      "questions": 4,
+      "decisions": [
+        "Recognize patterned dystonia, sensory tricks and task specificity",
+        "Select botulinum toxin for focal cervical dystonia and anticipate local adverse effects",
+        "Treat acute dopamine-blocker-induced dystonia and protect the airway",
+        "Recognize dopa-responsive dystonia and offer a low-dose levodopa trial"
+      ]
+    },
+    {
+      "section": "Chorea and related disorders",
+      "questions": 5,
+      "decisions": [
+        "Interpret Huntington CAG repeat ranges and anticipation with genetic counselling",
+        "Choose symptomatic Huntington chorea therapy in the context of mood and psychiatric illness",
+        "Diagnose tardive dyskinesia and select VMAT2-directed treatment without worsening the syndrome",
+        "Evaluate neurological Wilson disease using a composite diagnostic approach",
+        "Choose Wilson therapy and monitor neurological worsening and copper balance"
+      ]
+    },
+    {
+      "section": "Tics and myoclonus",
+      "questions": 3,
+      "decisions": [
+        "Apply Tourette syndrome duration, age and motor/vocal tic requirements",
+        "Select behavioral or pharmacological tic treatment by functional burden and comorbidity",
+        "Identify cortical myoclonus using electrophysiology and choose a suitable treatment"
+      ]
+    },
+    {
+      "section": "Cerebellar and inherited ataxias",
+      "questions": 11,
+      "decisions": [
+        "Localize cerebellar gait, limb and ocular findings without duplicating the examination chapter",
+        "Differentiate sensory and bilateral vestibular ataxia from cerebellar dysfunction",
+        "Prioritize acute cerebellar stroke evaluation and posterior-fossa deterioration",
+        "Recognize Friedreich ataxia, inheritance, systemic screening and disease-specific therapy limits",
+        "Match common dominant SCA repeat disorders with useful discriminating clinical features",
+        "Recognize FXTAS and interpret an FMR1 premutation",
+        "Recognize RFC1-associated CANVAS and request repeat-expansion testing",
+        "Recognize FGF14 GAA-expansion late-onset ataxia and its testing limitations",
+        "Distinguish episodic ataxia type 1 and type 2 and choose appropriate preventive therapy",
+        "Investigate treatable nutritional, toxic and gluten-associated ataxias without assuming a negative MRI excludes them",
+        "Recognize rapidly progressive immune/paraneoplastic cerebellar syndromes and prioritize cancer evaluation"
+      ]
+    }
+  ],
+  "crossChapterBoundaries": [
+    "PD psychosis and RBD are treated here; detailed Lewy-body dementia and the one-year convention belong to the next cognitive-disorders chapter.",
+    "Cerebellar localization is limited to movement/ataxia decisions; a full neurological examination was covered in Chapter 1.",
+    "Acute ataxia questions address syndrome recognition and posterior-fossa deterioration rather than repeating the complete stroke reperfusion algorithm.",
+    "Wilson disease coverage emphasizes neurological recognition and treatment hazards; hepatology will address liver-specific decisions."
+  ],
+  "requiredFinalReview": [
+    "Check criterion versions and exact diagnostic thresholds against original consensus documents.",
+    "Verify medication doses, interactions and current regulatory indications, distinguishing US/UK examples from local availability.",
+    "Confirm current repeat-expansion and ataxia therapeutic evidence, including limits of exome sequencing.",
+    "Review every question for one defensible best answer and closely competing distractors.",
+    "Install only the completed validated chapter; record source-access and independent-review limits."
+  ],
+  "authoredQuestions": 52,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Establishing Motor Parkinsonism",
+      "decision": "Establish motor parkinsonism using bradykinesia plus rigidity or rest tremor"
+    },
+    {
+      "question": 2,
+      "title": "Exclusion Criteria Versus Red Flags",
+      "decision": "Distinguish PD absolute exclusions, red flags and supportive features"
+    },
+    {
+      "question": 3,
+      "title": "What Dopamine-Transporter Imaging Can Establish",
+      "decision": "Interpret dopamine-transporter imaging and its inability to separate degenerative parkinsonian syndromes"
+    },
+    {
+      "question": 4,
+      "title": "Early-Onset Recessive Parkinsonism",
+      "decision": "Distinguish important dominant and recessive PD genetic contexts"
+    },
+    {
+      "question": 5,
+      "title": "Choosing Initial Dopaminergic Treatment",
+      "decision": "Choose initial levodopa for functionally significant motor symptoms without claiming neuroprotection from delay"
+    },
+    {
+      "question": 6,
+      "title": "Carbidopa–Levodopa Pharmacology",
+      "decision": "Apply carbidopa-levodopa pharmacology and absorption principles"
+    },
+    {
+      "question": 7,
+      "title": "Dopamine-Agonist Impulse-Control Disorder",
+      "decision": "Recognize dopamine-agonist impulse-control and sleep-related adverse effects"
+    },
+    {
+      "question": 8,
+      "title": "Rasagiline and Interacting Analgesics",
+      "decision": "Use MAO-B inhibitors with attention to serotonergic and opioid interactions"
+    },
+    {
+      "question": 9,
+      "title": "COMT Inhibitors as Levodopa Adjuncts",
+      "decision": "Compare COMT inhibitors, dosing context and liver toxicity"
+    },
+    {
+      "question": 10,
+      "title": "Predictable End-of-Dose Wearing-Off",
+      "decision": "Manage predictable end-of-dose wearing-off"
+    },
+    {
+      "question": 11,
+      "title": "Peak-Dose Dyskinesia",
+      "decision": "Differentiate peak-dose dyskinesia and select amantadine or dose adjustment appropriately"
+    },
+    {
+      "question": 12,
+      "title": "Freezing of Gait and Medication State",
+      "decision": "Distinguish OFF-related freezing from levodopa-resistant axial dysfunction"
+    },
+    {
+      "question": 13,
+      "title": "Selecting a DBS Candidate",
+      "decision": "Select a suitable DBS candidate using levodopa responsiveness and cognitive/psychiatric status"
+    },
+    {
+      "question": 14,
+      "title": "Choosing STN Versus GPi Stimulation",
+      "decision": "Choose STN versus GPi according to medication-reduction, dyskinesia and cognitive goals"
+    },
+    {
+      "question": 15,
+      "title": "Persistent Parkinson Disease Psychosis",
+      "decision": "Treat persistent PD psychosis after reversible causes and medication review"
+    },
+    {
+      "question": 16,
+      "title": "Neurogenic Orthostatic Hypotension",
+      "decision": "Manage neurogenic orthostatic hypotension while monitoring supine hypertension"
+    },
+    {
+      "question": 17,
+      "title": "REM Sleep Behavior Disorder",
+      "decision": "Confirm REM sleep behavior disorder and choose injury prevention plus suitable medication"
+    },
+    {
+      "question": 18,
+      "title": "Parkinsonism–Hyperpyrexia Syndrome",
+      "decision": "Recognize parkinsonism-hyperpyrexia after interruption of dopaminergic treatment"
+    },
+    {
+      "question": 19,
+      "title": "Continuous Levodopa Delivery",
+      "decision": "Identify continuous levodopa delivery options for advanced motor fluctuations"
+    },
+    {
+      "question": 20,
+      "title": "PSP Richardson Syndrome",
+      "decision": "Recognize PSP Richardson phenotype and supranuclear vertical gaze dysfunction"
+    },
+    {
+      "question": 21,
+      "title": "MDS MSA Criteria: Established Versus Probable",
+      "decision": "Apply the established-versus-probable 2022 MDS MSA framework"
+    },
+    {
+      "question": 22,
+      "title": "MSA Imaging in Clinical Context",
+      "decision": "Interpret MSA MRI and autonomic findings without treating a hot-cross-bun sign as pathognomonic"
+    },
+    {
+      "question": 23,
+      "title": "Corticobasal Syndrome Is Not a Pathological Diagnosis",
+      "decision": "Distinguish corticobasal syndrome from a definitive pathological diagnosis"
+    },
+    {
+      "question": 24,
+      "title": "Dopamine-Blocker-Associated Parkinsonism",
+      "decision": "Evaluate dopamine-blocker-associated parkinsonism and possible unmasking of PD"
+    },
+    {
+      "question": 25,
+      "title": "Essential Tremor: The 2018 Syndrome Definition",
+      "decision": "Apply the 2018 essential-tremor duration and isolated-syndrome framework"
+    },
+    {
+      "question": 26,
+      "title": "Essential Tremor Treatment with Asthma",
+      "decision": "Choose essential-tremor medication according to comorbidity and dose tolerance"
+    },
+    {
+      "question": 27,
+      "title": "High-Frequency Orthostatic Tremor",
+      "decision": "Recognize high-frequency orthostatic tremor and confirm with surface EMG"
+    },
+    {
+      "question": 28,
+      "title": "Holmes Tremor After a Structural Lesion",
+      "decision": "Recognize Holmes tremor after a structural lesion"
+    },
+    {
+      "question": 29,
+      "title": "Positive Signs of Functional Tremor",
+      "decision": "Diagnose functional tremor from positive inconsistency and entrainment signs"
+    },
+    {
+      "question": 30,
+      "title": "Patterned Posture and a Sensory Trick",
+      "decision": "Recognize patterned dystonia, sensory tricks and task specificity"
+    },
+    {
+      "question": 31,
+      "title": "Botulinum Toxin for Cervical Dystonia",
+      "decision": "Select botulinum toxin for focal cervical dystonia and anticipate local adverse effects"
+    },
+    {
+      "question": 32,
+      "title": "Acute Dopamine-Blocker-Induced Dystonia",
+      "decision": "Treat acute dopamine-blocker-induced dystonia and protect the airway"
+    },
+    {
+      "question": 33,
+      "title": "Dopa-Responsive Dystonia",
+      "decision": "Recognize dopa-responsive dystonia and offer a low-dose levodopa trial"
+    },
+    {
+      "question": 34,
+      "title": "Huntington Repeat Ranges",
+      "decision": "Interpret Huntington CAG repeat ranges and anticipation with genetic counselling"
+    },
+    {
+      "question": 35,
+      "title": "Huntington Chorea with Psychiatric Comorbidity",
+      "decision": "Choose symptomatic Huntington chorea therapy in the context of mood and psychiatric illness"
+    },
+    {
+      "question": 36,
+      "title": "Tardive Dyskinesia",
+      "decision": "Diagnose tardive dyskinesia and select VMAT2-directed treatment without worsening the syndrome"
+    },
+    {
+      "question": 37,
+      "title": "Neurological Wilson Disease: Composite Diagnosis",
+      "decision": "Evaluate neurological Wilson disease using a composite diagnostic approach"
+    },
+    {
+      "question": 38,
+      "title": "Treating Neurological Wilson Disease",
+      "decision": "Choose Wilson therapy and monitor neurological worsening and copper balance"
+    },
+    {
+      "question": 39,
+      "title": "Tourette Syndrome Diagnostic Requirements",
+      "decision": "Apply Tourette syndrome duration, age and motor/vocal tic requirements"
+    },
+    {
+      "question": 40,
+      "title": "Choosing Treatment for Troublesome Tics",
+      "decision": "Select behavioral or pharmacological tic treatment by functional burden and comorbidity"
+    },
+    {
+      "question": 41,
+      "title": "Electrophysiological Evidence of Cortical Myoclonus",
+      "decision": "Identify cortical myoclonus using electrophysiology and choose a suitable treatment"
+    },
+    {
+      "question": 42,
+      "title": "Cerebellar Limb and Gait Localization",
+      "decision": "Localize cerebellar gait, limb and ocular findings without duplicating the examination chapter"
+    },
+    {
+      "question": 43,
+      "title": "Sensory Versus Vestibular Ataxia",
+      "decision": "Differentiate sensory and bilateral vestibular ataxia from cerebellar dysfunction"
+    },
+    {
+      "question": 44,
+      "title": "Acute Cerebellar Ataxia Requires Urgent Assessment",
+      "decision": "Prioritize acute cerebellar stroke evaluation and posterior-fossa deterioration"
+    },
+    {
+      "question": 45,
+      "title": "Friedreich Ataxia: Multisystem Recognition",
+      "decision": "Recognize Friedreich ataxia, inheritance, systemic screening and disease-specific therapy limits"
+    },
+    {
+      "question": 46,
+      "title": "A Discriminating Clue in Dominant SCA",
+      "decision": "Match common dominant SCA repeat disorders with useful discriminating clinical features"
+    },
+    {
+      "question": 47,
+      "title": "Fragile X-Associated Tremor/Ataxia Syndrome",
+      "decision": "Recognize FXTAS and interpret an FMR1 premutation"
+    },
+    {
+      "question": 48,
+      "title": "RFC1-Related CANVAS",
+      "decision": "Recognize RFC1-associated CANVAS and request repeat-expansion testing"
+    },
+    {
+      "question": 49,
+      "title": "FGF14 GAA-Expansion Ataxia",
+      "decision": "Recognize FGF14 GAA-expansion late-onset ataxia and its testing limitations"
+    },
+    {
+      "question": 50,
+      "title": "Episodic Ataxia Type 2",
+      "decision": "Distinguish episodic ataxia type 1 and type 2 and choose appropriate preventive therapy"
+    },
+    {
+      "question": 51,
+      "title": "Treatable Causes of Progressive Ataxia",
+      "decision": "Investigate treatable nutritional, toxic and gluten-associated ataxias without assuming a negative MRI excludes them"
+    },
+    {
+      "question": 52,
+      "title": "Rapidly Progressive Paraneoplastic Cerebellar Syndrome",
+      "decision": "Recognize rapidly progressive immune/paraneoplastic cerebellar syndromes and prioritize cancer evaluation"
+    }
+  ]
+}
