@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 06. Multiple Sclerosis & Other CNS Demyelinating Disorders",
+  "currentChapter": "Neurology 07. Movement Disorders & Cerebellar Ataxias",
   "chapters": [
     {
       "subject": "Neurology",
@@ -240,7 +240,27 @@
       "subject": "Neurology",
       "chapter": 6,
       "document": "06. Multiple Sclerosis & Other CNS Demyelinating Disorders",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/06. Multiple Sclerosis & Other CNS Demyelinating Disorders.json",
+      "validation": {
+        "questions": 44,
+        "answerDistribution": {
+          "A": 11,
+          "B": 11,
+          "C": 11,
+          "D": 11
+        },
+        "minimumExplanationWords": 263,
+        "distractorRationales": 132,
+        "questionStyles": {
+          "clinical_scenario": 33,
+          "direct": 11
+        },
+        "status": "passed"
+      },
+      "installedSha256": "3b923e9f49a3cb094b7a39e8e36de28a63ed62201978f261c8bc3355b3c60ee5",
+      "coverageMap": "Neurology/06. Multiple Sclerosis & Other CNS Demyelinating Disorders.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",

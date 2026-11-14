@@ -1,0 +1,81 @@
+{
+  "chapter": 6,
+  "status": "installed_verified",
+  "draftedQuestions": 44,
+  "installed": true,
+  "verifiedPrimarySources": [
+    {
+      "title": "2024 McDonald revisions, published 2025",
+      "url": "https://cdn.sebia.com/wp-content/uploads/Montalban-2025.pdf",
+      "checked": [
+        "Five CNS regions",
+        "Four-region typical-presentation pathway",
+        "CSF kappa free-light-chain alternative",
+        "Single-region PRL plus CSF or DIT",
+        "Unified progressive-onset framework",
+        "Older/vascular specificity advice",
+        "RIS pathways"
+      ]
+    },
+    {
+      "title": "NEMOS Part I, 2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10267280/",
+      "checked": [
+        "Diagnostic and differential framework; detailed question-level review pending"
+      ]
+    },
+    {
+      "title": "International MOGAD criteria, 2023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36706773/",
+      "checked": [
+        "Primary citation confirmed; detailed assay thresholds require full-text review"
+      ]
+    },
+    {
+      "title": "Current US DMT labels checked",
+      "checked": [
+        "Ocrelizumab May 2026",
+        "Teriflunomide 2026",
+        "Cladribine May 2026: sex-specific contraception intervals",
+        "Fingolimod 2025",
+        "Dimethyl fumarate June 2025",
+        "FDA glatiramer anaphylaxis warning January 2025"
+      ]
+    },
+    {
+      "title": "MOGAD maintenance evidence update",
+      "checked": [
+        "2022 adult IVIG cohort identified; retrospective rather than randomized",
+        "2026 METEOROID randomized satralizumab conference results identified",
+        "September 2026 priority review announcement identified; approval status must be checked before finalizing wording"
+      ]
+    }
+  ],
+  "editorialIssues": [
+    {
+      "issue": "The McDonald paper main text describes a majority rule with fewer than ten lesions, while a figure footnote says fewer than six. Do not make an ambiguous low-lesion-count case a single-best-answer MCQ.",
+      "action": "Drafted select-6 question uses seven qualifying lesions out of fourteen. Review an authoritative clarification before adding low-count numerical teaching."
+    }
+  ],
+  "remaining": [],
+  "reviewLimitations": [
+    "No independent clinician review",
+    "Full Harrison subscription text not accessed",
+    "Low-lesion-count CVS wording inconsistency avoided rather than resolved",
+    "MOGAD METEOROID results identified from conference abstract and sponsor report, not represented as full peer-reviewed trial publication"
+  ],
+  "editorialReviewCompleted": [
+    "44 unique coverage decisions aligned in order",
+    "Complete seronegative NMOSD MRI comparison table added",
+    "Distractors revised in acute rescue, DMT escalation, cortical encephalitis, myelitis and ADEM questions",
+    "Stale added-barrier contraceptive advice corrected against May 2026 cladribine label",
+    "MOGAD trial evidence separated from FDA approval; orphan record and priority-review timeline checked",
+    "44 MCQs, 132 distractor rationales, 11 keys per option; HTML/structure validation passed"
+  ],
+  "installationEvidence": {
+    "preservedOtherBanks": 5,
+    "runtimeSourceComparison": "passed",
+    "projectInstalledChapters": 6,
+    "projectInstalledQuestions": 246
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "chapter": "06. Multiple Sclerosis & Other CNS Demyelinating Disorders",
+  "status": "installed_verified",
+  "countBasis": "One question per distinct high-yield diagnostic or therapeutic decision. This provisional 44-decision map reflects clinical breadth, not an official examination weighting. Final editorial review may add missing decisions or remove overlap.",
+  "plannedQuestions": 44,
+  "sections": [
+    {
+      "section": "MS diagnosis and classification",
+      "questions": 12,
+      "decisions": [
+        "Recognize a typical clinically isolated syndrome and exclude nonspecific symptoms",
+        "Distinguish characteristic MS lesion morphology from vascular white-matter disease",
+        "Identify the five dissemination-in-space regions in the 2024 revisions",
+        "Interpret CSF-restricted oligoclonal bands and the kappa free-light-chain alternative",
+        "Apply the four-or-five-region diagnostic pathway in a typical clinical presentation",
+        "Demonstrate MRI dissemination in time with new or simultaneous enhancing and nonenhancing lesions",
+        "Apply the adult select-6 central-vein-sign rule and its fewer-than-ten-lesion qualification",
+        "Use a paramagnetic rim lesion with the necessary accompanying evidence in single-region disease",
+        "Apply the unified progressive-onset pathway with at least twelve months of progression",
+        "Demand additional specificity in older patients or those with vascular comorbidity",
+        "Interpret the updated radiologically isolated presentation pathway without assuming every incidental lesion is MS",
+        "Distinguish disease activity from progression in MS phenotype descriptors"
+      ]
+    },
+    {
+      "section": "MS relapse treatment",
+      "questions": 3,
+      "decisions": [
+        "Distinguish infection-associated pseudorelapse from a new inflammatory attack",
+        "Choose an evidence-based high-dose methylprednisolone regimen for a disabling relapse",
+        "Escalate a severe steroid-refractory demyelinating attack to plasma exchange"
+      ]
+    },
+    {
+      "section": "MS disease-modifying therapy",
+      "questions": 10,
+      "decisions": [
+        "Select an individualized high-efficacy strategy for highly active relapsing disease",
+        "Recognize ocrelizumab evidence in primary progressive MS and the population limitation",
+        "Screen for hepatitis B and plan vaccination before anti-CD20 therapy",
+        "Stratify natalizumab-associated PML risk using JCV status, exposure and prior immunosuppression",
+        "Plan a monitored transition from fingolimod to minimize rebound disease",
+        "Recognize S1P-modulator cardiac and macular safety requirements",
+        "Use accelerated teriflunomide elimination in the appropriate reproductive context",
+        "Respond to persistent severe lymphopenia during dimethyl fumarate treatment",
+        "Apply cladribine pregnancy, infection and vaccination precautions",
+        "Match interferon beta and glatiramer acetate mechanisms and safety to a treatment context"
+      ]
+    },
+    {
+      "section": "Neuromyelitis optica spectrum disorder",
+      "questions": 8,
+      "decisions": [
+        "Apply AQP4-IgG-positive NMOSD diagnostic requirements using a cell-based assay",
+        "Apply stricter seronegative NMOSD criteria and MRI requirements",
+        "Recognize area postrema syndrome and its dorsal medullary correlate",
+        "Differentiate AQP4 myelitis from typical MS and MOG-associated myelitis",
+        "Use early apheresis for a severe NMOSD attack with inadequate steroid response",
+        "Distinguish C5, CD19 and IL-6 receptor preventive therapeutic targets",
+        "Plan meningococcal risk mitigation before complement inhibition",
+        "Avoid MS therapies that can fail or worsen AQP4-positive NMOSD"
+      ]
+    },
+    {
+      "section": "MOG antibody-associated disease",
+      "questions": 7,
+      "decisions": [
+        "Interpret a low-positive serum MOG-IgG result using the 2023 criteria",
+        "Recognize the anterior optic-neuritis and perineural enhancement phenotype",
+        "Recognize conus involvement and the gray-matter H-sign in MOG myelitis",
+        "Recognize unilateral cortical encephalitis with seizures and exclude infection",
+        "Distinguish ADEM with encephalopathy from a typical first MS attack",
+        "Treat acute MOGAD and individualize the steroid taper to relapse risk",
+        "Interpret maintenance IVIG evidence without claiming randomized superiority or universal need after one attack"
+      ]
+    },
+    {
+      "section": "Other demyelinating presentations and symptoms",
+      "questions": 4,
+      "decisions": [
+        "Evaluate an open-ring tumefactive lesion while retaining tumour and infection in the differential",
+        "Recognize concentric demyelination as a radiological pattern rather than an automatic separate etiology",
+        "Select symptom-directed treatment for spasticity while addressing reversible triggers",
+        "Apply dalfampridine seizure and renal contraindications for walking impairment"
+      ]
+    }
+  ],
+  "crossChapterBoundaries": [
+    "Detailed infectious demyelination and PML diagnosis belong to the completed CNS infections chapter; this chapter tests DMT-related risk and response rather than repeating infection questions.",
+    "Seizure management is not repeated in the MOG cortical encephalitis item.",
+    "Optic neuritis comparisons remain focused on inflammatory demyelinating disease."
+  ],
+  "requiredFinalReview": [
+    "Confirm each criterion against the original 2024 McDonald position paper published in 2025; label historical criteria explicitly.",
+    "Recheck current regulatory labels, exact doses, reproductive precautions and locally relevant approval limitations.",
+    "Verify the current MOGAD treatment evidence and approval status before wording maintenance questions.",
+    "Review all distractors for realistic competition and each explanation for standalone teaching value.",
+    "Do not install a partial draft or treat structural validation as independent clinical review."
+  ],
+  "authoredQuestions": 44,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "A Typical Clinically Isolated Syndrome",
+      "decision": "Recognize a typical clinically isolated syndrome and exclude nonspecific symptoms"
+    },
+    {
+      "question": 2,
+      "title": "MRI Lesion Morphology in Suspected MS",
+      "decision": "Distinguish characteristic MS lesion morphology from vascular white-matter disease"
+    },
+    {
+      "question": 3,
+      "title": "Dissemination in Space: The 2024 Framework",
+      "decision": "Identify the five dissemination-in-space regions in the 2024 revisions"
+    },
+    {
+      "question": 4,
+      "title": "CSF Biomarkers in the Updated MS Criteria",
+      "decision": "Interpret CSF-restricted oligoclonal bands and the kappa free-light-chain alternative"
+    },
+    {
+      "question": 5,
+      "title": "Four-Region Disease in a Typical Presentation",
+      "decision": "Apply the four-or-five-region diagnostic pathway in a typical clinical presentation"
+    },
+    {
+      "question": 6,
+      "title": "MRI Dissemination in Time",
+      "decision": "Demonstrate MRI dissemination in time with new or simultaneous enhancing and nonenhancing lesions"
+    },
+    {
+      "question": 7,
+      "title": "The Central Vein Sign in Adults",
+      "decision": "Apply the adult select-6 central-vein-sign rule and its fewer-than-ten-lesion qualification"
+    },
+    {
+      "question": 8,
+      "title": "Paramagnetic Rim Lesions in Single-Region Disease",
+      "decision": "Use a paramagnetic rim lesion with the necessary accompanying evidence in single-region disease"
+    },
+    {
+      "question": 9,
+      "title": "Progressive-Onset MS: The Unified Framework",
+      "decision": "Apply the unified progressive-onset pathway with at least twelve months of progression"
+    },
+    {
+      "question": 10,
+      "title": "Specificity in Older Patients with Vascular Risk",
+      "decision": "Demand additional specificity in older patients or those with vascular comorbidity"
+    },
+    {
+      "question": 11,
+      "title": "Incidental Demyelinating-Pattern MRI Findings",
+      "decision": "Interpret the updated radiologically isolated presentation pathway without assuming every incidental lesion is MS"
+    },
+    {
+      "question": 12,
+      "title": "Activity and Progression Are Separate Descriptors",
+      "decision": "Distinguish disease activity from progression in MS phenotype descriptors"
+    },
+    {
+      "question": 13,
+      "title": "Infection-Associated Pseudorelapse",
+      "decision": "Distinguish infection-associated pseudorelapse from a new inflammatory attack"
+    },
+    {
+      "question": 14,
+      "title": "High-Dose Methylprednisolone for a Disabling Relapse",
+      "decision": "Choose an evidence-based high-dose methylprednisolone regimen for a disabling relapse"
+    },
+    {
+      "question": 15,
+      "title": "Rescue Therapy for a Severe Steroid-Refractory Attack",
+      "decision": "Escalate a severe steroid-refractory demyelinating attack to plasma exchange"
+    },
+    {
+      "question": 16,
+      "title": "Escalation for Highly Active Relapsing MS",
+      "decision": "Select an individualized high-efficacy strategy for highly active relapsing disease"
+    },
+    {
+      "question": 17,
+      "title": "Ocrelizumab in Primary Progressive MS",
+      "decision": "Recognize ocrelizumab evidence in primary progressive MS and the population limitation"
+    },
+    {
+      "question": 18,
+      "title": "Resolved Hepatitis B Before Anti-CD20 Therapy",
+      "decision": "Screen for hepatitis B and plan vaccination before anti-CD20 therapy"
+    },
+    {
+      "question": 19,
+      "title": "Natalizumab-Associated PML Risk",
+      "decision": "Stratify natalizumab-associated PML risk using JCV status, exposure and prior immunosuppression"
+    },
+    {
+      "question": 20,
+      "title": "Disease Reactivation After Fingolimod Withdrawal",
+      "decision": "Plan a monitored transition from fingolimod to minimize rebound disease"
+    },
+    {
+      "question": 21,
+      "title": "Fingolimod Initiation and Monitoring",
+      "decision": "Recognize S1P-modulator cardiac and macular safety requirements"
+    },
+    {
+      "question": 22,
+      "title": "Accelerated Teriflunomide Elimination",
+      "decision": "Use accelerated teriflunomide elimination in the appropriate reproductive context"
+    },
+    {
+      "question": 23,
+      "title": "Persistent Lymphopenia with Dimethyl Fumarate",
+      "decision": "Respond to persistent severe lymphopenia during dimethyl fumarate treatment"
+    },
+    {
+      "question": 24,
+      "title": "Cladribine Reproductive Precautions: A Versioned Label Question",
+      "decision": "Apply cladribine pregnancy, infection and vaccination precautions"
+    },
+    {
+      "question": 25,
+      "title": "Interferon Beta and Glatiramer Acetate",
+      "decision": "Match interferon beta and glatiramer acetate mechanisms and safety to a treatment context"
+    },
+    {
+      "question": 26,
+      "title": "AQP4-Positive NMOSD: Diagnostic Requirements",
+      "decision": "Apply AQP4-IgG-positive NMOSD diagnostic requirements using a cell-based assay"
+    },
+    {
+      "question": 27,
+      "title": "Seronegative NMOSD Requires More Evidence",
+      "decision": "Apply stricter seronegative NMOSD criteria and MRI requirements"
+    },
+    {
+      "question": 28,
+      "title": "Area Postrema Syndrome",
+      "decision": "Recognize area postrema syndrome and its dorsal medullary correlate"
+    },
+    {
+      "question": 29,
+      "title": "Comparing Inflammatory Myelitis Patterns",
+      "decision": "Differentiate AQP4 myelitis from typical MS and MOG-associated myelitis"
+    },
+    {
+      "question": 30,
+      "title": "Early Apheresis in a Severe NMOSD Attack",
+      "decision": "Use early apheresis for a severe NMOSD attack with inadequate steroid response"
+    },
+    {
+      "question": 31,
+      "title": "Targets of NMOSD Preventive Biologics",
+      "decision": "Distinguish C5, CD19 and IL-6 receptor preventive therapeutic targets"
+    },
+    {
+      "question": 32,
+      "title": "Meningococcal Prevention Before C5 Inhibition",
+      "decision": "Plan meningococcal risk mitigation before complement inhibition"
+    },
+    {
+      "question": 33,
+      "title": "MS Therapies Are Not Interchangeable with NMOSD Prevention",
+      "decision": "Avoid MS therapies that can fail or worsen AQP4-positive NMOSD"
+    },
+    {
+      "question": 34,
+      "title": "Interpreting Low-Positive MOG-IgG",
+      "decision": "Interpret a low-positive serum MOG-IgG result using the 2023 criteria"
+    },
+    {
+      "question": 35,
+      "title": "The MOG-Associated Optic-Neuritis Phenotype",
+      "decision": "Recognize the anterior optic-neuritis and perineural enhancement phenotype"
+    },
+    {
+      "question": 36,
+      "title": "Conus Involvement and the H-Sign",
+      "decision": "Recognize conus involvement and the gray-matter H-sign in MOG myelitis"
+    },
+    {
+      "question": 37,
+      "title": "Cortical Encephalitis with Seizures",
+      "decision": "Recognize unilateral cortical encephalitis with seizures and exclude infection"
+    },
+    {
+      "question": 38,
+      "title": "ADEM Requires an Encephalopathic Presentation",
+      "decision": "Distinguish ADEM with encephalopathy from a typical first MS attack"
+    },
+    {
+      "question": 39,
+      "title": "Acute MOGAD and Steroid Tapering",
+      "decision": "Treat acute MOGAD and individualize the steroid taper to relapse risk"
+    },
+    {
+      "question": 40,
+      "title": "Maintenance IVIG and Evolving MOGAD Evidence",
+      "decision": "Interpret maintenance IVIG evidence without claiming randomized superiority or universal need after one attack"
+    },
+    {
+      "question": 41,
+      "title": "An Open-Ring Tumefactive Lesion",
+      "decision": "Evaluate an open-ring tumefactive lesion while retaining tumour and infection in the differential"
+    },
+    {
+      "question": 42,
+      "title": "Concentric Demyelination",
+      "decision": "Recognize concentric demyelination as a radiological pattern rather than an automatic separate etiology"
+    },
+    {
+      "question": 43,
+      "title": "Goal-Directed Treatment of MS Spasticity",
+      "decision": "Select symptom-directed treatment for spasticity while addressing reversible triggers"
+    },
+    {
+      "question": 44,
+      "title": "Dalfampridine: Renal and Seizure Safety",
+      "decision": "Apply dalfampridine seizure and renal contraindications for walking impairment"
+    }
+  ]
+}
