@@ -251,6 +251,13 @@ def run(data, output, subject, sources, chapters, install=False, content_gaps=No
         'allContentPreserved': True, 'allPackageRelationshipsResolved': True}
     if install:
         assert all(digest(p) == h for p, h in before_hashes.items()), 'Concurrent edit detected'
+        # Detect open Word documents before changing any of the files.
+        for path in before_hashes:
+            try:
+                with path.open('r+b'):
+                    pass
+            except PermissionError as exc:
+                raise PermissionError(f'Close the locked document before installing: {path.name}') from exc
         backup = data / 'backups' / f'{subject.lower().replace(" ", "-")}-word-before-distribution-{time.time_ns()}.zip'
         backup.parent.mkdir(parents=True, exist_ok=True)
         with ZipFile(backup, 'x', ZIP_DEFLATED) as z:
@@ -274,7 +281,8 @@ def run(data, output, subject, sources, chapters, install=False, content_gaps=No
         except Exception:
             with ZipFile(backup) as z:
                 for p in before_hashes:
-                    p.write_bytes(z.read(p.name))
+                    if not p.exists() or digest(p) != before_hashes[p]:
+                        p.write_bytes(z.read(p.name))
             raise
         report.update(installed=True, backup=str(backup), installedFiles=[str(p) for p in placeholders])
     (output / 'distribution-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
