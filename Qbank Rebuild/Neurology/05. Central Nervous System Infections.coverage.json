@@ -1,0 +1,363 @@
+{
+  "chapter": "05. Central Nervous System Infections",
+  "status": "installed_verified",
+  "countBasis": "Each listed item tests a distinct diagnostic or treatment decision. Count follows chapter breadth and clinical importance, not an official NEET-SS weighting or a fixed 30/40 target.",
+  "plannedQuestions": 50,
+  "coverageRevision": "Added two distinct high-yield mould decisions after review: CNS aspergillosis and rhino-orbito-cerebral mucormycosis. This closes a fungal coverage gap rather than adding repeated cryptococcal questions.",
+  "sections": [
+    {
+      "section": "Diagnosis and immediate care",
+      "questions": 5,
+      "decisions": [
+        "CSF pattern and paired glucose interpretation",
+        "Indications for imaging before LP",
+        "Antibiotics when LP or imaging is delayed",
+        "Interpretation after antibiotic pretreatment",
+        "Adjunctive dexamethasone timing"
+      ]
+    },
+    {
+      "section": "Bacterial meningitis",
+      "questions": 8,
+      "decisions": [
+        "Empirical adult community regimen and resistance context",
+        "Additional Listeria coverage in an at-risk host",
+        "Definitive Listeria therapy",
+        "Pneumococcal susceptibility-guided de-escalation",
+        "Meningococcal contact prophylaxis",
+        "Healthcare-associated ventriculitis and hardware",
+        "Recurrent pneumococcal meningitis and CSF leak",
+        "Recurrent meningococcal disease and terminal complement"
+      ]
+    },
+    {
+      "section": "CNS tuberculosis",
+      "questions": 6,
+      "decisions": [
+        "CSF molecular testing and negative-test limitations",
+        "Basal exudates, hydrocephalus and infarction",
+        "Adult drug-susceptible TB meningitis regimen",
+        "Adjunctive steroids and evidence qualifications",
+        "Paradoxical worsening versus resistance or another cause",
+        "Symptomatic hydrocephalus requiring urgent intervention"
+      ]
+    },
+    {
+      "section": "Fungal CNS infection",
+      "questions": 8,
+      "decisions": [
+        "Cryptococcal diagnosis and culture",
+        "Daily induction therapy in a resource-available setting",
+        "Single-dose liposomal amphotericin induction pathway",
+        "Raised intracranial pressure and therapeutic LP",
+        "Timing of ART in CNS cryptococcosis",
+        "Culture-positive relapse versus inflammatory deterioration",
+        "CNS aspergillosis and voriconazole",
+        "Rhino-orbito-cerebral mucormycosis and source control"
+      ]
+    },
+    {
+      "section": "Viral encephalitis",
+      "questions": 8,
+      "decisions": [
+        "Immediate aciclovir for suspected HSV encephalitis",
+        "Early negative HSV PCR with persistent suspicion",
+        "Aciclovir renal and neurological toxicity",
+        "Autoimmune relapse after HSV encephalitis",
+        "VZV vasculopathy without rash and diagnostic testing",
+        "Japanese encephalitis diagnosis and support",
+        "West Nile anterior-horn phenotype",
+        "Rabies clinical syndrome and exposure prevention principles"
+      ]
+    },
+    {
+      "section": "Brain abscess and empyema",
+      "questions": 5,
+      "decisions": [
+        "Diffusion imaging of pyogenic abscess",
+        "Community abscess antimicrobials and source control",
+        "Treatment duration and microbiological sampling",
+        "Steroids for severe edema or impending herniation",
+        "Subdural empyema as a surgical emergency"
+      ]
+    },
+    {
+      "section": "Parasites and other CNS infections",
+      "questions": 10,
+      "decisions": [
+        "One or two viable parenchymal cysticerci",
+        "Multiple viable parenchymal cysticerci",
+        "Calcified neurocysticercosis",
+        "Hydrocephalus or diffuse edema before cysticidal therapy",
+        "Ocular assessment before antiparasitic treatment",
+        "Empirical toxoplasma therapy and response-based biopsy",
+        "Progressive multifocal leukoencephalopathy",
+        "Neurosyphilis treatment and CSF interpretation",
+        "Primary amebic meningoencephalitis",
+        "Eosinophilic meningitis and exposure-based differentiation"
+      ]
+    }
+  ],
+  "crossChapterBoundaries": "Emphasize CNS syndrome interpretation, localization, CSF, imaging and neurological treatment sequencing here. General antimicrobial pharmacology, systemic infection work-up and vaccination schedules belong to the later Infectious disease chapters without repeating these exact decisions.",
+  "requiredFinalReview": [
+    "One mapped decision per question",
+    "Single defensible best answer",
+    "Clinically competing alternatives",
+    "Regimen doses and durations verified",
+    "Resource and resistance context stated",
+    "Uncertainty and source-access limits explicit"
+  ],
+  "authoredQuestions": 50,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "CSF Glucose in Acute Meningitis",
+      "decision": "CSF pattern and paired glucose interpretation"
+    },
+    {
+      "question": 2,
+      "title": "When Imaging Should Precede Lumbar Puncture",
+      "decision": "Indications for imaging before LP"
+    },
+    {
+      "question": 3,
+      "title": "Antibiotics Before Delayed LP",
+      "decision": "Antibiotics when LP or imaging is delayed"
+    },
+    {
+      "question": 4,
+      "title": "CSF After Antibiotic Pretreatment",
+      "decision": "Interpretation after antibiotic pretreatment"
+    },
+    {
+      "question": 5,
+      "title": "Timing of Adjunctive Dexamethasone",
+      "decision": "Adjunctive dexamethasone timing"
+    },
+    {
+      "question": 6,
+      "title": "Empirical Community-Acquired Meningitis Regimen",
+      "decision": "Empirical adult community regimen and resistance context"
+    },
+    {
+      "question": 7,
+      "title": "Listeria Coverage in an At-Risk Adult",
+      "decision": "Additional Listeria coverage in an at-risk host"
+    },
+    {
+      "question": 8,
+      "title": "Definitive Therapy for Listeria Meningitis",
+      "decision": "Definitive Listeria therapy"
+    },
+    {
+      "question": 9,
+      "title": "Pneumococcal Susceptibility-Guided Treatment",
+      "decision": "Pneumococcal susceptibility-guided de-escalation"
+    },
+    {
+      "question": 10,
+      "title": "Meningococcal Contact Prophylaxis in Pregnancy",
+      "decision": "Meningococcal contact prophylaxis"
+    },
+    {
+      "question": 11,
+      "title": "Healthcare-Associated Ventriculitis",
+      "decision": "Healthcare-associated ventriculitis and hardware"
+    },
+    {
+      "question": 12,
+      "title": "Recurrent Pneumococcal Meningitis and CSF Leakage",
+      "decision": "Recurrent pneumococcal meningitis and CSF leak"
+    },
+    {
+      "question": 13,
+      "title": "Terminal Complement Deficiency",
+      "decision": "Recurrent meningococcal disease and terminal complement"
+    },
+    {
+      "question": 14,
+      "title": "A Negative CSF Molecular Test",
+      "decision": "CSF molecular testing and negative-test limitations"
+    },
+    {
+      "question": 15,
+      "title": "Basal Meningitis and Perforator Infarction",
+      "decision": "Basal exudates, hydrocephalus and infarction"
+    },
+    {
+      "question": 16,
+      "title": "Duration of Adult Drug-Susceptible TB Meningitis Therapy",
+      "decision": "Adult drug-susceptible TB meningitis regimen"
+    },
+    {
+      "question": 17,
+      "title": "Adjunctive Steroids in TB Meningitis",
+      "decision": "Adjunctive steroids and evidence qualifications"
+    },
+    {
+      "question": 18,
+      "title": "Paradoxical Deterioration During TB Treatment",
+      "decision": "Paradoxical worsening versus resistance or another cause"
+    },
+    {
+      "question": 19,
+      "title": "Symptomatic Hydrocephalus in TB Meningitis",
+      "decision": "Symptomatic hydrocephalus requiring urgent intervention"
+    },
+    {
+      "question": 20,
+      "title": "Diagnosing Cryptococcal Meningitis",
+      "decision": "Cryptococcal diagnosis and culture"
+    },
+    {
+      "question": 21,
+      "title": "Cryptococcal Induction in a Resource-Available Setting",
+      "decision": "Daily induction therapy in a resource-available setting"
+    },
+    {
+      "question": 22,
+      "title": "Single-Dose Liposomal Amphotericin Pathway",
+      "decision": "Single-dose liposomal amphotericin induction pathway"
+    },
+    {
+      "question": 23,
+      "title": "Raised Pressure in Cryptococcal Meningitis",
+      "decision": "Raised intracranial pressure and therapeutic LP"
+    },
+    {
+      "question": 24,
+      "title": "ART Timing in CNS Cryptococcosis",
+      "decision": "Timing of ART in CNS cryptococcosis"
+    },
+    {
+      "question": 25,
+      "title": "Cryptococcal Relapse Versus IRIS",
+      "decision": "Culture-positive relapse versus inflammatory deterioration"
+    },
+    {
+      "question": 26,
+      "title": "CNS Aspergillosis",
+      "decision": "CNS aspergillosis and voriconazole"
+    },
+    {
+      "question": 27,
+      "title": "Rhino-Orbito-Cerebral Mucormycosis",
+      "decision": "Rhino-orbito-cerebral mucormycosis and source control"
+    },
+    {
+      "question": 28,
+      "title": "Immediate Treatment of Suspected HSV Encephalitis",
+      "decision": "Immediate aciclovir for suspected HSV encephalitis"
+    },
+    {
+      "question": 29,
+      "title": "Early Negative HSV PCR",
+      "decision": "Early negative HSV PCR with persistent suspicion"
+    },
+    {
+      "question": 30,
+      "title": "Aciclovir-Associated Kidney Injury and Encephalopathy",
+      "decision": "Aciclovir renal and neurological toxicity"
+    },
+    {
+      "question": 31,
+      "title": "Autoimmune Relapse After HSV Encephalitis",
+      "decision": "Autoimmune relapse after HSV encephalitis"
+    },
+    {
+      "question": 32,
+      "title": "VZV Vasculopathy Without Rash",
+      "decision": "VZV vasculopathy without rash and diagnostic testing"
+    },
+    {
+      "question": 33,
+      "title": "Japanese Encephalitis Testing",
+      "decision": "Japanese encephalitis diagnosis and support"
+    },
+    {
+      "question": 34,
+      "title": "West Nile Acute Flaccid Myelitis",
+      "decision": "West Nile anterior-horn phenotype"
+    },
+    {
+      "question": 35,
+      "title": "Antemortem Evaluation of Suspected Rabies",
+      "decision": "Rabies clinical syndrome and exposure prevention principles"
+    },
+    {
+      "question": 36,
+      "title": "Diffusion Imaging of a Pyogenic Abscess",
+      "decision": "Diffusion imaging of pyogenic abscess"
+    },
+    {
+      "question": 37,
+      "title": "Community Brain Abscess Treatment",
+      "decision": "Community abscess antimicrobials and source control"
+    },
+    {
+      "question": 38,
+      "title": "Duration and Follow-Up of Brain Abscess Therapy",
+      "decision": "Treatment duration and microbiological sampling"
+    },
+    {
+      "question": 39,
+      "title": "Corticosteroids for Severe Abscess-Related Edema",
+      "decision": "Steroids for severe edema or impending herniation"
+    },
+    {
+      "question": 40,
+      "title": "Subdural Empyema",
+      "decision": "Subdural empyema as a surgical emergency"
+    },
+    {
+      "question": 41,
+      "title": "One or Two Viable Parenchymal Cysticerci",
+      "decision": "One or two viable parenchymal cysticerci"
+    },
+    {
+      "question": 42,
+      "title": "Multiple Viable Parenchymal Cysticerci",
+      "decision": "Multiple viable parenchymal cysticerci"
+    },
+    {
+      "question": 43,
+      "title": "Calcified Neurocysticercosis",
+      "decision": "Calcified neurocysticercosis"
+    },
+    {
+      "question": 44,
+      "title": "Raised Pressure Before Cysticidal Therapy",
+      "decision": "Hydrocephalus or diffuse edema before cysticidal therapy"
+    },
+    {
+      "question": 45,
+      "title": "Ocular Cysticercosis Before Antiparasitic Treatment",
+      "decision": "Ocular assessment before antiparasitic treatment"
+    },
+    {
+      "question": 46,
+      "title": "Presumptive Toxoplasma Encephalitis and Biopsy",
+      "decision": "Empirical toxoplasma therapy and response-based biopsy"
+    },
+    {
+      "question": 47,
+      "title": "Progressive Multifocal Leukoencephalopathy",
+      "decision": "Progressive multifocal leukoencephalopathy"
+    },
+    {
+      "question": 48,
+      "title": "Neurosyphilis Treatment and CSF Interpretation",
+      "decision": "Neurosyphilis treatment and CSF interpretation"
+    },
+    {
+      "question": 49,
+      "title": "Primary Amebic Meningoencephalitis",
+      "decision": "Primary amebic meningoencephalitis"
+    },
+    {
+      "question": 50,
+      "title": "Eosinophilic Meningitis",
+      "decision": "Eosinophilic meningitis and exposure-based differentiation"
+    }
+  ]
+}

@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 05. Central Nervous System Infections",
+  "currentChapter": "Neurology 06. Multiple Sclerosis & Other CNS Demyelinating Disorders",
   "chapters": [
     {
       "subject": "Neurology",
@@ -214,7 +214,27 @@
       "subject": "Neurology",
       "chapter": 5,
       "document": "05. Central Nervous System Infections",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/05. Central Nervous System Infections.json",
+      "validation": {
+        "questions": 50,
+        "answerDistribution": {
+          "A": 13,
+          "B": 13,
+          "C": 12,
+          "D": 12
+        },
+        "minimumExplanationWords": 220,
+        "distractorRationales": 150,
+        "questionStyles": {
+          "clinical_scenario": 41,
+          "direct": 9
+        },
+        "status": "passed"
+      },
+      "installedSha256": "43b43cfa71e84b127d1f0046bcfba738d953d8c98682a9bcf40159c329aed805",
+      "coverageMap": "Neurology/05. Central Nervous System Infections.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",
