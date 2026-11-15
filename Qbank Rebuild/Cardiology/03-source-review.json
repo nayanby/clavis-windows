@@ -1,0 +1,724 @@
+{
+  "chapter": 3,
+  "status": "installed_verified",
+  "installed": true,
+  "sourceChecks": [
+    {
+      "source": "ESC/EACTS VHD 2025 full primary guideline and official source portal",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/all-esc-practice-guidelines/valvular-heart-disease/"
+      ],
+      "checked": [
+        "Primary guideline accessed; AS severity and discordant flow assessment inspected"
+      ],
+      "pending": []
+    },
+    {
+      "source": "ESC/EACTS 2025 AS diagnostic algorithm; EACVI/ASE 2017 focused AS imaging update",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://www.asecho.org/wp-content/uploads/2017/04/2017ValveStenosisGuideline.pdf"
+      ],
+      "questions": [
+        3,
+        4
+      ],
+      "checked": [
+        "Flow reserve conventional stroke-volume increase at least 20%; fixed small area with rising severe gradient supports true severe obstruction",
+        "Projected AVA standardized flow 250 mL/s; ESC intermediate augmentation 10–20%; minimal augmentation limits extrapolation",
+        "Low-dose dobutamine valve protocol distinguished from ischemic stress testing"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 diagnostic evaluation section and Figure 6; EACVI/ASE focused AS imaging update",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://www.asecho.org/wp-content/uploads/2017/04/2017ValveStenosisGuideline.pdf"
+      ],
+      "questions": [
+        5,
+        6,
+        7
+      ],
+      "checked": [
+        "Preserved EF does not establish normal forward stroke volume; low-flow phenotype uses SVi <=35 mL/m2",
+        "CT sex-specific severe-support thresholds >2000 men >1200 women; highly specific >3000 >1600; unlikely <1600 <800 respectively",
+        "Normal-flow low-gradient discordance usually represents moderate disease but requires technical and integrated review"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 AS exercise evaluation, symptomatic intervention and surveillance sections",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194"
+      ],
+      "questions": [
+        8,
+        9
+      ],
+      "checked": [
+        "Attributable symptomatic severe AS prompts intervention assessment despite preserved EF; medical improvement does not remove fixed obstruction",
+        "Supervised exercise testing clarifies apparently asymptomatic status; BP fall greater than 20 mmHg identifies hemodynamic intolerance",
+        "Exercise testing distinguished from dobutamine severity assessment and from testing already symptomatic severe AS",
+        "Severe-AS surveillance at least every six months with earlier symptom-triggered review"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "EARLY TAVR primary randomized report; ESC/EACTS 2025 modality selection",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2405880",
+        "https://doi.org/10.1093/eurheartj/ehaf194"
+      ],
+      "questions": [
+        10,
+        11
+      ],
+      "checked": [
+        "EARLY TAVR: 901 randomized; composite 26.8% versus 45.3%, HR 0.50 CI 0.40–0.63; comparator surveillance rather than SAVR",
+        "Individual component frequencies retained without claiming isolated mortality superiority",
+        "ESC 2025 SAVR preference below age seventy with low surgical risk; lifetime planning and prosthesis choice included"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS 2025 official VHD recommendations; ASE 2017 native regurgitation recommendations; ACC/AHA 2020 AR staging",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://www.escardio.org/static-file/Escardio/Guidelines/Products/Slide%20sets/2025/2025%20official%20slides_VHD.pdf",
+        "https://www.asecho.org/wp-content/uploads/2025/04/2017VavularRegurgitationGuideline.pdf",
+        "https://doi.org/10.1161/CIR.0000000000000923"
+      ],
+      "questions": [
+        12,
+        13
+      ],
+      "checked": [
+        "Selected balloon aortic valvotomy bridging indication distinguished from definitive treatment or mandatory pretreatment",
+        "Multiparametric chronic AR assessment: vena contracta >0.6 cm, regurgitant volume >=60 mL, regurgitant fraction >=50%, EROA >=0.30 cm2",
+        "Pressure half-time limitations and acute versus chronic ventricular response distinguished"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS 2025 AR section; ACC/AHA 2020 AR intervention framework",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000000923"
+      ],
+      "questions": [
+        14,
+        15
+      ],
+      "checked": [
+        "Acute severe AR hemodynamics distinguished from chronic LV enlargement criteria",
+        "ESC established asymptomatic triggers EF <=50%, LVESD >50 mm or LVESDi >25 mm/m2",
+        "Selected low-risk earlier ESC discussion EF <=55%, LVESDi >22 or LVESVi >45 explicitly separated from established indication",
+        "ACC/AHA EF <=55% framework attributed by year",
+        "ACC/AHA acute-AR section explicitly contraindicates intra-aortic balloon counterpulsation; rate-slowing distractor retained in endocarditis shock context rather than generalized to anti-impulse therapy in dissection."
+      ],
+      "status": "draft_source_checked",
+      "pending": []
+    },
+    {
+      "source": "ESC/EACTS 2025 AR ventricular and concomitant aortic intervention framework; ACC/AHA 2020 acute AR section",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000000923"
+      ],
+      "questions": [
+        14,
+        16,
+        17
+      ],
+      "checked": [
+        "LVESDi calculation 44/1.5 = 29.3 mm/m2 crosses established >25 boundary",
+        "Concomitant root/ascending replacement considered at >=45 mm when valve surgery indicated and surgical risk low; distinguished from isolated aortic thresholds",
+        "Root versus tubular ascending anatomy and valve-sparing feasibility separated",
+        "Acute severe AR balloon-pump contraindication rechecked in primary guideline"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 medical AR and mixed aortic disease recommendations; ACC/AHA VHD 2020",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://www.escardio.org/static-file/Escardio/Guidelines/Products/Slide%20sets/2025/2025%20official%20slides_VHD.pdf",
+        "https://doi.org/10.1161/CIR.0000000000000923"
+      ],
+      "questions": [
+        18,
+        19
+      ],
+      "checked": [
+        "Treat chronic AR hypertension without claiming proven prevention of surgery",
+        "Symptomatic mixed moderate AS/AR intervention at mean gradient >=40 or Vmax >=4.0",
+        "Asymptomatic mixed disease Vmax >=4.0 plus EF <50% without another cardiac explanation",
+        "Planned AR sequence now authored; complete chapter editorial review remains pending"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS 2025 rheumatic and degenerative MS sections; ACC/AHA 2020 staging; EAE/ASE stenosis assessment",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000000923",
+        "https://www.escardio.org/static-file/Escardio/Subspecialty/EACVI/education/echo-box/valvular/EAE-recommendations-valve-stenosis.pdf"
+      ],
+      "questions": [
+        20,
+        21
+      ],
+      "checked": [
+        "Commissural fusion and subvalvular remodeling distinguish rheumatic from annular calcific obstruction",
+        "Planimeric area interpreted with flow-dependent mean gradient and contemporaneous heart rate",
+        "Clinically significant intervention framework <=1.5 cm2 distinguished from historical echo severity nomenclature"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "EAE/ASE stenosis assessment; ACC/AHA 2020 exercise MS recommendations; ESC/EACTS 2025",
+      "urls": [
+        "https://www.asecho.org/wp-content/uploads/2025/04/2009_Echo-Assessment-of-Valve-Stenosis_note_added.pdf",
+        "https://doi.org/10.1161/CIR.0000000000000923",
+        "https://doi.org/10.1093/eurheartj/ehaf194"
+      ],
+      "questions": [
+        22,
+        23
+      ],
+      "checked": [
+        "Pressure half-time formula 220/PHT and immediate post-commissurotomy compliance limitations",
+        "Exercise echo resolves symptom–resting hemodynamic discrepancy",
+        "Selected symptomatic rheumatic MS with area >1.5 cm2: exercise mean gradient >15 or wedge pressure >25 mmHg informs possible commissurotomy under ACC/AHA; anatomy and contraindications still apply"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS 2025 PMC contraindications Table 8 and rheumatic MS recommendations",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://academic.oup.com/view-large/551727669"
+      ],
+      "questions": [
+        24,
+        25
+      ],
+      "checked": [
+        "Favorable symptomatic rheumatic MS supports commissurotomy; anatomy scores do not override major exclusions",
+        "More than mild MR, LA thrombus and associated surgical disease considered",
+        "Selected appendage-thrombus pathway: appropriate OAC 1–3 months and repeat TEE confirming resolution before reconsideration",
+        "Rheumatic MS with AF: VKA INR 2–3; treatment interval not equated with proven thrombus resolution"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 MS and pregnancy sections; ESC pregnancy 2025; INVICTUS primary randomized report",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1093/eurheartj/ehaf193",
+        "https://doi.org/10.1056/NEJMoa2209051"
+      ],
+      "questions": [
+        26,
+        27
+      ],
+      "checked": [
+        "VKA INR 2–3 in rheumatic MS with AF; ESC 2025 MS section advises avoiding DOAC with MVA <=2.0 cm2",
+        "INVICTUS favors VKA composite outcome without significant major-bleeding increase",
+        "Pregnancy refractory severe symptoms or SPAP >50 supports commissurotomy in suitable anatomy; preferably after twenty weeks when feasible",
+        "Pregnancy Heart Team and postpartum planning included"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS 2025 degenerative MS and secondary MR sections; native valve imaging guidance",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://www.escardio.org/static-file/Escardio/Guidelines/Products/Slide%20sets/2025/2025%20official%20slides_VHD.pdf"
+      ],
+      "questions": [
+        28,
+        29
+      ],
+      "checked": [
+        "Calcific annular obstruction distinguished mechanistically from rheumatic commissural fusion",
+        "Transcatheter replacement assessment includes predicted LVOT obstruction and anatomical feasibility",
+        "Atrial versus ventricular secondary MR distinguished from primary leaflet disease",
+        "Functional MR assessment after treatment optimization and under appropriate loading conditions"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ASE native regurgitation 2017; BSE mitral guideline 2021; ESC/EACTS 2025",
+      "urls": [
+        "https://www.asecho.org/wp-content/uploads/2017/04/2017VavularRegurgitationGuideline.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8495880/",
+        "https://doi.org/10.1093/eurheartj/ehaf194"
+      ],
+      "questions": [
+        30,
+        31
+      ],
+      "checked": [
+        "Eccentric wall-impinging jet area can underestimate MR severity; integrated primary MR quantitative thresholds retained",
+        "Single-frame quantification qualified for nonholosystolic jets",
+        "Carpentier I normal II excessive IIIa systolic/diastolic restriction IIIb systolic restriction distinguished"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 primary MR sections; ACC/AHA 2020; ASE regurgitation guidance",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000000923"
+      ],
+      "questions": [
+        32,
+        33
+      ],
+      "checked": [
+        "Acute chordal rupture management distinguished from ventricular secondary-MR optimization pathway",
+        "Preserved EF and nondilated LA do not establish safety in acute severe MR",
+        "ESC 2025 asymptomatic PMR ventricular triggers EF <=60%, LVESD >=40 mm or LVESDi >=20 mm/m2",
+        "Twice-yearly severe-MR surveillance distinguished from delaying an established intervention trigger"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 primary MR intervention recommendations; ACC/AHA 2020",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000000923"
+      ],
+      "questions": [
+        34,
+        35
+      ],
+      "checked": [
+        "Durable surgical repair preferred in suitable severe primary MR",
+        "High surgical risk, symptoms, anatomical feasibility and expected clinical benefit guide TEER selection",
+        "Residual MR and transmitral gradient assessed; complex failed-TEER surgical pathway acknowledged"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 ventricular SMR recommendations; original COAPT and MITRA-FR randomized reports",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1056/NEJMoa1806640",
+        "https://doi.org/10.1056/NEJMoa1805374"
+      ],
+      "questions": [
+        36,
+        37
+      ],
+      "checked": [
+        "HF therapy loading and CRT assessment precede definitive residual secondary-MR selection",
+        "COAPT recurrent HF hospitalization rate 35.8 versus 67.9 per 100 patient-years; mortality 29.1% versus 46.1% at 24 months",
+        "MITRA-FR primary composite 54.6% versus 51.3% at 12 months; no significant difference",
+        "Distinct endpoints populations and treatment context retained; no universal proportionality explanation claimed"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "RESHAPE-HF2 primary report and ESC official congress summary; ESC/EACTS 2025 atrial SMR recommendations",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2314328",
+        "https://doi.org/10.1093/eurheartj/ehaf194"
+      ],
+      "questions": [
+        38,
+        39
+      ],
+      "checked": [
+        "RESHAPE-HF2 recurrent HF hospitalization/CV death rates 37.0 versus 58.9 per 100 patient-years, RR 0.64 CI 0.48–0.85; no isolated mortality inference",
+        "ESC 2025 atrial severe symptomatic SMR: TEER may be considered when surgery unsuitable after optimized medical and appropriate rhythm treatment",
+        "Atrial and ventricular evidence populations explicitly distinguished"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS 2025 MR follow-up and TR mechanisms; BSE mitral assessment",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8495880/"
+      ],
+      "questions": [
+        40,
+        41
+      ],
+      "checked": [
+        "Raised transmitral gradient after TEER interpreted with rate flow and loading; residual MR and obstruction assessed together",
+        "Stable post-TEER surveillance distinguished from earlier symptom-driven reassessment",
+        "Direct lead–leaflet interference distinguished from incidental lead crossing, secondary TR and device infection",
+        "Dedicated EHRA/EAPCI 2025 statement checked: lead interference and extraction-related leaflet/chordal injury support individualized device–valve planning."
+      ],
+      "status": "draft_source_checked",
+      "pending": []
+    },
+    {
+      "source": "ESC/EACTS 2025 TR evaluation/intervention; ASE regurgitation; EHRA/EAPCI 2025 lead statement",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12077151/"
+      ],
+      "questions": [
+        41,
+        42,
+        43
+      ],
+      "checked": [
+        "Low jet velocity does not exclude severe TR; integrated valve venous-flow and RV assessment required",
+        "Intervention assessment considers RV/LV dysfunction pulmonary hypertension procedural risk and likelihood of recovery",
+        "Lead extraction implications reviewed and dedicated source added to explanation"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 tricuspid intervention recommendations; TRILUMINATE Pivotal original report",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1056/NEJMoa2300525"
+      ],
+      "questions": [
+        44,
+        45
+      ],
+      "checked": [
+        "Concomitant severe TR treatment during indicated left-sided valve surgery; repair preferred when feasible",
+        "Selected high-risk symptomatic severe TR transcatheter pathway includes RV/pulmonary and anatomical assessment",
+        "Original TRILUMINATE hierarchical win ratio 1.48 primarily reflects health-status benefit, not an isolated mortality reduction"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 TS section; ACC/AHA ACHD guideline 2025 valvular pulmonary stenosis recommendations",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000001402"
+      ],
+      "questions": [
+        46,
+        47
+      ],
+      "checked": [
+        "ESC severe TS mean diastolic gradient >5 mmHg at normal heart rate; multivalve and prosthesis considerations",
+        "Symptomatic moderate/severe valvular PS with favorable anatomy supports balloon valvuloplasty",
+        "PS velocity/peak Doppler gradient grading and distinction from invasive peak-to-peak gradient",
+        "Postintervention pulmonary regurgitation and RV follow-up included"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 prosthesis selection and mechanical-valve INR table; ACC/AHA 2020",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000000923"
+      ],
+      "questions": [
+        49,
+        50
+      ],
+      "checked": [
+        "Prosthesis selection incorporates feasibility of safe VKA, durability and future treatment; bioprosthesis does not eliminate independent OAC indications",
+        "Current-generation bileaflet aortic mechanical valve without added risk: target INR 2.5 range 2–3",
+        "Lower-INR device-specific protocols not generalized; aspirin not assumed mandatory for every mechanical valve"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC/AHA VHD 2020 primary guideline and official slide recommendations",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000923",
+        "https://www.heart.org/en/-/media/PHD-Files-2/Science-News/2/2020/2020_ACC_AHA_Guideline_for_the_Management_of_Patients_with_Valvular_Heart_Disease_Slide_Set.pdf"
+      ],
+      "questions": [
+        51,
+        52
+      ],
+      "checked": [
+        "Mechanical mitral baseline target INR 3.0 range 2.5–3.5",
+        "Selected On-X aortic lower-INR option 1.5–2.0 starts >=3 months after surgery and includes aspirin 75–100 mg daily",
+        "Device timing position and patient-risk qualifications retained; reduced INR not equated with DOAC substitution"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "PROACT Xa and RE-ALIGN primary reports; ACC/AHA VHD 2020 early bioprosthesis regimen",
+      "urls": [
+        "https://doi.org/10.1056/EVIDoa2300067",
+        "https://doi.org/10.1056/NEJMoa1300615",
+        "https://doi.org/10.1161/CIR.0000000000000923"
+      ],
+      "questions": [
+        53,
+        54
+      ],
+      "checked": [
+        "PROACT Xa excess valve thrombosis/valve-related embolism with apixaban, event rates 4.2 versus 1.3 per 100 patient-years",
+        "RE-ALIGN excess thromboembolism and bleeding; mechanical-valve DOAC substitution not supported",
+        "Specified ACC/AHA early VKA option after surgical bioprosthetic mitral replacement: INR 2.5 for 3–6 months; not framed as sole universal regimen"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC/AHA VHD 2020 bridging recommendations; ASE/SCMR/SCCT prosthetic imaging 2024",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000923",
+        "https://www.asecho.org/wp-content/uploads/2024/01/PIIS0894731723005333.pdf"
+      ],
+      "questions": [
+        55,
+        56
+      ],
+      "checked": [
+        "Low-risk bileaflet mechanical aortic interruption without routine bridging under named ACC/AHA framework; minor-procedure continuation distinguished",
+        "Higher-risk mechanical settings require separate assessment; cross-guideline uncertainty not hidden",
+        "CT and TEE characterize obstruction; cine fluoroscopy establishes motion but not thrombus versus pannus etiology"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 section 14.4.3 valve thrombosis; ASE prosthetic imaging 2024",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://www.asecho.org/wp-content/uploads/2024/01/PIIS0894731723005333.pdf"
+      ],
+      "questions": [
+        57,
+        58
+      ],
+      "checked": [
+        "Critically ill mechanical thrombosis: surgery remains first-line, individualized Heart Team surgery/lysis balance; bleeding and embolic risks retained",
+        "Stable clinically relevant biological-valve thrombosis: VKA first line, instability may require urgent rescue",
+        "Recurrence and potential extended anticoagulation balanced against bleeding; not generalized from incidental leaflet thickening"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 paravalvular leak and biological prosthetic reintervention",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194"
+      ],
+      "questions": [
+        59,
+        60
+      ],
+      "checked": [
+        "Feasible catheter closure for significant paravalvular regurgitation or hemolysis; anatomy and surgical risk guide selection",
+        "Valve-in-valve planning includes coronary obstruction, residual gradients, prosthesis dimensions and future coronary access"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC/AHA VHD 2020 mechanical-valve pregnancy pathway; ESC pregnancy 2025 recommendations",
+      "urls": [
+        "https://www.jacc.org/doi/10.1016/j.jacc.2020.11.018",
+        "https://doi.org/10.1093/eurheartj/ehaf193",
+        "https://www.escardio.org/static-file/Escardio/Guidelines/Products/Slide%20sets/2025/2025%20official%20slides_Pregnancy.pdf"
+      ],
+      "questions": [
+        61,
+        62
+      ],
+      "checked": [
+        "ACC/AHA explicitly attributed twice-daily therapeutic LMWH with peak anti-Xa 0.8–1.2 U/mL four to six hours after dosing; guideline-specific targets distinguished",
+        "ESC 2025 preconception intervention for mitral area below 1.5 cm2; favorable rheumatic anatomy supports commissurotomy assessment"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA/ACC perioperative 2024; AHA 2024 endocarditis prevention card and ESC 2023 endocarditis",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001285",
+        "https://www.heart.org/-/media/Files/Health-Topics/Infective-Endocarditis/Infective-Endocarditis-Wallet-Card.pdf",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "questions": [
+        63,
+        64
+      ],
+      "checked": [
+        "Symptomatic severe AS with deferrable elective major surgery: evaluate and perform indicated valve intervention first; urgent and asymptomatic settings differentiated",
+        "Prosthetic valve and dental extraction eligibility; adult amoxicillin 2 g once 30–60 minutes before procedure",
+        "Oral allergy alternatives and cephalosporin precautions; clindamycin removed; AHA nondental no-active-infection distinction"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC endocarditis 2023; ENETS carcinoid guidance 2022; ESC/EACTS VHD 2025 multivalve section",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9539661/",
+        "https://doi.org/10.1093/eurheartj/ehaf194"
+      ],
+      "questions": [
+        65,
+        66,
+        67
+      ],
+      "checked": [
+        "NBTE cancer and autoimmune associations, systemic embolism, culture-negative infection differential",
+        "Carcinoid tricuspid/pulmonary fibrosis and integrated tumor/valve management",
+        "Generally staged transcatheter sequence aortic then reassess mitral disease; not automatic intervention on all valves"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC/EACTS VHD 2025 TR assessment; ACC/AHA ACHD 2025 repaired tetralogy recommendations",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000001402"
+      ],
+      "questions": [
+        42,
+        48
+      ],
+      "checked": [
+        "Corrected RHC recommendation to all TR intervention candidates",
+        "Added distinct chronic PR decision with repaired-TOF-specific 2025 markers; avoids extrapolation to isolated post-stenosis PR"
+      ],
+      "status": "draft_source_checked"
+    }
+  ],
+  "scopeNote": "Separate original clinical decisions; avoid repeating the physiology/investigation chapter or coronary mechanical-complication stems.",
+  "authoredQuestions": 67,
+  "remainingReview": [],
+  "editorialAudit": [
+    {
+      "questionRange": [
+        1,
+        19
+      ],
+      "status": "reviewed_with_revisions",
+      "findings": [
+        "Reviewed AS phenotype distinctions, dynamic/CT confirmation, timing and modality questions and AR severity/intervention distinctions",
+        "Revised surgical-modality and concomitant-aorta distractors to compare more relevant planning choices",
+        "Revised hypertension distractors to assess treatment purpose and continued valve surveillance",
+        "Confirmed amlodipine 5 mg daily initial and 10 mg maximum adult dose against prescribing information"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b3dd4-91f5-4173-a992-e91b1cac6a18"
+      ]
+    },
+    {
+      "questionRange": [
+        20,
+        28
+      ],
+      "status": "reviewed_with_revisions",
+      "findings": [
+        "Reviewed morphology, flow/rate dependence, postcommissurotomy PHT limitations, exercise thresholds, balloon eligibility, thrombus reassessment, anticoagulation, pregnancy and MAC mechanisms",
+        "Replaced unrelated exercise-investigation options with TEE planimetry and CPET alternatives",
+        "Compared balloon intervention with open surgical commissurotomy rather than an unrelated regurgitation procedure",
+        "Replaced pregnancy ACE inhibitor distractor with a competing delivery strategy; clarified persistent symptomatic disease versus controlled disease"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000000923",
+        "https://doi.org/10.1093/eurheartj/ehaf193"
+      ]
+    },
+    {
+      "questionRange": [
+        29,
+        40
+      ],
+      "status": "reviewed_with_revisions",
+      "findings": [
+        "Reviewed primary versus atrial/ventricular MR, quantification limitations, Carpentier motion, acute rupture and primary MR LV criteria",
+        "Added complete ESC 2025 Table 7 ventricular-SMR TEER selection domains with exact EF, diameter, pressure, natriuretic peptide and HF-event thresholds",
+        "Improved surgical repair distractors to compare actual chordal-sparing replacement and TEER strategies",
+        "Replaced post-TEER extra-device distractor with a plausible but insufficient PHT-based assessment",
+        "Retained separate COAPT/MITRA-FR/RESHAPE endpoints and rate versus percentage distinctions"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1056/NEJMoa1806640",
+        "https://doi.org/10.1056/NEJMoa1805374",
+        "https://doi.org/10.1056/NEJMoa2314328"
+      ]
+    },
+    {
+      "questionRange": [
+        41,
+        48
+      ],
+      "status": "reviewed_with_revisions",
+      "findings": [
+        "Reviewed lead-related mechanism, integrated TR severity, referral timing, concomitant repair, transcatheter benefit attribution, TS and pulmonary intervention",
+        "Made RHC wording consistent across TR intervention explanations",
+        "Replaced pulmonary branch stenting distractor with surgical valvotomy",
+        "Rewrote chronic PR distractors as competing surveillance thresholds within repaired tetralogy",
+        "Rechecked ESC 2025 severe TS mean gradient >5 mmHg at normal rate and original TRILUMINATE one-year hierarchical result"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1056/NEJMoa2300525",
+        "https://doi.org/10.1161/CIR.0000000000001402"
+      ]
+    },
+    {
+      "questionRange": [
+        49,
+        58
+      ],
+      "status": "reviewed_with_revisions",
+      "findings": [
+        "Reviewed prosthesis selection, position-specific INR, device-specific reduced INR, failed DOAC evidence, early bioprosthetic VKA and low-risk interruption",
+        "Confirmed ACC/AHA 2020 targets, On-X timing and aspirin qualifications and individualized higher-risk bridging",
+        "Replaced coronary calcium scoring and PHT tissue-discrimination distractors with relevant Doppler and invasive hemodynamic alternatives",
+        "Replaced mechanical valve-in-valve distractor with inadequate anticoagulation-only stabilization in shock",
+        "Aligned biological thrombosis options as actual management strategies and improved early VKA duration distractor"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/CIR.0000000000000923",
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://www.asecho.org/wp-content/uploads/2024/01/PIIS0894731723005333.pdf"
+      ]
+    },
+    {
+      "questionRange": [
+        59,
+        67
+      ],
+      "status": "reviewed_with_revisions",
+      "findings": [
+        "Reviewed PVL, valve-in-valve, pregnancy anticoagulation and preconception intervention, perioperative sequence, prophylaxis, NBTE, carcinoid and multivalve sequence",
+        "Replaced pregnancy DOAC distractor with aPTT versus anti-Xa monitoring distinction",
+        "Specified first-line oral prophylaxis to distinguish standard amoxicillin from an allergy alternative; added the full AHA high-risk group framework",
+        "Replaced absolute simultaneous-treatment language with competing procedure schedules requiring reassessment"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehaf194",
+        "https://doi.org/10.1161/CIR.0000000000000923",
+        "https://www.heart.org/-/media/Files/Health-Topics/Infective-Endocarditis/Infective-Endocarditis-Wallet-Card.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9539661/"
+      ]
+    }
+  ],
+  "coverageReview": {
+    "status": "reviewed",
+    "questionCount": 67,
+    "finding": "Seven contiguous sections and 67 distinct mapped decisions; added chronic pulmonary regurgitation during gap review. Counts are editorial, not official examination weights.",
+    "crossChapterReview": "Compared all decision labels in Cardiology 1 and 2. Generic hemodynamic concepts are supporting context here; acute MR question uses degenerative chordal rupture rather than repeating the post-infarct papillary rupture decision. No duplicate stem or decision requires removal.",
+    "limitations": "Source-checked educational authoring and editorial review; not independently clinician-reviewed or authenticated past examination questions."
+  },
+  "installationVerification": {
+    "questions": 67,
+    "otherBanksPreserved": 16,
+    "runtimeSourceComparison": "passed",
+    "projectInstalledChapters": 17,
+    "projectInstalledQuestions": 832,
+    "answerDistribution": {
+      "A": 17,
+      "B": 17,
+      "C": 17,
+      "D": 16
+    }
+  }
+}

@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_03_Valvular_Heart_Diseases",
+  "currentChapter": "Cardiology Chapter_04_Heart_Failure_and_Cardiogenic_Shock",
   "chapters": [
     {
       "subject": "Neurology",
@@ -526,7 +526,29 @@
       "subject": "Cardiology",
       "chapter": 3,
       "document": "Chapter_03_Valvular_Heart_Diseases",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Cardiology/Chapter_03_Valvular_Heart_Diseases.json",
+      "validation": {
+        "questions": 67,
+        "answerDistribution": {
+          "A": 17,
+          "B": 17,
+          "C": 17,
+          "D": 16
+        },
+        "minimumExplanationWords": 289,
+        "distractorRationales": 201,
+        "questionStyles": {
+          "clinical_scenario": 63,
+          "direct": 4
+        },
+        "status": "passed"
+      },
+      "plannedQuestions": 67,
+      "authoredQuestions": 67,
+      "installedSha256": "44c2859f26f08e12263b02b901e1d412f0677b7aefbd0d11806d6a2c0cf58a49",
+      "coverageMap": "Cardiology/Chapter_03_Valvular_Heart_Diseases.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Cardiology",

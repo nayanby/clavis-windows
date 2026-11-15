@@ -1,0 +1,524 @@
+{
+  "subject": "Cardiology",
+  "chapterNumber": 3,
+  "chapter": "Chapter_03_Valvular_Heart_Diseases",
+  "status": "installed_verified",
+  "countPolicy": "Provisional distinct-decision coverage map; expand clinically important gaps and remove duplicate testing. Counts are not official examination weights.",
+  "plannedQuestions": 67,
+  "authoredQuestions": 67,
+  "sections": [
+    {
+      "section": "Aortic stenosis",
+      "questions": 12,
+      "decisions": [
+        "Concordant high-gradient severity",
+        "Classical low-flow low-gradient phenotype",
+        "Dobutamine true versus pseudo-severe obstruction",
+        "Projected valve area and absent flow reserve",
+        "Paradoxical low-flow preserved-EF assessment",
+        "CT valve calcium with sex-specific thresholds",
+        "Normal-flow low-gradient discordance",
+        "Symptomatic severe AS intervention",
+        "Asymptomatic AS exercise and LV assessment",
+        "Early intervention evidence and trial eligibility",
+        "TAVI versus surgery and lifetime planning",
+        "Balloon valvotomy bridging and procedural risk"
+      ]
+    },
+    {
+      "section": "Aortic regurgitation",
+      "questions": 7,
+      "decisions": [
+        "Integrated chronic AR severity",
+        "Acute AR hemodynamics and urgent treatment",
+        "Symptoms and LV systolic triggers for surgery",
+        "Indexed LV dimensions and serial progression",
+        "Root disease and valve-sparing options",
+        "Hypertension therapy versus intervention",
+        "Mixed aortic stenosis and regurgitation"
+      ]
+    },
+    {
+      "section": "Mitral stenosis",
+      "questions": 9,
+      "decisions": [
+        "Rheumatic valve morphology versus degenerative calcification",
+        "Valve area severity and gradient limitations",
+        "Pressure half-time limitations",
+        "Exercise hemodynamics in discordant symptoms",
+        "Balloon commissurotomy suitability",
+        "LA thrombus and preprocedural TEE",
+        "Anticoagulation with rheumatic MS and AF",
+        "Pregnancy-related decompensation",
+        "Surgery versus transcatheter care in calcific MS"
+      ]
+    },
+    {
+      "section": "Mitral regurgitation",
+      "questions": 12,
+      "decisions": [
+        "Primary versus ventricular versus atrial secondary MR",
+        "Integrated severity and eccentric jets",
+        "Carpentier leaflet motion classification",
+        "Acute severe MR stabilization",
+        "Asymptomatic primary MR LV triggers",
+        "Primary MR repair versus replacement",
+        "Primary MR TEER in high surgical risk",
+        "Ventricular secondary MR after optimized HF therapy",
+        "COAPT and MITRA-FR population interpretation",
+        "RESHAPE-HF2 and current TEER recommendations",
+        "Atrial secondary MR management",
+        "Postrepair follow-up and functional mitral obstruction"
+      ]
+    },
+    {
+      "section": "Tricuspid and pulmonary valve disease",
+      "questions": 8,
+      "decisions": [
+        "Primary versus secondary TR mechanism",
+        "Integrated TR severity and RV assessment",
+        "Isolated TR timing before advanced organ damage",
+        "Tricuspid repair during left-sided surgery",
+        "Transcatheter tricuspid intervention selection",
+        "Tricuspid stenosis and rheumatic multivalve disease",
+        "Pulmonary stenosis and regurgitation intervention assessment",
+        "Chronic pulmonary regurgitation and RV-based replacement assessment after repaired tetralogy"
+      ]
+    },
+    {
+      "section": "Prosthetic valves",
+      "questions": 12,
+      "decisions": [
+        "Mechanical versus bioprosthetic selection",
+        "Mechanical aortic INR targets",
+        "Mechanical mitral INR targets",
+        "On-X lower-INR evidence limitations",
+        "DOAC avoidance in mechanical valves",
+        "Bioprosthetic early antithrombotic care",
+        "Periprocedural interruption and bridging",
+        "Prosthetic obstruction thrombus versus pannus",
+        "Mechanical valve thrombosis treatment selection",
+        "Bioprosthetic degeneration versus thrombosis",
+        "Paravalvular leak hemolysis and intervention",
+        "Valve-in-valve lifetime and coronary access considerations"
+      ]
+    },
+    {
+      "section": "Special clinical settings",
+      "questions": 7,
+      "decisions": [
+        "Mechanical valve anticoagulation in pregnancy",
+        "Native valve intervention before pregnancy",
+        "Valve disease before noncardiac surgery",
+        "Antibiotic prophylaxis for high-risk valve patients",
+        "Nonbacterial thrombotic and Libman-Sacks disease",
+        "Carcinoid valvular pattern",
+        "Multivalve disease sequencing and Heart Team decisions"
+      ]
+    }
+  ],
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Concordant High-Gradient Aortic Stenosis",
+      "decision": "Concordant high-gradient severity",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 2,
+      "title": "Classical Low-Flow Low-Gradient Aortic Stenosis",
+      "decision": "Classical low-flow low-gradient phenotype",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 3,
+      "title": "True Severe Obstruction During Flow Augmentation",
+      "decision": "Dobutamine true versus pseudo-severe obstruction",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 4,
+      "title": "Inconclusive Dobutamine Testing Without Flow Reserve",
+      "decision": "Projected valve area and absent flow reserve",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 5,
+      "title": "Paradoxical Low Flow Despite Preserved Ejection Fraction",
+      "decision": "Paradoxical low-flow preserved-EF assessment",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 6,
+      "title": "Sex-Specific CT Calcium Assessment in Discordant Stenosis",
+      "decision": "CT valve calcium with sex-specific thresholds",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 7,
+      "title": "Normal-Flow Low-Gradient Discordance",
+      "decision": "Normal-flow low-gradient discordance",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 8,
+      "title": "Symptomatic Severe Stenosis Despite Preserved EF",
+      "decision": "Symptomatic severe AS intervention",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 9,
+      "title": "Exercise Assessment of Apparently Asymptomatic Severe Disease",
+      "decision": "Asymptomatic AS exercise and LV assessment",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 10,
+      "title": "Interpreting EARLY TAVR Without Overstating Mortality Benefit",
+      "decision": "Early intervention evidence and trial eligibility",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 11,
+      "title": "Choosing Surgical Replacement in a Younger Low-Risk Patient",
+      "decision": "TAVI versus surgery and lifetime planning",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 12,
+      "title": "Balloon Valvotomy as a Selected Bridge",
+      "decision": "Balloon valvotomy bridging and procedural risk",
+      "section": "Aortic stenosis"
+    },
+    {
+      "question": 13,
+      "title": "Integrated Assessment of Chronic Aortic Regurgitation",
+      "decision": "Integrated chronic AR severity",
+      "section": "Aortic regurgitation"
+    },
+    {
+      "question": 14,
+      "title": "Acute Severe Regurgitation Without Ventricular Dilatation",
+      "decision": "Acute AR hemodynamics and urgent treatment",
+      "section": "Aortic regurgitation"
+    },
+    {
+      "question": 15,
+      "title": "Ventricular Dysfunction as a Surgical Trigger in Chronic AR",
+      "decision": "Symptoms and LV systolic triggers for surgery",
+      "section": "Aortic regurgitation"
+    },
+    {
+      "question": 16,
+      "title": "Indexed Ventricular Size in a Small Adult",
+      "decision": "Indexed LV dimensions and serial progression",
+      "section": "Aortic regurgitation"
+    },
+    {
+      "question": 17,
+      "title": "Addressing Aortic Disease During Valve Surgery",
+      "decision": "Root disease and valve-sparing options",
+      "section": "Aortic regurgitation"
+    },
+    {
+      "question": 18,
+      "title": "Treating Hypertension Without Replacing Valve Surveillance",
+      "decision": "Hypertension therapy versus intervention",
+      "section": "Aortic regurgitation"
+    },
+    {
+      "question": 19,
+      "title": "Combined Burden of Mixed Aortic Valve Disease",
+      "decision": "Mixed aortic stenosis and regurgitation",
+      "section": "Aortic regurgitation"
+    },
+    {
+      "question": 20,
+      "title": "Commissural Fusion Identifies the Rheumatic Mechanism",
+      "decision": "Rheumatic valve morphology versus degenerative calcification",
+      "section": "Mitral stenosis"
+    },
+    {
+      "question": 21,
+      "title": "A Low Resting Gradient Does Not Exclude Important Mitral Obstruction",
+      "decision": "Valve area severity and gradient limitations",
+      "section": "Mitral stenosis"
+    },
+    {
+      "question": 22,
+      "title": "Pressure Half-Time Immediately After Commissurotomy",
+      "decision": "Pressure half-time limitations",
+      "section": "Mitral stenosis"
+    },
+    {
+      "question": 23,
+      "title": "Exercise Hemodynamics When Resting Measurements Underestimate Symptoms",
+      "decision": "Exercise hemodynamics in discordant symptoms",
+      "section": "Mitral stenosis"
+    },
+    {
+      "question": 24,
+      "title": "Selecting Balloon Commissurotomy for Favorable Rheumatic Anatomy",
+      "decision": "Balloon commissurotomy suitability",
+      "section": "Mitral stenosis"
+    },
+    {
+      "question": 25,
+      "title": "Left Atrial Appendage Thrombus Before Commissurotomy",
+      "decision": "LA thrombus and preprocedural TEE",
+      "section": "Mitral stenosis"
+    },
+    {
+      "question": 26,
+      "title": "Anticoagulant Selection in Rheumatic MS With AF",
+      "decision": "Anticoagulation with rheumatic MS and AF",
+      "section": "Mitral stenosis"
+    },
+    {
+      "question": 27,
+      "title": "Persistent Mitral Stenosis Symptoms During Pregnancy",
+      "decision": "Pregnancy-related decompensation",
+      "section": "Mitral stenosis"
+    },
+    {
+      "question": 28,
+      "title": "Calcific Mitral Obstruction Requires a Different Intervention Strategy",
+      "decision": "Surgery versus transcatheter care in calcific MS",
+      "section": "Mitral stenosis"
+    },
+    {
+      "question": 29,
+      "title": "Atrial Versus Ventricular Secondary Mitral Regurgitation",
+      "decision": "Primary versus ventricular versus atrial secondary MR",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 30,
+      "title": "A Small Wall-Hugging Jet Can Conceal Severe MR",
+      "decision": "Integrated severity and eccentric jets",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 31,
+      "title": "Systolic Restriction in the Carpentier Framework",
+      "decision": "Carpentier leaflet motion classification",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 32,
+      "title": "Acute Chordal Rupture With Pulmonary Edema",
+      "decision": "Acute severe MR stabilization",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 33,
+      "title": "An EF of Fifty-Eight Percent Is Abnormal in Severe Primary MR",
+      "decision": "Asymptomatic primary MR LV triggers",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 34,
+      "title": "Durable Repair for Localized Degenerative Disease",
+      "decision": "Primary MR repair versus replacement",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 35,
+      "title": "TEER for Symptomatic Primary MR at High Surgical Risk",
+      "decision": "Primary MR TEER in high surgical risk",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 36,
+      "title": "Optimize Ventricular Treatment Before Selecting TEER",
+      "decision": "Ventricular secondary MR after optimized HF therapy",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 37,
+      "title": "COAPT and MITRA-FR Require Population-Specific Interpretation",
+      "decision": "COAPT and MITRA-FR population interpretation",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 38,
+      "title": "RESHAPE-HF2 Adds Evidence Without Removing Patient Selection",
+      "decision": "RESHAPE-HF2 and current TEER recommendations",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 39,
+      "title": "Persistent Atrial Secondary MR After Medical and Rhythm Assessment",
+      "decision": "Atrial secondary MR management",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 40,
+      "title": "Interpreting a Raised Gradient After Mitral Repair",
+      "decision": "Postrepair follow-up and functional mitral obstruction",
+      "section": "Mitral regurgitation"
+    },
+    {
+      "question": 41,
+      "title": "Direct Device-Lead Interference With Tricuspid Closure",
+      "decision": "Primary versus secondary TR mechanism",
+      "section": "Tricuspid and pulmonary valve disease"
+    },
+    {
+      "question": 42,
+      "title": "Severe TR Despite a Low Jet Velocity",
+      "decision": "Integrated TR severity and RV assessment",
+      "section": "Tricuspid and pulmonary valve disease"
+    },
+    {
+      "question": 43,
+      "title": "Refer Severe TR Before Advanced Organ Damage",
+      "decision": "Isolated TR timing before advanced organ damage",
+      "section": "Tricuspid and pulmonary valve disease"
+    },
+    {
+      "question": 44,
+      "title": "Severe TR at the Time of Left-Sided Valve Surgery",
+      "decision": "Tricuspid repair during left-sided surgery",
+      "section": "Tricuspid and pulmonary valve disease"
+    },
+    {
+      "question": 45,
+      "title": "Selecting Transcatheter Treatment for Persistent Symptomatic TR",
+      "decision": "Transcatheter tricuspid intervention selection",
+      "section": "Tricuspid and pulmonary valve disease"
+    },
+    {
+      "question": 46,
+      "title": "Rheumatic Tricuspid Stenosis in Multivalve Disease",
+      "decision": "Tricuspid stenosis and rheumatic multivalve disease",
+      "section": "Tricuspid and pulmonary valve disease"
+    },
+    {
+      "question": 47,
+      "title": "Balloon Treatment of Suitable Valvular Pulmonary Stenosis",
+      "decision": "Pulmonary stenosis and regurgitation intervention assessment",
+      "section": "Tricuspid and pulmonary valve disease"
+    },
+    {
+      "question": 48,
+      "title": "Pulmonary Regurgitation After Repaired Tetralogy Requires RV Assessment",
+      "decision": "Chronic pulmonary regurgitation and RV-based replacement assessment after repaired tetralogy",
+      "section": "Tricuspid and pulmonary valve disease"
+    },
+    {
+      "question": 49,
+      "title": "Prosthesis Choice Requires a Feasible Anticoagulation Plan",
+      "decision": "Mechanical versus bioprosthetic selection",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 50,
+      "title": "Standard INR Target for a Low-Risk Mechanical Aortic Valve",
+      "decision": "Mechanical aortic INR targets",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 51,
+      "title": "Mechanical Mitral Position Requires a Different INR Target",
+      "decision": "Mechanical mitral INR targets",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 52,
+      "title": "Device-Specific Reduced INR After On-X Aortic Replacement",
+      "decision": "On-X lower-INR evidence limitations",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 53,
+      "title": "PROACT Xa Does Not Support Apixaban Substitution",
+      "decision": "DOAC avoidance in mechanical valves",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 54,
+      "title": "A Defined Early VKA Course After Surgical Bioprosthetic Replacement",
+      "decision": "Bioprosthetic early antithrombotic care",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 55,
+      "title": "Interruption Without Bridging in a Low-Risk Mechanical Aortic Valve",
+      "decision": "Periprocedural interruption and bridging",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 56,
+      "title": "Restricted Mechanical Leaflet Motion Does Not Identify the Cause",
+      "decision": "Prosthetic obstruction thrombus versus pannus",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 57,
+      "title": "Obstructive Mechanical Thrombosis With Shock and High Lytic Risk",
+      "decision": "Mechanical valve thrombosis treatment selection",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 58,
+      "title": "Clinically Relevant Bioprosthetic Thrombosis Before Reintervention",
+      "decision": "Bioprosthetic degeneration versus thrombosis",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 59,
+      "title": "Paravalvular Leak With Clinically Important Hemolysis",
+      "decision": "Paravalvular leak hemolysis and intervention",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 60,
+      "title": "Valve-in-Valve Planning Requires Coronary and Hemodynamic Assessment",
+      "decision": "Valve-in-valve lifetime and coronary access considerations",
+      "section": "Prosthetic valves"
+    },
+    {
+      "question": 61,
+      "title": "Mechanical Valve Pregnancy Requires Monitored Therapeutic Anticoagulation",
+      "decision": "Mechanical valve anticoagulation in pregnancy",
+      "section": "Special clinical settings"
+    },
+    {
+      "question": 62,
+      "title": "Mitral Stenosis Should Be Addressed Before Pregnancy",
+      "decision": "Native valve intervention before pregnancy",
+      "section": "Special clinical settings"
+    },
+    {
+      "question": 63,
+      "title": "Symptomatic Severe Aortic Stenosis Before Elective Surgery",
+      "decision": "Valve disease before noncardiac surgery",
+      "section": "Special clinical settings"
+    },
+    {
+      "question": 64,
+      "title": "Dental Endocarditis Prophylaxis After Valve Replacement",
+      "decision": "Antibiotic prophylaxis for high-risk valve patients",
+      "section": "Special clinical settings"
+    },
+    {
+      "question": 65,
+      "title": "Nonbacterial Thrombotic Endocarditis in a Hypercoagulable Setting",
+      "decision": "Nonbacterial thrombotic and Libman-Sacks disease",
+      "section": "Special clinical settings"
+    },
+    {
+      "question": 66,
+      "title": "Carcinoid Fibrosis of the Right-Sided Valves",
+      "decision": "Carcinoid valvular pattern",
+      "section": "Special clinical settings"
+    },
+    {
+      "question": 67,
+      "title": "Staged Transcatheter Treatment of Aortic and Secondary Mitral Disease",
+      "decision": "Multivalve disease sequencing and Heart Team decisions",
+      "section": "Special clinical settings"
+    }
+  ]
+}
