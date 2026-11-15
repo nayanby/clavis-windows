@@ -1,0 +1,448 @@
+{
+  "subject": "Cardiology",
+  "chapterNumber": 7,
+  "chapter": "Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD",
+  "status": "installed_verified",
+  "countPolicy": "Coverage-driven distinct decisions; not official examination weights.",
+  "plannedQuestions": 57,
+  "authoredQuestions": 57,
+  "sections": [
+    {
+      "section": "Recognition and initial assessment",
+      "questions": 8,
+      "decisions": [
+        "Classify nonsustained versus sustained VT using duration and intervention",
+        "Interpret AV dissociation capture and fusion in wide-complex tachycardia",
+        "Integrate morphology algorithms without claiming exclusion from one absent sign",
+        "Distinguish polymorphic VT with long versus normal QT",
+        "Recognize bidirectional VT and its clinical differential",
+        "Evaluate incidental NSVT according to substrate and symptoms",
+        "Use CMR when structural disease remains suspected despite normal echo",
+        "Investigate resuscitated sudden cardiac arrest without premature idiopathic labelling"
+      ]
+    },
+    {
+      "section": "Acute ventricular arrhythmia treatment",
+      "questions": 10,
+      "decisions": [
+        "Treat pulseless VT and VF with the shockable-arrest pathway",
+        "Select synchronized cardioversion for unstable monomorphic VT with a pulse",
+        "Treat sustained polymorphic VT with unsynchronized shock",
+        "Select a monitored drug for tolerated monomorphic VT",
+        "Interpret PROCAMIO in its selected population",
+        "Dose procainamide with ECG and hemodynamic stopping limits",
+        "Use amiodarone or lidocaine in the appropriate arrest or perfusing-rhythm regimen",
+        "Treat acquired torsades with magnesium and removal of triggers",
+        "Use pacing or isoproterenol for selected pause-dependent acquired torsades",
+        "Manage ischemia-associated polymorphic VT without assuming torsades"
+      ]
+    },
+    {
+      "section": "Electrical storm and recurrent scar-related VT",
+      "questions": 8,
+      "decisions": [
+        "Define electrical storm and interrogate device episodes",
+        "Address triggers and sympathetic activation with monitored stabilization",
+        "Select beta blockade and amiodarone with hemodynamic safeguards",
+        "Escalate sedation autonomic modulation and circulatory support appropriately",
+        "Select ablation rather than repeated drug escalation after amiodarone failure",
+        "Interpret VANISH and distinguish its comparator",
+        "Interpret initial ablation evidence from VANISH2",
+        "Recognize scar reentry and the role of substrate mapping"
+      ]
+    },
+    {
+      "section": "PVCs and idiopathic ventricular tachycardia",
+      "questions": 8,
+      "decisions": [
+        "Assess PVC burden and suspected PVC-induced cardiomyopathy",
+        "Select ablation for appropriate PVC-induced cardiomyopathy",
+        "Recognize RV outflow tract VT morphology and triggered mechanism",
+        "Select therapy for symptomatic idiopathic RVOT ventricular arrhythmia",
+        "Recognize fascicular VT and its specific verapamil sensitivity",
+        "Distinguish apparently idiopathic VT from arrhythmogenic cardiomyopathy",
+        "Avoid class IC suppression of ventricular ectopy after MI",
+        "Interpret exercise-associated ventricular ectopy in context"
+      ]
+    },
+    {
+      "section": "Inherited arrhythmia syndromes",
+      "questions": 11,
+      "decisions": [
+        "Apply long QT diagnostic criteria after excluding secondary causes",
+        "Differentiate common long QT genotype triggers",
+        "Select nonselective beta blockade and genotype-directed adjuncts in long QT",
+        "Identify ICD and sympathetic denervation roles in long QT",
+        "Recognize diagnostic type 1 Brugada pattern and phenocopies",
+        "Risk-stratify Brugada syndrome without relying on genotype alone",
+        "Treat Brugada electrical storm and fever-related risk",
+        "Recognize CPVT with exercise-induced bidirectional or polymorphic VT",
+        "Select CPVT beta blockade flecainide and escalation",
+        "Distinguish early repolarization pattern from arrhythmic syndrome",
+        "Apply named short QT diagnostic thresholds and secondary-prevention principles"
+      ]
+    },
+    {
+      "section": "ICD selection and sudden-death prevention",
+      "questions": 12,
+      "decisions": [
+        "Identify secondary-prevention ICD indications and reversible-cause limitations",
+        "Apply primary-prevention ischemic EF and symptom criteria",
+        "Apply post-MI timing and reassessment after treatment",
+        "Interpret early post-MI ICD trials and competing mortality",
+        "Apply nonischemic cardiomyopathy ICD criteria with expected survival",
+        "Interpret DANISH without equating nonsignificance with no sudden-death benefit",
+        "Integrate scar syncope genotype and EF in selected cardiomyopathy risk",
+        "Distinguish subcutaneous from transvenous ICD capabilities",
+        "Use antitachycardia pacing and programming to reduce avoidable shocks",
+        "Investigate recurrent ICD shocks and distinguish inappropriate therapy",
+        "Interpret wearable defibrillator evidence and temporary protection",
+        "Evaluate relatives after unexplained young sudden death"
+      ]
+    }
+  ],
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Sustained Versus Nonsustained Ventricular Tachycardia",
+      "decision": "Classify nonsustained versus sustained VT using duration and intervention",
+      "section": "Recognition and initial assessment"
+    },
+    {
+      "question": 2,
+      "title": "AV Dissociation and Capture During Wide-Complex Tachycardia",
+      "decision": "Interpret AV dissociation capture and fusion in wide-complex tachycardia",
+      "section": "Recognition and initial assessment"
+    },
+    {
+      "question": 3,
+      "title": "Morphological Criteria in Regular Wide-Complex Tachycardia",
+      "decision": "Integrate morphology algorithms without claiming exclusion from one absent sign",
+      "section": "Recognition and initial assessment"
+    },
+    {
+      "question": 4,
+      "title": "Torsades Versus Polymorphic VT With a Normal QT",
+      "decision": "Distinguish polymorphic VT with long versus normal QT",
+      "section": "Recognition and initial assessment"
+    },
+    {
+      "question": 5,
+      "title": "Bidirectional Ventricular Tachycardia in Clinical Context",
+      "decision": "Recognize bidirectional VT and its clinical differential",
+      "section": "Recognition and initial assessment"
+    },
+    {
+      "question": 6,
+      "title": "Incidental NSVT With a High-Risk Symptom",
+      "decision": "Evaluate incidental NSVT according to substrate and symptoms",
+      "section": "Recognition and initial assessment"
+    },
+    {
+      "question": 7,
+      "title": "CMR in Ventricular Arrhythmia Despite a Normal Echocardiogram",
+      "decision": "Use CMR when structural disease remains suspected despite normal echo",
+      "section": "Recognition and initial assessment"
+    },
+    {
+      "question": 8,
+      "title": "Systematic Evaluation After Unexplained Resuscitated VF",
+      "decision": "Investigate resuscitated sudden cardiac arrest without premature idiopathic labelling",
+      "section": "Recognition and initial assessment"
+    },
+    {
+      "question": 9,
+      "title": "Immediate Treatment of Pulseless Ventricular Tachycardia",
+      "decision": "Treat pulseless VT and VF with the shockable-arrest pathway",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 10,
+      "title": "Unstable Monomorphic VT With a Pulse",
+      "decision": "Select synchronized cardioversion for unstable monomorphic VT with a pulse",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 11,
+      "title": "Electrical Treatment of Sustained Polymorphic VT",
+      "decision": "Treat sustained polymorphic VT with unsynchronized shock",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 12,
+      "title": "Drug Selection for Tolerated Monomorphic VT",
+      "decision": "Select a monitored drug for tolerated monomorphic VT",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 13,
+      "title": "Interpreting the PROCAMIO Trial",
+      "decision": "Interpret PROCAMIO in its selected population",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 14,
+      "title": "Procainamide Infusion Stopping Criteria",
+      "decision": "Dose procainamide with ECG and hemodynamic stopping limits",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 15,
+      "title": "Amiodarone Dosing in Perfusing VT Versus Cardiac Arrest",
+      "decision": "Use amiodarone or lidocaine in the appropriate arrest or perfusing-rhythm regimen",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 16,
+      "title": "Magnesium and Trigger Correction in Acquired Torsades",
+      "decision": "Treat acquired torsades with magnesium and removal of triggers",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 17,
+      "title": "Recurrent Acquired Pause-Dependent Torsades",
+      "decision": "Use pacing or isoproterenol for selected pause-dependent acquired torsades",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 18,
+      "title": "Polymorphic VT Associated With Acute Myocardial Ischemia",
+      "decision": "Manage ischemia-associated polymorphic VT without assuming torsades",
+      "section": "Acute ventricular arrhythmia treatment"
+    },
+    {
+      "question": 19,
+      "title": "Electrical Storm and Device-Confirmed Episodes",
+      "decision": "Define electrical storm and interrogate device episodes",
+      "section": "Electrical storm and recurrent scar-related VT"
+    },
+    {
+      "question": 20,
+      "title": "Initial Stabilization and Trigger Search in Electrical Storm",
+      "decision": "Address triggers and sympathetic activation with monitored stabilization",
+      "section": "Electrical storm and recurrent scar-related VT"
+    },
+    {
+      "question": 21,
+      "title": "Sympathetic Blockade in Structural-Heart-Disease Electrical Storm",
+      "decision": "Select beta blockade and amiodarone with hemodynamic safeguards",
+      "section": "Electrical storm and recurrent scar-related VT"
+    },
+    {
+      "question": 22,
+      "title": "Escalation for Drug-Refractory Electrical Storm",
+      "decision": "Escalate sedation autonomic modulation and circulatory support appropriately",
+      "section": "Electrical storm and recurrent scar-related VT"
+    },
+    {
+      "question": 23,
+      "title": "Ablation After Recurrent VT Despite Amiodarone",
+      "decision": "Select ablation rather than repeated drug escalation after amiodarone failure",
+      "section": "Electrical storm and recurrent scar-related VT"
+    },
+    {
+      "question": 24,
+      "title": "The Original VANISH Trial: Comparator and Outcome",
+      "decision": "Interpret VANISH and distinguish its comparator",
+      "section": "Electrical storm and recurrent scar-related VT"
+    },
+    {
+      "question": 25,
+      "title": "Initial VT Ablation: Interpreting VANISH2",
+      "decision": "Interpret initial ablation evidence from VANISH2",
+      "section": "Electrical storm and recurrent scar-related VT"
+    },
+    {
+      "question": 26,
+      "title": "Scar Reentry and Substrate Mapping",
+      "decision": "Recognize scar reentry and the role of substrate mapping",
+      "section": "Electrical storm and recurrent scar-related VT"
+    },
+    {
+      "question": 27,
+      "title": "Suspected PVC-Induced Cardiomyopathy",
+      "decision": "Assess PVC burden and suspected PVC-induced cardiomyopathy",
+      "section": "PVCs and idiopathic ventricular tachycardia"
+    },
+    {
+      "question": 28,
+      "title": "Ablation for PVC-Induced Ventricular Dysfunction",
+      "decision": "Select ablation for appropriate PVC-induced cardiomyopathy",
+      "section": "PVCs and idiopathic ventricular tachycardia"
+    },
+    {
+      "question": 29,
+      "title": "Outflow-Tract Ventricular Tachycardia",
+      "decision": "Recognize RV outflow tract VT morphology and triggered mechanism",
+      "section": "PVCs and idiopathic ventricular tachycardia"
+    },
+    {
+      "question": 30,
+      "title": "First-Line Ablation for Symptomatic Idiopathic RVOT VT",
+      "decision": "Select therapy for symptomatic idiopathic RVOT ventricular arrhythmia",
+      "section": "PVCs and idiopathic ventricular tachycardia"
+    },
+    {
+      "question": 31,
+      "title": "Verapamil-Sensitive Fascicular Ventricular Tachycardia",
+      "decision": "Recognize fascicular VT and its specific verapamil sensitivity",
+      "section": "PVCs and idiopathic ventricular tachycardia"
+    },
+    {
+      "question": 32,
+      "title": "Right Ventricular Arrhythmia With Cardiomyopathy Red Flags",
+      "decision": "Distinguish apparently idiopathic VT from arrhythmogenic cardiomyopathy",
+      "section": "PVCs and idiopathic ventricular tachycardia"
+    },
+    {
+      "question": 33,
+      "title": "Ventricular Ectopy Suppression After Myocardial Infarction",
+      "decision": "Avoid class IC suppression of ventricular ectopy after MI",
+      "section": "PVCs and idiopathic ventricular tachycardia"
+    },
+    {
+      "question": 34,
+      "title": "Exercise-Associated Ventricular Arrhythmia",
+      "decision": "Interpret exercise-associated ventricular ectopy in context",
+      "section": "PVCs and idiopathic ventricular tachycardia"
+    },
+    {
+      "question": 35,
+      "title": "Clinical Diagnosis of Long-QT Syndrome",
+      "decision": "Apply long QT diagnostic criteria after excluding secondary causes",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 36,
+      "title": "Common Long-QT Genotypes and Trigger Patterns",
+      "decision": "Differentiate common long QT genotype triggers",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 37,
+      "title": "Preventive Drug Treatment in Congenital Long-QT Syndrome",
+      "decision": "Select nonselective beta blockade and genotype-directed adjuncts in long QT",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 38,
+      "title": "ICD and Sympathetic Denervation in High-Risk LQTS",
+      "decision": "Identify ICD and sympathetic denervation roles in long QT",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 39,
+      "title": "Type 1 Brugada ECG Pattern",
+      "decision": "Recognize diagnostic type 1 Brugada pattern and phenocopies",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 40,
+      "title": "Brugada Risk Assessment Beyond the Genetic Result",
+      "decision": "Risk-stratify Brugada syndrome without relying on genotype alone",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 41,
+      "title": "Electrical Storm in Brugada Syndrome",
+      "decision": "Treat Brugada electrical storm and fever-related risk",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 42,
+      "title": "Recognition of Catecholaminergic Polymorphic VT",
+      "decision": "Recognize CPVT with exercise-induced bidirectional or polymorphic VT",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 43,
+      "title": "Escalation of Treatment in CPVT",
+      "decision": "Select CPVT beta blockade flecainide and escalation",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 44,
+      "title": "Early Repolarization Pattern Versus Arrhythmic Syndrome",
+      "decision": "Distinguish early repolarization pattern from arrhythmic syndrome",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 45,
+      "title": "Short-QT Syndrome: Diagnostic Context and Prevention",
+      "decision": "Apply named short QT diagnostic thresholds and secondary-prevention principles",
+      "section": "Inherited arrhythmia syndromes"
+    },
+    {
+      "question": 46,
+      "title": "Secondary-Prevention ICD After Resuscitated VF",
+      "decision": "Identify secondary-prevention ICD indications and reversible-cause limitations",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 47,
+      "title": "Primary-Prevention ICD in Chronic Ischemic Cardiomyopathy",
+      "decision": "Apply primary-prevention ischemic EF and symptom criteria",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 48,
+      "title": "Timing of Prophylactic ICD Assessment After MI",
+      "decision": "Apply post-MI timing and reassessment after treatment",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 49,
+      "title": "Early Post-MI ICD Trials and Competing Mortality",
+      "decision": "Interpret early post-MI ICD trials and competing mortality",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 50,
+      "title": "Primary-Prevention ICD in Nonischemic DCM",
+      "decision": "Apply nonischemic cardiomyopathy ICD criteria with expected survival",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 51,
+      "title": "Interpreting DANISH Without Overstating a Negative Endpoint",
+      "decision": "Interpret DANISH without equating nonsignificance with no sudden-death benefit",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 52,
+      "title": "DCM Risk Assessment Above the Conventional EF Threshold",
+      "decision": "Integrate scar syncope genotype and EF in selected cardiomyopathy risk",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 53,
+      "title": "Subcutaneous Versus Transvenous ICD Capabilities",
+      "decision": "Distinguish subcutaneous from transvenous ICD capabilities",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 54,
+      "title": "Programming to Reduce Avoidable ICD Therapy",
+      "decision": "Use antitachycardia pacing and programming to reduce avoidable shocks",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 55,
+      "title": "Recurrent ICD Shocks From Oversensing",
+      "decision": "Investigate recurrent ICD shocks and distinguish inappropriate therapy",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 56,
+      "title": "Wearable Defibrillator Evidence After MI",
+      "decision": "Interpret wearable defibrillator evidence and temporary protection",
+      "section": "ICD selection and sudden-death prevention"
+    },
+    {
+      "question": 57,
+      "title": "Family Evaluation After Unexplained Young Sudden Death",
+      "decision": "Evaluate relatives after unexplained young sudden death",
+      "section": "ICD selection and sudden-death prevention"
+    }
+  ]
+}

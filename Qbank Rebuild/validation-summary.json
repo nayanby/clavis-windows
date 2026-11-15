@@ -1,17 +1,17 @@
 {
   "projectStatus": "in_progress",
   "plannedChapters": 129,
-  "installedChapters": 20,
-  "installedQuestions": 1012,
+  "installedChapters": 21,
+  "installedQuestions": 1069,
   "structurallyValidated": true,
   "runtimeSourceComparison": "passed",
-  "mappedChapters": 17,
+  "mappedChapters": 18,
   "retrospectiveCoverageAudit": [
     "Neurology / 01. Neuroanatomy, Clinical Localization & Neurological Examination",
     "Neurology / 02. Cerebrovascular Diseases",
     "Neurology / 03. Epilepsy & Status Epilepticus"
   ],
   "independentClinicianReview": "not_recorded",
-  "nextChapter": "Cardiology Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD",
+  "nextChapter": "Cardiology Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases",
   "countPolicy": "Coverage-driven: enumerate distinct high-yield decisions per chapter, allocate questions by diagnostic and therapeutic complexity, then remove duplication. The original 30/40 counts were provisional, not official exam weights or completeness evidence."
 }

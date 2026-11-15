@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD",
+  "currentChapter": "Cardiology Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases",
   "chapters": [
     {
       "subject": "Neurology",
@@ -638,7 +638,29 @@
       "subject": "Cardiology",
       "chapter": 7,
       "document": "Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Cardiology/Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD.json",
+      "validation": {
+        "questions": 57,
+        "answerDistribution": {
+          "A": 15,
+          "B": 14,
+          "C": 14,
+          "D": 14
+        },
+        "minimumExplanationWords": 372,
+        "distractorRationales": 171,
+        "questionStyles": {
+          "clinical_scenario": 48,
+          "direct": 9
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 57,
+      "plannedQuestions": 57,
+      "installedSha256": "bbd8d10669450943a713ef88825b3dd2dedbc75ac8fbc5e7dd775b6fc78333a0",
+      "coverageMap": "Cardiology/Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Cardiology",

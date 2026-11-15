@@ -1,0 +1,588 @@
+{
+  "chapter": 7,
+  "status": "installed_verified",
+  "installed": true,
+  "authoredQuestions": 57,
+  "plannedQuestions": 57,
+  "scopeNote": "Recognition, acute treatment, electrical storm, idiopathic ventricular arrhythmias, inherited syndromes and ICD selection. Counts remain provisional pending coverage audit.",
+  "sourceChecks": [
+    {
+      "source": "ESC ventricular arrhythmia guideline 2022 and AHA ALS 2025",
+      "urls": [
+        "https://academic.oup.com/eurheartj/article/43/40/3997/6675633",
+        "https://doi.org/10.1161/CIR.0000000000001376"
+      ],
+      "questions": [
+        1,
+        2
+      ],
+      "checked": [
+        "Sustained VT duration or earlier hemodynamic intervention; AV dissociation and capture support ventricular origin without using absent signs to exclude VT."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC SVT 2019 wide-complex differential; ESC ventricular arrhythmias 2022; AHA ALS 2025",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+      ],
+      "questions": [
+        3,
+        4
+      ],
+      "checked": [
+        "Brugada sequence: absence of RS in all precordial leads and RS interval when present; lack of visible dissociation does not exclude VT. Torsades requires long QT outside VT; sustained polymorphic VT unsynchronized shock and magnesium distinction from normal-QT polymorphic VT."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; digoxin US label 2025",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/009330s040lbl.pdf"
+      ],
+      "questions": [
+        5,
+        6
+      ],
+      "checked": [
+        "Bidirectional VT differential and digoxin toxicity context; life-threatening ventricular arrhythmia warrants Fab. Recent syncope suspicious for cardiac origin changes incidental NSVT urgency; initial ECG, echo and rhythm characterization with substrate-directed testing."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias and sudden cardiac death guideline 2022",
+      "urls": [
+        "https://academic.oup.com/eurheartj/article/43/40/3997/6675633"
+      ],
+      "questions": [
+        7,
+        8
+      ],
+      "checked": [
+        "Atypical ventricular-arrhythmia presentation warrants considering CMR despite a normal echo. Unexplained arrest requires systematic work-up; repeat QT and ventricular-function assessment after recovery, phenotype-directed testing and cautious genetic interpretation before idiopathic VF diagnosis."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "AHA 2025 cardiac arrest and tachyarrhythmia algorithms",
+      "urls": [
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-CA-250527.pdf",
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf"
+      ],
+      "questions": [
+        9,
+        10
+      ],
+      "checked": [
+        "Pulseless VT defibrillation and immediate CPR; AHA shockable-pathway drug sequencing and doses. Monomorphic VT with attributable instability: synchronized cardioversion; avoid delay if synchronization impossible during critical deterioration."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "AHA ALS and tachyarrhythmia algorithm 2025; ESC ventricular arrhythmias 2022",
+      "urls": [
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf",
+        "https://doi.org/10.1093/eurheartj/ehac262"
+      ],
+      "questions": [
+        11,
+        12
+      ],
+      "checked": [
+        "Sustained polymorphic VT requires immediate unsynchronized shock. Selected tolerated monomorphic VT drug options and procainamide infusion stopping limits; unstable or drug-ineligible patients require electrical strategy."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "PROCAMIO primary trial; AHA 2025 tachyarrhythmia algorithm",
+      "urls": [
+        "https://academic.oup.com/eurheartj/article/38/17/1329/3056919",
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf"
+      ],
+      "questions": [
+        13,
+        14
+      ],
+      "checked": [
+        "PROCAMIO selected tolerated population, 62 main-analysis patients, trial regimens and 40-minute safety/termination outcomes. Independent procainamide stop criteria; QRS change 150 to 235 ms exceeds fifty percent despite cumulative dose below maximum."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "AHA 2025 algorithms; EHRA antiarrhythmic clinical-use consensus",
+      "urls": [
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf",
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-CA-250527.pdf",
+        "https://doi.org/10.1093/europace/eux373"
+      ],
+      "questions": [
+        15,
+        16
+      ],
+      "checked": [
+        "Perfusing-rhythm amiodarone load distinguished from arrest bolus and lidocaine arrest doses. Magnesium for long-QT torsades despite normal serum magnesium, removal of trigger, potassium correction and evidence limitation around exact high-normal target."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022 and AHA ALS 2025",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+      ],
+      "questions": [
+        17,
+        18
+      ],
+      "checked": [
+        "Refractory acquired long-QT torsades: rate acceleration after trigger correction and magnesium; distinguish congenital and ischemic exceptions. Normal-QT polymorphic VT with active ischemia: coronary treatment and selected lidocaine/amiodarone, not routine magnesium or isoproterenol."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "EHRA multisociety electrical storm consensus 2024",
+      "urls": [
+        "https://academic.oup.com/europace/article/26/4/euae049/7607771"
+      ],
+      "questions": [
+        19,
+        20
+      ],
+      "checked": [
+        "At least three sustained ventricular episodes within 24 hours separated by at least five minutes requiring intervention; ATP qualifies and multiple shocks need episode verification. Parallel stabilization, device interrogation, sympathetic distress treatment and reversible-trigger search."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "EHRA storm consensus 2024; propranolol/metoprolol primary randomized trial 2018",
+      "urls": [
+        "https://doi.org/10.1093/europace/euae049",
+        "https://doi.org/10.1016/j.jacc.2018.02.056"
+      ],
+      "questions": [
+        21,
+        22
+      ],
+      "checked": [
+        "Nonselective beta blockade with IV amiodarone in eligible structural-heart-disease storm; trial doses distinguished from individual initiation. Deep sedation, autonomic modulation and mechanical support as selected bridges with evidence and hemodynamic limitations."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; original VANISH primary trial 2016",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://www.nejm.org/doi/full/10.1056/NEJMoa1513614"
+      ],
+      "questions": [
+        23,
+        24
+      ],
+      "checked": [
+        "Ablation preferred over drug escalation after recurrent symptomatic monomorphic VT/shocks despite chronic amiodarone in coronary disease. VANISH prior-drug-failure population, escalation comparator and composite outcome 59.1 versus 68.5 percent; no isolated mortality inference."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "VANISH2 primary trial; multisociety ventricular ablation consensus 2019",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2409501",
+        "https://doi.org/10.1002/joa3.12185"
+      ],
+      "questions": [
+        25,
+        26
+      ],
+      "checked": [
+        "VANISH2 initial strategy, ischemic population, drug comparator and composite outcome; distinct from prior VANISH. Scar-channel reentry and substrate mapping when activation mapping is not tolerated; pace-map and noninducibility limitations."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmia guideline 2022 and ventricular ablation consensus 2019",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://doi.org/10.1002/joa3.12185"
+      ],
+      "questions": [
+        27,
+        28
+      ],
+      "checked": [
+        "PVC burden around ten percent and higher risk above twenty percent interpreted as suspicion rather than proof; monitoring variability, CMR and response assessment. Ablation role in suspected PVC-induced cardiomyopathy distinguished from prophylactic treatment with preserved EF."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; multisociety ventricular ablation consensus 2019",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://doi.org/10.1002/joa3.12185"
+      ],
+      "questions": [
+        29,
+        30
+      ],
+      "checked": [
+        "Outflow-type LBBB/inferior-axis morphology is a localization clue, with triggered and adenosine-sensitive mechanisms possible. ESC first-line ablation for symptomatic idiopathic RVOT/fascicular VT distinguished from other origins, observation and drug alternatives."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "Multisociety ventricular ablation consensus 2019; ESC cardiomyopathy guideline 2023",
+      "urls": [
+        "https://doi.org/10.1002/joa3.12185",
+        "https://doi.org/10.1093/eurheartj/ehad194"
+      ],
+      "questions": [
+        31,
+        32
+      ],
+      "checked": [
+        "Posterior fascicular RBBB/superior-axis pattern and specific verapamil-sensitive reentry, distinguished from undifferentiated WCT. Right ventricular arrhythmia red flags require integrated cardiomyopathy assessment despite normal screening echo."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "CAST primary mortality report; ESC ventricular arrhythmias 2022",
+      "urls": [
+        "https://doi.org/10.1056/NEJM199103213241201",
+        "https://doi.org/10.1093/eurheartj/ehac262"
+      ],
+      "questions": [
+        33,
+        34
+      ],
+      "checked": [
+        "Ectopy suppression does not establish survival benefit; class IC risk in post-MI scar. Exercise-associated complex symptomatic ventricular arrhythmia requires contextual investigation rather than automatic idiopathic, coronary or CPVT assignment."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; GeneReviews LQTS overview",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://www.ncbi.nlm.nih.gov/books/NBK1129/"
+      ],
+      "questions": [
+        35,
+        36
+      ],
+      "checked": [
+        "Repeated QTc at least 480 ms or score above three; conditional 460–479-ms criterion with arrhythmic syncope, measurement and secondary-cause caveats. Common genotype/current/trigger associations are probabilistic, not diagnostic proof."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; EHRA practical drug compendium 2025",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://doi.org/10.1093/europace/euaf076"
+      ],
+      "questions": [
+        37,
+        38
+      ],
+      "checked": [
+        "Preferred nadolol/propranolol and adult reference dose ranges; genotype-directed mexiletine with LQT3 evidence caveats. Secondary-prevention ICD and selected LCSD roles remain complementary to syndrome-directed medication."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; multisociety genetic testing consensus 2022",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://doi.org/10.1002/joa3.12717"
+      ],
+      "questions": [
+        39,
+        40
+      ],
+      "checked": [
+        "Type 1 morphology, at least one V1/V2 and high lead positions; 2 mm equals 0.2 mV, avoiding apparent source HTML unit error. Induced-pattern specificity and negative SCN5A limitations; clinical events drive ICD consideration."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; EHRA storm consensus 2024",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://doi.org/10.1093/europace/euae049"
+      ],
+      "questions": [
+        41,
+        42
+      ],
+      "checked": [
+        "Brugada storm: fever treatment, selected isoproterenol, quinidine and specialist ablation roles; distinguish CPVT catecholamine hazard. CPVT adrenergic bidirectional/polymorphic phenotype with normal resting ECG/structure and calcium-handling basis."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; EHRA storm consensus 2024",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://doi.org/10.1093/europace/euae049"
+      ],
+      "questions": [
+        43
+      ],
+      "checked": [
+        "Flecainide add-on after highest tolerated beta blockade with persistent adrenergic arrhythmia; LCSD and ICD escalation with continued medical suppression; no routine programmed-stimulation risk-stratification role."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; early repolarization pattern consensus 2015",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://doi.org/10.1016/j.jacc.2015.05.033"
+      ],
+      "questions": [
+        44
+      ],
+      "checked": [
+        "Inferolateral J-point pattern separated from syndrome after unexplained PVT/VF and from automatic ICD indication. Short-QT 320–360-ms conditional arrhythmic-syncope framework distinguished from terminal QRS notching."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC ventricular arrhythmias 2022; AHA/ACC/HFSA HF guideline 2022",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://doi.org/10.1016/j.jacc.2021.12.012"
+      ],
+      "questions": [
+        46
+      ],
+      "checked": [
+        "Secondary prevention after documented VF without a reversible cause distinguished from primary-prevention EF cut-offs and waiting intervals; expected meaningful survival and residual substrate assessment."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "AHA/ACC/HFSA HF 2022; US ACS guideline 2025",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2021.12.012",
+        "https://doi.org/10.1016/j.jacc.2024.11.009"
+      ],
+      "questions": [
+        47,
+        48
+      ],
+      "checked": [
+        "EF/symptom criteria distinguished: <=35 percent NYHA II–III versus <=30 percent NYHA I, treatment and meaningful-survival requirements. Standard >=40-day post-MI and >=90-day postrevascularization pathway distinguished from secondary-prevention and pacing exceptions."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "IRIS primary trial; US ACS 2025 and HF 2022 guidelines",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa0901889",
+        "https://doi.org/10.1016/j.jacc.2024.11.009",
+        "https://doi.org/10.1016/j.jacc.2021.12.012"
+      ],
+      "questions": [
+        49,
+        50
+      ],
+      "checked": [
+        "Early ICD trials separate arrhythmic death reduction from absent overall survival benefit, without causal death-conversion inference. US nonischemic DCM EF/symptom/GDMT/survival criteria distinct from CRT QRS criteria and European recommendation strength."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "DANISH primary trial; ESC VA 2022 and cardiomyopathy 2023",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa1608029",
+        "https://doi.org/10.1093/eurheartj/ehac262",
+        "https://doi.org/10.1093/eurheartj/ehad194"
+      ],
+      "questions": [
+        51,
+        52
+      ],
+      "checked": [
+        "Original DANISH all-cause versus sudden-death outcomes and CRT background; nonsignificance is not equivalence. ESC DCM EF below fifty and two risk factors, with LMNA-specific distinction and pathogenic-variant caveats."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ICD appropriate use criteria 2025; MADIT-RIT primary report",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2024.11.023",
+        "https://doi.org/10.1056/NEJMoa1211107"
+      ],
+      "questions": [
+        53,
+        54
+      ],
+      "checked": [
+        "Conventional standalone S-ICD lacks ATP/chronic pacing/CRT, distinct from newer extravascular/modular systems. Programming evidence population, delayed/high-rate therapy and need to preserve detection of known slower VT."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "EHRA storm consensus 2024; VEST primary randomized report",
+      "urls": [
+        "https://doi.org/10.1093/europace/euae049",
+        "https://doi.org/10.1056/NEJMoa1800781"
+      ],
+      "questions": [
+        55,
+        56
+      ],
+      "checked": [
+        "Confirmed oversensing requires supervised tachytherapy suspension with external rescue and definitive device review. VEST intention-to-treat primary arrhythmic endpoint, adherence limits and distinction from secondary mortality signal."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "APHRS/HRS sudden unexplained death family consensus 2020",
+      "urls": [
+        "https://doi.org/10.1016/j.hrthm.2020.10.010"
+      ],
+      "questions": [
+        57
+      ],
+      "checked": [
+        "First-degree screening after young unexplained death, postmortem material review, phenotype-directed testing and VUS limitations; selected three-to-five-year reassessment until at least forty-five."
+      ],
+      "status": "source_checked"
+    },
+    {
+      "source": "ESC 2022 SQTS; EHRA/ACNAP rare-arrhythmia consensus 2026; modified LQTS score",
+      "urls": [
+        "https://academic.oup.com/eurheartj/article/43/40/3997/6675633",
+        "https://doi.org/10.1093/europace/euag184",
+        "https://www.ncbi.nlm.nih.gov/sites/books/NBK1129/table/rws.T.long_qt_syndrome_scoring_system_fo/?report=objectonly"
+      ],
+      "questions": [
+        35,
+        45
+      ],
+      "checked": [
+        "Modified diagnostic-score components and exclusions; QTc <=360 ms plus qualifying context, separate <=320 ms consideration pathway under ESC 2022, secondary prevention after VF, uncertain asymptomatic quinidine, pediatric scope of the 2026 pharmacological advice."
+      ],
+      "status": "source_checked",
+      "accessLimit": "2026 publisher full-page retrieval failed; relevant indexed publisher diagnostic and clinical-advice sections were available and checked. No full-article access claim."
+    }
+  ],
+  "finalReviewStatus": "author_editorial_and_coverage_review_complete",
+  "editorialReviewProgress": {
+    "status": "complete",
+    "questionsReviewedInFull": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "changes": [
+      "Question 3 no longer introduces undocumented precordial concordance into a distractor; absence of RS complexes is the actual supplied criterion.",
+      "Question 7 removes an explicit atypical-origin clue and replaces qualified investigation distractors with realistic investigation names.",
+      "Question 10 removes giveaway qualification from unsynchronized-shock option.",
+      "Question 16 gives the amiodarone distractor a plausible correct component (culprit withdrawal), leaving drug selection as the discriminating error. Full-text review completed for questions 9–16.",
+      "Question 20 replaces an explicitly unsupported-transfer distractor with premature ICD-therapy suspension before rhythm verification.",
+      "Question 22 replaces claims of permanent autonomic/device cure with plausible but delayed ablation/rhythm-treatment sequences; rationales explain why concurrent escalation is needed. Full-text review completed for questions 17–24.",
+      "Question 25 specifies that VANISH2 counted death throughout follow-up and arrhythmic endpoint events after fourteen days.",
+      "Question 26 replaces atrial/PVI distractors with competing ventricular mapping strategies: prolonged intolerable activation mapping and targeting an incidental PVC. Full-text review completed for questions 25–32.",
+      "Question 12 replaces unrelated AV-nodal drugs with competing ventricular antiarrhythmic loading, maintenance and combination regimens. Regimen distinctions checked against the AHA 2025 tachyarrhythmia algorithm. Full-text review completed for questions 33–44; coverage and distractor issues remain separately open.",
+      "Question 31 replaces digoxin/magnesium with closer calcium-channel-blocker and general VT antiarrhythmic alternatives; retains the confirmed-mechanism wording that distinguishes verapamil.",
+      "Question 35 now includes the complete modified LQTS diagnostic score and counting limitations.",
+      "Added dedicated short-QT question at position 45; former questions 45–56 are now 46–57. Read all former questions 45–56 in full before renumbering."
+    ],
+    "remaining": "No outstanding author editorial or chapter coverage items; independent clinician review not claimed."
+  },
+  "additionalSourceChecks": [
+    {
+      "scope": "Editorial review questions 12 and 33–44",
+      "sources": [
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf",
+        "https://www.ncbi.nlm.nih.gov/books/NBK1129/",
+        "https://academic.oup.com/eurheartj/article/43/40/3997/6675633"
+      ],
+      "findings": "AHA loading-versus-maintenance distinction confirmed; LQTS score threshold and genotype-trigger associations checked; ESC preferred nonselective beta blockers and Brugada clinical risk framework checked. This does not constitute independent clinician review."
+    }
+  ],
+  "coverageAudit": {
+    "status": "complete",
+    "sectionsReviewed": 6,
+    "questionDecisions": 57,
+    "countPolicy": "Distinct examinable decisions; not official examination weights.",
+    "gapsResolved": [
+      "Added dedicated short-QT diagnostic/prevention question instead of relying on an early-repolarization explanation.",
+      "Completed modified LQTS score.",
+      "Strengthened acute VT and fascicular VT distractors."
+    ],
+    "boundaries": "Disease-specific cardiomyopathy/HF details also have separate chapters; explanations here remain independently usable. Rare low-yield channelopathy taxonomy is not expanded into a fixed quota.",
+    "limitations": [
+      "Author source checking is not independent clinician review.",
+      "Full Harrison text was not accessed."
+    ]
+  },
+  "installationVerification": {
+    "installedChapters": 21,
+    "installedQuestions": 1069,
+    "runtimeSourceComparison": "passed",
+    "preservedOtherBanks": 20,
+    "structuralValidation": "passed",
+    "independentClinicianReview": "not_recorded"
+  }
+}
