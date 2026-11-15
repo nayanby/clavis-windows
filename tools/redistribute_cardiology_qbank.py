@@ -125,6 +125,11 @@ def build():
 
 
 def apply(banks, report):
+    expected={q['id']:q for b in banks for q in b['questions']}
+    for b in banks:
+        current=DEST/(b['document']+'.json')
+        if current.exists():
+            assert all(q['id'] in expected and expected[q['id']]==q for q in read_json(current)['questions']), 'Later chapter edits exist; do not overwrite them with the frozen redistribution'
     AUDIT.mkdir(parents=True, exist_ok=True)
     if not ARCHIVE.exists():
         files = list(DEST.glob('*.json'))
@@ -273,7 +278,19 @@ def install(banks):
 def verify(banks, report):
     delivered = [p for p in DEST.glob('*.json') if 'questions' in read_json(p)]
     assert len(delivered) == 15
-    assert all(read_json(DEST/(b['document']+'.json')) == b for b in banks)
+    expected={q['id']:q for b in banks for q in b['questions']}
+    current=[read_json(DEST/(b['document']+'.json')) for b in banks]
+    all_questions=[q for b in current for q in b['questions']]
+    actual={q['id']:q for q in all_questions}
+    assert len(actual)==len(all_questions),'Duplicate question ID across canonical chapters'
+    assert all(actual.get(k)==q for k,q in expected.items()),'An original redistributed question changed or disappeared'
+    for original,bank in zip(banks,current):
+        assert bank['document']==original['document'] and bank['chapterOrder']==original['chapterOrder']
+        assert bank['targetQuestions']==len(bank['questions'])
+        assert all(actual[q['id']]==q for q in original['questions'])
+        assert {q['id'] for q in original['questions']} <= {q['id'] for q in bank['questions']}
+        if any(q['id'] not in expected for q in bank['questions']):
+            validate(bank)
     assert read_json(AUDIT/'redistribution-report.json') == report
     installed = read_json(AUDIT/'installation-report.json')
     runtime = [read_json(Path(p)) for p in installed['files']]
@@ -286,7 +303,7 @@ def verify(banks, report):
         assert b['document'] == original['document']
         assert b['headingText'] == original['headingText']
         assert b['targetQuestions'] == len(b['questions'])
-    print('Verified: 15 source-matched JSON files; 615 unchanged unique questions; 541 released; 74 drafts withheld.')
+    print(f'Verified: 15 source-matched JSON files; 615 original questions preserved; {len(all_questions)} current unique questions; 541 released; {len(all_questions)-541} drafts withheld.')
 
 
 if __name__ == '__main__':
@@ -303,4 +320,5 @@ if __name__ == '__main__':
         install(banks)
     if args.verify:
         verify(banks, report)
-    print(json.dumps({k:v for k,v in report.items() if k != 'questionAssignments'}, ensure_ascii=False, indent=2))
+    if not args.verify:
+        print(json.dumps({k:v for k,v in report.items() if k != 'questionAssignments'}, ensure_ascii=False, indent=2))

@@ -2,7 +2,7 @@
 
 Names and numbers match the 15 DOCX files in `data/files/Cardiology`.
 
-615 existing questions are allocated once each. No new questions were generated. Question IDs, stems, options, answer keys, explanations and references are unchanged.
+The redistribution allocated 615 existing questions once each, preserving their IDs, stems, options, answer keys, explanations and references. Subsequent hypertension authoring has added 10 questions, bringing the current total to 625.
 
 | Chapter | Topic | Existing questions | Draft questions |
 |---|---|---:|---:|
@@ -16,7 +16,7 @@ Names and numbers match the 15 DOCX files in `data/files/Cardiology`.
 | 8 | Cardiomyopathies Myocarditis and Genetic Cardiac Diseases | 56 | 0 |
 | 9 | Pericardial Diseases and Cardiac Tamponade | 45 | 0 |
 | 10 | Infective Endocarditis | 66 | 65 |
-| 11 | Systemic Hypertension and Hypertensive Emergencies | 9 | 9 |
+| 11 | Systemic Hypertension and Hypertensive Emergencies | 19 | 19 |
 | 12 | Adult Congenital Heart Diseases | 4 | 0 |
 | 13 | Aortic Diseases and Peripheral Vascular Diseases | 3 | 0 |
 | 14 | Advanced ECG Interpretation and Electrophysiology | 45 | 0 |
@@ -24,10 +24,12 @@ Names and numbers match the 15 DOCX files in `data/files/Cardiology`.
 
 ## Review and installation status
 
-The 541 previously installed questions are released under the matching source chapter names. The 65 original endocarditis draft questions and 9 hypertension draft questions remain withheld from the app. Chapter 10 has one previously installed device-infection question in addition to its 65 draft questions. Chapter 11 contains only drafts, so it has a delivered JSON file but no installed bank.
+The 541 previously installed questions are released under the matching source chapter names. The 65 original endocarditis draft questions and 19 current hypertension draft questions remain withheld from the app. Chapter 10 has one previously installed device-infection question in addition to its 65 draft questions. Chapter 11 contains only drafts, so it has a delivered JSON file but no installed bank.
+
+Hypertension currently contains 19 of 62 provisionally planned questions: measurement and phenotypes (9), risk-based initiation and targets (6), and lifestyle/contributors (4). Drug selection, resistance, secondary causes, emergencies and target trials remain unfinished. Its current coverage ledger is `audit/chapter-11-coverage.json`; the original nine-question ledger remains archived.
 
 All 15 files contain existing questions, but full chapter coverage is incomplete. In particular, chapters 12 and 13 contain only 4 and 3 questions respectively. The original explanations are preserved; a medical deep-dive structure revision has not been performed. Answer positions are preserved, so the new chapter subsets have uneven answer-letter distributions.
 
-The original source-review ledgers describe the old authoring groups, not the redistributed chapter coverage. Use `audit/redistribution-report.json` for the question-by-question allocation and original content hashes. The verified original artifacts are retained in `audit/pre-redistribution.zip`.
+The original source-review ledgers describe the old authoring groups, not the redistributed chapter coverage. Use `audit/redistribution-report.json` for the original question-by-question allocation and content hashes. It is a historical record of the 615-question redistribution, not a current authoring total. The verified original artifacts are retained in `audit/pre-redistribution.zip`.
 
 Run `python tools/redistribute_cardiology_qbank.py --verify` to check the delivered files. The old individual authoring scripts produce the superseded grouping and should not be run directly over this set.

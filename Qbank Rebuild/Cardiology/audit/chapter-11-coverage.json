@@ -1,0 +1,127 @@
+{
+  "subject": "Cardiology",
+  "chapterNumber": 11,
+  "chapter": "11. Systemic Hypertension and Hypertensive Emergencies",
+  "status": "draft_in_progress",
+  "countPolicy": "Provisional coverage-driven distinct decisions; not official examination weights.",
+  "plannedQuestions": 62,
+  "authoredQuestions": 19,
+  "sections": [
+    {
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "questions": 9,
+      "decisions": [
+        "Apply the AHA 2025 systolic-or-diastolic category using confirmed average pressure",
+        "Distinguish ESC 2024 elevated pressure from AHA stage-one hypertension",
+        "Correct measurement conditions before interpreting a nonstandard office reading",
+        "Recognize undercuffing as a cause of falsely elevated pressure and apparent resistance",
+        "Use framework-specific home and ambulatory thresholds rather than transferring an office cutoff",
+        "Recognize untreated white-coat hypertension and plan surveillance without reflex escalation",
+        "Recognize masked hypertension despite apparently reassuring office readings",
+        "Diagnose orthostatic hypotension using timed postural measurements",
+        "Identify nocturnal hypertension and nondipping with appropriate limitations"
+      ]
+    },
+    {
+      "section": "Risk assessment treatment thresholds and targets",
+      "questions": 6,
+      "decisions": [
+        "Initiate treatment at the AHA 2025 lower threshold in an appropriate high-risk patient",
+        "Apply the three-to-six-month lifestyle trial and subsequent drug decision in lower-risk AHA stage-one disease",
+        "Apply the ESC elevated-pressure treatment pathway using risk and repeat confirmation",
+        "Use the AHA general treatment target while recognizing individual tolerability",
+        "Apply the ESC systolic target with orthostatic frailty and age-related exceptions",
+        "Evaluate hypertension-mediated organ damage and baseline renal metabolic and cardiovascular risk"
+      ]
+    },
+    {
+      "section": "Lifestyle and reversible contributors",
+      "questions": 4,
+      "decisions": [
+        "Choose a sustainable weight and DASH-style dietary intervention",
+        "Translate sodium reduction into a clinically meaningful intake target",
+        "Select potassium enrichment only after assessing kidney function and hyperkalemia risk",
+        "Address exercise alcohol sleep and relevant medication or substance contributors"
+      ]
+    },
+    {
+      "section": "Initial drug selection and adverse effects",
+      "questions": 8,
+      "decisions": [
+        "Choose initial combination treatment in appropriate stage-two hypertension",
+        "Use complementary first-line classes rather than dual renin-angiotensin blockade",
+        "Select beta-blockade according to a compelling cardiovascular indication",
+        "Prefer an ACE inhibitor or ARB in an appropriate albuminuric CKD phenotype",
+        "Interpret chlorthalidone efficacy and toxicity in advanced CKD without assuming thiazides cannot work",
+        "Recognize thiazide-associated hyponatremia hypokalemia and hyperuricemia",
+        "Manage dihydropyridine edema according to its hemodynamic mechanism",
+        "Reassess a major creatinine rise or hyperkalemia after renin-angiotensin blockade"
+      ]
+    },
+    {
+      "section": "Resistant hypertension",
+      "questions": 6,
+      "decisions": [
+        "Confirm true resistance using adherence adequate doses and out-of-office pressure",
+        "Optimize the diuretic and foundational triple regimen before adding drugs",
+        "Apply the PATHWAY-2 evidence for fourth-line spironolactone in a suitable patient",
+        "Choose an MRA alternative or monitoring plan according to renal and endocrine adverse effects",
+        "Recognize clonidine withdrawal and other treatment-related rebound problems",
+        "Place renal denervation within a selected shared-decision pathway without claiming proven event reduction"
+      ]
+    },
+    {
+      "section": "Secondary hypertension",
+      "questions": 11,
+      "decisions": [
+        "Apply the 2025 Endocrine Society broader primary-aldosteronism screening approach",
+        "Interpret aldosterone renin and the ratio with potassium medications and assay-specific thresholds",
+        "Choose confirmatory testing or a justified exception for a strong aldosterone phenotype",
+        "Use adrenal venous sampling rather than CT appearance alone for appropriate surgical lateralization",
+        "Choose unilateral adrenalectomy versus MRA treatment for confirmed primary aldosteronism",
+        "Distinguish routine atherosclerotic renal-artery stenosis from recurrent flash-pulmonary-edema presentations",
+        "Recognize renal fibromuscular dysplasia and its revascularization strategy",
+        "Evaluate obstructive sleep apnea without assuming CPAP replaces all antihypertensive therapy",
+        "Sequence alpha and beta blockade in a catecholamine-secreting tumor",
+        "Distinguish Liddle syndrome from aldosterone-mediated low-renin hypertension",
+        "Recognize coarctation through arm-leg and pulse findings"
+      ]
+    },
+    {
+      "section": "Hypertensive emergencies and severe asymptomatic pressure",
+      "questions": 5,
+      "decisions": [
+        "Define emergency through acute organ injury rather than a pressure number alone",
+        "Use the usual controlled MAP reduction sequence when no disease-specific exception applies",
+        "Choose a titratable IV agent according to organ involvement and contraindications",
+        "Evaluate malignant hypertension-associated microangiopathy without overlooking a competing TMA",
+        "Avoid unnecessary rapid IV lowering in severe asymptomatic hypertension"
+      ]
+    },
+    {
+      "section": "Disease-specific emergency treatment",
+      "questions": 8,
+      "decisions": [
+        "Use anti-impulse sequencing and targets in acute aortic syndromes",
+        "Treat hypertensive acute pulmonary edema with appropriate vasodilation and respiratory support",
+        "Select pressure treatment in acute coronary ischemia without compromising coronary perfusion",
+        "Apply an appropriate intracerebral-hemorrhage pressure strategy to the stated severity range",
+        "Apply ischemic-stroke pressure thresholds according to reperfusion eligibility",
+        "Treat a catecholamine or stimulant-associated hypertensive crisis with appropriate sequencing",
+        "Treat persistent severe pregnancy hypertension and distinguish magnesium seizure prophylaxis",
+        "Choose ongoing pregnancy-compatible therapy and avoid fetotoxic renin-angiotensin agents"
+      ]
+    },
+    {
+      "section": "Landmark treatment-target trials",
+      "questions": 5,
+      "decisions": [
+        "Interpret SPRINT eligibility benefits and adverse effects without extrapolating to excluded diabetes or stroke",
+        "Distinguish the ACCORD-BP primary outcome from its stroke result",
+        "Apply BPROAD evidence in type-two diabetes without confusing it with ACCORD",
+        "Interpret STEP blood-pressure targets and population limitations",
+        "Apply HYVET to selected adults aged eighty or older without withholding all treatment solely for age"
+      ]
+    }
+  ]
+}

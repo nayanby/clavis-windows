@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology: canonical 15-chapter redistribution; coverage and explanation revision remain",
+  "currentChapter": "Cardiology 11. Systemic Hypertension and Hypertensive Emergencies",
   "chapters": [
     {
       "subject": "Neurology",
@@ -635,16 +635,36 @@
       "chapter": 11,
       "document": "11. Systemic Hypertension and Hypertensive Emergencies",
       "file": "Cardiology/11. Systemic Hypertension and Hypertensive Emergencies.json",
-      "status": "redistributed_coverage_incomplete",
+      "status": "draft_in_progress",
       "originalIdsPreserved": true,
       "existingQuestions": 9,
       "previouslyInstalledQuestions": 0,
-      "draftQuestions": 9,
+      "draftQuestions": 19,
       "coverageStatus": "incomplete_requires_chapter_review",
       "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
       "installedQuestions": 0,
-      "draftQuestionsWithheld": 9,
-      "runtimeStatus": "draft_not_installed"
+      "draftQuestionsWithheld": 19,
+      "runtimeStatus": "draft_not_installed",
+      "validation": {
+        "questions": 19,
+        "answerDistribution": {
+          "A": 5,
+          "B": 5,
+          "C": 5,
+          "D": 4
+        },
+        "minimumExplanationWords": 329,
+        "distractorRationales": 54,
+        "questionStyles": {
+          "direct": 5,
+          "clinical_scenario": 14
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 19,
+      "plannedQuestions": 62,
+      "newQuestionsAfterRedistribution": 10,
+      "coverageMap": "Cardiology/audit/chapter-11-coverage.json"
     },
     {
       "subject": "Cardiology",
@@ -1330,6 +1350,8 @@
     "existingQuestions": 615,
     "sourceChapters": 15,
     "fullCoverage": false,
-    "draftQuestionsNotInstalled": 74
+    "draftQuestionsNotInstalled": 74,
+    "currentAuthoredQuestions": 625,
+    "currentDraftQuestionsNotInstalled": 84
   }
 }

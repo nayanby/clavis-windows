@@ -7,10 +7,10 @@
   "headingIndex": 0,
   "document": "11. Systemic Hypertension and Hypertensive Emergencies",
   "headingText": "Systemic Hypertension and Hypertensive Emergencies",
-  "targetQuestions": 9,
-  "status": "redistributed_existing_questions",
+  "targetQuestions": 19,
+  "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
-  "sourceNote": "Existing questions redistributed by clinical focus to the canonical files/Cardiology chapters. Question content and source-review status are unchanged. This is not a claim of complete source coverage or a deep-dive explanation rewrite.",
+  "sourceNote": "Original educational synthesis; incomplete draft, not for installation. Full Harrison text not accessed; independent clinician review not claimed.",
   "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3}",
   "questions": [
     {
@@ -743,15 +743,768 @@
       "sourceCheckedAt": "2026-11-15",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Identify nocturnal hypertension and nondipping with appropriate limitations"
+    },
+    {
+      "id": "cardiology-rebuild-11-010",
+      "topic": "Risk assessment treatment thresholds and targets",
+      "question": "A 58-year-old has confirmed office and home BP averages of 134/84 mmHg. There is no clinical CVD, diabetes or CKD. The PREVENT 10-year CVD risk is 8.2%. Under AHA/ACC 2025 guidance, what is the best next step?",
+      "options": [
+        "Use lifestyle treatment alone for six months before considering medication",
+        "Begin antihypertensive medication with lifestyle treatment",
+        "Defer medication until the average BP reaches 140/90 mmHg",
+        "Repeat annual risk assessment without active BP treatment"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Risk-Based Drug Initiation in Stage 1 Hypertension\n\nCorrect answer: Begin antihypertensive medication with lifestyle treatment\n\nTreatment Eligibility\n\n**AHA/ACC 2025 links the lower medication threshold to cardiovascular risk.** At average BP at least ==130/80 mmHg==, drug treatment is recommended in adults with clinical cardiovascular disease, previous stroke, diabetes, CKD, or a PREVENT ten-year CVD risk of at least ==7.5%==.\n\nThe supplied ==8.2%== risk crosses that boundary. Confirmation with reliable measurements has already addressed the possibility that an isolated office reading is driving the decision.\n\nPREVENT estimates broader cardiovascular risk; its percentage should not be substituted directly into an older pooled-cohort ASCVD treatment algorithm with a different cutoff.\n\nTreatment and Follow-Up\n\n**Combine a suitable first-line drug with lifestyle measures and monitor the response.** An ACE inhibitor or ARB, a long-acting dihydropyridine calcium-channel blocker, or a thiazide-type diuretic may be appropriate according to comorbidities, kidney function, electrolytes and tolerance.\n\nFor example, the usual adult amlodipine starting dose is ==5 mg== once daily, titrated to a maximum of ==10 mg== daily. A ==2.5 mg== starting dose is appropriate in selected small, frail, elderly or hepatically impaired adults. Assess ankle edema and orthostatic symptoms during titration.\n\nThe general American goal is below ==130/80 mmHg==, with individual considerations for pregnancy, institutional care or limited lifespan. Review adherence, home averages and adverse effects during titration. Check creatinine and potassium when selecting renin–angiotensin system blockade and electrolytes when using a diuretic. A ten-year risk score does not identify a secondary cause, determine a specific drug, or establish hypertensive emergency. Those are separate clinical decisions. The examination distinction is between a risk-based threshold to start treatment and the subsequently chosen pressure target; neither should be inferred from the stage label alone.\n\nClinical setting in AHA/ACC 2025 | Medication initiation\n\nAverage BP ==≥140/90 mmHg== | Medication plus lifestyle regardless of estimated risk\n\nAverage BP ≥130/80 with CVD, stroke, DM, CKD or PREVENT risk ==≥7.5%== | Medication plus lifestyle\n\nAverage BP ≥130/80 with PREVENT risk ==<7.5%==, without the listed high-risk conditions | Initial lifestyle trial; add medication if persistent after 3–6 months\n\nUse lifestyle treatment alone for six months before considering medication: A three-to-six-month lifestyle-first approach applies to otherwise lower-risk stage-one hypertension. This patient crosses the current PREVENT risk threshold, making pharmacological treatment appropriate alongside lifestyle changes.\n\nDefer medication until the average BP reaches 140/90 mmHg: That pressure is a medication-initiation threshold regardless of estimated risk, but it is not the only threshold. Confirmed stage-one pressure with sufficiently high cardiovascular risk supports earlier treatment.\n\nRepeat annual risk assessment without active BP treatment: Periodic risk reassessment is appropriate during follow-up, including for patients below treatment thresholds. Here the combination of confirmed pressure and present risk already justifies active treatment rather than annual observation alone.\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356\n\nAmlodipine prescribing information, DailyMed — https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1080fcea-a5da-499d-a855-690c13559071",
+      "explanationHtml": "<h2>Risk-Based Drug Initiation in Stage 1 Hypertension</h2><p><strong>Correct answer: B — Begin antihypertensive medication with lifestyle treatment</strong></p><h3>Treatment Eligibility</h3><ul><li><strong>AHA/ACC 2025 links the lower medication threshold to cardiovascular risk.</strong> At average BP at least <mark>130/80 mmHg</mark>, drug treatment is recommended in adults with clinical cardiovascular disease, previous stroke, diabetes, CKD, or a PREVENT ten-year CVD risk of at least <mark>7.5%</mark>.<ul><li>The supplied <mark>8.2%</mark> risk crosses that boundary. Confirmation with reliable measurements has already addressed the possibility that an isolated office reading is driving the decision.</li><li>PREVENT estimates broader cardiovascular risk; its percentage should not be substituted directly into an older pooled-cohort ASCVD treatment algorithm with a different cutoff.</li></ul></li></ul><h3>Treatment and Follow-Up</h3><ul><li><strong>Combine a suitable first-line drug with lifestyle measures and monitor the response.</strong> An ACE inhibitor or ARB, a long-acting dihydropyridine calcium-channel blocker, or a thiazide-type diuretic may be appropriate according to comorbidities, kidney function, electrolytes and tolerance.<ul><li>For example, the usual adult amlodipine starting dose is <mark>5 mg</mark> once daily, titrated to a maximum of <mark>10 mg</mark> daily. A <mark>2.5 mg</mark> starting dose is appropriate in selected small, frail, elderly or hepatically impaired adults. Assess ankle edema and orthostatic symptoms during titration.</li><li>The general American goal is below <mark>130/80 mmHg</mark>, with individual considerations for pregnancy, institutional care or limited lifespan. Review adherence, home averages and adverse effects during titration. Check creatinine and potassium when selecting renin–angiotensin system blockade and electrolytes when using a diuretic. A ten-year risk score does not identify a secondary cause, determine a specific drug, or establish hypertensive emergency. Those are separate clinical decisions. The examination distinction is between a risk-based threshold to start treatment and the subsequently chosen pressure target; neither should be inferred from the stage label alone.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Clinical setting in AHA/ACC 2025</th><th>Medication initiation</th></tr></thead><tbody><tr><td>Average BP <mark>≥140/90 mmHg</mark></td><td>Medication plus lifestyle regardless of estimated risk</td></tr><tr><td>Average BP ≥130/80 with CVD, stroke, DM, CKD or PREVENT risk <mark>≥7.5%</mark></td><td>Medication plus lifestyle</td></tr><tr><td>Average BP ≥130/80 with PREVENT risk <mark>&lt;7.5%</mark>, without the listed high-risk conditions</td><td>Initial lifestyle trial; add medication if persistent after 3–6 months</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — Use lifestyle treatment alone for six months before considering medication:</strong> A three-to-six-month lifestyle-first approach applies to otherwise lower-risk stage-one hypertension. This patient crosses the current PREVENT risk threshold, making pharmacological treatment appropriate alongside lifestyle changes.</li><li><strong>C — Defer medication until the average BP reaches 140/90 mmHg:</strong> That pressure is a medication-initiation threshold regardless of estimated risk, but it is not the only threshold. Confirmed stage-one pressure with sufficiently high cardiovascular risk supports earlier treatment.</li><li><strong>D — Repeat annual risk assessment without active BP treatment:</strong> Periodic risk reassessment is appropriate during follow-up, including for patients below treatment thresholds. Here the combination of confirmed pressure and present risk already justifies active treatment rather than annual observation alone.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li><li><a href=\"https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1080fcea-a5da-499d-a855-690c13559071\">Amlodipine prescribing information, DailyMed</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Risk-Based Drug Initiation in Stage 1 Hypertension",
+        "sections": [
+          {
+            "heading": "Treatment Eligibility",
+            "bullets": [
+              {
+                "text": "**AHA/ACC 2025 links the lower medication threshold to cardiovascular risk.** At average BP at least ==130/80 mmHg==, drug treatment is recommended in adults with clinical cardiovascular disease, previous stroke, diabetes, CKD, or a PREVENT ten-year CVD risk of at least ==7.5%==.",
+                "children": [
+                  "The supplied ==8.2%== risk crosses that boundary. Confirmation with reliable measurements has already addressed the possibility that an isolated office reading is driving the decision.",
+                  "PREVENT estimates broader cardiovascular risk; its percentage should not be substituted directly into an older pooled-cohort ASCVD treatment algorithm with a different cutoff."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Treatment and Follow-Up",
+            "bullets": [
+              {
+                "text": "**Combine a suitable first-line drug with lifestyle measures and monitor the response.** An ACE inhibitor or ARB, a long-acting dihydropyridine calcium-channel blocker, or a thiazide-type diuretic may be appropriate according to comorbidities, kidney function, electrolytes and tolerance.",
+                "children": [
+                  "For example, the usual adult amlodipine starting dose is ==5 mg== once daily, titrated to a maximum of ==10 mg== daily. A ==2.5 mg== starting dose is appropriate in selected small, frail, elderly or hepatically impaired adults. Assess ankle edema and orthostatic symptoms during titration.",
+                  "The general American goal is below ==130/80 mmHg==, with individual considerations for pregnancy, institutional care or limited lifespan. Review adherence, home averages and adverse effects during titration. Check creatinine and potassium when selecting renin–angiotensin system blockade and electrolytes when using a diuretic. A ten-year risk score does not identify a secondary cause, determine a specific drug, or establish hypertensive emergency. Those are separate clinical decisions. The examination distinction is between a risk-based threshold to start treatment and the subsequently chosen pressure target; neither should be inferred from the stage label alone."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "Clinical setting in AHA/ACC 2025",
+              "Medication initiation"
+            ],
+            "rows": [
+              [
+                "Average BP ==≥140/90 mmHg==",
+                "Medication plus lifestyle regardless of estimated risk"
+              ],
+              [
+                "Average BP ≥130/80 with CVD, stroke, DM, CKD or PREVENT risk ==≥7.5%==",
+                "Medication plus lifestyle"
+              ],
+              [
+                "Average BP ≥130/80 with PREVENT risk ==<7.5%==, without the listed high-risk conditions",
+                "Initial lifestyle trial; add medication if persistent after 3–6 months"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "A three-to-six-month lifestyle-first approach applies to otherwise lower-risk stage-one hypertension. This patient crosses the current PREVENT risk threshold, making pharmacological treatment appropriate alongside lifestyle changes."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "That pressure is a medication-initiation threshold regardless of estimated risk, but it is not the only threshold. Confirmed stage-one pressure with sufficiently high cardiovascular risk supports earlier treatment."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Periodic risk reassessment is appropriate during follow-up, including for patients below treatment thresholds. Here the combination of confirmed pressure and present risk already justifies active treatment rather than annual observation alone."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        },
+        {
+          "label": "Amlodipine prescribing information, DailyMed",
+          "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1080fcea-a5da-499d-a855-690c13559071"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Initiate treatment at the AHA 2025 lower threshold in an appropriate high-risk patient"
+    },
+    {
+      "id": "cardiology-rebuild-11-011",
+      "topic": "Risk assessment treatment thresholds and targets",
+      "question": "A 46-year-old without CVD, stroke, diabetes or CKD has PREVENT 10-year CVD risk of 4%. After six months of documented diet, exercise and weight reduction, validated home and standardized office averages remain 134/82 mmHg. Under AHA/ACC 2025, which strategy is best?",
+      "options": [
+        "Obtain ABPM before any treatment change despite concordant validated readings",
+        "Continue lifestyle treatment alone until the estimated risk exceeds 7.5%",
+        "Defer treatment changes until office BP reaches 140/90 mmHg",
+        "Add an antihypertensive drug while continuing lifestyle measures"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Persistent Lower-Risk Stage 1 Hypertension\n\nCorrect answer: Add an antihypertensive drug while continuing lifestyle measures\n\nTreatment Threshold After Lifestyle Intervention\n\n**Lower ten-year risk changes initial timing rather than excluding later drug treatment.** AHA/ACC 2025 recommends starting medication when average BP remains at least ==130/80 mmHg== after a three-to-six-month lifestyle trial in otherwise lower-risk adults.\n\nThe patient has completed the trial and remains above threshold on two reliable measurement methods. Continuing to repeat an unchanged lifestyle-only plan indefinitely would miss the specified escalation point.\n\nA low short-term risk estimate can coexist with substantial cumulative lifetime exposure to high pressure. Conversely, a very young patient outside a risk equation’s validated age range should not be assigned a fabricated PREVENT percentage.\n\nLong-Term Management\n\n**Continue the successful lifestyle changes when adding medication.** Their benefits extend beyond the small remaining pressure difference and may reduce the dose burden needed for durable control.\n\nUse a complementary first-line drug selected from the patient’s clinical profile; do not infer that every stage-one patient needs immediate two-drug initiation. The preferred two-agent American starting strategy specifically concerns stage-two hypertension.\n\nMonitor home pressure, postural symptoms and drug-specific adverse effects, and aim for the usual American target below ==130/80 mmHg== when appropriate. Reassess cardiovascular and renal risk over time because diabetes, CKD or overt vascular disease may subsequently alter priorities. Confirm adherence and measurement quality before labeling inadequate response as resistance. Severe acute symptoms or organ injury would require a different assessment, but a stable average of 134/82 is a chronic prevention problem rather than an indication for rapid intravenous lowering. This question tests the completed lifestyle trial and the current recommendation, not failure of a named antihypertensive drug.\n\nObtain ABPM before any treatment change despite concordant validated readings: ABPM is useful for discordant readings, suspected nocturnal hypertension or uncertain measurement quality. The stem already establishes persistent hypertension with reliable concordant measurements, so an additional mandatory confirmation step should not delay the indicated decision.\n\nContinue lifestyle treatment alone until the estimated risk exceeds 7.5%: The risk threshold determines the initial pathway, but persistent stage-one pressure after a completed three-to-six-month lifestyle trial supports adding medication even when ten-year risk remains below 7.5%.\n\nDefer treatment changes until office BP reaches 140/90 mmHg: Waiting for stage two was a common interpretation of earlier low-risk management. The 2025 American recommendation specifically addresses persistent lower-risk stage-one pressure after lifestyle intervention.\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356",
+      "explanationHtml": "<h2>Persistent Lower-Risk Stage 1 Hypertension</h2><p><strong>Correct answer: D — Add an antihypertensive drug while continuing lifestyle measures</strong></p><h3>Treatment Threshold After Lifestyle Intervention</h3><ul><li><strong>Lower ten-year risk changes initial timing rather than excluding later drug treatment.</strong> AHA/ACC 2025 recommends starting medication when average BP remains at least <mark>130/80 mmHg</mark> after a three-to-six-month lifestyle trial in otherwise lower-risk adults.<ul><li>The patient has completed the trial and remains above threshold on two reliable measurement methods. Continuing to repeat an unchanged lifestyle-only plan indefinitely would miss the specified escalation point.</li><li>A low short-term risk estimate can coexist with substantial cumulative lifetime exposure to high pressure. Conversely, a very young patient outside a risk equation’s validated age range should not be assigned a fabricated PREVENT percentage.</li></ul></li></ul><h3>Long-Term Management</h3><ul><li><strong>Continue the successful lifestyle changes when adding medication.</strong> Their benefits extend beyond the small remaining pressure difference and may reduce the dose burden needed for durable control.<ul><li>Use a complementary first-line drug selected from the patient’s clinical profile; do not infer that every stage-one patient needs immediate two-drug initiation. The preferred two-agent American starting strategy specifically concerns stage-two hypertension.</li><li>Monitor home pressure, postural symptoms and drug-specific adverse effects, and aim for the usual American target below <mark>130/80 mmHg</mark> when appropriate. Reassess cardiovascular and renal risk over time because diabetes, CKD or overt vascular disease may subsequently alter priorities. Confirm adherence and measurement quality before labeling inadequate response as resistance. Severe acute symptoms or organ injury would require a different assessment, but a stable average of 134/82 is a chronic prevention problem rather than an indication for rapid intravenous lowering. This question tests the completed lifestyle trial and the current recommendation, not failure of a named antihypertensive drug.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Obtain ABPM before any treatment change despite concordant validated readings:</strong> ABPM is useful for discordant readings, suspected nocturnal hypertension or uncertain measurement quality. The stem already establishes persistent hypertension with reliable concordant measurements, so an additional mandatory confirmation step should not delay the indicated decision.</li><li><strong>B — Continue lifestyle treatment alone until the estimated risk exceeds 7.5%:</strong> The risk threshold determines the initial pathway, but persistent stage-one pressure after a completed three-to-six-month lifestyle trial supports adding medication even when ten-year risk remains below 7.5%.</li><li><strong>C — Defer treatment changes until office BP reaches 140/90 mmHg:</strong> Waiting for stage two was a common interpretation of earlier low-risk management. The 2025 American recommendation specifically addresses persistent lower-risk stage-one pressure after lifestyle intervention.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Persistent Lower-Risk Stage 1 Hypertension",
+        "sections": [
+          {
+            "heading": "Treatment Threshold After Lifestyle Intervention",
+            "bullets": [
+              {
+                "text": "**Lower ten-year risk changes initial timing rather than excluding later drug treatment.** AHA/ACC 2025 recommends starting medication when average BP remains at least ==130/80 mmHg== after a three-to-six-month lifestyle trial in otherwise lower-risk adults.",
+                "children": [
+                  "The patient has completed the trial and remains above threshold on two reliable measurement methods. Continuing to repeat an unchanged lifestyle-only plan indefinitely would miss the specified escalation point.",
+                  "A low short-term risk estimate can coexist with substantial cumulative lifetime exposure to high pressure. Conversely, a very young patient outside a risk equation’s validated age range should not be assigned a fabricated PREVENT percentage."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Long-Term Management",
+            "bullets": [
+              {
+                "text": "**Continue the successful lifestyle changes when adding medication.** Their benefits extend beyond the small remaining pressure difference and may reduce the dose burden needed for durable control.",
+                "children": [
+                  "Use a complementary first-line drug selected from the patient’s clinical profile; do not infer that every stage-one patient needs immediate two-drug initiation. The preferred two-agent American starting strategy specifically concerns stage-two hypertension.",
+                  "Monitor home pressure, postural symptoms and drug-specific adverse effects, and aim for the usual American target below ==130/80 mmHg== when appropriate. Reassess cardiovascular and renal risk over time because diabetes, CKD or overt vascular disease may subsequently alter priorities. Confirm adherence and measurement quality before labeling inadequate response as resistance. Severe acute symptoms or organ injury would require a different assessment, but a stable average of 134/82 is a chronic prevention problem rather than an indication for rapid intravenous lowering. This question tests the completed lifestyle trial and the current recommendation, not failure of a named antihypertensive drug."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "ABPM is useful for discordant readings, suspected nocturnal hypertension or uncertain measurement quality. The stem already establishes persistent hypertension with reliable concordant measurements, so an additional mandatory confirmation step should not delay the indicated decision."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "The risk threshold determines the initial pathway, but persistent stage-one pressure after a completed three-to-six-month lifestyle trial supports adding medication even when ten-year risk remains below 7.5%."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Waiting for stage two was a common interpretation of earlier low-risk management. The 2025 American recommendation specifically addresses persistent lower-risk stage-one pressure after lifestyle intervention."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Apply the three-to-six-month lifestyle trial and subsequent drug decision in lower-risk AHA stage-one disease"
+    },
+    {
+      "id": "cardiology-rebuild-11-012",
+      "topic": "Risk assessment treatment thresholds and targets",
+      "question": "A 64-year-old with established coronary disease has confirmed BP of 134/82 mmHg after three months of lifestyle intervention. There is no symptomatic orthostatic hypotension, major frailty or limited life expectancy. Under ESC 2024, what is the most appropriate BP strategy?",
+      "options": [
+        "Continue lifestyle treatment alone until office BP reaches 140/90 mmHg",
+        "Start BP-lowering medication despite the elevated-BP category",
+        "Delay medication until a new SCORE2 estimate confirms risk above 10%",
+        "Start medication only if ambulatory monitoring shows nocturnal hypertension"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "ESC Treatment of Elevated Blood Pressure at High Risk\n\nCorrect answer: Start BP-lowering medication despite the elevated-BP category\n\nCardiovascular Risk and Treatment Eligibility\n\n**ESC diagnostic categories and drug-treatment thresholds are separate.** In 2024, office hypertension remains at least ==140/90 mmHg==, while elevated BP includes values below that boundary that may still justify treatment in sufficiently high-risk adults.\n\nEstablished cardiovascular disease, clinically significant CKD, diabetes, familial hypercholesterolemia or hypertension-mediated organ damage can identify a high-risk condition. Estimated ten-year risk and appropriate risk modifiers guide decisions in adults without these established conditions.\n\nFor an eligible high-risk adult with confirmed BP at least ==130/80 mmHg== after three months of lifestyle intervention, pharmacological BP lowering is recommended. This patient’s coronary disease and persistent pressure meet that pathway.\n\nTargets and Drug Selection\n\n**ESC generally recommends an on-treatment systolic target of ==120–129 mmHg== when well tolerated.** A diastolic range of ==70–79 mmHg== is considered alongside the systolic goal and the individual clinical setting.\n\nSelect treatment according to coronary symptoms, ventricular function, kidney function and other indications. An ACE inhibitor or ARB may fit the vascular-risk profile; a beta blocker may additionally be appropriate for angina or another specific cardiac indication rather than solely because the patient has an elevated pressure category.\n\nCheck standing pressure and symptoms during titration. More lenient goals can be appropriate with symptomatic orthostasis, age at least 85 years, significant frailty or limited predicted lifespan. Coronary perfusion, treatment tolerance and the achieved diastolic pressure deserve attention, particularly in an older patient with stiff arteries. The diagnosis has not been renamed hypertension merely because a drug is started: risk-based intervention can occur within the elevated-BP category. State the guideline framework explicitly to avoid confusing this pathway with the American stage-one terminology.\n\nContinue lifestyle treatment alone until office BP reaches 140/90 mmHg: ESC retains 140/90 as the diagnostic hypertension boundary, but high-risk adults with persistent pressure at least 130/80 after lifestyle treatment can benefit from medication below that boundary.\n\nDelay medication until a new SCORE2 estimate confirms risk above 10%: An appropriate risk score can guide decisions in apparently healthy adults. Established coronary disease already identifies a high-risk clinical condition, so a screening risk estimate is not required to rediscover that risk.\n\nStart medication only if ambulatory monitoring shows nocturnal hypertension: Nocturnal hypertension may provide additional information, particularly with OSA or discordant measurements. It is not an additional eligibility requirement once persistent elevated BP and an established high-risk condition are present.\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178",
+      "explanationHtml": "<h2>ESC Treatment of Elevated Blood Pressure at High Risk</h2><p><strong>Correct answer: B — Start BP-lowering medication despite the elevated-BP category</strong></p><h3>Cardiovascular Risk and Treatment Eligibility</h3><ul><li><strong>ESC diagnostic categories and drug-treatment thresholds are separate.</strong> In 2024, office hypertension remains at least <mark>140/90 mmHg</mark>, while elevated BP includes values below that boundary that may still justify treatment in sufficiently high-risk adults.<ul><li>Established cardiovascular disease, clinically significant CKD, diabetes, familial hypercholesterolemia or hypertension-mediated organ damage can identify a high-risk condition. Estimated ten-year risk and appropriate risk modifiers guide decisions in adults without these established conditions.</li><li>For an eligible high-risk adult with confirmed BP at least <mark>130/80 mmHg</mark> after three months of lifestyle intervention, pharmacological BP lowering is recommended. This patient’s coronary disease and persistent pressure meet that pathway.</li></ul></li></ul><h3>Targets and Drug Selection</h3><ul><li><strong>ESC generally recommends an on-treatment systolic target of <mark>120–129 mmHg</mark> when well tolerated.</strong> A diastolic range of <mark>70–79 mmHg</mark> is considered alongside the systolic goal and the individual clinical setting.<ul><li>Select treatment according to coronary symptoms, ventricular function, kidney function and other indications. An ACE inhibitor or ARB may fit the vascular-risk profile; a beta blocker may additionally be appropriate for angina or another specific cardiac indication rather than solely because the patient has an elevated pressure category.</li><li>Check standing pressure and symptoms during titration. More lenient goals can be appropriate with symptomatic orthostasis, age at least 85 years, significant frailty or limited predicted lifespan. Coronary perfusion, treatment tolerance and the achieved diastolic pressure deserve attention, particularly in an older patient with stiff arteries. The diagnosis has not been renamed hypertension merely because a drug is started: risk-based intervention can occur within the elevated-BP category. State the guideline framework explicitly to avoid confusing this pathway with the American stage-one terminology.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Continue lifestyle treatment alone until office BP reaches 140/90 mmHg:</strong> ESC retains 140/90 as the diagnostic hypertension boundary, but high-risk adults with persistent pressure at least 130/80 after lifestyle treatment can benefit from medication below that boundary.</li><li><strong>C — Delay medication until a new SCORE2 estimate confirms risk above 10%:</strong> An appropriate risk score can guide decisions in apparently healthy adults. Established coronary disease already identifies a high-risk clinical condition, so a screening risk estimate is not required to rediscover that risk.</li><li><strong>D — Start medication only if ambulatory monitoring shows nocturnal hypertension:</strong> Nocturnal hypertension may provide additional information, particularly with OSA or discordant measurements. It is not an additional eligibility requirement once persistent elevated BP and an established high-risk condition are present.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "ESC Treatment of Elevated Blood Pressure at High Risk",
+        "sections": [
+          {
+            "heading": "Cardiovascular Risk and Treatment Eligibility",
+            "bullets": [
+              {
+                "text": "**ESC diagnostic categories and drug-treatment thresholds are separate.** In 2024, office hypertension remains at least ==140/90 mmHg==, while elevated BP includes values below that boundary that may still justify treatment in sufficiently high-risk adults.",
+                "children": [
+                  "Established cardiovascular disease, clinically significant CKD, diabetes, familial hypercholesterolemia or hypertension-mediated organ damage can identify a high-risk condition. Estimated ten-year risk and appropriate risk modifiers guide decisions in adults without these established conditions.",
+                  "For an eligible high-risk adult with confirmed BP at least ==130/80 mmHg== after three months of lifestyle intervention, pharmacological BP lowering is recommended. This patient’s coronary disease and persistent pressure meet that pathway."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Targets and Drug Selection",
+            "bullets": [
+              {
+                "text": "**ESC generally recommends an on-treatment systolic target of ==120–129 mmHg== when well tolerated.** A diastolic range of ==70–79 mmHg== is considered alongside the systolic goal and the individual clinical setting.",
+                "children": [
+                  "Select treatment according to coronary symptoms, ventricular function, kidney function and other indications. An ACE inhibitor or ARB may fit the vascular-risk profile; a beta blocker may additionally be appropriate for angina or another specific cardiac indication rather than solely because the patient has an elevated pressure category.",
+                  "Check standing pressure and symptoms during titration. More lenient goals can be appropriate with symptomatic orthostasis, age at least 85 years, significant frailty or limited predicted lifespan. Coronary perfusion, treatment tolerance and the achieved diastolic pressure deserve attention, particularly in an older patient with stiff arteries. The diagnosis has not been renamed hypertension merely because a drug is started: risk-based intervention can occur within the elevated-BP category. State the guideline framework explicitly to avoid confusing this pathway with the American stage-one terminology."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "ESC retains 140/90 as the diagnostic hypertension boundary, but high-risk adults with persistent pressure at least 130/80 after lifestyle treatment can benefit from medication below that boundary."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "An appropriate risk score can guide decisions in apparently healthy adults. Established coronary disease already identifies a high-risk clinical condition, so a screening risk estimate is not required to rediscover that risk."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Nocturnal hypertension may provide additional information, particularly with OSA or discordant measurements. It is not an additional eligibility requirement once persistent elevated BP and an established high-risk condition are present."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Apply the ESC elevated-pressure treatment pathway using risk and repeat confirmation"
+    },
+    {
+      "id": "cardiology-rebuild-11-013",
+      "topic": "Risk assessment treatment thresholds and targets",
+      "question": "A nonpregnant 59-year-old receiving antihypertensive treatment has no frailty, orthostatic symptoms or limited life expectancy. Which office BP goal best matches the general AHA/ACC 2025 recommendation?",
+      "options": [
+        "Below 130/80 mmHg",
+        "Below 140/90 mmHg",
+        "Below 120/70 mmHg",
+        "Systolic 130–139 and diastolic 80–89 mmHg"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "direct",
+      "calculation": false,
+      "explanation": "AHA Blood-Pressure Treatment Target\n\nCorrect answer: Below 130/80 mmHg\n\nTreatment Target\n\n**AHA/ACC 2025 recommends a general BP goal below ==130/80 mmHg==.** The goal refers to properly measured pressure and should be interpreted with the patient’s clinical circumstances rather than a single hurried reading.\n\nTreatment-initiation thresholds answer when to add drugs; a target answers what pressure to seek after treatment begins. A patient started at 148/92 and one started at 134/84 because of high risk may share the same general target.\n\nA trial comparing systolic targets does not automatically establish a diastolic target or validate the same intensity in every excluded population. Measurement technique, baseline comorbidity and adverse-event monitoring influence applicability.\n\nMonitoring and Individualization\n\n**Assess benefit and tolerability together.** Use validated home readings and clinical review to detect persistent excess pressure, excessive lowering outside the office and inconsistent adherence.\n\nAsk about dizziness, presyncope and falls; measure standing pressure when indicated. Review creatinine, sodium and potassium according to the drugs used, especially after initiation or titration of a diuretic or renin–angiotensin system blocker.\n\nInstitutional care, limited predicted lifespan and pregnancy require additional considerations. A target should support a safe longitudinal plan rather than trigger reflex dose escalation despite clinically important adverse effects. Conversely, the absence of symptoms does not justify accepting persistent above-target pressure without reviewing treatment. Standardize measurement before concluding that apparent resistance is real. When comparing American and European recommendations, specify that ESC 2024 usually expresses the systolic goal as a tolerated range of ==120–129 mmHg==. The American less-than notation and the ESC range should not be combined into a new invented universal target.\n\nBelow 140/90 mmHg: This remains an important diagnostic and drug-initiation boundary in several settings, and may be an individualized less intensive goal when tolerance is limited. It is above the general American treatment goal for the uncomplicated adult described.\n\nBelow 120/70 mmHg: Some trials used an intensive systolic target below 120, but a trial target is not a universal paired systolic-and-diastolic goal for all treated adults. The American overarching recommendation is below 130/80.\n\nSystolic 130–139 and diastolic 80–89 mmHg: This range describes American stage-one hypertension rather than the usual desired treated pressure. It could represent an interim response or a tolerated compromise, but not the stated general target.\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178",
+      "explanationHtml": "<h2>AHA Blood-Pressure Treatment Target</h2><p><strong>Correct answer: A — Below 130/80 mmHg</strong></p><h3>Treatment Target</h3><ul><li><strong>AHA/ACC 2025 recommends a general BP goal below <mark>130/80 mmHg</mark>.</strong> The goal refers to properly measured pressure and should be interpreted with the patient’s clinical circumstances rather than a single hurried reading.<ul><li>Treatment-initiation thresholds answer when to add drugs; a target answers what pressure to seek after treatment begins. A patient started at 148/92 and one started at 134/84 because of high risk may share the same general target.</li><li>A trial comparing systolic targets does not automatically establish a diastolic target or validate the same intensity in every excluded population. Measurement technique, baseline comorbidity and adverse-event monitoring influence applicability.</li></ul></li></ul><h3>Monitoring and Individualization</h3><ul><li><strong>Assess benefit and tolerability together.</strong> Use validated home readings and clinical review to detect persistent excess pressure, excessive lowering outside the office and inconsistent adherence.<ul><li>Ask about dizziness, presyncope and falls; measure standing pressure when indicated. Review creatinine, sodium and potassium according to the drugs used, especially after initiation or titration of a diuretic or renin–angiotensin system blocker.</li><li>Institutional care, limited predicted lifespan and pregnancy require additional considerations. A target should support a safe longitudinal plan rather than trigger reflex dose escalation despite clinically important adverse effects. Conversely, the absence of symptoms does not justify accepting persistent above-target pressure without reviewing treatment. Standardize measurement before concluding that apparent resistance is real. When comparing American and European recommendations, specify that ESC 2024 usually expresses the systolic goal as a tolerated range of <mark>120–129 mmHg</mark>. The American less-than notation and the ESC range should not be combined into a new invented universal target.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Below 140/90 mmHg:</strong> This remains an important diagnostic and drug-initiation boundary in several settings, and may be an individualized less intensive goal when tolerance is limited. It is above the general American treatment goal for the uncomplicated adult described.</li><li><strong>C — Below 120/70 mmHg:</strong> Some trials used an intensive systolic target below 120, but a trial target is not a universal paired systolic-and-diastolic goal for all treated adults. The American overarching recommendation is below 130/80.</li><li><strong>D — Systolic 130–139 and diastolic 80–89 mmHg:</strong> This range describes American stage-one hypertension rather than the usual desired treated pressure. It could represent an interim response or a tolerated compromise, but not the stated general target.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "AHA Blood-Pressure Treatment Target",
+        "sections": [
+          {
+            "heading": "Treatment Target",
+            "bullets": [
+              {
+                "text": "**AHA/ACC 2025 recommends a general BP goal below ==130/80 mmHg==.** The goal refers to properly measured pressure and should be interpreted with the patient’s clinical circumstances rather than a single hurried reading.",
+                "children": [
+                  "Treatment-initiation thresholds answer when to add drugs; a target answers what pressure to seek after treatment begins. A patient started at 148/92 and one started at 134/84 because of high risk may share the same general target.",
+                  "A trial comparing systolic targets does not automatically establish a diastolic target or validate the same intensity in every excluded population. Measurement technique, baseline comorbidity and adverse-event monitoring influence applicability."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Monitoring and Individualization",
+            "bullets": [
+              {
+                "text": "**Assess benefit and tolerability together.** Use validated home readings and clinical review to detect persistent excess pressure, excessive lowering outside the office and inconsistent adherence.",
+                "children": [
+                  "Ask about dizziness, presyncope and falls; measure standing pressure when indicated. Review creatinine, sodium and potassium according to the drugs used, especially after initiation or titration of a diuretic or renin–angiotensin system blocker.",
+                  "Institutional care, limited predicted lifespan and pregnancy require additional considerations. A target should support a safe longitudinal plan rather than trigger reflex dose escalation despite clinically important adverse effects. Conversely, the absence of symptoms does not justify accepting persistent above-target pressure without reviewing treatment. Standardize measurement before concluding that apparent resistance is real. When comparing American and European recommendations, specify that ESC 2024 usually expresses the systolic goal as a tolerated range of ==120–129 mmHg==. The American less-than notation and the ESC range should not be combined into a new invented universal target."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "This remains an important diagnostic and drug-initiation boundary in several settings, and may be an individualized less intensive goal when tolerance is limited. It is above the general American treatment goal for the uncomplicated adult described."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Some trials used an intensive systolic target below 120, but a trial target is not a universal paired systolic-and-diastolic goal for all treated adults. The American overarching recommendation is below 130/80."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "This range describes American stage-one hypertension rather than the usual desired treated pressure. It could represent an interim response or a tolerated compromise, but not the stated general target."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        },
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Use the AHA general treatment target while recognizing individual tolerability"
+    },
+    {
+      "id": "cardiology-rebuild-11-014",
+      "topic": "Risk assessment treatment thresholds and targets",
+      "question": "An 88-year-old with moderate frailty takes three antihypertensives. Seated BP is 132/76 mmHg; standing BP is 106/64 mmHg with recurrent presyncope and a recent fall. Under ESC 2024, what is the best next step?",
+      "options": [
+        "Maintain the current regimen because the seated pressure is near target",
+        "Intensify treatment to obtain a seated systolic pressure of 120–129 mmHg",
+        "Review reversible causes and treatment, then individualize a less intensive goal",
+        "Add midodrine while retaining all antihypertensive doses unchanged"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Blood-Pressure Targets in Frailty and Orthostatic Hypotension\n\nCorrect answer: Review reversible causes and treatment, then individualize a less intensive goal\n\nClinical Assessment\n\n**The treatment-limiting finding is symptomatic orthostatic hypotension, not chronological age alone.** The systolic drop is ==26 mmHg== and the diastolic drop is ==12 mmHg==, with presyncope and a fall.\n\nCheck volume depletion, intercurrent illness, anemia and autonomic dysfunction. Review alpha blockers, nitrates, sedatives and other non-hypertension drugs as well as the antihypertensive regimen.\n\nDocument a resting baseline and timed standing measurements. A posture-related pattern can coexist with supine or nocturnal hypertension, so home or ambulatory information may help guide changes.\n\nTreatment and Prognosis\n\n**ESC 2024 allows a more lenient individualized target when the usual systolic range is not tolerated.** Symptomatic orthostasis, age at least 85, moderate-to-severe frailty and limited lifespan are important contexts for this decision.\n\nCorrect reversible causes and consider reducing or changing the agent most likely to contribute, taking account of compelling indications such as heart failure or angina. Make a supervised, monitored adjustment rather than stopping all cardiovascular treatment abruptly.\n\nReassess standing symptoms, falls and home pressure after each meaningful change. The goal is the lowest reasonably achievable pressure that is clinically tolerated, not a fixed higher target automatically assigned to every older adult. A robust older person with good tolerance may still benefit from sustained control. Conversely, a normal seated number is not sufficient evidence of safety in someone repeatedly falling on standing. If symptoms persist after appropriate changes, investigate neurogenic orthostasis and consider nonpharmacological measures and specialist treatment. Measures that increase salt or fluid require care when heart failure or CKD is present.\n\nMaintain the current regimen because the seated pressure is near target: A satisfactory seated value can conceal clinically important standing hypotension. Recurrent presyncope and a fall require assessment of volume status, other medicines and the antihypertensive regimen.\n\nIntensify treatment to obtain a seated systolic pressure of 120–129 mmHg: That range is the usual ESC goal when well tolerated. This patient has symptomatic orthostasis, frailty and age above 85, which are explicit reasons to individualize rather than intensify toward the default range.\n\nAdd midodrine while retaining all antihypertensive doses unchanged: A pressor may have a role in persistent symptomatic neurogenic orthostatic hypotension after appropriate assessment. Adding it before evaluating potentially reversible medication or volume contributors can create competing treatment effects and supine hypertension.\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178",
+      "explanationHtml": "<h2>Blood-Pressure Targets in Frailty and Orthostatic Hypotension</h2><p><strong>Correct answer: C — Review reversible causes and treatment, then individualize a less intensive goal</strong></p><h3>Clinical Assessment</h3><ul><li><strong>The treatment-limiting finding is symptomatic orthostatic hypotension, not chronological age alone.</strong> The systolic drop is <mark>26 mmHg</mark> and the diastolic drop is <mark>12 mmHg</mark>, with presyncope and a fall.<ul><li>Check volume depletion, intercurrent illness, anemia and autonomic dysfunction. Review alpha blockers, nitrates, sedatives and other non-hypertension drugs as well as the antihypertensive regimen.</li><li>Document a resting baseline and timed standing measurements. A posture-related pattern can coexist with supine or nocturnal hypertension, so home or ambulatory information may help guide changes.</li></ul></li></ul><h3>Treatment and Prognosis</h3><ul><li><strong>ESC 2024 allows a more lenient individualized target when the usual systolic range is not tolerated.</strong> Symptomatic orthostasis, age at least 85, moderate-to-severe frailty and limited lifespan are important contexts for this decision.<ul><li>Correct reversible causes and consider reducing or changing the agent most likely to contribute, taking account of compelling indications such as heart failure or angina. Make a supervised, monitored adjustment rather than stopping all cardiovascular treatment abruptly.</li><li>Reassess standing symptoms, falls and home pressure after each meaningful change. The goal is the lowest reasonably achievable pressure that is clinically tolerated, not a fixed higher target automatically assigned to every older adult. A robust older person with good tolerance may still benefit from sustained control. Conversely, a normal seated number is not sufficient evidence of safety in someone repeatedly falling on standing. If symptoms persist after appropriate changes, investigate neurogenic orthostasis and consider nonpharmacological measures and specialist treatment. Measures that increase salt or fluid require care when heart failure or CKD is present.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Maintain the current regimen because the seated pressure is near target:</strong> A satisfactory seated value can conceal clinically important standing hypotension. Recurrent presyncope and a fall require assessment of volume status, other medicines and the antihypertensive regimen.</li><li><strong>B — Intensify treatment to obtain a seated systolic pressure of 120–129 mmHg:</strong> That range is the usual ESC goal when well tolerated. This patient has symptomatic orthostasis, frailty and age above 85, which are explicit reasons to individualize rather than intensify toward the default range.</li><li><strong>D — Add midodrine while retaining all antihypertensive doses unchanged:</strong> A pressor may have a role in persistent symptomatic neurogenic orthostatic hypotension after appropriate assessment. Adding it before evaluating potentially reversible medication or volume contributors can create competing treatment effects and supine hypertension.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Blood-Pressure Targets in Frailty and Orthostatic Hypotension",
+        "sections": [
+          {
+            "heading": "Clinical Assessment",
+            "bullets": [
+              {
+                "text": "**The treatment-limiting finding is symptomatic orthostatic hypotension, not chronological age alone.** The systolic drop is ==26 mmHg== and the diastolic drop is ==12 mmHg==, with presyncope and a fall.",
+                "children": [
+                  "Check volume depletion, intercurrent illness, anemia and autonomic dysfunction. Review alpha blockers, nitrates, sedatives and other non-hypertension drugs as well as the antihypertensive regimen.",
+                  "Document a resting baseline and timed standing measurements. A posture-related pattern can coexist with supine or nocturnal hypertension, so home or ambulatory information may help guide changes."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Treatment and Prognosis",
+            "bullets": [
+              {
+                "text": "**ESC 2024 allows a more lenient individualized target when the usual systolic range is not tolerated.** Symptomatic orthostasis, age at least 85, moderate-to-severe frailty and limited lifespan are important contexts for this decision.",
+                "children": [
+                  "Correct reversible causes and consider reducing or changing the agent most likely to contribute, taking account of compelling indications such as heart failure or angina. Make a supervised, monitored adjustment rather than stopping all cardiovascular treatment abruptly.",
+                  "Reassess standing symptoms, falls and home pressure after each meaningful change. The goal is the lowest reasonably achievable pressure that is clinically tolerated, not a fixed higher target automatically assigned to every older adult. A robust older person with good tolerance may still benefit from sustained control. Conversely, a normal seated number is not sufficient evidence of safety in someone repeatedly falling on standing. If symptoms persist after appropriate changes, investigate neurogenic orthostasis and consider nonpharmacological measures and specialist treatment. Measures that increase salt or fluid require care when heart failure or CKD is present."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "A satisfactory seated value can conceal clinically important standing hypotension. Recurrent presyncope and a fall require assessment of volume status, other medicines and the antihypertensive regimen."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "That range is the usual ESC goal when well tolerated. This patient has symptomatic orthostasis, frailty and age above 85, which are explicit reasons to individualize rather than intensify toward the default range."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "A pressor may have a role in persistent symptomatic neurogenic orthostatic hypotension after appropriate assessment. Adding it before evaluating potentially reversible medication or volume contributors can create competing treatment effects and supine hypertension."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Apply the ESC systolic target with orthostatic frailty and age-related exceptions"
+    },
+    {
+      "id": "cardiology-rebuild-11-015",
+      "topic": "Risk assessment treatment thresholds and targets",
+      "question": "An asymptomatic 52-year-old has newly confirmed sustained hypertension of 152/94 mmHg, a normal examination and no specific secondary-cause clues. Which investigation panel best establishes baseline cardiovascular and renal status?",
+      "options": [
+        "Troponin, coronary CT angiography, stress imaging and echocardiography",
+        "Renal-artery CT angiography, plasma metanephrines and adrenal MRI",
+        "Creatinine/eGFR, electrolytes, urine ACR, glycemia, lipids and ECG",
+        "Brain MRI, carotid ultrasonography, CT aortography and exercise testing"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Baseline Evaluation and Hypertension-Mediated Organ Damage\n\nCorrect answer: Creatinine/eGFR, electrolytes, urine ACR, glycemia, lipids and ECG\n\nBaseline Investigations\n\n**Initial evaluation establishes risk, organ involvement and a safe starting point for treatment.** Kidney function and electrolytes influence drug selection and provide a comparator when creatinine, sodium or potassium changes after treatment.\n\nA spot urine albumin-to-creatinine ratio identifies albuminuria that may be missed by a simple dipstick. An abnormal result usually requires appropriate confirmation; albuminuria at least ==30 mg==/g is clinically relevant, and chronicity is needed before diagnosing CKD from a new finding.\n\nAssess fasting glucose or HbA1c and a lipid profile. Obtain a twelve-lead ECG to look for LV hypertrophy, rhythm abnormalities, previous infarction or conduction disease. The listed panel is the best among the options, not an assertion that it is the entire local baseline workup; urinalysis, blood count, calcium and other routine tests may also be appropriate.\n\nOrgan Damage and Directed Testing\n\n**Hypertension-mediated organ damage can change cardiovascular-risk assessment and the urgency of durable control.** Relevant findings include LV hypertrophy, albuminuria, reduced eGFR and established vascular or cerebrovascular disease.\n\nEchocardiography is useful when clinical findings, symptoms or ECG abnormalities suggest structural disease; it is not a replacement for the basic renal and metabolic assessment. A normal ECG does not exclude all hypertensive cardiac remodeling.\n\nInvestigate secondary causes according to the phenotype and current screening recommendations. Abrupt onset, resistance, marked hypokalemia, characteristic spells or recurrent flash pulmonary edema can redirect testing. The 2025 Endocrine Society guidance also supports broader aldosterone/renin screening, conditional on implementation resources; that recommendation does not justify adrenal imaging before appropriate biochemical assessment. Baseline tests and selected secondary-cause investigations are complementary rather than mutually exclusive. Record renal function and potassium before ACE inhibition, ARB therapy or mineralocorticoid receptor antagonism and repeat them according to the chosen treatment.\n\nTroponin, coronary CT angiography, stress imaging and echocardiography: These tests can be valuable for suspected ischemia, acute myocardial injury or structural disease. An asymptomatic patient without such clues does not require this ischemia-focused panel merely because chronic hypertension is newly diagnosed.\n\nRenal-artery CT angiography, plasma metanephrines and adrenal MRI: These investigations answer selected secondary-cause questions. They are appropriate when renovascular disease or a catecholamine-secreting tumor is suspected, but broad anatomical and endocrine imaging does not replace baseline renal and cardiovascular assessment.\n\nBrain MRI, carotid ultrasonography, CT aortography and exercise testing: Neurologic, vascular and exercise investigations are chosen for specific clinical indications. Screening all these territories would not substitute for identifying renal impairment, albuminuria, dysglycemia, dyslipidemia and electrical evidence of cardiac disease.\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178\n\nEndocrine Society primary aldosteronism guideline, 2025 — https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2",
+      "explanationHtml": "<h2>Baseline Evaluation and Hypertension-Mediated Organ Damage</h2><p><strong>Correct answer: C — Creatinine/eGFR, electrolytes, urine ACR, glycemia, lipids and ECG</strong></p><h3>Baseline Investigations</h3><ul><li><strong>Initial evaluation establishes risk, organ involvement and a safe starting point for treatment.</strong> Kidney function and electrolytes influence drug selection and provide a comparator when creatinine, sodium or potassium changes after treatment.<ul><li>A spot urine albumin-to-creatinine ratio identifies albuminuria that may be missed by a simple dipstick. An abnormal result usually requires appropriate confirmation; albuminuria at least <mark>30 mg</mark>/g is clinically relevant, and chronicity is needed before diagnosing CKD from a new finding.</li><li>Assess fasting glucose or HbA1c and a lipid profile. Obtain a twelve-lead ECG to look for LV hypertrophy, rhythm abnormalities, previous infarction or conduction disease. The listed panel is the best among the options, not an assertion that it is the entire local baseline workup; urinalysis, blood count, calcium and other routine tests may also be appropriate.</li></ul></li></ul><h3>Organ Damage and Directed Testing</h3><ul><li><strong>Hypertension-mediated organ damage can change cardiovascular-risk assessment and the urgency of durable control.</strong> Relevant findings include LV hypertrophy, albuminuria, reduced eGFR and established vascular or cerebrovascular disease.<ul><li>Echocardiography is useful when clinical findings, symptoms or ECG abnormalities suggest structural disease; it is not a replacement for the basic renal and metabolic assessment. A normal ECG does not exclude all hypertensive cardiac remodeling.</li><li>Investigate secondary causes according to the phenotype and current screening recommendations. Abrupt onset, resistance, marked hypokalemia, characteristic spells or recurrent flash pulmonary edema can redirect testing. The 2025 Endocrine Society guidance also supports broader aldosterone/renin screening, conditional on implementation resources; that recommendation does not justify adrenal imaging before appropriate biochemical assessment. Baseline tests and selected secondary-cause investigations are complementary rather than mutually exclusive. Record renal function and potassium before ACE inhibition, ARB therapy or mineralocorticoid receptor antagonism and repeat them according to the chosen treatment.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Troponin, coronary CT angiography, stress imaging and echocardiography:</strong> These tests can be valuable for suspected ischemia, acute myocardial injury or structural disease. An asymptomatic patient without such clues does not require this ischemia-focused panel merely because chronic hypertension is newly diagnosed.</li><li><strong>B — Renal-artery CT angiography, plasma metanephrines and adrenal MRI:</strong> These investigations answer selected secondary-cause questions. They are appropriate when renovascular disease or a catecholamine-secreting tumor is suspected, but broad anatomical and endocrine imaging does not replace baseline renal and cardiovascular assessment.</li><li><strong>D — Brain MRI, carotid ultrasonography, CT aortography and exercise testing:</strong> Neurologic, vascular and exercise investigations are chosen for specific clinical indications. Screening all these territories would not substitute for identifying renal impairment, albuminuria, dysglycemia, dyslipidemia and electrical evidence of cardiac disease.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li><li><a href=\"https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2\">Endocrine Society primary aldosteronism guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Baseline Evaluation and Hypertension-Mediated Organ Damage",
+        "sections": [
+          {
+            "heading": "Baseline Investigations",
+            "bullets": [
+              {
+                "text": "**Initial evaluation establishes risk, organ involvement and a safe starting point for treatment.** Kidney function and electrolytes influence drug selection and provide a comparator when creatinine, sodium or potassium changes after treatment.",
+                "children": [
+                  "A spot urine albumin-to-creatinine ratio identifies albuminuria that may be missed by a simple dipstick. An abnormal result usually requires appropriate confirmation; albuminuria at least ==30 mg==/g is clinically relevant, and chronicity is needed before diagnosing CKD from a new finding.",
+                  "Assess fasting glucose or HbA1c and a lipid profile. Obtain a twelve-lead ECG to look for LV hypertrophy, rhythm abnormalities, previous infarction or conduction disease. The listed panel is the best among the options, not an assertion that it is the entire local baseline workup; urinalysis, blood count, calcium and other routine tests may also be appropriate."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Organ Damage and Directed Testing",
+            "bullets": [
+              {
+                "text": "**Hypertension-mediated organ damage can change cardiovascular-risk assessment and the urgency of durable control.** Relevant findings include LV hypertrophy, albuminuria, reduced eGFR and established vascular or cerebrovascular disease.",
+                "children": [
+                  "Echocardiography is useful when clinical findings, symptoms or ECG abnormalities suggest structural disease; it is not a replacement for the basic renal and metabolic assessment. A normal ECG does not exclude all hypertensive cardiac remodeling.",
+                  "Investigate secondary causes according to the phenotype and current screening recommendations. Abrupt onset, resistance, marked hypokalemia, characteristic spells or recurrent flash pulmonary edema can redirect testing. The 2025 Endocrine Society guidance also supports broader aldosterone/renin screening, conditional on implementation resources; that recommendation does not justify adrenal imaging before appropriate biochemical assessment. Baseline tests and selected secondary-cause investigations are complementary rather than mutually exclusive. Record renal function and potassium before ACE inhibition, ARB therapy or mineralocorticoid receptor antagonism and repeat them according to the chosen treatment."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "These tests can be valuable for suspected ischemia, acute myocardial injury or structural disease. An asymptomatic patient without such clues does not require this ischemia-focused panel merely because chronic hypertension is newly diagnosed."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "These investigations answer selected secondary-cause questions. They are appropriate when renovascular disease or a catecholamine-secreting tumor is suspected, but broad anatomical and endocrine imaging does not replace baseline renal and cardiovascular assessment."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Neurologic, vascular and exercise investigations are chosen for specific clinical indications. Screening all these territories would not substitute for identifying renal impairment, albuminuria, dysglycemia, dyslipidemia and electrical evidence of cardiac disease."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        },
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        },
+        {
+          "label": "Endocrine Society primary aldosteronism guideline, 2025",
+          "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Evaluate hypertension-mediated organ damage and baseline renal metabolic and cardiovascular risk"
+    },
+    {
+      "id": "cardiology-rebuild-11-016",
+      "topic": "Lifestyle and reversible contributors",
+      "question": "Which dietary pattern best matches the DASH intervention recommended for an overweight adult with uncomplicated hypertension and preserved kidney function?",
+      "options": [
+        "Vegetables, lean meat, refined grains and avoidance of dairy and legumes",
+        "Vegetables, fruit, whole grains, full-fat dairy and liberal coconut oil",
+        "Vegetables, fruit, whole grains, low-fat dairy, legumes and limited saturated fat",
+        "Whole grains, low-fat dairy, fruit drinks and regular processed-meat servings"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "direct",
+      "calculation": false,
+      "explanation": "DASH Eating Pattern and Weight Management\n\nCorrect answer: Vegetables, fruit, whole grains, low-fat dairy, legumes and limited saturated fat\n\nDietary Composition\n\n**DASH emphasizes an overall eating pattern rather than a single supplement.** It combines vegetables, fruit, whole grains, low-fat or fat-free dairy, legumes, nuts and appropriate lean protein while limiting saturated fat and sugar-sweetened foods.\n\nAt a reference intake of 2000 kcal/day, NHLBI examples include four to five daily servings each of vegetables and fruit and two to three servings of low-fat or fat-free dairy. Calorie and portion needs vary; these are not a mandatory energy prescription for every adult.\n\nSodium reduction complements the dietary pattern. Neither a label such as low carbohydrate nor adding one potassium-rich food establishes that the entire diet follows DASH.\n\nWeight Management and Monitoring\n\n**For an overweight patient, add a sustainable calorie deficit and physical activity rather than assuming food quality alone guarantees weight loss.** Set a feasible initial weight goal and review waist size, weight trajectory, home BP and medication tolerance.\n\nDASH can be used with an energy intake that maintains weight or with an energy-restricted plan. Diet quality and weight reduction are related but distinct interventions, so the clinical benefit should not be attributed exclusively to one mechanism.\n\nUse accessible local foods, portion guidance and repeated follow-up rather than a rigid short-term list that the patient cannot maintain. Favor unsalted nuts and minimally processed foods when sodium intake is high. Milk alternatives or other substitutions may be needed for intolerance, but they should preserve nutritional adequacy. Assess renal function and potassium before unrestricted potassium enrichment in a patient with CKD or potassium-retaining medicines. Continue indicated antihypertensive medication while assessing the diet’s effect; as BP falls, titration may be needed to avoid symptomatic hypotension. The appropriate dietary plan is a sustained component of cardiovascular prevention, not an acute treatment for severe hypertension with organ injury.\n\nVegetables, lean meat, refined grains and avoidance of dairy and legumes: A diet can include some favorable foods without matching DASH. Refined grains and routine exclusion of low-fat dairy and legumes remove important elements of the studied eating pattern without a stated clinical reason.\n\nVegetables, fruit, whole grains, full-fat dairy and liberal coconut oil: Several components overlap with DASH, but the pattern should limit saturated fat. Substituting full-fat dairy and liberal coconut oil does not reproduce the recommended low-fat dairy and fat-quality emphasis.\n\nWhole grains, low-fat dairy, fruit drinks and regular processed-meat servings: Whole grains and low-fat dairy fit, but fruit drinks may supply added sugar and regular processed-meat intake can add substantial sodium. These substitutions do not reproduce the overall DASH pattern; a product containing fruit is not nutritionally equivalent to whole fruit.\n\nNHLBI DASH eating plan — https://www.nhlbi.nih.gov/health/dash-eating-plan\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356",
+      "explanationHtml": "<h2>DASH Eating Pattern and Weight Management</h2><p><strong>Correct answer: C — Vegetables, fruit, whole grains, low-fat dairy, legumes and limited saturated fat</strong></p><h3>Dietary Composition</h3><ul><li><strong>DASH emphasizes an overall eating pattern rather than a single supplement.</strong> It combines vegetables, fruit, whole grains, low-fat or fat-free dairy, legumes, nuts and appropriate lean protein while limiting saturated fat and sugar-sweetened foods.<ul><li>At a reference intake of 2000 kcal/day, NHLBI examples include four to five daily servings each of vegetables and fruit and two to three servings of low-fat or fat-free dairy. Calorie and portion needs vary; these are not a mandatory energy prescription for every adult.</li><li>Sodium reduction complements the dietary pattern. Neither a label such as low carbohydrate nor adding one potassium-rich food establishes that the entire diet follows DASH.</li></ul></li></ul><h3>Weight Management and Monitoring</h3><ul><li><strong>For an overweight patient, add a sustainable calorie deficit and physical activity rather than assuming food quality alone guarantees weight loss.</strong> Set a feasible initial weight goal and review waist size, weight trajectory, home BP and medication tolerance.<ul><li>DASH can be used with an energy intake that maintains weight or with an energy-restricted plan. Diet quality and weight reduction are related but distinct interventions, so the clinical benefit should not be attributed exclusively to one mechanism.</li><li>Use accessible local foods, portion guidance and repeated follow-up rather than a rigid short-term list that the patient cannot maintain. Favor unsalted nuts and minimally processed foods when sodium intake is high. Milk alternatives or other substitutions may be needed for intolerance, but they should preserve nutritional adequacy. Assess renal function and potassium before unrestricted potassium enrichment in a patient with CKD or potassium-retaining medicines. Continue indicated antihypertensive medication while assessing the diet’s effect; as BP falls, titration may be needed to avoid symptomatic hypotension. The appropriate dietary plan is a sustained component of cardiovascular prevention, not an acute treatment for severe hypertension with organ injury.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Vegetables, lean meat, refined grains and avoidance of dairy and legumes:</strong> A diet can include some favorable foods without matching DASH. Refined grains and routine exclusion of low-fat dairy and legumes remove important elements of the studied eating pattern without a stated clinical reason.</li><li><strong>B — Vegetables, fruit, whole grains, full-fat dairy and liberal coconut oil:</strong> Several components overlap with DASH, but the pattern should limit saturated fat. Substituting full-fat dairy and liberal coconut oil does not reproduce the recommended low-fat dairy and fat-quality emphasis.</li><li><strong>D — Whole grains, low-fat dairy, fruit drinks and regular processed-meat servings:</strong> Whole grains and low-fat dairy fit, but fruit drinks may supply added sugar and regular processed-meat intake can add substantial sodium. These substitutions do not reproduce the overall DASH pattern; a product containing fruit is not nutritionally equivalent to whole fruit.</li></ul><h3>References</h3><ul><li><a href=\"https://www.nhlbi.nih.gov/health/dash-eating-plan\">NHLBI DASH eating plan</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "DASH Eating Pattern and Weight Management",
+        "sections": [
+          {
+            "heading": "Dietary Composition",
+            "bullets": [
+              {
+                "text": "**DASH emphasizes an overall eating pattern rather than a single supplement.** It combines vegetables, fruit, whole grains, low-fat or fat-free dairy, legumes, nuts and appropriate lean protein while limiting saturated fat and sugar-sweetened foods.",
+                "children": [
+                  "At a reference intake of 2000 kcal/day, NHLBI examples include four to five daily servings each of vegetables and fruit and two to three servings of low-fat or fat-free dairy. Calorie and portion needs vary; these are not a mandatory energy prescription for every adult.",
+                  "Sodium reduction complements the dietary pattern. Neither a label such as low carbohydrate nor adding one potassium-rich food establishes that the entire diet follows DASH."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Weight Management and Monitoring",
+            "bullets": [
+              {
+                "text": "**For an overweight patient, add a sustainable calorie deficit and physical activity rather than assuming food quality alone guarantees weight loss.** Set a feasible initial weight goal and review waist size, weight trajectory, home BP and medication tolerance.",
+                "children": [
+                  "DASH can be used with an energy intake that maintains weight or with an energy-restricted plan. Diet quality and weight reduction are related but distinct interventions, so the clinical benefit should not be attributed exclusively to one mechanism.",
+                  "Use accessible local foods, portion guidance and repeated follow-up rather than a rigid short-term list that the patient cannot maintain. Favor unsalted nuts and minimally processed foods when sodium intake is high. Milk alternatives or other substitutions may be needed for intolerance, but they should preserve nutritional adequacy. Assess renal function and potassium before unrestricted potassium enrichment in a patient with CKD or potassium-retaining medicines. Continue indicated antihypertensive medication while assessing the diet’s effect; as BP falls, titration may be needed to avoid symptomatic hypotension. The appropriate dietary plan is a sustained component of cardiovascular prevention, not an acute treatment for severe hypertension with organ injury."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "A diet can include some favorable foods without matching DASH. Refined grains and routine exclusion of low-fat dairy and legumes remove important elements of the studied eating pattern without a stated clinical reason."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Several components overlap with DASH, but the pattern should limit saturated fat. Substituting full-fat dairy and liberal coconut oil does not reproduce the recommended low-fat dairy and fat-quality emphasis."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Whole grains and low-fat dairy fit, but fruit drinks may supply added sugar and regular processed-meat intake can add substantial sodium. These substitutions do not reproduce the overall DASH pattern; a product containing fruit is not nutritionally equivalent to whole fruit."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "NHLBI DASH eating plan",
+          "url": "https://www.nhlbi.nih.gov/health/dash-eating-plan"
+        },
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Choose a sustainable weight and DASH-style dietary intervention"
+    },
+    {
+      "id": "cardiology-rebuild-11-017",
+      "topic": "Lifestyle and reversible contributors",
+      "question": "A patient with hypertension is advised to follow the WHO adult sodium target of less than 2 g/day. Which practical instruction correctly translates this into approximate total salt intake?",
+      "options": [
+        "Keep total salt intake below about 2 g/day, including salt already in foods",
+        "Keep total salt intake below about 5 g/day, including salt already in foods",
+        "Keep total salt intake below about 8 g/day, including salt already in foods",
+        "Keep total salt intake below about 10 g/day, including salt already in foods"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": true,
+      "explanation": "Dietary Sodium and Salt Are Different Quantities\n\nCorrect answer: Keep total salt intake below about 5 g/day, including salt already in foods\n\nSodium-to-Salt Conversion\n\n**Table salt is sodium chloride; its weight is not the weight of sodium alone.** Sodium constitutes approximately ==40%== of sodium chloride by mass.\n\nSodium in grams multiplied by about 2.5 gives grams of salt. Thus ==2 g== sodium corresponds to approximately ==5 g== salt. Conversely, ==1 g== salt contains about ==400 mg== sodium.\n\nWHO recommends less than ==2000 mg== sodium daily for adults. The limit refers to the total diet, not only salt added at the table. Sodium-containing additives can contribute even when a food is not conspicuously salty.\n\nDietary Implementation\n\n**Identify the patient’s major sources before choosing the intervention.** Packaged snacks, sauces, pickles, processed meats, restaurant meals and cooking salt may contribute differently in different households.\n\nRead sodium per serving and the actual number of servings consumed. A package describing a small serving can underestimate the intake if the whole package is eaten. Use herbs, spices and less processed foods to maintain palatability while reducing sodium.\n\nA dietary sodium target does not mean that the serum sodium concentration should be lowered. Serum sodium chiefly reflects water balance; a normal value neither proves nor disproves excessive dietary sodium. Moderate sustained reduction can support BP control and drug responsiveness, but clinical response varies. Avoid extreme advice that compromises nutrition or ignores volume status in vulnerable patients. If a potassium-enriched salt substitute is considered, assess kidney function, serum potassium and medicines that impair potassium excretion. When medications remain indicated, sodium reduction is complementary rather than a reason to postpone them indefinitely. Explain the unit conversion explicitly because sodium and salt figures on different labels otherwise appear contradictory.\n\nSubstance or conversion | Approximate amount\n\n==1 g== table salt | ==400 mg== sodium\n\n==2 g== sodium | ==5 g== table salt\n\nWHO adult sodium recommendation | ==<2000 mg== sodium/day; approximately ==<5 g== salt/day\n\nWHO sodium reduction recommendations — https://www.who.int/news-room/fact-sheets/detail/sodium-reduction",
+      "explanationHtml": "<h2>Dietary Sodium and Salt Are Different Quantities</h2><p><strong>Correct answer: B — Keep total salt intake below about 5 g/day, including salt already in foods</strong></p><h3>Sodium-to-Salt Conversion</h3><ul><li><strong>Table salt is sodium chloride; its weight is not the weight of sodium alone.</strong> Sodium constitutes approximately <mark>40%</mark> of sodium chloride by mass.<ul><li>Sodium in grams multiplied by about 2.5 gives grams of salt. Thus <mark>2 g</mark> sodium corresponds to approximately <mark>5 g</mark> salt. Conversely, <mark>1 g</mark> salt contains about <mark>400 mg</mark> sodium.</li><li>WHO recommends less than <mark>2000 mg</mark> sodium daily for adults. The limit refers to the total diet, not only salt added at the table. Sodium-containing additives can contribute even when a food is not conspicuously salty.</li></ul></li></ul><h3>Dietary Implementation</h3><ul><li><strong>Identify the patient’s major sources before choosing the intervention.</strong> Packaged snacks, sauces, pickles, processed meats, restaurant meals and cooking salt may contribute differently in different households.<ul><li>Read sodium per serving and the actual number of servings consumed. A package describing a small serving can underestimate the intake if the whole package is eaten. Use herbs, spices and less processed foods to maintain palatability while reducing sodium.</li><li>A dietary sodium target does not mean that the serum sodium concentration should be lowered. Serum sodium chiefly reflects water balance; a normal value neither proves nor disproves excessive dietary sodium. Moderate sustained reduction can support BP control and drug responsiveness, but clinical response varies. Avoid extreme advice that compromises nutrition or ignores volume status in vulnerable patients. If a potassium-enriched salt substitute is considered, assess kidney function, serum potassium and medicines that impair potassium excretion. When medications remain indicated, sodium reduction is complementary rather than a reason to postpone them indefinitely. Explain the unit conversion explicitly because sodium and salt figures on different labels otherwise appear contradictory.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Substance or conversion</th><th>Approximate amount</th></tr></thead><tbody><tr><td><mark>1 g</mark> table salt</td><td><mark>400 mg</mark> sodium</td></tr><tr><td><mark>2 g</mark> sodium</td><td><mark>5 g</mark> table salt</td></tr><tr><td>WHO adult sodium recommendation</td><td><mark>&lt;2000 mg</mark> sodium/day; approximately <mark>&lt;5 g</mark> salt/day</td></tr></tbody></table></div><h3>References</h3><ul><li><a href=\"https://www.who.int/news-room/fact-sheets/detail/sodium-reduction\">WHO sodium reduction recommendations</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Dietary Sodium and Salt Are Different Quantities",
+        "sections": [
+          {
+            "heading": "Sodium-to-Salt Conversion",
+            "bullets": [
+              {
+                "text": "**Table salt is sodium chloride; its weight is not the weight of sodium alone.** Sodium constitutes approximately ==40%== of sodium chloride by mass.",
+                "children": [
+                  "Sodium in grams multiplied by about 2.5 gives grams of salt. Thus ==2 g== sodium corresponds to approximately ==5 g== salt. Conversely, ==1 g== salt contains about ==400 mg== sodium.",
+                  "WHO recommends less than ==2000 mg== sodium daily for adults. The limit refers to the total diet, not only salt added at the table. Sodium-containing additives can contribute even when a food is not conspicuously salty."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Dietary Implementation",
+            "bullets": [
+              {
+                "text": "**Identify the patient’s major sources before choosing the intervention.** Packaged snacks, sauces, pickles, processed meats, restaurant meals and cooking salt may contribute differently in different households.",
+                "children": [
+                  "Read sodium per serving and the actual number of servings consumed. A package describing a small serving can underestimate the intake if the whole package is eaten. Use herbs, spices and less processed foods to maintain palatability while reducing sodium.",
+                  "A dietary sodium target does not mean that the serum sodium concentration should be lowered. Serum sodium chiefly reflects water balance; a normal value neither proves nor disproves excessive dietary sodium. Moderate sustained reduction can support BP control and drug responsiveness, but clinical response varies. Avoid extreme advice that compromises nutrition or ignores volume status in vulnerable patients. If a potassium-enriched salt substitute is considered, assess kidney function, serum potassium and medicines that impair potassium excretion. When medications remain indicated, sodium reduction is complementary rather than a reason to postpone them indefinitely. Explain the unit conversion explicitly because sodium and salt figures on different labels otherwise appear contradictory."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "Substance or conversion",
+              "Approximate amount"
+            ],
+            "rows": [
+              [
+                "==1 g== table salt",
+                "==400 mg== sodium"
+              ],
+              [
+                "==2 g== sodium",
+                "==5 g== table salt"
+              ],
+              [
+                "WHO adult sodium recommendation",
+                "==<2000 mg== sodium/day; approximately ==<5 g== salt/day"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": []
+      },
+      "references": [
+        {
+          "label": "WHO sodium reduction recommendations",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/sodium-reduction"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Translate sodium reduction into a clinically meaningful intake target"
+    },
+    {
+      "id": "cardiology-rebuild-11-018",
+      "topic": "Lifestyle and reversible contributors",
+      "question": "A 65-year-old with hypertension and previous ischemic stroke has eGFR 24 mL/min/1.73 m² and potassium 5.4 mmol/L while taking losartan. They cite SSaSS to support potassium-enriched cooking salt. Which trial feature is the strongest reason the reported safety cannot be directly applied to this patient?",
+      "options": [
+        "Exclusion of participants with serious kidney disease or substantial hyperkalemia risk",
+        "Randomization of villages rather than randomization of individual participants",
+        "Enrollment of older high-risk adults or people with previous stroke",
+        "Use of a combined sodium-reduction and potassium-enrichment intervention"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Potassium-Enriched Salt Substitutes in CKD\n\nCorrect answer: Exclusion of participants with serious kidney disease or substantial hyperkalemia risk\n\nPotassium Handling and Drug Interactions\n\n**Reduced renal potassium excretion changes the safety of dietary potassium enrichment.** Advanced CKD and renin–angiotensin system blockade can combine to produce clinically important hyperkalemia.\n\nThe patient already has potassium of 5.4 mmol/L. Verify the result when appropriate, review the trend, other medicines and clinical context, and manage the hyperkalemia rather than introducing another potassium source.\n\nACE inhibitors, ARBs, mineralocorticoid receptor antagonists and other potassium-sparing drugs deserve attention. A dietary product can deliver a pharmacologically relevant potassium load even though it is sold as a healthier cooking ingredient.\n\nEvidence and Clinical Application\n\n**Salt-substitution trial benefits should be applied to patients with a comparable safety profile.** SSaSS compared a mixture containing ==75%== sodium chloride and ==25%== potassium chloride with usual salt and found fewer strokes and major cardiovascular events in its studied population.\n\nThe trial excluded people reporting serious kidney disease or using medicines expected to substantially increase potassium. Absence of a significant hyperkalemia signal in the eligible trial population does not establish safety in this patient with advanced CKD and existing hyperkalemia.\n\nReduce sodium by changing processed-food intake, portion selection, sauces and cooking practices while maintaining nutrition. Individualize dietary potassium advice with the renal team; restriction should not be prescribed indiscriminately to every person with a CKD label. Reassess whether losartan remains indicated and can be safely continued after addressing potassium and other contributors. A potassium binder or drug adjustment may be appropriate, but neither is a blanket license to start an unrestricted potassium salt substitute. The key distinction is between sodium reduction, which remains a useful goal, and the particular potassium-containing method proposed to achieve it.\n\nRandomization of villages rather than randomization of individual participants: Cluster randomization affects trial design, contamination and statistical analysis. It does not by itself invalidate a properly analyzed result or explain the particular renal and potassium safety gap in this patient.\n\nEnrollment of older high-risk adults or people with previous stroke: This eligibility profile limits extrapolation to young low-risk primary prevention. The patient is older and has previous stroke, so these features support rather than undermine population similarity on that dimension.\n\nUse of a combined sodium-reduction and potassium-enrichment intervention: The mixture makes it difficult to attribute benefit exclusively to either electrolyte change. That mechanistic limitation is distinct from whether the trial establishes safety in advanced CKD with existing hyperkalemia.\n\nSSaSS: salt substitution and cardiovascular outcomes, 2021 — https://doi.org/10.1056/NEJMoa2105675\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178",
+      "explanationHtml": "<h2>Potassium-Enriched Salt Substitutes in CKD</h2><p><strong>Correct answer: A — Exclusion of participants with serious kidney disease or substantial hyperkalemia risk</strong></p><h3>Potassium Handling and Drug Interactions</h3><ul><li><strong>Reduced renal potassium excretion changes the safety of dietary potassium enrichment.</strong> Advanced CKD and renin–angiotensin system blockade can combine to produce clinically important hyperkalemia.<ul><li>The patient already has potassium of 5.4 mmol/L. Verify the result when appropriate, review the trend, other medicines and clinical context, and manage the hyperkalemia rather than introducing another potassium source.</li><li>ACE inhibitors, ARBs, mineralocorticoid receptor antagonists and other potassium-sparing drugs deserve attention. A dietary product can deliver a pharmacologically relevant potassium load even though it is sold as a healthier cooking ingredient.</li></ul></li></ul><h3>Evidence and Clinical Application</h3><ul><li><strong>Salt-substitution trial benefits should be applied to patients with a comparable safety profile.</strong> SSaSS compared a mixture containing <mark>75%</mark> sodium chloride and <mark>25%</mark> potassium chloride with usual salt and found fewer strokes and major cardiovascular events in its studied population.<ul><li>The trial excluded people reporting serious kidney disease or using medicines expected to substantially increase potassium. Absence of a significant hyperkalemia signal in the eligible trial population does not establish safety in this patient with advanced CKD and existing hyperkalemia.</li><li>Reduce sodium by changing processed-food intake, portion selection, sauces and cooking practices while maintaining nutrition. Individualize dietary potassium advice with the renal team; restriction should not be prescribed indiscriminately to every person with a CKD label. Reassess whether losartan remains indicated and can be safely continued after addressing potassium and other contributors. A potassium binder or drug adjustment may be appropriate, but neither is a blanket license to start an unrestricted potassium salt substitute. The key distinction is between sodium reduction, which remains a useful goal, and the particular potassium-containing method proposed to achieve it.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Randomization of villages rather than randomization of individual participants:</strong> Cluster randomization affects trial design, contamination and statistical analysis. It does not by itself invalidate a properly analyzed result or explain the particular renal and potassium safety gap in this patient.</li><li><strong>C — Enrollment of older high-risk adults or people with previous stroke:</strong> This eligibility profile limits extrapolation to young low-risk primary prevention. The patient is older and has previous stroke, so these features support rather than undermine population similarity on that dimension.</li><li><strong>D — Use of a combined sodium-reduction and potassium-enrichment intervention:</strong> The mixture makes it difficult to attribute benefit exclusively to either electrolyte change. That mechanistic limitation is distinct from whether the trial establishes safety in advanced CKD with existing hyperkalemia.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1056/NEJMoa2105675\">SSaSS: salt substitution and cardiovascular outcomes, 2021</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Potassium-Enriched Salt Substitutes in CKD",
+        "sections": [
+          {
+            "heading": "Potassium Handling and Drug Interactions",
+            "bullets": [
+              {
+                "text": "**Reduced renal potassium excretion changes the safety of dietary potassium enrichment.** Advanced CKD and renin–angiotensin system blockade can combine to produce clinically important hyperkalemia.",
+                "children": [
+                  "The patient already has potassium of 5.4 mmol/L. Verify the result when appropriate, review the trend, other medicines and clinical context, and manage the hyperkalemia rather than introducing another potassium source.",
+                  "ACE inhibitors, ARBs, mineralocorticoid receptor antagonists and other potassium-sparing drugs deserve attention. A dietary product can deliver a pharmacologically relevant potassium load even though it is sold as a healthier cooking ingredient."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Evidence and Clinical Application",
+            "bullets": [
+              {
+                "text": "**Salt-substitution trial benefits should be applied to patients with a comparable safety profile.** SSaSS compared a mixture containing ==75%== sodium chloride and ==25%== potassium chloride with usual salt and found fewer strokes and major cardiovascular events in its studied population.",
+                "children": [
+                  "The trial excluded people reporting serious kidney disease or using medicines expected to substantially increase potassium. Absence of a significant hyperkalemia signal in the eligible trial population does not establish safety in this patient with advanced CKD and existing hyperkalemia.",
+                  "Reduce sodium by changing processed-food intake, portion selection, sauces and cooking practices while maintaining nutrition. Individualize dietary potassium advice with the renal team; restriction should not be prescribed indiscriminately to every person with a CKD label. Reassess whether losartan remains indicated and can be safely continued after addressing potassium and other contributors. A potassium binder or drug adjustment may be appropriate, but neither is a blanket license to start an unrestricted potassium salt substitute. The key distinction is between sodium reduction, which remains a useful goal, and the particular potassium-containing method proposed to achieve it."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Cluster randomization affects trial design, contamination and statistical analysis. It does not by itself invalidate a properly analyzed result or explain the particular renal and potassium safety gap in this patient."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "This eligibility profile limits extrapolation to young low-risk primary prevention. The patient is older and has previous stroke, so these features support rather than undermine population similarity on that dimension."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "The mixture makes it difficult to attribute benefit exclusively to either electrolyte change. That mechanistic limitation is distinct from whether the trial establishes safety in advanced CKD with existing hyperkalemia."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "SSaSS: salt substitution and cardiovascular outcomes, 2021",
+          "url": "https://doi.org/10.1056/NEJMoa2105675"
+        },
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        },
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Select potassium enrichment only after assessing kidney function and hyperkalemia risk"
+    },
+    {
+      "id": "cardiology-rebuild-11-019",
+      "topic": "Lifestyle and reversible contributors",
+      "question": "A 55-year-old with stable uncomplicated hypertension exercises little, drinks 180 g of alcohol weekly and uses ibuprofen most days for knee pain. Which plan best fits ESC 2024 lifestyle advice and contributor review?",
+      "options": [
+        "Build toward 75 minutes/week of vigorous activity, reduce alcohol and substitute scheduled naproxen",
+        "Build toward 75 minutes/week of moderate aerobic activity, maintain alcohol and review NSAID use",
+        "Build toward 150 minutes/week of moderate aerobic activity, maintain alcohol and continue scheduled ibuprofen",
+        "Build toward 150 minutes/week of moderate aerobic activity, reduce alcohol and review NSAID use"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Exercise and Reversible Contributors to Poor BP Control\n\nCorrect answer: Build toward 150 minutes/week of moderate aerobic activity, reduce alcohol and review NSAID use\n\nPhysical Activity and Alcohol\n\n**A practical ESC aerobic goal is at least 150 minutes of moderate activity weekly or 75 minutes of vigorous activity.** Add suitable low-to-moderate intensity resistance exercise on two to three days per week.\n\nProgress gradually from the patient’s current activity and joint limitations; walking, cycling or other tolerable activities can be selected. Unstable cardiovascular symptoms or severe uncontrolled disease require assessment before vigorous training.\n\nAlcohol intake of ==180 g==/week exceeds the ESC upper limit of about ==100 g==/week of pure alcohol. Counsel reduction, explain local drink sizes and avoid treating the upper limit as a recommended intake. Assess dependence and withdrawal risk when planning reduction in a heavy drinker.\n\nMedication and Sleep Review\n\n**Regular NSAIDs can worsen BP control through renal prostaglandin inhibition and sodium retention.** They can also blunt antihypertensive responses and increase kidney risk, especially with a diuretic plus ACE inhibitor or ARB.\n\nReview whether ibuprofen can be reduced or replaced with a clinically appropriate pain strategy; do not assume that another nonselective oral NSAID removes the class effect. Check kidney function and electrolytes when the exposure and regimen warrant it.\n\nAsk about sympathomimetic decongestants, stimulants, glucocorticoids, liquorice-containing products and other relevant exposures. Screen for OSA when snoring, witnessed apneas, daytime sleepiness or resistant hypertension suggests it. Sleep treatment and exercise complement indicated medicines rather than automatically replacing them. A diary of home BP and exposure changes can help assess response. Labeling hypertension resistant before assessing adherence, out-of-office measurements and these reversible factors risks unnecessary escalation. Avoid advising an abrupt unsupervised alcohol withdrawal if there is a history suggesting physiological dependence.\n\nBuild toward 75 minutes/week of vigorous activity, reduce alcohol and substitute scheduled naproxen: The exercise and alcohol components are reasonable. Naproxen may be selected for particular analgesic circumstances, but it remains an NSAID and does not remove the need to review drug-related BP elevation and kidney risk.\n\nBuild toward 75 minutes/week of moderate aerobic activity, maintain alcohol and review NSAID use: Seventy-five minutes can be an alternative weekly target for vigorous activity, not the usual moderate-intensity target. The substantial alcohol intake also warrants reduction rather than being left unchanged.\n\nBuild toward 150 minutes/week of moderate aerobic activity, maintain alcohol and continue scheduled ibuprofen: The exercise component is appropriate, but it does not neutralize alcohol-related pressure elevation or the potential renal and sodium-retaining effects of regular NSAID exposure.\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356",
+      "explanationHtml": "<h2>Exercise and Reversible Contributors to Poor BP Control</h2><p><strong>Correct answer: D — Build toward 150 minutes/week of moderate aerobic activity, reduce alcohol and review NSAID use</strong></p><h3>Physical Activity and Alcohol</h3><ul><li><strong>A practical ESC aerobic goal is at least 150 minutes of moderate activity weekly or 75 minutes of vigorous activity.</strong> Add suitable low-to-moderate intensity resistance exercise on two to three days per week.<ul><li>Progress gradually from the patient’s current activity and joint limitations; walking, cycling or other tolerable activities can be selected. Unstable cardiovascular symptoms or severe uncontrolled disease require assessment before vigorous training.</li><li>Alcohol intake of <mark>180 g</mark>/week exceeds the ESC upper limit of about <mark>100 g</mark>/week of pure alcohol. Counsel reduction, explain local drink sizes and avoid treating the upper limit as a recommended intake. Assess dependence and withdrawal risk when planning reduction in a heavy drinker.</li></ul></li></ul><h3>Medication and Sleep Review</h3><ul><li><strong>Regular NSAIDs can worsen BP control through renal prostaglandin inhibition and sodium retention.</strong> They can also blunt antihypertensive responses and increase kidney risk, especially with a diuretic plus ACE inhibitor or ARB.<ul><li>Review whether ibuprofen can be reduced or replaced with a clinically appropriate pain strategy; do not assume that another nonselective oral NSAID removes the class effect. Check kidney function and electrolytes when the exposure and regimen warrant it.</li><li>Ask about sympathomimetic decongestants, stimulants, glucocorticoids, liquorice-containing products and other relevant exposures. Screen for OSA when snoring, witnessed apneas, daytime sleepiness or resistant hypertension suggests it. Sleep treatment and exercise complement indicated medicines rather than automatically replacing them. A diary of home BP and exposure changes can help assess response. Labeling hypertension resistant before assessing adherence, out-of-office measurements and these reversible factors risks unnecessary escalation. Avoid advising an abrupt unsupervised alcohol withdrawal if there is a history suggesting physiological dependence.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Build toward 75 minutes/week of vigorous activity, reduce alcohol and substitute scheduled naproxen:</strong> The exercise and alcohol components are reasonable. Naproxen may be selected for particular analgesic circumstances, but it remains an NSAID and does not remove the need to review drug-related BP elevation and kidney risk.</li><li><strong>B — Build toward 75 minutes/week of moderate aerobic activity, maintain alcohol and review NSAID use:</strong> Seventy-five minutes can be an alternative weekly target for vigorous activity, not the usual moderate-intensity target. The substantial alcohol intake also warrants reduction rather than being left unchanged.</li><li><strong>C — Build toward 150 minutes/week of moderate aerobic activity, maintain alcohol and continue scheduled ibuprofen:</strong> The exercise component is appropriate, but it does not neutralize alcohol-related pressure elevation or the potential renal and sodium-retaining effects of regular NSAID exposure.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Exercise and Reversible Contributors to Poor BP Control",
+        "sections": [
+          {
+            "heading": "Physical Activity and Alcohol",
+            "bullets": [
+              {
+                "text": "**A practical ESC aerobic goal is at least 150 minutes of moderate activity weekly or 75 minutes of vigorous activity.** Add suitable low-to-moderate intensity resistance exercise on two to three days per week.",
+                "children": [
+                  "Progress gradually from the patient’s current activity and joint limitations; walking, cycling or other tolerable activities can be selected. Unstable cardiovascular symptoms or severe uncontrolled disease require assessment before vigorous training.",
+                  "Alcohol intake of ==180 g==/week exceeds the ESC upper limit of about ==100 g==/week of pure alcohol. Counsel reduction, explain local drink sizes and avoid treating the upper limit as a recommended intake. Assess dependence and withdrawal risk when planning reduction in a heavy drinker."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Medication and Sleep Review",
+            "bullets": [
+              {
+                "text": "**Regular NSAIDs can worsen BP control through renal prostaglandin inhibition and sodium retention.** They can also blunt antihypertensive responses and increase kidney risk, especially with a diuretic plus ACE inhibitor or ARB.",
+                "children": [
+                  "Review whether ibuprofen can be reduced or replaced with a clinically appropriate pain strategy; do not assume that another nonselective oral NSAID removes the class effect. Check kidney function and electrolytes when the exposure and regimen warrant it.",
+                  "Ask about sympathomimetic decongestants, stimulants, glucocorticoids, liquorice-containing products and other relevant exposures. Screen for OSA when snoring, witnessed apneas, daytime sleepiness or resistant hypertension suggests it. Sleep treatment and exercise complement indicated medicines rather than automatically replacing them. A diary of home BP and exposure changes can help assess response. Labeling hypertension resistant before assessing adherence, out-of-office measurements and these reversible factors risks unnecessary escalation. Avoid advising an abrupt unsupervised alcohol withdrawal if there is a history suggesting physiological dependence."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "The exercise and alcohol components are reasonable. Naproxen may be selected for particular analgesic circumstances, but it remains an NSAID and does not remove the need to review drug-related BP elevation and kidney risk."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Seventy-five minutes can be an alternative weekly target for vigorous activity, not the usual moderate-intensity target. The substantial alcohol intake also warrants reduction rather than being left unchanged."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "The exercise component is appropriate, but it does not neutralize alcohol-related pressure elevation or the potential renal and sodium-retaining effects of regular NSAID exposure."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        },
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Address exercise alcohol sleep and relevant medication or substance contributors"
     }
   ],
+  "plannedQuestions": 62,
   "sourceDocument": "11. Systemic Hypertension and Hypertensive Emergencies.docx",
   "redistribution": {
     "originalIdsPreserved": true,
     "existingQuestions": 9,
     "previouslyInstalledQuestions": 0,
-    "draftQuestions": 9,
+    "draftQuestions": 19,
     "coverageStatus": "incomplete_requires_chapter_review",
-    "explanationStructureStatus": "original_explanations_preserved_not_rewritten"
+    "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+    "newQuestionsAfterRedistribution": 10
   }
 }

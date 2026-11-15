@@ -1,0 +1,137 @@
+{
+  "chapter": 11,
+  "status": "draft_in_progress",
+  "installed": false,
+  "authoredQuestions": 19,
+  "plannedQuestions": 62,
+  "scopeNote": "Measurement/phenotypes, risk-based initiation/targets and lifestyle/contributors authored; all other planned sections remain unfinished.",
+  "sourceChecks": [
+    {
+      "source": "AHA/ACC 2025 high blood pressure guidance",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001356",
+        "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know"
+      ],
+      "checks": [
+        "Normal/elevated/stage-one/stage-two categories and higher systolic-or-diastolic category.",
+        "Current PREVENT 7.5% risk pathway and lower-risk lifestyle trial for three to six months.",
+        "Measurement quality and out-of-office assessment."
+      ]
+    },
+    {
+      "source": "ESC 2024 hypertension primary guideline",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehae178",
+        "https://academic.oup.com/eurheartj/article/45/38/3912/7741010"
+      ],
+      "checks": [
+        "Different elevated-pressure and diagnostic boundaries; home/awake/24-hour/sleep thresholds.",
+        "Correct cuff dimensions, preparation, timed orthostatic measurements.",
+        "White-coat versus masked phenotypes and nocturnal level versus relative dipping."
+      ]
+    },
+    {
+      "source": "BedMed primary randomized trial, 2025",
+      "urls": [
+        "https://doi.org/10.1001/jama.2025.4390"
+      ],
+      "checks": [
+        "No demonstrated reduction in death or major cardiovascular events from bedtime versus morning treatment in the studied primary-care population; do not infer universal benefit from nondipping alone."
+      ]
+    },
+    {
+      "source": "AHA/ACC 2025 and ESC 2024 treatment pathways",
+      "urls": [
+        "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know",
+        "https://doi.org/10.1161/CIR.0000000000001356",
+        "https://doi.org/10.1093/eurheartj/ehae178"
+      ],
+      "checks": [
+        "AHA PREVENT 7.5% threshold and persistent low-risk pressure after 3–6 months.",
+        "General AHA target and ESC risk-based treatment below diagnostic hypertension boundary.",
+        "ESC tolerability, symptomatic orthostasis, age 85, frailty and lifespan exceptions.",
+        "AHA baseline kidney/electrolyte, albuminuria, glycemic, lipid and ECG evaluation."
+      ],
+      "retrievalNote": "Current AHA society summary read directly; publisher primary documents cross-checked through indexed primary-source passages because full-page retrieval was blocked."
+    },
+    {
+      "source": "DailyMed amlodipine prescribing information",
+      "urls": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1080fcea-a5da-499d-a855-690c13559071"
+      ],
+      "checks": [
+        "Usual adult start 5 mg daily, selected lower start 2.5 mg and maximum 10 mg daily."
+      ]
+    },
+    {
+      "source": "NHLBI DASH and WHO sodium recommendations",
+      "urls": [
+        "https://www.nhlbi.nih.gov/health/dash-eating-plan",
+        "https://www.who.int/news-room/fact-sheets/detail/sodium-reduction"
+      ],
+      "checks": [
+        "DASH food groups, calorie-dependent servings and fat quality.",
+        "WHO adult sodium <2000 mg/day and approximate 5 g/day salt equivalent."
+      ]
+    },
+    {
+      "source": "SSaSS primary randomized trial and ESC lifestyle recommendations",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2105675",
+        "https://doi.org/10.1093/eurheartj/ehae178"
+      ],
+      "checks": [
+        "75% sodium chloride/25% potassium chloride trial intervention, selected population and hyperkalemia-related exclusions.",
+        "Exercise intensity/time alternatives, resistance training and alcohol upper limit.",
+        "Do not extrapolate salt-substitute safety to advanced CKD with existing hyperkalemia."
+      ]
+    },
+    {
+      "source": "Endocrine Society 2025 primary aldosteronism guidance",
+      "urls": [
+        "https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2"
+      ],
+      "checks": [
+        "Broader conditional aldosterone/renin screening recommendation; biochemical screening does not imply routine adrenal imaging."
+      ]
+    }
+  ],
+  "draftValidation": {
+    "questions": 19,
+    "answerDistribution": {
+      "A": 5,
+      "B": 5,
+      "C": 5,
+      "D": 4
+    },
+    "minimumExplanationWords": 329,
+    "distractorRationales": 54,
+    "questionStyles": {
+      "direct": 5,
+      "clinical_scenario": 14
+    },
+    "status": "passed"
+  },
+  "editorialReviewProgress": {
+    "status": "new_blocks_reviewed_original_measurement_block_requires_final_chapter_review",
+    "questionsReviewedInFull": [
+      "cardiology-rebuild-11-010",
+      "cardiology-rebuild-11-011",
+      "cardiology-rebuild-11-012",
+      "cardiology-rebuild-11-013",
+      "cardiology-rebuild-11-014",
+      "cardiology-rebuild-11-015",
+      "cardiology-rebuild-11-016",
+      "cardiology-rebuild-11-017",
+      "cardiology-rebuild-11-018",
+      "cardiology-rebuild-11-019"
+    ],
+    "nextWork": "Initial drug selection, resistant hypertension, secondary causes, emergencies and landmark target trials; then full generated chapter review."
+  },
+  "limitations": [
+    "Full Harrison text not accessed.",
+    "Source checks are author verification, not independent clinician review.",
+    "Structural validation does not establish completeness or clinical accuracy."
+  ],
+  "document": "11. Systemic Hypertension and Hypertensive Emergencies"
+}

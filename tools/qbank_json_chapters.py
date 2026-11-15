@@ -1,5 +1,5 @@
 """Common serializer, validation and additive installation for new JSON chapters."""
-import argparse, collections, hashlib, json, random, re, sys, time, zipfile
+import argparse, collections, copy, hashlib, json, random, re, sys, time, zipfile
 from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
@@ -43,10 +43,27 @@ def validate(bank):
         distractorRationales=sum(len(q['explanationTeaching']['otherOptions']) for q in rows),
         questionStyles=dict(collections.Counter(q.get('questionStyle','unspecified') for q in rows)),status='passed')
 
-def save(subject,number,document,rows,refs,source_note):
+def save(subject,number,document,rows,refs,source_note,preserved_questions=None):
     positions=[i%4 for i in range(len(rows))];random.Random(2026111500+number).shuffle(positions)
+    slug=re.sub('[^a-z0-9]+','-',subject.lower())
+    preserved={q['id']:q for q in (preserved_questions or [])}
+    if preserved:
+        ids=[f'{slug}-rebuild-{number:02}-{i:03}' for i in range(1,len(rows)+1)]
+        assert set(preserved)<=set(ids),'Preserved questions must belong to this chapter'
+        target=collections.Counter(i%4 for i in range(len(rows)))
+        used=collections.Counter(q['correctIndex'] for q in preserved.values())
+        assert all(used[i]<=target[i] for i in range(4)),'Cannot preserve keys with balanced final counts'
+        remaining=[i for i in range(4) for _ in range(target[i]-used[i])]
+        random.Random(2026111500+number).shuffle(remaining)
+        positions=[preserved[k]['correctIndex'] if k in preserved else remaining.pop() for k in ids]
     qs=[]
     for i,(r,pos) in enumerate(zip(rows,positions),1):
+        existing=preserved.get(f'{slug}-rebuild-{number:02}-{i:03}')
+        if existing:
+            assert existing['question']==r['question'],'Preserving a question with a changed stem'
+            assert existing['options'][existing['correctIndex']]==r['answer'],'Preserving a question with a changed answer'
+            assert set(existing['options'])=={r['answer'],*(o for o,_ in r['others'])},'Preserving a question with changed options'
+            qs.append(copy.deepcopy(existing));continue
         options=[r['answer']]+[x[0] for x in r['others']];assert len(options)==4
         options[0],options[pos]=options[pos],options[0]
         reasons=dict(r['others']);other=[dict(optionIndex=j,explanation=reasons[o]) for j,o in enumerate(options) if j!=pos]

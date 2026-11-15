@@ -1,17 +1,22 @@
 {
   "projectStatus": "in_progress",
   "plannedChapters": 129,
-  "installedChapters": 23,
+  "installedChapters": 28,
   "installedQuestions": 1184,
   "structurallyValidated": true,
-  "runtimeSourceComparison": "passed",
-  "mappedChapters": 20,
+  "runtimeSourceComparison": "passed_current_banks_against_released_subsets",
   "retrospectiveCoverageAudit": [
     "Neurology / 01. Neuroanatomy, Clinical Localization & Neurological Examination",
     "Neurology / 02. Cerebrovascular Diseases",
     "Neurology / 03. Epilepsy & Status Epilepticus"
   ],
   "independentClinicianReview": "not_recorded",
-  "nextChapter": "Cardiology Chapter_10_Infective_Endocarditis",
-  "countPolicy": "Coverage-driven: enumerate distinct high-yield decisions per chapter, allocate questions by diagnostic and therapeutic complexity, then remove duplication. The original 30/40 counts were provisional, not official exam weights or completeness evidence."
+  "nextChapter": "Cardiology 11. Systemic Hypertension and Hypertensive Emergencies",
+  "countPolicy": "Coverage-driven: enumerate distinct high-yield decisions per chapter, allocate questions by diagnostic and therapeutic complexity, then remove duplication. The original 30/40 counts were provisional, not official exam weights or completeness evidence.",
+  "currentCardiologyAuthoredQuestions": 625,
+  "currentCardiologyDraftQuestionsNotInstalled": 84,
+  "cardiologyChapterFiles": 15,
+  "cardiologyFullCoverage": false,
+  "coverageStatus": "Cardiology allocation audited; full chapter coverage and explanation revision remain incomplete",
+  "mappedChaptersBeforeRedistribution": 20
 }
