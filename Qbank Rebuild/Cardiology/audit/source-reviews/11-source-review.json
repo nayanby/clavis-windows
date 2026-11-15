@@ -1,0 +1,69 @@
+{
+  "chapter": 11,
+  "status": "draft_in_progress",
+  "installed": false,
+  "authoredQuestions": 9,
+  "plannedQuestions": 62,
+  "scopeNote": "Coverage-driven provisional decisions; first measurement and phenotype section drafted. Not official examination weightings.",
+  "sourceChecks": [
+    {
+      "source": "AHA/ACC 2025 high blood pressure guidance",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001356",
+        "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know"
+      ],
+      "checks": [
+        "Normal/elevated/stage-one/stage-two categories and higher systolic-or-diastolic category.",
+        "Current PREVENT 7.5% risk pathway and lower-risk lifestyle trial for three to six months.",
+        "Measurement quality and out-of-office assessment."
+      ]
+    },
+    {
+      "source": "ESC 2024 hypertension primary guideline",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehae178",
+        "https://academic.oup.com/eurheartj/article/45/38/3912/7741010"
+      ],
+      "checks": [
+        "Different elevated-pressure and diagnostic boundaries; home/awake/24-hour/sleep thresholds.",
+        "Correct cuff dimensions, preparation, timed orthostatic measurements.",
+        "White-coat versus masked phenotypes and nocturnal level versus relative dipping."
+      ]
+    },
+    {
+      "source": "BedMed primary randomized trial, 2025",
+      "urls": [
+        "https://doi.org/10.1001/jama.2025.4390"
+      ],
+      "checks": [
+        "No demonstrated reduction in death or major cardiovascular events from bedtime versus morning treatment in the studied primary-care population; do not infer universal benefit from nondipping alone."
+      ]
+    }
+  ],
+  "draftValidation": {
+    "questions": 9,
+    "answerDistribution": {
+      "A": 3,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "minimumExplanationWords": 371,
+    "distractorRationales": 27,
+    "questionStyles": {
+      "direct": 3,
+      "clinical_scenario": 6
+    },
+    "status": "passed"
+  },
+  "editorialReviewProgress": {
+    "status": "pending_full_generated_review",
+    "questionsReviewedInFull": [],
+    "nextWork": "Risk-based initiation and targets, then lifestyle and drug treatment in continuous sequence."
+  },
+  "limitations": [
+    "Full Harrison text not accessed.",
+    "Source checks are author verification, not independent clinician review.",
+    "Structural validation does not establish completeness or clinical accuracy."
+  ]
+}

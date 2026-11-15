@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "folder": "Cardiology",
+  "subject": "Cardiology",
+  "chapterOrder": 12,
+  "topicOrder": 1,
+  "headingIndex": 0,
+  "document": "12. Adult Congenital Heart Diseases",
+  "headingText": "Adult Congenital Heart Diseases",
+  "targetQuestions": 4,
+  "status": "redistributed_existing_questions",
+  "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
+  "sourceNote": "Existing questions redistributed by clinical focus to the canonical files/Cardiology chapters. Question content and source-review status are unchanged. This is not a claim of complete source coverage or a deep-dive explanation rewrite.",
+  "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3}",
+  "questions": [
+    {
+      "id": "cardiology-rebuild-01-015",
+      "topic": "Flow, oxygen transport and resistance calculations",
+      "question": "During stable catheterization on room air, systemic arterial saturation is 98%, pulmonary venous saturation 98%, representative pre-shunt mixed venous saturation 68% and pulmonary arterial saturation 83%. Assuming equal hemoglobin and negligible dissolved oxygen, what is Qp/Qs?",
+      "options": [
+        "0.5",
+        "2.0",
+        "1.0",
+        "1.5"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "direct",
+      "calculation": true,
+      "explanation": "Pulmonary-to-Systemic Flow Ratio\n\nCorrect answer: 2.0\n\nApply the Two-Circuit Fick Relationship\n\n**Qp/Qs = (systemic arterial content − mixed venous content)/(pulmonary venous content − pulmonary arterial content).** Oxygen consumption cancels in the ratio.\n\nUnder the stated saturation simplification, Qp/Qs = (98 − 68)/(98 − 83) = 30/15 = ==2.0==.\n\nPulmonary flow is twice systemic flow, consistent with a net left-to-right shunt in this setting. Do not use the enriched pulmonary arterial sample as the pre-shunt mixed venous value.\n\nPreserve the Sampling Assumptions\n\n**Use representative samples from the correct locations and a stable physiologic state.** An oximetry run helps identify where a saturation step-up occurs.\n\nThe saturation shortcut assumes comparable hemoglobin and insignificant dissolved oxygen. Supplemental high-concentration oxygen can make dissolved oxygen important, requiring content-based calculation.\n\nPulmonary venous desaturation, streaming, anomalous venous return and bidirectional shunting require careful interpretation. A calculated ratio does not by itself establish operability or identify the defect. Integrate anatomy, chamber loading, pulmonary pressure and resistance with disease-specific recommendations before deciding on closure. A large shunt ratio is not permission to ignore elevated resistance, just as a ratio near one does not exclude a clinically important lesion when competing shunt directions or measurement problems are present.\n\nJACC Interventions: catheterization in adults with congenital heart disease, 2022 — https://doi.org/10.1016/j.jcin.2021.12.020",
+      "explanationHtml": "<h2>Pulmonary-to-Systemic Flow Ratio</h2><p><strong>Correct answer: B — 2.0</strong></p><h3>Apply the Two-Circuit Fick Relationship</h3><ul><li><strong>Qp/Qs = (systemic arterial content − mixed venous content)/(pulmonary venous content − pulmonary arterial content).</strong> Oxygen consumption cancels in the ratio.<ul><li>Under the stated saturation simplification, Qp/Qs = (98 − 68)/(98 − 83) = 30/15 = <mark>2.0</mark>.</li><li>Pulmonary flow is twice systemic flow, consistent with a net left-to-right shunt in this setting. Do not use the enriched pulmonary arterial sample as the pre-shunt mixed venous value.</li></ul></li></ul><h3>Preserve the Sampling Assumptions</h3><ul><li><strong>Use representative samples from the correct locations and a stable physiologic state.</strong> An oximetry run helps identify where a saturation step-up occurs.<ul><li>The saturation shortcut assumes comparable hemoglobin and insignificant dissolved oxygen. Supplemental high-concentration oxygen can make dissolved oxygen important, requiring content-based calculation.</li><li>Pulmonary venous desaturation, streaming, anomalous venous return and bidirectional shunting require careful interpretation. A calculated ratio does not by itself establish operability or identify the defect. Integrate anatomy, chamber loading, pulmonary pressure and resistance with disease-specific recommendations before deciding on closure. A large shunt ratio is not permission to ignore elevated resistance, just as a ratio near one does not exclude a clinically important lesion when competing shunt directions or measurement problems are present.</li></ul></li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jcin.2021.12.020\">JACC Interventions: catheterization in adults with congenital heart disease, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Pulmonary-to-Systemic Flow Ratio",
+        "sections": [
+          {
+            "heading": "Apply the Two-Circuit Fick Relationship",
+            "bullets": [
+              {
+                "text": "**Qp/Qs = (systemic arterial content − mixed venous content)/(pulmonary venous content − pulmonary arterial content).** Oxygen consumption cancels in the ratio.",
+                "children": [
+                  "Under the stated saturation simplification, Qp/Qs = (98 − 68)/(98 − 83) = 30/15 = ==2.0==.",
+                  "Pulmonary flow is twice systemic flow, consistent with a net left-to-right shunt in this setting. Do not use the enriched pulmonary arterial sample as the pre-shunt mixed venous value."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Preserve the Sampling Assumptions",
+            "bullets": [
+              {
+                "text": "**Use representative samples from the correct locations and a stable physiologic state.** An oximetry run helps identify where a saturation step-up occurs.",
+                "children": [
+                  "The saturation shortcut assumes comparable hemoglobin and insignificant dissolved oxygen. Supplemental high-concentration oxygen can make dissolved oxygen important, requiring content-based calculation.",
+                  "Pulmonary venous desaturation, streaming, anomalous venous return and bidirectional shunting require careful interpretation. A calculated ratio does not by itself establish operability or identify the defect. Integrate anatomy, chamber loading, pulmonary pressure and resistance with disease-specific recommendations before deciding on closure. A large shunt ratio is not permission to ignore elevated resistance, just as a ratio near one does not exclude a clinically important lesion when competing shunt directions or measurement problems are present."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": []
+      },
+      "references": [
+        {
+          "label": "JACC Interventions: catheterization in adults with congenital heart disease, 2022",
+          "url": "https://doi.org/10.1016/j.jcin.2021.12.020"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Calculate pulmonary-to-systemic flow ratio from correctly chosen oxygen samples"
+    },
+    {
+      "id": "cardiology-rebuild-01-048",
+      "topic": "CT, CMR and multimodality selection",
+      "question": "An adult with a suspected atrial-level left-to-right shunt has RV enlargement that is difficult to quantify by TTE. The clinical team needs reproducible RV volumes and pulmonary-to-systemic flow assessment. Which examination most directly combines these measurements?",
+      "options": [
+        "TEE septal imaging with a contrast shunt study",
+        "Three-dimensional TTE ventricular volumetry with repeat Doppler flow estimates",
+        "Cine CMR volumetry with anatomy-specific phase-contrast flow assessment",
+        "Right-heart catheterization with an oximetry run"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "CMR Shunt Quantification and Right Ventricular Volumes\n\nCorrect answer: Cine CMR volumetry with anatomy-specific phase-contrast flow assessment\n\nCombine Chamber Response With Flow\n\n**Cine CMR quantifies ventricular volumes and EF**, while velocity-encoded phase-contrast imaging measures flow through appropriately selected vessels.\n\nIn a simple atrial-level shunt, pulmonary and systemic flow measurements can quantify Qp/Qs, while RV volume documents the chamber consequence.\n\nIndex volumes to body size and report the acquisition and contouring convention for meaningful comparison over time.\n\nPlan Measurements for the Actual Anatomy\n\n**Flow sites must match the lesion.** A simple main-pulmonary-artery to ascending-aortic comparison is not universally valid for every congenital connection or collateral pathway.\n\nCheck velocity encoding, plane alignment, background phase offsets and internal flow consistency. Regurgitation and additional shunts complicate ventricular stroke-volume comparisons.\n\nAn elevated Qp/Qs or enlarged RV does not independently establish suitability for closure. Integrate anatomy, symptoms, pulmonary pressures and resistance under disease-specific guidance. CMR does not replace invasive pressure assessment when operability depends on it. A useful report states net forward flows and the assumptions used rather than presenting an unexplained ratio. When different flow or volume estimates disagree, review the anatomy and acquisition before attributing the discrepancy to a new lesion.\n\nTEE septal imaging with a contrast shunt study: TEE can define the septal defect and contrast passage, but that primarily anatomic assessment does not replace the requested comprehensive RV volumes and quantitative pulmonary/systemic flows.\n\nThree-dimensional TTE ventricular volumetry with repeat Doppler flow estimates: Three-dimensional echo can improve RV measurement when image quality is adequate, but the stated difficult transthoracic quantification favors CMR for reproducible volumes and integrated flows.\n\nRight-heart catheterization with an oximetry run: Catheterization can quantify shunting and is important for pressure or resistance questions, but does not directly provide the reproducible RV volumetry requested alongside flow assessment.\n\nSCMR reporting guideline for congenital heart disease, 2024 — https://www.journalofcmr.com/article/S1097-6647%2824%2901089-5/fulltext\n\nSCMR standardized CMR interpretation and post-processing, 2020 update — https://pmc.ncbi.nlm.nih.gov/articles/PMC7066763/",
+      "explanationHtml": "<h2>CMR Shunt Quantification and Right Ventricular Volumes</h2><p><strong>Correct answer: C — Cine CMR volumetry with anatomy-specific phase-contrast flow assessment</strong></p><h3>Combine Chamber Response With Flow</h3><ul><li><strong>Cine CMR quantifies ventricular volumes and EF</strong>, while velocity-encoded phase-contrast imaging measures flow through appropriately selected vessels.<ul><li>In a simple atrial-level shunt, pulmonary and systemic flow measurements can quantify Qp/Qs, while RV volume documents the chamber consequence.</li><li>Index volumes to body size and report the acquisition and contouring convention for meaningful comparison over time.</li></ul></li></ul><h3>Plan Measurements for the Actual Anatomy</h3><ul><li><strong>Flow sites must match the lesion.</strong> A simple main-pulmonary-artery to ascending-aortic comparison is not universally valid for every congenital connection or collateral pathway.<ul><li>Check velocity encoding, plane alignment, background phase offsets and internal flow consistency. Regurgitation and additional shunts complicate ventricular stroke-volume comparisons.</li><li>An elevated Qp/Qs or enlarged RV does not independently establish suitability for closure. Integrate anatomy, symptoms, pulmonary pressures and resistance under disease-specific guidance. CMR does not replace invasive pressure assessment when operability depends on it. A useful report states net forward flows and the assumptions used rather than presenting an unexplained ratio. When different flow or volume estimates disagree, review the anatomy and acquisition before attributing the discrepancy to a new lesion.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — TEE septal imaging with a contrast shunt study:</strong> TEE can define the septal defect and contrast passage, but that primarily anatomic assessment does not replace the requested comprehensive RV volumes and quantitative pulmonary/systemic flows.</li><li><strong>B — Three-dimensional TTE ventricular volumetry with repeat Doppler flow estimates:</strong> Three-dimensional echo can improve RV measurement when image quality is adequate, but the stated difficult transthoracic quantification favors CMR for reproducible volumes and integrated flows.</li><li><strong>D — Right-heart catheterization with an oximetry run:</strong> Catheterization can quantify shunting and is important for pressure or resistance questions, but does not directly provide the reproducible RV volumetry requested alongside flow assessment.</li></ul><h3>References</h3><ul><li><a href=\"https://www.journalofcmr.com/article/S1097-6647%2824%2901089-5/fulltext\">SCMR reporting guideline for congenital heart disease, 2024</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC7066763/\">SCMR standardized CMR interpretation and post-processing, 2020 update</a></li></ul>",
+      "explanationTeaching": {
+        "title": "CMR Shunt Quantification and Right Ventricular Volumes",
+        "sections": [
+          {
+            "heading": "Combine Chamber Response With Flow",
+            "bullets": [
+              {
+                "text": "**Cine CMR quantifies ventricular volumes and EF**, while velocity-encoded phase-contrast imaging measures flow through appropriately selected vessels.",
+                "children": [
+                  "In a simple atrial-level shunt, pulmonary and systemic flow measurements can quantify Qp/Qs, while RV volume documents the chamber consequence.",
+                  "Index volumes to body size and report the acquisition and contouring convention for meaningful comparison over time."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Plan Measurements for the Actual Anatomy",
+            "bullets": [
+              {
+                "text": "**Flow sites must match the lesion.** A simple main-pulmonary-artery to ascending-aortic comparison is not universally valid for every congenital connection or collateral pathway.",
+                "children": [
+                  "Check velocity encoding, plane alignment, background phase offsets and internal flow consistency. Regurgitation and additional shunts complicate ventricular stroke-volume comparisons.",
+                  "An elevated Qp/Qs or enlarged RV does not independently establish suitability for closure. Integrate anatomy, symptoms, pulmonary pressures and resistance under disease-specific guidance. CMR does not replace invasive pressure assessment when operability depends on it. A useful report states net forward flows and the assumptions used rather than presenting an unexplained ratio. When different flow or volume estimates disagree, review the anatomy and acquisition before attributing the discrepancy to a new lesion."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "TEE can define the septal defect and contrast passage, but that primarily anatomic assessment does not replace the requested comprehensive RV volumes and quantitative pulmonary/systemic flows."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Three-dimensional echo can improve RV measurement when image quality is adequate, but the stated difficult transthoracic quantification favors CMR for reproducible volumes and integrated flows."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Catheterization can quantify shunting and is important for pressure or resistance questions, but does not directly provide the reproducible RV volumetry requested alongside flow assessment."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "SCMR reporting guideline for congenital heart disease, 2024",
+          "url": "https://www.journalofcmr.com/article/S1097-6647%2824%2901089-5/fulltext"
+        },
+        {
+          "label": "SCMR standardized CMR interpretation and post-processing, 2020 update",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7066763/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Choose shunt quantification and RV volume assessment with CMR"
+    },
+    {
+      "id": "cardiology-rebuild-03-047",
+      "topic": "Tricuspid and pulmonary valve disease",
+      "question": "An adult with isolated doming pulmonary valve stenosis has progressive exertional limitation, peak Doppler velocity 4.5 m/s and RV pressure loading. The valve is suitable for balloon treatment, with no important pulmonary regurgitation or subvalvular obstruction. Which intervention is preferred?",
+      "options": [
+        "Surveillance until severe RV systolic failure develops",
+        "Surgical pulmonary valve replacement as the first procedure",
+        "Surgical pulmonary valvotomy as the initial procedure",
+        "Balloon pulmonary valvuloplasty"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Balloon Treatment of Suitable Valvular Pulmonary Stenosis\n\nCorrect answer: Balloon pulmonary valvuloplasty\n\nLocalize and Grade the Obstruction\n\n**Valvular, subvalvular and pulmonary artery obstruction require different treatment plans.** This stem specifically supplies a favorable doming valve.\n\nThe Doppler peak instantaneous gradient is approximately 4 × 4.5² = 81 mmHg. It is not interchangeable with an invasive peak-to-peak gradient.\n\nACC/AHA grading uses peak velocity <3 m/s for mild disease, 3–4 m/s for moderate disease and >4 m/s for severe disease, corresponding to peak gradients <36, 36–64 and >64 mmHg.\n\nTreatment and Long-Term Assessment\n\n**The 2025 adult congenital guideline recommends balloon valvuloplasty for symptomatic moderate or severe valvular PS with favorable anatomy.** An ACHD team should assess associated anatomy and RV consequences.\n\nDysplastic valves, unsuitable anatomy, important regurgitation or failure of catheter treatment can shift the plan toward surgery.\n\nAfter relief, monitor residual obstruction, pulmonary regurgitation, RV size/function and exercise capacity. Important late regurgitation may require CMR quantification and a replacement discussion; a low residual gradient does not prove that lifelong follow-up is unnecessary. Decisions about chronic pulmonary regurgitation must incorporate its cause, symptoms and RV response rather than copy a stenosis gradient threshold.\n\nSurveillance until severe RV systolic failure develops: Symptoms and severe valvular obstruction already support intervention; waiting for advanced ventricular damage is not a necessary prerequisite.\n\nSurgical pulmonary valve replacement as the first procedure: Surgery is appropriate for unsuitable anatomy, failed balloon treatment or important associated lesions, but a suitable isolated doming valve generally favors balloon valvuloplasty.\n\nSurgical pulmonary valvotomy as the initial procedure: Surgical relief is relevant when anatomy is unsuitable for catheter treatment or associated lesions require operation; favorable isolated doming valvular stenosis generally supports balloon treatment first.\n\nACC/AHA adult congenital heart disease guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001402\n\nEAE/ASE echocardiographic assessment of valve stenosis, 2009 — https://www.escardio.org/static-file/Escardio/Subspecialty/EACVI/education/echo-box/valvular/EAE-recommendations-valve-stenosis.pdf",
+      "explanationHtml": "<h2>Balloon Treatment of Suitable Valvular Pulmonary Stenosis</h2><p><strong>Correct answer: D — Balloon pulmonary valvuloplasty</strong></p><h3>Localize and Grade the Obstruction</h3><ul><li><strong>Valvular, subvalvular and pulmonary artery obstruction require different treatment plans.</strong> This stem specifically supplies a favorable doming valve.<ul><li>The Doppler peak instantaneous gradient is approximately 4 × 4.5² = 81 mmHg. It is not interchangeable with an invasive peak-to-peak gradient.</li><li>ACC/AHA grading uses peak velocity &lt;3 m/s for mild disease, 3–4 m/s for moderate disease and &gt;4 m/s for severe disease, corresponding to peak gradients &lt;36, 36–64 and &gt;64 mmHg.</li></ul></li></ul><h3>Treatment and Long-Term Assessment</h3><ul><li><strong>The 2025 adult congenital guideline recommends balloon valvuloplasty for symptomatic moderate or severe valvular PS with favorable anatomy.</strong> An ACHD team should assess associated anatomy and RV consequences.<ul><li>Dysplastic valves, unsuitable anatomy, important regurgitation or failure of catheter treatment can shift the plan toward surgery.</li><li>After relief, monitor residual obstruction, pulmonary regurgitation, RV size/function and exercise capacity. Important late regurgitation may require CMR quantification and a replacement discussion; a low residual gradient does not prove that lifelong follow-up is unnecessary. Decisions about chronic pulmonary regurgitation must incorporate its cause, symptoms and RV response rather than copy a stenosis gradient threshold.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Surveillance until severe RV systolic failure develops:</strong> Symptoms and severe valvular obstruction already support intervention; waiting for advanced ventricular damage is not a necessary prerequisite.</li><li><strong>B — Surgical pulmonary valve replacement as the first procedure:</strong> Surgery is appropriate for unsuitable anatomy, failed balloon treatment or important associated lesions, but a suitable isolated doming valve generally favors balloon valvuloplasty.</li><li><strong>C — Surgical pulmonary valvotomy as the initial procedure:</strong> Surgical relief is relevant when anatomy is unsuitable for catheter treatment or associated lesions require operation; favorable isolated doming valvular stenosis generally supports balloon treatment first.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001402\">ACC/AHA adult congenital heart disease guideline, 2025</a></li><li><a href=\"https://www.escardio.org/static-file/Escardio/Subspecialty/EACVI/education/echo-box/valvular/EAE-recommendations-valve-stenosis.pdf\">EAE/ASE echocardiographic assessment of valve stenosis, 2009</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Balloon Treatment of Suitable Valvular Pulmonary Stenosis",
+        "sections": [
+          {
+            "heading": "Localize and Grade the Obstruction",
+            "bullets": [
+              {
+                "text": "**Valvular, subvalvular and pulmonary artery obstruction require different treatment plans.** This stem specifically supplies a favorable doming valve.",
+                "children": [
+                  "The Doppler peak instantaneous gradient is approximately 4 × 4.5² = 81 mmHg. It is not interchangeable with an invasive peak-to-peak gradient.",
+                  "ACC/AHA grading uses peak velocity <3 m/s for mild disease, 3–4 m/s for moderate disease and >4 m/s for severe disease, corresponding to peak gradients <36, 36–64 and >64 mmHg."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Treatment and Long-Term Assessment",
+            "bullets": [
+              {
+                "text": "**The 2025 adult congenital guideline recommends balloon valvuloplasty for symptomatic moderate or severe valvular PS with favorable anatomy.** An ACHD team should assess associated anatomy and RV consequences.",
+                "children": [
+                  "Dysplastic valves, unsuitable anatomy, important regurgitation or failure of catheter treatment can shift the plan toward surgery.",
+                  "After relief, monitor residual obstruction, pulmonary regurgitation, RV size/function and exercise capacity. Important late regurgitation may require CMR quantification and a replacement discussion; a low residual gradient does not prove that lifelong follow-up is unnecessary. Decisions about chronic pulmonary regurgitation must incorporate its cause, symptoms and RV response rather than copy a stenosis gradient threshold."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Symptoms and severe valvular obstruction already support intervention; waiting for advanced ventricular damage is not a necessary prerequisite."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Surgery is appropriate for unsuitable anatomy, failed balloon treatment or important associated lesions, but a suitable isolated doming valve generally favors balloon valvuloplasty."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Surgical relief is relevant when anatomy is unsuitable for catheter treatment or associated lesions require operation; favorable isolated doming valvular stenosis generally supports balloon treatment first."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA adult congenital heart disease guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001402"
+        },
+        {
+          "label": "EAE/ASE echocardiographic assessment of valve stenosis, 2009",
+          "url": "https://www.escardio.org/static-file/Escardio/Subspecialty/EACVI/education/echo-box/valvular/EAE-recommendations-valve-stenosis.pdf"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Pulmonary stenosis and regurgitation intervention assessment"
+    },
+    {
+      "id": "cardiology-rebuild-03-048",
+      "topic": "Tricuspid and pulmonary valve disease",
+      "question": "An asymptomatic adult with repaired tetralogy of Fallot has moderate-to-severe pulmonary regurgitation. CMR shows RV end-systolic volume index 92 mL/m² and RVEF 43%; serial exercise testing shows declining capacity. Under the 2025 ACC/AHA ACHD framework, which approach is appropriate?",
+      "options": [
+        "Defer referral until RVEF falls below thirty-five percent",
+        "Continue surveillance until the patient reports exertional symptoms",
+        "Defer referral until RV end-diastolic volume exceeds three times LV volume",
+        "Refer to an ACHD valve team to assess pulmonary valve replacement despite absent reported symptoms"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Pulmonary Regurgitation After Repaired Tetralogy Requires RV Assessment\n\nCorrect answer: Refer to an ACHD valve team to assess pulmonary valve replacement despite absent reported symptoms\n\nQuantify Regurgitation and Ventricular Consequences\n\n**Chronic pulmonary regurgitation after tetralogy repair can cause progressive RV dilation and dysfunction before symptoms are recognized.** CMR quantifies regurgitant burden and ventricular volumes; serial exercise testing can reveal functional deterioration.\n\nThe 2025 ACC/AHA ACHD guideline considers replacement reasonable in asymptomatic repaired tetralogy with moderate or greater pulmonary valve dysfunction and at least two specified adverse markers.\n\nThis patient has RVESVi above 80 mL/m², RVEF at or below 46%, and declining exercise capacity. These concordant findings support specialist replacement assessment rather than symptom-only surveillance.\n\nUse Anatomy-Specific Criteria\n\n**Other listed markers include RV end-diastolic volume at least twice LV end-diastolic volume and LVEF at or below 50%.** Do not substitute an older isolated RVEDVi threshold for the complete named 2025 framework.\n\nSelect surgical or transcatheter replacement using RV outflow anatomy, coronary relationships, associated lesions and device suitability. Imaging and congenital expertise are essential before choosing a procedure.\n\nAssess arrhythmias, residual obstruction, branch pulmonary arteries and other causes of reduced exercise performance. These criteria belong to repaired tetralogy; they should not automatically be transferred to isolated regurgitation following treatment of pulmonary stenosis or to every RV–PA conduit. Replacement can improve loading conditions but does not eliminate lifelong congenital follow-up or all arrhythmic risk.\n\nDefer referral until RVEF falls below thirty-five percent: The specified 2025 marker is RVEF at or below 46% as part of the combined framework; waiting for a conventional advanced dysfunction boundary overlooks the existing adverse findings.\n\nContinue surveillance until the patient reports exertional symptoms: Symptom-only surveillance can overlook reduced self-selected activity; objective decline and the supplied RV markers already support replacement assessment in the named repaired-tetralogy framework.\n\nDefer referral until RV end-diastolic volume exceeds three times LV volume: The named criterion is RV end-diastolic volume at least twice LV volume, not three times; moreover, the other qualifying markers already support assessment without requiring every listed criterion.\n\nACC/AHA adult congenital heart disease guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001402",
+      "explanationHtml": "<h2>Pulmonary Regurgitation After Repaired Tetralogy Requires RV Assessment</h2><p><strong>Correct answer: D — Refer to an ACHD valve team to assess pulmonary valve replacement despite absent reported symptoms</strong></p><h3>Quantify Regurgitation and Ventricular Consequences</h3><ul><li><strong>Chronic pulmonary regurgitation after tetralogy repair can cause progressive RV dilation and dysfunction before symptoms are recognized.</strong> CMR quantifies regurgitant burden and ventricular volumes; serial exercise testing can reveal functional deterioration.<ul><li>The 2025 ACC/AHA ACHD guideline considers replacement reasonable in asymptomatic repaired tetralogy with moderate or greater pulmonary valve dysfunction and at least two specified adverse markers.</li><li>This patient has RVESVi above 80 mL/m², RVEF at or below 46%, and declining exercise capacity. These concordant findings support specialist replacement assessment rather than symptom-only surveillance.</li></ul></li></ul><h3>Use Anatomy-Specific Criteria</h3><ul><li><strong>Other listed markers include RV end-diastolic volume at least twice LV end-diastolic volume and LVEF at or below 50%.</strong> Do not substitute an older isolated RVEDVi threshold for the complete named 2025 framework.<ul><li>Select surgical or transcatheter replacement using RV outflow anatomy, coronary relationships, associated lesions and device suitability. Imaging and congenital expertise are essential before choosing a procedure.</li><li>Assess arrhythmias, residual obstruction, branch pulmonary arteries and other causes of reduced exercise performance. These criteria belong to repaired tetralogy; they should not automatically be transferred to isolated regurgitation following treatment of pulmonary stenosis or to every RV–PA conduit. Replacement can improve loading conditions but does not eliminate lifelong congenital follow-up or all arrhythmic risk.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Defer referral until RVEF falls below thirty-five percent:</strong> The specified 2025 marker is RVEF at or below 46% as part of the combined framework; waiting for a conventional advanced dysfunction boundary overlooks the existing adverse findings.</li><li><strong>B — Continue surveillance until the patient reports exertional symptoms:</strong> Symptom-only surveillance can overlook reduced self-selected activity; objective decline and the supplied RV markers already support replacement assessment in the named repaired-tetralogy framework.</li><li><strong>C — Defer referral until RV end-diastolic volume exceeds three times LV volume:</strong> The named criterion is RV end-diastolic volume at least twice LV volume, not three times; moreover, the other qualifying markers already support assessment without requiring every listed criterion.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001402\">ACC/AHA adult congenital heart disease guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Pulmonary Regurgitation After Repaired Tetralogy Requires RV Assessment",
+        "sections": [
+          {
+            "heading": "Quantify Regurgitation and Ventricular Consequences",
+            "bullets": [
+              {
+                "text": "**Chronic pulmonary regurgitation after tetralogy repair can cause progressive RV dilation and dysfunction before symptoms are recognized.** CMR quantifies regurgitant burden and ventricular volumes; serial exercise testing can reveal functional deterioration.",
+                "children": [
+                  "The 2025 ACC/AHA ACHD guideline considers replacement reasonable in asymptomatic repaired tetralogy with moderate or greater pulmonary valve dysfunction and at least two specified adverse markers.",
+                  "This patient has RVESVi above 80 mL/m², RVEF at or below 46%, and declining exercise capacity. These concordant findings support specialist replacement assessment rather than symptom-only surveillance."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Use Anatomy-Specific Criteria",
+            "bullets": [
+              {
+                "text": "**Other listed markers include RV end-diastolic volume at least twice LV end-diastolic volume and LVEF at or below 50%.** Do not substitute an older isolated RVEDVi threshold for the complete named 2025 framework.",
+                "children": [
+                  "Select surgical or transcatheter replacement using RV outflow anatomy, coronary relationships, associated lesions and device suitability. Imaging and congenital expertise are essential before choosing a procedure.",
+                  "Assess arrhythmias, residual obstruction, branch pulmonary arteries and other causes of reduced exercise performance. These criteria belong to repaired tetralogy; they should not automatically be transferred to isolated regurgitation following treatment of pulmonary stenosis or to every RV–PA conduit. Replacement can improve loading conditions but does not eliminate lifelong congenital follow-up or all arrhythmic risk."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "The specified 2025 marker is RVEF at or below 46% as part of the combined framework; waiting for a conventional advanced dysfunction boundary overlooks the existing adverse findings."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Symptom-only surveillance can overlook reduced self-selected activity; objective decline and the supplied RV markers already support replacement assessment in the named repaired-tetralogy framework."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "The named criterion is RV end-diastolic volume at least twice LV volume, not three times; moreover, the other qualifying markers already support assessment without requiring every listed criterion."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA adult congenital heart disease guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001402"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Chronic pulmonary regurgitation and RV-based replacement assessment after repaired tetralogy"
+    }
+  ],
+  "sourceDocument": "12. Adult Congenital Heart Diseases.docx",
+  "redistribution": {
+    "originalIdsPreserved": true,
+    "existingQuestions": 4,
+    "previouslyInstalledQuestions": 4,
+    "draftQuestions": 0,
+    "coverageStatus": "incomplete_requires_chapter_review",
+    "explanationStructureStatus": "original_explanations_preserved_not_rewritten"
+  }
+}

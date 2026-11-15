@@ -5,12 +5,12 @@
   "chapterOrder": 1,
   "topicOrder": 1,
   "headingIndex": 0,
-  "document": "Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations",
-  "headingText": "Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations",
-  "targetQuestions": 56,
-  "status": "chapter_authored",
+  "document": "1. Cardiovascular Physiology Hemodynamics and Investigations",
+  "headingText": "Cardiovascular Physiology Hemodynamics and Investigations",
+  "targetQuestions": 53,
+  "status": "redistributed_existing_questions",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
-  "sourceNote": "Original educational synthesis; full Harrison subscription text not accessed; independent clinician review not claimed.",
+  "sourceNote": "Existing questions redistributed by clinical focus to the canonical files/Cardiology chapters. Question content and source-review status are unchanged. This is not a claim of complete source coverage or a deep-dive explanation rewrite.",
   "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3}",
   "questions": [
     {
@@ -1013,62 +1013,6 @@
       "coverageDecision": "Interpret mixed venous saturation using oxygen delivery and extraction context"
     },
     {
-      "id": "cardiology-rebuild-01-015",
-      "topic": "Flow, oxygen transport and resistance calculations",
-      "question": "During stable catheterization on room air, systemic arterial saturation is 98%, pulmonary venous saturation 98%, representative pre-shunt mixed venous saturation 68% and pulmonary arterial saturation 83%. Assuming equal hemoglobin and negligible dissolved oxygen, what is Qp/Qs?",
-      "options": [
-        "0.5",
-        "2.0",
-        "1.0",
-        "1.5"
-      ],
-      "correctIndex": 1,
-      "questionStyle": "direct",
-      "calculation": true,
-      "explanation": "Pulmonary-to-Systemic Flow Ratio\n\nCorrect answer: 2.0\n\nApply the Two-Circuit Fick Relationship\n\n**Qp/Qs = (systemic arterial content − mixed venous content)/(pulmonary venous content − pulmonary arterial content).** Oxygen consumption cancels in the ratio.\n\nUnder the stated saturation simplification, Qp/Qs = (98 − 68)/(98 − 83) = 30/15 = ==2.0==.\n\nPulmonary flow is twice systemic flow, consistent with a net left-to-right shunt in this setting. Do not use the enriched pulmonary arterial sample as the pre-shunt mixed venous value.\n\nPreserve the Sampling Assumptions\n\n**Use representative samples from the correct locations and a stable physiologic state.** An oximetry run helps identify where a saturation step-up occurs.\n\nThe saturation shortcut assumes comparable hemoglobin and insignificant dissolved oxygen. Supplemental high-concentration oxygen can make dissolved oxygen important, requiring content-based calculation.\n\nPulmonary venous desaturation, streaming, anomalous venous return and bidirectional shunting require careful interpretation. A calculated ratio does not by itself establish operability or identify the defect. Integrate anatomy, chamber loading, pulmonary pressure and resistance with disease-specific recommendations before deciding on closure. A large shunt ratio is not permission to ignore elevated resistance, just as a ratio near one does not exclude a clinically important lesion when competing shunt directions or measurement problems are present.\n\nJACC Interventions: catheterization in adults with congenital heart disease, 2022 — https://doi.org/10.1016/j.jcin.2021.12.020",
-      "explanationHtml": "<h2>Pulmonary-to-Systemic Flow Ratio</h2><p><strong>Correct answer: B — 2.0</strong></p><h3>Apply the Two-Circuit Fick Relationship</h3><ul><li><strong>Qp/Qs = (systemic arterial content − mixed venous content)/(pulmonary venous content − pulmonary arterial content).</strong> Oxygen consumption cancels in the ratio.<ul><li>Under the stated saturation simplification, Qp/Qs = (98 − 68)/(98 − 83) = 30/15 = <mark>2.0</mark>.</li><li>Pulmonary flow is twice systemic flow, consistent with a net left-to-right shunt in this setting. Do not use the enriched pulmonary arterial sample as the pre-shunt mixed venous value.</li></ul></li></ul><h3>Preserve the Sampling Assumptions</h3><ul><li><strong>Use representative samples from the correct locations and a stable physiologic state.</strong> An oximetry run helps identify where a saturation step-up occurs.<ul><li>The saturation shortcut assumes comparable hemoglobin and insignificant dissolved oxygen. Supplemental high-concentration oxygen can make dissolved oxygen important, requiring content-based calculation.</li><li>Pulmonary venous desaturation, streaming, anomalous venous return and bidirectional shunting require careful interpretation. A calculated ratio does not by itself establish operability or identify the defect. Integrate anatomy, chamber loading, pulmonary pressure and resistance with disease-specific recommendations before deciding on closure. A large shunt ratio is not permission to ignore elevated resistance, just as a ratio near one does not exclude a clinically important lesion when competing shunt directions or measurement problems are present.</li></ul></li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jcin.2021.12.020\">JACC Interventions: catheterization in adults with congenital heart disease, 2022</a></li></ul>",
-      "explanationTeaching": {
-        "title": "Pulmonary-to-Systemic Flow Ratio",
-        "sections": [
-          {
-            "heading": "Apply the Two-Circuit Fick Relationship",
-            "bullets": [
-              {
-                "text": "**Qp/Qs = (systemic arterial content − mixed venous content)/(pulmonary venous content − pulmonary arterial content).** Oxygen consumption cancels in the ratio.",
-                "children": [
-                  "Under the stated saturation simplification, Qp/Qs = (98 − 68)/(98 − 83) = 30/15 = ==2.0==.",
-                  "Pulmonary flow is twice systemic flow, consistent with a net left-to-right shunt in this setting. Do not use the enriched pulmonary arterial sample as the pre-shunt mixed venous value."
-                ]
-              }
-            ]
-          },
-          {
-            "heading": "Preserve the Sampling Assumptions",
-            "bullets": [
-              {
-                "text": "**Use representative samples from the correct locations and a stable physiologic state.** An oximetry run helps identify where a saturation step-up occurs.",
-                "children": [
-                  "The saturation shortcut assumes comparable hemoglobin and insignificant dissolved oxygen. Supplemental high-concentration oxygen can make dissolved oxygen important, requiring content-based calculation.",
-                  "Pulmonary venous desaturation, streaming, anomalous venous return and bidirectional shunting require careful interpretation. A calculated ratio does not by itself establish operability or identify the defect. Integrate anatomy, chamber loading, pulmonary pressure and resistance with disease-specific recommendations before deciding on closure. A large shunt ratio is not permission to ignore elevated resistance, just as a ratio near one does not exclude a clinically important lesion when competing shunt directions or measurement problems are present."
-                ]
-              }
-            ]
-          }
-        ],
-        "tables": [],
-        "otherOptions": []
-      },
-      "references": [
-        {
-          "label": "JACC Interventions: catheterization in adults with congenital heart disease, 2022",
-          "url": "https://doi.org/10.1016/j.jcin.2021.12.020"
-        }
-      ],
-      "sourceCheckedAt": "2026-11-15",
-      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Calculate pulmonary-to-systemic flow ratio from correctly chosen oxygen samples"
-    },
-    {
       "id": "cardiology-rebuild-01-016",
       "topic": "Flow, oxygen transport and resistance calculations",
       "question": "An obese patient undergoing advanced heart-failure assessment has an indirect Fick output substantially higher than reproducible thermodilution measurements. Oxygen consumption was assumed from a formula. No shunt is identified. Which next approach best addresses the discrepancy?",
@@ -1286,110 +1230,6 @@
       "sourceCheckedAt": "2026-11-15",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Recognize an inadequate wedge tracing and confirm true occlusion"
-    },
-    {
-      "id": "cardiology-rebuild-01-019",
-      "topic": "Right-heart catheterization and pressure waveforms",
-      "question": "A patient with complete AV block has intermittent very large right atrial pressure waves aligned with P waves that occur during ventricular systole. Which mechanism explains these waves?",
-      "options": [
-        "Rapid passive right atrial emptying after tricuspid opening",
-        "Systolic regurgitant flow through an incompetent tricuspid valve",
-        "Atrial contraction into a persistently stiff but accessible right ventricle",
-        "Atrial contraction against a closed tricuspid valve"
-      ],
-      "correctIndex": 3,
-      "questionStyle": "clinical_scenario",
-      "calculation": false,
-      "explanation": "Cannon a Waves and Atrioventricular Timing\n\nCorrect answer: Atrial contraction against a closed tricuspid valve\n\nIdentify the Event Before Naming the Wave\n\n**The a wave represents atrial contraction.** When contraction occurs against a closed tricuspid valve, a large cannon wave can result.\n\nComplete AV block permits changing atrial–ventricular timing, so giant waves may be intermittent. Other rhythms can also produce unfavorable timing; the wave alone does not establish complete heart block.\n\nDistinguish these waves from consistently prominent a waves caused by resistance to atrial emptying and from systolic regurgitant v waves.\n\nCorrelate the Pressure Trace With the ECG\n\n**Use simultaneous rhythm and waveform timing**, rather than identifying every tall wave by amplitude alone.\n\nThe x descent relates to atrial relaxation and systolic annular motion; the y descent reflects atrial emptying after the tricuspid valve opens.\n\nAssess the patient’s rate, perfusion and rhythm independently of the waveform label. A conduction disorder may require urgent treatment, but a cannon wave is a mechanistic clue rather than a complete management prescription. Catheter motion and artifact should be excluded when a pressure deflection lacks a plausible relationship to the ECG. Document timing and reproducibility so that subsequent clinicians can distinguish a genuine hemodynamic sign from a nonspecific description of prominent venous pulsation.\n\nWave or descent | Principal event | Useful distinction\n\na wave | Atrial contraction | Prominent with resistance to atrial emptying\n\nCannon a wave | Atrial contraction against closed tricuspid valve | Correlate with AV timing\n\nv wave | Atrial filling during ventricular systole | Large with TR on right side; left-sided size also depends on compliance\n\nx descent | Atrial relaxation and systolic annular displacement | Interpret in rhythm and disease context\n\ny descent | Emptying after AV valve opening | Rapid early ventricular filling\n\nRapid passive right atrial emptying after tricuspid opening: Passive emptying generates the y descent, a fall in pressure after valve opening rather than a large P-linked pressure rise during ventricular systole.\n\nSystolic regurgitant flow through an incompetent tricuspid valve: Tricuspid regurgitation produces prominent systolic v or fused c-v waves; the intermittent P-linked waves during AV dissociation instead identify cannon a waves.\n\nAtrial contraction into a persistently stiff but accessible right ventricle: Poor RV compliance can produce prominent a waves on each appropriately timed atrial contraction, whereas the intermittent giant waves here track unfavorable AV timing.\n\nMerck Manual professional: cardiovascular examination — https://www.merckmanuals.com/en-ca/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiovascular-examination",
-      "explanationHtml": "<h2>Cannon a Waves and Atrioventricular Timing</h2><p><strong>Correct answer: D — Atrial contraction against a closed tricuspid valve</strong></p><h3>Identify the Event Before Naming the Wave</h3><ul><li><strong>The a wave represents atrial contraction.</strong> When contraction occurs against a closed tricuspid valve, a large cannon wave can result.<ul><li>Complete AV block permits changing atrial–ventricular timing, so giant waves may be intermittent. Other rhythms can also produce unfavorable timing; the wave alone does not establish complete heart block.</li><li>Distinguish these waves from consistently prominent a waves caused by resistance to atrial emptying and from systolic regurgitant v waves.</li></ul></li></ul><h3>Correlate the Pressure Trace With the ECG</h3><ul><li><strong>Use simultaneous rhythm and waveform timing</strong>, rather than identifying every tall wave by amplitude alone.<ul><li>The x descent relates to atrial relaxation and systolic annular motion; the y descent reflects atrial emptying after the tricuspid valve opens.</li><li>Assess the patient’s rate, perfusion and rhythm independently of the waveform label. A conduction disorder may require urgent treatment, but a cannon wave is a mechanistic clue rather than a complete management prescription. Catheter motion and artifact should be excluded when a pressure deflection lacks a plausible relationship to the ECG. Document timing and reproducibility so that subsequent clinicians can distinguish a genuine hemodynamic sign from a nonspecific description of prominent venous pulsation.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Wave or descent</th><th>Principal event</th><th>Useful distinction</th></tr></thead><tbody><tr><td>a wave</td><td>Atrial contraction</td><td>Prominent with resistance to atrial emptying</td></tr><tr><td>Cannon a wave</td><td>Atrial contraction against closed tricuspid valve</td><td>Correlate with AV timing</td></tr><tr><td>v wave</td><td>Atrial filling during ventricular systole</td><td>Large with TR on right side; left-sided size also depends on compliance</td></tr><tr><td>x descent</td><td>Atrial relaxation and systolic annular displacement</td><td>Interpret in rhythm and disease context</td></tr><tr><td>y descent</td><td>Emptying after AV valve opening</td><td>Rapid early ventricular filling</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — Rapid passive right atrial emptying after tricuspid opening:</strong> Passive emptying generates the y descent, a fall in pressure after valve opening rather than a large P-linked pressure rise during ventricular systole.</li><li><strong>B — Systolic regurgitant flow through an incompetent tricuspid valve:</strong> Tricuspid regurgitation produces prominent systolic v or fused c-v waves; the intermittent P-linked waves during AV dissociation instead identify cannon a waves.</li><li><strong>C — Atrial contraction into a persistently stiff but accessible right ventricle:</strong> Poor RV compliance can produce prominent a waves on each appropriately timed atrial contraction, whereas the intermittent giant waves here track unfavorable AV timing.</li></ul><h3>References</h3><ul><li><a href=\"https://www.merckmanuals.com/en-ca/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiovascular-examination\">Merck Manual professional: cardiovascular examination</a></li></ul>",
-      "explanationTeaching": {
-        "title": "Cannon a Waves and Atrioventricular Timing",
-        "sections": [
-          {
-            "heading": "Identify the Event Before Naming the Wave",
-            "bullets": [
-              {
-                "text": "**The a wave represents atrial contraction.** When contraction occurs against a closed tricuspid valve, a large cannon wave can result.",
-                "children": [
-                  "Complete AV block permits changing atrial–ventricular timing, so giant waves may be intermittent. Other rhythms can also produce unfavorable timing; the wave alone does not establish complete heart block.",
-                  "Distinguish these waves from consistently prominent a waves caused by resistance to atrial emptying and from systolic regurgitant v waves."
-                ]
-              }
-            ]
-          },
-          {
-            "heading": "Correlate the Pressure Trace With the ECG",
-            "bullets": [
-              {
-                "text": "**Use simultaneous rhythm and waveform timing**, rather than identifying every tall wave by amplitude alone.",
-                "children": [
-                  "The x descent relates to atrial relaxation and systolic annular motion; the y descent reflects atrial emptying after the tricuspid valve opens.",
-                  "Assess the patient’s rate, perfusion and rhythm independently of the waveform label. A conduction disorder may require urgent treatment, but a cannon wave is a mechanistic clue rather than a complete management prescription. Catheter motion and artifact should be excluded when a pressure deflection lacks a plausible relationship to the ECG. Document timing and reproducibility so that subsequent clinicians can distinguish a genuine hemodynamic sign from a nonspecific description of prominent venous pulsation."
-                ]
-              }
-            ]
-          }
-        ],
-        "tables": [
-          {
-            "headers": [
-              "Wave or descent",
-              "Principal event",
-              "Useful distinction"
-            ],
-            "rows": [
-              [
-                "a wave",
-                "Atrial contraction",
-                "Prominent with resistance to atrial emptying"
-              ],
-              [
-                "Cannon a wave",
-                "Atrial contraction against closed tricuspid valve",
-                "Correlate with AV timing"
-              ],
-              [
-                "v wave",
-                "Atrial filling during ventricular systole",
-                "Large with TR on right side; left-sided size also depends on compliance"
-              ],
-              [
-                "x descent",
-                "Atrial relaxation and systolic annular displacement",
-                "Interpret in rhythm and disease context"
-              ],
-              [
-                "y descent",
-                "Emptying after AV valve opening",
-                "Rapid early ventricular filling"
-              ]
-            ]
-          }
-        ],
-        "otherOptions": [
-          {
-            "optionIndex": 0,
-            "explanation": "Passive emptying generates the y descent, a fall in pressure after valve opening rather than a large P-linked pressure rise during ventricular systole."
-          },
-          {
-            "optionIndex": 1,
-            "explanation": "Tricuspid regurgitation produces prominent systolic v or fused c-v waves; the intermittent P-linked waves during AV dissociation instead identify cannon a waves."
-          },
-          {
-            "optionIndex": 2,
-            "explanation": "Poor RV compliance can produce prominent a waves on each appropriately timed atrial contraction, whereas the intermittent giant waves here track unfavorable AV timing."
-          }
-        ]
-      },
-      "references": [
-        {
-          "label": "Merck Manual professional: cardiovascular examination",
-          "url": "https://www.merckmanuals.com/en-ca/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiovascular-examination"
-        }
-      ],
-      "sourceCheckedAt": "2026-11-15",
-      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Interpret prominent a waves and cannon a waves using rhythm context"
     },
     {
       "id": "cardiology-rebuild-01-020",
@@ -3467,79 +3307,6 @@
       "coverageDecision": "Select imaging for suspected thrombus when routine echo is nondiagnostic"
     },
     {
-      "id": "cardiology-rebuild-01-048",
-      "topic": "CT, CMR and multimodality selection",
-      "question": "An adult with a suspected atrial-level left-to-right shunt has RV enlargement that is difficult to quantify by TTE. The clinical team needs reproducible RV volumes and pulmonary-to-systemic flow assessment. Which examination most directly combines these measurements?",
-      "options": [
-        "TEE septal imaging with a contrast shunt study",
-        "Three-dimensional TTE ventricular volumetry with repeat Doppler flow estimates",
-        "Cine CMR volumetry with anatomy-specific phase-contrast flow assessment",
-        "Right-heart catheterization with an oximetry run"
-      ],
-      "correctIndex": 2,
-      "questionStyle": "clinical_scenario",
-      "calculation": false,
-      "explanation": "CMR Shunt Quantification and Right Ventricular Volumes\n\nCorrect answer: Cine CMR volumetry with anatomy-specific phase-contrast flow assessment\n\nCombine Chamber Response With Flow\n\n**Cine CMR quantifies ventricular volumes and EF**, while velocity-encoded phase-contrast imaging measures flow through appropriately selected vessels.\n\nIn a simple atrial-level shunt, pulmonary and systemic flow measurements can quantify Qp/Qs, while RV volume documents the chamber consequence.\n\nIndex volumes to body size and report the acquisition and contouring convention for meaningful comparison over time.\n\nPlan Measurements for the Actual Anatomy\n\n**Flow sites must match the lesion.** A simple main-pulmonary-artery to ascending-aortic comparison is not universally valid for every congenital connection or collateral pathway.\n\nCheck velocity encoding, plane alignment, background phase offsets and internal flow consistency. Regurgitation and additional shunts complicate ventricular stroke-volume comparisons.\n\nAn elevated Qp/Qs or enlarged RV does not independently establish suitability for closure. Integrate anatomy, symptoms, pulmonary pressures and resistance under disease-specific guidance. CMR does not replace invasive pressure assessment when operability depends on it. A useful report states net forward flows and the assumptions used rather than presenting an unexplained ratio. When different flow or volume estimates disagree, review the anatomy and acquisition before attributing the discrepancy to a new lesion.\n\nTEE septal imaging with a contrast shunt study: TEE can define the septal defect and contrast passage, but that primarily anatomic assessment does not replace the requested comprehensive RV volumes and quantitative pulmonary/systemic flows.\n\nThree-dimensional TTE ventricular volumetry with repeat Doppler flow estimates: Three-dimensional echo can improve RV measurement when image quality is adequate, but the stated difficult transthoracic quantification favors CMR for reproducible volumes and integrated flows.\n\nRight-heart catheterization with an oximetry run: Catheterization can quantify shunting and is important for pressure or resistance questions, but does not directly provide the reproducible RV volumetry requested alongside flow assessment.\n\nSCMR reporting guideline for congenital heart disease, 2024 — https://www.journalofcmr.com/article/S1097-6647%2824%2901089-5/fulltext\n\nSCMR standardized CMR interpretation and post-processing, 2020 update — https://pmc.ncbi.nlm.nih.gov/articles/PMC7066763/",
-      "explanationHtml": "<h2>CMR Shunt Quantification and Right Ventricular Volumes</h2><p><strong>Correct answer: C — Cine CMR volumetry with anatomy-specific phase-contrast flow assessment</strong></p><h3>Combine Chamber Response With Flow</h3><ul><li><strong>Cine CMR quantifies ventricular volumes and EF</strong>, while velocity-encoded phase-contrast imaging measures flow through appropriately selected vessels.<ul><li>In a simple atrial-level shunt, pulmonary and systemic flow measurements can quantify Qp/Qs, while RV volume documents the chamber consequence.</li><li>Index volumes to body size and report the acquisition and contouring convention for meaningful comparison over time.</li></ul></li></ul><h3>Plan Measurements for the Actual Anatomy</h3><ul><li><strong>Flow sites must match the lesion.</strong> A simple main-pulmonary-artery to ascending-aortic comparison is not universally valid for every congenital connection or collateral pathway.<ul><li>Check velocity encoding, plane alignment, background phase offsets and internal flow consistency. Regurgitation and additional shunts complicate ventricular stroke-volume comparisons.</li><li>An elevated Qp/Qs or enlarged RV does not independently establish suitability for closure. Integrate anatomy, symptoms, pulmonary pressures and resistance under disease-specific guidance. CMR does not replace invasive pressure assessment when operability depends on it. A useful report states net forward flows and the assumptions used rather than presenting an unexplained ratio. When different flow or volume estimates disagree, review the anatomy and acquisition before attributing the discrepancy to a new lesion.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — TEE septal imaging with a contrast shunt study:</strong> TEE can define the septal defect and contrast passage, but that primarily anatomic assessment does not replace the requested comprehensive RV volumes and quantitative pulmonary/systemic flows.</li><li><strong>B — Three-dimensional TTE ventricular volumetry with repeat Doppler flow estimates:</strong> Three-dimensional echo can improve RV measurement when image quality is adequate, but the stated difficult transthoracic quantification favors CMR for reproducible volumes and integrated flows.</li><li><strong>D — Right-heart catheterization with an oximetry run:</strong> Catheterization can quantify shunting and is important for pressure or resistance questions, but does not directly provide the reproducible RV volumetry requested alongside flow assessment.</li></ul><h3>References</h3><ul><li><a href=\"https://www.journalofcmr.com/article/S1097-6647%2824%2901089-5/fulltext\">SCMR reporting guideline for congenital heart disease, 2024</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC7066763/\">SCMR standardized CMR interpretation and post-processing, 2020 update</a></li></ul>",
-      "explanationTeaching": {
-        "title": "CMR Shunt Quantification and Right Ventricular Volumes",
-        "sections": [
-          {
-            "heading": "Combine Chamber Response With Flow",
-            "bullets": [
-              {
-                "text": "**Cine CMR quantifies ventricular volumes and EF**, while velocity-encoded phase-contrast imaging measures flow through appropriately selected vessels.",
-                "children": [
-                  "In a simple atrial-level shunt, pulmonary and systemic flow measurements can quantify Qp/Qs, while RV volume documents the chamber consequence.",
-                  "Index volumes to body size and report the acquisition and contouring convention for meaningful comparison over time."
-                ]
-              }
-            ]
-          },
-          {
-            "heading": "Plan Measurements for the Actual Anatomy",
-            "bullets": [
-              {
-                "text": "**Flow sites must match the lesion.** A simple main-pulmonary-artery to ascending-aortic comparison is not universally valid for every congenital connection or collateral pathway.",
-                "children": [
-                  "Check velocity encoding, plane alignment, background phase offsets and internal flow consistency. Regurgitation and additional shunts complicate ventricular stroke-volume comparisons.",
-                  "An elevated Qp/Qs or enlarged RV does not independently establish suitability for closure. Integrate anatomy, symptoms, pulmonary pressures and resistance under disease-specific guidance. CMR does not replace invasive pressure assessment when operability depends on it. A useful report states net forward flows and the assumptions used rather than presenting an unexplained ratio. When different flow or volume estimates disagree, review the anatomy and acquisition before attributing the discrepancy to a new lesion."
-                ]
-              }
-            ]
-          }
-        ],
-        "tables": [],
-        "otherOptions": [
-          {
-            "optionIndex": 0,
-            "explanation": "TEE can define the septal defect and contrast passage, but that primarily anatomic assessment does not replace the requested comprehensive RV volumes and quantitative pulmonary/systemic flows."
-          },
-          {
-            "optionIndex": 1,
-            "explanation": "Three-dimensional echo can improve RV measurement when image quality is adequate, but the stated difficult transthoracic quantification favors CMR for reproducible volumes and integrated flows."
-          },
-          {
-            "optionIndex": 3,
-            "explanation": "Catheterization can quantify shunting and is important for pressure or resistance questions, but does not directly provide the reproducible RV volumetry requested alongside flow assessment."
-          }
-        ]
-      },
-      "references": [
-        {
-          "label": "SCMR reporting guideline for congenital heart disease, 2024",
-          "url": "https://www.journalofcmr.com/article/S1097-6647%2824%2901089-5/fulltext"
-        },
-        {
-          "label": "SCMR standardized CMR interpretation and post-processing, 2020 update",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7066763/"
-        }
-      ],
-      "sourceCheckedAt": "2026-11-15",
-      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Choose shunt quantification and RV volume assessment with CMR"
-    },
-    {
       "id": "cardiology-rebuild-01-049",
       "topic": "CT, CMR and multimodality selection",
       "question": "CMR could resolve a management-relevant tissue question in a patient with a non-MR-conditional pacemaker system. Which approach best reflects contemporary specialist guidance?",
@@ -4111,5 +3878,14 @@
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Integrate discordant investigations and reassess technical validity before escalation"
     }
-  ]
+  ],
+  "sourceDocument": "1. Cardiovascular Physiology Hemodynamics and Investigations.docx",
+  "redistribution": {
+    "originalIdsPreserved": true,
+    "existingQuestions": 53,
+    "previouslyInstalledQuestions": 53,
+    "draftQuestions": 0,
+    "coverageStatus": "incomplete_requires_chapter_review",
+    "explanationStructureStatus": "original_explanations_preserved_not_rewritten"
+  }
 }

@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_10_Infective_Endocarditis",
+  "currentChapter": "Cardiology: canonical 15-chapter redistribution; coverage and explanation revision remain",
   "chapters": [
     {
       "subject": "Neurology",
@@ -473,286 +473,242 @@
     {
       "subject": "Cardiology",
       "chapter": 1,
-      "document": "Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations",
-      "status": "installed_verified",
-      "file": "Cardiology/Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations.json",
-      "validation": {
-        "questions": 56,
-        "answerDistribution": {
-          "A": 14,
-          "B": 14,
-          "C": 14,
-          "D": 14
-        },
-        "minimumExplanationWords": 207,
-        "distractorRationales": 138,
-        "questionStyles": {
-          "clinical_scenario": 43,
-          "direct": 13
-        },
-        "status": "passed"
-      },
-      "installedSha256": "b3bbdff43a1ad22fc83cb9243c0b89b7a3d7edda3a1a6b586572d81ce6f92e8a",
-      "coverageReview": "mapped_and_cross_checked",
-      "coverageMap": "Cardiology/Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations.coverage.json"
+      "document": "1. Cardiovascular Physiology Hemodynamics and Investigations",
+      "file": "Cardiology/1. Cardiovascular Physiology Hemodynamics and Investigations.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 53,
+      "previouslyInstalledQuestions": 53,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 53,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 2,
-      "document": "Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction",
-      "status": "installed_verified",
-      "file": "Cardiology/Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction.json",
-      "validation": {
-        "questions": 66,
-        "answerDistribution": {
-          "A": 17,
-          "B": 17,
-          "C": 16,
-          "D": 16
-        },
-        "minimumExplanationWords": 283,
-        "distractorRationales": 198,
-        "questionStyles": {
-          "clinical_scenario": 60,
-          "direct": 6
-        },
-        "status": "passed"
-      },
-      "installedSha256": "fddcfdf73d0122c78fb83eef60ddd8a891d3d587ce75bc457b3ff752132fa0b2",
-      "coverageMap": "Cardiology/Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction.coverage.json",
-      "coverageReview": "mapped_and_cross_checked"
+      "document": "2. Coronary Artery Disease ACS and Myocardial Infarction",
+      "file": "Cardiology/2. Coronary Artery Disease ACS and Myocardial Infarction.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 36,
+      "previouslyInstalledQuestions": 36,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 36,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 3,
-      "document": "Chapter_03_Valvular_Heart_Diseases",
-      "status": "installed_verified",
-      "file": "Cardiology/Chapter_03_Valvular_Heart_Diseases.json",
-      "validation": {
-        "questions": 67,
-        "answerDistribution": {
-          "A": 17,
-          "B": 17,
-          "C": 17,
-          "D": 16
-        },
-        "minimumExplanationWords": 289,
-        "distractorRationales": 201,
-        "questionStyles": {
-          "clinical_scenario": 63,
-          "direct": 4
-        },
-        "status": "passed"
-      },
-      "plannedQuestions": 67,
-      "authoredQuestions": 67,
-      "installedSha256": "44c2859f26f08e12263b02b901e1d412f0677b7aefbd0d11806d6a2c0cf58a49",
-      "coverageMap": "Cardiology/Chapter_03_Valvular_Heart_Diseases.coverage.json",
-      "coverageReview": "mapped_and_cross_checked"
+      "document": "3. Valvular Heart Diseases",
+      "file": "Cardiology/3. Valvular Heart Diseases.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 54,
+      "previouslyInstalledQuestions": 54,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 54,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 4,
-      "document": "Chapter_04_Heart_Failure_and_Cardiogenic_Shock",
-      "status": "installed_verified",
-      "file": "Cardiology/Chapter_04_Heart_Failure_and_Cardiogenic_Shock.json",
-      "validation": {
-        "questions": 65,
-        "answerDistribution": {
-          "A": 17,
-          "B": 16,
-          "C": 16,
-          "D": 16
-        },
-        "minimumExplanationWords": 255,
-        "distractorRationales": 192,
-        "questionStyles": {
-          "direct": 10,
-          "clinical_scenario": 55
-        },
-        "status": "passed"
-      },
-      "authoredQuestions": 65,
-      "plannedQuestions": 65,
-      "installedSha256": "c5ccff3336bf995fd5f0be6e1a77efe0e1523f8a04abf2c4d5bfaa6fc37f63d3",
-      "coverageMap": "Cardiology/Chapter_04_Heart_Failure_and_Cardiogenic_Shock.coverage.json",
-      "coverageReview": "mapped_and_cross_checked"
+      "document": "4. Heart Failure and Cardiogenic Shock",
+      "file": "Cardiology/4. Heart Failure and Cardiogenic Shock.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 41,
+      "previouslyInstalledQuestions": 41,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 41,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 5,
-      "document": "Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers",
-      "status": "installed_verified",
-      "file": "Cardiology/Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers.json",
-      "validation": {
-        "questions": 50,
-        "answerDistribution": {
-          "A": 13,
-          "B": 13,
-          "C": 12,
-          "D": 12
-        },
-        "minimumExplanationWords": 332,
-        "distractorRationales": 150,
-        "questionStyles": {
-          "clinical_scenario": 47,
-          "direct": 3
-        },
-        "status": "passed"
-      },
-      "authoredQuestions": 50,
-      "plannedQuestions": 50,
-      "installedSha256": "a20c4eb59c8ec918791ed1f50e036b69b9494bf859f0d68541be3f98d4a7177f",
-      "coverageMap": "Cardiology/Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers.coverage.json",
-      "coverageReview": "mapped_and_cross_checked"
+      "document": "5. Bradyarrhythmias Conduction Disorders and Pacemakers",
+      "file": "Cardiology/5. Bradyarrhythmias Conduction Disorders and Pacemakers.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 36,
+      "previouslyInstalledQuestions": 36,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 36,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 6,
-      "document": "Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation",
-      "status": "installed_verified",
-      "file": "Cardiology/Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation.json",
-      "validation": {
-        "questions": 65,
-        "answerDistribution": {
-          "A": 17,
-          "B": 16,
-          "C": 16,
-          "D": 16
-        },
-        "minimumExplanationWords": 351,
-        "distractorRationales": 195,
-        "questionStyles": {
-          "clinical_scenario": 61,
-          "direct": 4
-        },
-        "status": "passed"
-      },
-      "authoredQuestions": 65,
-      "plannedQuestions": 65,
-      "installedSha256": "bb7acbe66fc54ce20a9c0648afbbce41c840e3cf6640a20925e1059f50b8cd9e",
-      "coverageMap": "Cardiology/Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation.coverage.json",
-      "coverageReview": "mapped_and_cross_checked"
+      "document": "6. Supraventricular Tachyarrhythmias and Atrial Fibrillation",
+      "file": "Cardiology/6. Supraventricular Tachyarrhythmias and Atrial Fibrillation.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 37,
+      "previouslyInstalledQuestions": 37,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 37,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 7,
-      "document": "Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD",
-      "status": "installed_verified",
-      "file": "Cardiology/Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD.json",
-      "validation": {
-        "questions": 57,
-        "answerDistribution": {
-          "A": 15,
-          "B": 14,
-          "C": 14,
-          "D": 14
-        },
-        "minimumExplanationWords": 372,
-        "distractorRationales": 171,
-        "questionStyles": {
-          "clinical_scenario": 48,
-          "direct": 9
-        },
-        "status": "passed"
-      },
-      "authoredQuestions": 57,
-      "plannedQuestions": 57,
-      "installedSha256": "bbd8d10669450943a713ef88825b3dd2dedbc75ac8fbc5e7dd775b6fc78333a0",
-      "coverageMap": "Cardiology/Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD.coverage.json",
-      "coverageReview": "mapped_and_cross_checked"
+      "document": "7. Ventricular Arrhythmias Sudden Cardiac Death and ICD",
+      "file": "Cardiology/7. Ventricular Arrhythmias Sudden Cardiac Death and ICD.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 37,
+      "previouslyInstalledQuestions": 37,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 37,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 8,
-      "document": "Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases",
-      "status": "installed_verified",
-      "file": "Cardiology/Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases.json",
-      "validation": {
-        "questions": 61,
-        "answerDistribution": {
-          "A": 16,
-          "B": 15,
-          "C": 15,
-          "D": 15
-        },
-        "minimumExplanationWords": 335,
-        "distractorRationales": 183,
-        "questionStyles": {
-          "clinical_scenario": 52,
-          "direct": 9
-        },
-        "status": "passed"
-      },
-      "authoredQuestions": 61,
-      "plannedQuestions": 61,
-      "installedSha256": "62bc7e8c76426d0ef581697bee347519b86b50479da3d8f13b4db161318d5e61",
-      "coverageMap": "Cardiology/Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases.coverage.json",
-      "coverageReview": "mapped_and_cross_checked"
+      "document": "8. Cardiomyopathies Myocarditis and Genetic Cardiac Diseases",
+      "file": "Cardiology/8. Cardiomyopathies Myocarditis and Genetic Cardiac Diseases.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 56,
+      "previouslyInstalledQuestions": 56,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 56,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 9,
-      "document": "Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade",
-      "status": "installed_verified",
-      "file": "Cardiology/Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade.json",
-      "validation": {
-        "questions": 54,
-        "answerDistribution": {
-          "A": 14,
-          "B": 14,
-          "C": 13,
-          "D": 13
-        },
-        "minimumExplanationWords": 352,
-        "distractorRationales": 162,
-        "questionStyles": {
-          "clinical_scenario": 41,
-          "direct": 13
-        },
-        "status": "passed"
-      },
-      "authoredQuestions": 54,
-      "plannedQuestions": 54,
-      "installedSha256": "805ad7809d19bd2ea573dcdb71bdc5b72f5939cf0d51d1ce27e6b7c321acb237",
-      "coverageMap": "Cardiology/Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade.coverage.json",
-      "coverageReview": "mapped_and_cross_checked"
+      "document": "9. Pericardial Diseases and Cardiac Tamponade",
+      "file": "Cardiology/9. Pericardial Diseases and Cardiac Tamponade.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 45,
+      "previouslyInstalledQuestions": 45,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 45,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 10,
-      "document": "Chapter_10_Infective_Endocarditis",
-      "status": "pending"
+      "document": "10. Infective Endocarditis",
+      "file": "Cardiology/10. Infective Endocarditis.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 66,
+      "previouslyInstalledQuestions": 1,
+      "draftQuestions": 65,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 1,
+      "draftQuestionsWithheld": 65,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 11,
-      "document": "Chapter_11_Systemic_Hypertension_and_Hypertensive_Emergencies",
-      "status": "pending"
+      "document": "11. Systemic Hypertension and Hypertensive Emergencies",
+      "file": "Cardiology/11. Systemic Hypertension and Hypertensive Emergencies.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 9,
+      "previouslyInstalledQuestions": 0,
+      "draftQuestions": 9,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 0,
+      "draftQuestionsWithheld": 9,
+      "runtimeStatus": "draft_not_installed"
     },
     {
       "subject": "Cardiology",
       "chapter": 12,
-      "document": "Chapter_12_Adult_Congenital_Heart_Diseases",
-      "status": "pending"
+      "document": "12. Adult Congenital Heart Diseases",
+      "file": "Cardiology/12. Adult Congenital Heart Diseases.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 4,
+      "previouslyInstalledQuestions": 4,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 4,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 13,
-      "document": "Chapter_13_Aortic_Diseases_and_Peripheral_Vascular_Diseases",
-      "status": "pending"
+      "document": "13. Aortic Diseases and Peripheral Vascular Diseases",
+      "file": "Cardiology/13. Aortic Diseases and Peripheral Vascular Diseases.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 3,
+      "previouslyInstalledQuestions": 3,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 3,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 14,
-      "document": "Chapter_14_Advanced_ECG_Interpretation_and_Electrophysiology",
-      "status": "pending"
+      "document": "14. Advanced ECG Interpretation and Electrophysiology",
+      "file": "Cardiology/14. Advanced ECG Interpretation and Electrophysiology.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 45,
+      "previouslyInstalledQuestions": 45,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 45,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Cardiology",
       "chapter": 15,
-      "document": "Chapter_15_Cardiovascular_Pharmacology_Antithrombotic_Therapy_and_Landmark_Trials",
-      "status": "pending"
+      "document": "15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials",
+      "file": "Cardiology/15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials.json",
+      "status": "redistributed_coverage_incomplete",
+      "originalIdsPreserved": true,
+      "existingQuestions": 93,
+      "previouslyInstalledQuestions": 93,
+      "draftQuestions": 0,
+      "coverageStatus": "incomplete_requires_chapter_review",
+      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "installedQuestions": 93,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_redistributed_subset"
     },
     {
       "subject": "Rheumatology",
@@ -1354,5 +1310,26 @@
       "document": "04. Diagnostic Tests, Evidence-Based Medicine & Meta-analysis",
       "status": "pending"
     }
-  ]
+  ],
+  "userContinuationInstruction": {
+    "instruction": "Complete all Cardiology chapters, then pause before Rheumatology.",
+    "subjectToFinish": "Cardiology",
+    "pauseAfterSubjectComplete": true,
+    "status": "awaiting_cardiology_completion",
+    "cardiologyChaptersPlanned": 15
+  },
+  "sourceFollowUp": [
+    {
+      "subject": "Cardiology",
+      "chapter": 10,
+      "reason": "AHA October 2026 correction notice not publicly retrievable; chapter remains uninstalled pending source check."
+    }
+  ],
+  "cardiologyRedistribution": {
+    "report": "Cardiology/audit/redistribution-report.json",
+    "existingQuestions": 615,
+    "sourceChapters": 15,
+    "fullCoverage": false,
+    "draftQuestionsNotInstalled": 74
+  }
 }

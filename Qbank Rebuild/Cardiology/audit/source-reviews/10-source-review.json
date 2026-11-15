@@ -1,0 +1,343 @@
+{
+  "chapter": 10,
+  "status": "draft_in_progress",
+  "installed": false,
+  "authoredQuestions": 65,
+  "plannedQuestions": 65,
+  "scopeNote": "Provisional coverage-driven decisions spanning suspicion, diagnostic criteria, imaging, culture-negative disease, pathogen treatment, selected transition strategies, surgery, embolic complications, devices and prevention. Not official examination weights.",
+  "sourceChecks": [
+    {
+      "source": "ESC 2023 endocarditis guideline",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "questions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "checked": [
+        "Stable suspected-case collection: at least three pre-antibiotic sets at roughly thirty-minute intervals.",
+        "TTE/TEE selection and repeat assessment depend on suspicion and anatomy.",
+        "Persistent bacteremia requires treatment and source reassessment; seventy-two hours does not automatically equal a formal surgical-persistence threshold."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Duke–ISCVID 2023 criteria and AHA 2025 BCNE statement",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10681650/",
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "questions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "checked": [
+        "Formal Duke culture-count criteria differ from recommended sampling practice.",
+        "Diagnostic revision removes older complex timing/separate-venipuncture requirements; adequate aseptic collection remains necessary.",
+        "Prior antibiotic exposure is a major reason for culture-negative disease."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Surviving Sepsis Campaign 2026",
+      "urls": [
+        "https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026",
+        "https://www.sccm.org/SCCM/media/SCCM/PDFs/SSC-Adult-Antibiotic-Timing-Framework-Infographic-2026.pdf"
+      ],
+      "questions": [
+        3
+      ],
+      "checked": [
+        "Current 2026 guidance, rather than relying on the older 2021 document, checked for prompt cultures and immediate antibiotics ideally within one hour in probable/definite sepsis or septic shock.",
+        "Stable IE collection spacing must not become an untreated delay in shock."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Duke–ISCVID 2023 primary criteria, Tables 1–2",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10681650/"
+      ],
+      "questions": [
+        5,
+        6
+      ],
+      "checks": [
+        "Clinical definite: two major, one major plus three minor, or five minor; possible minimum combinations distinct from definite.",
+        "Repeated cultures do not multiply a microbiological major category; fever, predisposition and vascular phenomena are distinct minor domains."
+      ],
+      "reviewStatus": "Source checked during drafting; complete generated-chapter editorial review pending"
+    },
+    {
+      "source": "Duke–ISCVID 2023 primary criteria and ESC 2023 diagnostic guidance",
+      "urls": [
+        "https://doi.org/10.1093/cid/ciad271",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "questions": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "checks": [
+        "E. faecalis typical independently of source; additional typical pathogens with prosthetic material; blood molecular and method-specific serological major criteria.",
+        "Early prosthetic FDG uptake classification differs between the named frameworks; direct surgical observation is a conditional clinical major criterion, distinct from pathological confirmation.",
+        "TTE/TEE sequence, repeat imaging after five to seven days if suspicion remains high, and CT for inconclusive periannular anatomy; PET limitations and extracardiac assessment."
+      ],
+      "reviewStatus": "Source checked during drafting; full generated clinical editorial review pending"
+    },
+    {
+      "source": "AHA 2025 BCNE scientific statement and primary Whipple clinical series",
+      "urls": [
+        "https://doi.org/10.1161/JAHA.124.040218",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3837638/"
+      ],
+      "questions": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "checks": [
+        "Distinguish pretreated ordinary pathogens from untreated nonroutine pathogens.",
+        "Expand directed investigation after approximately 72 hours of negative cultures; select tests by epidemiology and clinical setting.",
+        "Coxiella, Bartonella and Whipple diagnostic clues; complementary operative tissue investigations and cautious molecular interpretation."
+      ],
+      "accessNote": "AHA full-text and PDF direct opens encountered recaptcha/403; official AHA summary and indexed primary-statement passages were accessible. No claim of unrestricted full-text access.",
+      "reviewStatus": "Draft source checks; final complete-chapter review pending"
+    },
+    {
+      "source": "CDC current Q fever clinical guidance",
+      "urls": [
+        "https://www.cdc.gov/q-fever/hcp/clinical-guidance/index.html"
+      ],
+      "questions": [
+        20
+      ],
+      "checks": [
+        "Adults with endocarditis or vascular infection: doxycycline 100 mg every 12 hours plus hydroxychloroquine 200 mg every 8 hours for at least 18 months; individualize with response."
+      ],
+      "reviewStatus": "Exact regimen checked during drafting"
+    },
+    {
+      "source": "ESC 2023 antimicrobial, surgery, complication, device and prevention guidance; AHA 2015 legacy regimen cross-checks",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/infective-endocarditis-in-adults-diagnosis-antimicrobial-therapy-and-management-of-complications.pdf"
+      ],
+      "scope": "Original questions 24–60, before insertion of five 2026-update questions",
+      "checks": [
+        "Streptococcal full and restricted short courses; MSSA beta-lactams; enterococcal synergy and resistant-species distinction; HACEK valve-specific duration.",
+        "ESC-specific rifampin timing, bacterial course counting and new replacement prosthesis during NVE treatment.",
+        "Emergency versus urgent surgery, embolic indications and ischemic versus hemorrhagic neurological timing.",
+        "Splenic and renal complications, antithrombotic distinction, complete infected-system extraction and vegetation-specific reimplantation intervals."
+      ]
+    },
+    {
+      "source": "Vancomycin consensus, fungal guidance and primary trials",
+      "urls": [
+        "https://www.idsociety.org/practice-guideline/vancomycin/",
+        "https://doi.org/10.1016/S1473-3099(24)00749-7",
+        "https://www.idsociety.org/practice-guideline/candidiasis/",
+        "https://doi.org/10.1056/NEJMoa1808312",
+        "https://doi.org/10.1056/NEJMoa1112843"
+      ],
+      "checks": [
+        "AUC24 400–600 mg*h/L with MIC 1 mg/L.",
+        "Candida induction and early source control; at least six weeks postoperative antifungal treatment.",
+        "POET selected stable population and exclusions; EASE early embolic composite benefit without isolated mortality overstatement."
+      ]
+    },
+    {
+      "source": "AHA 2026 scientific statement, society-hosted primary full PDF and official current summary",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001466",
+        "https://www.iscvid.org/wp-content/uploads/2026/09/2026-AHA-IE-Dx-Tx-Management-DeSimone-Circulation-Sept-8-2026.pdf",
+        "https://professional.heart.org/en/science-news/infective-endocarditis-diagnosis-antibiotic-therapy-and-management/top-things-to-know"
+      ],
+      "checks": [
+        "Added current consensus questions on penicillin-intermediate but ceftriaxone-susceptible streptococcal monotherapy and avoiding gentamicin in staphylococcal PVE; rifampin consensus remains unresolved.",
+        "Added postoperative-duration question: preoperative credit and at least fourteen postoperative days, without automatic clock reset for valve-test positivity alone; explicitly distinguished ESC 2023.",
+        "Added selected long-acting completion strategy and right-sided mechanical-aspiration evidence boundaries.",
+        "Added E. faecalis IE colonoscopy discussion; 2026 statement still identifies Duke–ISCVID 2023 as the contemporary diagnostic framework."
+      ],
+      "limitation": "Society-hosted PDF is the September 8 version. October 12 correction notice identified but not yet retrieved in full; final installation remains pending this check."
+    },
+    {
+      "source": "DOTS randomized trial and 2026 AHA mechanical-aspiration advisory",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12351474/",
+        "https://doi.org/10.1161/JAHA.126.050115",
+        "https://professional.heart.org/en/science-news/percutaneous-mechanical-aspiration-in-patients-with-right-sided-infective-endocarditis"
+      ],
+      "checks": [
+        "DOTS completion after clearance; 1500 mg days one/eight with renal adjustment as specified; left-sided IE and retained infected prosthesis excluded; primary superiority not established.",
+        "Aspiration selected for refractory or high-operative-risk right-sided cases, alongside antibiotics; no randomized efficacy/safety evidence."
+      ]
+    },
+    {
+      "source": "AHA dental prevention, NIH Bartonella dose check and BCNE primary statement",
+      "urls": [
+        "https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/bartonellosis",
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "checks": [
+        "Adult dental dose and timing, allergy alternatives, no clindamycin, high-risk cardiac/procedure intersection; AHA versus ESC nondental difference.",
+        "Bartonella doxycycline and rifampin doses checked with population-specific duration caution; ESC versus AHA Whipple treatment approaches explicitly distinguished."
+      ]
+    },
+    {
+      "source": "Primary corrections and diagnostic-validation study",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehad625",
+        "https://doi.org/10.1093/eurheartj/ehad776",
+        "https://doi.org/10.1093/eurheartj/ehae877",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10893910/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12184262/",
+        "https://doi.org/10.1093/cid/ciaf737"
+      ],
+      "checks": [
+        "Read ESC correction notices: relevant antibiotic tables changed; adult ampicillin dose cross-checked separately, and affected pediatric or amoxicillin-IV schedules are not quoted in this chapter.",
+        "Duke erratum corrects Streptococcus naming in exclusions, not the criteria combinations.",
+        "BCNE erratum concerns byline credentials rather than the therapeutic statements.",
+        "Fever-exclusion paper is a retrospective diagnostic reassessment; not used as an official replacement for named 2023 criteria."
+      ]
+    }
+  ],
+  "editorialReviewProgress": {
+    "status": "generated_content_reviewed_pending_final_source_check",
+    "questionsReviewedInFull": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ],
+    "reviewMethod": "Original sixty generated stems, all options, keys and full explanations read in batches; five inserted update questions read in full afterward; revised diagnostic table and other affected content reread.",
+    "revisions": [
+      "Replaced weak or unrelated distractors in bacteremia, imaging, molecular testing, culture-negative workup, rifampin timing, surgery, device and prophylaxis questions.",
+      "Expanded all diagnostic domains in the Duke table and highlighted gram doses and serological thresholds.",
+      "Removed potential short-course ambiguity by comparing individual agents and naming the ESC framework.",
+      "Corrected EASE endpoint timing and separated current AHA postoperative consensus from ESC 2023."
+    ],
+    "remaining": "Retrieve and assess the October 2026 AHA correction, then finalize, install, audit, commit and push Chapter 10."
+  },
+  "finalReviewStatus": "pending_full_chapter_editorial_and_coverage_review",
+  "limitations": [
+    "Full Harrison text not accessed.",
+    "Author source checks are not independent clinician review.",
+    "Structural validation does not prove clinical completeness."
+  ],
+  "draftValidation": {
+    "questions": 65,
+    "answerDistribution": {
+      "A": 17,
+      "B": 16,
+      "C": 16,
+      "D": 16
+    },
+    "minimumExplanationWords": 344,
+    "distractorRationales": 195,
+    "questionStyles": {
+      "clinical_scenario": 55,
+      "direct": 10
+    },
+    "status": "passed",
+    "scope": "Structural checks and exact sequential coverage mapping; not independent clinical review."
+  },
+  "pendingEvidence": [
+    {
+      "source": "AHA 2026 correction, DOI 10.1161/CIR.0000000000001485",
+      "url": "https://doi.org/10.1161/CIR.0000000000001485",
+      "status": "Identified in PubMed; direct publisher full notice returns 403. Retrieve notice or current corrected primary text before final installation.",
+      "fallbackChecks": "Official current AHA summary independently confirms gentamicin, postoperative test-positivity and aspiration points; detailed fourteen-day rule checked in September primary PDF.",
+      "userAvailability": "User confirmed they do not have the correction text; no outstanding user-input request.",
+      "nextAction": "Continue seeking accessible corrected primary evidence; retain uninstalled source hold. Independent sequential authoring has moved to Chapter 11."
+    }
+  ],
+  "coverageAudit": {
+    "plannedDecisions": 65,
+    "authoredDecisions": 65,
+    "uniqueDecisions": 65,
+    "sections": 10,
+    "tables": 5,
+    "distractorRationales": 195,
+    "reasonForCountChange": "Five distinct AHA 2026 update decisions added after verification; the original sixty was provisional."
+  }
+}

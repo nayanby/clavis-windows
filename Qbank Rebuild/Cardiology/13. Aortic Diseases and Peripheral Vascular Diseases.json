@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "folder": "Cardiology",
+  "subject": "Cardiology",
+  "chapterOrder": 13,
+  "topicOrder": 1,
+  "headingIndex": 0,
+  "document": "13. Aortic Diseases and Peripheral Vascular Diseases",
+  "headingText": "Aortic Diseases and Peripheral Vascular Diseases",
+  "targetQuestions": 3,
+  "status": "redistributed_existing_questions",
+  "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
+  "sourceNote": "Existing questions redistributed by clinical focus to the canonical files/Cardiology chapters. Question content and source-review status are unchanged. This is not a claim of complete source coverage or a deep-dive explanation rewrite.",
+  "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3}",
+  "questions": [
+    {
+      "id": "cardiology-rebuild-02-008",
+      "topic": "ACS diagnosis and myocardial infarction classification",
+      "question": "A hemodynamically stable patient has abrupt severe chest pain maximal at onset, an interarm pulse difference and a new diastolic murmur. ECG shows ischemic changes. Which investigation should be prioritized before committing to an antithrombotic or fibrinolytic ACS pathway?",
+      "options": [
+        "Immediate coronary-only angiography without assessing the aorta",
+        "Serial troponin testing as the principal discriminator",
+        "D-dimer as a stand-alone exclusion test",
+        "Urgent CT angiography directed at suspected acute aortic syndrome"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Acute Aortic Syndrome Can Present With Myocardial Ischemia\n\nCorrect answer: Urgent CT angiography directed at suspected acute aortic syndrome\n\nRecognize the Competing Emergency\n\n**Acute aortic disease can cause coronary malperfusion and ischemic ECG changes.** Those findings do not establish primary coronary atherothrombosis as the cause.\n\nAbrupt maximal pain, pulse or pressure differences and a new aortic regurgitation murmur raise concern in the stated presentation.\n\nA normal chest radiograph would not adequately exclude the diagnosis.\n\nMatch Imaging to Stability and Availability\n\n**CT is recommended as initial diagnostic imaging for suspected acute aortic syndrome in suitable patients.** TEE or MRI can be alternatives according to circumstances.\n\nIf instability makes transport unsafe, bedside assessment and specialist coordination may favor another rapid imaging route. Begin appropriate monitoring and urgent aortic-team involvement.\n\nFibrinolysis or indiscriminate anticoagulation can be dangerous when dissection is the actual mechanism, so resolve this specific high-risk differential promptly rather than waiting for a complete biomarker series. This is not a reason to delay reperfusion in every typical coronary presentation; the stem supplies substantial aortic red flags. Document the reasoning and proceed rapidly with definitive care once the anatomy is known. The purpose of recognizing the mimic is to choose the correct emergency pathway, not simply add another diagnosis to a list.\n\nImmediate coronary-only angiography without assessing the aorta: Coronary assessment may become necessary, but the abrupt pain, pulse discrepancy and new regurgitant murmur require urgent evaluation of the suspected aortic emergency.\n\nSerial troponin testing as the principal discriminator: Troponin can identify myocardial injury but cannot exclude aortic dissection or establish whether coronary ischemia is due to aortic involvement.\n\nD-dimer as a stand-alone exclusion test: A low D-dimer can contribute in selected low-probability pathways, but this high-risk presentation requires definitive imaging rather than biomarker exclusion alone.\n\nACC/AHA aortic disease guideline, 2022 — https://pmc.ncbi.nlm.nih.gov/articles/PMC9876736/\n\nACC/AHA/ACEP/NAEMSP/SCAI ACS guideline, 2025 — https://doi.org/10.1016/j.jacc.2024.11.009",
+      "explanationHtml": "<h2>Acute Aortic Syndrome Can Present With Myocardial Ischemia</h2><p><strong>Correct answer: D — Urgent CT angiography directed at suspected acute aortic syndrome</strong></p><h3>Recognize the Competing Emergency</h3><ul><li><strong>Acute aortic disease can cause coronary malperfusion and ischemic ECG changes.</strong> Those findings do not establish primary coronary atherothrombosis as the cause.<ul><li>Abrupt maximal pain, pulse or pressure differences and a new aortic regurgitation murmur raise concern in the stated presentation.</li><li>A normal chest radiograph would not adequately exclude the diagnosis.</li></ul></li></ul><h3>Match Imaging to Stability and Availability</h3><ul><li><strong>CT is recommended as initial diagnostic imaging for suspected acute aortic syndrome in suitable patients.</strong> TEE or MRI can be alternatives according to circumstances.<ul><li>If instability makes transport unsafe, bedside assessment and specialist coordination may favor another rapid imaging route. Begin appropriate monitoring and urgent aortic-team involvement.</li><li>Fibrinolysis or indiscriminate anticoagulation can be dangerous when dissection is the actual mechanism, so resolve this specific high-risk differential promptly rather than waiting for a complete biomarker series. This is not a reason to delay reperfusion in every typical coronary presentation; the stem supplies substantial aortic red flags. Document the reasoning and proceed rapidly with definitive care once the anatomy is known. The purpose of recognizing the mimic is to choose the correct emergency pathway, not simply add another diagnosis to a list.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Immediate coronary-only angiography without assessing the aorta:</strong> Coronary assessment may become necessary, but the abrupt pain, pulse discrepancy and new regurgitant murmur require urgent evaluation of the suspected aortic emergency.</li><li><strong>B — Serial troponin testing as the principal discriminator:</strong> Troponin can identify myocardial injury but cannot exclude aortic dissection or establish whether coronary ischemia is due to aortic involvement.</li><li><strong>C — D-dimer as a stand-alone exclusion test:</strong> A low D-dimer can contribute in selected low-probability pathways, but this high-risk presentation requires definitive imaging rather than biomarker exclusion alone.</li></ul><h3>References</h3><ul><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC9876736/\">ACC/AHA aortic disease guideline, 2022</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2024.11.009\">ACC/AHA/ACEP/NAEMSP/SCAI ACS guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Acute Aortic Syndrome Can Present With Myocardial Ischemia",
+        "sections": [
+          {
+            "heading": "Recognize the Competing Emergency",
+            "bullets": [
+              {
+                "text": "**Acute aortic disease can cause coronary malperfusion and ischemic ECG changes.** Those findings do not establish primary coronary atherothrombosis as the cause.",
+                "children": [
+                  "Abrupt maximal pain, pulse or pressure differences and a new aortic regurgitation murmur raise concern in the stated presentation.",
+                  "A normal chest radiograph would not adequately exclude the diagnosis."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Match Imaging to Stability and Availability",
+            "bullets": [
+              {
+                "text": "**CT is recommended as initial diagnostic imaging for suspected acute aortic syndrome in suitable patients.** TEE or MRI can be alternatives according to circumstances.",
+                "children": [
+                  "If instability makes transport unsafe, bedside assessment and specialist coordination may favor another rapid imaging route. Begin appropriate monitoring and urgent aortic-team involvement.",
+                  "Fibrinolysis or indiscriminate anticoagulation can be dangerous when dissection is the actual mechanism, so resolve this specific high-risk differential promptly rather than waiting for a complete biomarker series. This is not a reason to delay reperfusion in every typical coronary presentation; the stem supplies substantial aortic red flags. Document the reasoning and proceed rapidly with definitive care once the anatomy is known. The purpose of recognizing the mimic is to choose the correct emergency pathway, not simply add another diagnosis to a list."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Coronary assessment may become necessary, but the abrupt pain, pulse discrepancy and new regurgitant murmur require urgent evaluation of the suspected aortic emergency."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Troponin can identify myocardial injury but cannot exclude aortic dissection or establish whether coronary ischemia is due to aortic involvement."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "A low D-dimer can contribute in selected low-probability pathways, but this high-risk presentation requires definitive imaging rather than biomarker exclusion alone."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA aortic disease guideline, 2022",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9876736/"
+        },
+        {
+          "label": "ACC/AHA/ACEP/NAEMSP/SCAI ACS guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2024.11.009"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Differentiate acute coronary syndromes from dissection pulmonary embolism and inflammatory mimics"
+    },
+    {
+      "id": "cardiology-rebuild-03-017",
+      "topic": "Aortic regurgitation",
+      "question": "A low-risk patient is scheduled for surgery for symptomatic severe aortic regurgitation. Cross-sectional imaging confirms a maximal ascending aortic diameter of 48 mm. Under ESC 2025 guidance, what should the surgical plan include?",
+      "options": [
+        "Isolated valve surgery with aortic intervention deferred until fifty-five millimeters",
+        "Assessment for concomitant replacement of the enlarged ascending aorta",
+        "Isolated valve surgery with aortic replacement considered only if subsequent rapid growth occurs",
+        "Plan a root replacement instead of evaluating the tubular ascending segment"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Addressing Aortic Disease During Valve Surgery\n\nCorrect answer: Assessment for concomitant replacement of the enlarged ascending aorta\n\nConcomitant Aortic Assessment\n\n**Valve disease and aortic disease require a combined anatomical plan.** The root and tubular ascending segment are different structures and should be measured and described separately.\n\nESC 2025 advises considering concomitant root or ascending replacement at maximal diameter ≥45 mm when a valve operation is indicated and predicted surgical risk is low.\n\nThis is not a universal isolated-aorta threshold. Etiology, genetic disease, growth, body size, family history and operative circumstances influence aortic decisions.\n\nRepair, Replacement and Valve Preservation\n\n**Choose the operation according to the mechanism and the involved aortic segment.** Root enlargement with suitable pliable cusps may allow valve-sparing root replacement at an experienced center.\n\nCalcification, cusp destruction or an unlikely durable repair may favor valve replacement. A tubular ascending graft and an operation on the root are not interchangeable labels.\n\nReview CT or CMR alongside echocardiographic valve assessment and discuss durability, prosthesis implications and reintervention. A successful isolated correction of regurgitation does not remove untreated aortic risk. Conversely, a forty-eight-millimeter ascending measurement does not by itself prove that every part of the root must be replaced. The clinical value of the threshold is to prompt an integrated surgical decision rather than two disconnected treatment plans.\n\nIsolated valve surgery with aortic intervention deferred until fifty-five millimeters: An isolated aortopathy threshold should not be copied into a patient already undergoing valve surgery; concomitant replacement can be considered at a lower diameter with low predicted surgical risk.\n\nIsolated valve surgery with aortic replacement considered only if subsequent rapid growth occurs: Rapid growth is an important aortopathy risk feature, but the opportunity for concomitant replacement at the specified size should be assessed during the already indicated operation rather than reserved solely for documented future growth.\n\nPlan a root replacement instead of evaluating the tubular ascending segment: Root replacement is relevant to root pathology; a tubular ascending measurement does not establish root enlargement. The operation should address the demonstrated segment and valve mechanism.\n\nESC/EACTS valvular heart disease guideline, 2025 — https://doi.org/10.1093/eurheartj/ehaf194",
+      "explanationHtml": "<h2>Addressing Aortic Disease During Valve Surgery</h2><p><strong>Correct answer: B — Assessment for concomitant replacement of the enlarged ascending aorta</strong></p><h3>Concomitant Aortic Assessment</h3><ul><li><strong>Valve disease and aortic disease require a combined anatomical plan.</strong> The root and tubular ascending segment are different structures and should be measured and described separately.<ul><li>ESC 2025 advises considering concomitant root or ascending replacement at maximal diameter ≥45 mm when a valve operation is indicated and predicted surgical risk is low.</li><li>This is not a universal isolated-aorta threshold. Etiology, genetic disease, growth, body size, family history and operative circumstances influence aortic decisions.</li></ul></li></ul><h3>Repair, Replacement and Valve Preservation</h3><ul><li><strong>Choose the operation according to the mechanism and the involved aortic segment.</strong> Root enlargement with suitable pliable cusps may allow valve-sparing root replacement at an experienced center.<ul><li>Calcification, cusp destruction or an unlikely durable repair may favor valve replacement. A tubular ascending graft and an operation on the root are not interchangeable labels.</li><li>Review CT or CMR alongside echocardiographic valve assessment and discuss durability, prosthesis implications and reintervention. A successful isolated correction of regurgitation does not remove untreated aortic risk. Conversely, a forty-eight-millimeter ascending measurement does not by itself prove that every part of the root must be replaced. The clinical value of the threshold is to prompt an integrated surgical decision rather than two disconnected treatment plans.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Isolated valve surgery with aortic intervention deferred until fifty-five millimeters:</strong> An isolated aortopathy threshold should not be copied into a patient already undergoing valve surgery; concomitant replacement can be considered at a lower diameter with low predicted surgical risk.</li><li><strong>C — Isolated valve surgery with aortic replacement considered only if subsequent rapid growth occurs:</strong> Rapid growth is an important aortopathy risk feature, but the opportunity for concomitant replacement at the specified size should be assessed during the already indicated operation rather than reserved solely for documented future growth.</li><li><strong>D — Plan a root replacement instead of evaluating the tubular ascending segment:</strong> Root replacement is relevant to root pathology; a tubular ascending measurement does not establish root enlargement. The operation should address the demonstrated segment and valve mechanism.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaf194\">ESC/EACTS valvular heart disease guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Addressing Aortic Disease During Valve Surgery",
+        "sections": [
+          {
+            "heading": "Concomitant Aortic Assessment",
+            "bullets": [
+              {
+                "text": "**Valve disease and aortic disease require a combined anatomical plan.** The root and tubular ascending segment are different structures and should be measured and described separately.",
+                "children": [
+                  "ESC 2025 advises considering concomitant root or ascending replacement at maximal diameter ≥45 mm when a valve operation is indicated and predicted surgical risk is low.",
+                  "This is not a universal isolated-aorta threshold. Etiology, genetic disease, growth, body size, family history and operative circumstances influence aortic decisions."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Repair, Replacement and Valve Preservation",
+            "bullets": [
+              {
+                "text": "**Choose the operation according to the mechanism and the involved aortic segment.** Root enlargement with suitable pliable cusps may allow valve-sparing root replacement at an experienced center.",
+                "children": [
+                  "Calcification, cusp destruction or an unlikely durable repair may favor valve replacement. A tubular ascending graft and an operation on the root are not interchangeable labels.",
+                  "Review CT or CMR alongside echocardiographic valve assessment and discuss durability, prosthesis implications and reintervention. A successful isolated correction of regurgitation does not remove untreated aortic risk. Conversely, a forty-eight-millimeter ascending measurement does not by itself prove that every part of the root must be replaced. The clinical value of the threshold is to prompt an integrated surgical decision rather than two disconnected treatment plans."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "An isolated aortopathy threshold should not be copied into a patient already undergoing valve surgery; concomitant replacement can be considered at a lower diameter with low predicted surgical risk."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Rapid growth is an important aortopathy risk feature, but the opportunity for concomitant replacement at the specified size should be assessed during the already indicated operation rather than reserved solely for documented future growth."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Root replacement is relevant to root pathology; a tubular ascending measurement does not establish root enlargement. The operation should address the demonstrated segment and valve mechanism."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC/EACTS valvular heart disease guideline, 2025",
+          "url": "https://doi.org/10.1093/eurheartj/ehaf194"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Root disease and valve-sparing options"
+    },
+    {
+      "id": "cardiology-rebuild-09-042",
+      "topic": "Cardiac tamponade and drainage decisions",
+      "question": "A patient has confirmed acute type A aortic dissection, hemopericardium and tamponade. An emergency aortic surgical team is ready. Which definitive strategy is most appropriate?",
+      "options": [
+        "Completely evacuate the hemopericardium percutaneously before aortic repair",
+        "Create a pericardial window, followed by staged aortic repair",
+        "Perform controlled small-volume pericardiocentesis before proceeding to aortic repair",
+        "Emergency aortic repair with operative management of the tamponade"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Aortic Dissection With Hemopericardium\n\nCorrect answer: Emergency aortic repair with operative management of the tamponade\n\nRecognize a Surgical Cause of Tamponade\n\n**The bleeding source is a life-threatening ascending aortic lesion.** Drainage alone treats the external constraint without controlling that source.\n\nThe usual bedside needle-drainage pathway for an uncomplicated effusion cannot be transferred unchanged to aortic rupture or post-infarction free-wall rupture. Both require urgent surgical involvement.\n\nCoordinate aortic surgery, anesthesia, blood products and perfusion support. Avoid unnecessary delay once the diagnosis and surgical indication are established.\n\nDistinguish Definitive Treatment From Rescue Bridging\n\n**Controlled removal of very small amounts of blood can be considered when critical tamponade prevents survival to surgery and immediate operative treatment is unavailable.** It is an expert rescue strategy, not unrestricted evacuation.\n\nESC practical guidance describes titration to the minimum perfusing pressure, often around a systolic pressure of ==90 mmHg==, while expediting surgery. The aim is temporary stabilization without provoking uncontrolled bleeding.\n\nA patient who can proceed immediately to the operating room does not need a routine preliminary complete pericardiocentesis. Maintain the distinction between cautious bridging and definitive source repair when interpreting an examination option. Reassess associated aortic regurgitation, coronary involvement, neurological findings and organ malperfusion through the acute aortic pathway. An initial improvement in blood pressure does not establish that the rupture risk has ended or that the type A lesion can be managed like an uncomplicated type B dissection.\n\nCompletely evacuate the hemopericardium percutaneously before aortic repair: Complete decompression can remove pressure limiting bleeding and abruptly increase arterial pressure. This differs from a selected minimal rescue bridge and is not the preferred sequence before available definitive repair.\n\nCreate a pericardial window, followed by staged aortic repair: A window can manage selected fluid problems but does not control the rupturing ascending aortic source. When the aortic team is ready, definitive repair with operative tamponade relief avoids a separate preliminary drainage operation.\n\nPerform controlled small-volume pericardiocentesis before proceeding to aortic repair: Controlled minimal drainage is a rescue bridge when critical tamponade prevents survival to surgery and immediate surgery is unavailable. It is not a required preliminary step when definitive operative treatment is ready.\n\nACC/AHA aortic disease guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106\n\nESC practical statement on pericardiocentesis and tamponade physiology — https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-15/Pericardiocentesis-in-cardiac-tamponade-indications-and-practical-aspects/\n\nESC myocarditis and pericarditis guideline, 2025 — https://doi.org/10.1093/eurheartj/ehaf192",
+      "explanationHtml": "<h2>Aortic Dissection With Hemopericardium</h2><p><strong>Correct answer: D — Emergency aortic repair with operative management of the tamponade</strong></p><h3>Recognize a Surgical Cause of Tamponade</h3><ul><li><strong>The bleeding source is a life-threatening ascending aortic lesion.</strong> Drainage alone treats the external constraint without controlling that source.<ul><li>The usual bedside needle-drainage pathway for an uncomplicated effusion cannot be transferred unchanged to aortic rupture or post-infarction free-wall rupture. Both require urgent surgical involvement.</li><li>Coordinate aortic surgery, anesthesia, blood products and perfusion support. Avoid unnecessary delay once the diagnosis and surgical indication are established.</li></ul></li></ul><h3>Distinguish Definitive Treatment From Rescue Bridging</h3><ul><li><strong>Controlled removal of very small amounts of blood can be considered when critical tamponade prevents survival to surgery and immediate operative treatment is unavailable.</strong> It is an expert rescue strategy, not unrestricted evacuation.<ul><li>ESC practical guidance describes titration to the minimum perfusing pressure, often around a systolic pressure of <mark>90 mmHg</mark>, while expediting surgery. The aim is temporary stabilization without provoking uncontrolled bleeding.</li><li>A patient who can proceed immediately to the operating room does not need a routine preliminary complete pericardiocentesis. Maintain the distinction between cautious bridging and definitive source repair when interpreting an examination option. Reassess associated aortic regurgitation, coronary involvement, neurological findings and organ malperfusion through the acute aortic pathway. An initial improvement in blood pressure does not establish that the rupture risk has ended or that the type A lesion can be managed like an uncomplicated type B dissection.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Completely evacuate the hemopericardium percutaneously before aortic repair:</strong> Complete decompression can remove pressure limiting bleeding and abruptly increase arterial pressure. This differs from a selected minimal rescue bridge and is not the preferred sequence before available definitive repair.</li><li><strong>B — Create a pericardial window, followed by staged aortic repair:</strong> A window can manage selected fluid problems but does not control the rupturing ascending aortic source. When the aortic team is ready, definitive repair with operative tamponade relief avoids a separate preliminary drainage operation.</li><li><strong>C — Perform controlled small-volume pericardiocentesis before proceeding to aortic repair:</strong> Controlled minimal drainage is a rescue bridge when critical tamponade prevents survival to surgery and immediate surgery is unavailable. It is not a required preliminary step when definitive operative treatment is ready.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA aortic disease guideline, 2022</a></li><li><a href=\"https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-15/Pericardiocentesis-in-cardiac-tamponade-indications-and-practical-aspects/\">ESC practical statement on pericardiocentesis and tamponade physiology</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaf192\">ESC myocarditis and pericarditis guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Aortic Dissection With Hemopericardium",
+        "sections": [
+          {
+            "heading": "Recognize a Surgical Cause of Tamponade",
+            "bullets": [
+              {
+                "text": "**The bleeding source is a life-threatening ascending aortic lesion.** Drainage alone treats the external constraint without controlling that source.",
+                "children": [
+                  "The usual bedside needle-drainage pathway for an uncomplicated effusion cannot be transferred unchanged to aortic rupture or post-infarction free-wall rupture. Both require urgent surgical involvement.",
+                  "Coordinate aortic surgery, anesthesia, blood products and perfusion support. Avoid unnecessary delay once the diagnosis and surgical indication are established."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Distinguish Definitive Treatment From Rescue Bridging",
+            "bullets": [
+              {
+                "text": "**Controlled removal of very small amounts of blood can be considered when critical tamponade prevents survival to surgery and immediate operative treatment is unavailable.** It is an expert rescue strategy, not unrestricted evacuation.",
+                "children": [
+                  "ESC practical guidance describes titration to the minimum perfusing pressure, often around a systolic pressure of ==90 mmHg==, while expediting surgery. The aim is temporary stabilization without provoking uncontrolled bleeding.",
+                  "A patient who can proceed immediately to the operating room does not need a routine preliminary complete pericardiocentesis. Maintain the distinction between cautious bridging and definitive source repair when interpreting an examination option. Reassess associated aortic regurgitation, coronary involvement, neurological findings and organ malperfusion through the acute aortic pathway. An initial improvement in blood pressure does not establish that the rupture risk has ended or that the type A lesion can be managed like an uncomplicated type B dissection."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Complete decompression can remove pressure limiting bleeding and abruptly increase arterial pressure. This differs from a selected minimal rescue bridge and is not the preferred sequence before available definitive repair."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "A window can manage selected fluid problems but does not control the rupturing ascending aortic source. When the aortic team is ready, definitive repair with operative tamponade relief avoids a separate preliminary drainage operation."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Controlled minimal drainage is a rescue bridge when critical tamponade prevents survival to surgery and immediate surgery is unavailable. It is not a required preliminary step when definitive operative treatment is ready."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA aortic disease guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        },
+        {
+          "label": "ESC practical statement on pericardiocentesis and tamponade physiology",
+          "url": "https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-15/Pericardiocentesis-in-cardiac-tamponade-indications-and-practical-aspects/"
+        },
+        {
+          "label": "ESC myocarditis and pericarditis guideline, 2025",
+          "url": "https://doi.org/10.1093/eurheartj/ehaf192"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Choose surgical management for suspected aortic-dissection hemopericardium"
+    }
+  ],
+  "sourceDocument": "13. Aortic Diseases and Peripheral Vascular Diseases.docx",
+  "redistribution": {
+    "originalIdsPreserved": true,
+    "existingQuestions": 3,
+    "previouslyInstalledQuestions": 3,
+    "draftQuestions": 0,
+    "coverageStatus": "incomplete_requires_chapter_review",
+    "explanationStructureStatus": "original_explanations_preserved_not_rewritten"
+  }
+}

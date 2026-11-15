@@ -1,0 +1,757 @@
+{
+  "schemaVersion": 1,
+  "folder": "Cardiology",
+  "subject": "Cardiology",
+  "chapterOrder": 11,
+  "topicOrder": 1,
+  "headingIndex": 0,
+  "document": "11. Systemic Hypertension and Hypertensive Emergencies",
+  "headingText": "Systemic Hypertension and Hypertensive Emergencies",
+  "targetQuestions": 9,
+  "status": "redistributed_existing_questions",
+  "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
+  "sourceNote": "Existing questions redistributed by clinical focus to the canonical files/Cardiology chapters. Question content and source-review status are unchanged. This is not a claim of complete source coverage or a deep-dive explanation rewrite.",
+  "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3}",
+  "questions": [
+    {
+      "id": "cardiology-rebuild-11-001",
+      "topic": "Measurement classification and blood-pressure phenotypes",
+      "question": "An untreated adult has a properly measured average office BP of 128/84 mmHg on repeated visits. Under AHA/ACC 2025 classification, which category applies?",
+      "options": [
+        "Stage 2 hypertension",
+        "Normal blood pressure",
+        "Elevated blood pressure",
+        "Stage 1 hypertension"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "direct",
+      "calculation": false,
+      "explanation": "AHA Blood-Pressure Categories and Isolated Diastolic Elevation\n\nCorrect answer: Stage 1 hypertension\n\nUse the Higher Systolic or Diastolic Category\n\n**AHA classification uses either component when the systolic and diastolic categories differ.** The patient has isolated diastolic elevation into the stage-one range despite a systolic value below ==130 mmHg==.\n\nNormal and elevated categories use combined conditions. Hypertension stages can be reached by the systolic or the diastolic component, so reading only the top number can misclassify the patient.\n\nThe question supplies a repeated standardized average. One rushed or technically poor reading would require confirmation rather than automatically establishing the chronic category.\n\nSeparate Classification From the Treatment Decision\n\n**Stage 1 is a pressure category, not an automatic instruction to give the same drugs to every patient.** Assess clinical CVD, diabetes, CKD and estimated cardiovascular risk and address lifestyle.\n\nAHA 2025 uses a PREVENT ten-year CVD risk threshold of ==7.5%== for a relevant higher-risk treatment pathway. Lower-risk persistent stage-one pressure is reassessed after a three-to-six-month lifestyle trial before the subsequent medication decision.\n\nUse home or ambulatory measurements when appropriate to identify a white-coat or masked pattern. Review organ damage, age, tolerability and patient circumstances before selecting therapy. A classification label also does not establish a hypertensive emergency: acute target-organ injury is a separate requirement. When comparing sources, specify the society and year because ESC uses a different elevated-pressure category while retaining an office hypertension threshold of ==140/90 mmHg==. The numerical finding is therefore interpreted within a named framework rather than treated as a universal terminology rule.\n\nAHA/ACC 2025 category | Standardized office average\n\nNormal | SBP <120 AND DBP ==<80 mmHg==\n\nElevated | SBP 120–129 AND DBP ==<80 mmHg==\n\nStage 1 | SBP 130–139 OR DBP ==80–89 mmHg==\n\nStage 2 | SBP ≥140 OR DBP ==≥90 mmHg==\n\nStage 2 hypertension: Stage two requires systolic at least 140 or diastolic at least 90 mmHg. The supplied repeated average reaches neither threshold; the stage-one diastolic elevation should not be overstaged.\n\nNormal blood pressure: Normal AHA pressure requires systolic below 120 and diastolic below 80 mmHg. The patient does not meet either combined normal condition, and the diastolic result specifically reaches the stage-one range.\n\nElevated blood pressure: AHA elevated pressure means systolic 120–129 with diastolic below 80 mmHg. The systolic value fits that interval but the diastolic value moves the classification to the higher category.\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178",
+      "explanationHtml": "<h2>AHA Blood-Pressure Categories and Isolated Diastolic Elevation</h2><p><strong>Correct answer: D — Stage 1 hypertension</strong></p><h3>Use the Higher Systolic or Diastolic Category</h3><ul><li><strong>AHA classification uses either component when the systolic and diastolic categories differ.</strong> The patient has isolated diastolic elevation into the stage-one range despite a systolic value below <mark>130 mmHg</mark>.<ul><li>Normal and elevated categories use combined conditions. Hypertension stages can be reached by the systolic or the diastolic component, so reading only the top number can misclassify the patient.</li><li>The question supplies a repeated standardized average. One rushed or technically poor reading would require confirmation rather than automatically establishing the chronic category.</li></ul></li></ul><h3>Separate Classification From the Treatment Decision</h3><ul><li><strong>Stage 1 is a pressure category, not an automatic instruction to give the same drugs to every patient.</strong> Assess clinical CVD, diabetes, CKD and estimated cardiovascular risk and address lifestyle.<ul><li>AHA 2025 uses a PREVENT ten-year CVD risk threshold of <mark>7.5%</mark> for a relevant higher-risk treatment pathway. Lower-risk persistent stage-one pressure is reassessed after a three-to-six-month lifestyle trial before the subsequent medication decision.</li><li>Use home or ambulatory measurements when appropriate to identify a white-coat or masked pattern. Review organ damage, age, tolerability and patient circumstances before selecting therapy. A classification label also does not establish a hypertensive emergency: acute target-organ injury is a separate requirement. When comparing sources, specify the society and year because ESC uses a different elevated-pressure category while retaining an office hypertension threshold of <mark>140/90 mmHg</mark>. The numerical finding is therefore interpreted within a named framework rather than treated as a universal terminology rule.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>AHA/ACC 2025 category</th><th>Standardized office average</th></tr></thead><tbody><tr><td>Normal</td><td>SBP &lt;120 AND DBP <mark>&lt;80 mmHg</mark></td></tr><tr><td>Elevated</td><td>SBP 120–129 AND DBP <mark>&lt;80 mmHg</mark></td></tr><tr><td>Stage 1</td><td>SBP 130–139 OR DBP <mark>80–89 mmHg</mark></td></tr><tr><td>Stage 2</td><td>SBP ≥140 OR DBP <mark>≥90 mmHg</mark></td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — Stage 2 hypertension:</strong> Stage two requires systolic at least 140 or diastolic at least 90 mmHg. The supplied repeated average reaches neither threshold; the stage-one diastolic elevation should not be overstaged.</li><li><strong>B — Normal blood pressure:</strong> Normal AHA pressure requires systolic below 120 and diastolic below 80 mmHg. The patient does not meet either combined normal condition, and the diastolic result specifically reaches the stage-one range.</li><li><strong>C — Elevated blood pressure:</strong> AHA elevated pressure means systolic 120–129 with diastolic below 80 mmHg. The systolic value fits that interval but the diastolic value moves the classification to the higher category.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "AHA Blood-Pressure Categories and Isolated Diastolic Elevation",
+        "sections": [
+          {
+            "heading": "Use the Higher Systolic or Diastolic Category",
+            "bullets": [
+              {
+                "text": "**AHA classification uses either component when the systolic and diastolic categories differ.** The patient has isolated diastolic elevation into the stage-one range despite a systolic value below ==130 mmHg==.",
+                "children": [
+                  "Normal and elevated categories use combined conditions. Hypertension stages can be reached by the systolic or the diastolic component, so reading only the top number can misclassify the patient.",
+                  "The question supplies a repeated standardized average. One rushed or technically poor reading would require confirmation rather than automatically establishing the chronic category."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Separate Classification From the Treatment Decision",
+            "bullets": [
+              {
+                "text": "**Stage 1 is a pressure category, not an automatic instruction to give the same drugs to every patient.** Assess clinical CVD, diabetes, CKD and estimated cardiovascular risk and address lifestyle.",
+                "children": [
+                  "AHA 2025 uses a PREVENT ten-year CVD risk threshold of ==7.5%== for a relevant higher-risk treatment pathway. Lower-risk persistent stage-one pressure is reassessed after a three-to-six-month lifestyle trial before the subsequent medication decision.",
+                  "Use home or ambulatory measurements when appropriate to identify a white-coat or masked pattern. Review organ damage, age, tolerability and patient circumstances before selecting therapy. A classification label also does not establish a hypertensive emergency: acute target-organ injury is a separate requirement. When comparing sources, specify the society and year because ESC uses a different elevated-pressure category while retaining an office hypertension threshold of ==140/90 mmHg==. The numerical finding is therefore interpreted within a named framework rather than treated as a universal terminology rule."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "AHA/ACC 2025 category",
+              "Standardized office average"
+            ],
+            "rows": [
+              [
+                "Normal",
+                "SBP <120 AND DBP ==<80 mmHg=="
+              ],
+              [
+                "Elevated",
+                "SBP 120–129 AND DBP ==<80 mmHg=="
+              ],
+              [
+                "Stage 1",
+                "SBP 130–139 OR DBP ==80–89 mmHg=="
+              ],
+              [
+                "Stage 2",
+                "SBP ≥140 OR DBP ==≥90 mmHg=="
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Stage two requires systolic at least 140 or diastolic at least 90 mmHg. The supplied repeated average reaches neither threshold; the stage-one diastolic elevation should not be overstaged."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Normal AHA pressure requires systolic below 120 and diastolic below 80 mmHg. The patient does not meet either combined normal condition, and the diastolic result specifically reaches the stage-one range."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "AHA elevated pressure means systolic 120–129 with diastolic below 80 mmHg. The systolic value fits that interval but the diastolic value moves the classification to the higher category."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        },
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Apply the AHA 2025 systolic-or-diastolic category using confirmed average pressure"
+    },
+    {
+      "id": "cardiology-rebuild-11-002",
+      "topic": "Measurement classification and blood-pressure phenotypes",
+      "question": "A confirmed standardized office BP is 132/82 mmHg. Which pairing correctly names the AHA/ACC 2025 and ESC 2024 categories?",
+      "options": [
+        "AHA stage 1 hypertension; ESC elevated blood pressure",
+        "AHA elevated blood pressure; ESC hypertension",
+        "AHA stage 1 hypertension; ESC hypertension",
+        "AHA stage 2 hypertension; ESC elevated blood pressure"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "direct",
+      "calculation": false,
+      "explanation": "ESC Elevated Pressure Versus AHA Stage One\n\nCorrect answer: AHA stage 1 hypertension; ESC elevated blood pressure\n\nName the Diagnostic Framework\n\n**AHA and ESC use different category boundaries and terminology.** A patient can therefore have stage-one hypertension in one framework and elevated pressure in the other without any disagreement about the measured number.\n\nAHA 2025 defines stage one at systolic 130–139 or diastolic ==80–89 mmHg==. ESC 2024 retains hypertension at systolic at least 140 or diastolic at least ==90 mmHg==.\n\nESC elevated BP includes systolic 120–139 or diastolic ==70–89 mmHg== when the hypertension boundary is not reached. Non-elevated ESC pressure requires both systolic below 120 and diastolic below ==70 mmHg==.\n\nDo Not Turn Different Names Into Opposite Care Plans\n\n**Both frameworks use risk, confirmation and tolerability when deciding treatment.** An ESC elevated label does not mean that pharmacological treatment is excluded in a high-risk patient.\n\nDiagnostic thresholds, thresholds to start a drug and on-treatment targets are distinct concepts. A treatment target below the diagnostic hypertension threshold is not a contradiction.\n\nReview out-of-office pressure, clinical CVD, diabetes, kidney disease and organ damage before interpreting what the category means for care. A low-risk younger patient and an older patient with established CVD can require different next steps at the same office average. Explain the named framework when communicating a diagnosis or comparing examination answers. Do not combine a US category with a European treatment cutoff and present the result as a single unqualified guideline. The best answer here is a terminology comparison based on verified averages, not a decision about immediate drug number, a BP target or an emergency.\n\nFramework | How 132/82 mmHg is classified | Office hypertension boundary\n\nAHA/ACC 2025 | Stage 1 hypertension | SBP ≥130 OR DBP ==≥80 mmHg==\n\nESC 2024 | Elevated blood pressure | SBP ≥140 OR DBP ==≥90 mmHg==\n\nAHA elevated blood pressure; ESC hypertension: AHA elevated pressure requires diastolic below 80 and systolic below 130. ESC hypertension begins at 140 systolic or 90 diastolic, so neither part of this pairing matches the supplied average.\n\nAHA stage 1 hypertension; ESC hypertension: The AHA component is correct. The ESC component incorrectly transfers the American diagnostic threshold to the European framework, where 132/82 remains in the elevated category.\n\nAHA stage 2 hypertension; ESC elevated blood pressure: The ESC component is correct. AHA stage two requires a higher systolic or diastolic threshold than supplied, so the American classification is overstated.\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178",
+      "explanationHtml": "<h2>ESC Elevated Pressure Versus AHA Stage One</h2><p><strong>Correct answer: A — AHA stage 1 hypertension; ESC elevated blood pressure</strong></p><h3>Name the Diagnostic Framework</h3><ul><li><strong>AHA and ESC use different category boundaries and terminology.</strong> A patient can therefore have stage-one hypertension in one framework and elevated pressure in the other without any disagreement about the measured number.<ul><li>AHA 2025 defines stage one at systolic 130–139 or diastolic <mark>80–89 mmHg</mark>. ESC 2024 retains hypertension at systolic at least 140 or diastolic at least <mark>90 mmHg</mark>.</li><li>ESC elevated BP includes systolic 120–139 or diastolic <mark>70–89 mmHg</mark> when the hypertension boundary is not reached. Non-elevated ESC pressure requires both systolic below 120 and diastolic below <mark>70 mmHg</mark>.</li></ul></li></ul><h3>Do Not Turn Different Names Into Opposite Care Plans</h3><ul><li><strong>Both frameworks use risk, confirmation and tolerability when deciding treatment.</strong> An ESC elevated label does not mean that pharmacological treatment is excluded in a high-risk patient.<ul><li>Diagnostic thresholds, thresholds to start a drug and on-treatment targets are distinct concepts. A treatment target below the diagnostic hypertension threshold is not a contradiction.</li><li>Review out-of-office pressure, clinical CVD, diabetes, kidney disease and organ damage before interpreting what the category means for care. A low-risk younger patient and an older patient with established CVD can require different next steps at the same office average. Explain the named framework when communicating a diagnosis or comparing examination answers. Do not combine a US category with a European treatment cutoff and present the result as a single unqualified guideline. The best answer here is a terminology comparison based on verified averages, not a decision about immediate drug number, a BP target or an emergency.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Framework</th><th>How 132/82 mmHg is classified</th><th>Office hypertension boundary</th></tr></thead><tbody><tr><td>AHA/ACC 2025</td><td>Stage 1 hypertension</td><td>SBP ≥130 OR DBP <mark>≥80 mmHg</mark></td></tr><tr><td>ESC 2024</td><td>Elevated blood pressure</td><td>SBP ≥140 OR DBP <mark>≥90 mmHg</mark></td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>B — AHA elevated blood pressure; ESC hypertension:</strong> AHA elevated pressure requires diastolic below 80 and systolic below 130. ESC hypertension begins at 140 systolic or 90 diastolic, so neither part of this pairing matches the supplied average.</li><li><strong>C — AHA stage 1 hypertension; ESC hypertension:</strong> The AHA component is correct. The ESC component incorrectly transfers the American diagnostic threshold to the European framework, where 132/82 remains in the elevated category.</li><li><strong>D — AHA stage 2 hypertension; ESC elevated blood pressure:</strong> The ESC component is correct. AHA stage two requires a higher systolic or diastolic threshold than supplied, so the American classification is overstated.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "ESC Elevated Pressure Versus AHA Stage One",
+        "sections": [
+          {
+            "heading": "Name the Diagnostic Framework",
+            "bullets": [
+              {
+                "text": "**AHA and ESC use different category boundaries and terminology.** A patient can therefore have stage-one hypertension in one framework and elevated pressure in the other without any disagreement about the measured number.",
+                "children": [
+                  "AHA 2025 defines stage one at systolic 130–139 or diastolic ==80–89 mmHg==. ESC 2024 retains hypertension at systolic at least 140 or diastolic at least ==90 mmHg==.",
+                  "ESC elevated BP includes systolic 120–139 or diastolic ==70–89 mmHg== when the hypertension boundary is not reached. Non-elevated ESC pressure requires both systolic below 120 and diastolic below ==70 mmHg==."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Do Not Turn Different Names Into Opposite Care Plans",
+            "bullets": [
+              {
+                "text": "**Both frameworks use risk, confirmation and tolerability when deciding treatment.** An ESC elevated label does not mean that pharmacological treatment is excluded in a high-risk patient.",
+                "children": [
+                  "Diagnostic thresholds, thresholds to start a drug and on-treatment targets are distinct concepts. A treatment target below the diagnostic hypertension threshold is not a contradiction.",
+                  "Review out-of-office pressure, clinical CVD, diabetes, kidney disease and organ damage before interpreting what the category means for care. A low-risk younger patient and an older patient with established CVD can require different next steps at the same office average. Explain the named framework when communicating a diagnosis or comparing examination answers. Do not combine a US category with a European treatment cutoff and present the result as a single unqualified guideline. The best answer here is a terminology comparison based on verified averages, not a decision about immediate drug number, a BP target or an emergency."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "Framework",
+              "How 132/82 mmHg is classified",
+              "Office hypertension boundary"
+            ],
+            "rows": [
+              [
+                "AHA/ACC 2025",
+                "Stage 1 hypertension",
+                "SBP ≥130 OR DBP ==≥80 mmHg=="
+              ],
+              [
+                "ESC 2024",
+                "Elevated blood pressure",
+                "SBP ≥140 OR DBP ==≥90 mmHg=="
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "AHA elevated pressure requires diastolic below 80 and systolic below 130. ESC hypertension begins at 140 systolic or 90 diastolic, so neither part of this pairing matches the supplied average."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "The AHA component is correct. The ESC component incorrectly transfers the American diagnostic threshold to the European framework, where 132/82 remains in the elevated category."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "The ESC component is correct. AHA stage two requires a higher systolic or diastolic threshold than supplied, so the American classification is overstated."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        },
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Distinguish ESC 2024 elevated pressure from AHA stage-one hypertension"
+    },
+    {
+      "id": "cardiology-rebuild-11-003",
+      "topic": "Measurement classification and blood-pressure phenotypes",
+      "question": "A patient arrives immediately after climbing stairs, drinks coffee and has BP measured while talking with the arm unsupported. The reading is 156/94 mmHg without acute symptoms or organ injury. Which immediate measurement plan is most appropriate?",
+      "options": [
+        "Repeat after appropriate preparation and seated rest with a supported arm and correct upper-arm cuff",
+        "Use the highest of three immediate post-exertional readings to set the chronic category",
+        "Use a wrist reading with the hand resting below heart level",
+        "Use the first standing measurement as the replacement for resting office BP"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Standardizing a Nonstandard Office Reading\n\nCorrect answer: Repeat after appropriate preparation and seated rest with a supported arm and correct upper-arm cuff\n\nCorrect Preparation and Position Before Interpreting the Number\n\n**A technically poor reading can overestimate usual pressure and lead to unnecessary treatment.** Allow quiet seated rest and use a validated device with a cuff matched to the upper arm.\n\nAvoid smoking, caffeine and exercise for at least thirty minutes before a planned resting measurement when feasible. Empty the bladder, support the back and arm and keep the feet flat with legs uncrossed.\n\nRest quietly for at least five minutes and position the supported cuff at heart level. Do not talk during rest or measurement. Take repeated readings at appropriate intervals and use their average rather than selecting the highest value.\n\nConfirm the Phenotype Without Ignoring an Emergency\n\n**The next step depends on the clinical context as well as measurement quality.** This stem explicitly excludes acute organ injury, so a chronic diagnosis or escalation should not be built on the nonstandard observation alone.\n\nIf a patient instead has concerning chest pain, neurological findings, pulmonary edema or another acute syndrome, assessment and treatment must proceed promptly while measurements are verified.\n\nMeasure both arms initially and investigate a persistent meaningful difference, generally using the higher-reading arm for subsequent management. Home or ambulatory monitoring can help confirm usual pressure after the office technique is corrected. A repeated high reading under proper conditions deserves follow-up even if the first one was flawed. Conversely, attributing every elevation to anxiety without checking is also inappropriate. The purpose of standardization is to obtain a usable physiological estimate, not to find a lower number by choosing a different limb, posture or device until the result appears reassuring.\n\nUse the highest of three immediate post-exertional readings to set the chronic category: Repeated readings are valuable when obtained properly. Selecting the maximum from the same nonstandard post-exertional conditions preserves measurement bias rather than establishing a reliable chronic average.\n\nUse a wrist reading with the hand resting below heart level: A validated wrist device can be useful when upper-arm measurement is unsuitable, but positioning is critical. A wrist below heart level introduces hydrostatic error and does not correct the supplied technique problem.\n\nUse the first standing measurement as the replacement for resting office BP: Standing measurements are appropriate for postural symptoms and orthostatic assessment. They answer a different physiological question and should not replace a properly prepared resting office reading.\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178",
+      "explanationHtml": "<h2>Standardizing a Nonstandard Office Reading</h2><p><strong>Correct answer: A — Repeat after appropriate preparation and seated rest with a supported arm and correct upper-arm cuff</strong></p><h3>Correct Preparation and Position Before Interpreting the Number</h3><ul><li><strong>A technically poor reading can overestimate usual pressure and lead to unnecessary treatment.</strong> Allow quiet seated rest and use a validated device with a cuff matched to the upper arm.<ul><li>Avoid smoking, caffeine and exercise for at least thirty minutes before a planned resting measurement when feasible. Empty the bladder, support the back and arm and keep the feet flat with legs uncrossed.</li><li>Rest quietly for at least five minutes and position the supported cuff at heart level. Do not talk during rest or measurement. Take repeated readings at appropriate intervals and use their average rather than selecting the highest value.</li></ul></li></ul><h3>Confirm the Phenotype Without Ignoring an Emergency</h3><ul><li><strong>The next step depends on the clinical context as well as measurement quality.</strong> This stem explicitly excludes acute organ injury, so a chronic diagnosis or escalation should not be built on the nonstandard observation alone.<ul><li>If a patient instead has concerning chest pain, neurological findings, pulmonary edema or another acute syndrome, assessment and treatment must proceed promptly while measurements are verified.</li><li>Measure both arms initially and investigate a persistent meaningful difference, generally using the higher-reading arm for subsequent management. Home or ambulatory monitoring can help confirm usual pressure after the office technique is corrected. A repeated high reading under proper conditions deserves follow-up even if the first one was flawed. Conversely, attributing every elevation to anxiety without checking is also inappropriate. The purpose of standardization is to obtain a usable physiological estimate, not to find a lower number by choosing a different limb, posture or device until the result appears reassuring.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Use the highest of three immediate post-exertional readings to set the chronic category:</strong> Repeated readings are valuable when obtained properly. Selecting the maximum from the same nonstandard post-exertional conditions preserves measurement bias rather than establishing a reliable chronic average.</li><li><strong>C — Use a wrist reading with the hand resting below heart level:</strong> A validated wrist device can be useful when upper-arm measurement is unsuitable, but positioning is critical. A wrist below heart level introduces hydrostatic error and does not correct the supplied technique problem.</li><li><strong>D — Use the first standing measurement as the replacement for resting office BP:</strong> Standing measurements are appropriate for postural symptoms and orthostatic assessment. They answer a different physiological question and should not replace a properly prepared resting office reading.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Standardizing a Nonstandard Office Reading",
+        "sections": [
+          {
+            "heading": "Correct Preparation and Position Before Interpreting the Number",
+            "bullets": [
+              {
+                "text": "**A technically poor reading can overestimate usual pressure and lead to unnecessary treatment.** Allow quiet seated rest and use a validated device with a cuff matched to the upper arm.",
+                "children": [
+                  "Avoid smoking, caffeine and exercise for at least thirty minutes before a planned resting measurement when feasible. Empty the bladder, support the back and arm and keep the feet flat with legs uncrossed.",
+                  "Rest quietly for at least five minutes and position the supported cuff at heart level. Do not talk during rest or measurement. Take repeated readings at appropriate intervals and use their average rather than selecting the highest value."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Confirm the Phenotype Without Ignoring an Emergency",
+            "bullets": [
+              {
+                "text": "**The next step depends on the clinical context as well as measurement quality.** This stem explicitly excludes acute organ injury, so a chronic diagnosis or escalation should not be built on the nonstandard observation alone.",
+                "children": [
+                  "If a patient instead has concerning chest pain, neurological findings, pulmonary edema or another acute syndrome, assessment and treatment must proceed promptly while measurements are verified.",
+                  "Measure both arms initially and investigate a persistent meaningful difference, generally using the higher-reading arm for subsequent management. Home or ambulatory monitoring can help confirm usual pressure after the office technique is corrected. A repeated high reading under proper conditions deserves follow-up even if the first one was flawed. Conversely, attributing every elevation to anxiety without checking is also inappropriate. The purpose of standardization is to obtain a usable physiological estimate, not to find a lower number by choosing a different limb, posture or device until the result appears reassuring."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Repeated readings are valuable when obtained properly. Selecting the maximum from the same nonstandard post-exertional conditions preserves measurement bias rather than establishing a reliable chronic average."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "A validated wrist device can be useful when upper-arm measurement is unsuitable, but positioning is critical. A wrist below heart level introduces hydrostatic error and does not correct the supplied technique problem."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Standing measurements are appropriate for postural symptoms and orthostatic assessment. They answer a different physiological question and should not replace a properly prepared resting office reading."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        },
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Correct measurement conditions before interpreting a nonstandard office reading"
+    },
+    {
+      "id": "cardiology-rebuild-11-004",
+      "topic": "Measurement classification and blood-pressure phenotypes",
+      "question": "An adult with a large upper-arm circumference has high office BP on three medicines. The clinic has been using a standard cuff visibly too small for the arm. Which action is most appropriate before labeling true resistant hypertension?",
+      "options": [
+        "Perform ambulatory monitoring using the same undersized cuff",
+        "Add spironolactone on the basis of the current office average",
+        "Repeat measurement with a validated device and an appropriately sized cuff",
+        "Begin renal-artery imaging as the first explanation for resistance"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Undercuffing and Apparent Resistant Hypertension\n\nCorrect answer: Repeat measurement with a validated device and an appropriately sized cuff\n\nMatch the Inflatable Bladder to Arm Circumference\n\n**A cuff that is too small generally overestimates pressure.** Undercuffing is particularly relevant in obesity and can create an apparent need for additional drugs.\n\nESC 2024 describes a bladder length of roughly ==75%==–==100%== and width of ==35%==–==50%== of arm circumference. Follow the validated device’s specified circumference range rather than assuming every standard cuff fits.\n\nA cuff that is too large can bias the result in the opposite direction. Conical arms and very large circumferences may need a validated alternative cuff or approach rather than improvising with an unsuitable device.\n\nExclude Pseudoresistance Before Escalation\n\n**True resistant hypertension requires reliable pressure assessment as well as an adequate treatment regimen.** Confirm out-of-office pressure, adherence, doses and diuretic suitability after correcting technique.\n\nReview interfering agents, sodium intake, sleep apnea and secondary causes according to the phenotype. The existence of one measurement error does not prove that the patient has no hypertension.\n\nArrange repeat measurements and a clear follow-up plan and monitor for hypotension if apparent resistance resolves while several drugs are already being taken. Device validation and cuff size are separate requirements: a validated monitor used with an incompatible cuff can still mislead. Conversely, a normal pressure obtained with an oversized cuff does not establish control. The case tests a common correctable source of classification and treatment error. Appropriate technical reassessment comes before an MRA prescription or an invasive or expensive secondary-cause pathway, while any genuine acute organ-injury symptoms would require prompt evaluation on their own merits.\n\nPerform ambulatory monitoring using the same undersized cuff: ABPM helps identify white-coat effects and usual pressure. It still requires correct cuff sizing; moving the same measurement error outside the clinic does not make the estimate valid.\n\nAdd spironolactone on the basis of the current office average: Spironolactone is useful in suitable true resistant hypertension. The supplied cuff mismatch creates a remediable measurement bias that must be corrected before adding a fourth drug.\n\nBegin renal-artery imaging as the first explanation for resistance: Renovascular assessment is appropriate with a compatible phenotype and selected indications. It should not precede correction of a known technical cause of apparent resistance in the supplied stable case.\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178",
+      "explanationHtml": "<h2>Undercuffing and Apparent Resistant Hypertension</h2><p><strong>Correct answer: C — Repeat measurement with a validated device and an appropriately sized cuff</strong></p><h3>Match the Inflatable Bladder to Arm Circumference</h3><ul><li><strong>A cuff that is too small generally overestimates pressure.</strong> Undercuffing is particularly relevant in obesity and can create an apparent need for additional drugs.<ul><li>ESC 2024 describes a bladder length of roughly <mark>75%</mark>–<mark>100%</mark> and width of <mark>35%</mark>–<mark>50%</mark> of arm circumference. Follow the validated device’s specified circumference range rather than assuming every standard cuff fits.</li><li>A cuff that is too large can bias the result in the opposite direction. Conical arms and very large circumferences may need a validated alternative cuff or approach rather than improvising with an unsuitable device.</li></ul></li></ul><h3>Exclude Pseudoresistance Before Escalation</h3><ul><li><strong>True resistant hypertension requires reliable pressure assessment as well as an adequate treatment regimen.</strong> Confirm out-of-office pressure, adherence, doses and diuretic suitability after correcting technique.<ul><li>Review interfering agents, sodium intake, sleep apnea and secondary causes according to the phenotype. The existence of one measurement error does not prove that the patient has no hypertension.</li><li>Arrange repeat measurements and a clear follow-up plan and monitor for hypotension if apparent resistance resolves while several drugs are already being taken. Device validation and cuff size are separate requirements: a validated monitor used with an incompatible cuff can still mislead. Conversely, a normal pressure obtained with an oversized cuff does not establish control. The case tests a common correctable source of classification and treatment error. Appropriate technical reassessment comes before an MRA prescription or an invasive or expensive secondary-cause pathway, while any genuine acute organ-injury symptoms would require prompt evaluation on their own merits.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Perform ambulatory monitoring using the same undersized cuff:</strong> ABPM helps identify white-coat effects and usual pressure. It still requires correct cuff sizing; moving the same measurement error outside the clinic does not make the estimate valid.</li><li><strong>B — Add spironolactone on the basis of the current office average:</strong> Spironolactone is useful in suitable true resistant hypertension. The supplied cuff mismatch creates a remediable measurement bias that must be corrected before adding a fourth drug.</li><li><strong>D — Begin renal-artery imaging as the first explanation for resistance:</strong> Renovascular assessment is appropriate with a compatible phenotype and selected indications. It should not precede correction of a known technical cause of apparent resistance in the supplied stable case.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Undercuffing and Apparent Resistant Hypertension",
+        "sections": [
+          {
+            "heading": "Match the Inflatable Bladder to Arm Circumference",
+            "bullets": [
+              {
+                "text": "**A cuff that is too small generally overestimates pressure.** Undercuffing is particularly relevant in obesity and can create an apparent need for additional drugs.",
+                "children": [
+                  "ESC 2024 describes a bladder length of roughly ==75%==–==100%== and width of ==35%==–==50%== of arm circumference. Follow the validated device’s specified circumference range rather than assuming every standard cuff fits.",
+                  "A cuff that is too large can bias the result in the opposite direction. Conical arms and very large circumferences may need a validated alternative cuff or approach rather than improvising with an unsuitable device."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Exclude Pseudoresistance Before Escalation",
+            "bullets": [
+              {
+                "text": "**True resistant hypertension requires reliable pressure assessment as well as an adequate treatment regimen.** Confirm out-of-office pressure, adherence, doses and diuretic suitability after correcting technique.",
+                "children": [
+                  "Review interfering agents, sodium intake, sleep apnea and secondary causes according to the phenotype. The existence of one measurement error does not prove that the patient has no hypertension.",
+                  "Arrange repeat measurements and a clear follow-up plan and monitor for hypotension if apparent resistance resolves while several drugs are already being taken. Device validation and cuff size are separate requirements: a validated monitor used with an incompatible cuff can still mislead. Conversely, a normal pressure obtained with an oversized cuff does not establish control. The case tests a common correctable source of classification and treatment error. Appropriate technical reassessment comes before an MRA prescription or an invasive or expensive secondary-cause pathway, while any genuine acute organ-injury symptoms would require prompt evaluation on their own merits."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "ABPM helps identify white-coat effects and usual pressure. It still requires correct cuff sizing; moving the same measurement error outside the clinic does not make the estimate valid."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Spironolactone is useful in suitable true resistant hypertension. The supplied cuff mismatch creates a remediable measurement bias that must be corrected before adding a fourth drug."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Renovascular assessment is appropriate with a compatible phenotype and selected indications. It should not precede correction of a known technical cause of apparent resistance in the supplied stable case."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        },
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Recognize undercuffing as a cause of falsely elevated pressure and apparent resistance"
+    },
+    {
+      "id": "cardiology-rebuild-11-005",
+      "topic": "Measurement classification and blood-pressure phenotypes",
+      "question": "Under ESC 2024, which out-of-office average reaches the diagnostic threshold for hypertension?",
+      "options": [
+        "A sleep ambulatory average of 110/65 mmHg",
+        "A home average of 130/80 mmHg",
+        "An awake ambulatory average of 130/80 mmHg",
+        "A 24-hour ambulatory average of 130/80 mmHg"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "direct",
+      "calculation": false,
+      "explanation": "ESC Home and Ambulatory Diagnostic Thresholds\n\nCorrect answer: A 24-hour ambulatory average of 130/80 mmHg\n\nUse the Threshold for the Setting Being Measured\n\n**Office, home, awake, sleep and full-day averages are not interchangeable.** Sleep values normally lower the twenty-four-hour average, so its diagnostic boundary differs from the daytime boundary.\n\nUnder ESC, office hypertension begins at ==140/90 mmHg==, home and daytime ambulatory hypertension at ==135/85 mmHg==, the twenty-four-hour average at ==130/80 mmHg== and nighttime hypertension at ==120/70 mmHg==.\n\nEither a systolic or a diastolic component at or above its threshold is sufficient for that setting. A slash in a compact table does not mean that both values must be elevated simultaneously.\n\nReview Recording Quality and the Named Framework\n\n**A usable ABPM study needs an appropriate cuff, enough valid readings and accurate wake–sleep information.** A single isolated peak is not the same as an elevated time-period average.\n\nUse a diary to interpret sleep, work, exercise, symptoms and medication timing. Assess whether disturbed sleep or measurement artifacts could affect interpretation.\n\nHome monitoring is valuable for repeated resting values but usually does not characterize sleep pressure. ABPM is useful when a white-coat or masked phenotype or a nocturnal problem is suspected. American guidance also maps out-of-office values to its lower office threshold; do not silently substitute those mappings into the ESC diagnostic table. Confirmation, cardiovascular risk and organ damage determine the clinical plan after the phenotype is identified. The question names ESC and the monitoring interval so the numerical answer is defensible rather than dependent on an unstated society or on a single nonrepresentative reading.\n\nESC 2024 setting | Hypertension if SBP or DBP reaches\n\nOffice | 140 or ==90 mmHg==\n\nHome average | 135 or ==85 mmHg==\n\nAwake ABPM average | 135 or ==85 mmHg==\n\n24-hour ABPM average | 130 or ==80 mmHg==\n\nSleep ABPM average | 120 or ==70 mmHg==\n\nA sleep ambulatory average of 110/65 mmHg: Sleep pressure has a lower threshold than daytime pressure. ESC uses at least 120 systolic or 70 diastolic mmHg for nocturnal hypertension; 110/65 belongs to a different lower reference mapping.\n\nA home average of 130/80 mmHg: That average is relevant to some American threshold mappings and to elevated-pressure risk assessment. ESC uses a home diagnostic hypertension threshold of at least 135 systolic or 85 diastolic mmHg.\n\nAn awake ambulatory average of 130/80 mmHg: Awake ambulatory pressure is assessed separately from the full 24-hour average. ESC’s daytime hypertension threshold is at least 135 systolic or 85 diastolic mmHg, so this lower awake average does not meet it.\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356",
+      "explanationHtml": "<h2>ESC Home and Ambulatory Diagnostic Thresholds</h2><p><strong>Correct answer: D — A 24-hour ambulatory average of 130/80 mmHg</strong></p><h3>Use the Threshold for the Setting Being Measured</h3><ul><li><strong>Office, home, awake, sleep and full-day averages are not interchangeable.</strong> Sleep values normally lower the twenty-four-hour average, so its diagnostic boundary differs from the daytime boundary.<ul><li>Under ESC, office hypertension begins at <mark>140/90 mmHg</mark>, home and daytime ambulatory hypertension at <mark>135/85 mmHg</mark>, the twenty-four-hour average at <mark>130/80 mmHg</mark> and nighttime hypertension at <mark>120/70 mmHg</mark>.</li><li>Either a systolic or a diastolic component at or above its threshold is sufficient for that setting. A slash in a compact table does not mean that both values must be elevated simultaneously.</li></ul></li></ul><h3>Review Recording Quality and the Named Framework</h3><ul><li><strong>A usable ABPM study needs an appropriate cuff, enough valid readings and accurate wake–sleep information.</strong> A single isolated peak is not the same as an elevated time-period average.<ul><li>Use a diary to interpret sleep, work, exercise, symptoms and medication timing. Assess whether disturbed sleep or measurement artifacts could affect interpretation.</li><li>Home monitoring is valuable for repeated resting values but usually does not characterize sleep pressure. ABPM is useful when a white-coat or masked phenotype or a nocturnal problem is suspected. American guidance also maps out-of-office values to its lower office threshold; do not silently substitute those mappings into the ESC diagnostic table. Confirmation, cardiovascular risk and organ damage determine the clinical plan after the phenotype is identified. The question names ESC and the monitoring interval so the numerical answer is defensible rather than dependent on an unstated society or on a single nonrepresentative reading.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>ESC 2024 setting</th><th>Hypertension if SBP or DBP reaches</th></tr></thead><tbody><tr><td>Office</td><td>140 or <mark>90 mmHg</mark></td></tr><tr><td>Home average</td><td>135 or <mark>85 mmHg</mark></td></tr><tr><td>Awake ABPM average</td><td>135 or <mark>85 mmHg</mark></td></tr><tr><td>24-hour ABPM average</td><td>130 or <mark>80 mmHg</mark></td></tr><tr><td>Sleep ABPM average</td><td>120 or <mark>70 mmHg</mark></td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — A sleep ambulatory average of 110/65 mmHg:</strong> Sleep pressure has a lower threshold than daytime pressure. ESC uses at least 120 systolic or 70 diastolic mmHg for nocturnal hypertension; 110/65 belongs to a different lower reference mapping.</li><li><strong>B — A home average of 130/80 mmHg:</strong> That average is relevant to some American threshold mappings and to elevated-pressure risk assessment. ESC uses a home diagnostic hypertension threshold of at least 135 systolic or 85 diastolic mmHg.</li><li><strong>C — An awake ambulatory average of 130/80 mmHg:</strong> Awake ambulatory pressure is assessed separately from the full 24-hour average. ESC’s daytime hypertension threshold is at least 135 systolic or 85 diastolic mmHg, so this lower awake average does not meet it.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "ESC Home and Ambulatory Diagnostic Thresholds",
+        "sections": [
+          {
+            "heading": "Use the Threshold for the Setting Being Measured",
+            "bullets": [
+              {
+                "text": "**Office, home, awake, sleep and full-day averages are not interchangeable.** Sleep values normally lower the twenty-four-hour average, so its diagnostic boundary differs from the daytime boundary.",
+                "children": [
+                  "Under ESC, office hypertension begins at ==140/90 mmHg==, home and daytime ambulatory hypertension at ==135/85 mmHg==, the twenty-four-hour average at ==130/80 mmHg== and nighttime hypertension at ==120/70 mmHg==.",
+                  "Either a systolic or a diastolic component at or above its threshold is sufficient for that setting. A slash in a compact table does not mean that both values must be elevated simultaneously."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Review Recording Quality and the Named Framework",
+            "bullets": [
+              {
+                "text": "**A usable ABPM study needs an appropriate cuff, enough valid readings and accurate wake–sleep information.** A single isolated peak is not the same as an elevated time-period average.",
+                "children": [
+                  "Use a diary to interpret sleep, work, exercise, symptoms and medication timing. Assess whether disturbed sleep or measurement artifacts could affect interpretation.",
+                  "Home monitoring is valuable for repeated resting values but usually does not characterize sleep pressure. ABPM is useful when a white-coat or masked phenotype or a nocturnal problem is suspected. American guidance also maps out-of-office values to its lower office threshold; do not silently substitute those mappings into the ESC diagnostic table. Confirmation, cardiovascular risk and organ damage determine the clinical plan after the phenotype is identified. The question names ESC and the monitoring interval so the numerical answer is defensible rather than dependent on an unstated society or on a single nonrepresentative reading."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "ESC 2024 setting",
+              "Hypertension if SBP or DBP reaches"
+            ],
+            "rows": [
+              [
+                "Office",
+                "140 or ==90 mmHg=="
+              ],
+              [
+                "Home average",
+                "135 or ==85 mmHg=="
+              ],
+              [
+                "Awake ABPM average",
+                "135 or ==85 mmHg=="
+              ],
+              [
+                "24-hour ABPM average",
+                "130 or ==80 mmHg=="
+              ],
+              [
+                "Sleep ABPM average",
+                "120 or ==70 mmHg=="
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Sleep pressure has a lower threshold than daytime pressure. ESC uses at least 120 systolic or 70 diastolic mmHg for nocturnal hypertension; 110/65 belongs to a different lower reference mapping."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "That average is relevant to some American threshold mappings and to elevated-pressure risk assessment. ESC uses a home diagnostic hypertension threshold of at least 135 systolic or 85 diastolic mmHg."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Awake ambulatory pressure is assessed separately from the full 24-hour average. ESC’s daytime hypertension threshold is at least 135 systolic or 85 diastolic mmHg, so this lower awake average does not meet it."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        },
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Use framework-specific home and ambulatory thresholds rather than transferring an office cutoff"
+    },
+    {
+      "id": "cardiology-rebuild-11-006",
+      "topic": "Measurement classification and blood-pressure phenotypes",
+      "question": "An untreated adult has repeated standardized office readings around 148/92 mmHg. Reliable home and ambulatory averages are below the corresponding ESC diagnostic thresholds. Which BP phenotype is present?",
+      "options": [
+        "Sustained hypertension",
+        "Masked hypertension",
+        "White-coat hypertension",
+        "White-coat uncontrolled hypertension"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Untreated White-Coat Hypertension\n\nCorrect answer: White-coat hypertension\n\nDefine the Discordance in the Correct Treatment Setting\n\n**White-coat hypertension is an untreated office-high, out-of-office-below-threshold pattern.** Correct technique and a reliable home or ambulatory study are needed before assigning it.\n\nUnder ESC 2024, an office average of at least 140 systolic or 90 diastolic mmHg is compared with home or awake ambulatory ==135/85 mmHg== and twenty-four-hour ambulatory ==130/80 mmHg== boundaries.\n\nA lower out-of-office result is not automatically normal if it still exceeds the relevant threshold. Review the actual average and setting rather than merely noting that it is lower than the clinic value.\n\nPlan Risk Assessment and Surveillance\n\n**White-coat hypertension should not trigger reflex drug escalation from the office number alone.** Assess overall cardiovascular risk, kidney disease and hypertension-mediated organ damage.\n\nProvide appropriate lifestyle measures and repeat out-of-office assessment over time. Some patients progress to sustained hypertension, and the phenotype is not a guarantee of lifelong low risk.\n\nDrug treatment is individualized when risk or organ damage changes the balance; do not turn the label into an absolute prohibition on medication. In a treated patient, adding medicines solely to normalize an office reading can cause hypotension at home. Conversely, a convincing history of high readings outside the clinic deserves investigation even if one home series was reassuring. ABPM can clarify nighttime pressure that ordinary home monitoring may miss. Document whether the patient is untreated or treated so the terminology and action are consistent. The key interpretation combines the two measurement environments with treatment status rather than equating an office-high result with established sustained disease.\n\nSustained hypertension: Sustained hypertension requires elevated pressure both in the office and in the relevant out-of-office setting. The supplied reliable home and ambulatory findings do not meet that pattern.\n\nMasked hypertension: Masked hypertension is the reverse discordance: office pressure is below the diagnostic threshold while home or ambulatory pressure is elevated. This patient’s excess is in the office setting.\n\nWhite-coat uncontrolled hypertension: This term describes a treated patient whose office readings suggest poor control while out-of-office pressure is controlled. The stem specifies no treatment, so white-coat hypertension is the appropriate untreated phenotype.\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356",
+      "explanationHtml": "<h2>Untreated White-Coat Hypertension</h2><p><strong>Correct answer: C — White-coat hypertension</strong></p><h3>Define the Discordance in the Correct Treatment Setting</h3><ul><li><strong>White-coat hypertension is an untreated office-high, out-of-office-below-threshold pattern.</strong> Correct technique and a reliable home or ambulatory study are needed before assigning it.<ul><li>Under ESC 2024, an office average of at least 140 systolic or 90 diastolic mmHg is compared with home or awake ambulatory <mark>135/85 mmHg</mark> and twenty-four-hour ambulatory <mark>130/80 mmHg</mark> boundaries.</li><li>A lower out-of-office result is not automatically normal if it still exceeds the relevant threshold. Review the actual average and setting rather than merely noting that it is lower than the clinic value.</li></ul></li></ul><h3>Plan Risk Assessment and Surveillance</h3><ul><li><strong>White-coat hypertension should not trigger reflex drug escalation from the office number alone.</strong> Assess overall cardiovascular risk, kidney disease and hypertension-mediated organ damage.<ul><li>Provide appropriate lifestyle measures and repeat out-of-office assessment over time. Some patients progress to sustained hypertension, and the phenotype is not a guarantee of lifelong low risk.</li><li>Drug treatment is individualized when risk or organ damage changes the balance; do not turn the label into an absolute prohibition on medication. In a treated patient, adding medicines solely to normalize an office reading can cause hypotension at home. Conversely, a convincing history of high readings outside the clinic deserves investigation even if one home series was reassuring. ABPM can clarify nighttime pressure that ordinary home monitoring may miss. Document whether the patient is untreated or treated so the terminology and action are consistent. The key interpretation combines the two measurement environments with treatment status rather than equating an office-high result with established sustained disease.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Sustained hypertension:</strong> Sustained hypertension requires elevated pressure both in the office and in the relevant out-of-office setting. The supplied reliable home and ambulatory findings do not meet that pattern.</li><li><strong>B — Masked hypertension:</strong> Masked hypertension is the reverse discordance: office pressure is below the diagnostic threshold while home or ambulatory pressure is elevated. This patient’s excess is in the office setting.</li><li><strong>D — White-coat uncontrolled hypertension:</strong> This term describes a treated patient whose office readings suggest poor control while out-of-office pressure is controlled. The stem specifies no treatment, so white-coat hypertension is the appropriate untreated phenotype.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Untreated White-Coat Hypertension",
+        "sections": [
+          {
+            "heading": "Define the Discordance in the Correct Treatment Setting",
+            "bullets": [
+              {
+                "text": "**White-coat hypertension is an untreated office-high, out-of-office-below-threshold pattern.** Correct technique and a reliable home or ambulatory study are needed before assigning it.",
+                "children": [
+                  "Under ESC 2024, an office average of at least 140 systolic or 90 diastolic mmHg is compared with home or awake ambulatory ==135/85 mmHg== and twenty-four-hour ambulatory ==130/80 mmHg== boundaries.",
+                  "A lower out-of-office result is not automatically normal if it still exceeds the relevant threshold. Review the actual average and setting rather than merely noting that it is lower than the clinic value."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Plan Risk Assessment and Surveillance",
+            "bullets": [
+              {
+                "text": "**White-coat hypertension should not trigger reflex drug escalation from the office number alone.** Assess overall cardiovascular risk, kidney disease and hypertension-mediated organ damage.",
+                "children": [
+                  "Provide appropriate lifestyle measures and repeat out-of-office assessment over time. Some patients progress to sustained hypertension, and the phenotype is not a guarantee of lifelong low risk.",
+                  "Drug treatment is individualized when risk or organ damage changes the balance; do not turn the label into an absolute prohibition on medication. In a treated patient, adding medicines solely to normalize an office reading can cause hypotension at home. Conversely, a convincing history of high readings outside the clinic deserves investigation even if one home series was reassuring. ABPM can clarify nighttime pressure that ordinary home monitoring may miss. Document whether the patient is untreated or treated so the terminology and action are consistent. The key interpretation combines the two measurement environments with treatment status rather than equating an office-high result with established sustained disease."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Sustained hypertension requires elevated pressure both in the office and in the relevant out-of-office setting. The supplied reliable home and ambulatory findings do not meet that pattern."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Masked hypertension is the reverse discordance: office pressure is below the diagnostic threshold while home or ambulatory pressure is elevated. This patient’s excess is in the office setting."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "This term describes a treated patient whose office readings suggest poor control while out-of-office pressure is controlled. The stem specifies no treatment, so white-coat hypertension is the appropriate untreated phenotype."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        },
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Recognize untreated white-coat hypertension and plan surveillance without reflex escalation"
+    },
+    {
+      "id": "cardiology-rebuild-11-007",
+      "topic": "Measurement classification and blood-pressure phenotypes",
+      "question": "An untreated adult has repeated office BP around 126/76 mmHg but validated home averages of 146/92 mmHg and an awake ambulatory average of 143/89 mmHg. What is the most appropriate interpretation?",
+      "options": [
+        "White-coat hypertension requiring office-only follow-up",
+        "Masked hypertension requiring cardiovascular-risk and treatment assessment",
+        "Normotension because repeated office measurements are below 140/90 mmHg",
+        "Transient home-measurement artifact without a hypertension phenotype"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Masked Hypertension Despite Reassuring Office Values\n\nCorrect answer: Masked hypertension requiring cardiovascular-risk and treatment assessment\n\nIdentify the Hidden Pressure Burden\n\n**Masked hypertension means office pressure is below the diagnostic boundary while the appropriate out-of-office average is elevated.** It can explain organ damage that appears disproportionate to clinic readings.\n\nThe home and awake ambulatory averages in the stem exceed the ESC ==135/85 mmHg== threshold. They also exceed relevant American hypertension mappings, so the basic interpretation is not dependent on a borderline framework difference.\n\nIn a treated patient the analogous phenomenon is masked uncontrolled hypertension: the clinic appears controlled while pressure elsewhere remains high.\n\nConfirm Quality and Act on Risk\n\n**Reliable out-of-office hypertension deserves management rather than reassurance from the clinic number alone.** Review measurement technique, cuff size, medication or substance exposure, work and sleep patterns and relevant symptoms.\n\nAssess kidney function, albuminuria, ECG and other indicated markers of organ damage and cardiovascular risk. Select lifestyle and drug treatment using the confirmed phenotype, comorbidities and applicable guideline.\n\nABPM can identify nocturnal hypertension or a work-related pattern not captured by occasional home readings. Do not infer that anxiety at home is the cause without evaluating the record, particularly when two methods agree. Conversely, an isolated unvalidated watch reading should not establish masked hypertension. Explain how and when to monitor and arrange follow-up for treatment response and adverse effects. A patient whose office pressure is already modest may need careful out-of-office titration to avoid excessive lowering during other periods. The objective is durable control of the patient’s real pressure exposure, not normalization of a clinic measure that was already reassuring.\n\nWhite-coat hypertension requiring office-only follow-up: White-coat hypertension has elevated office pressure with lower out-of-office values. The supplied pattern is opposite, and office-only follow-up would continue to miss the actual pressure burden.\n\nNormotension because repeated office measurements are below 140/90 mmHg: A below-threshold office average does not negate reliable elevated out-of-office pressure. Home and ambulatory evidence must be incorporated into diagnosis and care.\n\nTransient home-measurement artifact without a hypertension phenotype: Technique and device artifacts are genuine causes of discordant readings and must be checked. Here validated home measurements are corroborated by ABPM, making a measurement-only dismissal less defensible.\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356",
+      "explanationHtml": "<h2>Masked Hypertension Despite Reassuring Office Values</h2><p><strong>Correct answer: B — Masked hypertension requiring cardiovascular-risk and treatment assessment</strong></p><h3>Identify the Hidden Pressure Burden</h3><ul><li><strong>Masked hypertension means office pressure is below the diagnostic boundary while the appropriate out-of-office average is elevated.</strong> It can explain organ damage that appears disproportionate to clinic readings.<ul><li>The home and awake ambulatory averages in the stem exceed the ESC <mark>135/85 mmHg</mark> threshold. They also exceed relevant American hypertension mappings, so the basic interpretation is not dependent on a borderline framework difference.</li><li>In a treated patient the analogous phenomenon is masked uncontrolled hypertension: the clinic appears controlled while pressure elsewhere remains high.</li></ul></li></ul><h3>Confirm Quality and Act on Risk</h3><ul><li><strong>Reliable out-of-office hypertension deserves management rather than reassurance from the clinic number alone.</strong> Review measurement technique, cuff size, medication or substance exposure, work and sleep patterns and relevant symptoms.<ul><li>Assess kidney function, albuminuria, ECG and other indicated markers of organ damage and cardiovascular risk. Select lifestyle and drug treatment using the confirmed phenotype, comorbidities and applicable guideline.</li><li>ABPM can identify nocturnal hypertension or a work-related pattern not captured by occasional home readings. Do not infer that anxiety at home is the cause without evaluating the record, particularly when two methods agree. Conversely, an isolated unvalidated watch reading should not establish masked hypertension. Explain how and when to monitor and arrange follow-up for treatment response and adverse effects. A patient whose office pressure is already modest may need careful out-of-office titration to avoid excessive lowering during other periods. The objective is durable control of the patient’s real pressure exposure, not normalization of a clinic measure that was already reassuring.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — White-coat hypertension requiring office-only follow-up:</strong> White-coat hypertension has elevated office pressure with lower out-of-office values. The supplied pattern is opposite, and office-only follow-up would continue to miss the actual pressure burden.</li><li><strong>C — Normotension because repeated office measurements are below 140/90 mmHg:</strong> A below-threshold office average does not negate reliable elevated out-of-office pressure. Home and ambulatory evidence must be incorporated into diagnosis and care.</li><li><strong>D — Transient home-measurement artifact without a hypertension phenotype:</strong> Technique and device artifacts are genuine causes of discordant readings and must be checked. Here validated home measurements are corroborated by ABPM, making a measurement-only dismissal less defensible.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Masked Hypertension Despite Reassuring Office Values",
+        "sections": [
+          {
+            "heading": "Identify the Hidden Pressure Burden",
+            "bullets": [
+              {
+                "text": "**Masked hypertension means office pressure is below the diagnostic boundary while the appropriate out-of-office average is elevated.** It can explain organ damage that appears disproportionate to clinic readings.",
+                "children": [
+                  "The home and awake ambulatory averages in the stem exceed the ESC ==135/85 mmHg== threshold. They also exceed relevant American hypertension mappings, so the basic interpretation is not dependent on a borderline framework difference.",
+                  "In a treated patient the analogous phenomenon is masked uncontrolled hypertension: the clinic appears controlled while pressure elsewhere remains high."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Confirm Quality and Act on Risk",
+            "bullets": [
+              {
+                "text": "**Reliable out-of-office hypertension deserves management rather than reassurance from the clinic number alone.** Review measurement technique, cuff size, medication or substance exposure, work and sleep patterns and relevant symptoms.",
+                "children": [
+                  "Assess kidney function, albuminuria, ECG and other indicated markers of organ damage and cardiovascular risk. Select lifestyle and drug treatment using the confirmed phenotype, comorbidities and applicable guideline.",
+                  "ABPM can identify nocturnal hypertension or a work-related pattern not captured by occasional home readings. Do not infer that anxiety at home is the cause without evaluating the record, particularly when two methods agree. Conversely, an isolated unvalidated watch reading should not establish masked hypertension. Explain how and when to monitor and arrange follow-up for treatment response and adverse effects. A patient whose office pressure is already modest may need careful out-of-office titration to avoid excessive lowering during other periods. The objective is durable control of the patient’s real pressure exposure, not normalization of a clinic measure that was already reassuring."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "White-coat hypertension has elevated office pressure with lower out-of-office values. The supplied pattern is opposite, and office-only follow-up would continue to miss the actual pressure burden."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "A below-threshold office average does not negate reliable elevated out-of-office pressure. Home and ambulatory evidence must be incorporated into diagnosis and care."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Technique and device artifacts are genuine causes of discordant readings and must be checked. Here validated home measurements are corroborated by ABPM, making a measurement-only dismissal less defensible."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        },
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Recognize masked hypertension despite apparently reassuring office readings"
+    },
+    {
+      "id": "cardiology-rebuild-11-008",
+      "topic": "Measurement classification and blood-pressure phenotypes",
+      "question": "After five minutes supine rest, an older adult has BP 158/84 mmHg. At one minute after standing it is 132/76 mmHg with lightheadedness, and at three minutes it is 134/76 mmHg. Which interpretation is most appropriate?",
+      "options": [
+        "Orthostatic hypotension based on the sustained systolic fall",
+        "No orthostatic hypotension because standing systolic pressure remains above 120 mmHg",
+        "No orthostatic hypotension because diastolic pressure fell by less than 10 mmHg",
+        "Postural orthostatic tachycardia syndrome based on symptoms alone"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Timed Assessment of Orthostatic Hypotension\n\nCorrect answer: Orthostatic hypotension based on the sustained systolic fall\n\nMeasure the Change at Defined Time Points\n\n**Orthostatic hypotension is usually a sustained fall of at least ==20 mmHg== systolic or ==10 mmHg== diastolic within three minutes of standing.** Symptoms support clinical significance but are not required in every case.\n\nObtain a resting baseline after about five minutes and repeat at one and three minutes after standing. The patient’s systolic fall is ==26 mmHg== at one minute and ==24 mmHg== at three minutes.\n\nA higher systolic threshold is used in some autonomic settings with marked supine hypertension. This question uses the standard guideline definition rather than silently applying a different specialist convention.\n\nManage Coexisting Hypertension and Postural Symptoms Together\n\n**Orthostatic hypotension does not mean that every antihypertensive must be stopped.** Assess volume status, anemia, autonomic disease, heart rate and drug effects, including alpha-blockers and other vasodilating or sedating medicines.\n\nReview falls, meals, dehydration and the timing of symptoms. Supine hypertension can coexist with impaired standing tolerance, making a single seated target insufficient for the full management problem.\n\nCorrect reversible contributors and individualize the pressure target and regimen. Avoid rapid escalation from the supine value without considering symptomatic standing measurements, but also avoid abandoning cardiovascular-risk treatment without reassessment. Delayed symptoms may require longer standing or specialist evaluation beyond a normal initial three-minute test. A patient with a convincing postural history therefore deserves further assessment if the standard test is negative. The present measurements are already diagnostic under the stated rule and demonstrate why a modest absolute standing systolic pressure can coexist with clinically important orthostatic hypotension.\n\nNo orthostatic hypotension because standing systolic pressure remains above 120 mmHg: The usual definition is based on the fall from baseline, not a requirement to reach an absolute systolic value below 120. The supplied symptomatic systolic decrease exceeds the standard threshold.\n\nNo orthostatic hypotension because diastolic pressure fell by less than 10 mmHg: A qualifying systolic or diastolic fall can establish the usual definition. Both components do not need to cross their thresholds simultaneously.\n\nPostural orthostatic tachycardia syndrome based on symptoms alone: POTS requires an appropriate sustained heart-rate response and clinical context without the defining orthostatic hypotension. No heart-rate criterion is supplied, while a clear BP fall is documented.\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356",
+      "explanationHtml": "<h2>Timed Assessment of Orthostatic Hypotension</h2><p><strong>Correct answer: A — Orthostatic hypotension based on the sustained systolic fall</strong></p><h3>Measure the Change at Defined Time Points</h3><ul><li><strong>Orthostatic hypotension is usually a sustained fall of at least <mark>20 mmHg</mark> systolic or <mark>10 mmHg</mark> diastolic within three minutes of standing.</strong> Symptoms support clinical significance but are not required in every case.<ul><li>Obtain a resting baseline after about five minutes and repeat at one and three minutes after standing. The patient’s systolic fall is <mark>26 mmHg</mark> at one minute and <mark>24 mmHg</mark> at three minutes.</li><li>A higher systolic threshold is used in some autonomic settings with marked supine hypertension. This question uses the standard guideline definition rather than silently applying a different specialist convention.</li></ul></li></ul><h3>Manage Coexisting Hypertension and Postural Symptoms Together</h3><ul><li><strong>Orthostatic hypotension does not mean that every antihypertensive must be stopped.</strong> Assess volume status, anemia, autonomic disease, heart rate and drug effects, including alpha-blockers and other vasodilating or sedating medicines.<ul><li>Review falls, meals, dehydration and the timing of symptoms. Supine hypertension can coexist with impaired standing tolerance, making a single seated target insufficient for the full management problem.</li><li>Correct reversible contributors and individualize the pressure target and regimen. Avoid rapid escalation from the supine value without considering symptomatic standing measurements, but also avoid abandoning cardiovascular-risk treatment without reassessment. Delayed symptoms may require longer standing or specialist evaluation beyond a normal initial three-minute test. A patient with a convincing postural history therefore deserves further assessment if the standard test is negative. The present measurements are already diagnostic under the stated rule and demonstrate why a modest absolute standing systolic pressure can coexist with clinically important orthostatic hypotension.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — No orthostatic hypotension because standing systolic pressure remains above 120 mmHg:</strong> The usual definition is based on the fall from baseline, not a requirement to reach an absolute systolic value below 120. The supplied symptomatic systolic decrease exceeds the standard threshold.</li><li><strong>C — No orthostatic hypotension because diastolic pressure fell by less than 10 mmHg:</strong> A qualifying systolic or diastolic fall can establish the usual definition. Both components do not need to cross their thresholds simultaneously.</li><li><strong>D — Postural orthostatic tachycardia syndrome based on symptoms alone:</strong> POTS requires an appropriate sustained heart-rate response and clinical context without the defining orthostatic hypotension. No heart-rate criterion is supplied, while a clear BP fall is documented.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Timed Assessment of Orthostatic Hypotension",
+        "sections": [
+          {
+            "heading": "Measure the Change at Defined Time Points",
+            "bullets": [
+              {
+                "text": "**Orthostatic hypotension is usually a sustained fall of at least ==20 mmHg== systolic or ==10 mmHg== diastolic within three minutes of standing.** Symptoms support clinical significance but are not required in every case.",
+                "children": [
+                  "Obtain a resting baseline after about five minutes and repeat at one and three minutes after standing. The patient’s systolic fall is ==26 mmHg== at one minute and ==24 mmHg== at three minutes.",
+                  "A higher systolic threshold is used in some autonomic settings with marked supine hypertension. This question uses the standard guideline definition rather than silently applying a different specialist convention."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Manage Coexisting Hypertension and Postural Symptoms Together",
+            "bullets": [
+              {
+                "text": "**Orthostatic hypotension does not mean that every antihypertensive must be stopped.** Assess volume status, anemia, autonomic disease, heart rate and drug effects, including alpha-blockers and other vasodilating or sedating medicines.",
+                "children": [
+                  "Review falls, meals, dehydration and the timing of symptoms. Supine hypertension can coexist with impaired standing tolerance, making a single seated target insufficient for the full management problem.",
+                  "Correct reversible contributors and individualize the pressure target and regimen. Avoid rapid escalation from the supine value without considering symptomatic standing measurements, but also avoid abandoning cardiovascular-risk treatment without reassessment. Delayed symptoms may require longer standing or specialist evaluation beyond a normal initial three-minute test. A patient with a convincing postural history therefore deserves further assessment if the standard test is negative. The present measurements are already diagnostic under the stated rule and demonstrate why a modest absolute standing systolic pressure can coexist with clinically important orthostatic hypotension."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "The usual definition is based on the fall from baseline, not a requirement to reach an absolute systolic value below 120. The supplied symptomatic systolic decrease exceeds the standard threshold."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "A qualifying systolic or diastolic fall can establish the usual definition. Both components do not need to cross their thresholds simultaneously."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "POTS requires an appropriate sustained heart-rate response and clinical context without the defining orthostatic hypotension. No heart-rate criterion is supplied, while a clear BP fall is documented."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        },
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Diagnose orthostatic hypotension using timed postural measurements"
+    },
+    {
+      "id": "cardiology-rebuild-11-009",
+      "topic": "Measurement classification and blood-pressure phenotypes",
+      "question": "A reliable ABPM study shows an awake average of 138/84 mmHg and a sleep average of 132/78 mmHg. Which interpretation best fits ESC 2024?",
+      "options": [
+        "Normal nocturnal pressure because it is lower than the awake average",
+        "Nocturnal hypertension with a reduced nighttime dip",
+        "An extreme-dipping pattern with a normal sleep pressure",
+        "A reverse-dipping pattern because the sleep average exceeds the nocturnal threshold"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Nocturnal Hypertension and a Nondipping Pattern\n\nCorrect answer: Nocturnal hypertension with a reduced nighttime dip\n\nDistinguish the Absolute Sleep Level From the Relative Dip\n\n**Nocturnal hypertension and nondipping are related but different classifications.** One uses an absolute nighttime average and the other compares nighttime with daytime pressure.\n\nESC nocturnal hypertension begins at sleep systolic at least 120 or diastolic at least ==70 mmHg==. Here both components exceed the threshold.\n\nA usual nighttime fall is around ==10%==–==20%==. The systolic fall from 138 to 132 is approximately ==4%==, supporting reduced dipping. A reverse dip means nighttime pressure rises above daytime, while an extreme dip is greater than ==20%==.\n\nInterpret the Pattern Without Prescribing a Universal Bedtime Rule\n\n**Review sleep quality, the diary and possible contributors such as OSA, CKD, diabetes-related autonomic disease and salt sensitivity.** Cuff-related sleep disruption can affect the apparent pattern.\n\nNocturnal hypertension carries prognostic information, but the finding does not automatically establish a particular secondary diagnosis. Choose investigations from the wider clinical phenotype.\n\nOptimize adequate around-the-clock treatment and adherence. ESC does not endorse routine bedtime dosing of all BP drugs as an established event-prevention strategy. The 2025 BedMed trial also did not show a reduction in death or major cardiovascular events from bedtime rather than morning administration in its primary-care population. This does not mean that timing is irrelevant to every individual’s symptoms or pressure control; it means that a favorable monitoring pattern must not be converted into a universal proven-outcome claim. Reassess actual pressure exposure and tolerability after a patient-specific change and avoid nocturnal hypotension, falls or impractical dosing schedules. The best interpretation names both the elevated sleep average and the small relative decline.\n\nNormal nocturnal pressure because it is lower than the awake average: A nighttime value can be lower than daytime yet still exceed the sleep hypertension threshold. The supplied 132/78 is above the ESC 120/70 mmHg nighttime boundary.\n\nAn extreme-dipping pattern with a normal sleep pressure: Extreme dipping means a much larger relative nighttime reduction, generally more than 20%. The systolic decrease here is only about 4%, and the sleep average remains elevated.\n\nA reverse-dipping pattern because the sleep average exceeds the nocturnal threshold: Reverse dipping refers to sleep pressure higher than awake pressure, not merely pressure above the nighttime hypertension cutoff. The patient’s sleep value is lower than the awake value.\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178\n\nBedMed randomized medication-timing trial, 2025 — https://doi.org/10.1001/jama.2025.4390",
+      "explanationHtml": "<h2>Nocturnal Hypertension and a Nondipping Pattern</h2><p><strong>Correct answer: B — Nocturnal hypertension with a reduced nighttime dip</strong></p><h3>Distinguish the Absolute Sleep Level From the Relative Dip</h3><ul><li><strong>Nocturnal hypertension and nondipping are related but different classifications.</strong> One uses an absolute nighttime average and the other compares nighttime with daytime pressure.<ul><li>ESC nocturnal hypertension begins at sleep systolic at least 120 or diastolic at least <mark>70 mmHg</mark>. Here both components exceed the threshold.</li><li>A usual nighttime fall is around <mark>10%</mark>–<mark>20%</mark>. The systolic fall from 138 to 132 is approximately <mark>4%</mark>, supporting reduced dipping. A reverse dip means nighttime pressure rises above daytime, while an extreme dip is greater than <mark>20%</mark>.</li></ul></li></ul><h3>Interpret the Pattern Without Prescribing a Universal Bedtime Rule</h3><ul><li><strong>Review sleep quality, the diary and possible contributors such as OSA, CKD, diabetes-related autonomic disease and salt sensitivity.</strong> Cuff-related sleep disruption can affect the apparent pattern.<ul><li>Nocturnal hypertension carries prognostic information, but the finding does not automatically establish a particular secondary diagnosis. Choose investigations from the wider clinical phenotype.</li><li>Optimize adequate around-the-clock treatment and adherence. ESC does not endorse routine bedtime dosing of all BP drugs as an established event-prevention strategy. The 2025 BedMed trial also did not show a reduction in death or major cardiovascular events from bedtime rather than morning administration in its primary-care population. This does not mean that timing is irrelevant to every individual’s symptoms or pressure control; it means that a favorable monitoring pattern must not be converted into a universal proven-outcome claim. Reassess actual pressure exposure and tolerability after a patient-specific change and avoid nocturnal hypotension, falls or impractical dosing schedules. The best interpretation names both the elevated sleep average and the small relative decline.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Normal nocturnal pressure because it is lower than the awake average:</strong> A nighttime value can be lower than daytime yet still exceed the sleep hypertension threshold. The supplied 132/78 is above the ESC 120/70 mmHg nighttime boundary.</li><li><strong>C — An extreme-dipping pattern with a normal sleep pressure:</strong> Extreme dipping means a much larger relative nighttime reduction, generally more than 20%. The systolic decrease here is only about 4%, and the sleep average remains elevated.</li><li><strong>D — A reverse-dipping pattern because the sleep average exceeds the nocturnal threshold:</strong> Reverse dipping refers to sleep pressure higher than awake pressure, not merely pressure above the nighttime hypertension cutoff. The patient’s sleep value is lower than the awake value.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li><li><a href=\"https://doi.org/10.1001/jama.2025.4390\">BedMed randomized medication-timing trial, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Nocturnal Hypertension and a Nondipping Pattern",
+        "sections": [
+          {
+            "heading": "Distinguish the Absolute Sleep Level From the Relative Dip",
+            "bullets": [
+              {
+                "text": "**Nocturnal hypertension and nondipping are related but different classifications.** One uses an absolute nighttime average and the other compares nighttime with daytime pressure.",
+                "children": [
+                  "ESC nocturnal hypertension begins at sleep systolic at least 120 or diastolic at least ==70 mmHg==. Here both components exceed the threshold.",
+                  "A usual nighttime fall is around ==10%==–==20%==. The systolic fall from 138 to 132 is approximately ==4%==, supporting reduced dipping. A reverse dip means nighttime pressure rises above daytime, while an extreme dip is greater than ==20%==."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Interpret the Pattern Without Prescribing a Universal Bedtime Rule",
+            "bullets": [
+              {
+                "text": "**Review sleep quality, the diary and possible contributors such as OSA, CKD, diabetes-related autonomic disease and salt sensitivity.** Cuff-related sleep disruption can affect the apparent pattern.",
+                "children": [
+                  "Nocturnal hypertension carries prognostic information, but the finding does not automatically establish a particular secondary diagnosis. Choose investigations from the wider clinical phenotype.",
+                  "Optimize adequate around-the-clock treatment and adherence. ESC does not endorse routine bedtime dosing of all BP drugs as an established event-prevention strategy. The 2025 BedMed trial also did not show a reduction in death or major cardiovascular events from bedtime rather than morning administration in its primary-care population. This does not mean that timing is irrelevant to every individual’s symptoms or pressure control; it means that a favorable monitoring pattern must not be converted into a universal proven-outcome claim. Reassess actual pressure exposure and tolerability after a patient-specific change and avoid nocturnal hypotension, falls or impractical dosing schedules. The best interpretation names both the elevated sleep average and the small relative decline."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "A nighttime value can be lower than daytime yet still exceed the sleep hypertension threshold. The supplied 132/78 is above the ESC 120/70 mmHg nighttime boundary."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Extreme dipping means a much larger relative nighttime reduction, generally more than 20%. The systolic decrease here is only about 4%, and the sleep average remains elevated."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Reverse dipping refers to sleep pressure higher than awake pressure, not merely pressure above the nighttime hypertension cutoff. The patient’s sleep value is lower than the awake value."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        },
+        {
+          "label": "BedMed randomized medication-timing trial, 2025",
+          "url": "https://doi.org/10.1001/jama.2025.4390"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Identify nocturnal hypertension and nondipping with appropriate limitations"
+    }
+  ],
+  "sourceDocument": "11. Systemic Hypertension and Hypertensive Emergencies.docx",
+  "redistribution": {
+    "originalIdsPreserved": true,
+    "existingQuestions": 9,
+    "previouslyInstalledQuestions": 0,
+    "draftQuestions": 9,
+    "coverageStatus": "incomplete_requires_chapter_review",
+    "explanationStructureStatus": "original_explanations_preserved_not_rewritten"
+  }
+}
