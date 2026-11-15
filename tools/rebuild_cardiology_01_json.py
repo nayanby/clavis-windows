@@ -967,7 +967,7 @@ revise(56,answer='Review technical validity and target the unresolved management
  ('Repeat the limited stress protocol unchanged before reviewing the CT images','A repeat may help when a limitation can be corrected, but technical review should first establish the unresolved question and whether a revised or alternative study will answer it.')])
 
 if __name__=='__main__':
-    coverage=ROOT/'Cardiology/01. Cardiovascular Physiology, Hemodynamics & Investigations.coverage.json'
+    coverage=ROOT/'Cardiology/Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations.coverage.json'
     c=json.loads(coverage.read_text(encoding='utf-8'))
     assert len(rows)==c['plannedQuestions']==sum(s['questions'] for s in c['sections']),'Incomplete chapter; do not install'
     index=0

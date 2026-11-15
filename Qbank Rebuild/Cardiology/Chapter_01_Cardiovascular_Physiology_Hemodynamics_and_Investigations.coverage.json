@@ -2,7 +2,7 @@
   "subject": "Cardiology",
   "chapter": "Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations",
   "chapterNumber": 1,
-  "status": "authored_validated",
+  "status": "installed_verified",
   "countPolicy": "One question per distinct high-yield decision; increase if source review identifies gaps; remove redundant decisions. Not an official exam weighting.",
   "plannedQuestions": 56,
   "sections": [

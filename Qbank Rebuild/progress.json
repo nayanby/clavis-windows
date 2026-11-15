@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction",
+  "currentChapter": "Cardiology Chapter_03_Valvular_Heart_Diseases",
   "chapters": [
     {
       "subject": "Neurology",
@@ -493,13 +493,34 @@
         "status": "passed"
       },
       "installedSha256": "b3bbdff43a1ad22fc83cb9243c0b89b7a3d7edda3a1a6b586572d81ce6f92e8a",
-      "coverageReview": "retrospective_audit_required"
+      "coverageReview": "mapped_and_cross_checked",
+      "coverageMap": "Cardiology/Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations.coverage.json"
     },
     {
       "subject": "Cardiology",
       "chapter": 2,
       "document": "Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Cardiology/Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction.json",
+      "validation": {
+        "questions": 66,
+        "answerDistribution": {
+          "A": 17,
+          "B": 17,
+          "C": 16,
+          "D": 16
+        },
+        "minimumExplanationWords": 283,
+        "distractorRationales": 198,
+        "questionStyles": {
+          "clinical_scenario": 60,
+          "direct": 6
+        },
+        "status": "passed"
+      },
+      "installedSha256": "fddcfdf73d0122c78fb83eef60ddd8a891d3d587ce75bc457b3ff752132fa0b2",
+      "coverageMap": "Cardiology/Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Cardiology",

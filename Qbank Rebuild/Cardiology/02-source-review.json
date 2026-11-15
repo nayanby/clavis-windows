@@ -1,0 +1,1209 @@
+{
+  "chapter": 2,
+  "status": "installed_verified",
+  "plannedQuestions": 66,
+  "draftedQuestions": 66,
+  "installed": true,
+  "sourceChecks": [
+    {
+      "source": "2025 ACC/AHA ACS guideline; 2023 ESC ACS guideline; 2024 ESC CCS guideline; Fifth Universal Definition MI 2026",
+      "checked": [
+        "Canonical primary sources identified",
+        "2026 clinical MI categories primary secondary procedure-related need explicit teaching with historical terminology labeled",
+        "Full primary Fifth Universal Definition text accessed during drafting; detailed checks recorded below"
+      ],
+      "pending": []
+    },
+    {
+      "source": "Full primary Fifth Universal Definition MI 2026 available on PMC",
+      "checked": [
+        "Acute injury separated from etiology",
+        "Primary category includes spontaneous acute coronary pathology including SCAD",
+        "Diagnostic angiography does not convert a preceding spontaneous event to procedure-related MI"
+      ]
+    },
+    {
+      "source": "Fifth Universal Definition MI 2026, primary Boxes 4 and 5",
+      "checked": [
+        "Secondary confirmation beyond mismatch trigger alone",
+        "Procedure-related 30-day window and causally documented complication"
+      ],
+      "resolvedPending": [
+        "Expand standalone numerical/procedural threshold comparison during full editorial review, distinguishing 2026 from historical criteria"
+      ],
+      "resolution": "Question 4 now includes primary-confirmed OR/BOTH criteria and official ESC numerical examples with confirmation qualifications."
+    },
+    {
+      "source": "ESC ACS 2023 and ACC emergency chest-pain pathway 2022",
+      "checked": [
+        "Early presenter requires validated assay-specific serial assessment",
+        "99th percentile is not a universal single-sample rule-out boundary",
+        "Unstable angina requires ischemic evidence without established injury after adequate testing"
+      ]
+    },
+    {
+      "source": "Fifth Universal Definition MI 2026 section 11; ACC/AHA aortic disease 2022",
+      "checked": [
+        "MINOCA updated to myocardial injury working diagnosis",
+        "CMR ideally within two weeks and targeted coronary assessment",
+        "High-probability acute aortic syndrome requires definitive imaging despite ischemic ECG findings"
+      ]
+    },
+    {
+      "source": "Fifth Universal Definition MI 2026 ECG narrative; ESC ACS 2023",
+      "checked": [
+        "Age/sex-specific V2–V3 threshold and other-lead distinction",
+        "Posterior leads for V1–V3 reciprocal depression with compatible symptoms"
+      ],
+      "resolvedPending": [
+        "Corroborate ECG table values and add posterior numeric threshold during full editorial review; primary table rendering contains an age-sign inconsistency relative to narrative"
+      ],
+      "resolution": "Addressed by subsequent recorded source check and regenerated chapter explanation."
+    },
+    {
+      "source": "ESC ACS 2023; Smith 2012 primary modified Sgarbossa study",
+      "checked": [
+        "V3R/V4R in suspected inferior STEMI with RV involvement",
+        "Signed ratio -0.375 satisfies ≤-0.25; absolute magnitude phrasing distinguished",
+        "LBBB alone and negative ECG criteria do not settle occlusion diagnosis"
+      ]
+    },
+    {
+      "source": "Original de Winter report; ESC ACS 2023; Fifth Universal Definition 2026 ECG section",
+      "checked": [
+        "Occlusion-suggestive de Winter pattern requires urgent assessment despite absent standard elevation",
+        "aVR/diffuse depression indicates high-risk ischemia without uniquely identifying left-main thrombosis"
+      ]
+    },
+    {
+      "source": "ESC ACS 2023; ESC myocarditis/pericarditis 2025",
+      "checked": [
+        "Recurrent dynamic changes and refractory ischemia distinguished from resolved stable transient elevation",
+        "Inflammatory pain/rub/PR-ST evidence integrated; concavity alone does not exclude occlusion"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 and ESC ACS 2023 reperfusion recommendations",
+      "checked": [
+        "ACC/AHA direct 90 and transfer 120 minute FMC-to-device goals",
+        "ESC diagnosis-to-wire 120 minute threshold and eligible <12-hour lysis pathway",
+        "ESC diagnosis-to-lysis ten-minute target; transfer after lysis"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 contraindications; FDA TNKase label 2025",
+      "checked": [
+        "Any previous intracranial hemorrhage versus relative risk histories",
+        "84 kg standard STEMI tenecteplase tier 45 mg",
+        "Complete standard weight-tier table and indication distinction"
+      ],
+      "resolvedPending": [
+        "Add verified older-patient tenecteplase modification with exact guideline age boundary during editorial review"
+      ],
+      "resolution": "Addressed by subsequent recorded source check and regenerated chapter explanation."
+    },
+    {
+      "source": "ACC/AHA ACS 2025 P2Y12 and anticoagulation tables; ESC ACS 2023 rescue pathway",
+      "checked": [
+        "Clopidogrel 300 mg below age 75 and no load at age ≥75 in named framework",
+        "Enoxaparin example explicitly restricted to younger adequate-renal-function setting",
+        "ST resolution <50% at 60–90 minutes with persistent ischemia prompts rescue angiography"
+      ]
+    },
+    {
+      "source": "ESC ACS 2023 and ACC/AHA ACS 2025",
+      "checked": [
+        "Successful lysis leads to routine 2–24-hour angiography from bolus",
+        "Immediate rescue remains distinct from planned early strategy",
+        "Stable completed infarct >48 hours differs from ongoing ischemia shock or severe HF"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025; ESC ACS 2023 invasive strategy recommendations",
+      "checked": [
+        "Sustained VT with ongoing ischemia supports immediate invasive assessment",
+        "Stable GRACE >140 supports early consideration rather than automatic emergency category",
+        "Guideline wording and clinical deterioration qualifications retained"
+      ]
+    },
+    {
+      "source": "ESC ACS 2023 and ACC/AHA ACS 2025",
+      "checked": [
+        "Admission risk score does not override later instability",
+        "Routine P2Y12 pretreatment deferred with unknown anatomy and early angiography",
+        "Delay >24 hours permits a distinct individualized upstream strategy under named guidance"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 revascularization recommendations",
+      "checked": [
+        "CABG preference in suitable diabetic patients with complex multivessel LAD disease",
+        "Heart Team selection and surgical-risk qualification retained"
+      ]
+    },
+    {
+      "source": "ESC ACS 2023; COMPLETE 2019; CULPRIT-SHOCK 2017 primary trial reports",
+      "checked": [
+        "Stable STEMI complete revascularization index procedure or within 45 days",
+        "COMPLETE composite event rates and endpoint distinguished from isolated mortality",
+        "Shock initial culprit-only PCI with later reassessment",
+        "CULPRIT-SHOCK 30-day composite rates and staged-revascularization allowance"
+      ]
+    },
+    {
+      "source": "ESC ACS 2023 SCAD section and AHA SCAD scientific statement 2018",
+      "checked": [
+        "Stable preserved-flow SCAD favors monitored conservative management",
+        "Intervention exceptions and instrumentation hazards explained",
+        "Anticoagulation and conservative antiplatelet evidence uncertainty attributed to named guidance"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 aspirin recommendation and dosing table",
+      "checked": [
+        "162–325 mg oral load and 75–100 mg daily maintenance",
+        "Loading versus maintenance distinction and prior aspirin exposure qualification"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 P2Y12 recommendations; ticagrelor prescribing information",
+      "checked": [
+        "Previous stroke/TIA restriction for prasugrel distinguished from ticagrelor intracranial-hemorrhage contraindication",
+        "Initial ACS ticagrelor 180 mg load then 90 mg twice daily distinguished from extended prevention dosing"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 oral antiplatelet dosing table",
+      "checked": [
+        "Prasugrel 60 mg loading and 10 mg maintenance in eligible younger normal-weight PCI patient",
+        "Primary PCI distinguished from concurrent fibrinolysis and later post-lysis switching"
+      ]
+    },
+    {
+      "source": "Current Lovenox prescribing information severe renal impairment and geriatric STEMI tables",
+      "checked": [
+        "Age at least 75 plus CrCl below 30: 1 mg/kg SC every 24 hours without IV bolus",
+        "Distinguished older-patient usual-renal-function 0.75 mg/kg every 12 hours regimen"
+      ]
+    },
+    {
+      "source": "ESC ACS 2023 anticoagulation section; ESC NSTE-ACS 2011 FUTURA/OASIS-8 discussion",
+      "checked": [
+        "Additional procedural UFH required after upstream fondaparinux",
+        "Trial-specific 85/60 units per kg strategy distinguished from universal dosing"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 DAPT duration recommendations",
+      "checked": [
+        "At least twelve months default without high bleeding risk",
+        "Ticagrelor monotherapy at least one month after tolerated DAPT distinguished from stopping both agents",
+        "Selected high-bleeding-risk abbreviated treatment distinguished from universal default"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 antiplatelet therapy with oral anticoagulation",
+      "checked": [
+        "Aspirin withdrawal one to four weeks after ACS PCI with continued OAC and preferably clopidogrel",
+        "Therapeutic AF anticoagulation distinguished from low-dose vascular prevention",
+        "Named-guideline timing and individualized risk qualification retained"
+      ]
+    },
+    {
+      "source": "BSG/ESGE 2021 acute GI hemorrhage recommendations",
+      "checked": [
+        "Urgent hemostasis with interventional cardiology coordination after recent stenting",
+        "Aspirin preservation if feasible and minimized necessary P2Y12 interruption",
+        "P2Y12 reinstatement within five days if indicated attributed to named guidance"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 oxygen and analgesic/nitrate recommendations",
+      "checked": [
+        "PDE5-specific nitrate avoidance intervals 12/24/48 hours",
+        "Oxygen below 90 percent and no routine oxygen in normoxemia",
+        "RV infarction and blood-pressure qualifications; opioid absorption concerns"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 beta-blocker recommendations; 2014 NSTE-ACS guideline for PR-unit corroboration",
+      "checked": [
+        "Defer initiation during acute HF or low output and reassess after stabilization",
+        "Low-dose oral initiation only when eligible",
+        "PR 0.24 seconds equals 240 milliseconds; avoided erroneous millisecond wording in indexed 2025 text"
+      ]
+    },
+    {
+      "source": "CCS 2021 post-MI MRA eligibility; AHA/ACC/HFSA 2022 MRA safety and dosing",
+      "checked": [
+        "Post-MI LVEF at most 40 with HF or diabetes",
+        "Named-framework eGFR greater than 30 and potassium below 5 initiation boundaries",
+        "Eplerenone 25 to 50 mg daily with adequate renal function and monitoring"
+      ]
+    },
+    {
+      "source": "AHA mechanical complications statement 2021; ACS guideline 2025",
+      "checked": [
+        "Papillary muscle rupture versus functional MR and septal shunt",
+        "Soft or absent murmur despite acute severe MR",
+        "Urgent surgical evaluation with individualized stabilization and bridge support"
+      ]
+    },
+    {
+      "source": "AHA mechanical complications statement 2021; ACS guideline 2025",
+      "checked": [
+        "Ventricular-level oxygen step-up and left-to-right septal shunt",
+        "Urgent closure assessment with individualized timing only when stabilized",
+        "No mandatory delay inferred from observational survival comparisons"
+      ]
+    },
+    {
+      "source": "AHA mechanical complications statement 2021; ESC tamponade position statement 2014",
+      "checked": [
+        "Free-wall rupture as post-MI hemopericardium/tamponade cause of PEA",
+        "Emergency surgery prioritized",
+        "Controlled limited drainage only as rescue bridge when immediate surgery unavailable"
+      ]
+    },
+    {
+      "source": "AHA adult ALS 2025; ESC ACS 2023 arrhythmia section",
+      "checked": [
+        "Immediate unsynchronized defibrillation and CPR for VF",
+        "Antiarrhythmics supplement treatment of shock-refractory arrest",
+        "Post-resuscitation ischemia and reversible-trigger assessment; timing distinguished from automatic ICD indication"
+      ]
+    },
+    {
+      "source": "ESC pacing 2021 acute MI section",
+      "checked": [
+        "Inferior nodal transient block versus anterior infra-Hisian disease",
+        "Temporary pacing for refractory symptoms or hemodynamic compromise",
+        "Resolved stable infarct-related AV block does not automatically require permanent pacing"
+      ]
+    },
+    {
+      "source": "AHA LV thrombus scientific statement 2022",
+      "checked": [
+        "Confirmed post-MI LV thrombus typically treated with OAC for three months",
+        "Repeat imaging and persistent-thrombus reassessment",
+        "DOAC alternative distinguished from established warfarin; combined antiplatelet bleeding considerations"
+      ]
+    },
+    {
+      "source": "ESC myocarditis/pericarditis 2025; ACC/AHA ACS 2025",
+      "checked": [
+        "Early versus delayed post-MI inflammatory pericarditis",
+        "High-dose aspirin preference with colchicine when suitable",
+        "Five-to-seven-day early-course statement distinguished from delayed disease duration"
+      ]
+    },
+    {
+      "source": "AHA mechanical complications statement 2021",
+      "checked": [
+        "Pseudoaneurysm contained rupture with nonmyocardial sac",
+        "Neck and location clues qualified rather than treated as definitive alone",
+        "Urgency differentiated by acute instability versus chronic incidental presentation"
+      ]
+    },
+    {
+      "source": "AHA/ACC/HFSA 2022 device and EF-reassessment recommendations",
+      "checked": [
+        "Primary-prevention waiting and reassessment after MI and revascularization",
+        "NYHA-specific EF thresholds and meaningful survival qualification",
+        "Secondary-prevention indications require separate assessment"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 lipid recommendations",
+      "checked": [
+        "Nonstatin escalation at LDL at least 70; reasonable at 55–69 under named 2025 framework",
+        "Four-to-eight-week lipid reassessment"
+      ],
+      "resolvedPending": [
+        "Incorporate explicit 2026 dyslipidemia and ESC goal comparison during full editorial review; do not imply 2025 is the latest lipid guidance"
+      ],
+      "resolution": "Question 53 now directly compares 2025 ACC/AHA escalation thresholds, 2026 ACC/AHA goals and ESC 2023 goals with follow-up intervals."
+    },
+    {
+      "source": "ACC/AHA ACS 2025 rehabilitation and discharge recommendations",
+      "checked": [
+        "Predischarge comprehensive rehabilitation referral",
+        "Home or hybrid access options with risk-selection qualifications",
+        "Behavioral and pharmacological tobacco cessation support"
+      ]
+    },
+    {
+      "source": "2025 preserved-EF individual-patient randomized-trial meta-analysis; ABYSS 2024",
+      "checked": [
+        "Normal EF at least fifty percent distinguished from mildly reduced EF",
+        "No routine composite benefit in studied preserved-EF population",
+        "Initiation evidence separated from interruption noninferiority question"
+      ]
+    },
+    {
+      "source": "MINT 2023 primary report; ACC/AHA ACS 2025 anemia recommendation",
+      "checked": [
+        "30-day composite 16.9 versus 14.5 percent and P=0.07 correctly interpreted",
+        "Qualified liberal transfusion recommendation distinguished from mandatory target",
+        "Nonbleeding ACS separated from active hemorrhage and other inpatient populations"
+      ]
+    },
+    {
+      "source": "AHA/ACC CCD 2023; ESC CCS 2024 antianginal recommendations",
+      "checked": [
+        "Hemodynamic selection of dihydropyridine with bradycardia and hypertension",
+        "Rate-slowing combinations and LV dysfunction qualifications",
+        "Symptom treatment distinguished from prognostic therapy"
+      ]
+    },
+    {
+      "source": "Ranolazine current US prescribing information",
+      "checked": [
+        "Diltiazem limits ranolazine to 500 mg twice daily",
+        "Strong CYP3A inhibitor/inducer contraindications distinguished from moderate inhibitor cap",
+        "QT renal and cirrhosis precautions"
+      ]
+    },
+    {
+      "source": "AHA/ACC CCD 2023 revascularization recommendations; ESC CCS 2024",
+      "checked": [
+        "Persistent lifestyle-limiting angina supports symptom-directed revascularization",
+        "Survival claims limited to relevant anatomy modality and ventricular-function populations",
+        "Secondary prevention continues after PCI"
+      ]
+    },
+    {
+      "source": "ISCHEMIA primary enrollment report 2019; CCD guideline 2023",
+      "checked": [
+        "Unprotected left-main exclusion and external validity",
+        "EF recent ACS refractory symptoms and advanced CKD exclusions",
+        "Initial conservative strategy distinguished from never revascularizing"
+      ],
+      "resolvedPending": [
+        "Review newly indexed 2026 ISCHEMIA-EXTEND primary publication before final landmark-trial synthesis"
+      ],
+      "resolution": "Addressed by subsequent recorded source check and regenerated chapter explanation."
+    },
+    {
+      "source": "Original COURAGE 2007 and FAME 2009 trial reports",
+      "checked": [
+        "Distinct randomized comparisons and original FAME versus FAME 2",
+        "FFR threshold at most 0.80",
+        "One-year FAME composite 13.2 versus 18.3 percent; no isolated mortality claim"
+      ]
+    },
+    {
+      "source": "ESC CCS 2024 vasospastic angina recommendations",
+      "checked": [
+        "Calcium antagonists first-line prevention",
+        "Nitrate adjuncts and trigger avoidance",
+        "Dynamic spasm distinguished from fixed-lesion PCI indication"
+      ]
+    },
+    {
+      "source": "ESC CCS 2024 ANOCA/INOCA mechanism-based management",
+      "checked": [
+        "Reduced flow reserve/increased resistance distinguished from provoked spasm",
+        "Nonobstructive angiography does not exclude coronary functional disease",
+        "Endotype-guided therapy without unsupported universal mortality claims"
+      ]
+    },
+    {
+      "source": "COMPASS primary trial 2017; CCD guideline 2023",
+      "checked": [
+        "Selected low-dose rivaroxaban plus aspirin strategy",
+        "Vascular dose distinguished from therapeutic anticoagulation",
+        "Primary composite and major bleeding rates presented together"
+      ]
+    },
+    {
+      "source": "ACC/AHA dyslipidemia 2026 primary guideline and AHA official summary; ACS 2025 primary narrative",
+      "checked": [
+        "Added explicit very-high-risk LDL below 55/non-HDL below 85 goals and other-ASCVD distinction to question 53",
+        "Corroborated clopidogrel lysis age boundary against 2025 narrative; table differs at exactly age 75"
+      ],
+      "resolvedPending": [
+        "Resolve or explicitly label clopidogrel table/narrative discrepancy before installation; current question age 68 unaffected"
+      ],
+      "resolution": "Addressed by subsequent recorded source check and regenerated chapter explanation."
+    },
+    {
+      "source": "ACC/AHA ACS 2025 narrative and Table 7; ESC ACS 2023 Table 6",
+      "checked": [
+        "Question 21 now explicitly explains differing exact-age-75 boundaries",
+        "Stem remains age 68 and answer unaffected",
+        "No manufactured certainty at inconsistent boundary"
+      ]
+    },
+    {
+      "source": "ESC ACS 2023 primary supplementary ECG framework",
+      "checked": [
+        "Corroborated V2–V3 age and sex thresholds",
+        "Added posterior V7–V9 elevation at least 0.5 mm with clinical qualification"
+      ]
+    },
+    {
+      "source": "OAT primary randomized report 2006",
+      "checked": [
+        "Added trial population timing and composite outcome to question 24",
+        "Residual viability ancillary observations prevent unsupported assumption of universally nonviable myocardium"
+      ]
+    },
+    {
+      "source": "ESC ACS 2023 fibrinolysis recommendation table and narrative",
+      "checked": [
+        "Added half-dose tenecteplase consideration with exact older-than-75 guideline wording",
+        "Illustrated 45 mg standard tier to 22.5 mg modified dose",
+        "Question 20 remains age 62 standard-dose case"
+      ]
+    },
+    {
+      "source": "ISCHEMIA-EXTEND JAMA November 7 2026 primary abstract PMID 42998244",
+      "checked": [
+        "Added median nine-year follow-up and eleven-year all-cause mortality estimates",
+        "Adjusted HR 0.97 with 95 percent CI 0.86–1.09",
+        "Survival result not extrapolated to left-main exclusion or symptom outcomes"
+      ]
+    },
+    {
+      "source": "Fifth Universal Definition PMC direct recheck",
+      "checked": [
+        "Current direct request returned browser verification page; no new numerical thresholds inferred from inaccessible response"
+      ],
+      "resolvedPending": [
+        "Re-access primary procedural definition text or previously captured source before expanding numerical comparison"
+      ],
+      "resolution": "Question 4 now includes primary-confirmed OR/BOTH criteria and official ESC numerical examples with confirmation qualifications."
+    },
+    {
+      "source": "Fifth Universal Definition 2026 primary JACC and European Heart Journal copies",
+      "checked": [
+        "Recovered accessible primary indexed confirmation criteria",
+        "Added OR-versus-BOTH confirmation distinction to question 4",
+        "Recent-procedure timing alone does not establish causation"
+      ],
+      "resolvedPending": [
+        "Complete procedural numerical threshold comparison before closing full review"
+      ],
+      "resolution": "Question 4 now includes primary-confirmed OR/BOTH criteria and official ESC numerical examples with confirmation qualifications."
+    },
+    {
+      "source": "ESC official Fifth Universal Definition 2026 diagnostic slides",
+      "checked": [
+        "Six-hour intervention >5 URL and twenty-four-hour surgery >35 URL examples added",
+        "Likely diagnosis distinguished from confirmation and historical type-number thresholds"
+      ]
+    },
+    {
+      "source": "ESC ACS 2023 primary lipid recommendations",
+      "checked": [
+        "LDL below 55 and at least fifty percent baseline reduction",
+        "Four-to-six-week review and ezetimibe/PCSK9 escalation added to comparison table"
+      ]
+    },
+    {
+      "source": "FUTURA/OASIS-8 primary JAMA report 2010 DOI 10.1001/jama.2010.1320",
+      "checked": [
+        "Direct primary reference added to question 37",
+        "Verified standard 85 units/kg versus 60 with planned GPI and ACT adjustment"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 parenteral anticoagulant table; enoxaparin label",
+      "checked": [
+        "Added age/renal enoxaparin comparison table",
+        "Added fibrinolysis UFH bolus and infusion caps with aPTT titration"
+      ]
+    },
+    {
+      "source": "Lovenox current severe renal impairment dosage table",
+      "checked": [
+        "Completed all four age/renal combinations in question 36 table",
+        "Younger severe-renal-impairment labeled regimen retains 30 mg IV bolus with once-daily SC treatment"
+      ]
+    },
+    {
+      "source": "ACC/AHA ACS 2025 post-MI pericarditis Table 19",
+      "checked": [
+        "Added aspirin 500–1000 mg every 6–8 hours",
+        "Added colchicine 0.5–0.6 mg once/twice daily for three months with weight and organ-function qualifications",
+        "Anti-inflammatory aspirin distinguished from antiplatelet maintenance"
+      ]
+    },
+    {
+      "source": "EACVI/ESC CMR consensus 2026; ESC CCS guideline 2024",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehag678",
+        "https://doi.org/10.1093/eurheartj/ehae177"
+      ],
+      "questions": [
+        7,
+        63
+      ],
+      "checked": [
+        "CMR ischemic LGE distribution versus nonischemic distribution; combined T1 and T2 myocarditis assessment",
+        "Doppler CFR <2.5, IMR >=25 units, and symptoms plus ischemic ECG plus >=90% narrowing for epicardial spasm; method-dependent CFR qualification retained"
+      ],
+      "accessNote": "CMR full consensus accessed; CCS publisher-indexed guideline passages checked after direct page retrieval failed."
+    },
+    {
+      "source": "Original ARC-HBR consensus 2019; 2025 ACC/AHA ACS guideline; SCAI stent failure consensus 2023; ESC CCS guideline 2024",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6636810/",
+        "https://doi.org/10.1016/j.jacc.2024.11.009",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11308135/",
+        "https://doi.org/10.1093/eurheartj/ehae177"
+      ],
+      "questions": [
+        38,
+        58
+      ],
+      "checked": [
+        "ARC-HBR at least one major or two minor; age at least 75 and moderate renal dysfunction are minor; selected anemia renal and platelet thresholds",
+        "Stent failure mechanisms require intravascular structural assessment; restenosis can present with ACS and does not become excluded by time or symptoms alone"
+      ],
+      "status": "new_questions_source_checked_structurally_validated"
+    },
+    {
+      "source": "2025 ACC/AHA ACS guideline Table 14; 2023 ESC reperfusion pathway",
+      "urls": [
+        "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001309",
+        "https://doi.org/10.1093/eurheartj/ehad191"
+      ],
+      "questions": [
+        18,
+        19
+      ],
+      "checked": [
+        "Absolute versus relative fibrinolysis contraindications with recent stroke head trauma neurosurgery major surgery and internal bleeding time windows",
+        "Persistent uncontrolled severe hypertension distinguished from elevated pretreatment blood pressure",
+        "Acute stroke footnote explicitly not blanket permission to use a STEMI lytic regimen",
+        "Successful uncomplicated lysis: immediate transfer with routine angiography at 2–24 hours; failure or instability: rescue PCI"
+      ],
+      "accessNote": "Primary publisher-indexed Table 14 checked; ESC pathway previously verified in this review."
+    },
+    {
+      "source": "Eplerenone prescribing information; PARADISE-MI primary report; ESC 2021 pacing guideline section 8.1",
+      "urls": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9b66a393-8af1-42bc-9673-89fe471147ee",
+        "https://doi.org/10.1056/NEJMoa2104508",
+        "https://doi.org/10.1093/eurheartj/ehab364"
+      ],
+      "questions": [
+        44,
+        49
+      ],
+      "checked": [
+        "Eplerenone 25 mg daily titration toward 50 mg within four weeks as tolerated; potassium baseline within first week and at one month after initiation or dose change",
+        "Strong CYP3A inhibition contraindicated; moderate inhibitors can limit dose",
+        "PARADISE-MI primary endpoint did not establish significant superiority versus ramipril",
+        "ESC persistent post-MI AV block individualized 5–10-day observation, unresolved block by day ten supporting permanent pacing; transient recovered block distinguished"
+      ],
+      "status": "source_checked_revised"
+    },
+    {
+      "source": "ESC 2023 ACS pathway and official ACVC toolkit; ISCHEMIA original baseline report",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehad191",
+        "https://www.escardio.org/static-file/Escardio/Subspecialty/ACCA/Education/ACVC%20Toolkit/CHAP2.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6439551/"
+      ],
+      "questions": [
+        15,
+        27,
+        62
+      ],
+      "checked": [
+        "Recurrent ischemia and dynamic ECG changes are immediate invasive indications independent of an earlier lower score",
+        "ISCHEMIA excluded unprotected left-main stenosis at least 50%; conservative arm permitted clinically indicated angiography and revascularization"
+      ],
+      "status": "rechecked_after_distractor_revision"
+    },
+    {
+      "source": "Smith modified Sgarbossa primary report 2012; ESC myocarditis/pericarditis guideline 2025 Table 4 and official diagnostic slides",
+      "urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/22939607/",
+        "https://doi.org/10.1093/eurheartj/ehaf192",
+        "https://www.escardio.org/static-file/Escardio/Guidelines/Products/Slide%20sets/2025/2025%20official%20slides_MyoPeri.pdf"
+      ],
+      "questions": [
+        12,
+        16
+      ],
+      "checked": [
+        "Modified rule unweighted with one of three components sufficient; proportional discordance replaces original fixed 5-mm component",
+        "ESC 2025 definite pericarditis requires clinical presentation plus more than one additional criterion; one additional supports possible disease",
+        "Rub ECG CRP effusion and CMR inflammation criteria distinguished; PR depression and ST elevation not double-counted as independent ECG categories"
+      ],
+      "status": "source_checked_explanation_expanded"
+    },
+    {
+      "source": "2025 ACC/AHA ACS oral P2Y12 perioperative interruption table; ESC 2023 ACS invasive-risk framework",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2024.11.009",
+        "https://doi.org/10.1093/eurheartj/ehad191"
+      ],
+      "questions": [
+        26,
+        29
+      ],
+      "checked": [
+        "Elective CABG interruption: clopidogrel five days, prasugrel seven days, ticagrelor three to five days; urgent surgery considered separately with at least twenty-four hours interruption when feasible",
+        "Very-high-risk versus high-risk NSTE criteria and immediate versus early-considered inpatient timing"
+      ],
+      "status": "source_checked_explanation_expanded"
+    },
+    {
+      "source": "AHA 2025 adult cardiac arrest algorithm and adult BLS guideline",
+      "urls": [
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-CA-250527.pdf",
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support/"
+      ],
+      "questions": [
+        48
+      ],
+      "checked": [
+        "Shockable rhythm shock/CPR sequence; epinephrine after second shock and amiodarone or lidocaine after third",
+        "Epinephrine 1 mg IV/IO every 3–5 min; amiodarone 300 mg then 150 mg; manufacturer-directed biphasic energy",
+        "Compression rate 100–120/min and depth at least 5 cm avoiding greater than 6 cm"
+      ],
+      "status": "source_checked_explanation_expanded"
+    },
+    {
+      "source": "Amlodipine current prescribing information",
+      "urls": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b3dd4-91f5-4173-a992-e91b1cac6a18"
+      ],
+      "questions": [
+        59,
+        64
+      ],
+      "checked": [
+        "Chronic stable/vasospastic angina dose 5–10 mg once daily; individualized cautious initiation and adverse-effect monitoring"
+      ],
+      "status": "source_checked_explanation_expanded"
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "No independent clinician review",
+    "Full Harrison subscription text not accessed"
+  ],
+  "draftValidation": {
+    "questions": 66,
+    "answerDistribution": {
+      "A": 17,
+      "B": 17,
+      "C": 16,
+      "D": 16
+    },
+    "distractorRationales": 198,
+    "minimumExplanationWords": 283,
+    "status": "passed",
+    "limitation": "Structural validation does not complete medical or editorial review."
+  },
+  "editorialChecks": [
+    {
+      "questions": [
+        28
+      ],
+      "changes": [
+        "Replaced giveaway claims in all three pretreatment distractors with parallel realistic agent-and-dose strategies",
+        "Individual rationales distinguish clinical contexts for each agent"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        24
+      ],
+      "changes": [
+        "Replaced implausible late fibrinolysis/emergency surgery choices with competing current-admission staged and viability-selected PCI strategies",
+        "Removed giveaway universal survival wording"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "scope": "All 64 rows and coverage decision entries",
+      "checks": [
+        "All question reference keys resolve to chapter reference registry",
+        "All 64 questions have mapped coverage decisions"
+      ],
+      "status": "passed"
+    },
+    {
+      "questions": [
+        58
+      ],
+      "changes": [
+        "Replaced implausible ranolazine schedules with genuine 375 and 750 mg twice-daily formulation-based alternatives",
+        "Kept US label explicit to preserve one defensible maximum"
+      ],
+      "source": "US prescribing information; UK Ranexa SmPC https://www.medicines.org.uk/emc/product/6442/smpc",
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        58
+      ],
+      "changes": [
+        "Added UK product-information reference directly to serialized explanation to support formulation-based distractors"
+      ],
+      "status": "passed"
+    },
+    {
+      "questions": [
+        14
+      ],
+      "changes": [
+        "Replaced benign and unrelated RV distractors with three genuine competing mechanisms of global ischemia",
+        "Removed every-case wording while preserving need for anatomical and clinical confirmation"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        12
+      ],
+      "changes": [
+        "Replaced categorical LBBB giveaway options with competing absolute-threshold sign-convention and combined-threshold interpretations"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        53
+      ],
+      "changes": [
+        "Added compact exact-value table separating 2025 escalation thresholds from 2026 very-high-risk goals and follow-up interval"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        22
+      ],
+      "changes": [
+        "Replaced troponin-peak delay distractor with a competing serial-ECG reassessment interval"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        23
+      ],
+      "changes": [
+        "Made all options transfer-based invasive timing or selection strategies",
+        "Removed easy discharge distractor and clarified rescue-versus-planned angiography distinction"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        25,
+        26
+      ],
+      "changes": [
+        "Replaced biomarker-peak delay and no-investigation options with explicit delayed inpatient and selective stress-guided strategies",
+        "Rationales identify populations in which alternatives may be appropriate"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        29
+      ],
+      "changes": [
+        "Replaced explanatory giveaway and medical-only option with concrete index-admission and staged PCI strategies",
+        "Preserved diabetes complex anatomy and surgical suitability as decision variables"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        38
+      ],
+      "changes": [
+        "Verified revised parallel one six and thirty-six month DAPT choices in current author file",
+        "Removed universal and lifelong giveaway wording"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        37
+      ],
+      "changes": [
+        "Replaced unrelated oral antiplatelet substitution with competing UFH timing strategy",
+        "All choices now address anticoagulation at transition to PCI"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        45
+      ],
+      "changes": [
+        "Added mechanism and urgent imaging comparison for septal papillary-muscle and free-wall rupture"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "scope": "Full current author data and newly added tables",
+      "checks": [
+        "64 unique question titles",
+        "Four unique answer texts per question",
+        "All reference keys resolve",
+        "Mechanical comparison has three data rows; lipid comparison has six"
+      ],
+      "status": "passed",
+      "limitations": [
+        "Does not establish full medical review or distractor quality for all questions"
+      ]
+    },
+    {
+      "questions": [
+        40
+      ],
+      "changes": [
+        "Replaced delayed-hemostasis and heparin-substitution choices with plausible antiplatelet interruption/restart plans",
+        "Rationales distinguish emergency interruption from planned monotherapy and excessive fixed holds"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        49
+      ],
+      "changes": [
+        "Replaced giveaway causal claims with concrete treatment-duration and follow-up strategies"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        56
+      ],
+      "changes": [
+        "Replaced universal threshold and supranormal-target giveaways with extrapolation and equivalence-interpretation errors"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        52
+      ],
+      "changes": [
+        "Replaced regardless/permanently wording with predischarge six-week and event-triggered device strategies",
+        "Highlighted separate post-MI and post-revascularization reassessment requirements"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        61
+      ],
+      "changes": [
+        "Replaced unrelated emergency-STEMI and universal-survival distractors with competing trial-design mappings",
+        "Explicit original FAME versus FAME 2 distinction retained"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        64
+      ],
+      "changes": [
+        "Replaced giveaway triple-therapy and unsupported low-dose monotherapy choices with actual COMPASS monotherapy arm and competing antiplatelet partner",
+        "Kept vascular-versus-therapeutic dose distinction"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        59
+      ],
+      "changes": [
+        "Made all distractors competing indications or timing rationales for PCI",
+        "Removed unrelated stopping-lipid-treatment choice and every-lesion wording"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        42
+      ],
+      "changes": [
+        "Replaced full-dose/calendar and permanent-exclusion distractors with low-dose oral metoprolol and carvedilol strategies",
+        "Explanations distinguish stable long-term benefit from acute low-output contraindication"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        30,
+        32,
+        55,
+        63
+      ],
+      "changes": [
+        "Removed universal/giveaway wording from six distractors while retaining their distinct clinical errors"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        7
+      ],
+      "changes": [
+        "Replaced generic exclusion/universal-treatment options with plausible myocarditis vasospasm and plaque-disruption pathways requiring confirmation"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        7,
+        63
+      ],
+      "changes": [
+        "Added compact mechanism and diagnostic threshold tables",
+        "Made microvascular question require interpretation of numeric findings",
+        "Documented provisional question-count audit and outstanding gap dispositions"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        38,
+        58
+      ],
+      "changes": [
+        "Expanded chapter from 64 to 66 based on distinct clinical decisions rather than equal section quotas",
+        "Verified adjacent investigations chapter already covers coronary test selection",
+        "Retained separate initial-risk and changing-risk NSTE decisions with explicit audit rationale"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        13,
+        18,
+        19,
+        55
+      ],
+      "changes": [
+        "Added a structured guideline-specific contraindication table to make the screening explanation standalone",
+        "Replaced benign-variant and exercise-test distractors in de Winter question with realistic competing invasive-timing strategies",
+        "Replaced absolute-wording reperfusion distractors with primary PCI, conditional transfer and facilitated-PCI pathways",
+        "Replaced obviously unsafe rehabilitation distractors with delayed referral, advice-only and inaccessible center-only care"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        44,
+        49
+      ],
+      "changes": [
+        "Replaced potassium-supplement distractor with a plausible ARNI treatment alternative and explained the differing evidence",
+        "Added explicit MRA monitoring and interaction details",
+        "Replaced immediate-discharge and universal-pacing distractors with competing temporary/permanent pacing timing plans",
+        "Added waiting-period values and qualifications for unresolved infarct-related block"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        15,
+        27,
+        30,
+        62,
+        64
+      ],
+      "changes": [
+        "Replaced outpatient stress and score-threshold distractors with competing inpatient timing and assessment choices",
+        "ISCHEMIA alternatives now test population extrapolation, allowed crossover and equivalence interpretation",
+        "Removed only-acceptable-timing wording from multivessel PCI choice",
+        "Replaced stenting for isolated spasm with long-acting nitrate monotherapy as the competing preventive strategy"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        12,
+        16
+      ],
+      "changes": [
+        "Added complete modified Sgarbossa rule with quantitative boundaries",
+        "Replaced generic discussion with explicit 2025 pericarditis confirmation framework and compact diagnostic table"
+      ],
+      "status": "revised_and_structurally_validated"
+    },
+    {
+      "questions": [
+        26,
+        29
+      ],
+      "changes": [
+        "Added a compact NSTE invasive risk-group comparison table with qualifying findings",
+        "Added exact guideline-attributed elective CABG drug interruption windows and urgent-surgery qualification"
+      ],
+      "status": "revised_and_structurally_validated"
+    }
+  ],
+  "numberingNote": "Earlier review entries refer to the original 64-question draft. After insertion: original 1–37 unchanged; original 38–56 become 39–57; original 57–64 become 59–66. New questions are 38 (ARC-HBR) and 58 (stent failure). Use titles and coverageDecision to identify content across revisions.",
+  "remainingTargetedEditorialReview": [],
+  "chapterStemOptionReview": {
+    "questionsReviewed": 66,
+    "method": "Read all current stems and options, including previously reviewed recent changes; screened universal-wording flags in context.",
+    "result": "Targeted identified distractor revisions completed.",
+    "limitation": "This documents stem/option review; it does not independently prove complete teaching depth in all 66 explanations."
+  },
+  "explanationDepthReview": {
+    "diagnosisAndECG": {
+      "status": "review_in_progress",
+      "questionsReadThisPass": [
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        14,
+        16
+      ],
+      "revisedQuestions": [
+        12,
+        16
+      ],
+      "remainingAction": "Complete review of all remaining explanation blocks and retain source-specific limitations."
+    },
+    "reperfusionInvasiveAndAntithrombotic": {
+      "status": "reviewed_listed_explanations",
+      "questionsReadThisPass": [
+        17,
+        21,
+        22,
+        23,
+        25,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        37,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "revisedQuestions": [
+        26,
+        29
+      ],
+      "findings": [
+        "Reperfusion clocks and rescue versus successful-lysis sequence explicitly distinguished",
+        "Age-75 clopidogrel boundary discrepancy disclosed rather than forced into a false consensus",
+        "Antithrombotic explanations retain doses, bleeding qualifications and evolving-risk decisions"
+      ],
+      "limitation": "This entry covers the listed explanations; it does not close the remaining whole-chapter review."
+    },
+    "mechanicalElectricalRecovery": {
+      "status": "reviewed_listed_explanations",
+      "questionsReadThisPass": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "revisedQuestions": [
+        48
+      ],
+      "findings": [
+        "Mechanical complications distinguish emergency surgery from selected stabilization strategies",
+        "Pacing recovery intervals and ICD recovery/EF eligibility are explicit",
+        "LV thrombus duration is tied to repeat imaging and bleeding risk",
+        "Added resuscitation doses and sequencing to replace nonspecific algorithm reference"
+      ],
+      "remainingAction": "Finish reviewing the remaining explanation numbers before installation."
+    },
+    "recoveryAndChronicDisease": {
+      "status": "reviewed",
+      "questionsReadThisPass": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "revisedQuestions": [
+        59,
+        64
+      ],
+      "findings": [
+        "Treatment thresholds and guideline years distinguished",
+        "Trial populations comparator endpoints and uncertainty retained",
+        "Amlodipine dose range added to symptom and vasospasm treatment explanations"
+      ]
+    },
+    "remainingDiagnosisAndDosing": {
+      "status": "reviewed",
+      "questionsReadThisPass": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        13,
+        15,
+        18,
+        19,
+        20,
+        24,
+        27,
+        36,
+        38,
+        44
+      ],
+      "findings": [
+        "Read remaining main explanation blocks and reconciled with existing source checks and tables",
+        "Retained historical/current MI classification qualification and age-boundary uncertainty"
+      ]
+    }
+  },
+  "reviewConclusion": {
+    "questions": 66,
+    "stemOptionsReviewed": 66,
+    "explanationsReviewed": 66,
+    "independentClinicianReview": false,
+    "harrisonFullTextAccessed": false,
+    "countBasis": "Distinct mapped clinical decisions; targeted audit added two questions and resolved five identified coverage issues. No official examination weighting claimed."
+  },
+  "installationVerification": {
+    "questions": 66,
+    "preservedOtherBanks": 15,
+    "appLoaderReadback": "passed",
+    "projectRuntimeSourceComparison": "passed",
+    "projectInstalledChapters": 16,
+    "projectInstalledQuestions": 765
+  }
+}
