@@ -1,0 +1,328 @@
+{
+  "chapter": "11. Spinal Cord Disorders, Myelopathy & Cauda Equina Syndromes",
+  "status": "installed_verified",
+  "plannedQuestions": 44,
+  "countBasis": "Distinct high-yield diagnostic and treatment decisions; not official NEET-SS weighting. Avoid repeating cord-pattern localization already tested in Chapter 1. Reassess gaps and redundancy during final review.",
+  "sections": [
+    {
+      "section": "Assessment and urgent investigation",
+      "questions": 6,
+      "decisions": [
+        "Recognize a clinical cord syndrome and prioritize exclusion of compression",
+        "Interpret acute areflexia without dismissing cord disease",
+        "Choose MRI and contrast strategy for the suspected etiology",
+        "Resolve a clinical-radiologic level mismatch and consider multilevel disease",
+        "Use tempo and CSF/imaging together to distinguish inflammatory, vascular and structural causes",
+        "Choose safe investigation sequencing before lumbar puncture"
+      ]
+    },
+    {
+      "section": "Compressive and structural myelopathy",
+      "questions": 9,
+      "decisions": [
+        "Recognize metastatic spinal cord compression as an oncologic emergency",
+        "Apply whole-spine MRI timing and sequences in suspected MSCC",
+        "Use dexamethasone with neurologic signs and distinguish hematologic diagnostic caveats",
+        "Select multidisciplinary surgery/radiotherapy planning by stability, prognosis and disease factors",
+        "Recognize epidural abscess without requiring the complete classic triad",
+        "Investigate and treat epidural infection with neurologic deterioration urgently",
+        "Recognize spontaneous or anticoagulant-associated epidural hematoma",
+        "Manage degenerative cervical myelopathy by severity/progression rather than incidental stenosis alone",
+        "Investigate syringomyelia causes and select etiologic management"
+      ]
+    },
+    {
+      "section": "Conus medullaris and cauda equina emergencies",
+      "questions": 5,
+      "decisions": [
+        "Recognize incomplete CES before painless urinary retention is established",
+        "Use postvoid residual as an adjunct without excluding CES from a low value",
+        "Arrange urgent lumbar MRI and specialist decompression assessment",
+        "Distinguish conus and cauda patterns while preserving emergency management",
+        "Reassess scan-negative symptoms and competing causes without diagnostic dismissal"
+      ]
+    },
+    {
+      "section": "Vascular spinal cord disorders",
+      "questions": 6,
+      "decisions": [
+        "Recognize spinal cord infarction from abrupt maximal deficit and clinical context",
+        "Interpret early negative MRI and use repeat diffusion-sensitive imaging appropriately",
+        "Distinguish aortic/perioperative ischemia and address hemodynamic causes",
+        "Recognize spinal dural arteriovenous fistula as a treatable progressive myelopathy",
+        "Confirm suspected spinal vascular shunt with appropriate angiography",
+        "Distinguish vascular and inflammatory lesions before empiric immunotherapy"
+      ]
+    },
+    {
+      "section": "Inflammatory and infiltrative myelopathy",
+      "questions": 6,
+      "decisions": [
+        "Apply acute transverse myelitis evaluation after excluding compression",
+        "Use lesion length, axial distribution and brain/serologic findings without equating LETM with one diagnosis",
+        "Sequence corticosteroids and plasma exchange for severe inflammatory attacks",
+        "Recognize sarcoid-associated cord disease and seek systemic/tissue confirmation",
+        "Investigate neoplastic or paraneoplastic myelopathy and interpret CSF limitations",
+        "Reassess progression or nonresponse for a structural, vascular or metabolic mimic"
+      ]
+    },
+    {
+      "section": "Metabolic, infectious and chronic myelopathies",
+      "questions": 6,
+      "decisions": [
+        "Recognize B12/nitrous-oxide functional disease with appropriate biochemical interpretation",
+        "Recognize copper deficiency and zinc-related risk",
+        "Distinguish HIV vacuolar myelopathy from opportunistic/infectious compression",
+        "Recognize HTLV-1-associated chronic spastic paraparesis",
+        "Evaluate spinal tuberculosis with tissue, stability and neurologic considerations",
+        "Investigate hereditary spastic paraplegia after excluding acquired treatable causes"
+      ]
+    },
+    {
+      "section": "Acute cord injury and secondary complications",
+      "questions": 6,
+      "decisions": [
+        "Prioritize trauma stabilization and imaging with neurologic deficit",
+        "Distinguish spinal shock from neurogenic hemodynamic shock",
+        "Apply contemporary hemodynamic support guidance with evidence qualifications",
+        "Interpret corticosteroid evidence in traumatic injury without routine universal use",
+        "Recognize autonomic dysreflexia and remove triggers while treating dangerous hypertension",
+        "Plan bladder, thrombosis, skin, bowel and rehabilitation care after cord injury"
+      ]
+    }
+  ],
+  "crossChapterBoundaries": [
+    "Chapter 1 already tests Brown-Sequard, anterior cord and syringomyelic localization; this chapter tests etiologic investigation, emergency sequencing and management.",
+    "Chapter 6 covers MS/NMOSD/MOG diagnostic criteria; here lesion-pattern interpretation supports the broader myelopathy differential without repeating those criteria MCQs.",
+    "Chapter 5 covers CNS pathogens and Chapter 9/10 peripheral mimics; explanations remain standalone when relevant."
+  ],
+  "requiredFinalReview": [
+    "Verify current MSCC, CES, spinal infection and acute injury guidelines",
+    "Distinguish evidence-qualified recommendations from universal rules",
+    "Review all options and exact management sequencing",
+    "Validate, install additively, verify runtime preservation and commit/push"
+  ],
+  "authoredQuestions": 44,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Exclude Compression Before Labeling Myelitis",
+      "decision": "Recognize a clinical cord syndrome and prioritize exclusion of compression"
+    },
+    {
+      "question": 2,
+      "title": "Acute Areflexia Does Not Exclude Cord Injury",
+      "decision": "Interpret acute areflexia without dismissing cord disease"
+    },
+    {
+      "question": 3,
+      "title": "MRI When Spinal Infection Is Suspected",
+      "decision": "Choose MRI and contrast strategy for the suspected etiology"
+    },
+    {
+      "question": 4,
+      "title": "A Lumbar Finding That Does Not Explain the Examination",
+      "decision": "Resolve a clinical-radiologic level mismatch and consider multilevel disease"
+    },
+    {
+      "question": 5,
+      "title": "Tempo Before an Inflammatory Label",
+      "decision": "Use tempo and CSF/imaging together to distinguish inflammatory, vascular and structural causes"
+    },
+    {
+      "question": 6,
+      "title": "Lumbar Puncture After Structural Assessment",
+      "decision": "Choose safe investigation sequencing before lumbar puncture"
+    },
+    {
+      "question": 7,
+      "title": "Recognize Metastatic Cord Compression Early",
+      "decision": "Recognize metastatic spinal cord compression as an oncologic emergency"
+    },
+    {
+      "question": 8,
+      "title": "MRI Timing in Suspected MSCC",
+      "decision": "Apply whole-spine MRI timing and sequences in suspected MSCC"
+    },
+    {
+      "question": 9,
+      "title": "Dexamethasone in Neurologic MSCC",
+      "decision": "Use dexamethasone with neurologic signs and distinguish hematologic diagnostic caveats"
+    },
+    {
+      "question": 10,
+      "title": "Definitive MSCC Treatment Requires Stability Assessment",
+      "decision": "Select multidisciplinary surgery/radiotherapy planning by stability, prognosis and disease factors"
+    },
+    {
+      "question": 11,
+      "title": "Epidural Abscess Without the Full Triad",
+      "decision": "Recognize epidural abscess without requiring the complete classic triad"
+    },
+    {
+      "question": 12,
+      "title": "Epidural Infection With Progressive Weakness",
+      "decision": "Investigate and treat epidural infection with neurologic deterioration urgently"
+    },
+    {
+      "question": 13,
+      "title": "Acute Spinal Epidural Hematoma",
+      "decision": "Recognize spontaneous or anticoagulant-associated epidural hematoma"
+    },
+    {
+      "question": 14,
+      "title": "Progressive Degenerative Cervical Myelopathy",
+      "decision": "Manage degenerative cervical myelopathy by severity/progression rather than incidental stenosis alone"
+    },
+    {
+      "question": 15,
+      "title": "Treat the Cause of a Syrinx",
+      "decision": "Investigate syringomyelia causes and select etiologic management"
+    },
+    {
+      "question": 16,
+      "title": "Incomplete Cauda Equina Syndrome",
+      "decision": "Recognize incomplete CES before painless urinary retention is established"
+    },
+    {
+      "question": 17,
+      "title": "A Low PVR Does Not Exclude CES",
+      "decision": "Use postvoid residual as an adjunct without excluding CES from a low value"
+    },
+    {
+      "question": 18,
+      "title": "Urgent MRI and Decompression Assessment",
+      "decision": "Arrange urgent lumbar MRI and specialist decompression assessment"
+    },
+    {
+      "question": 19,
+      "title": "Conus and Cauda Patterns Overlap",
+      "decision": "Distinguish conus and cauda patterns while preserving emergency management"
+    },
+    {
+      "question": 20,
+      "title": "After MRI Excludes Cauda Compression",
+      "decision": "Reassess scan-negative symptoms and competing causes without diagnostic dismissal"
+    },
+    {
+      "question": 21,
+      "title": "Acute Spinal Cord Infarction",
+      "decision": "Recognize spinal cord infarction from abrupt maximal deficit and clinical context"
+    },
+    {
+      "question": 22,
+      "title": "Early Negative MRI in Suspected Infarction",
+      "decision": "Interpret early negative MRI and use repeat diffusion-sensitive imaging appropriately"
+    },
+    {
+      "question": 23,
+      "title": "Delayed Weakness After Aortic Repair",
+      "decision": "Distinguish aortic/perioperative ischemia and address hemodynamic causes"
+    },
+    {
+      "question": 24,
+      "title": "Venous Congestive Myelopathy",
+      "decision": "Recognize spinal dural arteriovenous fistula as a treatable progressive myelopathy"
+    },
+    {
+      "question": 25,
+      "title": "When a Negative Angiogram Needs Review",
+      "decision": "Confirm suspected spinal vascular shunt with appropriate angiography"
+    },
+    {
+      "question": 26,
+      "title": "Steroid Worsening as a Vascular Warning",
+      "decision": "Distinguish vascular and inflammatory lesions before empiric immunotherapy"
+    },
+    {
+      "question": 27,
+      "title": "Establishing an Inflammatory Myelopathy",
+      "decision": "Apply acute transverse myelitis evaluation after excluding compression"
+    },
+    {
+      "question": 28,
+      "title": "LETM Is a Pattern, Not One Diagnosis",
+      "decision": "Use lesion length, axial distribution and brain/serologic findings without equating LETM with one diagnosis"
+    },
+    {
+      "question": 29,
+      "title": "Early Apheresis in a Severe Inflammatory Attack",
+      "decision": "Sequence corticosteroids and plasma exchange for severe inflammatory attacks"
+    },
+    {
+      "question": 30,
+      "title": "Tissue Strategy in Suspected Neurosarcoidosis",
+      "decision": "Recognize sarcoid-associated cord disease and seek systemic/tissue confirmation"
+    },
+    {
+      "question": 31,
+      "title": "Negative First CSF Cytology in Suspected Cancer Involvement",
+      "decision": "Investigate neoplastic or paraneoplastic myelopathy and interpret CSF limitations"
+    },
+    {
+      "question": 32,
+      "title": "Nonresponse Should Reopen the Differential",
+      "decision": "Reassess progression or nonresponse for a structural, vascular or metabolic mimic"
+    },
+    {
+      "question": 33,
+      "title": "Nitrous Oxide and Functional B12 Deficiency",
+      "decision": "Recognize B12/nitrous-oxide functional disease with appropriate biochemical interpretation"
+    },
+    {
+      "question": 34,
+      "title": "Copper Deficiency After Gastric Surgery",
+      "decision": "Recognize copper deficiency and zinc-related risk"
+    },
+    {
+      "question": 35,
+      "title": "HIV-Associated Vacuolar Myelopathy Is an Exclusion Diagnosis",
+      "decision": "Distinguish HIV vacuolar myelopathy from opportunistic/infectious compression"
+    },
+    {
+      "question": 36,
+      "title": "HTLV-1-Associated Spastic Paraparesis",
+      "decision": "Recognize HTLV-1-associated chronic spastic paraparesis"
+    },
+    {
+      "question": 37,
+      "title": "Spinal Tuberculosis With Neurologic Deterioration",
+      "decision": "Evaluate spinal tuberculosis with tissue, stability and neurologic considerations"
+    },
+    {
+      "question": 38,
+      "title": "Before Labeling Hereditary Spastic Paraplegia",
+      "decision": "Investigate hereditary spastic paraplegia after excluding acquired treatable causes"
+    },
+    {
+      "question": 39,
+      "title": "Neurologic Deficit Despite a Nondiagnostic Trauma CT",
+      "decision": "Prioritize trauma stabilization and imaging with neurologic deficit"
+    },
+    {
+      "question": 40,
+      "title": "Spinal Shock and Neurogenic Shock Are Different",
+      "decision": "Distinguish spinal shock from neurogenic hemodynamic shock"
+    },
+    {
+      "question": 41,
+      "title": "Contemporary MAP Augmentation Guidance",
+      "decision": "Apply contemporary hemodynamic support guidance with evidence qualifications"
+    },
+    {
+      "question": 42,
+      "title": "Steroids Are Not Universal Traumatic SCI Treatment",
+      "decision": "Interpret corticosteroid evidence in traumatic injury without routine universal use"
+    },
+    {
+      "question": 43,
+      "title": "Autonomic Dysreflexia From Bladder Obstruction",
+      "decision": "Recognize autonomic dysreflexia and remove triggers while treating dangerous hypertension"
+    },
+    {
+      "question": 44,
+      "title": "Thromboprophylaxis Within a Secondary-Care Plan",
+      "decision": "Plan bladder, thrombosis, skin, bowel and rehabilitation care after cord injury"
+    }
+  ]
+}

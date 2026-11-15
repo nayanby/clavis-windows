@@ -1,0 +1,195 @@
+{
+  "chapter": 11,
+  "status": "installed_verified",
+  "draftedQuestions": 44,
+  "plannedQuestions": 44,
+  "installed": true,
+  "draftValidation": {
+    "scope": "All 44 questions after 26 editorial revisions; writes/progress disabled",
+    "status": "passed",
+    "minimumExplanationWords": 292,
+    "distractorRationales": 132,
+    "answerDistribution": {
+      "A": 11,
+      "B": 11,
+      "C": 11,
+      "D": 11
+    }
+  },
+  "sourceChecks": [
+    {
+      "source": "ACR myelopathy 2026 update; NICE NG234; WFNS conus/CES recommendations 2024",
+      "checked": [
+        "MRI prioritization in cord syndromes",
+        "Emergency compression exclusion before etiologic closure",
+        "Clinical localization must not depend on one initial reflex finding"
+      ]
+    },
+    {
+      "source": "ACR suspected-spine-infection guidance; IDSA NVO guideline; Continuum myelopathy approach",
+      "checked": [
+        "MRI without/with contrast for suspected infection",
+        "Clinical-radiologic mismatch and extended imaging",
+        "Tempo and nonspecific CSF/T2 findings"
+      ]
+    },
+    {
+      "source": "ABN antithrombotic LP guidance and 2026 summary update",
+      "checked": [
+        "Individualized bleeding/thrombosis and delay assessment",
+        "Agent, clearance and timing considerations",
+        "Routine INR cannot clear apixaban exposure"
+      ]
+    },
+    {
+      "source": "NICE NG234 recommendations and official initial/treatment visual summaries",
+      "checked": [
+        "Neurologic MSCC emergency referral",
+        "MRI within 24 hours with whole-spine sagittal and targeted axial assessment",
+        "16 mg dexamethasone initial/continued regimen and hematologic diagnostic caveat",
+        "Decompression/stabilization versus radiotherapy and multidisciplinary selection"
+      ]
+    },
+    {
+      "source": "IDSA native vertebral osteomyelitis guidance; ACR spine infection; Neurocritical Care Society ENLS compression protocol",
+      "checked": [
+        "Incomplete epidural infection triad",
+        "Sepsis/progressive deficit overrides stable biopsy-first approach",
+        "Antimicrobial coverage framework and urgent source control",
+        "Spinal hematoma imaging, coagulopathy reversal and decompression assessment"
+      ]
+    },
+    {
+      "source": "AO Spine/CSRS DCM guidance 2017 and mild DCM update 2026; NINDS syringomyelia; CNS Chiari surgical guidance",
+      "checked": [
+        "mJOA thresholds and progression-based surgical evaluation",
+        "Clinical compression versus incidental stenosis",
+        "Syrinx etiologic management and imaging/clinical response limitations"
+      ]
+    },
+    {
+      "source": "WFNS CES recommendations 2024 and primary low-PVR CES series 2022",
+      "checked": [
+        "Incomplete CES before complete retention",
+        "PVR is an adjunct rather than exclusion rule",
+        "Selected-series limitations"
+      ]
+    },
+    {
+      "source": "WFNS CES/conus recommendations and primary prospective scan-negative CES cohort",
+      "checked": [
+        "Early decompression with timing-evidence limitations",
+        "Conus/cauda clinical overlap",
+        "Negative imaging changes surgical indication without invalidating symptoms",
+        "Medication, bladder and alternative neurologic/functional assessment"
+      ]
+    },
+    {
+      "source": "Spontaneous spinal infarction primary cohort 2019; practical cord-lesion review; ACC/AHA aortic disease guideline 2022",
+      "checked": [
+        "Hyperacute vascular pattern and perfusion context",
+        "Initially normal MRI and repeat diffusion-sensitive assessment",
+        "Delayed spinal dysfunction after aortic repair",
+        "Cause-specific perfusion/oxygen-delivery rescue and selected CSF drainage"
+      ]
+    },
+    {
+      "source": "Spinal fistula imaging/management review; AJNR delayed-diagnosis cohort; prospective steroid-worsening cohort",
+      "checked": [
+        "Venous congestive pattern and perimedullary vessels",
+        "Catheter angiography with technical/coverage qualifications",
+        "Definitive surgical/endovascular disconnection",
+        "Steroid-associated decline as a diagnostic warning with evidence limitations"
+      ]
+    },
+    {
+      "source": "TM Consortium 2002 framework; modern myelopathy approach; NEMOS attack recommendations 2023",
+      "checked": [
+        "Syndrome versus etiologic diagnosis",
+        "Historical TM time/inflammation qualifications",
+        "LETM pattern is not disease-specific",
+        "High-dose steroid regimen and early apheresis escalation with population qualifications"
+      ]
+    },
+    {
+      "source": "Neurosarcoidosis consensus 2018 and clinical review; EANO/ESMO LM guideline 2023; paraneoplastic criteria 2021",
+      "checked": [
+        "Accessible extraneural biopsy and probable versus definite certainty",
+        "Single negative cytology limitations and optimized repeat sampling",
+        "Direct malignant versus paraneoplastic mechanisms",
+        "Reassessment of chronic progression and discordant immune evidence"
+      ]
+    },
+    {
+      "source": "NICE NG239; primary copper-deficiency clinical series; DGN HIV-neurology guideline 2026",
+      "checked": [
+        "Functional B12 tests after nitrous oxide and normal total B12 limitations",
+        "Copper/zinc/malabsorption myeloneuropathy",
+        "Vacuolar HIV myelopathy as exclusion diagnosis and CMV/root-disease differential"
+      ]
+    },
+    {
+      "source": "HAM/TSP consensus 2019; India INDEX-TB guideline; GeneReviews HSP updated 2025",
+      "checked": [
+        "HTLV-1 clinical confirmation and treatment-evidence limits",
+        "Spinal TB tissue, resistance and structural/neurologic priorities",
+        "HSP acquired/treatable mimics and genetic-testing interpretation"
+      ]
+    },
+    {
+      "source": "NICE NG41; AO Spine/Praxis hemodynamic guideline 2024; ENLS",
+      "checked": [
+        "MRI after CT with attributable neurologic abnormality",
+        "Spinal reflex shock versus neurogenic hemodynamic shock",
+        "MAP lower/upper active-augmentation boundaries and 3–7-day duration",
+        "Very-low-certainty evidence and spontaneous-pressure distinction"
+      ]
+    },
+    {
+      "source": "NICE NG41; AO Spine MPSS and thromboprophylaxis guidelines 2017; Consortium autonomic dysfunction guideline 2021",
+      "checked": [
+        "Traumatic SCI steroid recommendations differ by guideline and timing; no late initiation at 12 hours",
+        "Autonomic dysreflexia positioning, trigger removal, frequent BP monitoring and adult 150-mmHg medication threshold",
+        "Nitrate/PDE5 interaction; prophylactic rather than therapeutic anticoagulation; initiate within 72 hours when feasible"
+      ]
+    },
+    {
+      "source": "NICE NG239; AO Spine DCM guidance 2017 and 2026",
+      "checked": [
+        "MMA or homocysteine in nitrous-associated functional B12 deficiency",
+        "mJOA severity thresholds and moderate/progressive surgical assessment"
+      ]
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "Full Harrison subscription text not accessed",
+    "No independent clinician review",
+    "Structural checks do not establish medical accuracy"
+  ],
+  "editorialReview": {
+    "status": "completed",
+    "revisedQuestions": 37,
+    "changes": [
+      "Replaced giveaway or unrelated distractors with realistic competing diagnostic and management pathways",
+      "Specified AQP4-IgG-positive NMOSD for the acute apheresis question",
+      "Added mJOA severity and metabolic myelopathy comparison tables",
+      "Reviewed remaining assessment and trauma options; rewrote 11 additional questions",
+      "Added spinal/neurogenic shock comparison; verified DCM thresholds and nitrous functional-marker guidance"
+    ],
+    "next": []
+  },
+  "validation": {
+    "questions": 44,
+    "answerDistribution": {
+      "A": 11,
+      "B": 11,
+      "C": 11,
+      "D": 11
+    },
+    "minimumExplanationWords": 292,
+    "distractorRationales": 132,
+    "runtimeSourceComparison": "passed",
+    "otherBanksPreserved": 10
+  }
+}

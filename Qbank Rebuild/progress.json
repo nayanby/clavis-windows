@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 11. Spinal Cord Disorders, Myelopathy & Cauda Equina Syndromes",
+  "currentChapter": "Neurology 12. Autoimmune, Paraneoplastic & Systemic Neurological Disorders",
   "chapters": [
     {
       "subject": "Neurology",
@@ -370,7 +370,27 @@
       "subject": "Neurology",
       "chapter": 11,
       "document": "11. Spinal Cord Disorders, Myelopathy & Cauda Equina Syndromes",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/11. Spinal Cord Disorders, Myelopathy & Cauda Equina Syndromes.json",
+      "validation": {
+        "questions": 44,
+        "answerDistribution": {
+          "A": 11,
+          "B": 11,
+          "C": 11,
+          "D": 11
+        },
+        "minimumExplanationWords": 292,
+        "distractorRationales": 132,
+        "questionStyles": {
+          "clinical_scenario": 39,
+          "direct": 5
+        },
+        "status": "passed"
+      },
+      "installedSha256": "522f42346048451b06021ddc154863056227b7aebd5ccde68e1ad8078a453c62",
+      "coverageMap": "Neurology/11. Spinal Cord Disorders, Myelopathy & Cauda Equina Syndromes.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",
