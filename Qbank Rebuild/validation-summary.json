@@ -1,17 +1,17 @@
 {
   "projectStatus": "in_progress",
   "plannedChapters": 129,
-  "installedChapters": 18,
-  "installedQuestions": 897,
+  "installedChapters": 19,
+  "installedQuestions": 947,
   "structurallyValidated": true,
   "runtimeSourceComparison": "passed",
-  "mappedChapters": 15,
+  "mappedChapters": 16,
   "retrospectiveCoverageAudit": [
     "Neurology / 01. Neuroanatomy, Clinical Localization & Neurological Examination",
     "Neurology / 02. Cerebrovascular Diseases",
     "Neurology / 03. Epilepsy & Status Epilepticus"
   ],
   "independentClinicianReview": "not_recorded",
-  "nextChapter": "Cardiology Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers",
+  "nextChapter": "Cardiology Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation",
   "countPolicy": "Coverage-driven: enumerate distinct high-yield decisions per chapter, allocate questions by diagnostic and therapeutic complexity, then remove duplication. The original 30/40 counts were provisional, not official exam weights or completeness evidence."
 }

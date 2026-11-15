@@ -1,0 +1,495 @@
+{
+  "chapter": 5,
+  "status": "installed_verified",
+  "installed": true,
+  "authoredQuestions": 50,
+  "plannedQuestions": 50,
+  "sourceChecks": [
+    {
+      "source": "ACC/AHA/HRS 2018 original guideline and official summary; ESC 2021 pacing guideline",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628",
+        "https://www.hrsonline.org/wp-content/uploads/2025/02/2018-ACC-AHA-HRS-Bradycardia-Full-Text.pdf",
+        "https://doi.org/10.1093/eurheartj/ehab364"
+      ],
+      "questions": [
+        1,
+        2
+      ],
+      "checked": [
+        "Descriptive sinus rate/pauses distinguished from permanent pacing indications; no minimum rate or pause alone establishes symptomatic SND pacing",
+        "Sleep-associated asymptomatic sinus pauses prompt apnea assessment rather than pacing unless another indication exists"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC/AHA/HRS electrophysiology definitions 2006 and bradycardia guideline 2018",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2006.09.020",
+        "https://doi.org/10.1161/CIR.0000000000000628"
+      ],
+      "questions": [
+        3,
+        4
+      ],
+      "checked": [
+        "Type II SA exit block inferred from stable PP and integral-multiple pauses; differential includes concealed atrial ectopy and AV block",
+        "Symptomatic post-AF atrial pause and tachy-brady mechanism; pacing versus selected AF ablation and independent stroke assessment"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US 2018 bradycardia and ESC 2021 pacing guidelines",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628",
+        "https://doi.org/10.1093/eurheartj/ehab364"
+      ],
+      "questions": [
+        5,
+        6
+      ],
+      "checked": [
+        "Exercise testing for suspected chronotropic incompetence; 80 percent expected heart-rate reserve distinguished from percent predicted maximal rate and qualified by effort/medication",
+        "Reversible medication-related SND: substitute a non-rate-slowing hypertension treatment before pacing when no compelling beta-blocker indication exists"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US 2018 pacing recommendation and 2024 randomized tachy-brady ablation/pacemaker trial",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628",
+        "https://doi.org/10.1186/s12872-024-03920-0"
+      ],
+      "questions": [
+        7,
+        8
+      ],
+      "checked": [
+        "Pacing for symptom-correlated necessary treatment with no alternative",
+        "Selected ablation-first approach; small randomized trial neutral primary utilization endpoint, reduced AF recurrence and 4/35 subsequent pacemaker requirement; no survival or equivalence claim"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US 2018 bradycardia monitoring recommendations",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628"
+      ],
+      "questions": [
+        9,
+        10
+      ],
+      "checked": [
+        "External monitoring matched to frequency and typical symptom capture; absence of symptoms during a short recording is nondiagnostic",
+        "Implantable monitor reasonable for suspected bradycardic symptoms more than 30 days apart after nondiagnostic noninvasive assessment; diagnostic device distinguished from therapeutic device"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US 2018 guideline and primary blocked atrial bigeminy report",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628",
+        "https://doi.org/10.2147/IMCRJ.S555159"
+      ],
+      "questions": [
+        11,
+        12
+      ],
+      "checked": [
+        "New LBBB warrants initial TTE structural/LV assessment; not an isolated pacing or angiography indication",
+        "Premature abnormal atrial deflection hidden in T wave distinguishes blocked ectopy from alternate regular sinus impulse block; case evidence not promoted to universal treatment protocol"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US 2018 bradycardia and ESC 2021 pacing guidelines",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628",
+        "https://doi.org/10.1093/eurheartj/ehab364"
+      ],
+      "questions": [
+        13,
+        14
+      ],
+      "checked": [
+        "First-degree delay PR above 200 ms; marked approximately 300 ms or more can cause AV dyssynchrony but is not an automatic pacing threshold",
+        "Wenckebach PR progression/reset versus Mobitz II stable conducted PR; pattern distinguished from anatomical localization and 2:1 uncertainty"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US 2018 and ESC 2021 AV block classification/localization guidance",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628",
+        "https://doi.org/10.1093/eurheartj/ehab364"
+      ],
+      "questions": [
+        15,
+        16
+      ],
+      "checked": [
+        "Pure 2:1 pattern cannot be typed Mobitz I/II; wide QRS supports but does not prove infranodal site",
+        "Exercise improvement versus worsening supports nodal versus infranodal localization; selected EPS and safety escalation distinguished"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US 2018 conduction definitions and clinical discussion",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628"
+      ],
+      "questions": [
+        17,
+        18
+      ],
+      "checked": [
+        "High-grade block: at least two consecutive nonconducted physiological sinus impulses with residual conduction; distinguished from complete block",
+        "AV dissociation may reflect a competing junctional rhythm without complete interruption; restored 1:1 conduction excludes persistent complete block but not all intermittent disease"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US 2018 and ESC 2021 permanent-pacing guidance",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628",
+        "https://doi.org/10.1093/eurheartj/ehab364"
+      ],
+      "questions": [
+        19,
+        20
+      ],
+      "checked": [
+        "Nonreversible acquired Mobitz II/high-grade/complete block warrants pacing irrespective of symptoms after diagnosis confirmation",
+        "Asymptomatic convincingly nodal Wenckebach does not warrant pacing; exercise response and intranodal versus infranodal exceptions explained"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US 2018 vagal-block guidance and ESC 2021 syncope/bifascicular EPS criteria",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628",
+        "https://doi.org/10.1093/eurheartj/ehab364"
+      ],
+      "questions": [
+        21,
+        22
+      ],
+      "checked": [
+        "Sinus slowing with AV delay supports vagal mechanism; asymptomatic vagal block distinguished from symptomatic reflex syncope and intrinsic disease",
+        "Baseline HV at least 70 ms with unexplained syncope and bifascicular block supports pacing; negative EPS limitations and separate ICD decision retained"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC 2021 alternating BBB; AAN/ACR/IDSA 2020 and CDC Lyme carditis guidance",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehab364",
+        "https://www.idsociety.org/practice-guideline/lyme-disease/",
+        "https://www.cdc.gov/lyme/hcp/clinical-care/lyme-carditis.html"
+      ],
+      "questions": [
+        23,
+        24
+      ],
+      "checked": [
+        "Verified alternating BBB warrants pacing with or without symptoms; HV threshold from separate pathway not required",
+        "Severe Lyme carditis inpatient IV ceftriaxone 2 g/day, temporary pacing when needed, oral step-down after improvement and 14-21 total days"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA/ESC 2024 sarcoidosis statements and US 2018 infarct-related AV block guidance",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001240",
+        "https://doi.org/10.1093/eurheartj/ehae356",
+        "https://doi.org/10.1161/CIR.0000000000000628"
+      ],
+      "questions": [
+        25,
+        26
+      ],
+      "checked": [
+        "Unexplained advanced AV block below 60 and septal abnormalities prompt sarcoid assessment; CMR/PET, biopsy limitations and device arrhythmia risk distinguished",
+        "Resolved transient infarct-related AV block does not warrant permanent pacing by itself; persistent/infranodal disease after observation differs from temporary support need"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA 2025 adult advanced life support and official bradycardia algorithm",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001376",
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Bradycardia-250514.pdf"
+      ],
+      "questions": [
+        27,
+        28
+      ],
+      "checked": [
+        "Bradycardia with pulse plus compromised perfusion requires immediate stabilization and reversible-cause treatment",
+        "AHA-specific atropine 1 mg IV every 3-5 min maximum 3 mg; organization/year attribution avoids ambiguity with other regimens; rescue support not delayed"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA 2025 adult advanced life support and accessible bradycardia algorithm; ACC/AHA/HRS 2018 conduction guideline",
+      "urls": [
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Accessible/Algorithm-ACLS-Bradycardia-LngDscrp-250725-Ed.pdf",
+        "https://doi.org/10.1161/CIR.0000000000000628"
+      ],
+      "questions": [
+        29,
+        30
+      ],
+      "checked": [
+        "Persistent shock after atropine in suspected distal high-grade block warrants prompt pacing support; an infusion can bridge and does not require delaying pacing until maximal doses",
+        "Algorithm dopamine 5-20 micrograms/kg/min and epinephrine 2-10 micrograms/min; distinguish weight-based units and cardiac-arrest boluses"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA 2025 adult advanced life support; ESC 2021 and ACC/AHA/HRS 2018 pacing guidance",
+      "urls": [
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+        "https://doi.org/10.1093/europace/euab232",
+        "https://www.jacc.org/doi/10.1016/j.jacc.2018.10.043"
+      ],
+      "questions": [
+        31,
+        32
+      ],
+      "checked": [
+        "Electrical capture and mechanical circulation require corroboration; monitor rate or skeletal contraction alone is insufficient; optimal confirmation methods retain evidence limitations",
+        "Persistent unstable bradycardia with unreliable external support warrants consideration of transvenous support; temporary-wire risks and prolonged externalized active-fixation option distinguished from permanent-device eligibility"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "UKKA 2023 hyperkalemia guidance; primary BRASH case report; AHA 2025 special circumstances; Utah Poison Control high-dose insulin protocol",
+      "urls": [
+        "https://guidelines.ukkidney.org/hyperkalaemia/6-summary-of-clinical-practice-guideline-for-hyperkalaemia/6-2-section-ii-hospital/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8091996/",
+        "https://doi.org/10.1161/CIR.0000000000001380",
+        "https://poisoncontrol.utah.edu/news/2021/07/high-dose-insulin-therapy"
+      ],
+      "questions": [
+        33,
+        34
+      ],
+      "checked": [
+        "BRASH medication-potassium-renal-perfusion synergy does not require overdose; primary case evidence distinguished from validated diagnostic criteria",
+        "UKKA-specific calcium salt volumes and administration times; insulin 10 units with glucose 25 g for severe hyperkalemia, monitoring and definitive potassium elimination",
+        "High-dose insulin for toxin-associated cardiogenic shock; Utah initial bolus and infusion explicitly attributed, glucose-potassium monitoring and variable escalation protocols; pacing alone may not restore contractility"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC/AHA/HRS 2018 and ESC 2021 pacing guidelines",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000000628",
+        "https://doi.org/10.1093/eurheartj/ehab364"
+      ],
+      "questions": [
+        35,
+        36
+      ],
+      "checked": [
+        "Atrial-based pacing preferred in suitable symptomatic SND; ESC DDD(R) preference, AAIR selected exceptions, DANPACE AF and reoperation findings without mortality superiority claim",
+        "Permanent AF ventricular rate-responsive support; distinguish paroxysmal AF, anticipated pacing burden and ventricular function before applying conventional VVIR selection"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "NEMA DICOM NBG code specification; ESC 2021 and ACC/AHA/HRS 2018 pacing guidance",
+      "urls": [
+        "https://dicom.nema.org/medical/dicom/2018c/output/chtml/part16/sect_CID_3672.html",
+        "https://doi.org/10.1093/eurheartj/ehab364",
+        "https://doi.org/10.1161/CIR.0000000000000628"
+      ],
+      "questions": [
+        37,
+        38
+      ],
+      "checked": [
+        "Five NBG positions distinguished; third D means triggered and inhibited responses, fifth multisite pacing rather than defibrillation",
+        "Symptomatic documented chronotropic incompetence supports rate-responsive DDD programming; distinguish absent atrial acceleration from upper tracking restriction and AV timing problems"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC 2021 pacing guideline; HRS/APHRS/LAHRS 2023 cardiac physiologic pacing guideline",
+      "urls": [
+        "https://doi.org/10.1093/europace/euab232",
+        "https://doi.org/10.1002/joa3.12872"
+      ],
+      "questions": [
+        39,
+        40
+      ],
+      "checked": [
+        "Minimize unnecessary RV pacing in SND while avoiding excessive AV delay; 230-ms ESC programming caution explicitly contextualized",
+        "Named 2023 framework: physiologic pacing reasonable with LVEF 36-50% and substantial anticipated ventricular support; 20-40% range distinguished from a universal cutoff; CRT and conduction-system approaches distinguished from RV septal pacing"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC 2021 pacing guidance and FDA 2023 dual-chamber leadless approval",
+      "urls": [
+        "https://doi.org/10.1093/europace/euab232",
+        "https://www.accessdata.fda.gov/cdrh_docs/pdf15/P150035S003A.pdf"
+      ],
+      "questions": [
+        41,
+        42
+      ],
+      "checked": [
+        "Leadless consideration with absent upper venous access or high pocket infection risk; contemporary dual-chamber capability distinguished from ventricular mechanical atrial sensing; no active infection assumption",
+        "Persistent complete/high-grade AV block 24-48 hours after TAVI is a pacing indication under named ESC guidance; distinguish uncertain new LBBB monitoring/EPS and generally at least five-day surgical observation with exceptions"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Medtronic manufacturer troubleshooting report; HRS multisociety 2026 lead-management consensus",
+      "urls": [
+        "https://wwwp.medtronic.com/productperformance-files/Issue52_MDT_CRDM_PPR_2004_2nd_Edition.pdf",
+        "https://www.heartrhythmjournal.com/article/S1547-5271%2826%2902264-2/abstract"
+      ],
+      "questions": [
+        43,
+        44
+      ],
+      "checked": [
+        "Visible output without ventricular depolarization identifies noncapture after excluding refractory timing; early lead displacement and metabolic threshold changes require assessment",
+        "Stored nonphysiological sensed noise with inhibited output identifies oversensing; movement association is not alone proof of fracture; distinguish sensitivity units and device-specific magnet response"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Boston Scientific pacemaker reference guide and primary PVARP-extension mechanism study",
+      "urls": [
+        "https://www.bostonscientific.com/content/dam/elabeling/crm/92390662-001_Pacemaker_RG_en_S.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/21376834/"
+      ],
+      "questions": [
+        45,
+        46
+      ],
+      "checked": [
+        "Undersensing defined outside intentional timing exclusions; lower fixed mV setting means more sensitive; capture and sensing distinct",
+        "Classic PMT retrograde VA conduction and atrial tracking loop; PVARP extension interrupts tracking with upper-rate trade-offs; simulator study not represented as a patient-outcome trial"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC 2021 pacing; AHA CIED infection statement online 2023 and EHRA international infection consensus 2020",
+      "urls": [
+        "https://doi.org/10.1093/europace/euab232",
+        "https://doi.org/10.1161/CIR.0000000000001187",
+        "https://doi.org/10.1093/europace/euz246"
+      ],
+      "questions": [
+        47,
+        48
+      ],
+      "checked": [
+        "Pacemaker syndrome from adverse AV timing distinguished from PMT, rate limitation and pacing-induced LV dysfunction",
+        "Pocket erosion or sinus is definite infection despite negative cultures or absent vegetation; complete removal plus antibiotics distinguished from superficial incision infection and exceptional suppression"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "SCMR MRI consensus 2024; AHA periprocedural CIED statement 2024",
+      "urls": [
+        "https://doi.org/10.1016/j.jocmr.2024.100995",
+        "https://doi.org/10.1161/CIR.0000000000001264"
+      ],
+      "questions": [
+        49,
+        50
+      ],
+      "checked": [
+        "Nonconditional system is not an absolute MRI ban; expert 1.5-T protocol with dependence-based programming and pre/post checks; conditional status includes leads and component combination",
+        "Pacing-dependent ICD with anticipated cautery EMI needs pacing protection plus tachytherapy suspension; ICD magnet alone does not change pacing mode; verify restoration"
+      ],
+      "status": "draft_source_checked"
+    }
+  ],
+  "scopeNote": "Conduction-specific diagnosis and pacing selection; do not repeat detailed HFrEF CRT criteria already tested in Cardiology 4. Acute regimens, contemporary physiologic pacing, leadless systems and procedural device management require separate current-source verification as authored.",
+  "finalReviewStatus": "author_editorial_and_coverage_review_complete",
+  "editorialReviewProgress": {
+    "status": "complete",
+    "questionsReviewedInFull": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "changes": [
+      "Question 30 infusion distractors revised to competing clinically plausible titration ranges rather than a gross unit error or cardiac-arrest bolus.",
+      "Question 27 replaces outpatient monitoring and immediate permanent implantation distractors with realistic but incorrectly sequenced acute strategies.",
+      "Question 28 replaces implausible adult weight-based atropine distractor with a competing bolus and timing regimen.",
+      "Question 40 replaces atrial-only distractor with RV septal versus conduction-system capture distinction.",
+      "Question 41 replaces occluded-route implantation distractor with a realistic recanalization strategy."
+    ],
+    "remaining": "None for this chapter."
+  },
+  "coverageAudit": {
+    "mappedDecisions": 50,
+    "authoredQuestions": 50,
+    "sections": 6,
+    "result": "All planned decisions mapped once in continuous sequence; no claim of exhaustive electrophysiology coverage.",
+    "scope": "Bradyarrhythmia, conduction disease and pacemaker decisions; detailed HF CRT indications remain in the preceding heart-failure bank."
+  },
+  "runtimeVerification": {
+    "sourceComparison": "passed",
+    "installedChapterQuestions": 50,
+    "projectInstalledChapters": 19,
+    "projectInstalledQuestions": 947
+  }
+}

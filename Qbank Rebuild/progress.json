@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers",
+  "currentChapter": "Cardiology Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation",
   "chapters": [
     {
       "subject": "Neurology",
@@ -582,7 +582,29 @@
       "subject": "Cardiology",
       "chapter": 5,
       "document": "Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Cardiology/Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers.json",
+      "validation": {
+        "questions": 50,
+        "answerDistribution": {
+          "A": 13,
+          "B": 13,
+          "C": 12,
+          "D": 12
+        },
+        "minimumExplanationWords": 332,
+        "distractorRationales": 150,
+        "questionStyles": {
+          "clinical_scenario": 47,
+          "direct": 3
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 50,
+      "plannedQuestions": 50,
+      "installedSha256": "a20c4eb59c8ec918791ed1f50e036b69b9494bf859f0d68541be3f98d4a7177f",
+      "coverageMap": "Cardiology/Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Cardiology",
