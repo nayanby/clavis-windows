@@ -283,11 +283,22 @@ def verify(banks, report):
     all_questions=[q for b in current for q in b['questions']]
     actual={q['id']:q for q in all_questions}
     assert len(actual)==len(all_questions),'Duplicate question ID across canonical chapters'
-    assert all(actual.get(k)==q for k,q in expected.items()),'An original redistributed question changed or disappeared'
+    revision_path=AUDIT/'reviewed-question-revisions.json'
+    revisions=read_json(revision_path)['revisions'] if revision_path.exists() else []
+    revised={r['questionId']:r for r in revisions}
+    assert len(revised)==len(revisions),'Duplicate revision entry'
+    assert set(revised)<=set(expected),'Revision does not refer to an archived original'
+    for k,r in revised.items():
+        assert r['status']=='author_source_checked' and r['reason'] and r['sources']
+        assert digest(expected[k])==r['originalSha256'],'Revision original digest mismatch'
+        assert k in actual and digest(actual[k])==r['revisedSha256'],'Reviewed revision digest mismatch'
+        assert actual[k]['correctIndex']==expected[k]['correctIndex'],'Revision changed an answer-letter slot'
+        assert actual[k]['topic']==expected[k]['topic'],'Revision changed chapter topic assignment'
+    assert all(actual.get(k)==q or k in revised for k,q in expected.items()),'An original question changed without a reviewed revision or disappeared'
     for original,bank in zip(banks,current):
         assert bank['document']==original['document'] and bank['chapterOrder']==original['chapterOrder']
         assert bank['targetQuestions']==len(bank['questions'])
-        assert all(actual[q['id']]==q for q in original['questions'])
+        assert all(actual[q['id']]==q or q['id'] in revised for q in original['questions'])
         assert {q['id'] for q in original['questions']} <= {q['id'] for q in bank['questions']}
         if any(q['id'] not in expected for q in bank['questions']):
             validate(bank)
@@ -303,7 +314,7 @@ def verify(banks, report):
         assert b['document'] == original['document']
         assert b['headingText'] == original['headingText']
         assert b['targetQuestions'] == len(b['questions'])
-    print(f'Verified: 15 source-matched JSON files; 615 original questions preserved; {len(all_questions)} current unique questions; 541 released; {len(all_questions)-541} drafts withheld.')
+    print(f'Verified: 15 source-matched JSON files; 615 original IDs retained ({615-len(revised)} questions unchanged, {len(revised)} reviewed revisions); {len(all_questions)} current unique questions; 541 released; {len(all_questions)-541} drafts withheld.')
 
 
 if __name__ == '__main__':

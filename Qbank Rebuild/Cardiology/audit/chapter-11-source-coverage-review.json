@@ -62,7 +62,8 @@
         "check": "Primary trial abstract rechecked for absence of cardiovascular/mortality benefit with routine bedtime dosing."
       }
     ],
-    "editorialFinding": "Questions 3 and 7 include easily dismissed measurement/diagnosis alternatives. Strengthen competing options under an explicit reviewed revision without silently breaking baseline preservation."
+    "editorialFinding": "Questions 3 and 7 revised with closely competing options; IDs and answer-letter slots retained. Exact original/revised hashes in reviewed-question-revisions.json.",
+    "editorialReview": "completed_for_flagged_questions_author_source_check"
   },
   "coverageFindings": [
     {
@@ -84,7 +85,6 @@
   ],
   "nextWork": [
     "Finish full source-to-question mapping, especially organ damage and renal artery investigation details.",
-    "Resolve editorial revisions with explicit provenance while preserving original question IDs and answer slots.",
     "Assess newer 2026 resistant-hypertension sources, then complete chapter-wide review and install only after release checks pass."
   ]
 }

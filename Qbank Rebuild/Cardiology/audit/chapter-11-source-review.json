@@ -432,7 +432,7 @@
   "releaseReview": {
     "status": "pending_coverage_and_editorial_work",
     "installed": false,
-    "originalMeasurementBlockFinalReview": "answer_keys_and_thresholds_reviewed_editorial_improvements_pending",
+    "originalMeasurementBlockFinalReview": "answer_keys_thresholds_and_flagged_distractor_revisions_reviewed",
     "sourceDocumentCoverageAudit": "in_progress_gaps_identified",
     "chapterWideConsistencyReview": "pending",
     "sourceCoverageReview": "audit/chapter-11-source-coverage-review.json"
@@ -452,5 +452,19 @@
       "https://doi.org/10.1056/NEJMicm2109500"
     ],
     "limitations": "No independent clinician review; whole-chapter release review remains pending."
+  },
+  "measurementEditorialRevisions": {
+    "status": "author_source_checked",
+    "questionIds": [
+      "cardiology-rebuild-11-003",
+      "cardiology-rebuild-11-007"
+    ],
+    "ledger": "audit/reviewed-question-revisions.json",
+    "checks": [
+      "All options represent related measurement protocols or recognized BP phenotypes.",
+      "Each incorrect option individually explained; one best answer under the supplied conditions.",
+      "Question IDs and answer-letter positions preserved."
+    ],
+    "limitations": "Whole-chapter coverage/current-update review remains pending."
   }
 }

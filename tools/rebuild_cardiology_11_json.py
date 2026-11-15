@@ -360,6 +360,27 @@ SECTIONS.append((organ_topic,[
     'Distinguish chronic retinal vascular changes from advanced injury and grade III versus IV retinopathy']))
 DISPLAY_TOPICS=[t for t,_ in SECTIONS[:2]]+[organ_topic]+[t for t,_ in SECTIONS[2:-1]]
 
+# Reviewed editorial revisions retain the original IDs and answer-letter slots.
+# Frozen originals remain in audit/pre-redistribution.zip; the revision ledger
+# records the exact original and revised content digests.
+REVISED_ORIGINAL_IDS={'cardiology-rebuild-11-003','cardiology-rebuild-11-007'}
+rows[2]['answer']='Wait 30 minutes after caffeine/exercise, rest five minutes and average repeat seated readings'
+rows[2]['others']=[
+ ('Wait five minutes after caffeine/exercise, rest five minutes and average repeat seated readings',
+  'Five minutes is the resting period, not the recommended caffeine or exercise exclusion interval. Repeated properly positioned readings become interpretable after the preparation interval, which is at least thirty minutes in this planned stable assessment.'),
+ ('Wait 30 minutes after caffeine/exercise, rest one minute and average repeat seated readings',
+  'The thirty-minute exposure interval is appropriate, but a one-minute seated rest is shorter than the standard five-minute preparation. One to two minutes is instead an appropriate interval between repeated office readings after the initial rest.'),
+ ('Wait 30 minutes after caffeine/exercise, rest five minutes and record the highest seated reading',
+  'Preparation is appropriate, but selecting the maximum overstates the representative office pressure. Repeated readings should be averaged under the applicable protocol; ESC manual measurement generally uses the final two of three readings rather than the highest.')]
+rows[6]['answer']='Masked hypertension'
+rows[6]['others']=[
+ ('White-coat hypertension',
+  'White-coat hypertension is elevated office pressure with out-of-office averages below their diagnostic thresholds in an untreated person. The home and awake averages here are elevated while the clinic average is below the hypertension threshold, reversing that pattern.'),
+ ('Sustained hypertension',
+  'Sustained hypertension means elevated office and out-of-office averages. The home and awake recordings are hypertensive, but the repeated office average does not reach the diagnostic hypertension boundary under either named framework.'),
+ ('Isolated nocturnal hypertension',
+  'Isolated nocturnal hypertension describes elevated sleep pressure despite daytime averages below the relevant threshold. The awake ambulatory and home averages here are clearly elevated, and no sleep average is supplied to establish a separate nocturnal phenotype.')]
+
 def highlight_values(text):
     return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|mg/kg/min|mg/kg/day|mg/kg|mg/hour|mg/h|mg/min|mg/g|mg/dL|mg|g/hour|g/h|g/day|g/week|g|mmol/L|nmol/L|ng/mL/h|ng/dL|µg/kg/min|µg/kg|µg/min|µg/dL|mU/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
 
@@ -375,7 +396,7 @@ if __name__=='__main__':
             hs,vs=r['table'];r['table']=(hs,[[highlight_values(x)for x in line]for line in vs])
     # Keep the original nine redistributed questions verbatim. Later draft
     # explanations remain editable while retaining their existing answer slots.
-    preserved=[q for q in existing['questions'] if int(q['id'].split('-')[-1])<=9] if existing else []
+    preserved=[q for q in existing['questions'] if int(q['id'].split('-')[-1])<=9 and q['id'] not in REVISED_ORIGINAL_IDS] if existing else []
     answer_indices={q['id']:q['correctIndex'] for q in existing['questions']} if existing else {}
     p=save('Cardiology',11,DOC,rows,R,'Original educational synthesis; incomplete draft, not for installation. Full Harrison text not accessed; independent clinician review not claimed.',preserved_questions=preserved,preserved_answer_indices=answer_indices)
     chapter_status='draft_awaiting_final_review' if len(rows)==len(decisions) else 'draft_in_progress'

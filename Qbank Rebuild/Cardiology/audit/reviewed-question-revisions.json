@@ -1,0 +1,44 @@
+{
+  "archive": "pre-redistribution.zip",
+  "digestConvention": "SHA256 of ensure_ascii=False, sort_keys=True JSON using default separators",
+  "revisions": [
+    {
+      "questionId": "cardiology-rebuild-11-003",
+      "status": "author_source_checked",
+      "reviewedAt": "2026-11-15",
+      "reason": "Replace implausible measurement alternatives with closely competing preparation, rest and aggregation protocols.",
+      "originalSha256": "bbea22eb296d4563e6d07188199b93b7269b2d3187e9a0b82df372604263feca",
+      "revisedSha256": "3fc7d8a7d8230b85bf3c89bb0f3fa4c6fe657b2a2c8188fa3341f9d1005d98fd",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationTeaching",
+        "options"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehae178",
+        "https://doi.org/10.1161/CIR.0000000000001356"
+      ],
+      "independentClinicianReview": false
+    },
+    {
+      "questionId": "cardiology-rebuild-11-007",
+      "status": "author_source_checked",
+      "reviewedAt": "2026-11-15",
+      "reason": "Replace giveaway dismissal alternatives with four established blood-pressure phenotypes.",
+      "originalSha256": "a57f927d1d8ac15df64a981441948c7c411681e9a4f25f7b7505610c3ffbd5ed",
+      "revisedSha256": "792da6cb08d8a7e56bda0baad1fc7b1f5a6bcddceb46725bc405131857e0d52b",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationTeaching",
+        "options"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehae178",
+        "https://doi.org/10.1161/CIR.0000000000001356"
+      ],
+      "independentClinicianReview": false
+    }
+  ]
+}

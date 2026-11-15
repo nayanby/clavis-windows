@@ -2,7 +2,7 @@
 
 Names and numbers match the 15 DOCX files in `data/files/Cardiology`.
 
-The redistribution allocated 615 existing questions once each, preserving their IDs, stems, options, answer keys, explanations and references. Subsequent hypertension authoring has added 54 questions, bringing the current total to 669.
+The redistribution allocated 615 existing questions once each, preserving their IDs, stems, options, answer keys, explanations and references at redistribution. Two subsequent reviewed hypertension revisions retain IDs and answer-letter slots; exact original/revised hashes are recorded in `audit/reviewed-question-revisions.json`. Subsequent hypertension authoring has added 54 questions, bringing the current total to 669.
 
 | Chapter | Topic | Authored questions | Draft questions |
 |---|---|---:|---:|
@@ -28,7 +28,7 @@ The 541 previously installed questions are released under the matching source ch
 
 Hypertension has all 63 provisionally planned questions drafted: measurement and phenotypes (9), risk-based initiation and targets (6), hypertensive retinal injury (1), lifestyle/contributors (4), initial drug selection/adverse effects (8), resistant hypertension (6), secondary causes (11), general emergencies (5), specific emergencies (8) and target trials (5). Its status is `draft_awaiting_final_review`: final chapter-wide source, coverage and editorial review remains required before installation. The current coverage ledger is `audit/chapter-11-coverage.json`; the original nine-question ledger remains archived.
 
-All 15 files contain existing questions, but full chapter coverage is incomplete. In particular, chapters 12 and 13 contain only 4 and 3 questions respectively. The original explanations are preserved; a medical deep-dive structure revision has not been performed. Answer positions are preserved, so the new chapter subsets have uneven answer-letter distributions.
+All 15 files contain existing questions, but full chapter coverage is incomplete. In particular, chapters 12 and 13 contain only 4 and 3 questions respectively. 613 of the 615 redistributed questions remain verbatim; two hypertension questions have reviewed distractor revisions. A full medical deep-dive revision of the other chapter explanations remains pending. Answer positions are preserved, so the new chapter subsets have uneven answer-letter distributions.
 
 The original source-review ledgers describe the old authoring groups, not the redistributed chapter coverage. Use `audit/redistribution-report.json` for the original question-by-question allocation and content hashes. It is a historical record of the 615-question redistribution, not a current authoring total. The verified original artifacts are retained in `audit/pre-redistribution.zip`.
 
