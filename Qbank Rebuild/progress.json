@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases",
+  "currentChapter": "Cardiology Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade",
   "chapters": [
     {
       "subject": "Neurology",
@@ -666,7 +666,29 @@
       "subject": "Cardiology",
       "chapter": 8,
       "document": "Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Cardiology/Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases.json",
+      "validation": {
+        "questions": 61,
+        "answerDistribution": {
+          "A": 16,
+          "B": 15,
+          "C": 15,
+          "D": 15
+        },
+        "minimumExplanationWords": 335,
+        "distractorRationales": 183,
+        "questionStyles": {
+          "clinical_scenario": 52,
+          "direct": 9
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 61,
+      "plannedQuestions": 61,
+      "installedSha256": "62bc7e8c76426d0ef581697bee347519b86b50479da3d8f13b4db161318d5e61",
+      "coverageMap": "Cardiology/Chapter_08_Cardiomyopathies_Myocarditis_and_Genetic_Cardiac_Diseases.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Cardiology",

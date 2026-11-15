@@ -1,0 +1,740 @@
+{
+  "chapter": 8,
+  "status": "installed_verified",
+  "installed": true,
+  "authoredQuestions": 61,
+  "plannedQuestions": 61,
+  "scopeNote": "Sequential phenotype/genetics, HCM, dilated and arrhythmogenic disease, restrictive/infiltrative disease, myocarditis/sarcoidosis and distinct acquired/pregnancy-related cardiomyopathies. Provisional coverage-driven decisions, not official exam weights.",
+  "sourceChecks": [
+    {
+      "source": "ESC cardiomyopathy guideline 2023",
+      "urls": [
+        "https://academic.oup.com/eurheartj/article/44/37/3503/7246608"
+      ],
+      "questions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "checked": [
+        "NDLVC can include nonischemic scar without dilatation or reduced global EF.",
+        "Hypertrabeculation is a phenotypic trait, not automatically a separate cardiomyopathy.",
+        "Imaging pattern guides etiology but does not by itself establish gene or active inflammation.",
+        "Autosomal dominant transmission differs from age-dependent expression; VUS is not definitive predictive evidence.",
+        "A clinically normal relative negative for an established familial cause can usually leave surveillance directed at that cause.",
+        "Adult HCM threshold 15 mm; adult first-degree relative threshold 13 mm; LVOTO definition 30 mmHg differs from usual advanced-treatment threshold 50 mmHg."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA/ACC HCM guideline 2024 and ESC myocarditis guideline 2025",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2024.02.014",
+        "https://doi.org/10.1093/eurheartj/ehaf192"
+      ],
+      "questions": [
+        3,
+        7,
+        8
+      ],
+      "checked": [
+        "Current HCM advanced-treatment framework identified; symptom and gradient requirements must be separated from phenotype diagnosis.",
+        "Myocarditis imaging/biopsy guidance identified for detailed checks during later question batches."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA/ACC HCM guideline 2024 official recommendation slide set",
+      "urls": [
+        "https://professional.heart.org/-/media/PHD-Files-2/Science-News/2/2024/2024-Guideline-for-HCM-Slide-Set.pdf",
+        "https://doi.org/10.1016/j.jacc.2024.02.014"
+      ],
+      "questions": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "checked": [
+        "Exercise echo for symptomatic patients without significant obstruction on initial maneuvers; CMR/contrast imaging for incompletely defined apical phenotype.",
+        "Integrated athlete differential rather than one thickness measurement.",
+        "Nonvasodilating beta blocker first-line, appropriate NDCC substitution, advanced options without mandatory disopyramide failure.",
+        "Phenylephrine or another noninotropic vasoconstrictor after fluid treatment in hypotension with dynamic obstruction."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Mavacamten FDA label September 2026",
+      "urls": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/214998s013lbl.pdf"
+      ],
+      "questions": [
+        15
+      ],
+      "checked": [
+        "Interrupt below LVEF 50% even without overt symptoms; initiation/up-titration below 55% not recommended.",
+        "Adult usual initiation 5 mg/day and maximum 15 mg/day; interactions require separate dose pathways.",
+        "September 2026 indication includes pediatric weight >=30 kg, distinct from adult-only guideline-era wording; additive negative-inotrope and CYP restrictions reviewed."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "EXPLORER-HCM and SEQUOIA-HCM randomized evidence",
+      "urls": [
+        "https://doi.org/10.1016/S0140-6736(20)31792-X",
+        "https://professional.heart.org/-/media/PHD-Files/Meetings/Other-Cardiovascular-and-Related-Conferences/ESC/2020/EXPLORERHCM.pdf",
+        "https://doi.org/10.1056/NEJMoa2401424"
+      ],
+      "questions": [
+        16
+      ],
+      "checked": [
+        "EXPLORER functional composite at 30 weeks, 37% vs 17%; not mortality or head-to-head surgery.",
+        "SEQUOIA peak oxygen uptake at 24 weeks; between-group 1.7 mL/kg/min, CI 1.0–2.4; no cross-trial superiority inference."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA/ACC HCM guideline 2024 and ESC cardiomyopathy guideline 2023",
+      "urls": [
+        "https://professional.heart.org/-/media/PHD-Files-2/Science-News/2/2024/2024-Guideline-for-HCM-Slide-Set.pdf",
+        "https://doi.org/10.1093/eurheartj/ehad194"
+      ],
+      "questions": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "checked": [
+        "Myectomy when another cardiac lesion requires surgery; selection and limitations of alcohol ablation.",
+        "Adult major risk-marker definitions including aneurysm with scar, EF <50%, massive LVH and relevant family history; extensive LGE >=15% as additional evidence.",
+        "Separate adult risk-model bands and additional evidence rather than inventing a combined score.",
+        "HCM clinical-AF anticoagulation independent of conventional score; distinguish >24h from >5min to <24h subclinical episodes.",
+        "Systolic dysfunction threshold <50%; age-specific genotype-positive surveillance and sports counseling."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC cardiomyopathy/myocarditis guidance and EHRA/ACNAP 2026",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehad194",
+        "https://doi.org/10.1093/eurheartj/ehaf192",
+        "https://doi.org/10.1093/europace/euag184"
+      ],
+      "questions": [
+        23,
+        24
+      ],
+      "checked": [
+        "CMR and cause-directed testing in stable unexplained DCM; biopsy is selected when it changes management, not mandatory before noninvasive characterization.",
+        "LMNA phenotype can begin with conduction and atrial disease before ventricular dysfunction; pacing alone does not settle ventricular-arrhythmia protection."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Genetic alcohol-toxicity study 2018; DSP phenotype cohort 2020; ESC cardiomyopathy 2023",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2018.03.462",
+        "https://doi.org/10.1161/CIRCULATIONAHA.119.044934",
+        "https://doi.org/10.1093/eurheartj/ehad194"
+      ],
+      "questions": [
+        25,
+        26
+      ],
+      "checked": [
+        "Pathogenic TTN truncation and alcohol exposure may contribute together, without treating every TTN finding as pathogenic.",
+        "DSP phenotype can include recurrent myocardial injury and LV fibrosis before systolic dysfunction; not a universal indication for immunosuppression."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Revised ARVC Task Force criteria 2010 and ESC 2023",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC2848326/",
+        "https://doi.org/10.1093/eurheartj/ehad194"
+      ],
+      "questions": [
+        27,
+        28
+      ],
+      "checked": [
+        "CMR regional finding plus sex-specific RVEDVi or EF threshold; a composite imaging criterion must not be counted twice.",
+        "Male major RVEDVi >=110; female >=100 mL/m2; major RVEF <=40%; minor volume/EF bands.",
+        "Age >14 and no complete RBBB for major V1–V3 T-wave inversion; distinct complete-RBBB context and terminal activation threshold >=55 ms."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC 2023; HRS athlete-arrhythmia consensus 2024; ESC myocarditis 2025",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehad194",
+        "https://doi.org/10.1016/j.hrthm.2024.05.018",
+        "https://doi.org/10.1093/eurheartj/ehaf192"
+      ],
+      "questions": [
+        29,
+        30,
+        31
+      ],
+      "checked": [
+        "Sarcoidosis and loading/congenital disorders can mimic ARVC; consider directed inflammatory evaluation when the phenotype is discordant.",
+        "Intensive endurance exercise can accelerate ARVC phenotype/arrhythmia, particularly PKP2; ICD is not protection from substrate progression.",
+        "Arrhythmic history and both ventricular phenotypes remain relevant above conventional LV-EF primary-prevention thresholds."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC cardiomyopathy and myocarditis/pericarditis guidance",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehad194",
+        "https://doi.org/10.1093/eurheartj/ehaf192",
+        "https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-15/Constrictive-pericarditis-role-of-echocardiography-and-magnetic-resonance-imaging/"
+      ],
+      "questions": [
+        32
+      ],
+      "checked": [
+        "Respiratory ventricular discordance distinguishes constrictive physiology; pressure equalization and dip-and-plateau alone are not specific."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC amyloidosis 2023, ATTR guidance 2025, ESC amyloid 2021 and ASH diagnostic guideline 2026",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2022.11.022",
+        "https://doi.org/10.1016/j.jacc.2025.09.004",
+        "https://doi.org/10.1093/eurheartj/ehab072",
+        "https://doi.org/10.1182/bloodadvances.2025017073"
+      ],
+      "questions": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "checked": [
+        "Complete monoclonal screen uses serum free light chains plus serum/urine immunofixation; CKD interpretation matters.",
+        "Nonbiopsy ATTR requires phenotype plus grade 2/3 true myocardial uptake and negative complete clonal assessment; SPECT excludes blood-pool mimic.",
+        "Positive monoclonal result prevents automatic scan-based ATTR typing; tissue confirmation and validated fibril subtyping needed.",
+        "ASH 2026 supports appropriate combined surrogate or cardiac biopsy strategy; a negative surrogate sample does not end persistent suspicion.",
+        "Offer counseled TTR sequencing after ATTR regardless of older age or absent neuropathy/pedigree."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Current ATTR drug labels and ACC ATTR guidance 2025",
+      "urls": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215515s006lbl.pdf",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=913552ef-875d-4cb7-bf05-a7d20a394c38",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1b4121ee-a733-4456-a917-be2603477839",
+        "https://doi.org/10.1016/j.jacc.2025.09.004"
+      ],
+      "questions": [
+        37
+      ],
+      "checked": [
+        "TTR production silencing differs from tetramer stabilization; vutrisiran adult ATTR-CM indication includes wild-type and hereditary disease.",
+        "Adult labeled doses: vutrisiran 25 mg SC each 3 months; acoramidis 712 mg twice daily; tafamidis free acid 61 mg daily or meglumine 80 mg daily.",
+        "Vitamin A supplementation and lack of universal cross-trial ranking/combination mandate."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ANDROMEDA original trial and final survival analysis 2026; daratumumab/hyaluronidase label",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2028631",
+        "https://doi.org/10.1182/blood.2025032099",
+        "https://discovery.ucl.ac.uk/id/eprint/10226311/1/blood.2025032099.pdf",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/761145s032lbl.pdf"
+      ],
+      "questions": [
+        38
+      ],
+      "checked": [
+        "Daratumumab-VCd in an eligible newly diagnosed AL population; do not extrapolate automatically to excluded Mayo stage IIIB.",
+        "Final analysis median follow-up 61.4 months, OS HR 0.62, CI 0.42–0.90.",
+        "Reference VCd doses and six-cycle duration verified in author manuscript; individualized dose reduction remains essential."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Fabry GeneReviews and agalsidase/migalastat prescribing information",
+      "urls": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK1292/",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/103979s5313lbl.pdf",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/208623s009lbl.pdf"
+      ],
+      "questions": [
+        39
+      ],
+      "checked": [
+        "Normal alpha-galactosidase A does not exclude Fabry in a woman; molecular testing and validated variant interpretation needed.",
+        "Agalsidase beta 1 mg/kg IV every two weeks; migalastat 123 mg every other day for eligible adults with amenable variants."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "TIF thalassemia guidance 2021/2025 and ESC eosinophilic-heart consensus 2026",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9345633/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK614238/",
+        "https://doi.org/10.1093/ejhf/xuag043"
+      ],
+      "questions": [
+        40,
+        41
+      ],
+      "checked": [
+        "Validated cardiac T2* below ten milliseconds warrants urgent chelation review despite preserved EF; ferritin/liver iron cannot substitute for myocardial assessment.",
+        "Endocardial fibrosis, overlying thrombus and apical obliteration; eosinophilic inflammatory/thrombotic/fibrotic phases may overlap."
+      ],
+      "status": "draft_source_checked",
+      "accessNote": "2025 TIF chapter direct open hit browser challenge; accessible TIF 2021 guideline and 2022 TIF guide confirm numeric risk thresholds. No claim of full 2025 chapter access."
+    },
+    {
+      "source": "ESC myocarditis/pericarditis 2025, ACC myocarditis pathway 2024 and updated CMR tissue recommendations 2018",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf192",
+        "https://doi.org/10.1016/j.jacc.2024.10.080",
+        "https://doi.org/10.1016/j.jacc.2018.09.072"
+      ],
+      "questions": [
+        42,
+        43,
+        44,
+        46
+      ],
+      "checked": [
+        "Exclude time-sensitive coronary disease rather than diagnosing myocarditis from a prodrome.",
+        "CMR T2 plus T1 tissue domains; functional/pericardial findings supportive, site-specific mapping values, timing and negative-test limitations.",
+        "Management-changing biopsy in high-risk HF/VT/AV-block phenotype; specialized processing and patchy-disease limitations.",
+        "Supportive/risk-based uncomplicated management rather than universal immunosuppression or serology-selected antiviral therapy."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ISHLT/HFSA acute MCS guideline 2023 and ACC/ESC myocarditis guidance",
+      "urls": [
+        "https://www.ishlt.org/docs/default-source/standards-guidelines/2023_guideline_jointstatement_ishlt_hfsa_mcsguideline.pdf",
+        "https://doi.org/10.1016/j.jacc.2024.10.080",
+        "https://doi.org/10.1093/eurheartj/ehaf192"
+      ],
+      "questions": [
+        45
+      ],
+      "checked": [
+        "Early advanced-center escalation in refractory hypoperfusion; MCS as bridge to recovery/decision/transplant, with device selection by physiology and parallel tissue evaluation."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "TIMIC original randomized trial and current inflammatory cardiomyopathy guidance",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehp249",
+        "https://doi.org/10.1093/eurheartj/ehaf192"
+      ],
+      "questions": [
+        47
+      ],
+      "checked": [
+        "Selected chronic biopsy-proven virus-negative inflammatory cardiomyopathy; not all acute myocarditis.",
+        "Prednisone 1 mg/kg/day four weeks then 0.33 mg/kg/day five months and azathioprine 2 mg/kg/day six months, added to HF treatment."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC myocarditis 2025 and eosinophilic-heart consensus 2026",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf192",
+        "https://doi.org/10.1093/ejhf/xuag043"
+      ],
+      "questions": [
+        48,
+        49
+      ],
+      "checked": [
+        "Giant-cell disease requires prompt combined immunosuppression rather than steroid monotherapy, with parallel HF/rhythm/transplant assessment.",
+        "ESC severe-disease pulse methylprednisolone dosing and subsequent oral steroid regimen; individualized additional agents and monitoring.",
+        "Drug-hypersensitivity myocarditis: culprit withdrawal plus systemic glucocorticoids for important myocardial involvement; assess alternative eosinophilic causes.",
+        "Fulminant eosinophilic pulse 7–14 mg/kg/day, max 1000 mg/day for three days; Strongyloides evaluation/treatment risk before or alongside urgent immunosuppression."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC cardio-oncology 2022 and myocarditis 2025",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac244",
+        "https://doi.org/10.1093/eurheartj/ehaf192"
+      ],
+      "questions": [
+        50
+      ],
+      "checked": [
+        "Preserved EF does not exclude serious ICI myocarditis with AV block; interrupt ICI and provide continuous monitored care.",
+        "Named ESC 2022 regimen methylprednisolone 500–1000 mg IV daily for first three to five days once likely; do not wait for biopsy in a high-risk likely presentation.",
+        "Reassess early for resistance; adjunct evidence/sequencing and rechallenge require multidisciplinary review."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA cardiac sarcoidosis statement and ESC sarcoid consensus 2024",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001240",
+        "https://doi.org/10.1093/eurheartj/ehae356"
+      ],
+      "questions": [
+        51,
+        52
+      ],
+      "checked": [
+        "CMR and adequately prepared PET are complementary; negative unguided biopsy does not exclude patchy disease; named clinical criteria matter.",
+        "US class IIa ICD assessment above EF 35% with permanent-pacing indication; distinguish device capability from CRT eligibility.",
+        "AHA prednisone initiation around 30–40 mg/day, individualized taper; ESC methotrexate 15–25 mg weekly with folic acid and monitoring."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC myocarditis 2025, ACC pathway 2024 and international rhythm consensus 2026",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf192",
+        "https://doi.org/10.1016/j.jacc.2024.10.080",
+        "https://doi.org/10.1093/europace/euag153"
+      ],
+      "questions": [
+        53
+      ],
+      "checked": [
+        "Individualized return after multiparametric remission; symptoms, troponin and EF alone do not override residual exercise-associated NSVT.",
+        "Persistent LGE is not synonymous with active inflammation or a universal permanent exercise ban.",
+        "Repeat CMR around six months and phase/substrate-directed rhythm evaluation contribute to follow-up."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC pregnancy guideline 2025 and HFA PPCM consensus 2026",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf193",
+        "https://doi.org/10.1093/ejhf/xuag024"
+      ],
+      "questions": [
+        54,
+        55,
+        56,
+        57
+      ],
+      "checked": [
+        "PPCM EF <45%, peripartum timing and exclusion of adequate alternative cause; LV dilatation not required.",
+        "Pregnancy-compatible HF plan differs from postpartum/lactation plan; no antenatal ACEi/ARB/ARNI/MRA/SGLT2 default regimen.",
+        "ESC 2025 bromocriptine may-be-considered adjunct, at least prophylactic LMWH consideration, lactation implications and distinction between trial/acute dosing contexts.",
+        "Counsel recurrence even after EF >50%; consider continued HF therapy at least 12 months after complete recovery before individualized changes."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "InterTAK consensus 2018 and practical-challenges consensus 2024",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehy076",
+        "https://doi.org/10.1093/eurheartj/ehy077",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11589216/"
+      ],
+      "questions": [
+        58,
+        59
+      ],
+      "checked": [
+        "CAD and pheochromocytoma do not automatically exclude TTS; trigger not mandatory.",
+        "Do not delay urgent ACS work-up because ballooning is suspected.",
+        "Shock management depends on LVOTO/pump/RV/MR mechanism; do not increase inotropy indiscriminately in dynamic obstruction."
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC cardio-oncology 2022 and cardiomyopathy 2023; TTN alcohol-toxicity study",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehac244",
+        "https://doi.org/10.1093/eurheartj/ehad194",
+        "https://doi.org/10.1016/j.jacc.2018.03.462"
+      ],
+      "questions": [
+        60,
+        61
+      ],
+      "checked": [
+        "Relative GLS magnitude reduction 20%; asymptomatic EF >=50 with >15% GLS decline meets mild CTRCD; moderate/severe EF bands remain distinct.",
+        "Address arrhythmia and alcohol exposure in parallel with HF treatment; reversible contributors do not exclude genetic susceptibility."
+      ],
+      "status": "draft_source_checked"
+    }
+  ],
+  "editorialReviewProgress": {
+    "status": "complete",
+    "questionsReviewedInFull": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61
+    ],
+    "remaining": "None for this chapter author-review gate; independent clinician review is not claimed.",
+    "changes": [
+      "Q2 replaces unrelated cardiomyopathy labels with clinically plausible morphology, anticoagulation and family-testing interpretations.",
+      "Q3 now tests the actual LGE contrast principle against related CMR tissue mechanisms, retaining pattern and activity limitations in the explanation.",
+      "Q6 replaces prophylactic ICD/lifelong-health distractors with competing family surveillance and testing strategies.",
+      "Q8 replaces implausible gradient addition with competing resting, latent and nonobstructive classifications.",
+      "Q9 removes giveaway descriptions from competing investigation names.",
+      "Q11 replaces electrical monitoring and deliberately inadequate repeat views with competing cardiac imaging investigations.",
+      "Q12 compares actual obstructive-HCM treatment options under the explicitly dated 2024 pathway.",
+      "Q14 replaces waiting for EF decline with a plausible but unsuitable default dual-nodal drug escalation and shortens the correct option.",
+      "Q15 replaces disopyramide addition with a closer interruption-versus-permanent-discontinuation choice; adds distinct aficamten EF rules.",
+      "Q16 adds the separate MAPLE-HCM active-comparator trial and dose context without attributing it to the earlier placebo-controlled studies.",
+      "Q17 removes explicit left-untreated phrasing and compares surgical mitral/septal strategies rather than pacing as a weak substitute.",
+      "Q18 compares a major HCM marker with genuine additional/model risk features: extensive LGE, NSVT and LA size.",
+      "Q19 replaces invented percentage arithmetic with plausible competing ICD decisions: model-only exclusion, mandatory scar-driven implantation and EPS prerequisite.",
+      "Q22 replaces prophylactic ICD and unconditional discharge distractors with competing surveillance and preventive-drug plans.",
+      "Q23 presents realistic investigation names without universal/definitive giveaway qualifications.",
+      "Q27 now states definite, borderline and possible 2010 diagnostic combinations and explicitly avoids double-counting composite CMR evidence.",
+      "Q28 compares four closely competing major/minor and repolarization/depolarization categories rather than an unsupported definite-diagnosis claim.",
+      "Q29 replaces idiopathic focus/athlete/shunt distractors with giant-cell, lymphocytic and DSP-associated inflammatory disease.",
+      "Q30 replaces total inactivity and implausible ICD progression prevention with realistic competing exercise-clearance plans.",
+      "Full explanation review completed for questions 33-61, including diagnostic branches, drug schedules, activity assessment and pregnancy care.",
+      "Replaced weak or giveaway alternatives in amyloid, iron, inflammatory myocardial disease, device, PPCM and reversible-contributor questions with competing investigations, regimens or care sequences; individualized rationales revised to match.",
+      "Shortened long correct options in thirteen questions to reduce answer-length cueing.",
+      "Added primary ATTR-ACT, ATTRibute-CM and HELIOS-B trial comparisons to question 37, distinguishing hierarchical win ratios from mortality hazard ratios and avoiding cross-trial superiority claims.",
+      "Added migalastat renal eligibility and fasting/caffeine administration requirements from the 2025 US label.",
+      "Added an explicitly illustrative extended-release metoprolol starting dose with an ACC clinical teaching source; titration remains response- and tolerance-guided.",
+      "Applied numerical threshold and dose highlighting to teaching text and tables without changing stems or answer wording."
+    ]
+  },
+  "finalReviewStatus": "author_editorial_and_coverage_review_complete_not_independent_clinician_review",
+  "limitations": [
+    "Full Harrison text not accessed.",
+    "Author source checking does not constitute independent clinician review.",
+    "Structural validation is not proof of clinical accuracy or chapter completeness."
+  ],
+  "pendingEvidence": [
+    {
+      "topic": "AL amyloidosis therapy",
+      "source": "ANDROMEDA final survival analysis, Blood 2026",
+      "url": "https://ashpublications.org/blood/article/148/9/1097/568351/Daratumumab-bortezomib-cyclophosphamide",
+      "status": "relevant_final_analysis_and_methods_reviewed",
+      "access": "Accessible UCL author manuscript reviewed; publisher link returned 403.",
+      "resolvedSource": "https://discovery.ucl.ac.uk/id/eprint/10226311/1/blood.2025032099.pdf"
+    },
+    {
+      "topic": "Myocarditis rhythm and return-to-activity updates",
+      "source": "2026 international myocarditis/inflammatory cardiomyopathy rhythm consensus",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13522998/",
+      "status": "resolved_relevant_activity_and_followup_sections_reviewed",
+      "doi": "10.1093/europace/euag153",
+      "checked": "Consensus sections on exercise testing, follow-up CMR by six months and multiparametric return-to-sport safety gates read. No calendar-only clearance or automatic ICD inference."
+    }
+  ],
+  "additionalSourceChecks": [
+    {
+      "scope": "Opening phenotype/imaging review",
+      "questions": [
+        1,
+        2,
+        3,
+        6,
+        8
+      ],
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehad194",
+        "https://doi.org/10.1161/CIR.0b013e3181d44a8f"
+      ],
+      "findings": "Rechecked NDLVC and hypertrabeculation framework; extracellular gadolinium distribution differs from native T1/T2/T2-star mechanisms. Existing cascade-test and LVOT threshold source checks retained."
+    },
+    {
+      "scope": "HCM editorial review questions 9–16",
+      "questions": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2024.02.014",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/219083s000lbl.pdf",
+        "https://doi.org/10.1056/NEJMoa2504654"
+      ],
+      "findings": "CMR clarification after inconclusive echo, physiological exercise echo and 2024 first-line/escalation pathways rechecked. Aficamten label has dose reduction at EF 40–<50 and interruption <40, unlike mavacamten. MAPLE is a separate 2025 active-comparator study; current evidence is not silently backdated into the 2024 guideline."
+    },
+    {
+      "scope": "HCM risk and family care review",
+      "questions": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2024.02.014",
+        "https://doi.org/10.1093/eurheartj/ehad194",
+        "https://professional.heart.org/-/media/PHD-Files-2/Science-News/2/2024/2024-Guideline-for-HCM-Slide-Set.pdf"
+      ],
+      "findings": "Reviewed surgical selection, adult major-versus-additional risk features, risk-model interpretation, clinical-AF anticoagulation, HCM systolic impairment and genotype-positive surveillance. DCM investigation/LMNA explanation also read in full."
+    },
+    {
+      "scope": "DCM/ARVC/restrictive full-text review",
+      "questions": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehq025",
+        "https://doi.org/10.1093/eurheartj/ehad194",
+        "https://doi.org/10.1161/CIR.0000000000001240",
+        "https://doi.org/10.1016/j.hrthm.2024.05.018"
+      ],
+      "findings": "Read all explanations in full; reviewed sex-specific CMR and ECG conduction context, integrated diagnostic categories, inflammatory mimics, exercise exposure and ventricular interdependence."
+    },
+    {
+      "scope": "Amyloid treatment and late chapter final review",
+      "questions": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa1805689",
+        "https://doi.org/10.1056/NEJMoa2305434",
+        "https://doi.org/10.1056/NEJMoa2409134",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/208623s009lbl.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13522998/",
+        "https://academic.oup.com/eurheartj/article/46/43/4462/8234487?login=false"
+      ],
+      "findings": "Primary randomized trial abstracts checked for endpoints and quantitative estimates; migalastat dosing, fasting and renal sections checked; 2026 rhythm consensus activity and CMR reassessment sections checked; 2025 pregnancy guidance on bromocriptine schedules and post-recovery HF treatment rechecked. All 33-61 question explanations read in full."
+    }
+  ],
+  "coverageAudit": {
+    "plannedDecisions": 61,
+    "authoredDecisions": 61,
+    "uniqueDecisions": 61,
+    "sequence": "Six continuous topic sections retained",
+    "answerDistribution": {
+      "A": 16,
+      "B": 15,
+      "C": 15,
+      "D": 15
+    },
+    "tables": 8,
+    "highlightedValues": 83,
+    "distractorRationales": 183,
+    "judgment": "Adequate coverage for this chapter; count is coverage-driven, not an official examination weight."
+  },
+  "runtimeVerification": {
+    "runtimeSourceComparison": "passed",
+    "installedChapters": 22,
+    "installedQuestions": 1130,
+    "chapterQuestions": 61,
+    "otherBanksPreserved": 21
+  }
+}
