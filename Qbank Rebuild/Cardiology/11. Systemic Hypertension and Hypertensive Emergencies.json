@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "11. Systemic Hypertension and Hypertensive Emergencies",
   "headingText": "Systemic Hypertension and Hypertensive Emergencies",
-  "targetQuestions": 62,
+  "targetQuestions": 63,
   "status": "draft_awaiting_final_review",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis; incomplete draft, not for installation. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -1194,6 +1194,113 @@
       "sourceCheckedAt": "2026-11-15",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Evaluate hypertension-mediated organ damage and baseline renal metabolic and cardiovascular risk"
+    },
+    {
+      "id": "cardiology-rebuild-11-063",
+      "topic": "Hypertension-mediated organ damage",
+      "question": "An adult with newly recognized BP 224/132 mmHg reports blurred vision. Both fundi show arteriolar narrowing, AV nicking, flame-shaped hemorrhages and cotton-wool spots. The optic discs have sharp margins without swelling. Which Keith–Wagener–Barker grade best describes these findings?",
+      "options": [
+        "Grade II",
+        "Grade I",
+        "Grade III",
+        "Grade IV"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Hypertensive Retinopathy: Vascular Sclerosis Versus Acute Injury\n\nCorrect answer: Grade III\n\nRetinal Findings\n\n**Hemorrhages and cotton-wool spots distinguish advanced retinal injury from isolated arteriolar sclerosis.** In the named historical classification, their presence without disc edema is grade III.\n\nCotton-wool spots reflect focal ischemic injury in the retinal nerve-fiber layer. Flame-shaped hemorrhages follow the superficial nerve-fiber architecture. Hard exudates reflect leakage with lipid deposition.\n\nAV nicking and increased arteriolar light reflex, including copper or silver wiring, chiefly describe vascular wall changes. They do not by themselves prove an acute hypertensive emergency.\n\nClinical Assessment and Management\n\n**Severe hypertension with acute retinal injury requires urgent evaluation for hypertensive emergency even without optic-disc edema.** Grade III or IV changes must be interpreted with symptom onset, examination quality and alternative retinal disease.\n\nRepeat BP promptly with appropriate technique while assessing neurological status, renal function, urine findings, ECG and other clinically indicated evidence of acute injury. Check blood count and hemolysis markers if thrombotic microangiopathy is suspected. Ophthalmic assessment helps document the lesions and exclude competing causes.\n\nIf an emergency is confirmed, use a monitored setting and controlled titration rather than an abrupt unmonitored fall. In the absence of a disease-specific exception, the AHA 2025 sequence is to reduce systolic pressure by no more than ==25%== in the first hour, then below ==160/100 mmHg== over the next two to six hours, followed by cautious further reduction. Stroke, aortic dissection and pregnancy require their specific pathways.\n\nOptic-disc edema is a descriptive finding; the term papilledema strictly denotes edema from raised intracranial pressure. Neurological symptoms or an atypical ocular pattern need evaluation rather than attribution to BP alone. Retinal vein occlusion, diabetic retinopathy and other disorders may also produce hemorrhages or cotton-wool spots. The grading answer here depends on the explicitly supplied hypertensive pattern, not on assuming every retinal hemorrhage has a hypertensive cause.\n\nKeith–Wagener–Barker grade | Defining fundus pattern\n\nI | Mild generalized arteriolar narrowing\n\nII | More definite narrowing and AV nicking\n\nIII | Vascular changes plus hemorrhages, cotton-wool spots and/or exudates\n\nIV | Grade III changes with optic-disc edema\n\nGrade II: Grade II adds more definite arteriolar narrowing and AV nicking. Those chronic vascular changes are present, but hemorrhages and cotton-wool spots advance this examination beyond grade II.\n\nGrade I: Grade I describes mild generalized arteriolar narrowing. It would fit early vascular narrowing without the AV-crossing changes and exudative or hemorrhagic lesions present here.\n\nGrade IV: Grade IV includes advanced retinal injury together with optic-disc edema. Severe BP and visual symptoms alone do not establish that grade; the stem explicitly documents sharp, unswollen disc margins.\n\nESC elevated blood pressure and hypertension guideline, 2024 — https://doi.org/10.1093/eurheartj/ehae178\n\nAHA/ACC high blood pressure guideline, 2025 — https://doi.org/10.1161/CIR.0000000000001356\n\nESC Council on Hypertension position document: hypertensive emergencies, 2019 — https://academic.oup.com/ehjcvp/article/5/1/37/5079054\n\nRetinopathy in Malignant Hypertension, NEJM clinical image, 2021 — https://doi.org/10.1056/NEJMicm2109500",
+      "explanationHtml": "<h2>Hypertensive Retinopathy: Vascular Sclerosis Versus Acute Injury</h2><p><strong>Correct answer: C — Grade III</strong></p><h3>Retinal Findings</h3><ul><li><strong>Hemorrhages and cotton-wool spots distinguish advanced retinal injury from isolated arteriolar sclerosis.</strong> In the named historical classification, their presence without disc edema is grade III.<ul><li>Cotton-wool spots reflect focal ischemic injury in the retinal nerve-fiber layer. Flame-shaped hemorrhages follow the superficial nerve-fiber architecture. Hard exudates reflect leakage with lipid deposition.</li><li>AV nicking and increased arteriolar light reflex, including copper or silver wiring, chiefly describe vascular wall changes. They do not by themselves prove an acute hypertensive emergency.</li></ul></li></ul><h3>Clinical Assessment and Management</h3><ul><li><strong>Severe hypertension with acute retinal injury requires urgent evaluation for hypertensive emergency even without optic-disc edema.</strong> Grade III or IV changes must be interpreted with symptom onset, examination quality and alternative retinal disease.<ul><li>Repeat BP promptly with appropriate technique while assessing neurological status, renal function, urine findings, ECG and other clinically indicated evidence of acute injury. Check blood count and hemolysis markers if thrombotic microangiopathy is suspected. Ophthalmic assessment helps document the lesions and exclude competing causes.</li><li>If an emergency is confirmed, use a monitored setting and controlled titration rather than an abrupt unmonitored fall. In the absence of a disease-specific exception, the AHA 2025 sequence is to reduce systolic pressure by no more than <mark>25%</mark> in the first hour, then below <mark>160/100 mmHg</mark> over the next two to six hours, followed by cautious further reduction. Stroke, aortic dissection and pregnancy require their specific pathways.</li><li>Optic-disc edema is a descriptive finding; the term papilledema strictly denotes edema from raised intracranial pressure. Neurological symptoms or an atypical ocular pattern need evaluation rather than attribution to BP alone. Retinal vein occlusion, diabetic retinopathy and other disorders may also produce hemorrhages or cotton-wool spots. The grading answer here depends on the explicitly supplied hypertensive pattern, not on assuming every retinal hemorrhage has a hypertensive cause.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Keith–Wagener–Barker grade</th><th>Defining fundus pattern</th></tr></thead><tbody><tr><td>I</td><td>Mild generalized arteriolar narrowing</td></tr><tr><td>II</td><td>More definite narrowing and AV nicking</td></tr><tr><td>III</td><td>Vascular changes plus hemorrhages, cotton-wool spots and/or exudates</td></tr><tr><td>IV</td><td>Grade III changes with optic-disc edema</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — Grade II:</strong> Grade II adds more definite arteriolar narrowing and AV nicking. Those chronic vascular changes are present, but hemorrhages and cotton-wool spots advance this examination beyond grade II.</li><li><strong>B — Grade I:</strong> Grade I describes mild generalized arteriolar narrowing. It would fit early vascular narrowing without the AV-crossing changes and exudative or hemorrhagic lesions present here.</li><li><strong>D — Grade IV:</strong> Grade IV includes advanced retinal injury together with optic-disc edema. Severe BP and visual symptoms alone do not establish that grade; the stem explicitly documents sharp, unswollen disc margins.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehae178\">ESC elevated blood pressure and hypertension guideline, 2024</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001356\">AHA/ACC high blood pressure guideline, 2025</a></li><li><a href=\"https://academic.oup.com/ehjcvp/article/5/1/37/5079054\">ESC Council on Hypertension position document: hypertensive emergencies, 2019</a></li><li><a href=\"https://doi.org/10.1056/NEJMicm2109500\">Retinopathy in Malignant Hypertension, NEJM clinical image, 2021</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Hypertensive Retinopathy: Vascular Sclerosis Versus Acute Injury",
+        "sections": [
+          {
+            "heading": "Retinal Findings",
+            "bullets": [
+              {
+                "text": "**Hemorrhages and cotton-wool spots distinguish advanced retinal injury from isolated arteriolar sclerosis.** In the named historical classification, their presence without disc edema is grade III.",
+                "children": [
+                  "Cotton-wool spots reflect focal ischemic injury in the retinal nerve-fiber layer. Flame-shaped hemorrhages follow the superficial nerve-fiber architecture. Hard exudates reflect leakage with lipid deposition.",
+                  "AV nicking and increased arteriolar light reflex, including copper or silver wiring, chiefly describe vascular wall changes. They do not by themselves prove an acute hypertensive emergency."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Clinical Assessment and Management",
+            "bullets": [
+              {
+                "text": "**Severe hypertension with acute retinal injury requires urgent evaluation for hypertensive emergency even without optic-disc edema.** Grade III or IV changes must be interpreted with symptom onset, examination quality and alternative retinal disease.",
+                "children": [
+                  "Repeat BP promptly with appropriate technique while assessing neurological status, renal function, urine findings, ECG and other clinically indicated evidence of acute injury. Check blood count and hemolysis markers if thrombotic microangiopathy is suspected. Ophthalmic assessment helps document the lesions and exclude competing causes.",
+                  "If an emergency is confirmed, use a monitored setting and controlled titration rather than an abrupt unmonitored fall. In the absence of a disease-specific exception, the AHA 2025 sequence is to reduce systolic pressure by no more than ==25%== in the first hour, then below ==160/100 mmHg== over the next two to six hours, followed by cautious further reduction. Stroke, aortic dissection and pregnancy require their specific pathways.",
+                  "Optic-disc edema is a descriptive finding; the term papilledema strictly denotes edema from raised intracranial pressure. Neurological symptoms or an atypical ocular pattern need evaluation rather than attribution to BP alone. Retinal vein occlusion, diabetic retinopathy and other disorders may also produce hemorrhages or cotton-wool spots. The grading answer here depends on the explicitly supplied hypertensive pattern, not on assuming every retinal hemorrhage has a hypertensive cause."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "Keith–Wagener–Barker grade",
+              "Defining fundus pattern"
+            ],
+            "rows": [
+              [
+                "I",
+                "Mild generalized arteriolar narrowing"
+              ],
+              [
+                "II",
+                "More definite narrowing and AV nicking"
+              ],
+              [
+                "III",
+                "Vascular changes plus hemorrhages, cotton-wool spots and/or exudates"
+              ],
+              [
+                "IV",
+                "Grade III changes with optic-disc edema"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Grade II adds more definite arteriolar narrowing and AV nicking. Those chronic vascular changes are present, but hemorrhages and cotton-wool spots advance this examination beyond grade II."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Grade I describes mild generalized arteriolar narrowing. It would fit early vascular narrowing without the AV-crossing changes and exudative or hemorrhagic lesions present here."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Grade IV includes advanced retinal injury together with optic-disc edema. Severe BP and visual symptoms alone do not establish that grade; the stem explicitly documents sharp, unswollen disc margins."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC elevated blood pressure and hypertension guideline, 2024",
+          "url": "https://doi.org/10.1093/eurheartj/ehae178"
+        },
+        {
+          "label": "AHA/ACC high blood pressure guideline, 2025",
+          "url": "https://doi.org/10.1161/CIR.0000000000001356"
+        },
+        {
+          "label": "ESC Council on Hypertension position document: hypertensive emergencies, 2019",
+          "url": "https://academic.oup.com/ehjcvp/article/5/1/37/5079054"
+        },
+        {
+          "label": "Retinopathy in Malignant Hypertension, NEJM clinical image, 2021",
+          "url": "https://doi.org/10.1056/NEJMicm2109500"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Distinguish chronic retinal vascular changes from advanced injury and grade III versus IV retinopathy"
     },
     {
       "id": "cardiology-rebuild-11-016",
@@ -4899,15 +5006,15 @@
       "coverageDecision": "Apply HYVET to selected adults aged eighty or older without withholding all treatment solely for age"
     }
   ],
-  "plannedQuestions": 62,
+  "plannedQuestions": 63,
   "sourceDocument": "11. Systemic Hypertension and Hypertensive Emergencies.docx",
   "redistribution": {
     "originalIdsPreserved": true,
     "existingQuestions": 9,
     "previouslyInstalledQuestions": 0,
-    "draftQuestions": 62,
+    "draftQuestions": 63,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 53
+    "newQuestionsAfterRedistribution": 54
   }
 }

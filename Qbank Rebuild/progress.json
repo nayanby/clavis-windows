@@ -639,31 +639,31 @@
       "originalIdsPreserved": true,
       "existingQuestions": 9,
       "previouslyInstalledQuestions": 0,
-      "draftQuestions": 62,
+      "draftQuestions": 63,
       "coverageStatus": "incomplete_requires_chapter_review",
       "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
       "installedQuestions": 0,
-      "draftQuestionsWithheld": 62,
+      "draftQuestionsWithheld": 63,
       "runtimeStatus": "draft_not_installed",
       "validation": {
-        "questions": 62,
+        "questions": 63,
         "answerDistribution": {
           "A": 16,
           "B": 16,
-          "C": 15,
+          "C": 16,
           "D": 15
         },
         "minimumExplanationWords": 329,
-        "distractorRationales": 183,
+        "distractorRationales": 186,
         "questionStyles": {
           "direct": 14,
-          "clinical_scenario": 48
+          "clinical_scenario": 49
         },
         "status": "passed"
       },
-      "authoredQuestions": 62,
-      "plannedQuestions": 62,
-      "newQuestionsAfterRedistribution": 53,
+      "authoredQuestions": 63,
+      "plannedQuestions": 63,
+      "newQuestionsAfterRedistribution": 54,
       "coverageMap": "Cardiology/audit/chapter-11-coverage.json"
     },
     {
@@ -1351,7 +1351,7 @@
     "sourceChapters": 15,
     "fullCoverage": false,
     "draftQuestionsNotInstalled": 74,
-    "currentAuthoredQuestions": 668,
-    "currentDraftQuestionsNotInstalled": 127
+    "currentAuthoredQuestions": 669,
+    "currentDraftQuestionsNotInstalled": 128
   }
 }

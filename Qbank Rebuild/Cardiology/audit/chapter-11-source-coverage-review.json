@@ -1,0 +1,90 @@
+{
+  "document": "11. Systemic Hypertension and Hypertensive Emergencies.docx",
+  "sourceSha256": "9e6b3bc8faa666da87de834ae802712f9897fa2464017192a33a9cf208e75d1a",
+  "reviewDate": "2026-11-15",
+  "status": "in_progress_gaps_identified",
+  "sourceHeadings": [
+    "Hypertension",
+    "primary hypertension",
+    "Measurement of Blood Pressure",
+    "Out-of-Office Blood-Pressure Monitoring",
+    "Clinical Types of Hypertension",
+    "Clinical Features",
+    "Physical Examination and Important Exam Points",
+    "Diagnosis",
+    "Evaluation Hypertension-Mediated Organ Damage",
+    "A. Heart",
+    "B. Brain",
+    "C. Kidney",
+    "D. Retina",
+    "E. Large and Peripheral Arteries",
+    "Initial Diagnostic Evaluation",
+    "new changes in 2025",
+    "Treatment",
+    "Resistant Hypertension",
+    "evaluation",
+    "Management",
+    "Hypertensive Emergency",
+    "Secondary Hypertension",
+    "Primary aldosteronism",
+    "Other causes",
+    "RENAL ARTERY STENOSIS"
+  ],
+  "scope": "Source chapter headings and focused organ-damage section inspected; this is not yet a paragraph-by-paragraph completeness audit.",
+  "measurementBlock": {
+    "questionIds": [
+      "cardiology-rebuild-11-001",
+      "cardiology-rebuild-11-002",
+      "cardiology-rebuild-11-003",
+      "cardiology-rebuild-11-004",
+      "cardiology-rebuild-11-005",
+      "cardiology-rebuild-11-006",
+      "cardiology-rebuild-11-007",
+      "cardiology-rebuild-11-008",
+      "cardiology-rebuild-11-009"
+    ],
+    "answerKeyReview": "passed_author_review",
+    "checks": [
+      "AHA higher-component classification and ESC elevated-pressure distinction",
+      "Rest, caffeine/exercise avoidance, cuff sizing and arm position",
+      "ESC home/daytime 135/85, 24-hour 130/80 and sleep 120/70 thresholds",
+      "Untreated white-coat versus masked phenotypes",
+      "Orthostatic systolic-or-diastolic fall and timed measurements",
+      "Absolute nocturnal hypertension versus relative dipping; BedMed outcome claim"
+    ],
+    "sources": [
+      {
+        "url": "https://academic.oup.com/eurheartj/article/45/38/3912/7741010",
+        "check": "Primary indexed guideline text rechecked for cuff dimensions and out-of-office thresholds."
+      },
+      {
+        "url": "https://jamanetwork.com/journals/jama/fullarticle/2833860",
+        "check": "Primary trial abstract rechecked for absence of cardiovascular/mortality benefit with routine bedtime dosing."
+      }
+    ],
+    "editorialFinding": "Questions 3 and 7 include easily dismissed measurement/diagnosis alternatives. Strengthen competing options under an explicit reviewed revision without silently breaking baseline preservation."
+  },
+  "coverageFindings": [
+    {
+      "domain": "Hypertensive retinal injury",
+      "evidence": "Source contains Keith-Wagener-Barker grades I–IV and acute hemorrhages/cotton-wool spots/disc edema. No Cardiology stem matched retinopathy/Keith/copper wiring/silver wiring.",
+      "action": "Add a focused clinical recognition or management question with independently verified retinal findings; preserve continuous topic ordering.",
+      "resolution": {
+        "status": "question_authored_and_source_checked",
+        "questionId": "cardiology-rebuild-11-063",
+        "displayPlacement": "After baseline risk assessment and before lifestyle; existing IDs preserved.",
+        "source": "https://academic.oup.com/ehjcvp/article/5/1/37/5079054"
+      }
+    },
+    {
+      "domain": "Chronic organ damage and pathophysiology",
+      "evidence": "Source includes concentric LVH, ECG voltage criteria, small-vessel brain injury, albuminuria and arterial stiffness. Existing question 15 supplies baseline workup but does not comprehensively assess these decisions. No Cardiology stem matched Sokolow, Cornell, pressure-natriuresis or pulse-wave terms.",
+      "action": "Review explanations and other subject banks for existing coverage before deciding distinct new questions; absence of a keyword in stems alone is not proof of absence."
+    }
+  ],
+  "nextWork": [
+    "Finish full source-to-question mapping, especially organ damage and renal artery investigation details.",
+    "Resolve editorial revisions with explicit provenance while preserving original question IDs and answer slots.",
+    "Assess newer 2026 resistant-hypertension sources, then complete chapter-wide review and install only after release checks pass."
+  ]
+}

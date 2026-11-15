@@ -430,10 +430,27 @@
     }
   ],
   "releaseReview": {
-    "status": "pending",
+    "status": "pending_coverage_and_editorial_work",
     "installed": false,
-    "originalMeasurementBlockFinalReview": "pending",
-    "sourceDocumentCoverageAudit": "pending",
-    "chapterWideConsistencyReview": "pending"
+    "originalMeasurementBlockFinalReview": "answer_keys_and_thresholds_reviewed_editorial_improvements_pending",
+    "sourceDocumentCoverageAudit": "in_progress_gaps_identified",
+    "chapterWideConsistencyReview": "pending",
+    "sourceCoverageReview": "audit/chapter-11-source-coverage-review.json"
+  },
+  "organDamageAdditionReview": {
+    "questionId": "cardiology-rebuild-11-063",
+    "status": "generated_question_reviewed_author_source_check",
+    "date": "2026-11-15",
+    "checks": [
+      "Grade III has hemorrhages/cotton-wool spots without disc edema; grade IV adds disc edema.",
+      "Chronic AV nicking alone does not define acute injury.",
+      "Acute retinal injury warrants emergency assessment even without disc edema.",
+      "All three distractors individually explained; full four-grade table included."
+    ],
+    "sources": [
+      "https://academic.oup.com/ehjcvp/article/5/1/37/5079054",
+      "https://doi.org/10.1056/NEJMicm2109500"
+    ],
+    "limitations": "No independent clinician review; whole-chapter release review remains pending."
   }
 }
