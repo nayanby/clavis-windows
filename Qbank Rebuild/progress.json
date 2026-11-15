@@ -635,35 +635,35 @@
       "chapter": 11,
       "document": "11. Systemic Hypertension and Hypertensive Emergencies",
       "file": "Cardiology/11. Systemic Hypertension and Hypertensive Emergencies.json",
-      "status": "draft_in_progress",
+      "status": "draft_awaiting_final_review",
       "originalIdsPreserved": true,
       "existingQuestions": 9,
       "previouslyInstalledQuestions": 0,
-      "draftQuestions": 44,
+      "draftQuestions": 62,
       "coverageStatus": "incomplete_requires_chapter_review",
       "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
       "installedQuestions": 0,
-      "draftQuestionsWithheld": 44,
+      "draftQuestionsWithheld": 62,
       "runtimeStatus": "draft_not_installed",
       "validation": {
-        "questions": 44,
+        "questions": 62,
         "answerDistribution": {
-          "A": 11,
-          "B": 11,
-          "C": 11,
-          "D": 11
+          "A": 16,
+          "B": 16,
+          "C": 15,
+          "D": 15
         },
         "minimumExplanationWords": 329,
-        "distractorRationales": 129,
+        "distractorRationales": 183,
         "questionStyles": {
-          "direct": 7,
-          "clinical_scenario": 37
+          "direct": 14,
+          "clinical_scenario": 48
         },
         "status": "passed"
       },
-      "authoredQuestions": 44,
+      "authoredQuestions": 62,
       "plannedQuestions": 62,
-      "newQuestionsAfterRedistribution": 35,
+      "newQuestionsAfterRedistribution": 53,
       "coverageMap": "Cardiology/audit/chapter-11-coverage.json"
     },
     {
@@ -1351,7 +1351,7 @@
     "sourceChapters": 15,
     "fullCoverage": false,
     "draftQuestionsNotInstalled": 74,
-    "currentAuthoredQuestions": 650,
-    "currentDraftQuestionsNotInstalled": 109
+    "currentAuthoredQuestions": 668,
+    "currentDraftQuestionsNotInstalled": 127
   }
 }

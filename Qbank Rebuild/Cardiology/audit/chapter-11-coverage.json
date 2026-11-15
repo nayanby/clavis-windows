@@ -2,10 +2,10 @@
   "subject": "Cardiology",
   "chapterNumber": 11,
   "chapter": "11. Systemic Hypertension and Hypertensive Emergencies",
-  "status": "draft_in_progress",
+  "status": "draft_awaiting_final_review",
   "countPolicy": "Provisional coverage-driven distinct decisions; not official examination weights.",
   "plannedQuestions": 62,
-  "authoredQuestions": 44,
+  "authoredQuestions": 62,
   "sections": [
     {
       "section": "Measurement classification and blood-pressure phenotypes",
@@ -96,10 +96,10 @@
     {
       "section": "Hypertensive emergencies and severe asymptomatic pressure",
       "questions": 5,
-      "authoredQuestions": 0,
+      "authoredQuestions": 5,
       "decisions": [
         "Define emergency through acute organ injury rather than a pressure number alone",
-        "Use the usual controlled MAP reduction sequence when no disease-specific exception applies",
+        "Use the usual controlled initial BP reduction sequence when no disease-specific exception applies",
         "Choose a titratable IV agent according to organ involvement and contraindications",
         "Evaluate malignant hypertension-associated microangiopathy without overlooking a competing TMA",
         "Avoid unnecessary rapid IV lowering in severe asymptomatic hypertension"
@@ -108,7 +108,7 @@
     {
       "section": "Disease-specific emergency treatment",
       "questions": 8,
-      "authoredQuestions": 0,
+      "authoredQuestions": 8,
       "decisions": [
         "Use anti-impulse sequencing and targets in acute aortic syndromes",
         "Treat hypertensive acute pulmonary edema with appropriate vasodilation and respiratory support",
@@ -123,7 +123,7 @@
     {
       "section": "Landmark treatment-target trials",
       "questions": 5,
-      "authoredQuestions": 0,
+      "authoredQuestions": 5,
       "decisions": [
         "Interpret SPRINT eligibility benefits and adverse effects without extrapolating to excluded diabetes or stroke",
         "Distinguish the ACCORD-BP primary outcome from its stroke result",
@@ -397,6 +397,114 @@
       "title": "Coarctation as a Cause of Young-Onset Hypertension",
       "section": "Secondary hypertension",
       "decision": "Recognize coarctation through arm-leg and pulse findings"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-045",
+      "title": "Hypertensive Emergency and Acute Organ Injury",
+      "section": "Hypertensive emergencies and severe asymptomatic pressure",
+      "decision": "Define emergency through acute organ injury rather than a pressure number alone"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-046",
+      "title": "Controlled Initial BP Reduction in a General Hypertensive Emergency",
+      "section": "Hypertensive emergencies and severe asymptomatic pressure",
+      "decision": "Use the usual controlled initial BP reduction sequence when no disease-specific exception applies"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-047",
+      "title": "Selecting Nicardipine in Hypertensive Encephalopathy",
+      "section": "Hypertensive emergencies and severe asymptomatic pressure",
+      "decision": "Choose a titratable IV agent according to organ involvement and contraindications"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-048",
+      "title": "Severe Hypertension With Thrombotic Microangiopathy",
+      "section": "Hypertensive emergencies and severe asymptomatic pressure",
+      "decision": "Evaluate malignant hypertension-associated microangiopathy without overlooking a competing TMA"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-049",
+      "title": "Severe Asymptomatic Inpatient BP Without Acute Injury",
+      "section": "Hypertensive emergencies and severe asymptomatic pressure",
+      "decision": "Avoid unnecessary rapid IV lowering in severe asymptomatic hypertension"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-050",
+      "title": "Acute Aortic Syndrome: Initial Anti-Impulse Therapy",
+      "section": "Disease-specific emergency treatment",
+      "decision": "Use anti-impulse sequencing and targets in acute aortic syndromes"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-051",
+      "title": "Pressure-Driven Pulmonary Edema and Fluid Redistribution",
+      "section": "Disease-specific emergency treatment",
+      "decision": "Treat hypertensive acute pulmonary edema with appropriate vasodilation and respiratory support"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-052",
+      "title": "Coronary Perfusion During BP Treatment in Acute Ischemia",
+      "section": "Disease-specific emergency treatment",
+      "decision": "Select pressure treatment in acute coronary ischemia without compromising coronary perfusion"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-053",
+      "title": "Acute BP Control in Spontaneous Intracerebral Hemorrhage",
+      "section": "Disease-specific emergency treatment",
+      "decision": "Apply an appropriate intracerebral-hemorrhage pressure strategy to the stated severity range"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-054",
+      "title": "Ischemic Stroke: BP Before Intravenous Thrombolysis",
+      "section": "Disease-specific emergency treatment",
+      "decision": "Apply ischemic-stroke pressure thresholds according to reperfusion eligibility"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-055",
+      "title": "Stimulant-Associated Hyperadrenergic Hypertension",
+      "section": "Disease-specific emergency treatment",
+      "decision": "Treat a catecholamine or stimulant-associated hypertensive crisis with appropriate sequencing"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-056",
+      "title": "Management of Severe Hypertension in Pregnancy",
+      "section": "Disease-specific emergency treatment",
+      "decision": "Treat persistent severe pregnancy hypertension and distinguish magnesium seizure prophylaxis"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-057",
+      "title": "Ongoing Hypertension Treatment During Pregnancy",
+      "section": "Disease-specific emergency treatment",
+      "decision": "Choose ongoing pregnancy-compatible therapy and avoid fetotoxic renin-angiotensin agents"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-058",
+      "title": "SPRINT: Eligibility, Benefits and Adverse Effects",
+      "section": "Landmark treatment-target trials",
+      "decision": "Interpret SPRINT eligibility benefits and adverse effects without extrapolating to excluded diabetes or stroke"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-059",
+      "title": "ACCORD-BP: Primary Composite and Stroke Result",
+      "section": "Landmark treatment-target trials",
+      "decision": "Distinguish the ACCORD-BP primary outcome from its stroke result"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-060",
+      "title": "BPROAD: Intensive BP Control in Type 2 Diabetes",
+      "section": "Landmark treatment-target trials",
+      "decision": "Apply BPROAD evidence in type-two diabetes without confusing it with ACCORD"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-061",
+      "title": "STEP: Intensive Targets in Older Hypertensive Adults",
+      "section": "Landmark treatment-target trials",
+      "decision": "Interpret STEP blood-pressure targets and population limitations"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-062",
+      "title": "HYVET: Treating Selected Adults Aged Eighty or Older",
+      "section": "Landmark treatment-target trials",
+      "decision": "Apply HYVET to selected adults aged eighty or older without withholding all treatment solely for age"
     }
   ]
 }

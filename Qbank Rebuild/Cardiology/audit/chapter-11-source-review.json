@@ -1,10 +1,10 @@
 {
   "chapter": 11,
-  "status": "draft_in_progress",
+  "status": "draft_awaiting_final_review",
   "installed": false,
-  "authoredQuestions": 44,
+  "authoredQuestions": 62,
   "plannedQuestions": 62,
-  "scopeNote": "First six continuous sections authored, including all 11 planned secondary-cause decisions. General emergencies, specific emergencies and treatment-target trials remain unfinished.",
+  "scopeNote": "All 62 provisionally planned decisions authored in continuous order across nine sections. Final chapter-wide source-document coverage, clinical and editorial review remains pending; not installed.",
   "sourceChecks": [
     {
       "source": "AHA/ACC 2025 high blood pressure guidance",
@@ -224,26 +224,135 @@
         "Arm/leg pressure and pulse localization, cross-sectional aortic imaging, associated disease and continued follow-up.",
         "Do not equate Doppler peak instantaneous and invasive peak-to-peak gradients."
       ]
+    },
+    {
+      "source": "AHA/ACC 2025 general hypertensive emergency guidance",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001356"
+      ],
+      "checks": [
+        "Acute organ injury defines emergency; stable chronic changes and an isolated number do not suffice.",
+        "General recommendation is no more than 25% SBP reduction in hour one, then <160/100 in 2–6 hours and cautious further reduction over 24–48 hours.",
+        "Do not automatically transfer a MAP formulation to the quoted 2025 SBP wording.",
+        "No intermittent IV/oral rescue dosing for asymptomatic noncardiac inpatients solely to acutely lower severe pressure.",
+        "Nicardipine 5 mg/h, 2.5-mg/h increments and 15-mg/h maximum; drug selection considers bradycardia, bronchospasm, renal and neurological context."
+      ],
+      "retrievalNote": "Primary guideline indexed recommendations cross-checked; no claim of unrestricted full publisher retrieval."
+    },
+    {
+      "source": "ISTH TTP guidance and Catalan expert protocol",
+      "urls": [
+        "https://doi.org/10.1111/jth.15006",
+        "https://doi.org/10.1016/j.jtha.2025.06.002",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10920070/"
+      ],
+      "checks": [
+        "High-probability TTP warrants urgent plasma exchange/corticosteroids after pretreatment ADAMTS13 sampling; severe hypertension does not exclude TTP.",
+        "PLASMIC components and risk bands; ADAMTS13 <10% threshold.",
+        "Specific expert protocol example: 1–1.5 plasma volumes and IV methylprednisolone 1 mg/kg after exchange; do not present variable protocols as a single universal ISTH dose.",
+        "2025 immune-TTP treatment recommendations retained; congenital-TTP ADAMTS13 prevention is a separate indication."
+      ]
+    },
+    {
+      "source": "Acute aortic, coronary and pulmonary-pressure management",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001106",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=60b10020-f802-4fef-a487-0f11eca246c5",
+        "https://doi.org/10.1161/CIR.0000000000001356",
+        "https://doi.org/10.1161/CIR.0000000000001063",
+        "https://www.msf.org.za/sites/default/files/2025-01/Guideline_NCDCinicalGuidelines_MSFInt_2025_EN.pdf"
+      ],
+      "checks": [
+        "Acute aortic anti-impulse sequence; HR 60–80/min and SBP <120 or lowest perfusion-preserving pressure.",
+        "Esmolol 500 microgram/kg load and 50 microgram/kg/min starting infusion checked against prescribing information.",
+        "Pulmonary edema can reflect afterload-driven redistribution despite preserved EF and no large weight gain.",
+        "Nitrate infusion ranges and early NIV/volume assessment; do not claim a universal high-dose bolus requirement.",
+        "Coronary perfusion gradient depends on aortic diastolic pressure and LV filling pressure."
+      ]
+    },
+    {
+      "source": "AHA 2025 ICH recommendation and AHA/ASA stroke guidance",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001356",
+        "https://doi.org/10.1161/STR.0000000000000407",
+        "https://doi.org/10.1161/STR.0000000000000513"
+      ],
+      "checks": [
+        "2025 hypertension guidance selected ICH range 130 to <140; distinguish the 2022 ICH 140 target with 130–150 maintenance range.",
+        "Before IVT: SBP <185 AND DBP <110; after IVT: <180/105 for at least 24 hours.",
+        "2026 guidance: no functional benefit from intensive <140 after IVT in the stated population; active target <140 for 72 hours after successful anterior-circulation EVT is harmful without another indication."
+      ]
+    },
+    {
+      "source": "ASAM/AAAP guideline and NHS injectable diazepam protocol",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11105801/",
+        "https://sps.nhs.uk/articles/diazepam-solution-injection-for-managing-seizures/",
+        "https://sps.nhs.uk/wp-content/uploads/2025/10/Injectable-diazepam-National-PGD-template-V3.0-final-Oct-25.docx"
+      ],
+      "checks": [
+        "Benzodiazepines first-line for stimulant-associated hyperadrenergic agitation; add syndrome-directed short-acting agents when needed.",
+        "Avoid an unqualified all-beta-blockers prohibition; selected combined alpha/beta blockade is discussed in contemporary guidance.",
+        "NHS v3 symptomatic cocaine protocol example: 1–2 mg slow IV increments over 2 minutes, 2–5-minute intervals, titration toward 10 mg, possible further dose after 10 minutes, 20-mg episode ceiling."
+      ],
+      "retrievalNote": "Public NHS Word attachment retrieved in memory because the web parser does not support DOCX. Dose table and off-label status read directly; no source document copied into the repository."
+    },
+    {
+      "source": "Pregnancy hypertension, magnesium and CHAP",
+      "urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/30575639/",
+        "https://doi.org/10.1161/CIR.0000000000001356",
+        "https://www.somanz.org/content/uploads/2023/06/SOMANZ_Hypertension_in_Pregnancy_Guideline_2023.pdf",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=professional&setid=fc5d7e38-c05c-4219-a4b2-2488a7da044a",
+        "https://doi.org/10.1056/NEJMoa2201295"
+      ],
+      "checks": [
+        "Persistent >=160 systolic or >=110 diastolic over about 15 minutes; urgent treatment within 30–60 minutes of confirmation.",
+        "Rapid labetalol/hydralazine/oral IR nifedipine versus the separate magnesium seizure-prevention indication.",
+        "SOMANZ example: 4 g magnesium over 20 minutes then 1 g/hour; continue 24 hours after delivery or last seizure, whichever later; renal/respiratory/reflex monitoring and calcium rescue.",
+        "Nifedipine ER 30–120 mg/day for maintenance; asthma can favor it over labetalol.",
+        "CHAP-informed initiation/titration at 140/90; avoid ARBs in pregnancy."
+      ]
+    },
+    {
+      "source": "SPRINT, ACCORD-BP, BPROAD, STEP and HYVET primary evidence",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa1511939",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7261502/",
+        "https://doi.org/10.1056/NEJMoa1001286",
+        "https://doi.org/10.1056/NEJMoa2412006",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10755603/",
+        "https://doi.org/10.1056/NEJMoa2111437",
+        "https://doi.org/10.1056/NEJMoa0801369"
+      ],
+      "checks": [
+        "SPRINT age/risk eligibility, diabetes/stroke exclusions, original 2015 HRs 0.75/0.73 and selected adverse-event excess.",
+        "ACCORD-BP primary HR 0.88 (nonsignificant) versus stroke HR 0.59; do not equate a nonsignificant test with equivalence.",
+        "BPROAD diabetic population, age >=50, eGFR <30 exclusion, full endpoint including treated/hospitalized HF, HR 0.79 and specific safety signals.",
+        "STEP ages 60–80 and bounded targets 110–<130 versus 130–<150, HR 0.74.",
+        "HYVET selected age >=80/SBP >=160, indapamide SR 1.5 mg plus optional perindopril 2–4 mg; final stroke P=0.06, mortality/HF benefit; no substitution of interim results."
+      ],
+      "retrievalNote": "Primary trial abstracts/indexed publisher text, primary protocol/cohort papers and current society guidance cross-checked; publisher full-page retrieval was restricted for several articles."
     }
   ],
   "draftValidation": {
-    "questions": 44,
+    "questions": 62,
     "answerDistribution": {
-      "A": 11,
-      "B": 11,
-      "C": 11,
-      "D": 11
+      "A": 16,
+      "B": 16,
+      "C": 15,
+      "D": 15
     },
     "minimumExplanationWords": 329,
-    "distractorRationales": 129,
+    "distractorRationales": 183,
     "questionStyles": {
-      "direct": 7,
-      "clinical_scenario": 37
+      "direct": 14,
+      "clinical_scenario": 48
     },
     "status": "passed"
   },
   "editorialReviewProgress": {
-    "status": "authored_blocks_reviewed_final_complete_chapter_review_pending",
+    "status": "planned_questions_authored_final_chapter_audit_pending",
     "questionsReviewedInFull": [
       "cardiology-rebuild-11-010",
       "cardiology-rebuild-11-011",
@@ -279,10 +388,28 @@
       "cardiology-rebuild-11-041",
       "cardiology-rebuild-11-042",
       "cardiology-rebuild-11-043",
-      "cardiology-rebuild-11-044"
+      "cardiology-rebuild-11-044",
+      "cardiology-rebuild-11-045",
+      "cardiology-rebuild-11-046",
+      "cardiology-rebuild-11-047",
+      "cardiology-rebuild-11-048",
+      "cardiology-rebuild-11-049",
+      "cardiology-rebuild-11-050",
+      "cardiology-rebuild-11-051",
+      "cardiology-rebuild-11-052",
+      "cardiology-rebuild-11-053",
+      "cardiology-rebuild-11-054",
+      "cardiology-rebuild-11-055",
+      "cardiology-rebuild-11-056",
+      "cardiology-rebuild-11-057",
+      "cardiology-rebuild-11-058",
+      "cardiology-rebuild-11-059",
+      "cardiology-rebuild-11-060",
+      "cardiology-rebuild-11-061",
+      "cardiology-rebuild-11-062"
     ],
-    "nextWork": "General hypertensive emergencies (5), disease-specific emergencies (8), treatment-target trials (5), then complete generated chapter and current-source review.",
-    "duplicateReview": "Replaced the initial new HFrEF beta-blocker question with an exertional-angina/HTN selection problem to avoid duplicating existing question cardiology-rebuild-04-012."
+    "nextWork": "Final generated review of original measurement questions 1–9; source-DOCX coverage audit, chapter-wide editorial/medical consistency and current-update review, then installation if passed.",
+    "duplicateReview": "Replaced the initial new HFrEF beta-blocker question with an exertional-angina/HTN selection problem to avoid duplicating existing question cardiology-rebuild-04-012. Recast new question 51 as fluid redistribution to avoid duplicating existing questions cardiology-rebuild-04-043 and cardiology-rebuild-04-047; the coronary perfusion-gradient question addresses a different mechanism from the existing tachycardia-duration question."
   },
   "limitations": [
     "Full Harrison text not accessed.",
@@ -301,5 +428,12 @@
       "url": "https://doi.org/10.1097/HJH.0000000000004451",
       "status": "identified_primary_indexed_text_available_full_page_retrieval_blocked_402"
     }
-  ]
+  ],
+  "releaseReview": {
+    "status": "pending",
+    "installed": false,
+    "originalMeasurementBlockFinalReview": "pending",
+    "sourceDocumentCoverageAudit": "pending",
+    "chapterWideConsistencyReview": "pending"
+  }
 }

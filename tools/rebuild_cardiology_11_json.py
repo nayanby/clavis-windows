@@ -64,7 +64,7 @@ SECTIONS=[
   'Recognize coarctation through arm-leg and pulse findings']),
  ('Hypertensive emergencies and severe asymptomatic pressure',[
   'Define emergency through acute organ injury rather than a pressure number alone',
-  'Use the usual controlled MAP reduction sequence when no disease-specific exception applies',
+  'Use the usual controlled initial BP reduction sequence when no disease-specific exception applies',
   'Choose a titratable IV agent according to organ involvement and contraindications',
   'Evaluate malignant hypertension-associated microangiopathy without overlooking a competing TMA',
   'Avoid unnecessary rapid IV lowering in severe asymptomatic hypertension']),
@@ -345,9 +345,15 @@ R.update(drug_references)
 from cardiology_11_secondary_questions import rows as secondary_rows, REFERENCES as secondary_references
 rows.extend(secondary_rows)
 R.update(secondary_references)
+from cardiology_11_emergency_questions import rows as emergency_rows, REFERENCES as emergency_references
+rows.extend(emergency_rows)
+R.update(emergency_references)
+from cardiology_11_trial_questions import rows as trial_rows, REFERENCES as trial_references
+rows.extend(trial_rows)
+R.update(trial_references)
 
 def highlight_values(text):
-    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|mg/kg|mg/g|mg/dL|mg|g/day|g/week|g|mmol/L|nmol/L|ng/mL/h|ng/dL|µg/dL|mU/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
+    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|mg/kg/min|mg/kg/day|mg/kg|mg/hour|mg/h|mg/min|mg/g|mg/dL|mg|g/hour|g/h|g/day|g/week|g|mmol/L|nmol/L|ng/mL/h|ng/dL|µg/kg/min|µg/kg|µg/min|µg/dL|mU/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
 
 if __name__=='__main__':
     existing_path=ROOT/'Cardiology'/(DOC+'.json')
@@ -364,14 +370,15 @@ if __name__=='__main__':
     preserved=[q for q in existing['questions'] if int(q['id'].split('-')[-1])<=9] if existing else []
     answer_indices={q['id']:q['correctIndex'] for q in existing['questions']} if existing else {}
     p=save('Cardiology',11,DOC,rows,R,'Original educational synthesis; incomplete draft, not for installation. Full Harrison text not accessed; independent clinician review not claimed.',preserved_questions=preserved,preserved_answer_indices=answer_indices)
-    b=json.loads(p.read_text(encoding='utf-8'));b.update(status='draft_in_progress',plannedQuestions=len(decisions),sourceDocument=DOC+'.docx')
+    chapter_status='draft_awaiting_final_review' if len(rows)==len(decisions) else 'draft_in_progress'
+    b=json.loads(p.read_text(encoding='utf-8'));b.update(status=chapter_status,plannedQuestions=len(decisions),sourceDocument=DOC+'.docx')
     if existing and 'redistribution' in existing:
         b['redistribution']=existing['redistribution']
         b['redistribution'].update(draftQuestions=len(rows),newQuestionsAfterRedistribution=len(rows)-9)
     p.write_text(json.dumps(b,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    c=dict(subject='Cardiology',chapterNumber=11,chapter=DOC,status='draft_in_progress',countPolicy='Provisional coverage-driven distinct decisions; not official examination weights.',plannedQuestions=len(decisions),authoredQuestions=len(rows),sections=[dict(section=t,questions=len(items),authoredQuestions=sum(r['topic']==t for r in rows),decisions=items)for t,items in SECTIONS],questionDecisions=[dict(questionId=q['id'],title=q['explanationTeaching']['title'],section=q['topic'],decision=q['coverageDecision'])for q in b['questions']])
+    c=dict(subject='Cardiology',chapterNumber=11,chapter=DOC,status=chapter_status,countPolicy='Provisional coverage-driven distinct decisions; not official examination weights.',plannedQuestions=len(decisions),authoredQuestions=len(rows),sections=[dict(section=t,questions=len(items),authoredQuestions=sum(r['topic']==t for r in rows),decisions=items)for t,items in SECTIONS],questionDecisions=[dict(questionId=q['id'],title=q['explanationTeaching']['title'],section=q['topic'],decision=q['coverageDecision'])for q in b['questions']])
     (p.parent/'audit/chapter-11-coverage.json').write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    pp=ROOT/'progress.json';plan=json.loads(pp.read_text(encoding='utf-8'));entry=next(x for x in plan['chapters']if x['subject']=='Cardiology'and x['document']==DOC);entry.update(status='draft_in_progress',authoredQuestions=len(rows),plannedQuestions=len(decisions),draftQuestions=len(rows),draftQuestionsWithheld=len(rows),newQuestionsAfterRedistribution=len(rows)-9,coverageMap='Cardiology/audit/chapter-11-coverage.json');plan['currentChapter']='Cardiology '+DOC;pp.write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    pp=ROOT/'progress.json';plan=json.loads(pp.read_text(encoding='utf-8'));entry=next(x for x in plan['chapters']if x['subject']=='Cardiology'and x['document']==DOC);entry.update(status=chapter_status,authoredQuestions=len(rows),plannedQuestions=len(decisions),draftQuestions=len(rows),draftQuestionsWithheld=len(rows),newQuestionsAfterRedistribution=len(rows)-9,coverageMap='Cardiology/audit/chapter-11-coverage.json');plan['currentChapter']='Cardiology '+DOC;pp.write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     cardio=[json.loads(f.read_text(encoding='utf-8'))for f in p.parent.glob('*.json')]
     total=sum(len(bank.get('questions',[]))for bank in cardio)
     installed=json.loads((p.parent/'audit/installation-report.json').read_text(encoding='utf-8'))['installedQuestions']
