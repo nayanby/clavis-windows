@@ -2,9 +2,9 @@
   "chapter": 11,
   "status": "draft_in_progress",
   "installed": false,
-  "authoredQuestions": 19,
+  "authoredQuestions": 33,
   "plannedQuestions": 62,
-  "scopeNote": "Measurement/phenotypes, risk-based initiation/targets and lifestyle/contributors authored; all other planned sections remain unfinished.",
+  "scopeNote": "First five continuous sections authored: measurement/phenotypes, risk/targets, lifestyle, initial drug selection/adverse effects and resistant hypertension. Secondary causes, emergencies and target trials remain unfinished.",
   "sourceChecks": [
     {
       "source": "AHA/ACC 2025 high blood pressure guidance",
@@ -94,26 +94,89 @@
       "checks": [
         "Broader conditional aldosterone/renin screening recommendation; biochemical screening does not imply routine adrenal imaging."
       ]
+    },
+    {
+      "source": "KDIGO 2024 CKD and drug prescribing information",
+      "urls": [
+        "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ca012edc-923d-4ada-a261-db82b71b3c4f",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1080fcea-a5da-499d-a855-690c13559071",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0e309f3-82c3-4629-b790-fb8538b87369",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=401ae38b-2eb8-c9fc-e063-6294a90af220"
+      ],
+      "checks": [
+        "Albuminuria-directed RAS blockade, no ACEi/ARB dual blockade, renal/potassium monitoring and >30% creatinine rise trigger.",
+        "Drug doses, adverse electrolyte effects and complementary BP-drug mechanisms."
+      ]
+    },
+    {
+      "source": "CLICK primary randomized trial",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2110730",
+        "https://mediacenteratypon.nejmgroup-production.org/NEJMoa2110730.pdf"
+      ],
+      "checks": [
+        "Stage-four CKD population, ABPM outcome at 12 weeks, 12.5 mg start and maximum 50 mg/day trial escalation.",
+        "Approximately 10.5 mmHg adjusted between-group systolic difference and greater hypokalemia, creatinine increase, hyperglycemia, dizziness and hyperuricemia.",
+        "No definitive dialysis or mortality benefit established by this BP trial."
+      ],
+      "retrievalNote": "Publisher-hosted primary PDF retrieved; abstract and trial methods/results checked directly, including -10.5 mmHg between-group result."
+    },
+    {
+      "source": "AHA 2025, ESC 2024 and PATHWAY-2",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001356",
+        "https://doi.org/10.1093/eurheartj/ehae178",
+        "https://pubmed.ncbi.nlm.nih.gov/26414968/"
+      ],
+      "checks": [
+        "Adequate foundational triple regimen, pseudoresistance exclusion and diuretic optimization.",
+        "PATHWAY-2 arms, 25–50 mg spironolactone and home systolic BP endpoint.",
+        "Distinguish AHA routine MRA eGFR >=45 pathway from selected ESC eGFR >=30 and potassium <=4.5 mmol/L use."
+      ]
+    },
+    {
+      "source": "Eplerenone and clonidine labels",
+      "urls": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0886e4e-5710-4053-9270-4d7de34068e7",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=61b56917-1442-4068-86d8-0e5a5a59e612&type=display"
+      ],
+      "checks": [
+        "Eplerenone indication-specific dose, renal/CYP3A limitations and potassium monitoring before treatment, within one week and at one month.",
+        "Clonidine rebound, supervised taper and sequencing when concurrent beta blockade is being discontinued."
+      ]
+    },
+    {
+      "source": "AHA renal-denervation statement and ACC 2026 pathway",
+      "urls": [
+        "https://professional.heart.org/en/science-news/renal-denervation-for-the-treatment-of-hypertension/top-things-to-know",
+        "https://doi.org/10.1016/j.jacc.2026.08.028"
+      ],
+      "checks": [
+        "Selected adjunctive procedural role, modest variable BP lowering, ongoing medication/follow-up and no substitution of BP effects for a proven hard-outcome benefit.",
+        "American definition includes above-goal pressure despite three complementary drugs including a diuretic, or control requiring at least four."
+      ],
+      "retrievalNote": "AHA society statement summary retrieved directly. Indexed ACC 2026 primary passages checked for definition and MRA priority; full pathway review remains part of final chapter review."
     }
   ],
   "draftValidation": {
-    "questions": 19,
+    "questions": 33,
     "answerDistribution": {
-      "A": 5,
-      "B": 5,
-      "C": 5,
-      "D": 4
+      "A": 9,
+      "B": 8,
+      "C": 8,
+      "D": 8
     },
     "minimumExplanationWords": 329,
-    "distractorRationales": 54,
+    "distractorRationales": 96,
     "questionStyles": {
       "direct": 5,
-      "clinical_scenario": 14
+      "clinical_scenario": 28
     },
     "status": "passed"
   },
   "editorialReviewProgress": {
-    "status": "new_blocks_reviewed_original_measurement_block_requires_final_chapter_review",
+    "status": "authored_blocks_reviewed_final_complete_chapter_review_pending",
     "questionsReviewedInFull": [
       "cardiology-rebuild-11-010",
       "cardiology-rebuild-11-011",
@@ -124,14 +187,41 @@
       "cardiology-rebuild-11-016",
       "cardiology-rebuild-11-017",
       "cardiology-rebuild-11-018",
-      "cardiology-rebuild-11-019"
+      "cardiology-rebuild-11-019",
+      "cardiology-rebuild-11-020",
+      "cardiology-rebuild-11-021",
+      "cardiology-rebuild-11-022",
+      "cardiology-rebuild-11-023",
+      "cardiology-rebuild-11-024",
+      "cardiology-rebuild-11-025",
+      "cardiology-rebuild-11-026",
+      "cardiology-rebuild-11-027",
+      "cardiology-rebuild-11-028",
+      "cardiology-rebuild-11-029",
+      "cardiology-rebuild-11-030",
+      "cardiology-rebuild-11-031",
+      "cardiology-rebuild-11-032",
+      "cardiology-rebuild-11-033"
     ],
-    "nextWork": "Initial drug selection, resistant hypertension, secondary causes, emergencies and landmark target trials; then full generated chapter review."
+    "nextWork": "Secondary causes (11), general emergencies (5), specific emergencies (8), target trials (5); then full chapter and current-source review.",
+    "duplicateReview": "Replaced the initial new HFrEF beta-blocker question with an exertional-angina/HTN selection problem to avoid duplicating existing question cardiology-rebuild-04-012."
   },
   "limitations": [
     "Full Harrison text not accessed.",
     "Source checks are author verification, not independent clinician review.",
     "Structural validation does not establish completeness or clinical accuracy."
   ],
-  "document": "11. Systemic Hypertension and Hypertensive Emergencies"
+  "document": "11. Systemic Hypertension and Hypertensive Emergencies",
+  "newerSourcesForFinalReview": [
+    {
+      "source": "2026 ACC resistant-hypertension pathway",
+      "url": "https://doi.org/10.1016/j.jacc.2026.08.028",
+      "status": "definition_and_MRA_priority_checked_full_pathway_review_pending"
+    },
+    {
+      "source": "2026 ISH global hypertension practice guidance",
+      "url": "https://doi.org/10.1097/HJH.0000000000004451",
+      "status": "identified_primary_indexed_text_available_full_page_retrieval_blocked_402"
+    }
+  ]
 }

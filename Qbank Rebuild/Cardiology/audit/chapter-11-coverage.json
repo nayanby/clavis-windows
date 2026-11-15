@@ -5,11 +5,12 @@
   "status": "draft_in_progress",
   "countPolicy": "Provisional coverage-driven distinct decisions; not official examination weights.",
   "plannedQuestions": 62,
-  "authoredQuestions": 19,
+  "authoredQuestions": 33,
   "sections": [
     {
       "section": "Measurement classification and blood-pressure phenotypes",
       "questions": 9,
+      "authoredQuestions": 9,
       "decisions": [
         "Apply the AHA 2025 systolic-or-diastolic category using confirmed average pressure",
         "Distinguish ESC 2024 elevated pressure from AHA stage-one hypertension",
@@ -25,6 +26,7 @@
     {
       "section": "Risk assessment treatment thresholds and targets",
       "questions": 6,
+      "authoredQuestions": 6,
       "decisions": [
         "Initiate treatment at the AHA 2025 lower threshold in an appropriate high-risk patient",
         "Apply the three-to-six-month lifestyle trial and subsequent drug decision in lower-risk AHA stage-one disease",
@@ -37,6 +39,7 @@
     {
       "section": "Lifestyle and reversible contributors",
       "questions": 4,
+      "authoredQuestions": 4,
       "decisions": [
         "Choose a sustainable weight and DASH-style dietary intervention",
         "Translate sodium reduction into a clinically meaningful intake target",
@@ -47,6 +50,7 @@
     {
       "section": "Initial drug selection and adverse effects",
       "questions": 8,
+      "authoredQuestions": 8,
       "decisions": [
         "Choose initial combination treatment in appropriate stage-two hypertension",
         "Use complementary first-line classes rather than dual renin-angiotensin blockade",
@@ -61,6 +65,7 @@
     {
       "section": "Resistant hypertension",
       "questions": 6,
+      "authoredQuestions": 6,
       "decisions": [
         "Confirm true resistance using adherence adequate doses and out-of-office pressure",
         "Optimize the diuretic and foundational triple regimen before adding drugs",
@@ -73,6 +78,7 @@
     {
       "section": "Secondary hypertension",
       "questions": 11,
+      "authoredQuestions": 0,
       "decisions": [
         "Apply the 2025 Endocrine Society broader primary-aldosteronism screening approach",
         "Interpret aldosterone renin and the ratio with potassium medications and assay-specific thresholds",
@@ -90,6 +96,7 @@
     {
       "section": "Hypertensive emergencies and severe asymptomatic pressure",
       "questions": 5,
+      "authoredQuestions": 0,
       "decisions": [
         "Define emergency through acute organ injury rather than a pressure number alone",
         "Use the usual controlled MAP reduction sequence when no disease-specific exception applies",
@@ -101,6 +108,7 @@
     {
       "section": "Disease-specific emergency treatment",
       "questions": 8,
+      "authoredQuestions": 0,
       "decisions": [
         "Use anti-impulse sequencing and targets in acute aortic syndromes",
         "Treat hypertensive acute pulmonary edema with appropriate vasodilation and respiratory support",
@@ -115,6 +123,7 @@
     {
       "section": "Landmark treatment-target trials",
       "questions": 5,
+      "authoredQuestions": 0,
       "decisions": [
         "Interpret SPRINT eligibility benefits and adverse effects without extrapolating to excluded diabetes or stroke",
         "Distinguish the ACCORD-BP primary outcome from its stroke result",
@@ -122,6 +131,206 @@
         "Interpret STEP blood-pressure targets and population limitations",
         "Apply HYVET to selected adults aged eighty or older without withholding all treatment solely for age"
       ]
+    }
+  ],
+  "questionDecisions": [
+    {
+      "questionId": "cardiology-rebuild-11-001",
+      "title": "AHA Blood-Pressure Categories and Isolated Diastolic Elevation",
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "decision": "Apply the AHA 2025 systolic-or-diastolic category using confirmed average pressure"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-002",
+      "title": "ESC Elevated Pressure Versus AHA Stage One",
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "decision": "Distinguish ESC 2024 elevated pressure from AHA stage-one hypertension"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-003",
+      "title": "Standardizing a Nonstandard Office Reading",
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "decision": "Correct measurement conditions before interpreting a nonstandard office reading"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-004",
+      "title": "Undercuffing and Apparent Resistant Hypertension",
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "decision": "Recognize undercuffing as a cause of falsely elevated pressure and apparent resistance"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-005",
+      "title": "ESC Home and Ambulatory Diagnostic Thresholds",
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "decision": "Use framework-specific home and ambulatory thresholds rather than transferring an office cutoff"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-006",
+      "title": "Untreated White-Coat Hypertension",
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "decision": "Recognize untreated white-coat hypertension and plan surveillance without reflex escalation"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-007",
+      "title": "Masked Hypertension Despite Reassuring Office Values",
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "decision": "Recognize masked hypertension despite apparently reassuring office readings"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-008",
+      "title": "Timed Assessment of Orthostatic Hypotension",
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "decision": "Diagnose orthostatic hypotension using timed postural measurements"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-009",
+      "title": "Nocturnal Hypertension and a Nondipping Pattern",
+      "section": "Measurement classification and blood-pressure phenotypes",
+      "decision": "Identify nocturnal hypertension and nondipping with appropriate limitations"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-010",
+      "title": "Risk-Based Drug Initiation in Stage 1 Hypertension",
+      "section": "Risk assessment treatment thresholds and targets",
+      "decision": "Initiate treatment at the AHA 2025 lower threshold in an appropriate high-risk patient"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-011",
+      "title": "Persistent Lower-Risk Stage 1 Hypertension",
+      "section": "Risk assessment treatment thresholds and targets",
+      "decision": "Apply the three-to-six-month lifestyle trial and subsequent drug decision in lower-risk AHA stage-one disease"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-012",
+      "title": "ESC Treatment of Elevated Blood Pressure at High Risk",
+      "section": "Risk assessment treatment thresholds and targets",
+      "decision": "Apply the ESC elevated-pressure treatment pathway using risk and repeat confirmation"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-013",
+      "title": "AHA Blood-Pressure Treatment Target",
+      "section": "Risk assessment treatment thresholds and targets",
+      "decision": "Use the AHA general treatment target while recognizing individual tolerability"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-014",
+      "title": "Blood-Pressure Targets in Frailty and Orthostatic Hypotension",
+      "section": "Risk assessment treatment thresholds and targets",
+      "decision": "Apply the ESC systolic target with orthostatic frailty and age-related exceptions"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-015",
+      "title": "Baseline Evaluation and Hypertension-Mediated Organ Damage",
+      "section": "Risk assessment treatment thresholds and targets",
+      "decision": "Evaluate hypertension-mediated organ damage and baseline renal metabolic and cardiovascular risk"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-016",
+      "title": "DASH Eating Pattern and Weight Management",
+      "section": "Lifestyle and reversible contributors",
+      "decision": "Choose a sustainable weight and DASH-style dietary intervention"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-017",
+      "title": "Dietary Sodium and Salt Are Different Quantities",
+      "section": "Lifestyle and reversible contributors",
+      "decision": "Translate sodium reduction into a clinically meaningful intake target"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-018",
+      "title": "Potassium-Enriched Salt Substitutes in CKD",
+      "section": "Lifestyle and reversible contributors",
+      "decision": "Select potassium enrichment only after assessing kidney function and hyperkalemia risk"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-019",
+      "title": "Exercise and Reversible Contributors to Poor BP Control",
+      "section": "Lifestyle and reversible contributors",
+      "decision": "Address exercise alcohol sleep and relevant medication or substance contributors"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-020",
+      "title": "Initial Combination Therapy in Stage 2 Hypertension",
+      "section": "Initial drug selection and adverse effects",
+      "decision": "Choose initial combination treatment in appropriate stage-two hypertension"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-021",
+      "title": "Complementary Triple Therapy and Dual Renin–Angiotensin Blockade",
+      "section": "Initial drug selection and adverse effects",
+      "decision": "Use complementary first-line classes rather than dual renin-angiotensin blockade"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-022",
+      "title": "Beta Blockade for Hypertension With Exertional Angina",
+      "section": "Initial drug selection and adverse effects",
+      "decision": "Select beta-blockade according to a compelling cardiovascular indication"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-023",
+      "title": "Renin–Angiotensin Blockade in Albuminuric Diabetic CKD",
+      "section": "Initial drug selection and adverse effects",
+      "decision": "Prefer an ACE inhibitor or ARB in an appropriate albuminuric CKD phenotype"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-024",
+      "title": "Chlorthalidone in Stage 4 CKD: The CLICK Trial",
+      "section": "Initial drug selection and adverse effects",
+      "decision": "Interpret chlorthalidone efficacy and toxicity in advanced CKD without assuming thiazides cannot work"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-025",
+      "title": "Thiazide-Associated Hyponatremia With SIADH-Like Findings",
+      "section": "Initial drug selection and adverse effects",
+      "decision": "Recognize thiazide-associated hyponatremia hypokalemia and hyperuricemia"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-026",
+      "title": "Dihydropyridine CCB Edema and Treatment Adjustment",
+      "section": "Initial drug selection and adverse effects",
+      "decision": "Manage dihydropyridine edema according to its hemodynamic mechanism"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-027",
+      "title": "A Major Creatinine Rise After ACE Inhibitor Initiation",
+      "section": "Initial drug selection and adverse effects",
+      "decision": "Reassess a major creatinine rise or hyperkalemia after renin-angiotensin blockade"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-028",
+      "title": "Apparent Resistance and the Treated White-Coat Effect",
+      "section": "Resistant hypertension",
+      "decision": "Confirm true resistance using adherence adequate doses and out-of-office pressure"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-029",
+      "title": "Diuretic Optimization Before Fourth-Line Treatment",
+      "section": "Resistant hypertension",
+      "decision": "Optimize the diuretic and foundational triple regimen before adding drugs"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-030",
+      "title": "Fourth-Line Spironolactone and PATHWAY-2",
+      "section": "Resistant hypertension",
+      "decision": "Apply the PATHWAY-2 evidence for fourth-line spironolactone in a suitable patient"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-031",
+      "title": "Spironolactone Intolerance and Eplerenone",
+      "section": "Resistant hypertension",
+      "decision": "Choose an MRA alternative or monitoring plan according to renal and endocrine adverse effects"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-032",
+      "title": "Clonidine Withdrawal and Rebound Hypertension",
+      "section": "Resistant hypertension",
+      "decision": "Recognize clonidine withdrawal and other treatment-related rebound problems"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-033",
+      "title": "Renal Denervation: BP Efficacy and Outcome Uncertainty",
+      "section": "Resistant hypertension",
+      "decision": "Place renal denervation within a selected shared-decision pathway without claiming proven event reduction"
     }
   ]
 }

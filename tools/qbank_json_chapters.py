@@ -43,19 +43,23 @@ def validate(bank):
         distractorRationales=sum(len(q['explanationTeaching']['otherOptions']) for q in rows),
         questionStyles=dict(collections.Counter(q.get('questionStyle','unspecified') for q in rows)),status='passed')
 
-def save(subject,number,document,rows,refs,source_note,preserved_questions=None):
+def save(subject,number,document,rows,refs,source_note,preserved_questions=None,preserved_answer_indices=None):
     positions=[i%4 for i in range(len(rows))];random.Random(2026111500+number).shuffle(positions)
     slug=re.sub('[^a-z0-9]+','-',subject.lower())
     preserved={q['id']:q for q in (preserved_questions or [])}
-    if preserved:
+    fixed=dict(preserved_answer_indices or {})
+    assert all(isinstance(i,int) and 0<=i<4 for i in fixed.values())
+    assert all(k not in fixed or fixed[k]==q['correctIndex'] for k,q in preserved.items())
+    fixed.update({k:q['correctIndex'] for k,q in preserved.items()})
+    if fixed:
         ids=[f'{slug}-rebuild-{number:02}-{i:03}' for i in range(1,len(rows)+1)]
-        assert set(preserved)<=set(ids),'Preserved questions must belong to this chapter'
+        assert set(fixed)<=set(ids),'Preserved questions must belong to this chapter'
         target=collections.Counter(i%4 for i in range(len(rows)))
-        used=collections.Counter(q['correctIndex'] for q in preserved.values())
+        used=collections.Counter(fixed.values())
         assert all(used[i]<=target[i] for i in range(4)),'Cannot preserve keys with balanced final counts'
         remaining=[i for i in range(4) for _ in range(target[i]-used[i])]
         random.Random(2026111500+number).shuffle(remaining)
-        positions=[preserved[k]['correctIndex'] if k in preserved else remaining.pop() for k in ids]
+        positions=[fixed[k] if k in fixed else remaining.pop() for k in ids]
     qs=[]
     for i,(r,pos) in enumerate(zip(rows,positions),1):
         existing=preserved.get(f'{slug}-rebuild-{number:02}-{i:03}')

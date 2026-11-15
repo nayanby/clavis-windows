@@ -339,8 +339,12 @@ add(SECTIONS[2][0],'Exercise and Reversible Contributors to Poor BP Control',
     'Review whether ibuprofen can be reduced or replaced with a clinically appropriate pain strategy; do not assume that another nonselective oral NSAID removes the class effect. Check kidney function and electrolytes when the exposure and regimen warrant it.',
     'Ask about sympathomimetic decongestants, stimulants, glucocorticoids, liquorice-containing products and other relevant exposures. Screen for OSA when snoring, witnessed apneas, daytime sleepiness or resistant hypertension suggests it. Sleep treatment and exercise complement indicated medicines rather than automatically replacing them. A diary of home BP and exposure changes can help assess response. Labeling hypertension resistant before assessing adherence, out-of-office measurements and these reversible factors risks unnecessary escalation. Avoid advising an abrupt unsupervised alcohol withdrawal if there is a history suggesting physiological dependence.')],['ESC2024','AHA2025'])
 
+from cardiology_11_drug_questions import rows as drug_rows, REFERENCES as drug_references
+rows.extend(drug_rows)
+R.update(drug_references)
+
 def highlight_values(text):
-    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|mg/kg|mg|g/day|g|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
+    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|mg/kg|mg/g|mg/dL|mg|g/day|g/week|g|mmol/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
 
 if __name__=='__main__':
     existing_path=ROOT/'Cardiology'/(DOC+'.json')
@@ -352,20 +356,24 @@ if __name__=='__main__':
         r['sections']=[(h,[(highlight_values(t),[highlight_values(x)for x in kids])for t,kids in bs])for h,bs in r['sections']]
         if r['table']:
             hs,vs=r['table'];r['table']=(hs,[[highlight_values(x)for x in line]for line in vs])
-    preserved=[]
-    if existing:
-        for q in existing['questions']:
-            r=rows[int(q['id'].split('-')[-1])-1]
-            # The original nine redistributed questions must remain verbatim.
-            # Later draft questions can undergo an explicit editorial revision.
-            if int(q['id'].split('-')[-1])<=9 or (q['question']==r['question'] and set(q['options'])=={r['answer'],*(o for o,_ in r['others'])}):
-                preserved.append(q)
-    p=save('Cardiology',11,DOC,rows,R,'Original educational synthesis; incomplete draft, not for installation. Full Harrison text not accessed; independent clinician review not claimed.',preserved_questions=preserved)
+    # Keep the original nine redistributed questions verbatim. Later draft
+    # explanations remain editable while retaining their existing answer slots.
+    preserved=[q for q in existing['questions'] if int(q['id'].split('-')[-1])<=9] if existing else []
+    answer_indices={q['id']:q['correctIndex'] for q in existing['questions']} if existing else {}
+    p=save('Cardiology',11,DOC,rows,R,'Original educational synthesis; incomplete draft, not for installation. Full Harrison text not accessed; independent clinician review not claimed.',preserved_questions=preserved,preserved_answer_indices=answer_indices)
     b=json.loads(p.read_text(encoding='utf-8'));b.update(status='draft_in_progress',plannedQuestions=len(decisions),sourceDocument=DOC+'.docx')
     if existing and 'redistribution' in existing:
         b['redistribution']=existing['redistribution']
         b['redistribution'].update(draftQuestions=len(rows),newQuestionsAfterRedistribution=len(rows)-9)
     p.write_text(json.dumps(b,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    c=dict(subject='Cardiology',chapterNumber=11,chapter=DOC,status='draft_in_progress',countPolicy='Provisional coverage-driven distinct decisions; not official examination weights.',plannedQuestions=len(decisions),authoredQuestions=len(rows),sections=[dict(section=t,questions=len(items),decisions=items)for t,items in SECTIONS])
+    c=dict(subject='Cardiology',chapterNumber=11,chapter=DOC,status='draft_in_progress',countPolicy='Provisional coverage-driven distinct decisions; not official examination weights.',plannedQuestions=len(decisions),authoredQuestions=len(rows),sections=[dict(section=t,questions=len(items),authoredQuestions=sum(r['topic']==t for r in rows),decisions=items)for t,items in SECTIONS],questionDecisions=[dict(questionId=q['id'],title=q['explanationTeaching']['title'],section=q['topic'],decision=q['coverageDecision'])for q in b['questions']])
     (p.parent/'audit/chapter-11-coverage.json').write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     pp=ROOT/'progress.json';plan=json.loads(pp.read_text(encoding='utf-8'));entry=next(x for x in plan['chapters']if x['subject']=='Cardiology'and x['document']==DOC);entry.update(status='draft_in_progress',authoredQuestions=len(rows),plannedQuestions=len(decisions),draftQuestions=len(rows),draftQuestionsWithheld=len(rows),newQuestionsAfterRedistribution=len(rows)-9,coverageMap='Cardiology/audit/chapter-11-coverage.json');plan['currentChapter']='Cardiology '+DOC;pp.write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    cardio=[json.loads(f.read_text(encoding='utf-8'))for f in p.parent.glob('*.json')]
+    total=sum(len(bank.get('questions',[]))for bank in cardio)
+    installed=json.loads((p.parent/'audit/installation-report.json').read_text(encoding='utf-8'))['installedQuestions']
+    plan['cardiologyRedistribution'].update(currentAuthoredQuestions=total,currentDraftQuestionsNotInstalled=total-installed)
+    pp.write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    summary_path=ROOT/'validation-summary.json';summary=json.loads(summary_path.read_text(encoding='utf-8'))
+    summary.update(currentCardiologyAuthoredQuestions=total,currentCardiologyDraftQuestionsNotInstalled=total-installed,nextChapter='Cardiology '+DOC)
+    summary_path.write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
