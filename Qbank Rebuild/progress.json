@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations",
+  "currentChapter": "Cardiology Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction",
   "chapters": [
     {
       "subject": "Neurology",
@@ -474,7 +474,26 @@
       "subject": "Cardiology",
       "chapter": 1,
       "document": "Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Cardiology/Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations.json",
+      "validation": {
+        "questions": 56,
+        "answerDistribution": {
+          "A": 14,
+          "B": 14,
+          "C": 14,
+          "D": 14
+        },
+        "minimumExplanationWords": 207,
+        "distractorRationales": 138,
+        "questionStyles": {
+          "clinical_scenario": 43,
+          "direct": 13
+        },
+        "status": "passed"
+      },
+      "installedSha256": "b3bbdff43a1ad22fc83cb9243c0b89b7a3d7edda3a1a6b586572d81ce6f92e8a",
+      "coverageReview": "retrospective_audit_required"
     },
     {
       "subject": "Cardiology",

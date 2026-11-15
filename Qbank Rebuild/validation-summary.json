@@ -1,17 +1,18 @@
 {
   "projectStatus": "in_progress",
   "plannedChapters": 129,
-  "installedChapters": 14,
-  "installedQuestions": 643,
+  "installedChapters": 15,
+  "installedQuestions": 699,
   "structurallyValidated": true,
   "runtimeSourceComparison": "passed",
   "mappedChapters": 11,
   "retrospectiveCoverageAudit": [
     "Neurology / 01. Neuroanatomy, Clinical Localization & Neurological Examination",
     "Neurology / 02. Cerebrovascular Diseases",
-    "Neurology / 03. Epilepsy & Status Epilepticus"
+    "Neurology / 03. Epilepsy & Status Epilepticus",
+    "Cardiology / Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations"
   ],
   "independentClinicianReview": "not_recorded",
-  "nextChapter": "Cardiology Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations",
+  "nextChapter": "Cardiology Chapter_02_Coronary_Artery_Disease_ACS_and_Myocardial_Infarction",
   "countPolicy": "Coverage-driven: enumerate distinct high-yield decisions per chapter, allocate questions by diagnostic and therapeutic complexity, then remove duplication. The original 30/40 counts were provisional, not official exam weights or completeness evidence."
 }

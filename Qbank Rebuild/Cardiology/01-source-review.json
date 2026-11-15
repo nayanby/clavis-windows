@@ -1,0 +1,260 @@
+{
+  "chapter": 1,
+  "status": "installed_verified",
+  "plannedQuestions": 56,
+  "draftedQuestions": 56,
+  "installed": true,
+  "sourceChecks": [
+    {
+      "source": "ASE diastolic function update 2025; ESC/ERS pulmonary hypertension 2022; ESC chronic coronary syndromes 2024",
+      "checked": [
+        "Current sources identified; use 2025 diastolic update rather than silently treating the 2016 algorithm as current",
+        "Pulmonary hypertension and coronary physiology decision topics identified"
+      ],
+      "pending": [],
+      "resolution": "Relevant question-specific facts checked in subsequent sourceChecks; full-document access limitations remain explicitly recorded."
+    },
+    {
+      "source": "Author-owned Klabunde physiology teaching resource; Physiological Society LV-volume analysis; cardiac-cycle specialty review",
+      "checked": [
+        "Idealized preload and afterload changes distinguished from contractility",
+        "First-beat fixed-loading qualifications",
+        "Compliance versus relaxation and filling pressure versus volume"
+      ]
+    },
+    {
+      "source": "BSE diastolic guidance 2024; AHA right-sided heart failure statement; author physiology resource",
+      "checked": [
+        "Conventional valve timing with competent-valve qualification",
+        "Diastolic perfusion time and simplified coronary gradient",
+        "Serial and mechanical ventricular interaction; preserved EF does not guarantee output"
+      ]
+    },
+    {
+      "source": "ASE native regurgitation recommendations; author pulse-pressure resource; DZHK catheterization SOP",
+      "checked": [
+        "Total versus forward stroke-volume definitions with shunt and second-lesion exclusions",
+        "Compliance and pulse pressure without assuming direct flow measurement",
+        "Fick formula and dL-to-L conversion independently calculated"
+      ]
+    },
+    {
+      "source": "Vanderbilt hemodynamic formula reference; OpenAnesthesia resistance resource; ESC/ERS 2022",
+      "checked": [
+        "CI = 4.2/2.1 = 2.0",
+        "SVR = 80*(80-10)/5 = 1120",
+        "PVR = (35-15)/4 = 5 WU; correct downstream pressure and units"
+      ]
+    },
+    {
+      "source": "Physiological Society oxygen-transport article; venous saturation review; JACC congenital catheterization primer",
+      "checked": [
+        "Oxygen content 11.02 mL/dL with fraction saturation",
+        "Increased consumption interpretation with delivery held stable",
+        "Qp/Qs 2.0 with pre-shunt mixed venous sample and room-air assumptions"
+      ]
+    },
+    {
+      "source": "AHA invasive hemodynamic standardization; JACC HF RHC guidance 2024; prospective wedge saturation study",
+      "checked": [
+        "Direct versus assumed Fick and reproducible versus accurate thermodilution",
+        "Zeroing versus leveling and respiratory/cardiac timing distinctions",
+        "Questioned wedge requires waveform and occlusion confirmation before classification"
+      ]
+    },
+    {
+      "source": "Merck cardiovascular examination; primary wedge V-wave study; AHA hemodynamic statement",
+      "checked": [
+        "Cannon a-wave timing distinguished from prominent a and regurgitant v waves",
+        "Large v waves not specific for severe MR",
+        "Mean PAWP rather than PADP or RAP used for pulmonary resistance"
+      ]
+    },
+    {
+      "source": "ESC/ERS 2022 hemodynamic definitions; constriction physiology guidance",
+      "checked": [
+        "Strict mean PAP >20, PAWP ≤15 and PVR >2 precapillary boundaries",
+        "Combined pattern from PVR 3 WU with elevated wedge",
+        "Respiratory ventricular discordance differentiated from nonspecific static pressure findings"
+      ],
+      "pending": []
+    },
+    {
+      "source": "ASE/SCA adult TEE guideline; ASE Doppler quantification; ASE regurgitation guideline",
+      "checked": [
+        "TEE for management-relevant leaflet anatomy after inadequate TTE",
+        "Peak instantaneous gradient 64 mmHg distinguished from mean and peak-to-peak",
+        "LVOT stroke volume 62.8 mL with area and VTI units",
+        "Canonical ESC constriction educational URL confirmed by search"
+      ]
+    },
+    {
+      "source": "ASE Doppler recommendations; ASE/EACVI strain consensus; ASE diastolic update 2025",
+      "checked": [
+        "Exact squared diameter ratio 0.81 and 19% underestimation",
+        "GLS sign convention with loading and software qualifications",
+        "Pseudonormal E/A and separate relaxation versus pressure interpretation"
+      ],
+      "pending": [],
+      "resolution": "Relevant question-specific facts checked in subsequent sourceChecks; full-document access limitations remain explicitly recorded."
+    },
+    {
+      "source": "ASE diastolic update 2025 AF section and ASE right-heart guideline 2025",
+      "checked": [
+        "AF-specific multiparameter approach and representative-cycle averaging",
+        "Severe TR can make TAPSE falsely reassuring",
+        "TR gradient 36 plus RAP 8 gives RVSP/PASP 44 with no outflow obstruction"
+      ]
+    },
+    {
+      "source": "ASE Doppler guidance; ESC CCS 2024; AHA/ACC chest-pain guideline 2021",
+      "checked": [
+        "Oblique Doppler underestimation resolved before severity assignment",
+        "Anatomic versus ischemic testing question explicitly separated",
+        "LBBB limits exercise ST interpretation despite adequate exercise capacity"
+      ]
+    },
+    {
+      "source": "ASNC stress guideline 2026; EACVI SPECT consensus 2025; ESC CCS 2024",
+      "checked": [
+        "Dobutamine alternative with explicit patient and vasodilator contraindication context",
+        "Attenuation correction distinguished from stress-rest reversibility and balanced ischemia",
+        "FFR ≤0.80 and iFR ≤0.89 with technical and management qualifications"
+      ]
+    },
+    {
+      "source": "ESC CCS 2024 coronary functional testing; AHA CPET clinician guide",
+      "checked": [
+        "Elevated IMR and impaired reserve distinguished from focal FFR physiology",
+        "Acetylcholine provocation distinct from pressure-ratio assessment",
+        "Peak VO2, effort and ventilatory efficiency interpreted together without disease-specific overclaim"
+      ]
+    },
+    {
+      "source": "SCCT CCTA consensus; SCMR interpretation guidance; ESC CCS 2024",
+      "checked": [
+        "Calcium blooming can prevent lumen grading rather than establish severe stenosis",
+        "Zero calcium does not exclude noncalcified plaque or prove a symptom mechanism",
+        "Territorial subendocardial LGE supports ischemic injury with chronology and disease exceptions"
+      ],
+      "pending": [],
+      "resolution": "Relevant question-specific facts checked in subsequent sourceChecks; full-document access limitations remain explicitly recorded."
+    },
+    {
+      "source": "CMR myocardial inflammation expert recommendations; AHA LV thrombus statement 2022; SCMR congenital reporting 2024",
+      "checked": [
+        "Complementary T1/T2 evidence without pathogen-specific overclaim",
+        "CMR when thrombus remains unresolved after enhanced echo",
+        "Cine volumetry and anatomy-specific phase-contrast shunt measurement"
+      ]
+    },
+    {
+      "source": "SCMR CIED consensus 2024; ACR–NKF gadolinium consensus; KDIGO 2024",
+      "checked": [
+        "Selected nonconditional devices require complete-system specialist protocol",
+        "Group II gadolinium and individualized low-eGFR benefit-risk assessment",
+        "Do not initiate dialysis solely for group II contrast"
+      ],
+      "pending": [],
+      "resolution": "Relevant question-specific facts checked in subsequent sourceChecks; full-document access limitations remain explicitly recorded."
+    },
+    {
+      "source": "Fifth Universal Definition MI 2026 primary indexed text and official ESC/ACC summaries; ESC HF; ISHNE–HRS monitoring consensus",
+      "checked": [
+        "Acute injury and sex-specific URL distinguished from infarction evidence",
+        "No automatic illness-related infarction subtype",
+        "Obesity can lower peptides while AF and kidney dysfunction raise them",
+        "Monitoring duration matched to infrequent palpitations"
+      ],
+      "accessLimitations": "Publisher full HTML/PDF denied access; relevant primary indexed passages and official society summaries verified; full 2026 classification reserved for dedicated ACS chapter review."
+    },
+    {
+      "source": "AHA invasive hemodynamic statement; ESC/ERS PH 2022; ESC CCS 2024",
+      "checked": [
+        "Exercise wedge and pressure-flow interpretation with position qualification",
+        "Invasive angiography for refractory symptoms/high risk when results change care",
+        "Technical review and targeted complementary testing for discordance"
+      ]
+    },
+    {
+      "source": "SCCT 2026 primary indexed interpretation text, DOI 10.1016/j.jcct.2026.08.014",
+      "checked": [
+        "Blooming mechanism and stenosis overestimation confirmed",
+        "Technical limitation must be explicit in interpretation"
+      ],
+      "accessLimitations": "Direct full-text fetch denied; indexed primary passages available."
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "No independent clinician review",
+    "Full Harrison subscription text not accessed"
+  ],
+  "draftValidation": {
+    "scope": "Complete 56-question JSON generated",
+    "status": "passed",
+    "distractorRationales": 138,
+    "calculationQuestions": 10,
+    "answerDistribution": {
+      "A": 14,
+      "B": 14,
+      "C": 14,
+      "D": 14
+    }
+  },
+  "editorialReview": {
+    "status": "completed",
+    "reviewedOptionSets": 56,
+    "rewrittenOptionSets": [
+      3,
+      16,
+      25,
+      47,
+      48,
+      29,
+      30,
+      31,
+      32,
+      34,
+      36,
+      38,
+      40,
+      43,
+      44,
+      46,
+      49,
+      50,
+      51,
+      53,
+      5,
+      6,
+      54,
+      55,
+      56
+    ],
+    "addedComparisonTables": [
+      9,
+      19,
+      25,
+      39,
+      45
+    ],
+    "remaining": "",
+    "calculationCheck": {
+      "status": "passed",
+      "independentlyRecomputed": 10,
+      "additionalClinicalArithmetic": [
+        "MR EF 66.7%, regurgitant volume 45 mL, fraction 45%",
+        "Combined PH PVR 3 WU"
+      ]
+    },
+    "reviewedExplanations": 56,
+    "coverageConclusion": "All 56 mapped decisions represented in continuous sequence; 25 option sets revised; numerical answers independently checked. No independent clinician review claimed."
+  },
+  "installationEvidence": {
+    "preservedOtherBanks": 14,
+    "runtimeSourceComparison": "passed",
+    "installedProjectChapters": 15,
+    "installedProjectQuestions": 699
+  }
+}
