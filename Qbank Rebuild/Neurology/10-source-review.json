@@ -1,0 +1,325 @@
+{
+  "chapter": 10,
+  "status": "installed_verified",
+  "draftedQuestions": 60,
+  "plannedQuestions": 60,
+  "installed": true,
+  "draftValidation": {
+    "scope": "Final sixty-question chapter; structural validation and coverage alignment passed",
+    "status": "passed",
+    "answerDistribution": [
+      15,
+      15,
+      15,
+      15
+    ],
+    "minimumExplanationWords": 270,
+    "distractorRationales": 180,
+    "independentClinicianReview": false
+  },
+  "sourceChecks": [
+    {
+      "source": "AAPMR MG resource updated 2024; international consensus update 2020/2021; myasthenic syndromes guideline 2023",
+      "checked": [
+        "Clinical fatigability and competing ocular diagnoses",
+        "AChR-negative antibody evaluation and MuSK phenotype",
+        "MuSK receptor-clustering biology and subgroup-specific treatment cautions"
+      ]
+    },
+    {
+      "source": "AANEM RNS/SFEMG parameter and specialty electrophysiology resources",
+      "checked": [
+        "Conventional low-frequency decrement interpretation",
+        "Temperature, technique, muscle selection and nonunique etiologic interpretation"
+      ]
+    },
+    {
+      "source": "MGFA provider manual and Washington University diagnostic resource",
+      "checked": [
+        "Jitter sensitivity versus etiologic specificity",
+        "Ice-pack supportive role and limitations",
+        "Thymic assessment",
+        "MGFA class IVb feeding-tube distinction from class V"
+      ]
+    },
+    {
+      "source": "ABN 2025 guideline indexed extracts, international consensus guidance and MESTINON label",
+      "checked": [
+        "Pyridostigmine starting approach and symptomatic role",
+        "Renal adjustment, obstruction contraindications and cholinergic effects",
+        "Functionally limiting ocular disease and corticosteroid initiation"
+      ]
+    },
+    {
+      "source": "International consensus 2016 and 2020 update; ABN 2025 indexed text; Malaysian Society of Neurosciences 2025 consensus",
+      "checked": [
+        "Steroid-associated initial worsening and monitored rescue in significant bulbar disease",
+        "Azathioprine onset and dose range",
+        "MuSK subgroup-specific early rituximab consideration"
+      ]
+    },
+    {
+      "source": "MGTX primary trial 2016 and ABN 2025 recommendation extract",
+      "checked": [
+        "Final enrollment ages 18–65, disease under five years, nonthymomatous AChR-positive generalized MG",
+        "Trial eligibility versus guideline age recommendations",
+        "Delayed immune benefit versus acute rescue"
+      ]
+    },
+    {
+      "source": "IMURAN FDA label 2024; CPIC 2025 thiopurine update; rituximab biosimilar FDA label 2026",
+      "checked": [
+        "Genetic risk does not replace CBC surveillance",
+        "Thiopurine interactions and myelotoxicity",
+        "HBsAg/anti-HBc screening and resolved-infection reactivation risk"
+      ]
+    },
+    {
+      "source": "ULTOMIRIS US label 2026; CDC complement-inhibitor guidance updated 2026; RYSTIGGO US label and current DailyMed entry",
+      "checked": [
+        "Adult AChR-positive generalized MG indication for ravulizumab",
+        "MenACWY/MenB vaccination and persistent breakthrough risk",
+        "FcRn versus C5 and CD20 mechanisms",
+        "Adult AChR/MuSK indication and weight-specific six-dose rozanolixizumab cycle",
+        "Subsequent-cycle interval limitation and infection/vaccine warnings"
+      ]
+    },
+    {
+      "source": "International consensus 2016 and AGG pregnancy recommendations 2021",
+      "checked": [
+        "Transient neonatal passive antibody mechanism",
+        "Medication planning and magnesium hazard",
+        "Maternal stability does not exclude neonatal disease"
+      ]
+    },
+    {
+      "source": "MGFA emergency guidance, crisis specialty review 2023, Malaysian MG consensus 2025",
+      "checked": [
+        "Bulbar/respiratory trajectory despite normal oxygen saturation",
+        "Warning respiratory mechanics rather than universal intubation cutoff",
+        "IVIG/exchange rapid rescue versus delayed immune treatment",
+        "Temporary acetylcholinesterase-inhibitor reduction during intubated crisis"
+      ]
+    },
+    {
+      "source": "MGFA cautionary drugs, AANEM antibiotic safety summary 2025 and pyridostigmine prescribing information",
+      "checked": [
+        "Fluoroquinolone boxed MG warning with contextual antimicrobial choice",
+        "Muscarinic/nicotinic toxicity differentiation",
+        "Atropine does not reverse nicotinic respiratory weakness"
+      ]
+    },
+    {
+      "source": "LEMS specialty review and myasthenic syndromes guideline",
+      "checked": [
+        "Presynaptic pattern and postexercise increment thresholds with technical context",
+        "Negative initial imaging does not close malignancy evaluation",
+        "Risk-adjusted 3–6-month surveillance recommendations"
+      ]
+    },
+    {
+      "source": "FIRDAPSE full US label revised July 2025",
+      "checked": [
+        "Adult starting dose and titration",
+        "20 mg single/100 mg daily adult limits",
+        "Seizure-history contraindication",
+        "Renal/hepatic/NAT2 exposure precautions"
+      ]
+    },
+    {
+      "source": "GeneReviews CMS overview and genotype-directed treatment systematic review",
+      "checked": [
+        "Adult recognition of congenital disease",
+        "DOK7 subtype-directed therapy",
+        "Potential worsening with pyridostigmine in DOK7/COLQ/slow-channel disease"
+      ]
+    },
+    {
+      "source": "Continuum pattern-recognition review and electrodiagnostic myopathy review",
+      "checked": [
+        "Normal CK/EMG limitations",
+        "Myopathic recruitment versus etiologic diagnosis",
+        "Representative biopsy selection and avoidance of recently needled tissue"
+      ]
+    },
+    {
+      "source": "EAN 2024 hyperCKemia guideline published 2026",
+      "checked": [
+        "Persistent elevation over 1.5 times appropriate ULN",
+        "Exclude nonneuromuscular/neurogenic causes",
+        "Modern imaging and genetic testing versus automatic biopsy-first workup"
+      ]
+    },
+    {
+      "source": "AAST rhabdomyolysis consensus 2022",
+      "checked": [
+        "Individualized crystalloid rate and urine-output targets",
+        "Hyperkalemia/AKI monitoring",
+        "No routine bicarbonate/mannitol or CK-only prophylactic dialysis",
+        "Persistent anuria and volume-overload precautions"
+      ]
+    },
+    {
+      "source": "ENMC dermatomyositis and antisynthetase workshop reports; BSR myositis guideline 2022",
+      "checked": [
+        "DM phenotype and antibody-associated risk interpretation",
+        "Muscle pathology does not have uniform sensitivity across subgroups",
+        "Antisynthetase disease can be lung dominant and evolve incompletely"
+      ]
+    },
+    {
+      "source": "IMACS cancer-screening guideline 2023",
+      "checked": [
+        "High-risk subtype, antibody and clinical factors",
+        "Two-or-more high-risk-factor classification",
+        "Population screening plus risk-directed additional assessment"
+      ]
+    },
+    {
+      "source": "ACR/CHEST SARD-ILD treatment guideline 2023 and ERS/EULAR CTD-ILD guidance",
+      "checked": [
+        "HRCT/PFT-based ILD evaluation in high-risk phenotype",
+        "MDA5 RP-ILD despite little muscle injury",
+        "Conditional upfront triple combination recommendation and uncertainty",
+        "Early transplant consideration and concurrent infection assessment"
+      ]
+    },
+    {
+      "source": "ENMC IMNM classification and Myositis Association diagnostic guidance",
+      "checked": [
+        "HMGCR-associated persistent immune disease after statin withdrawal",
+        "SRP/HMGCR/seronegative groups and clinicopathologic integration"
+      ]
+    },
+    {
+      "source": "ENMC revised IBM framework 2024 and AAPMR IBM care resource",
+      "checked": [
+        "Selective finger-flexor/knee-extensor pattern",
+        "Biopsy and anti-cN1A limitations",
+        "No routine sustained immunosuppressive benefit and functional care priorities"
+      ]
+    },
+    {
+      "source": "BSR inflammatory myopathy guideline 2022 and ProDERM primary trial 2022",
+      "checked": [
+        "Subtype/organ-directed glucocorticoid and steroid-sparing approach",
+        "Objective function versus CK-only follow-up",
+        "2 g/kg four-weekly randomized regimen and week-16 composite response",
+        "Placebo comparator, population limits and thromboembolic safety signal"
+      ]
+    },
+    {
+      "source": "GeneReviews dystrophinopathies and AAN/AANEM dystrophy guidance",
+      "checked": [
+        "Cardiac risk in heterozygous women independent of skeletal symptoms",
+        "Phenotype/pedigree-directed limb-girdle evaluation",
+        "Copy-number and genetic assay limitations"
+      ]
+    },
+    {
+      "source": "GeneReviews FSHD and genetic diagnostic best-practice update 2024",
+      "checked": [
+        "Selective asymmetric facial-scapular pattern",
+        "D4Z4 contraction plus permissive haplotype",
+        "Routine exome limitations and further epigenetic/subtype assessment"
+      ]
+    },
+    {
+      "source": "GeneReviews DM1 and Myotonic Dystrophy Foundation anesthesia guidance",
+      "checked": [
+        "DMPK CTG expansion and multisystem phenotype",
+        "Cardiac, respiratory and perioperative risks independent of grip myotonia",
+        "Targeted expansion testing and counseling limitations"
+      ]
+    },
+    {
+      "source": "GeneReviews DM2, mitochondrial deletion syndromes and OPMD",
+      "checked": [
+        "CNBP CCTG expansion testing and proximal myotonic phenotype",
+        "CPEO molecular heterogeneity and specimen-sensitive mtDNA detection",
+        "PABPN1-related late-onset oculopharyngeal pattern and swallowing risk"
+      ]
+    },
+    {
+      "source": "GeneReviews POLG and InterERNs mitochondrial seizure consensus 2024",
+      "checked": [
+        "POLG-specific valproate contraindication",
+        "Avoid blanket prohibition of all antiseizure medicines in all mitochondrial disease",
+        "Molecular mechanism determines inheritance counseling"
+      ]
+    },
+    {
+      "source": "GeneReviews Pompe, GSD V and CPT II; MetabERN Pompe pathway 2024; international GSD V/VII guideline 2021",
+      "checked": [
+        "Respiratory-led Pompe phenotype and confirmation after enzyme screening",
+        "Second wind and safe activity in McArdle disease",
+        "Different carbohydrate response in GSD VII",
+        "Prolonged exercise/fasting CPT II phenotype and normal interepisode limitations"
+      ]
+    },
+    {
+      "source": "GeneReviews hypoPP/hyperPP; periodic paralysis treatment review 2018; TPP management review 2018",
+      "checked": [
+        "Redistribution versus depletion and cautious potassium",
+        "Thyrotoxicosis treatment and rebound risk",
+        "SCN4A hyperPP phenotype and different trigger/rescue principles"
+      ]
+    },
+    {
+      "source": "Nondystrophic myotonia guidance 2020 and EMA NaMuscla product information",
+      "checked": [
+        "Warm-up and channel-related phenotype",
+        "Cardiac/ECG and electrolyte assessment before mexiletine",
+        "Base-versus-salt formulation and product-specific dose escalation"
+      ]
+    },
+    {
+      "source": "AAPMR toxic myopathy and critical illness myopathy resources; colchicine prescribing information",
+      "checked": [
+        "Glucocorticoid myopathy versus active inflammation",
+        "Renal impairment and clarithromycin interaction in colchicine toxicity",
+        "Sensory preservation and myopathic recruitment in CIM with overlap limitations"
+      ]
+    },
+    {
+      "source": "SITC checkpoint-inhibitor toxicity guideline and international MG consensus",
+      "checked": [
+        "Evaluate MG/myositis/myocarditis overlap",
+        "Urgent monitored multidisciplinary assessment",
+        "Coordinate severe toxicity steroids with MG rescue and initial-worsening precautions"
+      ]
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "No full Harrison subscription text accessed",
+    "No independent clinician review",
+    "The chapter map is editorial coverage planning, not official NEET-SS weighting",
+    "ABN 2025 specific recommendations checked through indexed primary-document extracts; full PDF retrieval was unavailable",
+    "Source-based author review is not an independent clinician review; structural checks do not prove medical accuracy"
+  ],
+  "editorialReview": {
+    "status": "completed_source_based_author_review",
+    "completed": [
+      "Reviewed all answer-option sets to identify giveaway wording and weak competition",
+      "Revised eleven diagnostic/MG treatment items with clinically plausible competing options",
+      "Clarified conventional RNS threshold and MGTX outcome/comparator",
+      "Added six compact comparison tables alongside the MGFA table",
+      "Revised eleven crisis, LEMS and initial muscle-assessment items",
+      "Revised seven inflammatory/dystrophinopathy items",
+      "Retained the rapid-rescue decision coverage and corrected direct-question style for the normal-CK item",
+      "Completed ten inherited/metabolic/toxic option revisions",
+      "Checked oral potassium incremental dosing and ABN thymectomy qualifications against indexed primary text",
+      "Added precise IMACS screening interval",
+      "Applied dose/threshold highlights and final coverage alignment"
+    ],
+    "remaining": []
+  },
+  "installationEvidence": {
+    "preservedOtherBanks": 9,
+    "runtimeSourceComparison": "passed",
+    "installedChapters": 10,
+    "installedQuestions": 455,
+    "nextChapter": "Neurology 11. Spinal Cord Disorders, Myelopathy & Cauda Equina Syndromes"
+  }
+}

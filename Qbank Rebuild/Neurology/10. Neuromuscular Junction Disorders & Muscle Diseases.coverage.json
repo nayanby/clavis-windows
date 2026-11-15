@@ -1,0 +1,436 @@
+{
+  "chapter": "10. Neuromuscular Junction Disorders & Muscle Diseases",
+  "status": "installed_verified",
+  "plannedQuestions": 60,
+  "countBasis": "One distinct high-yield decision per question, weighted by diagnostic and therapeutic breadth; not an official examination weight or a fixed quota. Reassess after drafting for gaps and duplication.",
+  "sections": [
+    {
+      "section": "Myasthenia gravis: recognition and diagnosis",
+      "questions": 8,
+      "decisions": [
+        "Recognize objective fatigable weakness and distinguish NMJ disease from mimics",
+        "Choose antibody testing and interpret seronegativity in context",
+        "Recognize MuSK-associated phenotype and antibody biology",
+        "Interpret low-frequency repetitive nerve stimulation with technical qualifications",
+        "Use jitter testing after nondiagnostic routine studies without overcalling specificity",
+        "Use bedside ocular testing and recognize its limitations",
+        "Investigate the thymus in confirmed autoimmune MG",
+        "Apply MGFA clinical classification without confusing severity and activity"
+      ]
+    },
+    {
+      "section": "Myasthenia gravis: long-term treatment",
+      "questions": 10,
+      "decisions": [
+        "Use pyridostigmine for symptoms with dose and adverse-effect precautions",
+        "Escalate functionally significant ocular MG when symptomatic therapy is insufficient",
+        "Anticipate transient worsening during corticosteroid initiation",
+        "Select and monitor steroid-sparing immunotherapy",
+        "Apply thymectomy evidence and distinguish thymoma from nonthymomatous indications",
+        "Consider rituximab in inadequately controlled MuSK MG with evidence qualifications",
+        "Use complement inhibition with meningococcal risk mitigation",
+        "Distinguish FcRn blockade from complement and B-cell therapies",
+        "Match current biologic indications to antibody subgroup and product-specific regimens",
+        "Manage MG during pregnancy and recognize transient neonatal MG"
+      ]
+    },
+    {
+      "section": "Myasthenic crisis and treatment hazards",
+      "questions": 6,
+      "decisions": [
+        "Recognize impending crisis from bulbar and respiratory findings",
+        "Plan airway support from mechanics and clinical trajectory rather than oxygen saturation alone",
+        "Select plasma exchange or IVIG for severe exacerbation/crisis",
+        "Review precipitating drugs and intercurrent illness",
+        "Adjust acetylcholinesterase inhibition during intubated crisis",
+        "Distinguish cholinergic toxicity from autoimmune worsening"
+      ]
+    },
+    {
+      "section": "Lambert-Eaton and congenital myasthenic syndromes",
+      "questions": 4,
+      "decisions": [
+        "Recognize LEMS and interpret postexercise increment",
+        "Investigate and surveil malignancy in LEMS",
+        "Use amifampridine with product-specific dosing and seizure precautions",
+        "Recognize congenital myasthenic syndromes and genotype-dependent therapy"
+      ]
+    },
+    {
+      "section": "Approach to muscle disease",
+      "questions": 5,
+      "decisions": [
+        "Interpret proximal weakness and CK including normal-CK limitations",
+        "Interpret myopathic motor units and distinguish neuromuscular mimics",
+        "Select muscle MRI and an appropriate biopsy site",
+        "Evaluate persistent hyperCKemia before invasive investigation",
+        "Manage rhabdomyolysis and its immediate metabolic complications"
+      ]
+    },
+    {
+      "section": "Inflammatory and immune muscle disease",
+      "questions": 8,
+      "decisions": [
+        "Recognize dermatomyositis and phenotype-associated antibodies",
+        "Stratify myositis-associated cancer risk and select screening",
+        "Recognize antisynthetase syndrome and assess interstitial lung disease",
+        "Recognize anti-MDA5 rapidly progressive lung disease risk",
+        "Diagnose immune-mediated necrotizing myopathy and its antibody associations",
+        "Distinguish inclusion body myositis and avoid ineffective treatment escalation",
+        "Sequence immunosuppression and monitor muscle and extramuscular disease",
+        "Interpret ProDERM evidence and IVIG use in adult dermatomyositis"
+      ]
+    },
+    {
+      "section": "Inherited and mitochondrial muscle disease",
+      "questions": 8,
+      "decisions": [
+        "Distinguish dystrophinopathy and recognize cardiac/respiratory surveillance needs",
+        "Recognize facioscapulohumeral dystrophy and molecular testing principles",
+        "Evaluate a limb-girdle phenotype without assuming one gene or inheritance pattern",
+        "Recognize DM1 and prioritize cardiac and anesthesia precautions",
+        "Distinguish DM2 phenotype and repeat-expansion testing",
+        "Recognize progressive external ophthalmoplegia and multisystem mitochondrial clues",
+        "Recognize oculopharyngeal muscular dystrophy and aspiration risk",
+        "Apply mitochondrial genetic counseling and important medication precautions"
+      ]
+    },
+    {
+      "section": "Metabolic myopathies and muscle channelopathies",
+      "questions": 7,
+      "decisions": [
+        "Diagnose late-onset Pompe disease with respiratory and enzyme/genetic assessment",
+        "Recognize McArdle disease and the second-wind phenomenon",
+        "Recognize CPT II deficiency and fasting/prolonged-exercise rhabdomyolysis",
+        "Manage familial hypokalemic periodic paralysis with potassium and monitoring",
+        "Distinguish thyrotoxic periodic paralysis and avoid rebound hyperkalemia",
+        "Recognize hyperkalemic periodic paralysis and trigger-directed care",
+        "Distinguish nondystrophic myotonia and select symptom treatment safely"
+      ]
+    },
+    {
+      "section": "Toxic and critical illness muscle disorders",
+      "questions": 4,
+      "decisions": [
+        "Recognize glucocorticoid myopathy and distinguish it from active myositis",
+        "Recognize colchicine neuromyopathy and interaction/renal risk",
+        "Differentiate critical illness myopathy from polyneuropathy",
+        "Recognize checkpoint-inhibitor MG/myositis/myocarditis overlap and urgent management"
+      ]
+    }
+  ],
+  "crossChapterBoundaries": [
+    "Chapter 9 covers peripheral nerve localization, GBS and CIDP; here the decisions concern NMJ transmission and muscle.",
+    "Systemic inflammatory and endocrine disease chapters will address disease-wide management; these questions retain standalone muscle-related explanations.",
+    "Motor neuron disorders belong to a subsequent Neurology chapter; include only necessary diagnostic comparisons here."
+  ],
+  "requiredFinalReview": [
+    "Check current MG biologic labels and antibody-specific indications",
+    "Verify electrophysiological thresholds, doses and trial populations",
+    "Review every option for realistic competition and every explanation for standalone teaching",
+    "Validate coverage, install additively, compare runtime readback, commit and push"
+  ],
+  "authoredQuestions": 60,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Objective Fatigability in Myasthenia Gravis",
+      "decision": "Recognize objective fatigable weakness and distinguish NMJ disease from mimics"
+    },
+    {
+      "question": 2,
+      "title": "Antibody Testing After a Negative AChR Assay",
+      "decision": "Choose antibody testing and interpret seronegativity in context"
+    },
+    {
+      "question": 3,
+      "title": "MuSK Antibodies and Receptor Clustering",
+      "decision": "Recognize MuSK-associated phenotype and antibody biology"
+    },
+    {
+      "question": 4,
+      "title": "Low-Frequency Repetitive Nerve Stimulation",
+      "decision": "Interpret low-frequency repetitive nerve stimulation with technical qualifications"
+    },
+    {
+      "question": 5,
+      "title": "Jitter Testing After Nondiagnostic RNS",
+      "decision": "Use jitter testing after nondiagnostic routine studies without overcalling specificity"
+    },
+    {
+      "question": 6,
+      "title": "Ice-Pack Testing for Ptosis",
+      "decision": "Use bedside ocular testing and recognize its limitations"
+    },
+    {
+      "question": 7,
+      "title": "Thymic Imaging in Autoimmune MG",
+      "decision": "Investigate the thymus in confirmed autoimmune MG"
+    },
+    {
+      "question": 8,
+      "title": "MGFA Clinical Class and Bulbar Severity",
+      "decision": "Apply MGFA clinical classification without confusing severity and activity"
+    },
+    {
+      "question": 9,
+      "title": "Pyridostigmine Is Symptomatic Therapy",
+      "decision": "Use pyridostigmine for symptoms with dose and adverse-effect precautions"
+    },
+    {
+      "question": 10,
+      "title": "Functionally Limiting Ocular MG",
+      "decision": "Escalate functionally significant ocular MG when symptomatic therapy is insufficient"
+    },
+    {
+      "question": 11,
+      "title": "Corticosteroid Initiation in Significant Bulbar MG",
+      "decision": "Anticipate transient worsening during corticosteroid initiation"
+    },
+    {
+      "question": 12,
+      "title": "Azathioprine and Pharmacogenetic Safety",
+      "decision": "Select and monitor steroid-sparing immunotherapy"
+    },
+    {
+      "question": 13,
+      "title": "Thymectomy Evidence in Nonthymomatous MG",
+      "decision": "Apply thymectomy evidence and distinguish thymoma from nonthymomatous indications"
+    },
+    {
+      "question": 14,
+      "title": "Early Rituximab Consideration in MuSK MG",
+      "decision": "Consider rituximab in inadequately controlled MuSK MG with evidence qualifications"
+    },
+    {
+      "question": 15,
+      "title": "Meningococcal Risk With C5 Inhibition",
+      "decision": "Use complement inhibition with meningococcal risk mitigation"
+    },
+    {
+      "question": 16,
+      "title": "FcRn Blockade and IgG Recycling",
+      "decision": "Distinguish FcRn blockade from complement and B-cell therapies"
+    },
+    {
+      "question": 17,
+      "title": "Rozanolixizumab Indication and Cycle",
+      "decision": "Match current biologic indications to antibody subgroup and product-specific regimens"
+    },
+    {
+      "question": 18,
+      "title": "Transient Neonatal Myasthenia",
+      "decision": "Manage MG during pregnancy and recognize transient neonatal MG"
+    },
+    {
+      "question": 19,
+      "title": "Recognizing Impending Myasthenic Crisis",
+      "decision": "Recognize impending crisis from bulbar and respiratory findings"
+    },
+    {
+      "question": 20,
+      "title": "Respiratory Mechanics and Airway Timing",
+      "decision": "Plan airway support from mechanics and clinical trajectory rather than oxygen saturation alone"
+    },
+    {
+      "question": 21,
+      "title": "Rapid Immune Therapy in Severe Exacerbation",
+      "decision": "Select plasma exchange or IVIG for severe exacerbation/crisis"
+    },
+    {
+      "question": 22,
+      "title": "Fluoroquinolones and MG Worsening",
+      "decision": "Review precipitating drugs and intercurrent illness"
+    },
+    {
+      "question": 23,
+      "title": "Pyridostigmine During Intubated Crisis",
+      "decision": "Adjust acetylcholinesterase inhibition during intubated crisis"
+    },
+    {
+      "question": 24,
+      "title": "Cholinergic Toxicity After Dose Escalation",
+      "decision": "Distinguish cholinergic toxicity from autoimmune worsening"
+    },
+    {
+      "question": 25,
+      "title": "Presynaptic Facilitation in LEMS",
+      "decision": "Recognize LEMS and interpret postexercise increment"
+    },
+    {
+      "question": 26,
+      "title": "Cancer Surveillance After Negative Initial LEMS Imaging",
+      "decision": "Investigate and surveil malignancy in LEMS"
+    },
+    {
+      "question": 27,
+      "title": "Amifampridine and Seizure History",
+      "decision": "Use amifampridine with product-specific dosing and seizure precautions"
+    },
+    {
+      "question": 28,
+      "title": "Genotype-Directed Congenital Myasthenia Treatment",
+      "decision": "Recognize congenital myasthenic syndromes and genotype-dependent therapy"
+    },
+    {
+      "question": 29,
+      "title": "Normal CK Does Not Exclude Myopathy",
+      "decision": "Interpret proximal weakness and CK including normal-CK limitations"
+    },
+    {
+      "question": 30,
+      "title": "Myopathic Recruitment on Needle EMG",
+      "decision": "Interpret myopathic motor units and distinguish neuromuscular mimics"
+    },
+    {
+      "question": 31,
+      "title": "Selecting a Muscle Biopsy Site",
+      "decision": "Select muscle MRI and an appropriate biopsy site"
+    },
+    {
+      "question": 32,
+      "title": "Rechecking Incidental HyperCKemia",
+      "decision": "Evaluate persistent hyperCKemia before invasive investigation"
+    },
+    {
+      "question": 33,
+      "title": "Initial Rhabdomyolysis Management",
+      "decision": "Manage rhabdomyolysis and its immediate metabolic complications"
+    },
+    {
+      "question": 34,
+      "title": "Recognizing Dermatomyositis",
+      "decision": "Recognize dermatomyositis and phenotype-associated antibodies"
+    },
+    {
+      "question": 35,
+      "title": "Risk-Stratified Cancer Screening in Myositis",
+      "decision": "Stratify myositis-associated cancer risk and select screening"
+    },
+    {
+      "question": 36,
+      "title": "Antisynthetase Disease Beyond the Muscle",
+      "decision": "Recognize antisynthetase syndrome and assess interstitial lung disease"
+    },
+    {
+      "question": 37,
+      "title": "Anti-MDA5 and Rapidly Progressive ILD",
+      "decision": "Recognize anti-MDA5 rapidly progressive lung disease risk"
+    },
+    {
+      "question": 38,
+      "title": "Persistent Weakness After Statin Withdrawal",
+      "decision": "Diagnose immune-mediated necrotizing myopathy and its antibody associations"
+    },
+    {
+      "question": 39,
+      "title": "Inclusion Body Myositis Pattern",
+      "decision": "Distinguish inclusion body myositis and avoid ineffective treatment escalation"
+    },
+    {
+      "question": 40,
+      "title": "Initial Immune Treatment and Objective Follow-up",
+      "decision": "Sequence immunosuppression and monitor muscle and extramuscular disease"
+    },
+    {
+      "question": 41,
+      "title": "What ProDERM Established",
+      "decision": "Interpret ProDERM evidence and IVIG use in adult dermatomyositis"
+    },
+    {
+      "question": 42,
+      "title": "Cardiac Risk in a Female DMD Variant Carrier",
+      "decision": "Distinguish dystrophinopathy and recognize cardiac/respiratory surveillance needs"
+    },
+    {
+      "question": 43,
+      "title": "FSHD Requires the Right Molecular Test",
+      "decision": "Recognize facioscapulohumeral dystrophy and molecular testing principles"
+    },
+    {
+      "question": 44,
+      "title": "A Limb-Girdle Pattern Is Not One Genetic Diagnosis",
+      "decision": "Evaluate a limb-girdle phenotype without assuming one gene or inheritance pattern"
+    },
+    {
+      "question": 45,
+      "title": "DM1: Myotonia Is Only One Part of the Risk",
+      "decision": "Recognize DM1 and prioritize cardiac and anesthesia precautions"
+    },
+    {
+      "question": 46,
+      "title": "DM2 and Repeat-Expansion Testing",
+      "decision": "Distinguish DM2 phenotype and repeat-expansion testing"
+    },
+    {
+      "question": 47,
+      "title": "Progressive External Ophthalmoplegia and Tissue Testing",
+      "decision": "Recognize progressive external ophthalmoplegia and multisystem mitochondrial clues"
+    },
+    {
+      "question": 48,
+      "title": "Oculopharyngeal Muscular Dystrophy and Aspiration",
+      "decision": "Recognize oculopharyngeal muscular dystrophy and aspiration risk"
+    },
+    {
+      "question": 49,
+      "title": "Valproate Risk in POLG Disease",
+      "decision": "Apply mitochondrial genetic counseling and important medication precautions"
+    },
+    {
+      "question": 50,
+      "title": "Late-Onset Pompe Disease",
+      "decision": "Diagnose late-onset Pompe disease with respiratory and enzyme/genetic assessment"
+    },
+    {
+      "question": 51,
+      "title": "McArdle Disease and Second Wind",
+      "decision": "Recognize McArdle disease and the second-wind phenomenon"
+    },
+    {
+      "question": 52,
+      "title": "CPT II Deficiency and Prolonged Exercise",
+      "decision": "Recognize CPT II deficiency and fasting/prolonged-exercise rhabdomyolysis"
+    },
+    {
+      "question": 53,
+      "title": "Potassium During Familial Hypokalemic Paralysis",
+      "decision": "Manage familial hypokalemic periodic paralysis with potassium and monitoring"
+    },
+    {
+      "question": 54,
+      "title": "Thyrotoxic Periodic Paralysis",
+      "decision": "Distinguish thyrotoxic periodic paralysis and avoid rebound hyperkalemia"
+    },
+    {
+      "question": 55,
+      "title": "Hyperkalemic Periodic Paralysis",
+      "decision": "Recognize hyperkalemic periodic paralysis and trigger-directed care"
+    },
+    {
+      "question": 56,
+      "title": "Nondystrophic Myotonia and Mexiletine Safety",
+      "decision": "Distinguish nondystrophic myotonia and select symptom treatment safely"
+    },
+    {
+      "question": 57,
+      "title": "Glucocorticoid Myopathy Versus Active Myositis",
+      "decision": "Recognize glucocorticoid myopathy and distinguish it from active myositis"
+    },
+    {
+      "question": 58,
+      "title": "Colchicine Neuromyopathy and Drug Interaction",
+      "decision": "Recognize colchicine neuromyopathy and interaction/renal risk"
+    },
+    {
+      "question": 59,
+      "title": "Critical Illness Myopathy Versus Polyneuropathy",
+      "decision": "Differentiate critical illness myopathy from polyneuropathy"
+    },
+    {
+      "question": 60,
+      "title": "Checkpoint-Inhibitor Neuromuscular–Cardiac Overlap",
+      "decision": "Recognize checkpoint-inhibitor MG/myositis/myocarditis overlap and urgent management"
+    }
+  ]
+}

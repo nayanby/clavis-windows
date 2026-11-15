@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 10. Neuromuscular Junction Disorders & Muscle Diseases",
+  "currentChapter": "Neurology 11. Spinal Cord Disorders, Myelopathy & Cauda Equina Syndromes",
   "chapters": [
     {
       "subject": "Neurology",
@@ -344,7 +344,27 @@
       "subject": "Neurology",
       "chapter": 10,
       "document": "10. Neuromuscular Junction Disorders & Muscle Diseases",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/10. Neuromuscular Junction Disorders & Muscle Diseases.json",
+      "validation": {
+        "questions": 60,
+        "answerDistribution": {
+          "A": 15,
+          "B": 15,
+          "C": 15,
+          "D": 15
+        },
+        "minimumExplanationWords": 270,
+        "distractorRationales": 180,
+        "questionStyles": {
+          "clinical_scenario": 47,
+          "direct": 13
+        },
+        "status": "passed"
+      },
+      "installedSha256": "fd6eae51099f84d8b3ad1a38795ab796451144e8dc6832892c51ab075dbf65a8",
+      "coverageMap": "Neurology/10. Neuromuscular Junction Disorders & Muscle Diseases.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",
