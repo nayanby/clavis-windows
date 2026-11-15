@@ -2,8 +2,8 @@
   "chapter": 11,
   "status": "draft_awaiting_final_review",
   "installed": false,
-  "authoredQuestions": 62,
-  "plannedQuestions": 62,
+  "authoredQuestions": 66,
+  "plannedQuestions": 66,
   "scopeNote": "All 62 provisionally planned decisions authored in continuous order across nine sections. Final chapter-wide source-document coverage, clinical and editorial review remains pending; not installed.",
   "sourceChecks": [
     {
@@ -336,18 +336,18 @@
     }
   ],
   "draftValidation": {
-    "questions": 62,
+    "questions": 66,
     "answerDistribution": {
-      "A": 16,
-      "B": 16,
-      "C": 15,
-      "D": 15
+      "A": 17,
+      "B": 17,
+      "C": 16,
+      "D": 16
     },
     "minimumExplanationWords": 329,
-    "distractorRationales": 183,
+    "distractorRationales": 195,
     "questionStyles": {
       "direct": 14,
-      "clinical_scenario": 48
+      "clinical_scenario": 52
     },
     "status": "passed"
   },
@@ -421,12 +421,12 @@
     {
       "source": "2026 ACC resistant-hypertension pathway",
       "url": "https://doi.org/10.1016/j.jacc.2026.08.028",
-      "status": "definition_and_MRA_priority_checked_full_pathway_review_pending"
+      "status": "relevant_primary_recommendations_checked_and_incorporated_full_page_access_limited"
     },
     {
       "source": "2026 ISH global hypertension practice guidance",
       "url": "https://doi.org/10.1097/HJH.0000000000004451",
-      "status": "identified_primary_indexed_text_available_full_page_retrieval_blocked_402"
+      "status": "relevant_primary_recommendations_checked_and_incorporated_full_page_access_limited"
     }
   ],
   "releaseReview": {
@@ -434,7 +434,7 @@
     "installed": false,
     "originalMeasurementBlockFinalReview": "answer_keys_thresholds_and_flagged_distractor_revisions_reviewed",
     "sourceDocumentCoverageAudit": "in_progress_gaps_identified",
-    "chapterWideConsistencyReview": "pending",
+    "chapterWideConsistencyReview": "pending_final_consistency_and_remaining_source_details",
     "sourceCoverageReview": "audit/chapter-11-source-coverage-review.json"
   },
   "organDamageAdditionReview": {
@@ -466,5 +466,56 @@
       "Question IDs and answer-letter positions preserved."
     ],
     "limitations": "Whole-chapter coverage/current-update review remains pending."
+  },
+  "currentUpdateReview": {
+    "date": "2026-11-15",
+    "status": "relevant_recommendations_checked_and_incorporated",
+    "updatedQuestions": [
+      "cardiology-rebuild-11-030",
+      "cardiology-rebuild-11-031",
+      "cardiology-rebuild-11-033"
+    ],
+    "checks": [
+      {
+        "source": "https://doi.org/10.1097/HJH.0000000000004451",
+        "finding": "ISH 2026 fourth-line spironolactone: eGFR >=30 and potassium <4.5, with monitoring; kept distinct from named AHA and ESC boundaries.",
+        "access": "Primary indexed recommendations; full publisher retrieval returned 402."
+      },
+      {
+        "source": "https://doi.org/10.1016/j.jacc.2026.08.028",
+        "finding": "ACC 2026 renal-denervation selection and continuing medication/outcome uncertainty incorporated.",
+        "access": "Primary indexed eligibility text plus official ACC summary; full publisher retrieval returned 403."
+      },
+      {
+        "source": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/219878Orig1s000lbl.pdf",
+        "finding": "Baxdrostat US approval, 2 mg/1 mg risk-based dosing, potassium/sodium monitoring and interactions checked against FDA label."
+      },
+      {
+        "source": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217686s005lbl.pdf",
+        "finding": "Aprocitentan dual ETA/ETB mechanism, 12.5 mg dose, pregnancy contraindication, hepatic/hemoglobin/fluid monitoring checked against FDA label."
+      }
+    ],
+    "limitation": "This verifies the incorporated recommendations; it does not claim every paragraph of either 2026 guideline was accessible or reviewed."
+  },
+  "coverageAdditionReview": {
+    "questionIds": [
+      "cardiology-rebuild-11-064",
+      "cardiology-rebuild-11-065",
+      "cardiology-rebuild-11-066"
+    ],
+    "status": "generated_questions_reviewed_author_source_check",
+    "checks": [
+      "Arterial compliance distinguished from increased resistance or high-output physiology; no claim that wave-reflection timing alone explains aging.",
+      "Oral-estrogen CBG interference distinguished from free-cortisol confirmation and premature source localization.",
+      "Named ESC renal duplex thresholds distinguished from clinical causality and revascularization eligibility."
+    ],
+    "sources": [
+      "https://doi.org/10.1016/j.jacc.2011.01.008",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2981604/",
+      "https://www.endocrine.org/clinical-practice-guidelines/diagnosis-of-cushing-syndrome",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8743006/",
+      "https://academic.oup.com/eurheartj/article/45/36/3538/7738955",
+      "https://doi.org/10.1002/jum.16353"
+    ]
   }
 }

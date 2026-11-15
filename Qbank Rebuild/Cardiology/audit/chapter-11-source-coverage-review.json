@@ -80,11 +80,405 @@
     {
       "domain": "Chronic organ damage and pathophysiology",
       "evidence": "Source includes concentric LVH, ECG voltage criteria, small-vessel brain injury, albuminuria and arterial stiffness. Existing question 15 supplies baseline workup but does not comprehensively assess these decisions. No Cardiology stem matched Sokolow, Cornell, pressure-natriuresis or pulse-wave terms.",
-      "action": "Review explanations and other subject banks for existing coverage before deciding distinct new questions; absence of a keyword in stems alone is not proof of absence."
+      "action": "Review explanations and other subject banks for existing coverage before deciding distinct new questions; absence of a keyword in stems alone is not proof of absence.",
+      "resolution": {
+        "status": "focused_question_and_comparison_table_added",
+        "questionId": "cardiology-rebuild-11-064",
+        "remainingReview": "Confirm whether any additional exact organ-damage criteria warrant inclusion; do not equate a keyword check with exhaustive coverage."
+      }
     }
   ],
   "nextWork": [
-    "Finish full source-to-question mapping, especially organ damage and renal artery investigation details.",
-    "Assess newer 2026 resistant-hypertension sources, then complete chapter-wide review and install only after release checks pass."
-  ]
+    "Final review of source details not resolved by heading mapping, including measurement recording adequacy, exact organ-damage criteria and perioperative management.",
+    "Complete chapter-wide consistency review and release metadata, then verify installation and runtime readback."
+  ],
+  "additionalCoverageQuestions": {
+    "Cushing Syndrome": "cardiology-rebuild-11-065",
+    "RENAL ARTERY STENOSIS": "cardiology-rebuild-11-066"
+  },
+  "headingCoverageMap": [
+    {
+      "sourceHeading": "Hypertension",
+      "questionIds": [
+        "cardiology-rebuild-11-001",
+        "cardiology-rebuild-11-002",
+        "cardiology-rebuild-11-003",
+        "cardiology-rebuild-11-004",
+        "cardiology-rebuild-11-005",
+        "cardiology-rebuild-11-006",
+        "cardiology-rebuild-11-007",
+        "cardiology-rebuild-11-008",
+        "cardiology-rebuild-11-009",
+        "cardiology-rebuild-11-010",
+        "cardiology-rebuild-11-011",
+        "cardiology-rebuild-11-012",
+        "cardiology-rebuild-11-013",
+        "cardiology-rebuild-11-014",
+        "cardiology-rebuild-11-015",
+        "cardiology-rebuild-11-016",
+        "cardiology-rebuild-11-017",
+        "cardiology-rebuild-11-018",
+        "cardiology-rebuild-11-019",
+        "cardiology-rebuild-11-020",
+        "cardiology-rebuild-11-021",
+        "cardiology-rebuild-11-022",
+        "cardiology-rebuild-11-023",
+        "cardiology-rebuild-11-024",
+        "cardiology-rebuild-11-025",
+        "cardiology-rebuild-11-026",
+        "cardiology-rebuild-11-027",
+        "cardiology-rebuild-11-028",
+        "cardiology-rebuild-11-029",
+        "cardiology-rebuild-11-030",
+        "cardiology-rebuild-11-031",
+        "cardiology-rebuild-11-032",
+        "cardiology-rebuild-11-033",
+        "cardiology-rebuild-11-034",
+        "cardiology-rebuild-11-035",
+        "cardiology-rebuild-11-036",
+        "cardiology-rebuild-11-037",
+        "cardiology-rebuild-11-038",
+        "cardiology-rebuild-11-039",
+        "cardiology-rebuild-11-040",
+        "cardiology-rebuild-11-041",
+        "cardiology-rebuild-11-042",
+        "cardiology-rebuild-11-043",
+        "cardiology-rebuild-11-044",
+        "cardiology-rebuild-11-045",
+        "cardiology-rebuild-11-046",
+        "cardiology-rebuild-11-047",
+        "cardiology-rebuild-11-048",
+        "cardiology-rebuild-11-049",
+        "cardiology-rebuild-11-050",
+        "cardiology-rebuild-11-051",
+        "cardiology-rebuild-11-052",
+        "cardiology-rebuild-11-053",
+        "cardiology-rebuild-11-054",
+        "cardiology-rebuild-11-055",
+        "cardiology-rebuild-11-056",
+        "cardiology-rebuild-11-057",
+        "cardiology-rebuild-11-058",
+        "cardiology-rebuild-11-059",
+        "cardiology-rebuild-11-060",
+        "cardiology-rebuild-11-061",
+        "cardiology-rebuild-11-062",
+        "cardiology-rebuild-11-063",
+        "cardiology-rebuild-11-064",
+        "cardiology-rebuild-11-065",
+        "cardiology-rebuild-11-066"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "primary hypertension",
+      "questionIds": [
+        "cardiology-rebuild-11-016",
+        "cardiology-rebuild-11-017",
+        "cardiology-rebuild-11-019",
+        "cardiology-rebuild-11-043",
+        "cardiology-rebuild-11-064"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Measurement of Blood Pressure",
+      "questionIds": [
+        "cardiology-rebuild-11-001",
+        "cardiology-rebuild-11-002",
+        "cardiology-rebuild-11-003",
+        "cardiology-rebuild-11-004",
+        "cardiology-rebuild-11-005",
+        "cardiology-rebuild-11-008"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Out-of-Office Blood-Pressure Monitoring",
+      "questionIds": [
+        "cardiology-rebuild-11-005",
+        "cardiology-rebuild-11-006",
+        "cardiology-rebuild-11-007",
+        "cardiology-rebuild-11-008",
+        "cardiology-rebuild-11-009",
+        "cardiology-rebuild-11-028"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Clinical Types of Hypertension",
+      "questionIds": [
+        "cardiology-rebuild-11-001",
+        "cardiology-rebuild-11-002",
+        "cardiology-rebuild-11-006",
+        "cardiology-rebuild-11-007",
+        "cardiology-rebuild-11-009",
+        "cardiology-rebuild-11-048",
+        "cardiology-rebuild-11-063",
+        "cardiology-rebuild-11-064"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Clinical Features",
+      "questionIds": [
+        "cardiology-rebuild-11-015",
+        "cardiology-rebuild-11-034",
+        "cardiology-rebuild-11-039",
+        "cardiology-rebuild-11-041",
+        "cardiology-rebuild-11-042",
+        "cardiology-rebuild-11-044",
+        "cardiology-rebuild-11-045",
+        "cardiology-rebuild-11-065"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Physical Examination and Important Exam Points",
+      "questionIds": [
+        "cardiology-rebuild-11-003",
+        "cardiology-rebuild-11-008",
+        "cardiology-rebuild-11-015",
+        "cardiology-rebuild-11-039",
+        "cardiology-rebuild-11-044",
+        "cardiology-rebuild-11-063"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Diagnosis",
+      "questionIds": [
+        "cardiology-rebuild-11-001",
+        "cardiology-rebuild-11-002",
+        "cardiology-rebuild-11-003",
+        "cardiology-rebuild-11-004",
+        "cardiology-rebuild-11-005",
+        "cardiology-rebuild-11-006",
+        "cardiology-rebuild-11-007",
+        "cardiology-rebuild-11-008",
+        "cardiology-rebuild-11-009",
+        "cardiology-rebuild-11-015"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Evaluation Hypertension-Mediated Organ Damage",
+      "questionIds": [
+        "cardiology-rebuild-11-015",
+        "cardiology-rebuild-11-023",
+        "cardiology-rebuild-11-048",
+        "cardiology-rebuild-11-063",
+        "cardiology-rebuild-11-064"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "A. Heart",
+      "questionIds": [
+        "cardiology-rebuild-11-015",
+        "cardiology-rebuild-11-064"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "B. Brain",
+      "questionIds": [
+        "cardiology-rebuild-11-053",
+        "cardiology-rebuild-11-054",
+        "cardiology-rebuild-11-064"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "C. Kidney",
+      "questionIds": [
+        "cardiology-rebuild-11-015",
+        "cardiology-rebuild-11-023",
+        "cardiology-rebuild-11-027",
+        "cardiology-rebuild-11-064"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "D. Retina",
+      "questionIds": [
+        "cardiology-rebuild-11-063"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "E. Large and Peripheral Arteries",
+      "questionIds": [
+        "cardiology-rebuild-11-050",
+        "cardiology-rebuild-11-064"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Initial Diagnostic Evaluation",
+      "questionIds": [
+        "cardiology-rebuild-11-015",
+        "cardiology-rebuild-11-034",
+        "cardiology-rebuild-11-035"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "new changes in 2025",
+      "questionIds": [
+        "cardiology-rebuild-11-001",
+        "cardiology-rebuild-11-002",
+        "cardiology-rebuild-11-010",
+        "cardiology-rebuild-11-011",
+        "cardiology-rebuild-11-012",
+        "cardiology-rebuild-11-013",
+        "cardiology-rebuild-11-034",
+        "cardiology-rebuild-11-035"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Treatment",
+      "questionIds": [
+        "cardiology-rebuild-11-010",
+        "cardiology-rebuild-11-011",
+        "cardiology-rebuild-11-012",
+        "cardiology-rebuild-11-013",
+        "cardiology-rebuild-11-014",
+        "cardiology-rebuild-11-015",
+        "cardiology-rebuild-11-016",
+        "cardiology-rebuild-11-017",
+        "cardiology-rebuild-11-018",
+        "cardiology-rebuild-11-019",
+        "cardiology-rebuild-11-020",
+        "cardiology-rebuild-11-021",
+        "cardiology-rebuild-11-022",
+        "cardiology-rebuild-11-023",
+        "cardiology-rebuild-11-024",
+        "cardiology-rebuild-11-025",
+        "cardiology-rebuild-11-026",
+        "cardiology-rebuild-11-027",
+        "cardiology-rebuild-11-028",
+        "cardiology-rebuild-11-029",
+        "cardiology-rebuild-11-030",
+        "cardiology-rebuild-11-031",
+        "cardiology-rebuild-11-032",
+        "cardiology-rebuild-11-033",
+        "cardiology-rebuild-11-057",
+        "cardiology-rebuild-11-058",
+        "cardiology-rebuild-11-059",
+        "cardiology-rebuild-11-060",
+        "cardiology-rebuild-11-061",
+        "cardiology-rebuild-11-062"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Resistant Hypertension",
+      "questionIds": [
+        "cardiology-rebuild-11-028",
+        "cardiology-rebuild-11-029",
+        "cardiology-rebuild-11-030",
+        "cardiology-rebuild-11-031",
+        "cardiology-rebuild-11-032",
+        "cardiology-rebuild-11-033"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "evaluation",
+      "questionIds": [
+        "cardiology-rebuild-11-028",
+        "cardiology-rebuild-11-029",
+        "cardiology-rebuild-11-034",
+        "cardiology-rebuild-11-039",
+        "cardiology-rebuild-11-041"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Management",
+      "questionIds": [
+        "cardiology-rebuild-11-029",
+        "cardiology-rebuild-11-030",
+        "cardiology-rebuild-11-031",
+        "cardiology-rebuild-11-032",
+        "cardiology-rebuild-11-033"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Hypertensive Emergency",
+      "questionIds": [
+        "cardiology-rebuild-11-045",
+        "cardiology-rebuild-11-046",
+        "cardiology-rebuild-11-047",
+        "cardiology-rebuild-11-048",
+        "cardiology-rebuild-11-049",
+        "cardiology-rebuild-11-050",
+        "cardiology-rebuild-11-051",
+        "cardiology-rebuild-11-052",
+        "cardiology-rebuild-11-053",
+        "cardiology-rebuild-11-054",
+        "cardiology-rebuild-11-055",
+        "cardiology-rebuild-11-056",
+        "cardiology-rebuild-11-057",
+        "cardiology-rebuild-11-063"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Secondary Hypertension",
+      "questionIds": [
+        "cardiology-rebuild-11-034",
+        "cardiology-rebuild-11-035",
+        "cardiology-rebuild-11-036",
+        "cardiology-rebuild-11-037",
+        "cardiology-rebuild-11-038",
+        "cardiology-rebuild-11-039",
+        "cardiology-rebuild-11-040",
+        "cardiology-rebuild-11-041",
+        "cardiology-rebuild-11-042",
+        "cardiology-rebuild-11-043",
+        "cardiology-rebuild-11-044",
+        "cardiology-rebuild-11-065",
+        "cardiology-rebuild-11-066"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Primary aldosteronism",
+      "questionIds": [
+        "cardiology-rebuild-11-034",
+        "cardiology-rebuild-11-035",
+        "cardiology-rebuild-11-036",
+        "cardiology-rebuild-11-037",
+        "cardiology-rebuild-11-038"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "Other causes",
+      "questionIds": [
+        "cardiology-rebuild-11-039",
+        "cardiology-rebuild-11-040",
+        "cardiology-rebuild-11-041",
+        "cardiology-rebuild-11-042",
+        "cardiology-rebuild-11-043",
+        "cardiology-rebuild-11-044",
+        "cardiology-rebuild-11-065"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    },
+    {
+      "sourceHeading": "RENAL ARTERY STENOSIS",
+      "questionIds": [
+        "cardiology-rebuild-11-027",
+        "cardiology-rebuild-11-039",
+        "cardiology-rebuild-11-040",
+        "cardiology-rebuild-11-066"
+      ],
+      "scope": "Topic-level association; references to a question include its explanation, not only its stem."
+    }
+  ],
+  "headingCoverageMapStatus": "all_extracted_heading_entries_mapped_final_detail_review_pending"
 }

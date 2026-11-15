@@ -14,6 +14,13 @@ REFERENCES = {
  'ACC2026': ('ACC resistant hypertension expert consensus pathway, 2026', 'https://doi.org/10.1016/j.jacc.2026.08.028'),
  'BISOPROLOL': ('Bisoprolol prescribing information, DailyMed', 'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0e309f3-82c3-4629-b790-fb8538b87369'),
 }
+REFERENCES.update({
+ 'ISH2026': ('ISH global hypertension practice guidelines, online October 2026', 'https://doi.org/10.1097/HJH.0000000000004451'),
+ 'BAXDROSTAT_LABEL': ('Baxdrostat US prescribing information, May 2026', 'https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/219878Orig1s000lbl.pdf'),
+ 'APROCITENTAN_LABEL': ('Aprocitentan US prescribing information, August 2026', 'https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217686s005lbl.pdf'),
+ 'MINOXIDIL_LABEL': ('Oral minoxidil prescribing information, DailyMed', 'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f76f6a05-11f8-48a6-98a3-b1407c228089'),
+ 'HYDRALAZINE_LABEL': ('Oral hydralazine prescribing information, DailyMed', 'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=336b11da-e592-4386-921f-3c136d754f2a'),
+})
 TOPIC = 'Initial drug selection and adverse effects'
 rows = []
 
@@ -212,4 +219,39 @@ add(TOPIC, 'Renal Denervation: BP Efficacy and Outcome Uncertainty',
   S('Patient Selection and Follow-Up', '**Use shared decision-making within an experienced specialist service after confirming the pressure phenotype and reviewing drug treatment.** Evaluate adherence, out-of-office measurements, secondary causes, renal function and anatomical eligibility.',
     'Discuss alternative drug strategies, expected benefit, procedural risks, uncertainty and the likely need for ongoing medication and follow-up. Drug intolerance can enter the decision, but does not make the procedure mandatory.',
     'Eligibility boundaries depend on the guideline, device and evidence population. Do not assume that a reassuring average safety signal establishes suitability in advanced CKD, major renal-artery disease or a secondary endocrine cause of hypertension. Continue monitoring pressure and renal status after treatment and adjust medicines according to the observed response. Denervation does not replace lifestyle treatment or remove the need to detect pseudoresistance. This question separates a supported selected adjunct from a universal cure or an unproven event-prevention claim, which is essential when translating a BP endpoint into clinical counseling.')], ['RDN', 'AHA2025', 'ESC2024'])
+
+# Add current guidance without changing the stable question IDs or answer keys.
+spiro=next(r for r in rows if r['title']=='Fourth-Line Spironolactone and PATHWAY-2')
+spiro['sections'].append(S('ISH 2026 Qualification',
+ '**The ISH 2026 recommendation retains low-dose spironolactone as the preferred fourth drug after excluding pseudoresistance and optimizing diuretic-based therapy.** It specifies eGFR at least 30 mL/min/1.73 m² and potassium below 4.5 mmol/L, with close laboratory monitoring.',
+ 'The strict potassium boundary in this named ISH recommendation should not be silently substituted for ESC wording or the higher renal threshold in the routine AHA 2025 pathway. The supplied potassium of 4.0 mmol/L and eGFR of 74 meet all three frameworks.'))
+spiro['refs'].append('ISH2026')
+
+eplerenone=next(r for r in rows if r['title']=='Spironolactone Intolerance and Eplerenone')
+eplerenone['sections'].append((
+ 'Newer Add-On Mechanisms and Safety', [
+ ('**Baxdrostat inhibits aldosterone synthesis rather than blocking the mineralocorticoid receptor.** Its 2026 US label permits add-on treatment for inadequately controlled adult hypertension; this does not establish approval in every country.', [
+  'The labeled dose is 2 mg once daily, or 1 mg once daily when hyperkalemia or hyponatremia risk is increased. Correct potassium and sodium abnormalities before starting and monitor both periodically, more often in higher-risk patients.',
+  'Potassium-raising combinations require extra monitoring; strong or moderate CYP3A inducers can reduce treatment effect. The label lists no formal contraindications, which does not mean absence of clinically important risks. Drug-specific cardiovascular-event prevention has not been established in controlled outcome trials.']),
+ ('**Aprocitentan blocks ETA and ETB endothelin receptors and provides a different add-on mechanism.** The US dose is 12.5 mg once daily; the 25-mg trial dose is not the recommended dose.', [
+  'Pregnancy and hypersensitivity are contraindications. Exclude pregnancy before treatment and use effective contraception during treatment and for one month after stopping. Monitor aminotransferases, bilirubin, hemoglobin, weight and fluid retention; edema and anemia are important adverse effects.',
+  'Avoid initiation with aminotransferases above three times the upper limit of normal or moderate-to-severe hepatic impairment. Significant fluid retention may require withdrawal; advanced or unstable heart failure limits suitability. Neither a newer mechanism nor a BP endpoint makes it an interchangeable first choice for this patient’s specific MRA-related gynecomastia.']),
+ ]))
+eplerenone['refs'].extend(['BAXDROSTAT_LABEL','APROCITENTAN_LABEL'])
+
+rdn=next(r for r in rows if r['title']=='Renal Denervation: BP Efficacy and Outcome Uncertainty')
+rdn['sections'].append(S('ACC 2026 Selection',
+ '**The ACC 2026 pathway considers renal denervation in carefully selected patients with office systolic BP 140–180 mmHg, diastolic BP at least 90 mmHg and eGFR at least 40 mL/min/1.73 m².** Resistant hypertension despite optimized therapy or intolerance of additional medicines can support specialist assessment.',
+ 'Exclude unsuitable anatomy and conditions such as significant renal-artery stenosis, renal FMD, renal-artery aneurysm or stent, pregnancy, neurogenic orthostatic hypotension and relevant renal or secreting adrenal tumors. Device-specific requirements still apply.',
+ 'Discuss access-site and renal-artery complications, variable BP response and the likelihood of continued medication. Evidence for hard cardiovascular outcomes remains limited; do not promise cure or medication withdrawal.'))
+rdn['refs'].append('ACC2026')
+
+spiro['sections'].append((
+ 'Later-Line Direct Vasodilators', [
+ ('**Minoxidil is a potent arteriolar vasodilator reserved for specialist-managed severe refractory hypertension.** It usually requires a loop diuretic for salt/water retention and a beta blocker or other sympathetic suppressant for reflex tachycardia.', [
+  'The oral label starts at 5 mg daily in adults. Monitor weight, edema, heart rate, angina and possible pericardial effusion, which can progress to tamponade. Hypertrichosis is another characteristic adverse effect. Oral antihypertensive use must be distinguished from topical treatment for hair loss.']),
+ ('**Hydralazine is another later-line arteriolar dilator, with a different characteristic toxicity profile.** Reflex tachycardia and fluid retention can also require complementary treatment.', [
+  'The US oral label starts at 10 mg four times daily for two to four days, then 25 mg four times daily for the remainder of the first week, with further individualized titration. Monitor for a lupus-like syndrome and other immune toxicity. This oral schedule is distinct from IV hydralazine used for an acute obstetric indication. Neither direct vasodilator substitutes for correcting pseudoresistance or optimizing the foundational regimen.']),
+ ]))
+spiro['refs'].extend(['MINOXIDIL_LABEL','HYDRALAZINE_LABEL'])
 

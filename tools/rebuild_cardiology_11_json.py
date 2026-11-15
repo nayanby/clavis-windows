@@ -359,6 +359,17 @@ R.update(organ_references)
 SECTIONS.append((organ_topic,[
     'Distinguish chronic retinal vascular changes from advanced injury and grade III versus IV retinopathy']))
 DISPLAY_TOPICS=[t for t,_ in SECTIONS[:2]]+[organ_topic]+[t for t,_ in SECTIONS[2:-1]]
+AUTHORING_DECISIONS=[(t,d) for t,items in SECTIONS for d in items]
+from cardiology_11_coverage_additions import rows as coverage_rows, REFERENCES as coverage_references
+rows.extend(coverage_rows)
+R.update(coverage_references)
+ADDED_DECISIONS=[
+ (organ_topic,'Explain arterial stiffness and wide pulse pressure while assessing chronic organ injury'),
+ ('Secondary hypertension','Interpret a potentially estrogen-confounded cortisol screen before source localization'),
+ ('Secondary hypertension','Interpret renal-artery duplex findings without equating stenosis with a stenting indication')]
+AUTHORING_DECISIONS.extend(ADDED_DECISIONS)
+for topic,decision in ADDED_DECISIONS:
+    next(items for t,items in SECTIONS if t==topic).append(decision)
 
 # Reviewed editorial revisions retain the original IDs and answer-letter slots.
 # Frozen originals remain in audit/pre-redistribution.zip; the revision ledger
@@ -382,12 +393,12 @@ rows[6]['others']=[
   'Isolated nocturnal hypertension describes elevated sleep pressure despite daytime averages below the relevant threshold. The awake ambulatory and home averages here are clearly elevated, and no sleep average is supplied to establish a separate nocturnal phenotype.')]
 
 def highlight_values(text):
-    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|mg/kg/min|mg/kg/day|mg/kg|mg/hour|mg/h|mg/min|mg/g|mg/dL|mg|g/hour|g/h|g/day|g/week|g|mmol/L|nmol/L|ng/mL/h|ng/dL|µg/kg/min|µg/kg|µg/min|µg/dL|mU/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
+    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|cm/s|mg/kg/min|mg/kg/day|mg/kg|mg/hour|mg/h|mg/min|mg/g|mg/dL|mg|g/hour|g/h|g/day|g/week|g|mmol/L|nmol/L|ng/mL/h|ng/dL|µg/kg/min|µg/kg|µg/min|µg/dL|mU/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
 
 if __name__=='__main__':
     existing_path=ROOT/'Cardiology'/(DOC+'.json')
     existing=json.loads(existing_path.read_text(encoding='utf-8')) if existing_path.exists() else None
-    decisions=[(t,d)for t,items in SECTIONS for d in items]
+    decisions=AUTHORING_DECISIONS
     assert len(rows)<=len(decisions)
     for r,(t,d)in zip(rows,decisions):assert r['topic']==t;r['coverageDecision']=d
     for r in rows:
@@ -401,7 +412,10 @@ if __name__=='__main__':
     p=save('Cardiology',11,DOC,rows,R,'Original educational synthesis; incomplete draft, not for installation. Full Harrison text not accessed; independent clinician review not claimed.',preserved_questions=preserved,preserved_answer_indices=answer_indices)
     chapter_status='draft_awaiting_final_review' if len(rows)==len(decisions) else 'draft_in_progress'
     b=json.loads(p.read_text(encoding='utf-8'));b.update(status=chapter_status,plannedQuestions=len(decisions),sourceDocument=DOC+'.docx')
-    b['questions'].sort(key=lambda q:DISPLAY_TOPICS.index(q['topic']))
+    # Preserve content IDs while grouping renal investigation with renal disease
+    # and cortisol interpretation with endocrine differential diagnosis.
+    position_overrides={'cardiology-rebuild-11-066':38.5,'cardiology-rebuild-11-065':43.5}
+    b['questions'].sort(key=lambda q:(DISPLAY_TOPICS.index(q['topic']),position_overrides.get(q['id'],int(q['id'].split('-')[-1]))))
     if existing and 'redistribution' in existing:
         b['redistribution']=existing['redistribution']
         b['redistribution'].update(draftQuestions=len(rows),newQuestionsAfterRedistribution=len(rows)-9)

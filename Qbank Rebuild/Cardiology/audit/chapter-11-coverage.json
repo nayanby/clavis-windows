@@ -4,8 +4,8 @@
   "chapter": "11. Systemic Hypertension and Hypertensive Emergencies",
   "status": "draft_awaiting_final_review",
   "countPolicy": "Provisional coverage-driven distinct decisions; not official examination weights.",
-  "plannedQuestions": 63,
-  "authoredQuestions": 63,
+  "plannedQuestions": 66,
+  "authoredQuestions": 66,
   "sections": [
     {
       "section": "Measurement classification and blood-pressure phenotypes",
@@ -38,10 +38,11 @@
     },
     {
       "section": "Hypertension-mediated organ damage",
-      "questions": 1,
-      "authoredQuestions": 1,
+      "questions": 2,
+      "authoredQuestions": 2,
       "decisions": [
-        "Distinguish chronic retinal vascular changes from advanced injury and grade III versus IV retinopathy"
+        "Distinguish chronic retinal vascular changes from advanced injury and grade III versus IV retinopathy",
+        "Explain arterial stiffness and wide pulse pressure while assessing chronic organ injury"
       ]
     },
     {
@@ -85,8 +86,8 @@
     },
     {
       "section": "Secondary hypertension",
-      "questions": 11,
-      "authoredQuestions": 11,
+      "questions": 13,
+      "authoredQuestions": 13,
       "decisions": [
         "Apply the 2025 Endocrine Society broader primary-aldosteronism screening approach",
         "Interpret aldosterone renin and the ratio with potassium medications and assay-specific thresholds",
@@ -98,7 +99,9 @@
         "Evaluate obstructive sleep apnea without assuming CPAP replaces all antihypertensive therapy",
         "Sequence alpha and beta blockade in a catecholamine-secreting tumor",
         "Distinguish Liddle syndrome from aldosterone-mediated low-renin hypertension",
-        "Recognize coarctation through arm-leg and pulse findings"
+        "Recognize coarctation through arm-leg and pulse findings",
+        "Interpret a potentially estrogen-confounded cortisol screen before source localization",
+        "Interpret renal-artery duplex findings without equating stenosis with a stenting indication"
       ]
     },
     {
@@ -239,6 +242,12 @@
       "decision": "Distinguish chronic retinal vascular changes from advanced injury and grade III versus IV retinopathy"
     },
     {
+      "questionId": "cardiology-rebuild-11-064",
+      "title": "Arterial Stiffness and Isolated Systolic Hypertension",
+      "section": "Hypertension-mediated organ damage",
+      "decision": "Explain arterial stiffness and wide pulse pressure while assessing chronic organ injury"
+    },
+    {
       "questionId": "cardiology-rebuild-11-016",
       "title": "DASH Eating Pattern and Weight Management",
       "section": "Lifestyle and reversible contributors",
@@ -377,6 +386,12 @@
       "decision": "Choose unilateral adrenalectomy versus MRA treatment for confirmed primary aldosteronism"
     },
     {
+      "questionId": "cardiology-rebuild-11-066",
+      "title": "Renal-Artery Duplex: Anatomy, Hemodynamics and Causality",
+      "section": "Secondary hypertension",
+      "decision": "Interpret renal-artery duplex findings without equating stenosis with a stenting indication"
+    },
+    {
       "questionId": "cardiology-rebuild-11-039",
       "title": "Renal-Artery Stenosis: Selecting Revascularization Review",
       "section": "Secondary hypertension",
@@ -405,6 +420,12 @@
       "title": "Liddle Syndrome: ENaC-Directed Treatment",
       "section": "Secondary hypertension",
       "decision": "Distinguish Liddle syndrome from aldosterone-mediated low-renin hypertension"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-065",
+      "title": "Hypercortisolism Testing During Oral Estrogen Use",
+      "section": "Secondary hypertension",
+      "decision": "Interpret a potentially estrogen-confounded cortisol screen before source localization"
     },
     {
       "questionId": "cardiology-rebuild-11-044",
