@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation",
+  "currentChapter": "Cardiology Chapter_07_Ventricular_Arrhythmias_Sudden_Cardiac_Death_and_ICD",
   "chapters": [
     {
       "subject": "Neurology",
@@ -610,7 +610,29 @@
       "subject": "Cardiology",
       "chapter": 6,
       "document": "Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Cardiology/Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation.json",
+      "validation": {
+        "questions": 65,
+        "answerDistribution": {
+          "A": 17,
+          "B": 16,
+          "C": 16,
+          "D": 16
+        },
+        "minimumExplanationWords": 351,
+        "distractorRationales": 195,
+        "questionStyles": {
+          "clinical_scenario": 61,
+          "direct": 4
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 65,
+      "plannedQuestions": 65,
+      "installedSha256": "bb7acbe66fc54ce20a9c0648afbbce41c840e3cf6640a20925e1059f50b8cd9e",
+      "coverageMap": "Cardiology/Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Cardiology",

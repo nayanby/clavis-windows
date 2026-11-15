@@ -1,0 +1,757 @@
+{
+  "chapter": 6,
+  "status": "installed_verified",
+  "installed": true,
+  "authoredQuestions": 65,
+  "plannedQuestions": 65,
+  "sourceChecks": [
+    {
+      "source": "ESC SVT guideline 2019",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz467"
+      ],
+      "questions": [
+        1,
+        2
+      ],
+      "checked": [
+        "Physiological sinus response versus abrupt reentrant SVT; automatic AT can warm up and cannot be excluded by trajectory alone",
+        "Short-RP supports typical AVNRT but does not prove mechanism; concealed retrograde accessory pathways can support AVRT without baseline delta wave"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC SVT guideline 2019",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz467"
+      ],
+      "questions": [
+        3,
+        4
+      ],
+      "checked": [
+        "Long-RP differential includes atypical AVNRT, PJRT and AT; adenosine termination does not uniquely identify mechanism",
+        "Persisting atrial rhythm during transient AV block supports atrial source; distinguish flutter and rare AVNRT with output block rather than treating ventricular pause alone as definitive"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC SVT guideline 2019; ACC/AHA/HRS primary SVT guideline 2015",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://www.heartrhythmjournal.com/article/S1547-5271%2815%2901189-3/fulltext"
+      ],
+      "questions": [
+        5,
+        6
+      ],
+      "checked": [
+        "Focal AT morphology, automatic warm-up versus other mechanisms, continued atrial activity through AV block and incessant tachycardiomyopathy",
+        "MAT at least three P morphologies with irregular atrial timing; distinguish AF and flutter; treat cause and consider selected rate control rather than routine cardioversion"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC 2019 and ACC/AHA/HRS 2015 SVT guidelines",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://doi.org/10.1016/j.jacc.2015.08.856"
+      ],
+      "questions": [
+        7,
+        8
+      ],
+      "checked": [
+        "Concealed 2:1 flutter at approximately 150 ventricular rate; actual atrial cycle and morphology establish rhythm rather than rate alone; diagnostic adenosine precautions",
+        "Focal nonreentrant junctional tachycardia, automatic rate behavior and atrial dissociation; ordinary AVRT excluded but rare dissociated AVNRT acknowledged; mechanism specified by assessment"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA ALS 2025; REVERT primary randomized trial 2015",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001376",
+        "https://pubmed.ncbi.nlm.nih.gov/26314489/"
+      ],
+      "questions": [
+        9,
+        10
+      ],
+      "checked": [
+        "Attributable unstable regular narrow tachycardia requires prompt synchronized cardioversion; adenosine may be considered without delaying ready cardioversion",
+        "REVERT standardized 40-mmHg 15-second strain with immediate supine passive leg raise; 43% versus 17% one-minute conversion; stable eligible population"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA 2025 algorithm and adenosine rapid-bolus prescribing information",
+      "urls": [
+        "https://www.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=91a601ab-d3cc-4013-9108-1b5432476076"
+      ],
+      "questions": [
+        11,
+        12
+      ],
+      "checked": [
+        "Adult peripheral 6-mg rapid bolus then 12 mg if needed with immediate flush; distinguish stress infusion and altered-sensitivity settings",
+        "Active bronchospasm avoidance; distinguish expected flushing and dyspnea; methylxanthine antagonism, dipyridamole potentiation and carbamazepine conduction effects"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA ALS 2025; ESC SVT 2019; IV diltiazem prescribing information",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001376",
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d51c0f6-26b7-4220-83fb-4e736b289e64"
+      ],
+      "questions": [
+        13,
+        14
+      ],
+      "checked": [
+        "Diltiazem for suitable stable narrow SVT; bolus 0.25 mg/kg over 2 minutes, optional 0.35 mg/kg after 15 minutes; avoid inappropriate substrate or additive IV beta blockade",
+        "Stable wide-complex rhythm is not proof of SVT; empirical verapamil avoided; adenosine consideration restricted to stable regular monomorphic phenotype"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC pregnancy 2025; ESC SVT 2019; EHRA AT consensus 2025",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehaf193",
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://doi.org/10.1093/europace/euaf324"
+      ],
+      "questions": [
+        15,
+        16
+      ],
+      "checked": [
+        "Pregnancy stable SVT vagal then adenosine; instability cardioversion; ESC 6-18 mg framework distinguished from AHA boluses",
+        "Incessant focal AT with LV dysfunction supports mapping and ablation, concurrent HF therapy and reassessment rather than assuming irreversible disease or immediate primary-prevention ICD"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC 2019 and ACC/AHA/HRS 2015 SVT guidelines",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://doi.org/10.1016/j.jacc.2015.08.856"
+      ],
+      "questions": [
+        17,
+        18
+      ],
+      "checked": [
+        "Orthodromic antegrade AV node and retrograde pathway; antidromic antegrade pathway with nodal or second-pathway return; width exceptions and bystander pathways",
+        "Proven retrograde-only pathway can sustain orthodromic AVRT without delta wave; distinguish intermittent manifest pre-excitation and absence of antegrade pre-excited AF mechanism"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US AF guideline 2023; AHA tachycardia algorithm 2025; ibutilide label",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cf8724a-f0d1-4ce2-b7c1-cf5fac345fd0"
+      ],
+      "questions": [
+        19,
+        20
+      ],
+      "checked": [
+        "Irregular variable wide complexes with manifest pre-excitation support pre-excited AF; AV nodal drugs including IV amiodarone contraindicated",
+        "Stable procainamide or ibutilide versus electrical conversion; instability urgent electrical treatment; procainamide algorithm limits and weight-based ibutilide regimen and monitoring"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC SVT 2019 and prospective pre-excitation risk study 2024",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://doi.org/10.1093/europace/euae036"
+      ],
+      "questions": [
+        21,
+        22
+      ],
+      "checked": [
+        "SPERRI and antegrade AP ERP at or below 250 ms, multiple pathways and inducible pathway-mediated tachycardia as high-risk findings",
+        "High-risk occupation supports EPS; gradual delta-wave fading differs from abrupt complete loss; prospective evidence limits exercise-test reassurance"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC 2019 and US 2015 SVT guidance; multicenter AVNRT endpoint study",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://doi.org/10.1016/j.jacc.2015.08.856",
+        "https://doi.org/10.1016/j.jacep.2018.09.012"
+      ],
+      "questions": [
+        23,
+        24
+      ],
+      "checked": [
+        "Slow-pathway target for recurrent symptomatic AVNRT; noninducibility more informative than junctional rhythm alone; avoid excessive lesions solely for residual duality",
+        "Septal accessory targets carry location-dependent AV-block risk; cryo safety-recurrence trade-off; verify pathway conduction rather than termination alone"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC SVT 2019; US AF 2023; ESC AF 2024; EHRA AT consensus",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1093/eurheartj/ehae176"
+      ],
+      "questions": [
+        25,
+        26
+      ],
+      "checked": [
+        "Typical flutter CTI dependence and bidirectional block endpoint; distinguish AF pulmonary-vein and left atrial macroreentry targets",
+        "US minimum four weeks after flutter conversion/ablation distinguished from ongoing AF risk indication; prior AF plus high risk supports continuing OAC despite successful CTI line"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "EHRA AT consensus 2025; ESC AF 2024 and US AF 2023",
+      "urls": [
+        "https://doi.org/10.1093/europace/euaf324",
+        "https://doi.org/10.1093/eurheartj/ehae176",
+        "https://doi.org/10.1161/CIR.0000000000001193"
+      ],
+      "questions": [
+        27,
+        28
+      ],
+      "checked": [
+        "Scar-related macroreentry requires circuit mapping; surface isoelectric intervals or atypical appearance do not uniquely identify mechanism",
+        "PPG alerts require ECG confirmation and professional tracing review; standard 12-lead recording distinguished from ambulatory 30-second convention and its evidence limitations"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC AF 2024 and US AF 2023",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehae176",
+        "https://doi.org/10.1161/CIR.0000000000001193"
+      ],
+      "questions": [
+        29,
+        30
+      ],
+      "checked": [
+        "Long-standing persistent continuous at least 12 months with rhythm control option; permanent denotes shared treatment intent; temporal label not an anticoagulation rule",
+        "Initial TTE, CBC, metabolic and thyroid evaluation; targeted additional testing; no routine ischemia or PE testing solely for AF without clinical indications"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC AF 2024 and US AF 2023",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehae176",
+        "https://doi.org/10.1161/CIR.0000000000001193"
+      ],
+      "questions": [
+        31,
+        32
+      ],
+      "checked": [
+        "AF-CARE concurrent risk-factor care; ESC weight reduction at least 10%, alcohol at most 3 drinks/30 g weekly, tailored exercise; no substitution for indicated OAC",
+        "Acute illness AF recurrence supports surveillance and postrecovery stroke-risk review; uncertain acute-sepsis anticoagulation benefit distinguished from long-term individualized prevention"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC AF 2024 and US AF 2023",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehae176",
+        "https://doi.org/10.1161/CIR.0000000000001193"
+      ],
+      "questions": [
+        33,
+        34
+      ],
+      "checked": [
+        "ESC CHA2DS2-VA omits sex; one considered, at least two recommended; complete component table and age nonduplication",
+        "US estimated annual risk at least 2% recommended, at least 1% below 2% reasonable; sex-specific score examples and calibration limits distinguished"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US AF 2023, ESC AF 2024 and INVICTUS primary trial",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1093/eurheartj/ehae176",
+        "https://doi.org/10.1056/NEJMoa2209051"
+      ],
+      "questions": [
+        35,
+        36
+      ],
+      "checked": [
+        "Bleeding score not sole eligibility rule; modify hypertension and NSAID exposure; no unsupported dose reduction or aspirin substitution",
+        "VKA for significant rheumatic MS with AF independent of usual score; INR 2-3 differentiated from mechanical-valve-specific targets; INVICTUS supports VKA over rivaroxaban in studied substrate"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Current US apixaban and rivaroxaban labels",
+      "urls": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/202155s042lbl.pdf",
+        "https://packageinserts.bms.com/pi/pi_eliquis.pdf",
+        "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610&type=display"
+      ],
+      "questions": [
+        37,
+        38
+      ],
+      "checked": [
+        "Apixaban AF two-of-three reduction rule and twice-daily frequency; indication and jurisdiction qualifications",
+        "Avoid rifampin with apixaban; induction not removed by dose separation, no empirical INR-guided escalation; renal and meal requirements differ between DOACs"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US AF 2023; ESC AF 2024; AFIRE primary trial",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1093/eurheartj/ehae176",
+        "https://doi.org/10.1056/NEJMoa1904143"
+      ],
+      "questions": [
+        39,
+        40
+      ],
+      "checked": [
+        "Aspirin or DAPT not equivalent substitute for indicated OAC in eligible clinical AF",
+        "OAC monotherapy beyond one year after revascularization without stent thrombosis; AFIRE population and Japanese dose framework distinguished from universal dosing or recent PCI"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US AF 2023 and BRIDGE primary trial",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1056/NEJMoa1501035"
+      ],
+      "questions": [
+        41,
+        42
+      ],
+      "checked": [
+        "No routine bridging for interrupted AF anticoagulation with mechanical-valve/recent-event exceptions; BRIDGE population limits and bleeding results",
+        "pLAAO reasonable for appropriate nonvalvular AF high stroke risk with nonreversible OAC contraindication; short-term antithrombotics, procedural risk and follow-up distinguished from no-treatment assumption"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ARTESiA and NOAH primary trials; ESC 2024 and US 2023 AF guidelines",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2310234",
+        "https://doi.org/10.1056/NEJMoa2303062",
+        "https://doi.org/10.1093/eurheartj/ehae176",
+        "https://doi.org/10.1161/CIR.0000000000001193"
+      ],
+      "questions": [
+        43,
+        44
+      ],
+      "checked": [
+        "ARTESiA stroke/SE benefit with bleeding trade-off versus NOAH nonsignificant broader efficacy composite and increased safety composite; no universal six-minute treatment rule",
+        "Aging and new hypertension/diabetes require renewed prevention assessment despite sinus office ECG or few symptoms; distinct postablation decisions not assumed settled by this case"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US AF 2023, ESC AF 2024 and digoxin label",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1093/eurheartj/ehae176",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b7e5c6e-e052-41b0-a4ce-05dfe62faaaf"
+      ],
+      "questions": [
+        45,
+        46
+      ],
+      "checked": [
+        "Stable ordinary AF beta blocker or NDCC with EF above 40%; substrate, perfusion and pre-excitation restrictions",
+        "Amiodarone increases digoxin exposure; label approximately 30-50% reduction/frequency modification with monitoring; AF target below 1.2 ng/mL and postdistribution sampling"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "RACE II primary trial; AHA ALS 2025; contemporary AF guidelines",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa1001337",
+        "https://doi.org/10.1161/CIR.0000000000001376",
+        "https://doi.org/10.1161/CIR.0000000000001193"
+      ],
+      "questions": [
+        47,
+        48
+      ],
+      "checked": [
+        "Lenient resting below 110 in suitable stable patients versus strict RACE II targets; symptoms, exercise and LV function qualify application",
+        "Unstable AF immediate synchronized conversion without elective delay; AHA 2025 biphasic initial at least 200 J; prompt anticoagulation assessment without postponing rescue"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC AF 2024 and US AF 2023",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehae176",
+        "https://doi.org/10.1161/CIR.0000000000001193"
+      ],
+      "questions": [
+        49,
+        50
+      ],
+      "checked": [
+        "ESC greater than 24-hour elective preparation distinguished from US at least 48-hour statement and risk-based shorter-duration assessment",
+        "TEE-guided earlier conversion requires therapeutic anticoagulation and subsequent protection; TTE does not reliably exclude appendage thrombus; delayed CT only in appropriate protocols"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US AF 2023 and ESC AF 2024",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1093/eurheartj/ehae176"
+      ],
+      "questions": [
+        51,
+        52
+      ],
+      "checked": [
+        "Detected LAA thrombus defers elective conversion; US 3-6 weeks and ESC minimum four weeks followed by repeat imaging explicitly distinguished",
+        "Five-day AF after negative TEE still needs US minimum four-week postconversion protection; long-term risk decision separate; short-episode exceptions not generalized"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US AF 2023 and ESC AF 2024",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1093/eurheartj/ehae176"
+      ],
+      "questions": [
+        53,
+        54
+      ],
+      "checked": [
+        "Prior MI/scar and HFrEF exclude class IC maintenance; amiodarone/dofetilide or ablation assessment have different safeguards",
+        "Pill-in-pocket selected substrate and prior monitored trial; AV nodal blocker generally at least 30 minutes before; single conversion dose ranges distinguished from repeated loading and maintenance"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "US AF 2023; dofetilide label; ESC AF 2024",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cff8d66a-ed43-46dd-97de-3dd21a7f2572",
+        "https://doi.org/10.1093/eurheartj/ehae176"
+      ],
+      "questions": [
+        55,
+        56
+      ],
+      "checked": [
+        "Dofetilide renal starting categories, baseline QT exclusions, inpatient initiation and serial postdose thresholds; distinguish first/subsequent-dose protocol",
+        "Amiodarone pulmonary symptom evaluation and thyroid/liver 3-6 month then six-month monitoring; low dose or normal thyroid does not exclude pulmonary toxicity"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "EAST-AFNET 4 primary trial; US 2023 and ESC 2024 AF guidance",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2019422",
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1093/eurheartj/ehae176"
+      ],
+      "questions": [
+        57,
+        58
+      ],
+      "checked": [
+        "Early rhythm-control strategy in recently diagnosed AF with cardiovascular conditions; composite HR 0.79 with 96% CI, not universal ablation-only or OAC-withdrawal evidence",
+        "Selected symptomatic younger paroxysmal AF permits first-line ablation without mandatory multiple drug failures; realistic recurrence and procedural-risk counseling"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "CASTLE-AF primary trial and 2024 multisociety AF ablation consensus",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa1707855",
+        "https://doi.org/10.1002/joa3.13082"
+      ],
+      "questions": [
+        59,
+        60
+      ],
+      "checked": [
+        "CASTLE selected symptomatic HF LVEF at most 35% with ICD; death/HF admission endpoint 28.5 versus 44.6 and HR 0.62; no replacement of HF or device care",
+        "PVI cornerstone and minimum entrance-block demonstration; exit testing interpretation; additional empirical lesions not a universal replacement"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ADVENT primary trial and multisociety ablation consensus 2024",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2307291",
+        "https://doi.org/10.1002/joa3.13082"
+      ],
+      "questions": [
+        61,
+        62
+      ],
+      "checked": [
+        "Original ADVENT one-year noninferiority composite outcomes in drug-refractory paroxysmal AF; relative electroporation selectivity not zero procedural risk or universal superiority",
+        "Delayed fever/dysphagia/neurological pattern suggests AEF; urgent contrast CT, expert referral and repeat imaging if needed; avoid air-insufflation endoscopy and routine esophageal instrumentation"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Multisociety ablation consensus 2024; US AF 2023; ESC AF 2024",
+      "urls": [
+        "https://doi.org/10.1002/joa3.13082",
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1093/eurheartj/ehae176"
+      ],
+      "questions": [
+        63,
+        65
+      ],
+      "checked": [
+        "2024 eight-week blanking convention distinguished from older three-month protocols; early recurrence still needs clinical management and has prognostic information",
+        "Refractory AF AV-junction ablation creates dependence and does not eliminate atrial AF/stroke risk; reduced-EF pacing strategy and US initial lower rate 80-90 distinguished"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA 2025 adult tachyarrhythmia algorithm and ALS guideline; DailyMed diltiazem label; REVERT primary protocol",
+      "urls": [
+        "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf",
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d51c0f6-26b7-4220-83fb-4e736b289e64",
+        "https://doi.org/10.1136/bmjopen-2013-004525"
+      ],
+      "questions": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "checked": [
+        "Rechecked electrical-treatment priority, energy fallback, 6/12-mg rapid adenosine sequence, restricted adenosine consideration in stable regular monomorphic WCT, and diltiazem bolus dosing. REVERT primary protocol confirms strain and repositioning sequence."
+      ],
+      "status": "editorial_recheck"
+    },
+    {
+      "source": "US AF 2023; ESC SVT 2019; DailyMed ibutilide prescribing information",
+      "urls": [
+        "https://www.jacc.org/doi/10.1016/j.jacc.2023.08.017",
+        "https://doi.org/10.1093/eurheartj/ehz467",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cf8724a-f0d1-4ce2-b7c1-cf5fac345fd0"
+      ],
+      "questions": [
+        19,
+        20,
+        21,
+        22,
+        24
+      ],
+      "checked": [
+        "Rechecked stable pre-excited AF drug selection and contraindicated AV nodal agents. Ibutilide repeat starts ten minutes after completion of initial infusion; stop for ventricular tachycardia or marked QT prolongation. Existing ESC pathway and ablation source checks retained."
+      ],
+      "status": "editorial_recheck"
+    },
+    {
+      "source": "ESC AF 2024 and ACC/AHA/ACCP/HRS AF 2023 primary guidelines",
+      "urls": [
+        "https://academic.oup.com/eurheartj/article/45/36/3314/7738779",
+        "https://www.jacc.org/doi/10.1016/j.jacc.2023.08.017"
+      ],
+      "questions": [
+        26,
+        28,
+        29,
+        31,
+        32
+      ],
+      "checked": [
+        "Rechecked at least four weeks after successful flutter cardioversion/ablation and continued risk-indicated OAC with prior AF. ESC temporal classification separates persistence, long-standing duration and permanent management intent. Existing ECG-confirmation, lifestyle and trigger-induced AF source checks retained."
+      ],
+      "status": "editorial_recheck"
+    },
+    {
+      "source": "ARTESiA and NOAH-AFNET 6 primary reports; digoxin prescribing information",
+      "urls": [
+        "https://www.nejm.org/doi/full/10.1056/NEJMoa2310234",
+        "https://www.nejm.org/doi/full/10.1056/NEJMoa2303062",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b7e5c6e-e052-41b0-a4ce-05dfe62faaaf"
+      ],
+      "questions": [
+        43,
+        46
+      ],
+      "checked": [
+        "ARTESiA stroke/systemic embolism rates 0.78 versus 1.24 percent per patient-year; on-treatment major bleeding 1.71 versus 0.94. NOAH did not significantly reduce its primary efficacy composite and increased death/major-bleeding composite. Digoxin dose reduction approximately 30–50 percent or frequency adjustment with amiodarone."
+      ],
+      "status": "editorial_recheck"
+    },
+    {
+      "source": "ALONE-AF JAMA 2025 and OCEAN NEJM online 2025/print 2026 primary trial reports",
+      "urls": [
+        "https://jamanetwork.com/journals/jama/fullarticle/2838294",
+        "https://www.nejm.org/doi/full/10.1056/NEJMoa2509688"
+      ],
+      "questions": [
+        64
+      ],
+      "checked": [
+        "Late selected postablation populations, comparator and composite endpoint differences; ALONE-AF combined outcome benefit does not establish stroke reduction; OCEAN nonsignificant superiority test does not establish equivalence; neither establishes withdrawal at three weeks."
+      ],
+      "status": "editorial_source_checked"
+    },
+    {
+      "source": "CHAMPION-AF and CLOSURE-AF primary trial reports, 2026",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2517213",
+        "https://doi.org/10.1056/NEJMoa2513310"
+      ],
+      "questions": [
+        42
+      ],
+      "checked": [
+        "CHAMPION-AF anticoagulation-eligible population: noninferiority for efficacy composite and superiority for nonprocedure-related bleeding, not all procedural safety. CLOSURE-AF different high-risk population and composite did not establish noninferiority."
+      ],
+      "status": "editorial_source_checked"
+    }
+  ],
+  "scopeNote": "Sequential SVT mechanisms and management, accessory pathways, flutter, AF diagnosis, stroke prevention, rate/rhythm control and ablation. Named guideline frameworks must be distinguished; current drug dosing and trial findings require verification as authored.",
+  "finalReviewStatus": "author_editorial_and_coverage_review_complete",
+  "editorialReviewProgress": {
+    "status": "complete",
+    "questionsReviewedInFull": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ],
+    "changes": [
+      "Question 8 removes an explicit nonreentrant-focus diagnosis from the stem; clinical timing and atrial dissociation now support a most-likely inference, with rare AVNRT limitations retained.",
+      "Question 9 now includes the AHA 2025 maximum-energy fallback when the device-recommended setting is unknown. Full-text editorial review completed for questions 9–16: stability and causation, modified Valsalva, rapid adenosine delivery and precautions, diltiazem dosing, uncertain WCT, pregnancy and incessant AT.",
+      "Question 20 now states the exact ibutilide repeat interval and infusion stopping criteria from the label, replacing a vague reassessment reference.",
+      "Question 24 replaces a zero-risk cryoablation distractor with a clinically relevant recurrence-versus-conduction-safety trade-off. Full-text editorial review completed for questions 17–24.",
+      "Question 29 classification table now distinguishes the ESC non-self-termination definition from the >7-day cut-off commonly used in intervention trials.",
+      "Question 32 removes giveaway wording from the empiric indefinite-anticoagulation distractor. Full-text editorial review completed for questions 25–32.",
+      "Question 38 replaces an INR-titration giveaway with the more plausible error of empirically increasing apixaban during rifampin induction.",
+      "Question 39 replaces intermittent aspirin with clopidogrel monotherapy after TIA; its rationale distinguishes noncardioembolic secondary prevention from AF-associated embolic protection. Full-text editorial review completed for questions 33–39.",
+      "Question 43 now uses competing interpretations of actual trial endpoints rather than universal claims; its table includes verified ARTESiA absolute event rates with the on-treatment bleeding population identified.",
+      "Questions 45 and 46 remove absolute first-line wording and replace INR-based digoxin titration with a plausible dose-separation error. Full-text editorial review completed for questions 40–48.",
+      "Question 54 now specifies the US pill-in-the-pocket weight threshold and exact flecainide/propafenone single doses.",
+      "Question 55 now specifies first-dose dofetilide QT assessment timing, >15-percent increase and absolute thresholds for dose reduction, distinguished from subsequent discontinuation rules. Full-text editorial review completed for questions 49–56.",
+      "Questions 57 and 61 replace sweeping trial distractors with competing intervention, comparator and statistical interpretations. Full-text editorial review completed for questions 57–64.",
+      "Coverage audit adds question 64 on late postablation ALONE-AF/OCEAN interpretation; former question 64 AV-junction ablation is now 65. Question 55 gains a four-drug selection and safety comparison. New question reviewed against primary reports; final coverage reconciliation remains."
+    ],
+    "remaining": "No chapter authoring or installation work remaining; independent clinician review not claimed."
+  },
+  "coverageGapAudit": {
+    "status": "complete",
+    "identifiedGaps": [
+      {
+        "topic": "Anticoagulation after successful AF ablation",
+        "evidence": [
+          "https://jamanetwork.com/journals/jama/fullarticle/2838294",
+          "https://doi.org/10.1056/NEJMoa2509688"
+        ],
+        "action": "Add a distinct question separating selected recurrence-free late postablation trial populations from immediate postprocedural anticoagulation and older risk-based guideline recommendations. Do not claim that nonsignificance establishes equivalence."
+      },
+      {
+        "topic": "Comparative rhythm-maintenance drug selection",
+        "action": "Expand the existing dofetilide explanation with a focused comparative table of amiodarone, dronedarone and sotalol restrictions; assess whether another tested clinical decision is needed."
+      }
+    ],
+    "resolvedGaps": [
+      "Question 63 now distinguishes ESC minimum two-month and US minimum three-month post-AF-ablation anticoagulation from the eight-week arrhythmia blanking convention.",
+      "Added question 64 distinguishing late recurrence-free trials from early postprocedural anticoagulation.",
+      "Expanded question 55 with focused amiodarone/dronedarone/sotalol/dofetilide comparison.",
+      "Question 42 incorporates CHAMPION-AF and CLOSURE-AF 2026 with population and endpoint limitations; all 65 questions mapped to distinct planned decisions. Comparative drug restrictions taught within question 55 do not require a redundant question."
+    ],
+    "scope": "Coverage-driven review of this chapter; not a claim of exhaustive specialty literature review."
+  },
+  "runtimeVerification": {
+    "installedQuestions": 65,
+    "otherBanksPreserved": 19,
+    "projectInstalledChapters": 20,
+    "projectInstalledQuestions": 1012,
+    "runtimeSourceComparison": "passed"
+  }
+}

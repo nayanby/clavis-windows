@@ -1,0 +1,510 @@
+{
+  "subject": "Cardiology",
+  "chapterNumber": 6,
+  "chapter": "Chapter_06_Supraventricular_Tachyarrhythmias_and_Atrial_Fibrillation",
+  "status": "installed_verified",
+  "countPolicy": "Coverage-driven distinct decisions; not official examination weights.",
+  "plannedQuestions": 65,
+  "authoredQuestions": 65,
+  "sections": [
+    {
+      "section": "SVT recognition and mechanism",
+      "questions": 8,
+      "decisions": [
+        "Distinguish physiological sinus tachycardia from paroxysmal reentry",
+        "Interpret short-RP tachycardia without claiming definitive localization",
+        "Differentiate long-RP SVT mechanisms",
+        "Interpret adenosine-induced AV block with continuing atrial activity",
+        "Recognize focal atrial tachycardia",
+        "Recognize multifocal atrial tachycardia",
+        "Identify flutter with concealed two-to-one conduction",
+        "Distinguish junctional automatic tachycardia from AV-node-dependent reentry"
+      ]
+    },
+    {
+      "section": "Acute regular SVT treatment",
+      "questions": 8,
+      "decisions": [
+        "Choose synchronized cardioversion for attributable instability",
+        "Perform a modified Valsalva maneuver in suitable stable SVT",
+        "Use an appropriately delivered adenosine regimen",
+        "Account for adenosine contraindications and interactions",
+        "Select alternative AV nodal treatment after adenosine",
+        "Avoid inappropriate AV nodal treatment in uncertain wide-complex tachycardia",
+        "Manage SVT during pregnancy with an appropriate sequence",
+        "Treat incessant atrial tachycardia with ventricular dysfunction"
+      ]
+    },
+    {
+      "section": "Accessory pathways and definitive SVT treatment",
+      "questions": 8,
+      "decisions": [
+        "Distinguish orthodromic from antidromic AVRT",
+        "Recognize a concealed accessory pathway despite a normal baseline ECG",
+        "Recognize pre-excited AF as an irregular wide-complex emergency",
+        "Select procainamide or ibutilide versus cardioversion in pre-excited AF",
+        "Interpret high-risk accessory-pathway electrophysiological features",
+        "Risk-stratify asymptomatic pre-excitation",
+        "Select slow-pathway ablation for recurrent symptomatic AVNRT",
+        "Select accessory-pathway ablation and counsel about septal risk"
+      ]
+    },
+    {
+      "section": "Atrial flutter and AF diagnosis",
+      "questions": 8,
+      "decisions": [
+        "Identify typical cavotricuspid-isthmus-dependent flutter",
+        "Select CTI ablation and assess subsequent AF and anticoagulation",
+        "Distinguish atypical scar-related flutter",
+        "Confirm suspected AF with an interpretable ECG recording",
+        "Apply AF temporal classifications without confusing permanent with duration",
+        "Select initial AF investigations and echocardiography",
+        "Apply AF-CARE comorbidity and risk-factor treatment",
+        "Reassess AF discovered during acute illness"
+      ]
+    },
+    {
+      "section": "AF stroke prevention and anticoagulant selection",
+      "questions": 12,
+      "decisions": [
+        "Apply ESC 2024 CHA2DS2-VA thresholds",
+        "Apply US stroke-risk thresholds with explicit framework attribution",
+        "Use bleeding assessment to correct risk rather than automatically deny anticoagulation",
+        "Choose VKA for mechanical valves or significant rheumatic mitral stenosis",
+        "Select an evidence-based DOAC dose using reduction criteria",
+        "Account for renal function and drug interactions",
+        "Avoid aspirin as a substitute for indicated anticoagulation",
+        "Limit combined anticoagulant and antiplatelet exposure in stable coronary disease",
+        "Manage anticoagulation around procedures without routine heparin bridging",
+        "Evaluate left atrial appendage occlusion in an appropriate contraindication setting",
+        "Interpret ARTESiA and NOAH-AFNET 6 in device-detected subclinical AF",
+        "Continue stroke-risk reassessment independently of apparent rhythm success"
+      ]
+    },
+    {
+      "section": "AF rate control cardioversion and rhythm drugs",
+      "questions": 12,
+      "decisions": [
+        "Select initial rate control according to EF and hemodynamics",
+        "Use digoxin with renal and interaction monitoring",
+        "Apply a contextual lenient rate-control target",
+        "Recognize when acute AF requires immediate electrical cardioversion",
+        "Apply elective cardioversion anticoagulation rules with named guideline duration",
+        "Use transesophageal imaging when early cardioversion is appropriate",
+        "Manage detected atrial thrombus before cardioversion",
+        "Continue appropriate anticoagulation after cardioversion",
+        "Select flecainide or propafenone only in an appropriate substrate",
+        "Use a supervised pill-in-the-pocket strategy with AV nodal protection",
+        "Compare amiodarone dronedarone sotalol and dofetilide restrictions",
+        "Monitor antiarrhythmic organ toxicity QT and renal risks"
+      ]
+    },
+    {
+      "section": "AF ablation and outcome evidence",
+      "questions": 9,
+      "decisions": [
+        "Interpret early rhythm control evidence from EAST-AFNET 4",
+        "Select AF ablation for symptomatic disease and suitable first-line candidates",
+        "Interpret ablation evidence in selected HFrEF patients",
+        "Identify pulmonary vein isolation as the principal ablation target",
+        "Distinguish thermal and pulsed-field ablation evidence and risks",
+        "Recognize important postablation complications",
+        "Manage early recurrence and reassess long-term success",
+        "Interpret newer late postablation anticoagulation trials without extrapolating to the early procedural period",
+        "Select AV junction ablation with an appropriate pacing strategy for refractory rate control"
+      ]
+    }
+  ],
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Sinus Tachycardia Versus Paroxysmal Reentrant SVT",
+      "decision": "Distinguish physiological sinus tachycardia from paroxysmal reentry",
+      "section": "SVT recognition and mechanism"
+    },
+    {
+      "question": 2,
+      "title": "Short-RP Regular Narrow-Complex Tachycardia",
+      "decision": "Interpret short-RP tachycardia without claiming definitive localization",
+      "section": "SVT recognition and mechanism"
+    },
+    {
+      "question": 3,
+      "title": "Long-RP Supraventricular Tachycardia",
+      "decision": "Differentiate long-RP SVT mechanisms",
+      "section": "SVT recognition and mechanism"
+    },
+    {
+      "question": 4,
+      "title": "Adenosine Unmasks Continuing Atrial Tachycardia",
+      "decision": "Interpret adenosine-induced AV block with continuing atrial activity",
+      "section": "SVT recognition and mechanism"
+    },
+    {
+      "question": 5,
+      "title": "Focal Atrial Tachycardia",
+      "decision": "Recognize focal atrial tachycardia",
+      "section": "SVT recognition and mechanism"
+    },
+    {
+      "question": 6,
+      "title": "Multifocal Atrial Tachycardia",
+      "decision": "Recognize multifocal atrial tachycardia",
+      "section": "SVT recognition and mechanism"
+    },
+    {
+      "question": 7,
+      "title": "Atrial Flutter With Concealed Two-to-One Conduction",
+      "decision": "Identify flutter with concealed two-to-one conduction",
+      "section": "SVT recognition and mechanism"
+    },
+    {
+      "question": 8,
+      "title": "Nonreentrant Junctional Tachycardia",
+      "decision": "Distinguish junctional automatic tachycardia from AV-node-dependent reentry",
+      "section": "SVT recognition and mechanism"
+    },
+    {
+      "question": 9,
+      "title": "Unstable Regular Narrow-Complex Tachycardia",
+      "decision": "Choose synchronized cardioversion for attributable instability",
+      "section": "Acute regular SVT treatment"
+    },
+    {
+      "question": 10,
+      "title": "Modified Valsalva Maneuver for Stable SVT",
+      "decision": "Perform a modified Valsalva maneuver in suitable stable SVT",
+      "section": "Acute regular SVT treatment"
+    },
+    {
+      "question": 11,
+      "title": "Adenosine Delivery for Regular Narrow-Complex SVT",
+      "decision": "Use an appropriately delivered adenosine regimen",
+      "section": "Acute regular SVT treatment"
+    },
+    {
+      "question": 12,
+      "title": "Adenosine Precautions and Drug Interactions",
+      "decision": "Account for adenosine contraindications and interactions",
+      "section": "Acute regular SVT treatment"
+    },
+    {
+      "question": 13,
+      "title": "Alternative Treatment for Persistent Stable Regular SVT",
+      "decision": "Select alternative AV nodal treatment after adenosine",
+      "section": "Acute regular SVT treatment"
+    },
+    {
+      "question": 14,
+      "title": "Uncertain Wide-Complex Tachycardia and AV Nodal Drugs",
+      "decision": "Avoid inappropriate AV nodal treatment in uncertain wide-complex tachycardia",
+      "section": "Acute regular SVT treatment"
+    },
+    {
+      "question": 15,
+      "title": "Acute Regular SVT During Pregnancy",
+      "decision": "Manage SVT during pregnancy with an appropriate sequence",
+      "section": "Acute regular SVT treatment"
+    },
+    {
+      "question": 16,
+      "title": "Incessant Atrial Tachycardia and Arrhythmia-Induced Cardiomyopathy",
+      "decision": "Treat incessant atrial tachycardia with ventricular dysfunction",
+      "section": "Acute regular SVT treatment"
+    },
+    {
+      "question": 17,
+      "title": "Orthodromic and Antidromic AV Reentry",
+      "decision": "Distinguish orthodromic from antidromic AVRT",
+      "section": "Accessory pathways and definitive SVT treatment"
+    },
+    {
+      "question": 18,
+      "title": "Concealed Accessory Pathways",
+      "decision": "Recognize a concealed accessory pathway despite a normal baseline ECG",
+      "section": "Accessory pathways and definitive SVT treatment"
+    },
+    {
+      "question": 19,
+      "title": "Recognition of Pre-Excited Atrial Fibrillation",
+      "decision": "Recognize pre-excited AF as an irregular wide-complex emergency",
+      "section": "Accessory pathways and definitive SVT treatment"
+    },
+    {
+      "question": 20,
+      "title": "Pharmacological Conversion of Stable Pre-Excited AF",
+      "decision": "Select procainamide or ibutilide versus cardioversion in pre-excited AF",
+      "section": "Accessory pathways and definitive SVT treatment"
+    },
+    {
+      "question": 21,
+      "title": "High-Risk Accessory-Pathway Conduction",
+      "decision": "Interpret high-risk accessory-pathway electrophysiological features",
+      "section": "Accessory pathways and definitive SVT treatment"
+    },
+    {
+      "question": 22,
+      "title": "Asymptomatic Pre-Excitation in a High-Risk Occupation",
+      "decision": "Risk-stratify asymptomatic pre-excitation",
+      "section": "Accessory pathways and definitive SVT treatment"
+    },
+    {
+      "question": 23,
+      "title": "Slow-Pathway Ablation for Recurrent AVNRT",
+      "decision": "Select slow-pathway ablation for recurrent symptomatic AVNRT",
+      "section": "Accessory pathways and definitive SVT treatment"
+    },
+    {
+      "question": 24,
+      "title": "Accessory-Pathway Ablation Near the Normal Conduction System",
+      "decision": "Select accessory-pathway ablation and counsel about septal risk",
+      "section": "Accessory pathways and definitive SVT treatment"
+    },
+    {
+      "question": 25,
+      "title": "Cavotricuspid-Isthmus-Dependent Atrial Flutter",
+      "decision": "Identify typical cavotricuspid-isthmus-dependent flutter",
+      "section": "Atrial flutter and AF diagnosis"
+    },
+    {
+      "question": 26,
+      "title": "Anticoagulation After Successful Typical Flutter Ablation",
+      "decision": "Select CTI ablation and assess subsequent AF and anticoagulation",
+      "section": "Atrial flutter and AF diagnosis"
+    },
+    {
+      "question": 27,
+      "title": "Atypical Scar-Related Atrial Flutter",
+      "decision": "Distinguish atypical scar-related flutter",
+      "section": "Atrial flutter and AF diagnosis"
+    },
+    {
+      "question": 28,
+      "title": "ECG Confirmation of Suspected Atrial Fibrillation",
+      "decision": "Confirm suspected AF with an interpretable ECG recording",
+      "section": "Atrial flutter and AF diagnosis"
+    },
+    {
+      "question": 29,
+      "title": "Long-Standing Persistent Versus Permanent AF",
+      "decision": "Apply AF temporal classifications without confusing permanent with duration",
+      "section": "Atrial flutter and AF diagnosis"
+    },
+    {
+      "question": 30,
+      "title": "Initial Evaluation of Newly Diagnosed AF",
+      "decision": "Select initial AF investigations and echocardiography",
+      "section": "Atrial flutter and AF diagnosis"
+    },
+    {
+      "question": 31,
+      "title": "Comorbidity Treatment in the AF-CARE Pathway",
+      "decision": "Apply AF-CARE comorbidity and risk-factor treatment",
+      "section": "Atrial flutter and AF diagnosis"
+    },
+    {
+      "question": 32,
+      "title": "Follow-Up After Trigger-Induced AF",
+      "decision": "Reassess AF discovered during acute illness",
+      "section": "Atrial flutter and AF diagnosis"
+    },
+    {
+      "question": 33,
+      "title": "ESC 2024 Stroke-Risk Assessment in AF",
+      "decision": "Apply ESC 2024 CHA2DS2-VA thresholds",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 34,
+      "title": "US 2023 Intermediate Stroke-Risk Threshold",
+      "decision": "Apply US stroke-risk thresholds with explicit framework attribution",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 35,
+      "title": "Bleeding-Risk Assessment During AF Anticoagulation Decisions",
+      "decision": "Use bleeding assessment to correct risk rather than automatically deny anticoagulation",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 36,
+      "title": "Anticoagulation in Rheumatic Mitral Stenosis With AF",
+      "decision": "Choose VKA for mechanical valves or significant rheumatic mitral stenosis",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 37,
+      "title": "Apixaban Dose Reduction for AF",
+      "decision": "Select an evidence-based DOAC dose using reduction criteria",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 38,
+      "title": "Strong Enzyme Induction and DOAC Exposure",
+      "decision": "Account for renal function and drug interactions",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 39,
+      "title": "Antiplatelets Are Not Equivalent AF Stroke Prevention",
+      "decision": "Avoid aspirin as a substitute for indicated anticoagulation",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 40,
+      "title": "AF With Stable Coronary Disease Beyond One Year",
+      "decision": "Limit combined anticoagulant and antiplatelet exposure in stable coronary disease",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 41,
+      "title": "Temporary Warfarin Interruption Without Routine Bridging",
+      "decision": "Manage anticoagulation around procedures without routine heparin bridging",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 42,
+      "title": "Percutaneous Left Atrial Appendage Occlusion",
+      "decision": "Evaluate left atrial appendage occlusion in an appropriate contraindication setting",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 43,
+      "title": "Anticoagulation Evidence in Device-Detected Subclinical AF",
+      "decision": "Interpret ARTESiA and NOAH-AFNET 6 in device-detected subclinical AF",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 44,
+      "title": "Dynamic Stroke-Risk Reassessment in AF",
+      "decision": "Continue stroke-risk reassessment independently of apparent rhythm success",
+      "section": "AF stroke prevention and anticoagulant selection"
+    },
+    {
+      "question": 45,
+      "title": "Rate Control in Stable AF With Preserved LV Function",
+      "decision": "Select initial rate control according to EF and hemodynamics",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 46,
+      "title": "Digoxin Interaction With Amiodarone",
+      "decision": "Use digoxin with renal and interaction monitoring",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 47,
+      "title": "Lenient Rate Control in an Appropriate AF Patient",
+      "decision": "Apply a contextual lenient rate-control target",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 48,
+      "title": "Emergency Cardioversion for Hemodynamically Unstable AF",
+      "decision": "Recognize when acute AF requires immediate electrical cardioversion",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 49,
+      "title": "ESC 2024 Preparation for Elective Cardioversion",
+      "decision": "Apply elective cardioversion anticoagulation rules with named guideline duration",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 50,
+      "title": "TEE-Guided Early Cardioversion",
+      "decision": "Use transesophageal imaging when early cardioversion is appropriate",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 51,
+      "title": "Left Atrial Appendage Thrombus Before Elective Cardioversion",
+      "decision": "Manage detected atrial thrombus before cardioversion",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 52,
+      "title": "Anticoagulation After Successful AF Cardioversion",
+      "decision": "Continue appropriate anticoagulation after cardioversion",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 53,
+      "title": "Structural Substrate and Class IC Drug Selection",
+      "decision": "Select flecainide or propafenone only in an appropriate substrate",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 54,
+      "title": "Pill-in-the-Pocket Conversion With Class IC Therapy",
+      "decision": "Use a supervised pill-in-the-pocket strategy with AV nodal protection",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 55,
+      "title": "Dofetilide Initiation and Renal Dosing",
+      "decision": "Compare amiodarone dronedarone sotalol and dofetilide restrictions",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 56,
+      "title": "Monitoring During Long-Term Amiodarone Treatment",
+      "decision": "Monitor antiarrhythmic organ toxicity QT and renal risks",
+      "section": "AF rate control cardioversion and rhythm drugs"
+    },
+    {
+      "question": 57,
+      "title": "Early Rhythm Control: EAST-AFNET 4",
+      "decision": "Interpret early rhythm control evidence from EAST-AFNET 4",
+      "section": "AF ablation and outcome evidence"
+    },
+    {
+      "question": 58,
+      "title": "First-Line Catheter Ablation for Selected Paroxysmal AF",
+      "decision": "Select AF ablation for symptomatic disease and suitable first-line candidates",
+      "section": "AF ablation and outcome evidence"
+    },
+    {
+      "question": 59,
+      "title": "AF Ablation in Selected Patients With HFrEF",
+      "decision": "Interpret ablation evidence in selected HFrEF patients",
+      "section": "AF ablation and outcome evidence"
+    },
+    {
+      "question": 60,
+      "title": "Pulmonary Vein Isolation as the AF Ablation Foundation",
+      "decision": "Identify pulmonary vein isolation as the principal ablation target",
+      "section": "AF ablation and outcome evidence"
+    },
+    {
+      "question": 61,
+      "title": "Pulsed-Field Versus Thermal AF Ablation",
+      "decision": "Distinguish thermal and pulsed-field ablation evidence and risks",
+      "section": "AF ablation and outcome evidence"
+    },
+    {
+      "question": 62,
+      "title": "Atrioesophageal Fistula After AF Ablation",
+      "decision": "Recognize important postablation complications",
+      "section": "AF ablation and outcome evidence"
+    },
+    {
+      "question": 63,
+      "title": "Early Atrial Arrhythmia Recurrence After AF Ablation",
+      "decision": "Manage early recurrence and reassess long-term success",
+      "section": "AF ablation and outcome evidence"
+    },
+    {
+      "question": 64,
+      "title": "Anticoagulation Evidence After Apparently Successful AF Ablation",
+      "decision": "Interpret newer late postablation anticoagulation trials without extrapolating to the early procedural period",
+      "section": "AF ablation and outcome evidence"
+    },
+    {
+      "question": 65,
+      "title": "AV-Junction Ablation With Pacing for Refractory AF Rate Control",
+      "decision": "Select AV junction ablation with an appropriate pacing strategy for refractory rate control",
+      "section": "AF ablation and outcome evidence"
+    }
+  ]
+}
