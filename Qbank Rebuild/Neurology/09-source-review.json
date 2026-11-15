@@ -1,0 +1,155 @@
+{
+  "chapter": 9,
+  "status": "installed_verified",
+  "draftedQuestions": 53,
+  "plannedQuestions": 53,
+  "installed": true,
+  "draftValidation": {
+    "scope": "All 53 questions; completed chapter serialized with coverage alignment",
+    "status": "passed",
+    "answerDistribution": [
+      14,
+      13,
+      13,
+      13
+    ],
+    "minimumExplanationWords": 233,
+    "distractorRationales": 159,
+    "independentClinicianReview": false
+  },
+  "sourceChecks": [
+    {
+      "source": "AAN/AANEM/AAPMR DSP parameter 2009 and AAPM&R evaluation resource updated 2026",
+      "checked": [
+        "High-yield glucose, B12/metabolite and immunofixation tests",
+        "Pattern-directed testing",
+        "Small-fiber and autonomic testing limitations"
+      ]
+    },
+    {
+      "source": "EAN/PNS GBS guideline 2023 and international ten-step consensus 2019",
+      "checked": [
+        "Acute syndrome and early CSF limitations",
+        "MFS and PCB variants",
+        "Respiratory mechanics and 20/30/40 warning thresholds",
+        "Original EGRIS purpose and inputs",
+        "Dysautonomia support",
+        "Treatment windows and IVIG/PE courses",
+        "No routine steroid or immediate sequential therapy",
+        "TRF versus acute-onset CIDP"
+      ]
+    },
+    {
+      "source": "SID-GBS randomized trial 2021",
+      "checked": [
+        "No routine early second IVIG based solely on poor prognosis",
+        "Distinction from a genuine improvement-then-deterioration fluctuation"
+      ]
+    },
+    {
+      "source": "EAN/PNS CIDP guideline 2021, including full-text source",
+      "checked": [
+        "Typical and variant clinical patterns",
+        "Selected multi-nerve motor/sensory electrodiagnostic criteria",
+        "Technical, entrapment and low-amplitude pitfalls",
+        "CSF supportive limitations",
+        "Induction and individualized maintenance",
+        "Nodopathy distinction"
+      ]
+    },
+    {
+      "source": "ADHERE primary randomized-withdrawal publication 2024 and efgartigimod/hyaluronidase US label 2026",
+      "checked": [
+        "Responder-enriched design rather than IVIG head-to-head superiority",
+        "FcRn mechanism",
+        "Weekly CIDP prefilled-syringe regimen distinguished from MG cycles and vial amount",
+        "Infection, vaccination and hypersensitivity precautions"
+      ]
+    },
+    {
+      "source": "EFNS/PNS MMN guideline first revision 2010",
+      "checked": [
+        "Pure motor multifocal pattern and conduction block",
+        "IVIG induction and maintenance",
+        "Steroid/PE treatment cannot be copied indiscriminately from CIDP"
+      ]
+    },
+    {
+      "source": "ADA 2026 neuropathy chapter; AAN pain guideline; NICE B12 guidance; Medsafe B6 safety; ASCO CIPN 2020; product labels",
+      "checked": [
+        "Diabetic red flags and comorbidity-guided pain treatment",
+        "B12 functional markers and prompt neurologic treatment",
+        "B6 toxicity and chemotherapy-related neuropathy evidence limits"
+      ]
+    },
+    {
+      "source": "PNS vasculitic neuropathy guideline 2010; WHO reaction guidance 2020; UKHSA leprosy memorandum 2023",
+      "checked": [
+        "Biopsy selection and vascular damage requirement",
+        "New nerve dysfunction during leprosy reactions",
+        "Continue multidrug therapy with urgent reaction treatment"
+      ]
+    },
+    {
+      "source": "ACC amyloid consensus 2023; ATTR GeneReviews; US eplontersen label revised 2026",
+      "checked": [
+        "Monoclonal screening does not replace tissue typing",
+        "Hereditary ATTR red flags and counseling",
+        "Eplontersen mechanism, monthly 45 mg dose and vitamin A precautions"
+      ]
+    },
+    {
+      "source": "POEMS diagnostic reviews 2022 and 2026; anti-MAG review and RIMAG primary trial 2013",
+      "checked": [
+        "Mandatory/major/minor requirements",
+        "Assay-dependent VEGF interpretation",
+        "Anti-MAG phenotype and rituximab primary-endpoint limitations"
+      ]
+    },
+    {
+      "source": "GeneReviews CMT, HNPP, GJB1 and adult Refsum; Global DARE 2026 guidance",
+      "checked": [
+        "PMP22 dosage and X-linked transmission",
+        "Refsum dietary therapy, avoidance of catabolism and evidence limitations"
+      ]
+    },
+    {
+      "source": "AAOS CTS guideline 2024; AoMRC release guidance; AAPMR focal nerve resources; Orphanet",
+      "checked": [
+        "Progressive motor CTS requires decompression assessment",
+        "Named nerve versus root/plexus boundaries",
+        "PIN localization",
+        "Fibular palsy gait protection",
+        "Pure sensory meralgia and motor red flags",
+        "Neuralgic amyotrophy sequence and recovery uncertainty"
+      ]
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "Full Harrison subscription text not accessed",
+    "No independent clinician review",
+    "International/US drug-label examples do not establish local Indian approval or access"
+  ],
+  "editorialReview": {
+    "scope": "All 53 questions and mapped decisions",
+    "changes": [
+      "Replaced giveaway qualifiers and unrelated distractors with competing neuropathy tests, diagnoses and treatment strategies",
+      "Rewrote early CSF and quantitative CIDP questions to yield a specific best answer",
+      "Clarified B12 functional-marker specificity in normal renal function",
+      "Added functional impairment to oxaliplatin management decision",
+      "Applied dose and threshold highlights in explanations and tables"
+    ],
+    "limitations": [
+      "Source-based author review; no independent clinician review",
+      "Structural validation does not independently prove clinical accuracy or syllabus completeness"
+    ]
+  },
+  "installationEvidence": {
+    "preservedOtherBanks": 8,
+    "runtimeSourceComparison": "passed",
+    "installedChapters": 9,
+    "installedQuestions": 395,
+    "nextChapter": "Neurology 10. Neuromuscular Junction Disorders & Muscle Diseases"
+  }
+}

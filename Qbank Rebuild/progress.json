@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 09. Peripheral Neuropathies & Polyradiculoneuropathies",
+  "currentChapter": "Neurology 10. Neuromuscular Junction Disorders & Muscle Diseases",
   "chapters": [
     {
       "subject": "Neurology",
@@ -318,7 +318,27 @@
       "subject": "Neurology",
       "chapter": 9,
       "document": "09. Peripheral Neuropathies & Polyradiculoneuropathies",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/09. Peripheral Neuropathies & Polyradiculoneuropathies.json",
+      "validation": {
+        "questions": 53,
+        "answerDistribution": {
+          "A": 14,
+          "B": 13,
+          "C": 13,
+          "D": 13
+        },
+        "minimumExplanationWords": 233,
+        "distractorRationales": 159,
+        "questionStyles": {
+          "clinical_scenario": 46,
+          "direct": 7
+        },
+        "status": "passed"
+      },
+      "installedSha256": "1a4681e34b05472e7e0130754eed6628276b682e06c005ab29399a51814f689d",
+      "coverageMap": "Neurology/09. Peripheral Neuropathies & Polyradiculoneuropathies.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",

@@ -1,0 +1,384 @@
+{
+  "chapter": "09. Peripheral Neuropathies & Polyradiculoneuropathies",
+  "status": "installed_verified",
+  "plannedQuestions": 53,
+  "countBasis": "One distinct high-yield diagnostic or therapeutic decision per question. The 53-item map follows chapter breadth and current treatment complexity, not an official examination weighting or fixed quota. Previously authored localization decisions are not repeated.",
+  "sections": [
+    {
+      "section": "Clinical and electrodiagnostic approach",
+      "questions": 6,
+      "decisions": [
+        "Use symmetry, length dependence, tempo and fiber involvement to classify a neuropathy pattern",
+        "Distinguish predominantly axonal from demyelinating electrophysiology without overcalling mild slowing",
+        "Recognize technical and anatomical pitfalls before interpreting conduction block or demyelination",
+        "Investigate suspected small-fiber neuropathy when routine nerve conduction is normal",
+        "Select formal autonomic testing for a compatible peripheral autonomic syndrome",
+        "Choose high-yield initial laboratory testing for distal symmetric polyneuropathy"
+      ]
+    },
+    {
+      "section": "Guillain-Barre syndrome",
+      "questions": 12,
+      "decisions": [
+        "Recognize the acute progressive clinical GBS syndrome and important mimics",
+        "Interpret early CSF findings and pleocytosis in suspected GBS",
+        "Distinguish AIDP, AMAN and AMSAN while accounting for reversible conduction failure",
+        "Recognize Miller Fisher syndrome and anti-GQ1b association",
+        "Recognize pharyngeal-cervical-brachial GBS and relevant neuromuscular mimics",
+        "Escalate respiratory monitoring and airway planning using serial function rather than oxygen saturation alone",
+        "Interpret original EGRIS as respiratory-risk prediction rather than a treatment-withholding rule",
+        "Manage severe GBS dysautonomia with monitored supportive care",
+        "Select IVIG or plasma exchange using functional severity and onset window",
+        "Distinguish GBS therapy from CIDP regarding corticosteroids and sequential treatment",
+        "Avoid routine second IVIG for poor prognosis alone while distinguishing true fluctuations",
+        "Differentiate treatment-related fluctuation from acute-onset CIDP using the longitudinal course"
+      ]
+    },
+    {
+      "section": "CIDP, nodopathies and motor neuropathy",
+      "questions": 10,
+      "decisions": [
+        "Recognize typical CIDP clinical distribution and time course",
+        "Apply key 2021 EAN/PNS electrophysiological thresholds in their required multi-nerve context",
+        "Avoid CIDP overdiagnosis from modest CSF protein elevation or subjective treatment response",
+        "Recognize multifocal CIDP and other variants while considering mimics",
+        "Choose appropriate initial CIDP immunotherapy and document objective response",
+        "Individualize IVIG/SCIG maintenance and periodically test ongoing treatment dependence",
+        "Interpret efgartigimod FcRn blockade and ADHERE evidence with indication-specific safety",
+        "Distinguish autoimmune nodopathies from conventional CIDP and consider antibody-directed implications",
+        "Recognize multifocal motor neuropathy with motor conduction block and sensory sparing",
+        "Choose IVIG rather than applying steroid/plasma-exchange CIDP treatment indiscriminately to MMN"
+      ]
+    },
+    {
+      "section": "Common acquired and toxic neuropathies",
+      "questions": 8,
+      "decisions": [
+        "Assess typical diabetic distal symmetric neuropathy and red flags for another cause",
+        "Recognize diabetic lumbosacral radiculoplexus neuropathy and limits of immunotherapy evidence",
+        "Select neuropathic-pain treatment by comorbidity, renal function and adverse effects",
+        "Recognize B12-related neuropathy/myeloneuropathy and interpret functional markers",
+        "Identify pyridoxine excess as a cause of sensory neuropathy",
+        "Match common drug-related neuropathy patterns to exposure and treatment modification",
+        "Recognize uremic neuropathy and distinguish it from a superimposed treatable process",
+        "Evaluate alcohol-associated neuropathy with nutritional and other co-contributors"
+      ]
+    },
+    {
+      "section": "Systemic, infectious and paraproteinemic neuropathies",
+      "questions": 7,
+      "decisions": [
+        "Recognize vasculitic mononeuritis multiplex and select appropriate biopsy/systemic evaluation",
+        "Recognize leprosy-related neuropathy and distinguish reaction-related nerve injury from treatment failure",
+        "Investigate suspected AL amyloid neuropathy and type amyloid accurately",
+        "Recognize hereditary transthyretin amyloid red flags and confirm the molecular/tissue diagnosis appropriately",
+        "Distinguish TTR silencing/stabilizing therapies and current polyneuropathy indications",
+        "Apply POEMS mandatory, major and minor diagnostic requirements",
+        "Recognize IgM anti-MAG distal neuropathy and distinguish it from typical CIDP"
+      ]
+    },
+    {
+      "section": "Hereditary neuropathies",
+      "questions": 4,
+      "decisions": [
+        "Recognize CMT1A uniform demyelination and PMP22 duplication",
+        "Recognize HNPP recurrent pressure palsies and PMP22 deletion",
+        "Recognize GJB1-related CMTX and its inheritance/testing implications",
+        "Recognize treatable Refsum disease and select phytanic-acid-directed evaluation and care"
+      ]
+    },
+    {
+      "section": "Focal neuropathies and plexopathies",
+      "questions": 6,
+      "decisions": [
+        "Manage carpal tunnel syndrome according to severity, denervation and response to conservative care",
+        "Differentiate ulnar neuropathy from a C8-T1/root or lower-plexus process using examination and electrodiagnostics",
+        "Distinguish posterior interosseous neuropathy from a more proximal radial lesion",
+        "Treat a common fibular compression palsy and protect gait while assessing recovery",
+        "Recognize meralgia paresthetica and avoid attributing motor weakness to a pure sensory nerve",
+        "Recognize neuralgic amyotrophy and evaluate severe pain followed by patchy weakness"
+      ]
+    }
+  ],
+  "crossChapterBoundaries": [
+    "Chapter 1 already tested common fibular versus L5 localization and preganglionic/postganglionic SNAP principles. Here those principles support new management or differential decisions rather than repeat the same MCQs.",
+    "Chapter 10 covers NMJ and muscle disease. Their features appear only as clinically relevant neuropathy distractors or emergency mimics here.",
+    "Myelopathy, spinal compression and cauda equina are addressed in Chapter 11; urgent exclusion remains explicit when relevant.",
+    "Toxicology, systemic vasculitis and plasma-cell disease will have disease-specific chapters; the present items test neuropathy recognition and immediate diagnostic/treatment implications."
+  ],
+  "requiredFinalReview": [
+    "Verify EAN/PNS GBS 2023 and CIDP 2021 criteria, time windows, doses and exceptions against original documents.",
+    "Check current CIDP FcRn and ATTR treatment labels, formulation differences and evidence limits.",
+    "Avoid conflating one abnormal nerve, low CMAP-related slowing, entrapment or a CSF protein result with definite CIDP.",
+    "Review all options for realistic clinical competition and all explanations for standalone usefulness.",
+    "Validate completed JSON, install additively, compare runtime readback and commit/push scoped installation changes."
+  ],
+  "authoredQuestions": 53,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Pattern Recognition Before Etiologic Testing",
+      "decision": "Use symmetry, length dependence, tempo and fiber involvement to classify a neuropathy pattern"
+    },
+    {
+      "question": 2,
+      "title": "Axonal Loss Versus Primary Demyelination",
+      "decision": "Distinguish predominantly axonal from demyelinating electrophysiology without overcalling mild slowing"
+    },
+    {
+      "question": 3,
+      "title": "Technical Pitfalls in Apparent Demyelination",
+      "decision": "Recognize technical and anatomical pitfalls before interpreting conduction block or demyelination"
+    },
+    {
+      "question": 4,
+      "title": "Small-Fiber Neuropathy with Normal Nerve Conduction",
+      "decision": "Investigate suspected small-fiber neuropathy when routine nerve conduction is normal"
+    },
+    {
+      "question": 5,
+      "title": "Testing a Peripheral Autonomic Syndrome",
+      "decision": "Select formal autonomic testing for a compatible peripheral autonomic syndrome"
+    },
+    {
+      "question": 6,
+      "title": "High-Yield Laboratory Screening for DSP",
+      "decision": "Choose high-yield initial laboratory testing for distal symmetric polyneuropathy"
+    },
+    {
+      "question": 7,
+      "title": "Recognizing the Acute GBS Syndrome",
+      "decision": "Recognize the acute progressive clinical GBS syndrome and important mimics"
+    },
+    {
+      "question": 8,
+      "title": "CSF in the First Week of GBS",
+      "decision": "Interpret early CSF findings and pleocytosis in suspected GBS"
+    },
+    {
+      "question": 9,
+      "title": "Axonal GBS and Reversible Conduction Failure",
+      "decision": "Distinguish AIDP, AMAN and AMSAN while accounting for reversible conduction failure"
+    },
+    {
+      "question": 10,
+      "title": "Miller Fisher Syndrome",
+      "decision": "Recognize Miller Fisher syndrome and anti-GQ1b association"
+    },
+    {
+      "question": 11,
+      "title": "Pharyngeal–Cervical–Brachial GBS",
+      "decision": "Recognize pharyngeal-cervical-brachial GBS and relevant neuromuscular mimics"
+    },
+    {
+      "question": 12,
+      "title": "Respiratory Failure Despite Normal Oxygen Saturation",
+      "decision": "Escalate respiratory monitoring and airway planning using serial function rather than oxygen saturation alone"
+    },
+    {
+      "question": 13,
+      "title": "What the Original EGRIS Predicts",
+      "decision": "Interpret original EGRIS as respiratory-risk prediction rather than a treatment-withholding rule"
+    },
+    {
+      "question": 14,
+      "title": "Severe GBS Dysautonomia",
+      "decision": "Manage severe GBS dysautonomia with monitored supportive care"
+    },
+    {
+      "question": 15,
+      "title": "Choosing Initial GBS Immunotherapy",
+      "decision": "Select IVIG or plasma exchange using functional severity and onset window"
+    },
+    {
+      "question": 16,
+      "title": "Why CIDP Treatment Cannot Simply Be Copied to GBS",
+      "decision": "Distinguish GBS therapy from CIDP regarding corticosteroids and sequential treatment"
+    },
+    {
+      "question": 17,
+      "title": "Poor Prognosis Alone Is Not an Indication for Repeat IVIG",
+      "decision": "Avoid routine second IVIG for poor prognosis alone while distinguishing true fluctuations"
+    },
+    {
+      "question": 18,
+      "title": "Treatment-Related Fluctuation Versus Acute-Onset CIDP",
+      "decision": "Differentiate treatment-related fluctuation from acute-onset CIDP using the longitudinal course"
+    },
+    {
+      "question": 19,
+      "title": "Typical CIDP: Distribution and Duration",
+      "decision": "Recognize typical CIDP clinical distribution and time course"
+    },
+    {
+      "question": 20,
+      "title": "Key EAN/PNS 2021 Demyelinating Thresholds",
+      "decision": "Apply key 2021 EAN/PNS electrophysiological thresholds in their required multi-nerve context"
+    },
+    {
+      "question": 21,
+      "title": "CSF Protein Does Not Diagnose CIDP",
+      "decision": "Avoid CIDP overdiagnosis from modest CSF protein elevation or subjective treatment response"
+    },
+    {
+      "question": 22,
+      "title": "Multifocal CIDP Versus MMN",
+      "decision": "Recognize multifocal CIDP and other variants while considering mimics"
+    },
+    {
+      "question": 23,
+      "title": "Initial Treatment of Typical CIDP",
+      "decision": "Choose appropriate initial CIDP immunotherapy and document objective response"
+    },
+    {
+      "question": 24,
+      "title": "Individualizing Immunoglobulin Maintenance",
+      "decision": "Individualize IVIG/SCIG maintenance and periodically test ongoing treatment dependence"
+    },
+    {
+      "question": 25,
+      "title": "FcRn Blockade and the ADHERE Population",
+      "decision": "Interpret efgartigimod FcRn blockade and ADHERE evidence with indication-specific safety"
+    },
+    {
+      "question": 26,
+      "title": "Autoimmune Nodopathy Is Not Conventional CIDP",
+      "decision": "Distinguish autoimmune nodopathies from conventional CIDP and consider antibody-directed implications"
+    },
+    {
+      "question": 27,
+      "title": "Multifocal Motor Neuropathy",
+      "decision": "Recognize multifocal motor neuropathy with motor conduction block and sensory sparing"
+    },
+    {
+      "question": 28,
+      "title": "Treating Functionally Significant MMN",
+      "decision": "Choose IVIG rather than applying steroid/plasma-exchange CIDP treatment indiscriminately to MMN"
+    },
+    {
+      "question": 29,
+      "title": "Diabetes Does Not Explain Every Neuropathy",
+      "decision": "Assess typical diabetic distal symmetric neuropathy and red flags for another cause"
+    },
+    {
+      "question": 30,
+      "title": "Diabetic Lumbosacral Radiculoplexus Neuropathy",
+      "decision": "Recognize diabetic lumbosacral radiculoplexus neuropathy and limits of immunotherapy evidence"
+    },
+    {
+      "question": 31,
+      "title": "Pain Treatment with Coexisting Depression",
+      "decision": "Select neuropathic-pain treatment by comorbidity, renal function and adverse effects"
+    },
+    {
+      "question": 32,
+      "title": "B12 Myeloneuropathy and Functional Markers",
+      "decision": "Recognize B12-related neuropathy/myeloneuropathy and interpret functional markers"
+    },
+    {
+      "question": 33,
+      "title": "Pyridoxine Excess",
+      "decision": "Identify pyridoxine excess as a cause of sensory neuropathy"
+    },
+    {
+      "question": 34,
+      "title": "Chemotherapy-Induced Sensory Neuropathy",
+      "decision": "Match common drug-related neuropathy patterns to exposure and treatment modification"
+    },
+    {
+      "question": 35,
+      "title": "Neuropathy in Advanced Kidney Disease",
+      "decision": "Recognize uremic neuropathy and distinguish it from a superimposed treatable process"
+    },
+    {
+      "question": 36,
+      "title": "Alcohol-Associated Neuropathy",
+      "decision": "Evaluate alcohol-associated neuropathy with nutritional and other co-contributors"
+    },
+    {
+      "question": 37,
+      "title": "Vasculitic Mononeuritis Multiplex",
+      "decision": "Recognize vasculitic mononeuritis multiplex and select appropriate biopsy/systemic evaluation"
+    },
+    {
+      "question": 38,
+      "title": "Leprosy Reaction With New Nerve Dysfunction",
+      "decision": "Recognize leprosy-related neuropathy and distinguish reaction-related nerve injury from treatment failure"
+    },
+    {
+      "question": 39,
+      "title": "Typing Suspected Amyloid Neuropathy",
+      "decision": "Investigate suspected AL amyloid neuropathy and type amyloid accurately"
+    },
+    {
+      "question": 40,
+      "title": "Hereditary Transthyretin Amyloid Red Flags",
+      "decision": "Recognize hereditary transthyretin amyloid red flags and confirm the molecular/tissue diagnosis appropriately"
+    },
+    {
+      "question": 41,
+      "title": "TTR Silencing for Amyloid Polyneuropathy",
+      "decision": "Distinguish TTR silencing/stabilizing therapies and current polyneuropathy indications"
+    },
+    {
+      "question": 42,
+      "title": "POEMS Diagnostic Requirements",
+      "decision": "Apply POEMS mandatory, major and minor diagnostic requirements"
+    },
+    {
+      "question": 43,
+      "title": "IgM Anti-MAG Distal Neuropathy",
+      "decision": "Recognize IgM anti-MAG distal neuropathy and distinguish it from typical CIDP"
+    },
+    {
+      "question": 44,
+      "title": "CMT1A and PMP22 Copy Number",
+      "decision": "Recognize CMT1A uniform demyelination and PMP22 duplication"
+    },
+    {
+      "question": 45,
+      "title": "Hereditary Liability to Pressure Palsies",
+      "decision": "Recognize HNPP recurrent pressure palsies and PMP22 deletion"
+    },
+    {
+      "question": 46,
+      "title": "GJB1-Related X-Linked CMT",
+      "decision": "Recognize GJB1-related CMTX and its inheritance/testing implications"
+    },
+    {
+      "question": 47,
+      "title": "Treatable Adult Refsum Disease",
+      "decision": "Recognize treatable Refsum disease and select phytanic-acid-directed evaluation and care"
+    },
+    {
+      "question": 48,
+      "title": "Severe Carpal Tunnel Syndrome",
+      "decision": "Manage carpal tunnel syndrome according to severity, denervation and response to conservative care"
+    },
+    {
+      "question": 49,
+      "title": "When an Ulnar Label Is Too Narrow",
+      "decision": "Differentiate ulnar neuropathy from a C8-T1/root or lower-plexus process using examination and electrodiagnostics"
+    },
+    {
+      "question": 50,
+      "title": "Posterior Interosseous Localization",
+      "decision": "Distinguish posterior interosseous neuropathy from a more proximal radial lesion"
+    },
+    {
+      "question": 51,
+      "title": "Protecting Gait in Fibular Compression Palsy",
+      "decision": "Treat a common fibular compression palsy and protect gait while assessing recovery"
+    },
+    {
+      "question": 52,
+      "title": "Meralgia Paresthetica and Motor Red Flags",
+      "decision": "Recognize meralgia paresthetica and avoid attributing motor weakness to a pure sensory nerve"
+    },
+    {
+      "question": 53,
+      "title": "Neuralgic Amyotrophy",
+      "decision": "Recognize neuralgic amyotrophy and evaluate severe pain followed by patchy weakness"
+    }
+  ]
+}
