@@ -1,17 +1,17 @@
 {
   "projectStatus": "in_progress",
   "plannedChapters": 129,
-  "installedChapters": 11,
-  "installedQuestions": 499,
+  "installedChapters": 12,
+  "installedQuestions": 547,
   "structurallyValidated": true,
   "runtimeSourceComparison": "passed",
-  "mappedChapters": 8,
+  "mappedChapters": 9,
   "retrospectiveCoverageAudit": [
     "Neurology / 01. Neuroanatomy, Clinical Localization & Neurological Examination",
     "Neurology / 02. Cerebrovascular Diseases",
     "Neurology / 03. Epilepsy & Status Epilepticus"
   ],
   "independentClinicianReview": "not_recorded",
-  "nextChapter": "Neurology 12. Autoimmune, Paraneoplastic & Systemic Neurological Disorders",
+  "nextChapter": "Neurology 13. Neuro-oncology, Intracranial Hypertension & Neurogenetic Disorders",
   "countPolicy": "Coverage-driven: enumerate distinct high-yield decisions per chapter, allocate questions by diagnostic and therapeutic complexity, then remove duplication. The original 30/40 counts were provisional, not official exam weights or completeness evidence."
 }

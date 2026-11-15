@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 12. Autoimmune, Paraneoplastic & Systemic Neurological Disorders",
+  "currentChapter": "Neurology 13. Neuro-oncology, Intracranial Hypertension & Neurogenetic Disorders",
   "chapters": [
     {
       "subject": "Neurology",
@@ -396,7 +396,27 @@
       "subject": "Neurology",
       "chapter": 12,
       "document": "12. Autoimmune, Paraneoplastic & Systemic Neurological Disorders",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/12. Autoimmune, Paraneoplastic & Systemic Neurological Disorders.json",
+      "validation": {
+        "questions": 48,
+        "answerDistribution": {
+          "A": 12,
+          "B": 12,
+          "C": 12,
+          "D": 12
+        },
+        "minimumExplanationWords": 271,
+        "distractorRationales": 144,
+        "questionStyles": {
+          "clinical_scenario": 39,
+          "direct": 9
+        },
+        "status": "passed"
+      },
+      "installedSha256": "6b6833df1e5e88ab1f827bea64b8cb68e6dd207d3c4bf981a6a5d0d312ffe432",
+      "coverageMap": "Neurology/12. Autoimmune, Paraneoplastic & Systemic Neurological Disorders.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",

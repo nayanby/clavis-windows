@@ -1,0 +1,340 @@
+{
+  "chapter": "12. Autoimmune, Paraneoplastic & Systemic Neurological Disorders",
+  "status": "installed_verified",
+  "plannedQuestions": 48,
+  "countBasis": "One question per distinct high-yield decision; editorial allocation, not official NEET-SS weighting. Reassess overlap and gaps before installation.",
+  "boundaries": [
+    "Do not repeat general MS/NMOSD/MOG criteria from Chapter 6",
+    "Focus immune etiologic reasoning rather than repeating generic seizure treatment, dementia or neuropathy classifications",
+    "Sarcoid question concerns multisystem diagnostic integration rather than repeating Chapter 11 cord vignette"
+  ],
+  "sections": [
+    {
+      "section": "Recognition and diagnostic testing",
+      "questions": 8,
+      "decisions": [
+        "Apply possible autoimmune encephalitis criteria without requiring an antibody result",
+        "Interpret normal MRI or routine CSF without excluding a compatible syndrome",
+        "Choose paired serum/CSF neural antibody testing and interpret specimen sensitivity",
+        "Resolve discordant low-titre or phenotype-incongruent antibody results",
+        "Exclude infectious, toxic, metabolic and neoplastic mimics before immune attribution",
+        "Distinguish antibody-negative probable disease from unsupported seronegative labeling",
+        "Interpret bilateral limbic MRI criteria and competing causes",
+        "Use EEG for seizures and encephalopathy without treating a pattern as uniquely diagnostic"
+      ]
+    },
+    {
+      "section": "Antibody-associated syndromes",
+      "questions": 10,
+      "decisions": [
+        "Recognize the evolving NMDAR encephalitis syndrome",
+        "Select CSF IgG GluN1 confirmation and age/sex-informed tumor assessment",
+        "Recognize LGI1 faciobrachial dystonic seizures and urgency of immunotherapy",
+        "Interpret hyponatremia and memory loss in LGI1 disease",
+        "Differentiate CASPR2/Morvan and peripheral hyperexcitability phenotypes",
+        "Recognize GABA-B receptor encephalitis and associated tumor risk",
+        "Recognize AMPAR encephalitis and relapse/cancer considerations",
+        "Interpret GAD65 neurologic relevance using phenotype and assay context",
+        "Recognize DPPX hyperexcitability with gastrointestinal prodrome",
+        "Recognize IgLON5 sleep-bulbar syndrome without assuming typical acute encephalitis"
+      ]
+    },
+    {
+      "section": "Acute treatment and longitudinal care",
+      "questions": 8,
+      "decisions": [
+        "Initiate empiric infection coverage while evaluating encephalitis",
+        "Start appropriate first-line immunotherapy without awaiting delayed antibodies",
+        "Compare IVMP, IVIG and plasma-exchange regimens and patient-specific risks",
+        "Escalate inadequately responding disease using timing and diagnostic confidence",
+        "Screen HBV and relevant infection risks before rituximab",
+        "Manage autonomic instability, hypoventilation and ICU complications",
+        "Combine tumor treatment with neurologic immune therapy when appropriate",
+        "Separate relapse from persistent deficits and individualize maintenance treatment"
+      ]
+    },
+    {
+      "section": "Paraneoplastic neurological syndromes",
+      "questions": 8,
+      "decisions": [
+        "Apply PNS-Care phenotype/antibody/cancer framework",
+        "Distinguish high-risk intracellular antibodies from neuronal surface mechanisms",
+        "Select tumor investigation for anti-Hu sensory neuronopathy",
+        "Recognize rapidly progressive cerebellar syndrome and relevant tumor-antibody patterns",
+        "Recognize Ma2 or KLHL11 brainstem-diencephalic/testicular associations",
+        "Plan repeat tumor screening after an initially negative high-risk evaluation",
+        "Investigate cancer-associated neurologic symptoms for direct and treatment-related mimics",
+        "Recognize immune-checkpoint-inhibitor neurological toxicity and urgent management"
+      ]
+    },
+    {
+      "section": "Systemic inflammatory neurological disorders",
+      "questions": 8,
+      "decisions": [
+        "Distinguish inflammatory neuropsychiatric lupus from thrombotic and non-lupus causes",
+        "Select antithrombotic treatment for APS-related cerebral thrombosis in context",
+        "Recognize neuro-Behcet parenchymal versus venous disease",
+        "Investigate CNS vasculitis while excluding reversible vasoconstriction and infection",
+        "Interpret angiography and biopsy limits in primary CNS vasculitis",
+        "Evaluate neurosarcoidosis with accessible tissue and important exclusions",
+        "Differentiate Sjogren-associated sensory neuronopathy from length-dependent neuropathy",
+        "Interpret thyroid antibodies without overdiagnosing steroid-responsive encephalopathy"
+      ]
+    },
+    {
+      "section": "Immune hyperexcitability and selected systemic mimics",
+      "questions": 6,
+      "decisions": [
+        "Recognize stiff-person spectrum and electrophysiologic support",
+        "Select symptomatic and immune treatment for disabling stiff-person disease",
+        "Recognize PERM and glycine-receptor-associated brainstem/autonomic involvement",
+        "Recognize Susac brain-eye-ear involvement and targeted investigation",
+        "Recognize acute hepatic porphyria neurovisceral attacks and appropriate testing",
+        "Recognize Wilson neurological disease and interpret copper tests in context"
+      ]
+    }
+  ],
+  "authoredQuestions": 48,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Possible Autoimmune Encephalitis Is a Clinical Entry Point",
+      "decision": "Apply possible autoimmune encephalitis criteria without requiring an antibody result"
+    },
+    {
+      "question": 2,
+      "title": "Normal Routine Tests Do Not End a Compatible Evaluation",
+      "decision": "Interpret normal MRI or routine CSF without excluding a compatible syndrome"
+    },
+    {
+      "question": 3,
+      "title": "Choose the Specimen as Carefully as the Antibody",
+      "decision": "Choose paired serum/CSF neural antibody testing and interpret specimen sensitivity"
+    },
+    {
+      "question": 4,
+      "title": "A Positive Panel Does Not Establish the Mechanism",
+      "decision": "Resolve discordant low-titre or phenotype-incongruent antibody results"
+    },
+    {
+      "question": 5,
+      "title": "Exclude Infection Before an Immune Attribution",
+      "decision": "Exclude infectious, toxic, metabolic and neoplastic mimics before immune attribution"
+    },
+    {
+      "question": 6,
+      "title": "Probable Antibody-Negative Disease Requires Positive Evidence",
+      "decision": "Distinguish antibody-negative probable disease from unsupported seronegative labeling"
+    },
+    {
+      "question": 7,
+      "title": "Antibody-Independent Definite Limbic Encephalitis",
+      "decision": "Interpret bilateral limbic MRI criteria and competing causes"
+    },
+    {
+      "question": 8,
+      "title": "EEG Supports the Syndrome and Detects Treatable Seizures",
+      "decision": "Use EEG for seizures and encephalopathy without treating a pattern as uniquely diagnostic"
+    },
+    {
+      "question": 9,
+      "title": "An Evolving NMDAR Syndrome",
+      "decision": "Recognize the evolving NMDAR encephalitis syndrome"
+    },
+    {
+      "question": 10,
+      "title": "Tumor Assessment Accompanies NMDAR Confirmation",
+      "decision": "Select CSF IgG GluN1 confirmation and age/sex-informed tumor assessment"
+    },
+    {
+      "question": 11,
+      "title": "Faciobrachial Events Before Memory Decline",
+      "decision": "Recognize LGI1 faciobrachial dystonic seizures and urgency of immunotherapy"
+    },
+    {
+      "question": 12,
+      "title": "Hyponatremia Can Be a Clue Rather Than the Whole Diagnosis",
+      "decision": "Interpret hyponatremia and memory loss in LGI1 disease"
+    },
+    {
+      "question": 13,
+      "title": "Peripheral Hyperexcitability With Insomnia and Dysautonomia",
+      "decision": "Differentiate CASPR2/Morvan and peripheral hyperexcitability phenotypes"
+    },
+    {
+      "question": 14,
+      "title": "Seizure-Predominant Limbic Disease and SCLC Risk",
+      "decision": "Recognize GABA-B receptor encephalitis and associated tumor risk"
+    },
+    {
+      "question": 15,
+      "title": "AMPAR Disease Needs Tumor and Relapse Assessment",
+      "decision": "Recognize AMPAR encephalitis and relapse/cancer considerations"
+    },
+    {
+      "question": 16,
+      "title": "GAD65 Results Require Assay and Phenotype Context",
+      "decision": "Interpret GAD65 neurologic relevance using phenotype and assay context"
+    },
+    {
+      "question": 17,
+      "title": "Diarrhea Before a Hyperexcitable Encephalopathy",
+      "decision": "Recognize DPPX hyperexcitability with gastrointestinal prodrome"
+    },
+    {
+      "question": 18,
+      "title": "Sleep-Bulbar Disease Outside a Typical Acute Encephalitis",
+      "decision": "Recognize IgLON5 sleep-bulbar syndrome without assuming typical acute encephalitis"
+    },
+    {
+      "question": 19,
+      "title": "An Early Negative HSV PCR Does Not Clear the Infection",
+      "decision": "Initiate empiric infection coverage while evaluating encephalitis"
+    },
+    {
+      "question": 20,
+      "title": "Do Not Wait Weeks for a Delayed Antibody Panel",
+      "decision": "Start appropriate first-line immunotherapy without awaiting delayed antibodies"
+    },
+    {
+      "question": 21,
+      "title": "Select a First-Line Regimen for Severe Disease",
+      "decision": "Compare IVMP, IVIG and plasma-exchange regimens and patient-specific risks"
+    },
+    {
+      "question": 22,
+      "title": "Escalation Timing Depends on Severity and Guideline",
+      "decision": "Escalate inadequately responding disease using timing and diagnostic confidence"
+    },
+    {
+      "question": 23,
+      "title": "HBsAg Alone Is Not Adequate Before Rituximab",
+      "decision": "Screen HBV and relevant infection risks before rituximab"
+    },
+    {
+      "question": 24,
+      "title": "Hypoventilation Requires Organ Support During Immune Treatment",
+      "decision": "Manage autonomic instability, hypoventilation and ICU complications"
+    },
+    {
+      "question": 25,
+      "title": "Tumor Removal and Immunotherapy Are Complementary",
+      "decision": "Combine tumor treatment with neurologic immune therapy when appropriate"
+    },
+    {
+      "question": 26,
+      "title": "Residual Memory Problems Are Not Automatically Relapse",
+      "decision": "Separate relapse from persistent deficits and individualize maintenance treatment"
+    },
+    {
+      "question": 27,
+      "title": "PNS Certainty Requires Integrated Evidence",
+      "decision": "Apply PNS-Care phenotype/antibody/cancer framework"
+    },
+    {
+      "question": 28,
+      "title": "Intracellular Antibodies Often Mark a Cellular Immune Process",
+      "decision": "Distinguish high-risk intracellular antibodies from neuronal surface mechanisms"
+    },
+    {
+      "question": 29,
+      "title": "Anti-Hu Sensory Neuronopathy Directs the Cancer Search",
+      "decision": "Select tumor investigation for anti-Hu sensory neuronopathy"
+    },
+    {
+      "question": 30,
+      "title": "Rapid Cerebellar Decline Can Precede Visible Atrophy",
+      "decision": "Recognize rapidly progressive cerebellar syndrome and relevant tumor-antibody patterns"
+    },
+    {
+      "question": 31,
+      "title": "Rhombencephalitis With Hearing Symptoms",
+      "decision": "Recognize Ma2 or KLHL11 brainstem-diencephalic/testicular associations"
+    },
+    {
+      "question": 32,
+      "title": "Repeat Screening in a High-Risk Combination",
+      "decision": "Plan repeat tumor screening after an initially negative high-risk evaluation"
+    },
+    {
+      "question": 33,
+      "title": "Cancer Does Not Make Every Neurologic Syndrome Paraneoplastic",
+      "decision": "Investigate cancer-associated neurologic symptoms for direct and treatment-related mimics"
+    },
+    {
+      "question": 34,
+      "title": "Encephalitis During Checkpoint Inhibition",
+      "decision": "Recognize immune-checkpoint-inhibitor neurological toxicity and urgent management"
+    },
+    {
+      "question": 35,
+      "title": "A Lupus Diagnosis Does Not Determine the Neurologic Mechanism",
+      "decision": "Distinguish inflammatory neuropsychiatric lupus from thrombotic and non-lupus causes"
+    },
+    {
+      "question": 36,
+      "title": "Secondary Prevention After Arterial Thrombotic APS",
+      "decision": "Select antithrombotic treatment for APS-related cerebral thrombosis in context"
+    },
+    {
+      "question": 37,
+      "title": "Parenchymal and Venous Neuro-Behcet Require Different Assessment",
+      "decision": "Recognize neuro-Behcet parenchymal versus venous disease"
+    },
+    {
+      "question": 38,
+      "title": "Angiographic Beading Is Not Synonymous With CNS Vasculitis",
+      "decision": "Investigate CNS vasculitis while excluding reversible vasoconstriction and infection"
+    },
+    {
+      "question": 39,
+      "title": "A Negative Angiogram Does Not Exclude Small-Vessel PACNS",
+      "decision": "Interpret angiography and biopsy limits in primary CNS vasculitis"
+    },
+    {
+      "question": 40,
+      "title": "Systemic Tissue Can Support Probable Neurosarcoidosis",
+      "decision": "Evaluate neurosarcoidosis with accessible tissue and important exclusions"
+    },
+    {
+      "question": 41,
+      "title": "Sjogren Ganglionopathy Can Lack Anti-SSA",
+      "decision": "Differentiate Sjogren-associated sensory neuronopathy from length-dependent neuropathy"
+    },
+    {
+      "question": 42,
+      "title": "Thyroid Antibodies Do Not Confirm Immune Encephalopathy",
+      "decision": "Interpret thyroid antibodies without overdiagnosing steroid-responsive encephalopathy"
+    },
+    {
+      "question": 43,
+      "title": "Stiffness With Stimulus-Triggered Spasms",
+      "decision": "Recognize stiff-person spectrum and electrophysiologic support"
+    },
+    {
+      "question": 44,
+      "title": "Disabling Stiff-Person Disease Despite Symptomatic Therapy",
+      "decision": "Select symptomatic and immune treatment for disabling stiff-person disease"
+    },
+    {
+      "question": 45,
+      "title": "Rigidity With Brainstem and Autonomic Dysfunction",
+      "decision": "Recognize PERM and glycine-receptor-associated brainstem/autonomic involvement"
+    },
+    {
+      "question": 46,
+      "title": "A Brain-Eye-Ear Microangiopathy",
+      "decision": "Recognize Susac brain-eye-ear involvement and targeted investigation"
+    },
+    {
+      "question": 47,
+      "title": "A Neurovisceral Attack Needs Biochemical Testing",
+      "decision": "Recognize acute hepatic porphyria neurovisceral attacks and appropriate testing"
+    },
+    {
+      "question": 48,
+      "title": "Normal Ceruloplasmin Does Not End a Wilson Evaluation",
+      "decision": "Recognize Wilson neurological disease and interpret copper tests in context"
+    }
+  ]
+}

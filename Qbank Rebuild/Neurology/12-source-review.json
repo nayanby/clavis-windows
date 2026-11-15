@@ -1,0 +1,171 @@
+{
+  "chapter": 12,
+  "status": "installed_verified",
+  "draftedQuestions": 48,
+  "plannedQuestions": 48,
+  "installed": true,
+  "draftValidation": {
+    "scope": "All 48 after second editorial pass; writes disabled",
+    "status": "passed",
+    "distractorRationales": 144,
+    "minimumExplanationWords": 271,
+    "answerDistribution": {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12
+    }
+  },
+  "sourceChecks": [
+    {
+      "source": "Graus clinical framework 2016; Canadian consensus 2024; acute management recommendations 2021; PNS criteria 2021",
+      "checked": [
+        "Possible AE clinical entry criteria and reasonable exclusion requirement",
+        "Normal MRI/routine CSF do not exclude every compatible syndrome",
+        "NMDAR CSF IgG GluN1 importance; paired sampling and antigen-specific specimen sensitivity"
+      ]
+    },
+    {
+      "source": "Canadian consensus 2024; misdiagnosis cohort 2023; antibody-negative AE study 2023; Graus 2016",
+      "checked": [
+        "Weak phenotype-incongruent serum antibodies need laboratory/clinical reassessment",
+        "Infectious and immune evaluations proceed in parallel; plausible HSV requires prompt empiric cover",
+        "Probable antibody-negative AE requires two distinct objective evidence categories; CSF markers are one category"
+      ],
+      "pendingVerification": [
+        "New UK 2026 encephalitis guidance discovered in search; full PDF inaccessible through web open, so not yet used as a verified source"
+      ]
+    },
+    {
+      "source": "Graus 2016; acute recommendations 2021; Canadian consensus 2024; PNS 2021",
+      "checked": [
+        "Antibody-independent bilateral limbic criteria and temporal EEG/CSF support",
+        "EEG slowing and short-recording limitations; extreme delta brush is supportive rather than mandatory",
+        "NMDAR multidomain phenotype, CSF IgG GluN1 and targeted teratoma assessment"
+      ],
+      "pending": [
+        "Review new UK 2026 guidance when accessible; verify targeted pelvic modality and surveillance in full chapter review"
+      ]
+    },
+    {
+      "source": "FBDS 103-patient study 2018; LGI1 multicentre cohort 2021; Morvan 29-case study 2012; GABA-B cohort 2022",
+      "checked": [
+        "FBDS can precede cognitive decline; early immune treatment supported by observational evidence",
+        "LGI1 hyponatremia with potentially normal routine CSF",
+        "Morvan central/autonomic/peripheral triad and thymoma association",
+        "GABA-B receptor seizure-predominant limbic syndrome and SCLC association"
+      ]
+    },
+    {
+      "source": "AMPAR 22-patient series; high-titre GAD65 cohort; DPPX 2017 and IgLON5 2017 primary series",
+      "checked": [
+        "AMPAR tumor spectrum and relapse follow-up",
+        "Low GAD65 specificity and assay-dependent high-titre interpretation",
+        "DPPX gastrointestinal prodrome with central hyperexcitability",
+        "IgLON5 mixed sleep-bulbar phenotype and urgent airway/swallow assessment"
+      ]
+    },
+    {
+      "source": "Canadian consensus 2024; AE acute recommendations 2021; IDSA encephalitis; UK joint-society guideline 2026 indexed text",
+      "checked": [
+        "Early-negative HSV PCR and renal-adjusted IV acyclovir",
+        "Initiation before delayed antibody results when evidence and exclusions support treatment",
+        "Severe disease first-line doses and treatment-specific risks",
+        "Different severity-dependent escalation intervals and rituximab regimens"
+      ],
+      "accessLimit": "UK 2026 direct fulltext returned 403; specific indexed recommendations were available and used with older guideline corroboration."
+    },
+    {
+      "source": "Rituxan prescribing information; AE long-term recommendations 2021; recovery cohort 2025; Canadian consensus",
+      "checked": [
+        "HBsAg and anti-HBc screening; prior infection matters despite negative HBsAg",
+        "Respiratory/autonomic support and complication prevention",
+        "Tumor treatment alongside immunotherapy",
+        "Residual deficits versus supported relapse and individualized maintenance"
+      ]
+    },
+    {
+      "source": "PNS-Care consensus 2021 and clinical validation 2024",
+      "checked": [
+        "Integrated certainty and score categories",
+        "Intracellular versus surface-antigen mechanistic interpretation",
+        "Hu/SCLC sensory neuronopathy",
+        "Yo breast/gynecologic versus DNER/Hodgkin cerebellar associations"
+      ]
+    },
+    {
+      "source": "KLHL11 cohort 2020; PNS consensus 2021; SITC and ASCO toxicity guidance 2021",
+      "checked": [
+        "KLHL11 rhombencephalitic auditory phenotype and germ-cell association",
+        "High-risk repeat tumor screening every 4–6 months for 2 years",
+        "Direct malignant and treatment-related PNS mimics",
+        "Checkpoint encephalitis interruption, infectious cover and severe-treatment doses"
+      ]
+    },
+    {
+      "source": "EULAR SLE 2023, APS 2019, Behcet 2018; BAD/BSR Behcet 2024; ESO PACNS 2023",
+      "checked": [
+        "Inflammatory versus thrombotic NPSLE attribution",
+        "VKA preference and individualized intensity in arterial triple-positive APS",
+        "Parenchymal neuro-Behcet immune treatment and cyclosporine avoidance",
+        "Angiographic narrowing/beading is nonspecific; RCVS and infection exclusions"
+      ]
+    },
+    {
+      "source": "ESO PACNS 2023; Neurosarcoidosis consensus 2018; Sjogren neurological review; thyroid-antibody referral cohort 2021",
+      "checked": [
+        "Complementary biopsy and angiographic limitations",
+        "Extraneural tissue supports probable rather than definite neurosarcoidosis",
+        "Seronegative Sjogren sensory ganglionopathy remains possible",
+        "Thyroid antibodies and subjective steroid response do not establish CNS autoimmunity"
+      ]
+    },
+    {
+      "source": "SPSD diagnostic study 2023; randomized IVIG trial 2001; GlyR/PERM cohort 2014",
+      "checked": [
+        "Clinical/electrophysiologic support rather than antibody-only SPS diagnosis",
+        "IVIG 2 g/kg monthly trial regimen and objective response assessment",
+        "GlyR-associated PERM brainstem/autonomic phenotype and organ support"
+      ]
+    },
+    {
+      "source": "Susac consensus criteria 2016/algorithm 2018; AGA porphyria update 2023; EASL-ERN Wilson guideline 2025",
+      "checked": [
+        "Susac retinal fluorescein angiography/audiometry and incomplete early triad",
+        "Random urine ALA/PBG/creatinine and severe-attack hemin dose",
+        "Integrated Wilson assessment despite normal ceruloplasmin; urinary copper threshold limitations"
+      ]
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "Full Harrison subscription text not accessed",
+    "No independent clinician review",
+    "Structural validation does not establish clinical accuracy"
+  ],
+  "editorialReview": {
+    "status": "completed",
+    "reviewedRange": "Questions 1–48",
+    "revisedOptionSets": 26,
+    "tablesAdded": [
+      "Major surface-antibody syndrome comparison",
+      "Antibody-negative probable evidence categories",
+      "Intracellular versus surface-antibody mechanistic comparison",
+      "Neurosarcoidosis certainty categories"
+    ],
+    "remaining": []
+  },
+  "validation": {
+    "questions": 48,
+    "answerDistribution": {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12
+    },
+    "distractorRationales": 144,
+    "minimumExplanationWords": 271,
+    "runtimeSourceComparison": "passed",
+    "otherBanksPreserved": 11
+  }
+}
