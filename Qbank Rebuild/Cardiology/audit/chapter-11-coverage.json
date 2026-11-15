@@ -5,7 +5,7 @@
   "status": "draft_in_progress",
   "countPolicy": "Provisional coverage-driven distinct decisions; not official examination weights.",
   "plannedQuestions": 62,
-  "authoredQuestions": 33,
+  "authoredQuestions": 44,
   "sections": [
     {
       "section": "Measurement classification and blood-pressure phenotypes",
@@ -78,7 +78,7 @@
     {
       "section": "Secondary hypertension",
       "questions": 11,
-      "authoredQuestions": 0,
+      "authoredQuestions": 11,
       "decisions": [
         "Apply the 2025 Endocrine Society broader primary-aldosteronism screening approach",
         "Interpret aldosterone renin and the ratio with potassium medications and assay-specific thresholds",
@@ -331,6 +331,72 @@
       "title": "Renal Denervation: BP Efficacy and Outcome Uncertainty",
       "section": "Resistant hypertension",
       "decision": "Place renal denervation within a selected shared-decision pathway without claiming proven event reduction"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-034",
+      "title": "Primary Aldosteronism: Broader Screening in 2025",
+      "section": "Secondary hypertension",
+      "decision": "Apply the 2025 Endocrine Society broader primary-aldosteronism screening approach"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-035",
+      "title": "Aldosterone–Renin Ratio: Potassium and Medication Effects",
+      "section": "Secondary hypertension",
+      "decision": "Interpret aldosterone renin and the ratio with potassium medications and assay-specific thresholds"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-036",
+      "title": "Overt Primary Aldosteronism and Suppression-Test Exceptions",
+      "section": "Secondary hypertension",
+      "decision": "Choose confirmatory testing or a justified exception for a strong aldosterone phenotype"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-037",
+      "title": "Adrenal CT and Functional Lateralization in PA",
+      "section": "Secondary hypertension",
+      "decision": "Use adrenal venous sampling rather than CT appearance alone for appropriate surgical lateralization"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-038",
+      "title": "Medical Treatment of Bilateral Primary Aldosteronism",
+      "section": "Secondary hypertension",
+      "decision": "Choose unilateral adrenalectomy versus MRA treatment for confirmed primary aldosteronism"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-039",
+      "title": "Renal-Artery Stenosis: Selecting Revascularization Review",
+      "section": "Secondary hypertension",
+      "decision": "Distinguish routine atherosclerotic renal-artery stenosis from recurrent flash-pulmonary-edema presentations"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-040",
+      "title": "Renal Fibromuscular Dysplasia: Angioplasty Strategy",
+      "section": "Secondary hypertension",
+      "decision": "Recognize renal fibromuscular dysplasia and its revascularization strategy"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-041",
+      "title": "Suspected OSA After a Negative Home Sleep Test",
+      "section": "Secondary hypertension",
+      "decision": "Evaluate obstructive sleep apnea without assuming CPAP replaces all antihypertensive therapy"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-042",
+      "title": "Pheochromocytoma: Alpha and Beta Blockade Sequencing",
+      "section": "Secondary hypertension",
+      "decision": "Sequence alpha and beta blockade in a catecholamine-secreting tumor"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-043",
+      "title": "Liddle Syndrome: ENaC-Directed Treatment",
+      "section": "Secondary hypertension",
+      "decision": "Distinguish Liddle syndrome from aldosterone-mediated low-renin hypertension"
+    },
+    {
+      "questionId": "cardiology-rebuild-11-044",
+      "title": "Coarctation as a Cause of Young-Onset Hypertension",
+      "section": "Secondary hypertension",
+      "decision": "Recognize coarctation through arm-leg and pulse findings"
     }
   ]
 }

@@ -2,9 +2,9 @@
   "chapter": 11,
   "status": "draft_in_progress",
   "installed": false,
-  "authoredQuestions": 33,
+  "authoredQuestions": 44,
   "plannedQuestions": 62,
-  "scopeNote": "First five continuous sections authored: measurement/phenotypes, risk/targets, lifestyle, initial drug selection/adverse effects and resistant hypertension. Secondary causes, emergencies and target trials remain unfinished.",
+  "scopeNote": "First six continuous sections authored, including all 11 planned secondary-cause decisions. General emergencies, specific emergencies and treatment-target trials remain unfinished.",
   "sourceChecks": [
     {
       "source": "AHA/ACC 2025 high blood pressure guidance",
@@ -157,21 +157,88 @@
         "American definition includes above-goal pressure despite three complementary drugs including a diuretic, or control requiring at least four."
       ],
       "retrievalNote": "AHA society statement summary retrieved directly. Indexed ACC 2026 primary passages checked for definition and MRA priority; full pathway review remains part of final chapter review."
+    },
+    {
+      "source": "Endocrine Society PA recommendations, 2025",
+      "urls": [
+        "https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2",
+        "https://academic.oup.com/jcem/article/110/9/2453/8196671"
+      ],
+      "checks": [
+        "Conditional wider screening and normokalemic presentations.",
+        "Assay-specific aldosterone thresholds, suppressed-renin framework, PRA-based ARR cutoff and unit limits.",
+        "Potassium/medication confounders and clinically safe repeat-testing strategies.",
+        "Overt phenotype exception to suppression testing, CT/AVS roles and young-patient exception.",
+        "Uncontrolled BP with suppressed renin as a reason to titrate tolerated MRA therapy; uncertainty when BP is already controlled."
+      ],
+      "retrievalNote": "Society recommendation page retrieved directly and relevant recommendations read. Full publisher page redirected to an inaccessible CDN; no claim of full journal-text review."
+    },
+    {
+      "source": "AHA renal revascularization statement and CORAL",
+      "urls": [
+        "https://doi.org/10.1161/HYP.0000000000000217",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11731842/",
+        "https://pubmed.ncbi.nlm.nih.gov/24245566/"
+      ],
+      "checks": [
+        "No routine clinical-event benefit for stenting in the studied CORAL population.",
+        "Recurrent flash pulmonary edema as a selective revascularization-review phenotype; observational evidence limits.",
+        "Lesion-significance framework: >70% narrowing, mean gradient >10 mmHg or renal FFR <0.8, with a compatible clinical syndrome.",
+        "Renal FMD angioplasty without routine stenting; selected bailout or surgical circumstances."
+      ]
+    },
+    {
+      "source": "AASM OSA testing guidance and HIPARCO",
+      "urls": [
+        "https://aasm.org/wp-content/uploads/2017/07/diagnostic-testing-OSA.pdf",
+        "https://jamanetwork.com/journals/jama/fullarticle/1788459"
+      ],
+      "checks": [
+        "PSG after a negative/inconclusive/inadequate home study when clinical suspicion persists.",
+        "Settings favoring initial PSG and generally modest, adherence-dependent BP response to CPAP.",
+        "Do not misstate the HIPARCO 24-hour mean BP/DBP effects as a statistically significant SBP result."
+      ]
+    },
+    {
+      "source": "PPGL guidelines and drug doses",
+      "urls": [
+        "https://doi.org/10.1210/jc.2014-1498",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12819074/",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b70cf0c-45be-428f-b396-5001ed4e30fc",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=e3d381c1-3b2f-af70-f4e6-08d6202eed25&type=display"
+      ],
+      "checks": [
+        "Establish alpha blockade before adding beta blockade; typical 7–14-day preparation and individualized volume management.",
+        "Doxazosin starting-dose range and amiloride 5-mg starting-dose information checked."
+      ]
+    },
+    {
+      "source": "Liddle genotype/phenotype primary data and aortic/ACHD guidance",
+      "urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/38265765/",
+        "https://doi.org/10.1016/j.jacc.2025.09.006",
+        "https://doi.org/10.1161/CIR.0000000000001106"
+      ],
+      "checks": [
+        "ENaC gain-of-function, suppressed renin/aldosterone, variable phenotype and ENaC-directed treatment.",
+        "Arm/leg pressure and pulse localization, cross-sectional aortic imaging, associated disease and continued follow-up.",
+        "Do not equate Doppler peak instantaneous and invasive peak-to-peak gradients."
+      ]
     }
   ],
   "draftValidation": {
-    "questions": 33,
+    "questions": 44,
     "answerDistribution": {
-      "A": 9,
-      "B": 8,
-      "C": 8,
-      "D": 8
+      "A": 11,
+      "B": 11,
+      "C": 11,
+      "D": 11
     },
     "minimumExplanationWords": 329,
-    "distractorRationales": 96,
+    "distractorRationales": 129,
     "questionStyles": {
-      "direct": 5,
-      "clinical_scenario": 28
+      "direct": 7,
+      "clinical_scenario": 37
     },
     "status": "passed"
   },
@@ -201,9 +268,20 @@
       "cardiology-rebuild-11-030",
       "cardiology-rebuild-11-031",
       "cardiology-rebuild-11-032",
-      "cardiology-rebuild-11-033"
+      "cardiology-rebuild-11-033",
+      "cardiology-rebuild-11-034",
+      "cardiology-rebuild-11-035",
+      "cardiology-rebuild-11-036",
+      "cardiology-rebuild-11-037",
+      "cardiology-rebuild-11-038",
+      "cardiology-rebuild-11-039",
+      "cardiology-rebuild-11-040",
+      "cardiology-rebuild-11-041",
+      "cardiology-rebuild-11-042",
+      "cardiology-rebuild-11-043",
+      "cardiology-rebuild-11-044"
     ],
-    "nextWork": "Secondary causes (11), general emergencies (5), specific emergencies (8), target trials (5); then full chapter and current-source review.",
+    "nextWork": "General hypertensive emergencies (5), disease-specific emergencies (8), treatment-target trials (5), then complete generated chapter and current-source review.",
     "duplicateReview": "Replaced the initial new HFrEF beta-blocker question with an exertional-angina/HTN selection problem to avoid duplicating existing question cardiology-rebuild-04-012."
   },
   "limitations": [

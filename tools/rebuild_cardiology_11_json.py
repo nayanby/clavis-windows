@@ -342,9 +342,12 @@ add(SECTIONS[2][0],'Exercise and Reversible Contributors to Poor BP Control',
 from cardiology_11_drug_questions import rows as drug_rows, REFERENCES as drug_references
 rows.extend(drug_rows)
 R.update(drug_references)
+from cardiology_11_secondary_questions import rows as secondary_rows, REFERENCES as secondary_references
+rows.extend(secondary_rows)
+R.update(secondary_references)
 
 def highlight_values(text):
-    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|mg/kg|mg/g|mg/dL|mg|g/day|g/week|g|mmol/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
+    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|mg/kg|mg/g|mg/dL|mg|g/day|g/week|g|mmol/L|nmol/L|ng/mL/h|ng/dL|µg/dL|mU/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
 
 if __name__=='__main__':
     existing_path=ROOT/'Cardiology'/(DOC+'.json')
