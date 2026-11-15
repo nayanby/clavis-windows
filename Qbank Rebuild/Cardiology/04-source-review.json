@@ -1,0 +1,825 @@
+{
+  "chapter": 4,
+  "status": "installed_verified",
+  "installed": true,
+  "authoredQuestions": 65,
+  "sourceChecks": [
+    {
+      "source": "ESC official HF 2026 announcement and guideline; AHA/ACC/HFSA 2022 guideline",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehag100",
+        "https://www.escardio.org/news/press/press-releases/major-changes-made-to-the-esc-guidelines-on-heart-failure/",
+        "https://doi.org/10.1161/CIR.0000000000001063"
+      ],
+      "checked": [
+        "ESC 2026 two-phenotype EF classification differs from the explicitly dated AHA 2022 framework",
+        "HFimpEF AHA 2022: prior EF <=40%, follow-up >40%"
+      ],
+      "resolvedReviewItems": [
+        "Verify each subsequent diagnostic threshold, drug regimen, trial result and shock recommendation against primary sources"
+      ],
+      "resolution": "Subsequent question-specific source checks recorded for the completed 65-question draft; final explanation audit remains separately tracked"
+    },
+    {
+      "source": "AHA/ACC/HFSA 2022 staging; ESC 2021 conventional NP thresholds and ESC 2026 diagnostic text",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001063",
+        "https://doi.org/10.1093/eurheartj/ehab368",
+        "https://doi.org/10.1093/eurheartj/ehag100"
+      ],
+      "questions": [
+        3,
+        4
+      ],
+      "checked": [
+        "Pre-HF distinguished from at-risk and current/prior symptomatic disease",
+        "Conventional acute versus nonacute NP rule-out thresholds explicitly attributed; obesity lowers sensitivity and elevated values are not diagnostic alone"
+      ],
+      "status": "draft_source_checked",
+      "resolvedReviewItems": [
+        "Check newer age-adjusted outpatient NP pathway before final diagnostic-section review"
+      ],
+      "resolution": "Question 4 now includes dated outpatient age-adjusted likelihood thresholds, separated from acute exclusion values"
+    },
+    {
+      "source": "HFA–PEFF 2019 consensus and original H2FPEF 2018 study",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz641",
+        "https://doi.org/10.1161/CIRCULATIONAHA.118.034646"
+      ],
+      "questions": [
+        5,
+        6
+      ],
+      "checked": [
+        "Objective filling pressure evidence despite normal resting PAWP; supine exercise threshold attributed to protocol",
+        "H2FPEF six components, point weights and probability ranges; not a severity or transplant score"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Original HFA–PEFF consensus and AHA/ACC/HFSA 2022 diagnostic recommendations",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehz641",
+        "https://doi.org/10.1161/CIR.0000000000001063"
+      ],
+      "questions": [
+        7,
+        8
+      ],
+      "checked": [
+        "HFA–PEFF domains, domain cap and intermediate-score functional assessment",
+        "Selected CMR etiological assessment; routine biopsy and routine invasive hemodynamic testing distinguished from targeted indications"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC HFrEF pathway 2024; FDA Entresto prescribing information",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2023.12.024",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/218591Orig1s000%2C207620Orig1s025lbl.pdf"
+      ],
+      "questions": [
+        9,
+        10
+      ],
+      "checked": [
+        "Prompt complementary four-class initiation and tolerated titration; compensated status for beta blockade",
+        "At least 36-hour ACE inhibitor washout in either direction; no ACE overlap; prior ACEi/ARB angioedema contraindication; stop duplicate ARB"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Entresto adult prescribing information; AHA/ACC/HFSA 2022 drug table and beta-blocker recommendations",
+      "urls": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/218591Orig1s000%2C207620Orig1s025lbl.pdf",
+        "https://doi.org/10.1161/CIR.0000000000001063"
+      ],
+      "questions": [
+        11,
+        12
+      ],
+      "checked": [
+        "ARNI treatment-naive/low prior RAS exposure 24/26 mg twice daily, usual 49/51, target 97/103; titrate every 2–4 weeks as tolerated",
+        "Evidence-based beta blockers and formulation specificity; exact starting/target doses; initiate after compensation"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA/ACC/HFSA 2022 MRA recommendations; FDA dapagliflozin label 2026",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001063",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/202293s035lbl.pdf"
+      ],
+      "questions": [
+        13,
+        14
+      ],
+      "checked": [
+        "MRA eGFR >30 and potassium <5.0 initiation; inability to maintain <5.5 continuation distinction; monitoring and doses",
+        "Dapagliflozin HF 10 mg daily independent of diabetes; initiation threshold 25 distinguished from glycemic use",
+        "Volume and ketoacidosis precautions; at least three-day perioperative fasting interruption and clinically stable oral-intake restart"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC HFrEF 2024 pathway; KDIGO CKD 2024 RAS inhibitor practice points",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2023.12.024",
+        "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf"
+      ],
+      "questions": [
+        15,
+        16
+      ],
+      "checked": [
+        "Symptomatic low-pressure review distinguishes perfusion and volume state; preserve tolerated complementary HF classes where feasible",
+        "ACEi/ARB-specific CKD creatinine >30% within four weeks guidance; symptomatic hypotension and uncontrolled hyperkalemia exceptions",
+        "20% creatinine change in stable patient interpreted with trend, potassium and volume; avoid unnecessary fluid"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "DIAMOND 2022 randomized report; TRED-HF original report; AHA/ACC/HFSA 2022",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9622299/",
+        "https://doi.org/10.1016/S0140-6736(18)32484-X",
+        "https://doi.org/10.1161/CIR.0000000000001063"
+      ],
+      "questions": [
+        17,
+        18
+      ],
+      "checked": [
+        "DIAMOND final primary potassium endpoint and run-in selection; no manufactured independent mortality claim",
+        "TRED-HF first six months 11/25 versus 0/26 relapses; objective relapse distinct from mortality or hospitalization",
+        "Guideline continuation after improved EF and distinction from loop-diuretic need"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA/ACC/HFSA 2022 diuretic and potentially harmful drug recommendations; ESC HF 2021",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001063",
+        "https://doi.org/10.1093/eurheartj/ehab368"
+      ],
+      "questions": [
+        19,
+        20
+      ],
+      "checked": [
+        "Lowest loop dose maintaining euvolemia; common oral starting range and monitoring; combination blockade reserved for resistance",
+        "Systemic NSAID sodium retention and blunted diuresis, including COX-2 agents",
+        "TZD fluid retention and non-DHP negative inotropy distinguished from amlodipine-related edema"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Ivabradine prescribing information; AHA/ACC/HFSA 2022; A-HeFT and combination label",
+      "urls": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/206143s008%2C209964s002lbl.pdf",
+        "https://doi.org/10.1161/CIR.0000000000001063",
+        "https://doi.org/10.1056/NEJMoa042934",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=8f54d5a3-169f-48dd-9250-2c176d2bd9ad&type=display"
+      ],
+      "questions": [
+        21,
+        22
+      ],
+      "checked": [
+        "Ivabradine EF <=35 sinus rate >=70, tolerated beta blockade, start/target dosing and rate monitoring",
+        "Hydralazine/ISDN add-on population, distinct RAS-intolerance pathway, fixed combination doses and nitrate interaction safeguards"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "FDA digoxin label 2024; AHA 2022 HF table; original DIGIT-HF 2025 report",
+      "urls": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/009330s039lbl.pdf",
+        "https://doi.org/10.1161/CIR.0000000000001063",
+        "https://doi.org/10.1056/NEJMoa2415471"
+      ],
+      "questions": [
+        23,
+        24
+      ],
+      "checked": [
+        "Digoxin low-concentration HF target, renal/interacting-drug accumulation and timed measurement",
+        "DIGIT-HF population, dose, composite outcome and non-significant isolated mortality component",
+        "Digitoxin concentration and regimen distinguished from digoxin"
+      ],
+      "status": "draft_source_checked",
+      "resolvedReviewItems": [
+        "Integrate 2026 low-dose digoxin randomized evidence during final glycoside-section review"
+      ],
+      "resolution": "DECISION 2026 neutral primary result integrated into question 24"
+    },
+    {
+      "source": "VICTORIA; January 2026 vericiguat label; HF iron criteria and ferric carboxymaltose label 2026",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa1915928",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/214377s005lbl.pdf",
+        "https://doi.org/10.1093/eurheartj/ehag100",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/203565s030lbl.pdf"
+      ],
+      "questions": [
+        25,
+        26
+      ],
+      "checked": [
+        "Vericiguat worsening-HF trial population and composite; updated US 5-mg start versus 2.5 mg hypotension-risk start",
+        "Conventional ferritin/TSAT deficiency despite normal Hb; product-specific 80-kg Hb13.2 FCM schedule and phosphate precautions"
+      ],
+      "status": "draft_source_checked",
+      "resolvedReviewItems": [
+        "Review VICTOR and latest aggregate iron outcomes before final chapter audit"
+      ],
+      "resolution": "VICTOR neutral primary result integrated in question 25; iron conclusion limited to ESC 2026 symptom/QoL and hospitalization recommendations rather than claiming a new aggregate mortality result"
+    },
+    {
+      "source": "US AF guideline 2023; SERVE-HF; ADVENT-HF; AASM CSA 2025",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001193",
+        "https://doi.org/10.1056/NEJMoa1506459",
+        "https://pubmed.ncbi.nlm.nih.gov/38142697/",
+        "https://doi.org/10.5664/jcsm.11858"
+      ],
+      "questions": [
+        27,
+        28
+      ],
+      "checked": [
+        "Early rhythm control for suspected AF-mediated cardiomyopathy; selected ablation; anticoagulation and pacing assessed separately",
+        "SERVE-HF mortality hazard, distinct CSA/OSA technologies, neutral ADVENT-HF and qualified AASM 2025 guidance"
+      ],
+      "status": "draft_source_checked",
+      "resolvedReviewItems": [
+        "Reconcile final sleep-treatment wording with full ESC 2026 recommendation and current device restrictions before installation"
+      ],
+      "resolution": "Question 28 explicitly reconciles ESC 2026 class III with AASM conditional guidance and current manufacturer contraindication"
+    },
+    {
+      "source": "DELIVER 2022; FINEARTS-HF 2024; finerenone US label 2026",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2206286",
+        "https://doi.org/10.1056/NEJMoa2407107",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/215341s011lbl.pdf"
+      ],
+      "questions": [
+        29,
+        30
+      ],
+      "checked": [
+        "DELIVER EF >40 symptomatic population, composite and separate CV mortality CI; diabetes-independent application",
+        "FINEARTS total-event composite and rate ratio distinguished from mortality and patient counts",
+        "HF-specific finerenone baseline eGFR dose/target, potassium/renal eligibility, four-week laboratory review and contraindications"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "STEP-HFpEF; SUMMIT; NEAT-HFpEF original reports",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2306963",
+        "https://doi.org/10.1056/NEJMoa2410027",
+        "https://doi.org/10.1056/NEJMoa1510774"
+      ],
+      "questions": [
+        31,
+        32
+      ],
+      "checked": [
+        "Semaglutide health-status/weight endpoints versus tirzepatide HF-event composite; no isolated mortality extrapolation",
+        "Obesity-HFpEF populations, gradual titration to trial targets and complementary background care",
+        "NEAT daily activity and functional outcomes; nitrate for separate angina indication distinguished from routine HFpEF use"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA/ACC/HFSA 2022 device recommendations; ESC HF 2026 ICD framework",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001063",
+        "https://doi.org/10.1093/eurheartj/ehag100"
+      ],
+      "questions": [
+        33,
+        34
+      ],
+      "checked": [
+        "Primary prevention nonischemic DCM EF <=35 NYHA II/III on chronic therapy and meaningful survival >1 year; US/ESC recommendation-strength distinction",
+        "CRT EF <=35 sinus LBBB QRS >=150 NYHA II/III/ambulatory IV; separate defibrillator decision and no routine narrow-QRS extrapolation"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "HRS physiologic pacing 2023; AHA advanced-HF referral 2021; ACC pathway 2024",
+      "urls": [
+        "https://doi.org/10.1002/joa3.12872",
+        "https://doi.org/10.1161/CIR.0000000000001016",
+        "https://doi.org/10.1016/j.jacc.2023.12.024"
+      ],
+      "questions": [
+        35,
+        36
+      ],
+      "checked": [
+        "AF effective BiV capture versus counters; AV-junction ablation assessment after inadequate tolerated rate control",
+        "Referral before irreversible organ damage using recurrent admissions, medication intolerance, renal trajectory and symptoms; referral not automatic device eligibility"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ISHLT transplant candidate guideline 2024; JACC durable MCS statement 2023",
+      "urls": [
+        "https://www.ishlt.org/docs/default-source/standards-guidelines/2024_guideline_careofhtxcandidates.pdf",
+        "https://doi.org/10.1016/j.jacc.2023.07.019"
+      ],
+      "questions": [
+        37,
+        38
+      ],
+      "checked": [
+        "Beta-blocker-specific peak VO2 supportive cutoffs; VE/VCO2 adjunct; comprehensive evaluation rather than single-test listing",
+        "LVAD dependence on RV output and integrated RV assessment; irreversible versus reversible organ dysfunction and long-term care burden"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "JACC durable MCS 2023; ISHLT 2024; AHA HF 2022 supportive care",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2023.07.019",
+        "https://www.ishlt.org/docs/default-source/standards-guidelines/2024_guideline_careofhtxcandidates.pdf",
+        "https://doi.org/10.1161/CIR.0000000000001063"
+      ],
+      "questions": [
+        39,
+        40
+      ],
+      "checked": [
+        "Bridge-to-candidacy distinguished from transplant, recovery and destination intent; reassessment and no guaranteed reversibility",
+        "Concurrent palliative and active HF/transplant care; hospice and resuscitation discussions distinguished from broad supportive care"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC HF 2021 urgent precipitant framework; ACC hospitalized HF pathway 2024",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehab368",
+        "https://doi.org/10.1016/j.jacc.2024.06.002"
+      ],
+      "questions": [
+        41,
+        42
+      ],
+      "checked": [
+        "CHAMPIT causes and simultaneous stabilization/cause-directed workup; redistribution without weight gain",
+        "Independent congestion/perfusion axes and serial assessment; pressure alone not hypoperfusion; no routine inotrope for warm-wet state"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ESC HF 2021 respiratory support; ACC hospitalized-HF pathway 2024 loop dosing",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehab368",
+        "https://doi.org/10.1016/j.jacc.2024.06.002"
+      ],
+      "questions": [
+        43,
+        44
+      ],
+      "checked": [
+        "Hypoxemic distressed cooperative pulmonary-edema patient: monitored early NIV, prompt failure escalation and airway/hemodynamic exclusions",
+        "Selected 2x home daily oral furosemide IV strategy: 80 oral/day to 160 IV/day divided; initial response-based regimen rather than bioavailability equivalence",
+        "ACC initial range 1–2.5x and early urine/clinical/renal monitoring"
+      ],
+      "status": "draft_source_checked",
+      "resolvedReviewItems": [
+        "Add exact early diuretic-response thresholds with subsequent resistance question; final respiratory criteria review against ESC 2026"
+      ],
+      "resolution": "Question 45 retains the exact source-checked ACC two-hour urine sodium threshold; variable alternative protocols are qualified rather than inventing one universal output cutoff. ESC 2026 respiratory thresholds separately checked"
+    },
+    {
+      "source": "ACC hospitalized HF 2024; ADVOR original and renal analysis",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2024.06.002",
+        "https://doi.org/10.1056/NEJMoa2203094",
+        "https://doi.org/10.1093/eurheartj/ehad557"
+      ],
+      "questions": [
+        45,
+        46
+      ],
+      "checked": [
+        "Two-hour urine sodium <50 ACC response assessment; selected metolazone 2.5–5 mg and electrolyte surveillance",
+        "ADVOR 500 mg IV daily add-on early decongestion 42.2% versus 30.5%; no manufactured survival claim",
+        "Original SGLT2, SBP and eGFR exclusions; treatment-period renal worsening in later analysis"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Nitroglycerin injection label; ESC 2021 acute vasodilators; AHA/ACC HF decongestion guidance",
+      "urls": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9453bd8b-5d54-5dc8-e053-2995a90a95b2",
+        "https://doi.org/10.1093/eurheartj/ehab368",
+        "https://doi.org/10.1161/CIR.0000000000001063",
+        "https://doi.org/10.1016/j.jacc.2024.06.002"
+      ],
+      "questions": [
+        47,
+        48
+      ],
+      "checked": [
+        "Monitored IV nitrate for appropriate hypertensive pulmonary edema; label infusion initiation/titration and pressure/interaction safeguards",
+        "Small creatinine rise does not alone establish structural injury or mandate stopping decongestion with persistent congestion; progressive injury signs require reassessment"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "OPTIME-CHF original trial; STRONG-HF original trial and HF guidance",
+      "urls": [
+        "https://jamanetwork.com/journals/jama/fullarticle/194768",
+        "https://doi.org/10.1016/S0140-6736(22)02076-1",
+        "https://doi.org/10.1016/j.jacc.2024.06.002"
+      ],
+      "questions": [
+        49,
+        50
+      ],
+      "checked": [
+        "No routine inotrope for adequately perfused congestion; OPTIME population distinguished from shock rescue",
+        "STRONG-HF combined optimization/surveillance strategy, early visit schedule and 180-day composite; trial regimen not conflated with universal modern sequence"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC shock 2025; SCAI November 2026 update and official bedside checklist",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2025.02.018",
+        "https://www.scai.org/publications/clinical-documents/2026-scai-shock-classification-expert-consensus-update-refined",
+        "https://www.scai.org/sites/default/files/2026-11/SCAI_SHOCK_2026_Bedside_Checklist.pdf"
+      ],
+      "questions": [
+        51,
+        52
+      ],
+      "checked": [
+        "Normotensive cardiogenic hypoperfusion; pressure alone cannot exclude shock",
+        "2026 stage D failure of initial support with worsening perfusion; current physiology versus device count; stage E collapse and arrest modifier distinguished"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC cardiogenic shock consensus guidance 2025",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2025.02.018"
+      ],
+      "questions": [
+        53,
+        54
+      ],
+      "checked": [
+        "Integrated serial organ-perfusion assessment despite restored pressure; lactate limitations",
+        "Selected pulmonary artery catheterization for unresolved shock phenotype; no universal survival claim and no delay of rescue"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC shock 2025; SOAP II original trial; AHA shock scientific statement",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2025.02.018",
+        "https://doi.org/10.1056/NEJMoa0907118",
+        "https://doi.org/10.1161/CIR.0000000000000525"
+      ],
+      "questions": [
+        55,
+        56
+      ],
+      "checked": [
+        "Low cardiac index with elevated filling pressures and low SVR identifies mixed cardiac/vasodilatory physiology",
+        "Norepinephrine selection in hypotensive tachycardic shock; dopamine arrhythmia risk and subgroup evidence limitations; ACC infusion range"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC shock 2025 and DOREMI original randomized trial",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2025.02.018",
+        "https://doi.org/10.1056/NEJMoa2026845"
+      ],
+      "questions": [
+        57,
+        58
+      ],
+      "checked": [
+        "Inotrope selection with severe evolving AKI, renal milrinone clearance, beta-blockade and pressure considerations; ACC infusion ranges",
+        "DOREMI 192 participants; composite 49 versus 54 percent, RR 0.90 CI 0.69-1.19; neutral superiority result does not establish equivalence"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ACC shock guidance 2025, IABP-SHOCK II original trial and ACS guideline 2025",
+      "urls": [
+        "https://doi.org/10.1016/j.jacc.2025.02.018",
+        "https://doi.org/10.1056/NEJMoa1208410",
+        "https://doi.org/10.1161/CIR.0000000000001309"
+      ],
+      "questions": [
+        59,
+        60
+      ],
+      "checked": [
+        "Early regional shock-center contact and coordinated transfer alongside stabilization",
+        "IABP-SHOCK II thirty-day mortality 39.7 versus 41.3 percent; no routine mortality benefit; selected mechanical-complication bridging separated from trial population"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "ECLS-SHOCK and DanGer-Shock original trials; ACS 2025 and EAPCI/ACVC 2026",
+      "urls": [
+        "https://doi.org/10.1056/NEJMoa2307227",
+        "https://doi.org/10.1056/NEJMoa2312572",
+        "https://doi.org/10.1161/CIR.0000000000001309",
+        "https://doi.org/10.1093/eurheartj/ehag708"
+      ],
+      "questions": [
+        61,
+        62
+      ],
+      "checked": [
+        "ECLS thirty-day mortality and increased bleeding/vascular complications; routine strategy distinguished from selected rescue",
+        "DanGer selected STEMI shock eligibility, exclusions, 180-day mortality and increased safety events; no cross-device superiority claim"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "AHA temporary support statement 2022, ACC shock 2025 and EAPCI/ACVC 2026",
+      "urls": [
+        "https://doi.org/10.1161/CIR.0000000000001076",
+        "https://doi.org/10.1016/j.jacc.2025.02.018",
+        "https://doi.org/10.1093/eurheartj/ehag708"
+      ],
+      "questions": [
+        63,
+        64,
+        65
+      ],
+      "checked": [
+        "Chamber-specific RV support and selected device contraindications",
+        "Peripheral VA-ECMO afterload and symptomatic LV distention; tailored unloading without universal prophylactic benefit claim",
+        "Bridge-to-decision, native recovery versus supported stability and repeated destination assessment"
+      ],
+      "status": "draft_source_checked"
+    },
+    {
+      "source": "Final review: DECISION 2026 and VICTOR 2025 original reports",
+      "urls": [
+        "https://doi.org/10.1038/s41591-026-04406-6",
+        "https://doi.org/10.1016/S0140-6736(25)01665-4"
+      ],
+      "questions": [
+        24,
+        25,
+        44
+      ],
+      "checked": [
+        "Added neutral contemporary digoxin outcome evidence without extrapolating digitoxin benefit",
+        "Added neutral VICTOR primary result and testing-hierarchy qualification",
+        "Applied numerical-calculation exception: formula, substitution and interpretation retained; separate distractor paragraphs omitted"
+      ],
+      "status": "review_changes_applied"
+    },
+    {
+      "source": "ESC 2026 diagnostic text, AASM 2025 and current ResMed device contraindication",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehag100",
+        "https://doi.org/10.5664/jcsm.11858",
+        "https://www.resmed.com/en-us/products/cpap/machines/aircurve-10-bilevel/"
+      ],
+      "questions": [
+        4,
+        28
+      ],
+      "checked": [
+        "Outpatient age-adjusted likelihood thresholds distinguished from acute exclusion thresholds",
+        "Explicit manufacturer ASV contraindication retained despite conditional specialty guidance; ESC sleep recommendation still requires reconciliation"
+      ],
+      "status": "review_changes_applied"
+    },
+    {
+      "source": "ESC 2026 full recommendation tables 9, 19 and 20",
+      "urls": [
+        "https://doi.org/10.1093/eurheartj/ehag100"
+      ],
+      "questions": [
+        26,
+        28,
+        43
+      ],
+      "checked": [
+        "Iron symptom/QoL recommendation and hospitalization reduction distinguished from isolated mortality",
+        "ESC 2026 class III ASV recommendation for predominant CSA explicitly distinguished from AASM conditional recommendation",
+        "Respiratory distress RR above 25 and oxygen saturation below 90 NIV criteria confirmed; progressive failure requires intubation"
+      ],
+      "status": "review_changes_applied"
+    },
+    {
+      "source": "TRANSFORM-HF original trial",
+      "urls": [
+        "https://jamanetwork.com/journals/jama/fullarticle/2800428"
+      ],
+      "questions": [
+        19
+      ],
+      "checked": [
+        "Torsemide strategy did not significantly reduce all-cause mortality compared with furosemide"
+      ],
+      "status": "review_source_checked"
+    },
+    {
+      "source": "Original HFA-PEFF consensus publisher PDF in author institution repository",
+      "urls": [
+        "https://pure.amsterdamumc.nl/ws/portalfiles/portal/156936369/How-to-diagnose-heart-failure-with-preserved-ejection-fraction.pdf"
+      ],
+      "questions": [
+        7
+      ],
+      "checked": [
+        "Expanded diagnostic domain table with age-specific e-prime, rhythm-specific NP/LAVI, LV remodeling criteria and domain caps",
+        "Original PDF confirms AF minor NT-proBNP 375-660, correcting the 365 typo found in some reproduced tables"
+      ],
+      "status": "review_changes_applied"
+    }
+  ],
+  "scopeNote": "HF-specific diagnostic and treatment decisions; avoid duplicating generic hemodynamic calculations, MI reperfusion or valve-specific intervention questions.",
+  "editorialReview": {
+    "status": "completed",
+    "stemsAndOptionsRead": 65,
+    "revisedQuestions": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      40,
+      41,
+      43,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      53,
+      54,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ],
+    "findings": [
+      "Several distractors are too easily dismissed; further revision needed before installation",
+      "Question 25 now compares actual add-on treatments with discriminating rate, iron and volume findings",
+      "Question 59 removes arrest-only and arbitrary-drug-count referral alternatives",
+      "Questions 7 and 8 now compare credible investigations: functional testing versus resting testing/CMR, and CMR versus biopsy/PET/genetics; individualized clinical roles explained",
+      "Question 23 compares urgent assessment with dose adjustment, interaction withdrawal and antidote; question 45 compares thiazide addition, ultrafiltration, aquaresis and oral loop switch with discriminating sodium/renal/IV-exposure findings",
+      "CRT selection now compares actual device strategies; ineffective CRT in AF compares chamber-rate intervention with lead revision, ectopy ablation and timing optimization",
+      "NSAID mechanism distractors now compare genuine medication-related edema/HF mechanisms; ivabradine question uses four actual HF add-on drugs without giveaway option qualifications",
+      "Pulmonary edema alternatives revised to actual oxygen/ventilation strategies and acute pressure/decongestion treatments; removed fixed unmonitored nitrate and delayed-respiratory-support giveaways",
+      "Question 57 now compares four actual vasoactive drugs; added a finite priority revision queue from the full option-set review",
+      "Question 4 now tests the investigation resolving a discordant peptide; question 6 distinguishes diagnostic probability from future risk and invasive confirmation",
+      "Exercise PAWP question now compares close pressure patterns within one defined protocol; foundational initiation question compares realistic class sequences rather than unnecessary diuretic escalation",
+      "Beta-blocker choices compare actual evidence-based agents with starting versus target-dose distinctions; MRA choices compare realistic low-dose regimens and reassessment at potassium 5.2",
+      "Dapagliflozin choices compare doses/frequencies and indication-specific renal thresholds; orthostasis question uses four medication names with pulse, potassium and absence of loop exposure specified",
+      "ACE inhibitor question now compares continued monitoring, interruption, dose reduction and ARB substitution; DIAMOND options now distinguish endpoints and run-in design rather than implausible universal prescribing claims",
+      "Remission and maintenance-diuretic alternatives now compare realistic de-escalation strategies; torsemide survival claim checked against original TRANSFORM-HF report",
+      "Hydralazine/nitrate question compares actual vasodilator combinations; iron question compares routes and plausible deferral strategies with deficiency criteria retained",
+      "AF cardiomyopathy alternatives compare rate strategy, stricter rate target and ablate/pace; ASV alternatives test primary endpoint, later trial and guideline disagreement",
+      "DELIVER choices distinguish mortality, first-event versus recurrent-event analysis and urgent visits; finerenone options now all compare plausible starting/target-dose pairs with balanced wording",
+      "Obesity trials now test competing endpoint assignments; persistent HFpEF limitation now specifies adequate rate and volume control and compares rehabilitation with actual drug strategies",
+      "ICD options compare permanent, resynchronization, wearable and deferred strategies; advanced referral options compare realistic optimization, inotrope and renal-workup sequences",
+      "CPET question compares close absolute thresholds with beta-blocker attribution; LVAD question replaces a caregiver giveaway with a competing hemodynamic finding",
+      "Palliative alternatives now compare concrete care pathways; decompensation workup compares CTPA, angiography and biomarker-led assessment with broad immediate cardiac evaluation",
+      "ADVOR alternatives distinguish actual dose/route and endpoint rather than extreme eligibility claims; creatinine question compares temporary pause, ultrafiltration and inotropy with continued monitored decongestion",
+      "Routine inotrope options now compare concrete strategies without universal wording; STRONG-HF options compare plausible follow-up schedules and biomarker-guided management",
+      "Normotensive shock choices compare actual physiological diagnoses; invasive monitoring question compares four clinical monitoring approaches without sole-guide giveaways",
+      "Perfusion reassessment options compare actual next interventions; RV support options now use short device descriptions with no obligatory/equivalent wording clues",
+      "Three support-trial questions now distinguish actual comparators, endpoints, safety results and nonrandomized timing rather than blanket device claims",
+      "Final flagged options revised: ECMO distention compares actual support interventions; bridge decision compares realistic destinations rather than unmonitored removal or indefinite support"
+    ],
+    "remainingPriorityRevisions": []
+  },
+  "finalChecks": {
+    "status": "passed",
+    "remaining": [],
+    "explanationsRead": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ],
+    "findings": [
+      "Question 5 updated to refer to the correct pressure-pattern option rather than a measurement no longer supplied in the revised stem",
+      "Question 7 needs a more complete criteria table to make the HFA-PEFF explanation independently useful",
+      "HFA-PEFF criteria-table gap addressed using original consensus PDF",
+      "Explanations 21-40 checked against revised stems; added required subtle dose/threshold highlighting to selected prescribing and CPET explanations",
+      "Explanations 41-65 read and checked; SCAI stage comparison table and selected dose/threshold highlights added without marking options"
+    ],
+    "coverageMapping": "65 unique decisions mapped to final questions in section order",
+    "runtimeSourceComparison": "passed",
+    "preservedOtherBanks": 17,
+    "installedProjectChapters": 18,
+    "installedProjectQuestions": 897
+  }
+}

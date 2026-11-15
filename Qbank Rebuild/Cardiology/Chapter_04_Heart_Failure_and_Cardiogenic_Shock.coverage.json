@@ -1,0 +1,504 @@
+{
+  "subject": "Cardiology",
+  "chapterNumber": 4,
+  "chapter": "Chapter_04_Heart_Failure_and_Cardiogenic_Shock",
+  "status": "installed_verified",
+  "countPolicy": "Provisional coverage-driven distinct clinical decisions; revise gaps and duplication, not official examination weights.",
+  "plannedQuestions": 65,
+  "authoredQuestions": 65,
+  "sections": [
+    {
+      "section": "Definition, classification and diagnosis",
+      "questions": 8,
+      "decisions": [
+        "Classify EF using the explicitly named ESC 2026 versus AHA 2022 framework",
+        "Distinguish improved EF from newly diagnosed preserved-EF HF",
+        "Distinguish pre-HF structural disease from symptomatic HF stages",
+        "Interpret natriuretic peptides using acute versus nonacute and patient modifiers",
+        "Establish HFpEF using objective filling-pressure evidence",
+        "Use H2FPEF clinical probability without treating it as definitive confirmation",
+        "Apply HFA-PEFF scoring and select functional testing for uncertainty",
+        "Select etiological investigation beyond the initial HF syndrome label"
+      ]
+    },
+    {
+      "section": "Foundational treatment and safe prescribing",
+      "questions": 12,
+      "decisions": [
+        "Initiate complementary foundational therapies without waiting for maximal sequential titration",
+        "Switch ACE inhibitor to ARNI with washout and angioedema precautions",
+        "Prescribe ARNI starting and target doses using blood pressure and prior therapy",
+        "Select evidence-based beta blockade and initiate only after stabilization",
+        "Use MRA with renal and potassium eligibility and laboratory monitoring",
+        "Start SGLT2 inhibition for HF independent of diabetes with safety counseling",
+        "Manage hypotension without prematurely withdrawing all prognostic treatment",
+        "Interpret a creatinine rise during decongestion or renin–angiotensin treatment",
+        "Manage hyperkalemia while preserving indicated therapy when feasible",
+        "Continue treatment after EF improvement and interpret withdrawal evidence",
+        "Distinguish loop-diuretic symptom control from outcome-modifying therapy",
+        "Recognize medications that worsen HF or interact with its treatment"
+      ]
+    },
+    {
+      "section": "Additional therapy, comorbidity and preserved EF",
+      "questions": 12,
+      "decisions": [
+        "Select ivabradine by rhythm rate EF and background beta blockade",
+        "Use hydralazine–isosorbide dinitrate in a defined eligible setting",
+        "Select digoxin with level renal function and interaction monitoring",
+        "Interpret contemporary digitoxin evidence without conflating glycoside regimens",
+        "Select vericiguat in worsening HF using trial population and limitations",
+        "Diagnose iron deficiency and select intravenous iron using current evidence",
+        "Treat HF-associated AF with appropriate rhythm rate and anticoagulation decisions",
+        "Distinguish sleep apnea management from harmful extrapolation of ventilation trials",
+        "Use SGLT2 evidence in preserved EF without asserting an isolated mortality effect",
+        "Interpret finerenone evidence and prescribe with renal potassium safeguards",
+        "Use obesity-directed semaglutide or tirzepatide evidence in the studied phenotype",
+        "Treat HFpEF hypertension congestion and comorbidities without universal nitrate claims"
+      ]
+    },
+    {
+      "section": "Devices and advanced heart failure",
+      "questions": 8,
+      "decisions": [
+        "Select primary-prevention ICD using EF duration prognosis and etiology",
+        "Select CRT using rhythm QRS morphology duration and EF",
+        "Address AF or high ventricular pacing burden in resynchronization planning",
+        "Identify advanced HF referral triggers before irreversible organ injury",
+        "Use exercise capacity and hemodynamics in transplant evaluation",
+        "Assess durable LVAD candidacy including RV and noncardiac limitations",
+        "Distinguish bridge-to-transplant from destination therapy and recovery strategies",
+        "Provide shared decision-making and palliative care alongside active HF treatment"
+      ]
+    },
+    {
+      "section": "Decompensated heart failure",
+      "questions": 10,
+      "decisions": [
+        "Identify precipitants and urgent reversible causes of decompensation",
+        "Classify congestion and perfusion rather than relying only on blood pressure",
+        "Select oxygen noninvasive ventilation and airway support by respiratory status",
+        "Prescribe initial intravenous loop diuretic and assess early response",
+        "Escalate resistant congestion with sequential nephron blockade and monitoring",
+        "Interpret acetazolamide ADVOR eligibility and endpoint",
+        "Use vasodilators for hypertensive pulmonary edema with pressure safeguards",
+        "Distinguish persistent congestion from isolated creatinine change during treatment",
+        "Avoid routine inotropes in adequately perfused decompensation",
+        "Plan predischarge optimization and early follow-up using STRONG-HF evidence"
+      ]
+    },
+    {
+      "section": "Cardiogenic shock",
+      "questions": 15,
+      "decisions": [
+        "Recognize hypoperfusion without requiring profound hypotension",
+        "Stage shock using an explicitly identified contemporary SCAI framework",
+        "Use serial lactate urine output and organ trends to assess trajectory",
+        "Select invasive hemodynamics when phenotype and therapy remain uncertain",
+        "Differentiate LV RV biventricular and mixed vasodilatory shock",
+        "Choose norepinephrine versus alternative vasopressors in a defined setting",
+        "Choose dobutamine versus milrinone using renal function rhythm and pressure",
+        "Interpret DOREMI without asserting universal inotrope superiority",
+        "Activate shock-team transfer and cause-directed treatment early",
+        "Interpret routine IABP evidence versus selected mechanical complications",
+        "Interpret ECLS-SHOCK and select VA-ECMO without universal early-use claims",
+        "Interpret DanGer-Shock eligibility benefit and device-related harms",
+        "Select temporary support for the failing chamber and assess contraindications",
+        "Recognize VA-ECMO LV distention and the need for unloading assessment",
+        "Reassess temporary support as bridge to recovery decision or durable therapy"
+      ]
+    }
+  ],
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "EF Classification Must Specify the Guideline Framework",
+      "decision": "Classify EF using the explicitly named ESC 2026 versus AHA 2022 framework",
+      "section": "Definition, classification and diagnosis"
+    },
+    {
+      "question": 2,
+      "title": "Improved EF Describes a Trajectory Rather Than Cure",
+      "decision": "Distinguish improved EF from newly diagnosed preserved-EF HF",
+      "section": "Definition, classification and diagnosis"
+    },
+    {
+      "question": 3,
+      "title": "Asymptomatic Structural Disease Is Pre-Heart Failure",
+      "decision": "Distinguish pre-HF structural disease from symptomatic HF stages",
+      "section": "Definition, classification and diagnosis"
+    },
+    {
+      "question": 4,
+      "title": "A Low Natriuretic Peptide Does Not Override High Clinical Suspicion",
+      "decision": "Interpret natriuretic peptides using acute versus nonacute and patient modifiers",
+      "section": "Definition, classification and diagnosis"
+    },
+    {
+      "question": 5,
+      "title": "Exercise Filling Pressure Can Establish HFpEF Despite Normal Resting Pressure",
+      "decision": "Establish HFpEF using objective filling-pressure evidence",
+      "section": "Definition, classification and diagnosis"
+    },
+    {
+      "question": 6,
+      "title": "H2FPEF Estimates Probability Rather Than Replacing Clinical Assessment",
+      "decision": "Use H2FPEF clinical probability without treating it as definitive confirmation",
+      "section": "Definition, classification and diagnosis"
+    },
+    {
+      "question": 7,
+      "title": "Intermediate HFA–PEFF Results Require Functional Assessment",
+      "decision": "Apply HFA-PEFF scoring and select functional testing for uncertainty",
+      "section": "Definition, classification and diagnosis"
+    },
+    {
+      "question": 8,
+      "title": "Investigate the Cause of Newly Identified LV Dysfunction",
+      "decision": "Select etiological investigation beyond the initial HF syndrome label",
+      "section": "Definition, classification and diagnosis"
+    },
+    {
+      "question": 9,
+      "title": "Establish Complementary Therapies Before Prolonged Single-Drug Titration",
+      "decision": "Initiate complementary foundational therapies without waiting for maximal sequential titration",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 10,
+      "title": "ACE Inhibitor Washout Before Sacubitril/Valsartan",
+      "decision": "Switch ACE inhibitor to ARNI with washout and angioedema precautions",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 11,
+      "title": "Select the Reduced ARNI Starting Dose for Minimal Prior RAS Exposure",
+      "decision": "Prescribe ARNI starting and target doses using blood pressure and prior therapy",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 12,
+      "title": "Use an Evidence-Based Beta Blocker After Compensation",
+      "decision": "Select evidence-based beta blockade and initiate only after stabilization",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 13,
+      "title": "MRA Initiation Requires Both Renal and Potassium Eligibility",
+      "decision": "Use MRA with renal and potassium eligibility and laboratory monitoring",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 14,
+      "title": "SGLT2 Treatment for HF Does Not Require Diabetes",
+      "decision": "Start SGLT2 inhibition for HF independent of diabetes with safety counseling",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 15,
+      "title": "Review Nonessential Pressure-Lowering Treatment Before Abandoning HF Therapy",
+      "decision": "Manage hypotension without prematurely withdrawing all prognostic treatment",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 16,
+      "title": "A Modest Creatinine Rise After ACE Inhibition Requires Context",
+      "decision": "Interpret a creatinine rise during decongestion or renin–angiotensin treatment",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 17,
+      "title": "Potassium Control and Proven HF Outcome Benefit Are Different Endpoints",
+      "decision": "Manage hyperkalemia while preserving indicated therapy when feasible",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 18,
+      "title": "TRED-HF Supports Continued Therapy After Remission",
+      "decision": "Continue treatment after EF improvement and interpret withdrawal evidence",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 19,
+      "title": "Loop Diuretics Are Titrated to Congestion Rather Than a Prognostic Target Dose",
+      "decision": "Distinguish loop-diuretic symptom control from outcome-modifying therapy",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 20,
+      "title": "NSAID Exposure Can Blunt Diuresis and Precipitate Congestion",
+      "decision": "Recognize medications that worsen HF or interact with its treatment",
+      "section": "Foundational treatment and safe prescribing"
+    },
+    {
+      "question": 21,
+      "title": "Ivabradine Requires Sinus Rhythm and Residual Tachycardia",
+      "decision": "Select ivabradine by rhythm rate EF and background beta blockade",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 22,
+      "title": "Hydralazine–Isosorbide Dinitrate Has a Defined Add-On Evidence Base",
+      "decision": "Use hydralazine–isosorbide dinitrate in a defined eligible setting",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 23,
+      "title": "Digoxin Exposure Must Be Reassessed When Kidney Function Declines",
+      "decision": "Select digoxin with level renal function and interaction monitoring",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 24,
+      "title": "DIGIT-HF Tested Digitoxin Rather Than Interchangeable Glycoside Treatment",
+      "decision": "Interpret contemporary digitoxin evidence without conflating glycoside regimens",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 25,
+      "title": "Vericiguat Is an Additional Option After Worsening HF",
+      "decision": "Select vericiguat in worsening HF using trial population and limitations",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 26,
+      "title": "Iron Deficiency in HF Can Exist Without Anemia",
+      "decision": "Diagnose iron deficiency and select intravenous iron using current evidence",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 27,
+      "title": "New AF With LV Dysfunction Warrants Early Rhythm-Control Assessment",
+      "decision": "Treat HF-associated AF with appropriate rhythm rate and anticoagulation decisions",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 28,
+      "title": "Sleep Apnea Event Suppression Does Not Establish Cardiovascular Benefit",
+      "decision": "Distinguish sleep apnea management from harmful extrapolation of ventilation trials",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 29,
+      "title": "DELIVER Supports HF Treatment Beyond the Reduced-EF Trial Population",
+      "decision": "Use SGLT2 evidence in preserved EF without asserting an isolated mortality effect",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 30,
+      "title": "Finerenone Uses an HF-Specific Renal-Based Dose Plan",
+      "decision": "Interpret finerenone evidence and prescribe with renal potassium safeguards",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 31,
+      "title": "Obesity-Directed HFpEF Trials Have Different Primary Outcomes",
+      "decision": "Use obesity-directed semaglutide or tirzepatide evidence in the studied phenotype",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 32,
+      "title": "HFpEF Management Requires Phenotype and Comorbidity Treatment",
+      "decision": "Treat HFpEF hypertension congestion and comorbidities without universal nitrate claims",
+      "section": "Additional therapy, comorbidity and preserved EF"
+    },
+    {
+      "question": 33,
+      "title": "Primary-Prevention ICD Assessment After Sustained Medical Treatment",
+      "decision": "Select primary-prevention ICD using EF duration prognosis and etiology",
+      "section": "Devices and advanced heart failure"
+    },
+    {
+      "question": 34,
+      "title": "Wide LBBB Identifies a Strong Resynchronization Indication",
+      "decision": "Select CRT using rhythm QRS morphology duration and EF",
+      "section": "Devices and advanced heart failure"
+    },
+    {
+      "question": 35,
+      "title": "AF Can Prevent Effective Delivery of CRT",
+      "decision": "Address AF or high ventricular pacing burden in resynchronization planning",
+      "section": "Devices and advanced heart failure"
+    },
+    {
+      "question": 36,
+      "title": "Advanced-HF Referral Should Precede Irreversible Organ Failure",
+      "decision": "Identify advanced HF referral triggers before irreversible organ injury",
+      "section": "Devices and advanced heart failure"
+    },
+    {
+      "question": 37,
+      "title": "CPET Supports Transplant Evaluation Without Acting as a Standalone Listing Rule",
+      "decision": "Use exercise capacity and hemodynamics in transplant evaluation",
+      "section": "Devices and advanced heart failure"
+    },
+    {
+      "question": 38,
+      "title": "An LVAD Requires Adequate Right-Sided Delivery of Blood",
+      "decision": "Assess durable LVAD candidacy including RV and noncardiac limitations",
+      "section": "Devices and advanced heart failure"
+    },
+    {
+      "question": 39,
+      "title": "Support Intent Must Be Defined and Reassessed",
+      "decision": "Distinguish bridge-to-transplant from destination therapy and recovery strategies",
+      "section": "Devices and advanced heart failure"
+    },
+    {
+      "question": 40,
+      "title": "Palliative Care Can Accompany Transplant or LVAD Evaluation",
+      "decision": "Provide shared decision-making and palliative care alongside active HF treatment",
+      "section": "Devices and advanced heart failure"
+    },
+    {
+      "question": 41,
+      "title": "Treat Decompensation While Seeking Its Urgent Precipitant",
+      "decision": "Identify precipitants and urgent reversible causes of decompensation",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 42,
+      "title": "Congestion and Perfusion Are Separate Assessment Axes",
+      "decision": "Classify congestion and perfusion rather than relying only on blood pressure",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 43,
+      "title": "Early NIV for Hypoxemic Cardiogenic Pulmonary Edema",
+      "decision": "Select oxygen noninvasive ventilation and airway support by respiratory status",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 44,
+      "title": "Use Prior Loop Exposure to Plan Initial IV Decongestion",
+      "decision": "Prescribe initial intravenous loop diuretic and assess early response",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 45,
+      "title": "Persistent Congestion After Adequate Loop Escalation Warrants Selected Combination Therapy",
+      "decision": "Escalate resistant congestion with sequential nephron blockade and monitoring",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 46,
+      "title": "ADVOR Demonstrated Earlier Decongestion With Added Acetazolamide",
+      "decision": "Interpret acetazolamide ADVOR eligibility and endpoint",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 47,
+      "title": "Titrated Vasodilation for Hypertensive Pulmonary Edema",
+      "decision": "Use vasodilators for hypertensive pulmonary edema with pressure safeguards",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 48,
+      "title": "Persistent Congestion Changes the Interpretation of a Small Creatinine Rise",
+      "decision": "Distinguish persistent congestion from isolated creatinine change during treatment",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 49,
+      "title": "Congestion Alone Does Not Establish an Inotrope Indication",
+      "decision": "Avoid routine inotropes in adequately perfused decompensation",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 50,
+      "title": "STRONG-HF Tested Rapid Optimization Together With Close Follow-Up",
+      "decision": "Plan predischarge optimization and early follow-up using STRONG-HF evidence",
+      "section": "Decompensated heart failure"
+    },
+    {
+      "question": 51,
+      "title": "Preserved Arterial Pressure Does Not Exclude Cardiogenic Hypoperfusion",
+      "decision": "Recognize hypoperfusion without requiring profound hypotension",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 52,
+      "title": "SCAI Stage D Describes Failure of Initial Support to Restore Perfusion",
+      "decision": "Stage shock using an explicitly identified contemporary SCAI framework",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 53,
+      "title": "Assess Shock Response With Converging Perfusion Trends",
+      "decision": "Use serial lactate urine output and organ trends to assess trajectory",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 54,
+      "title": "Use Invasive Hemodynamics When the Shock Phenotype Remains Uncertain",
+      "decision": "Select invasive hemodynamics when phenotype and therapy remain uncertain",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 55,
+      "title": "Recognize Combined Pump Failure and Vasodilation",
+      "decision": "Differentiate LV RV biventricular and mixed vasodilatory shock",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 56,
+      "title": "Choose Norepinephrine for Hypotensive Cardiogenic Shock With Tachycardia",
+      "decision": "Choose norepinephrine versus alternative vasopressors in a defined setting",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 57,
+      "title": "Select an Inotrope With Renal Function and Titration in Mind",
+      "decision": "Choose dobutamine versus milrinone using renal function rhythm and pressure",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 58,
+      "title": "DOREMI Did Not Establish Superiority or Equivalence",
+      "decision": "Interpret DOREMI without asserting universal inotrope superiority",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 59,
+      "title": "Contact the Regional Shock Center Before Rescue Options Are Exhausted",
+      "decision": "Activate shock-team transfer and cause-directed treatment early",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 60,
+      "title": "Separate Routine IABP Use From Selected Bridging Indications",
+      "decision": "Interpret routine IABP evidence versus selected mechanical complications",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 61,
+      "title": "ECLS-SHOCK Does Not Support Routine Early VA-ECMO for Every Infarct-Related Shock",
+      "decision": "Interpret ECLS-SHOCK and select VA-ECMO without universal early-use claims",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 62,
+      "title": "Apply DanGer-Shock to Its Selected STEMI Population",
+      "decision": "Interpret DanGer-Shock eligibility benefit and device-related harms",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 63,
+      "title": "Match Temporary Support to the Failing Chamber",
+      "decision": "Select temporary support for the failing chamber and assess contraindications",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 64,
+      "title": "Recognize LV Distention During Peripheral VA-ECMO",
+      "decision": "Recognize VA-ECMO LV distention and the need for unloading assessment",
+      "section": "Cardiogenic shock"
+    },
+    {
+      "question": 65,
+      "title": "Define and Reassess the Destination of Temporary Support",
+      "decision": "Reassess temporary support as bridge to recovery decision or durable therapy",
+      "section": "Cardiogenic shock"
+    }
+  ]
+}

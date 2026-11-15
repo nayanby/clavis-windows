@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_04_Heart_Failure_and_Cardiogenic_Shock",
+  "currentChapter": "Cardiology Chapter_05_Bradyarrhythmias_Conduction_Disorders_and_Pacemakers",
   "chapters": [
     {
       "subject": "Neurology",
@@ -554,7 +554,29 @@
       "subject": "Cardiology",
       "chapter": 4,
       "document": "Chapter_04_Heart_Failure_and_Cardiogenic_Shock",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Cardiology/Chapter_04_Heart_Failure_and_Cardiogenic_Shock.json",
+      "validation": {
+        "questions": 65,
+        "answerDistribution": {
+          "A": 17,
+          "B": 16,
+          "C": 16,
+          "D": 16
+        },
+        "minimumExplanationWords": 255,
+        "distractorRationales": 192,
+        "questionStyles": {
+          "direct": 10,
+          "clinical_scenario": 55
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 65,
+      "plannedQuestions": 65,
+      "installedSha256": "c5ccff3336bf995fd5f0be6e1a77efe0e1523f8a04abf2c4d5bfaa6fc37f63d3",
+      "coverageMap": "Cardiology/Chapter_04_Heart_Failure_and_Cardiogenic_Shock.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Cardiology",
