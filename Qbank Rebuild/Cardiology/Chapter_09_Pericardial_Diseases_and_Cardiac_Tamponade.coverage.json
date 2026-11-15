@@ -1,0 +1,433 @@
+{
+  "subject": "Cardiology",
+  "chapterNumber": 9,
+  "chapter": "Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade",
+  "status": "installed_verified",
+  "countPolicy": "Coverage-driven distinct decisions; not official examination weights.",
+  "plannedQuestions": 54,
+  "authoredQuestions": 54,
+  "sections": [
+    {
+      "section": "Diagnosis, investigations and risk assessment",
+      "questions": 7,
+      "decisions": [
+        "Apply the named 2025 diagnostic-certainty framework without confusing inflammation with myocardial injury",
+        "Differentiate pericardial ECG changes from coronary occlusion and early repolarization",
+        "Select first-line imaging and interpret a normal echocardiogram appropriately",
+        "Use CMR to assess pericardial inflammation while recognizing residual enhancement",
+        "Recognize high-risk features requiring admission and directed etiological assessment",
+        "Choose targeted etiological testing rather than indiscriminate viral serology",
+        "Distinguish myopericarditis from predominant myocarditis using ventricular function"
+      ]
+    },
+    {
+      "section": "Initial treatment and safe follow-up",
+      "questions": 8,
+      "decisions": [
+        "Prescribe full anti-inflammatory aspirin or NSAID therapy with gastroprotection and colchicine",
+        "Use weight-adjusted colchicine and the first-episode evidence-supported duration",
+        "Recognize dangerous colchicine interactions and toxicity in organ impairment",
+        "Select aspirin-based treatment for pericarditis after myocardial infarction",
+        "Select low-to-moderate corticosteroids only in an appropriate clinical setting",
+        "Taper corticosteroids slowly after remission and avoid abrupt withdrawal at the vulnerable dose range",
+        "Base return to activity on remission and accompanying myocardial involvement",
+        "Adapt anti-inflammatory treatment to pregnancy and lactation"
+      ]
+    },
+    {
+      "section": "Recurrent and treatment-resistant pericarditis",
+      "questions": 8,
+      "decisions": [
+        "Distinguish recurrence after remission from an incessant disease course",
+        "Treat a first recurrence with adequate anti-inflammatory therapy and prolonged colchicine",
+        "Reassess a flare during corticosteroid taper without automatically escalating steroid exposure",
+        "Select IL-1 treatment using inflammatory phenotype and CMR when CRP is normal",
+        "Interpret RHAPSODY as a randomized-withdrawal rilonacept trial",
+        "Interpret AIRTRIP in colchicine-resistant corticosteroid-dependent disease",
+        "Prescribe rilonacept correctly and perform biologic pretreatment and safety assessment",
+        "Discuss remission durability and relapse risk after withdrawing IL-1 treatment"
+      ]
+    },
+    {
+      "section": "Pericardial effusion and cause-directed management",
+      "questions": 9,
+      "decisions": [
+        "Measure effusion size without equating anatomical size with tamponade",
+        "Treat a noninflammatory effusion according to its systemic cause",
+        "Choose surveillance for an appropriately investigated asymptomatic chronic idiopathic large effusion",
+        "Select microbiological and tissue investigations for suspected tuberculous pericarditis",
+        "Treat tuberculous pericarditis and interpret the HIV-dependent adjunctive steroid balance",
+        "Drain and treat purulent pericarditis promptly",
+        "Prioritize dialysis-based treatment in uremic or dialysis-associated pericarditis",
+        "Investigate malignant effusion and choose a recurrence-control drainage strategy",
+        "Interpret pericardial-fluid tests without transferring pleural Light criteria uncritically"
+      ]
+    },
+    {
+      "section": "Cardiac tamponade and drainage decisions",
+      "questions": 11,
+      "decisions": [
+        "Interpret pulsus paradoxus and its important limitations",
+        "Interpret electrical alternans in a large effusion and distinguish electrical from mechanical alternation",
+        "Identify the phase and meaning of right atrial and right ventricular collapse",
+        "Interpret respiratory Doppler changes in the appropriate ventilation context",
+        "Use inferior vena caval plethora as a sensitive but nonspecific supporting finding",
+        "Recognize atypical tamponade in severe pulmonary hypertension",
+        "Recognize low-pressure tamponade without classic venous distension",
+        "Investigate regional postoperative compression when routine transthoracic views are unrevealing",
+        "Sequence urgent drainage and temporary hemodynamic support safely",
+        "Choose surgical management for suspected aortic-dissection hemopericardium",
+        "Prevent and recognize complications of drainage including pericardial decompression syndrome"
+      ]
+    },
+    {
+      "section": "Constrictive and effusive-constrictive disease",
+      "questions": 8,
+      "decisions": [
+        "Recognize the clinical physiology of constriction and distinguish it from tamponade",
+        "Integrate septal shift, medial annular velocity and hepatic-vein Doppler",
+        "Explain annulus reversus and the limitation of E/e-prime in constriction",
+        "Recognize that normal pericardial thickness does not exclude constrictive physiology",
+        "Select simultaneous invasive hemodynamics for an unresolved physiological diagnosis",
+        "Diagnose effusive-constrictive disease after adequate effusion drainage",
+        "Identify potentially reversible inflammatory constriction and reassess treatment response",
+        "Select pericardiectomy for persistent significant irreversible constriction"
+      ]
+    },
+    {
+      "section": "Post-cardiac injury syndromes",
+      "questions": 3,
+      "decisions": [
+        "Apply the inflammatory criteria for a post-cardiac injury syndrome",
+        "Interpret perioperative colchicine prevention evidence and gastrointestinal harms",
+        "Distinguish an isolated postoperative effusion from an inflammatory syndrome"
+      ]
+    }
+  ],
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Diagnostic Certainty in Acute Pericarditis",
+      "decision": "Apply the named 2025 diagnostic-certainty framework without confusing inflammation with myocardial injury",
+      "section": "Diagnosis, investigations and risk assessment"
+    },
+    {
+      "question": 2,
+      "title": "Pericardial ECG Changes and Coronary Mimics",
+      "decision": "Differentiate pericardial ECG changes from coronary occlusion and early repolarization",
+      "section": "Diagnosis, investigations and risk assessment"
+    },
+    {
+      "question": 3,
+      "title": "First-Line Echocardiography in Suspected Pericardial Disease",
+      "decision": "Select first-line imaging and interpret a normal echocardiogram appropriately",
+      "section": "Diagnosis, investigations and risk assessment"
+    },
+    {
+      "question": 4,
+      "title": "CMR Evidence of Pericardial Inflammation",
+      "decision": "Use CMR to assess pericardial inflammation while recognizing residual enhancement",
+      "section": "Diagnosis, investigations and risk assessment"
+    },
+    {
+      "question": 5,
+      "title": "Admission and Etiological Evaluation in Acute Pericarditis",
+      "decision": "Recognize high-risk features requiring admission and directed etiological assessment",
+      "section": "Diagnosis, investigations and risk assessment"
+    },
+    {
+      "question": 6,
+      "title": "Directed Etiological Testing in Pericarditis",
+      "decision": "Choose targeted etiological testing rather than indiscriminate viral serology",
+      "section": "Diagnosis, investigations and risk assessment"
+    },
+    {
+      "question": 7,
+      "title": "Myopericarditis and Predominant Myocardial Disease",
+      "decision": "Distinguish myopericarditis from predominant myocarditis using ventricular function",
+      "section": "Diagnosis, investigations and risk assessment"
+    },
+    {
+      "question": 8,
+      "title": "Initial Anti-Inflammatory Treatment of Acute Pericarditis",
+      "decision": "Prescribe full anti-inflammatory aspirin or NSAID therapy with gastroprotection and colchicine",
+      "section": "Initial treatment and safe follow-up"
+    },
+    {
+      "question": 9,
+      "title": "Colchicine Dose, Duration and the ICAP Trial",
+      "decision": "Use weight-adjusted colchicine and the first-episode evidence-supported duration",
+      "section": "Initial treatment and safe follow-up"
+    },
+    {
+      "question": 10,
+      "title": "Colchicine, Clarithromycin and Impaired Clearance",
+      "decision": "Recognize dangerous colchicine interactions and toxicity in organ impairment",
+      "section": "Initial treatment and safe follow-up"
+    },
+    {
+      "question": 11,
+      "title": "Pericarditis After Myocardial Infarction",
+      "decision": "Select aspirin-based treatment for pericarditis after myocardial infarction",
+      "section": "Initial treatment and safe follow-up"
+    },
+    {
+      "question": 12,
+      "title": "Selecting Corticosteroids for a Specific Pericarditis Setting",
+      "decision": "Select low-to-moderate corticosteroids only in an appropriate clinical setting",
+      "section": "Initial treatment and safe follow-up"
+    },
+    {
+      "question": 13,
+      "title": "Slow Prednisone Taper at the Recurrence-Prone Range",
+      "decision": "Taper corticosteroids slowly after remission and avoid abrupt withdrawal at the vulnerable dose range",
+      "section": "Initial treatment and safe follow-up"
+    },
+    {
+      "question": 14,
+      "title": "Return to Activity After Isolated Pericarditis",
+      "decision": "Base return to activity on remission and accompanying myocardial involvement",
+      "section": "Initial treatment and safe follow-up"
+    },
+    {
+      "question": 15,
+      "title": "Active Pericarditis in Late Pregnancy",
+      "decision": "Adapt anti-inflammatory treatment to pregnancy and lactation",
+      "section": "Initial treatment and safe follow-up"
+    },
+    {
+      "question": 16,
+      "title": "Recurrent Versus Incessant Pericarditis",
+      "decision": "Distinguish recurrence after remission from an incessant disease course",
+      "section": "Recurrent and treatment-resistant pericarditis"
+    },
+    {
+      "question": 17,
+      "title": "Treating a First Documented Recurrence",
+      "decision": "Treat a first recurrence with adequate anti-inflammatory therapy and prolonged colchicine",
+      "section": "Recurrent and treatment-resistant pericarditis"
+    },
+    {
+      "question": 18,
+      "title": "An Inflammatory Flare During Prednisone Taper",
+      "decision": "Reassess a flare during corticosteroid taper without automatically escalating steroid exposure",
+      "section": "Recurrent and treatment-resistant pericarditis"
+    },
+    {
+      "question": 19,
+      "title": "IL-1 Treatment When CRP Is Normal",
+      "decision": "Select IL-1 treatment using inflammatory phenotype and CMR when CRP is normal",
+      "section": "Recurrent and treatment-resistant pericarditis"
+    },
+    {
+      "question": 20,
+      "title": "RHAPSODY: Interpreting a Randomized-Withdrawal Trial",
+      "decision": "Interpret RHAPSODY as a randomized-withdrawal rilonacept trial",
+      "section": "Recurrent and treatment-resistant pericarditis"
+    },
+    {
+      "question": 21,
+      "title": "AIRTRIP and Anakinra in Resistant Recurrent Pericarditis",
+      "decision": "Interpret AIRTRIP in colchicine-resistant corticosteroid-dependent disease",
+      "section": "Recurrent and treatment-resistant pericarditis"
+    },
+    {
+      "question": 22,
+      "title": "Rilonacept Loading, Maintenance and Safety",
+      "decision": "Prescribe rilonacept correctly and perform biologic pretreatment and safety assessment",
+      "section": "Recurrent and treatment-resistant pericarditis"
+    },
+    {
+      "question": 23,
+      "title": "Remission on IL-1 Treatment and Withdrawal Risk",
+      "decision": "Discuss remission durability and relapse risk after withdrawing IL-1 treatment",
+      "section": "Recurrent and treatment-resistant pericarditis"
+    },
+    {
+      "question": 24,
+      "title": "Echocardiographic Effusion Size and Hemodynamic Significance",
+      "decision": "Measure effusion size without equating anatomical size with tamponade",
+      "section": "Pericardial effusion and cause-directed management"
+    },
+    {
+      "question": 25,
+      "title": "A Noninflammatory Effusion in Severe Hypothyroidism",
+      "decision": "Treat a noninflammatory effusion according to its systemic cause",
+      "section": "Pericardial effusion and cause-directed management"
+    },
+    {
+      "question": 26,
+      "title": "A Chronic Large Idiopathic Effusion Without Inflammation",
+      "decision": "Choose surveillance for an appropriately investigated asymptomatic chronic idiopathic large effusion",
+      "section": "Pericardial effusion and cause-directed management"
+    },
+    {
+      "question": 27,
+      "title": "Investigating Suspected Tuberculous Pericarditis",
+      "decision": "Select microbiological and tissue investigations for suspected tuberculous pericarditis",
+      "section": "Pericardial effusion and cause-directed management"
+    },
+    {
+      "question": 28,
+      "title": "Tuberculous Pericarditis, HIV and Adjunctive Steroids",
+      "decision": "Treat tuberculous pericarditis and interpret the HIV-dependent adjunctive steroid balance",
+      "section": "Pericardial effusion and cause-directed management"
+    },
+    {
+      "question": 29,
+      "title": "Source Control in Purulent Pericarditis",
+      "decision": "Drain and treat purulent pericarditis promptly",
+      "section": "Pericardial effusion and cause-directed management"
+    },
+    {
+      "question": 30,
+      "title": "Pericarditis After Missed Dialysis",
+      "decision": "Prioritize dialysis-based treatment in uremic or dialysis-associated pericarditis",
+      "section": "Pericardial effusion and cause-directed management"
+    },
+    {
+      "question": 31,
+      "title": "Recurrent Malignant Pericardial Effusion",
+      "decision": "Investigate malignant effusion and choose a recurrence-control drainage strategy",
+      "section": "Pericardial effusion and cause-directed management"
+    },
+    {
+      "question": 32,
+      "title": "Interpretation of Pericardial Fluid Biochemistry",
+      "decision": "Interpret pericardial-fluid tests without transferring pleural Light criteria uncritically",
+      "section": "Pericardial effusion and cause-directed management"
+    },
+    {
+      "question": 33,
+      "title": "Pulsus Paradoxus and Its Limitations",
+      "decision": "Interpret pulsus paradoxus and its important limitations",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 34,
+      "title": "Electrical Alternans in a Large Pericardial Effusion",
+      "decision": "Interpret electrical alternans in a large effusion and distinguish electrical from mechanical alternation",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 35,
+      "title": "Timing of Right-Sided Chamber Collapse",
+      "decision": "Identify the phase and meaning of right atrial and right ventricular collapse",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 36,
+      "title": "Respiratory Doppler Variation in Tamponade",
+      "decision": "Interpret respiratory Doppler changes in the appropriate ventilation context",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 37,
+      "title": "Inferior Vena Caval Plethora: A Supporting Sign",
+      "decision": "Use inferior vena caval plethora as a sensitive but nonspecific supporting finding",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 38,
+      "title": "Tamponade Assessment in Severe Pulmonary Hypertension",
+      "decision": "Recognize atypical tamponade in severe pulmonary hypertension",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 39,
+      "title": "Low-Pressure Tamponade After Volume Depletion",
+      "decision": "Recognize low-pressure tamponade without classic venous distension",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 40,
+      "title": "Regional Postoperative Tamponade With Limited TTE Views",
+      "decision": "Investigate regional postoperative compression when routine transthoracic views are unrevealing",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 41,
+      "title": "Drainage and Airway Sequencing in Critical Tamponade",
+      "decision": "Sequence urgent drainage and temporary hemodynamic support safely",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 42,
+      "title": "Aortic Dissection With Hemopericardium",
+      "decision": "Choose surgical management for suspected aortic-dissection hemopericardium",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 43,
+      "title": "Pericardial Decompression Syndrome",
+      "decision": "Prevent and recognize complications of drainage including pericardial decompression syndrome",
+      "section": "Cardiac tamponade and drainage decisions"
+    },
+    {
+      "question": 44,
+      "title": "Clinical Physiology of Constrictive Pericarditis",
+      "decision": "Recognize the clinical physiology of constriction and distinguish it from tamponade",
+      "section": "Constrictive and effusive-constrictive disease"
+    },
+    {
+      "question": 45,
+      "title": "Integrated Echocardiographic Criteria for Constriction",
+      "decision": "Integrate septal shift, medial annular velocity and hepatic-vein Doppler",
+      "section": "Constrictive and effusive-constrictive disease"
+    },
+    {
+      "question": 46,
+      "title": "Annulus Reversus and Annulus Paradoxus",
+      "decision": "Explain annulus reversus and the limitation of E/e-prime in constriction",
+      "section": "Constrictive and effusive-constrictive disease"
+    },
+    {
+      "question": 47,
+      "title": "Constrictive Physiology Despite Normal CT Thickness",
+      "decision": "Recognize that normal pericardial thickness does not exclude constrictive physiology",
+      "section": "Constrictive and effusive-constrictive disease"
+    },
+    {
+      "question": 48,
+      "title": "Invasive Assessment When Noninvasive Constriction Testing Is Equivocal",
+      "decision": "Select simultaneous invasive hemodynamics for an unresolved physiological diagnosis",
+      "section": "Constrictive and effusive-constrictive disease"
+    },
+    {
+      "question": 49,
+      "title": "Effusive-Constrictive Pericarditis After Adequate Drainage",
+      "decision": "Diagnose effusive-constrictive disease after adequate effusion drainage",
+      "section": "Constrictive and effusive-constrictive disease"
+    },
+    {
+      "question": 50,
+      "title": "Potentially Transient Inflammatory Constriction",
+      "decision": "Identify potentially reversible inflammatory constriction and reassess treatment response",
+      "section": "Constrictive and effusive-constrictive disease"
+    },
+    {
+      "question": 51,
+      "title": "Pericardiectomy for Persistent Irreversible Constriction",
+      "decision": "Select pericardiectomy for persistent significant irreversible constriction",
+      "section": "Constrictive and effusive-constrictive disease"
+    },
+    {
+      "question": 52,
+      "title": "Post-Cardiac Injury Syndrome After Surgery",
+      "decision": "Apply the inflammatory criteria for a post-cardiac injury syndrome",
+      "section": "Post-cardiac injury syndromes"
+    },
+    {
+      "question": 53,
+      "title": "COPPS-2: Prevention Benefit and Gastrointestinal Harm",
+      "decision": "Interpret perioperative colchicine prevention evidence and gastrointestinal harms",
+      "section": "Post-cardiac injury syndromes"
+    },
+    {
+      "question": 54,
+      "title": "An Isolated Postoperative Effusion Without Inflammation",
+      "decision": "Distinguish an isolated postoperative effusion from an inflammatory syndrome",
+      "section": "Post-cardiac injury syndromes"
+    }
+  ]
+}

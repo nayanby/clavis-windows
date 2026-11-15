@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade",
+  "currentChapter": "Cardiology Chapter_10_Infective_Endocarditis",
   "chapters": [
     {
       "subject": "Neurology",
@@ -694,7 +694,29 @@
       "subject": "Cardiology",
       "chapter": 9,
       "document": "Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Cardiology/Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade.json",
+      "validation": {
+        "questions": 54,
+        "answerDistribution": {
+          "A": 14,
+          "B": 14,
+          "C": 13,
+          "D": 13
+        },
+        "minimumExplanationWords": 352,
+        "distractorRationales": 162,
+        "questionStyles": {
+          "clinical_scenario": 41,
+          "direct": 13
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 54,
+      "plannedQuestions": 54,
+      "installedSha256": "805ad7809d19bd2ea573dcdb71bdc5b72f5939cf0d51d1ce27e6b7c321acb237",
+      "coverageMap": "Cardiology/Chapter_09_Pericardial_Diseases_and_Cardiac_Tamponade.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Cardiology",
