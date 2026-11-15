@@ -1,0 +1,194 @@
+{
+  "chapter": 13,
+  "status": "installed_verified",
+  "draftedQuestions": 48,
+  "plannedQuestions": 48,
+  "installed": true,
+  "sourceChecks": [
+    {
+      "source": "EANO diffuse glioma guidance 2021; EANO-ESMO brain metastasis guidance 2021; IIH consensus 2018",
+      "checked": [
+        "Integrated molecular glioma classification",
+        "Metastasis guideline scope",
+        "IIH pressure must be interpreted with technique and complete clinical evaluation"
+      ],
+      "pending": [
+        "Check newer targeted glioma treatment, molecular classification updates and trials before authoring relevant decisions",
+        "Verify current tumor, genetic and pressure-treatment guidance individually"
+      ]
+    },
+    {
+      "source": "NICE NG99; CAP molecular glioma guideline 2022; EANO 2021; LP consensus 2017",
+      "checked": [
+        "Structural contrast MRI and mass-effect LP safety",
+        "IDH plus whole-arm 1p/19q codeletion defines oligodendroglioma",
+        "Homozygous CDKN2A/B deletion supports grade 4 IDH-mutant astrocytoma"
+      ]
+    },
+    {
+      "source": "CAP biomarker guideline; EANO glioma guidance and molecular tools 2023",
+      "checked": [
+        "Molecular glioblastoma criteria in appropriate adult context",
+        "MGMT as treatment-predictive rather than lineage marker",
+        "Maximal safe resection prioritizes permanent function preservation"
+      ]
+    },
+    {
+      "source": "Stupp trial 2005; FDA approval and vorasidenib label; EANO meningioma/schwannoma guidance",
+      "checked": [
+        "Concurrent/adjuvant TMZ and focal RT doses",
+        "Vorasidenib selected population, adult dose and hepatic monitoring",
+        "Observation versus intervention in incidental meningioma",
+        "Large compressive schwannoma decompression assessment"
+      ],
+      "pending": [
+        "Review INDIGO primary trial and current glioma updates before final editorial signoff"
+      ]
+    },
+    {
+      "source": "EHA-ESMO PCNSL 2024; ASCO-SNO-ASTRO and ASTRO brain metastasis guidance 2022",
+      "checked": [
+        "Avoid prebiopsy steroids when clinically feasible; urgent instability exceptions",
+        "CNS-active HD-MTX backbone with rescue/clearance monitoring",
+        "Symptomatic metastasis local therapy regardless of systemic options",
+        "SRS selection for suitable limited small metastases with surveillance"
+      ]
+    },
+    {
+      "source": "ASCO-SNO-ASTRO; SNO consensus; SNO/EANO ASM guidance; ASCO/SNO steroid endorsement",
+      "checked": [
+        "WBRT cognitive protection eligibility",
+        "Selected asymptomatic systemic-first therapy needs MDT surveillance",
+        "Dexamethasone symptom-based dose and taper",
+        "No routine seizure-naive prophylaxis; perioperative evidence qualification"
+      ],
+      "pending": [
+        "Verify current tumor-specific systemic treatment and primary cognitive-protection trial dosing in editorial review"
+      ]
+    },
+    {
+      "source": "EANO radiation necrosis consensus 2026; ifosfamide label; IIH consensus; papilledema assessment 2026",
+      "checked": [
+        "Multimodal radiation injury/progression assessment",
+        "Drug interruption and differential for ifosfamide encephalopathy",
+        "Vision documentation and BP assessment",
+        "Venography before an idiopathic pressure diagnosis"
+      ],
+      "pending": [
+        "Confirm methylene-blue safety qualifiers against prescribing source before final review"
+      ]
+    },
+    {
+      "source": "IIH consensus 2018; IIH Weight Trial 2021; weight recommendations 2023",
+      "checked": [
+        "Lateral-decubitus relaxed opening-pressure technique and borderline interpretation",
+        "Tetracycline/retinoid medicine review",
+        "Supported sustained weight loss and selected bariatric evidence",
+        "Acetazolamide starting range, trial maximum and toxicity monitoring"
+      ]
+    },
+    {
+      "source": "IIH consensus 2018; LP consensus; Japanese iNPH guideline 2021",
+      "checked": [
+        "Declining vision needs urgent procedural assessment",
+        "Headache-only management differs from visual protection",
+        "Mass-related obstructive hydrocephalus requires safe specialist diversion",
+        "DESH and false-negative tap-test interpretation"
+      ]
+    },
+    {
+      "source": "SIH consensus 2023; ACMG/AMP variant standards and NHS genomics guidance",
+      "checked": [
+        "Normal pressure does not exclude SIH; avoid LP solely for confirmation",
+        "Early non-targeted blood patch and specialist localization",
+        "Phenotype-directed assay selection and consent",
+        "VUS is not causal confirmation or an established predictive familial marker"
+      ]
+    },
+    {
+      "source": "RFC1/Huntington/MELAS GeneReviews; MELAS consensus 2026; ACMG standards",
+      "checked": [
+        "Standard exome limitations for expansions",
+        "HTT ranges and predictive consent",
+        "Tissue-dependent heteroplasmy and mtDNA versus nuclear inheritance",
+        "Nonterritorial mitochondrial stroke-like episodes and uncertainty of adjunctive metabolic therapy"
+      ]
+    },
+    {
+      "source": "CADASIL/NF2/TSC GeneReviews; ERN GENTURIS NF1 2023; TSC renal consensus 2024",
+      "checked": [
+        "NOTCH3 phenotype-directed diagnosis",
+        "NF1 plexiform tumor warning signs",
+        "Blood-negative mosaic NF2 possibility",
+        "TSC lifelong multisystem and renal surveillance"
+      ]
+    },
+    {
+      "source": "VHL surveillance consortium; RFC1 GeneReviews; Fabry GeneReviews and testing cohort",
+      "checked": [
+        "VHL multisystem surveillance after local CNS treatment",
+        "Adult ataxia localization and acquired-mimic assessment distinct from earlier repeat assay question",
+        "Normal enzyme activity does not exclude Fabry in women; GLA interpretation"
+      ]
+    },
+    {
+      "source": "ALD international recommendations and GeneReviews; PRNP GeneReviews/HGSA; ACMG interpretation standards",
+      "checked": [
+        "ABCD1 myelopathy/adrenal/cerebral domains and uncertain phenotype prediction",
+        "PRNP variant-specific penetrance and voluntary predictive pathway",
+        "Targeted familial cascade testing and age/actionability distinctions"
+      ]
+    },
+    {
+      "source": "INDIGO primary randomized trial; FDA methylene-blue label",
+      "checked": [
+        "Selected surgery-only grade 2 trial population and PFS/next-intervention endpoints",
+        "G6PD contraindication and serotonergic interaction warning"
+      ],
+      "note": "No historical median PFS figure added because later data cuts differ; no overall-survival claim made."
+    },
+    {
+      "source": "RTOG 0614 primary trial; ASCO-SNO-ASTRO recommendation 2.3",
+      "checked": [
+        "Memantine target 20 mg/day over 24 weeks with gradual escalation and renal review",
+        "Selected asymptomatic EGFR-mutant systemic-first pathway"
+      ],
+      "note": "Prior pending checks resolved at source-specific level; full Harrison and independent clinician review not claimed."
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "No independent clinician review",
+    "Full Harrison subscription text not accessed"
+  ],
+  "draftValidation": {
+    "scope": "All 48 after second editorial pass; writes disabled",
+    "status": "passed",
+    "distractorRationales": 144
+  },
+  "editorialReview": {
+    "status": "completed",
+    "reviewedRange": "Questions 1–48",
+    "revisedOptionSets": 23,
+    "tablesAdded": [
+      "Adult diffuse glioma classification",
+      "Conventional glioblastoma treatment regimen",
+      "IIH, obstruction, iNPH and SIH comparison",
+      "Genetic mechanism and assay limitations"
+    ],
+    "remaining": []
+  },
+  "validation": {
+    "questions": 48,
+    "answerDistribution": {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12
+    },
+    "minimumExplanationWords": 273,
+    "distractorRationales": 144,
+    "runtimeSourceComparison": "passed",
+    "otherBanksPreserved": 12
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "chapter": "13. Neuro-oncology, Intracranial Hypertension & Neurogenetic Disorders",
+  "status": "installed_verified",
+  "plannedQuestions": 48,
+  "countBasis": "Distinct high-yield diagnostic, therapeutic and counseling decisions; editorial allocation, not official NEET-SS weighting. Reassess gaps and duplication during review.",
+  "boundaries": [
+    "Avoid repeating generic focal localization, standard stroke care and status treatment from earlier chapters",
+    "PNS mechanisms and leptomeningeal cytology already tested; emphasize tumor-directed decisions here",
+    "Acute herniation rescue and brain-death standards remain Chapter 14; include enough immediate safety context for standalone explanations",
+    "Do not repeat Wilson testing from Chapter 12 or full movement/ataxia taxonomy from Chapter 7"
+  ],
+  "sections": [
+    {
+      "section": "Primary intracranial tumors",
+      "questions": 10,
+      "decisions": [
+        "Choose contrast MRI and safe diagnostic sequencing for a new mass lesion",
+        "Integrate IDH status and whole-arm 1p/19q codeletion in adult diffuse glioma classification",
+        "Distinguish IDH-mutant astrocytoma grading and CDKN2A/B deletion",
+        "Recognize molecularly defined IDH-wildtype glioblastoma in context",
+        "Use MGMT promoter methylation for treatment prediction rather than tumor identity",
+        "Select maximal safe resection and tissue-based planning for a suspected glioma",
+        "Apply chemoradiation principles for fit adults with newly diagnosed glioblastoma",
+        "Recognize selected IDH-mutant grade 2 glioma targeted-therapy indications and evidence",
+        "Distinguish incidental meningioma observation from intervention indications",
+        "Assess vestibular schwannoma treatment by size, symptoms and hearing"
+      ]
+    },
+    {
+      "section": "Lymphoma, metastases and oncologic complications",
+      "questions": 10,
+      "decisions": [
+        "Plan tissue diagnosis before steroids in stable suspected primary CNS lymphoma",
+        "Select high-dose methotrexate-based specialist treatment for primary CNS lymphoma",
+        "Prioritize local treatment for symptomatic brain metastases with mass effect",
+        "Select surgery versus stereotactic radiation in an appropriate limited-metastasis setting",
+        "Use hippocampal avoidance and memantine when appropriate during whole-brain radiation",
+        "Individualize deferral of local therapy for selected asymptomatic targetable metastases",
+        "Use dexamethasone for symptomatic vasogenic edema and plan taper",
+        "Distinguish routine seizure prophylaxis from treatment after a tumor-associated seizure",
+        "Evaluate progression versus treatment effect or radiation necrosis",
+        "Recognize neurologic toxicity from selected cancer therapies without assuming tumor progression"
+      ]
+    },
+    {
+      "section": "Raised pressure, hydrocephalus and low-pressure mimics",
+      "questions": 12,
+      "decisions": [
+        "Confirm papilledema and document visual risk",
+        "Exclude mass lesion and venous sinus thrombosis before labeling IIH",
+        "Measure and interpret CSF opening pressure with technique and clinical context",
+        "Identify secondary intracranial hypertension causes and medicine associations",
+        "Use sustained weight loss as disease-modifying IIH treatment",
+        "Select acetazolamide and monitor adverse effects in IIH",
+        "Escalate urgently when IIH threatens vision",
+        "Distinguish headache treatment from vision-protection and avoid serial LP as routine care",
+        "Assess hydrocephalus pattern and need for CSF diversion",
+        "Recognize normal-pressure hydrocephalus and interpret drainage-test limitations",
+        "Recognize spontaneous intracranial hypotension despite potentially normal opening pressure",
+        "Select spinal leak investigation and epidural blood-patch strategy"
+      ]
+    },
+    {
+      "section": "Neurogenetic syndromes and testing",
+      "questions": 16,
+      "decisions": [
+        "Choose genetic counseling and phenotype-directed testing with informed consent",
+        "Interpret a variant of uncertain significance without assigning causality",
+        "Recognize repeat-expansion assay limitations of standard sequencing",
+        "Recognize Huntington phenotype and predictive-testing safeguards",
+        "Recognize mitochondrial inheritance and heteroplasmy limitations",
+        "Recognize MELAS stroke-like episodes and distinguish them from arterial stroke",
+        "Recognize CADASIL and select NOTCH3 testing in context",
+        "Recognize NF1 and clinically meaningful surveillance",
+        "Recognize NF2-related schwannomatosis and consider mosaicism",
+        "Recognize tuberous sclerosis and targeted multisystem assessment",
+        "Recognize VHL-associated CNS lesions and surveillance implications",
+        "Select an inherited adult ataxia workup including RFC1 and acquired mimics",
+        "Recognize Fabry neurologic-renal-cardiac presentation and sex-dependent testing",
+        "Recognize X-linked adrenoleukodystrophy/adrenomyeloneuropathy and adrenal assessment",
+        "Recognize inherited prion-disease testing and counseling boundaries",
+        "Apply cascade testing and family-specific interpretation after a pathogenic result"
+      ]
+    }
+  ],
+  "authoredQuestions": 48,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Investigation of a Suspected Intracranial Tumor",
+      "decision": "Choose contrast MRI and safe diagnostic sequencing for a new mass lesion"
+    },
+    {
+      "question": 2,
+      "title": "Integrated Diagnosis of Oligodendroglioma",
+      "decision": "Integrate IDH status and whole-arm 1p/19q codeletion in adult diffuse glioma classification"
+    },
+    {
+      "question": 3,
+      "title": "Molecular Grade 4 IDH-Mutant Astrocytoma",
+      "decision": "Distinguish IDH-mutant astrocytoma grading and CDKN2A/B deletion"
+    },
+    {
+      "question": 4,
+      "title": "Molecularly Defined IDH-Wildtype Glioblastoma",
+      "decision": "Recognize molecularly defined IDH-wildtype glioblastoma in context"
+    },
+    {
+      "question": 5,
+      "title": "MGMT Promoter Methylation and Alkylator Benefit",
+      "decision": "Use MGMT promoter methylation for treatment prediction rather than tumor identity"
+    },
+    {
+      "question": 6,
+      "title": "Maximal Safe Resection Preserves Function",
+      "decision": "Select maximal safe resection and tissue-based planning for a suspected glioma"
+    },
+    {
+      "question": 7,
+      "title": "Concomitant and Adjuvant Temozolomide",
+      "decision": "Apply chemoradiation principles for fit adults with newly diagnosed glioblastoma"
+    },
+    {
+      "question": 8,
+      "title": "Vorasidenib in Selected IDH-Mutant Grade 2 Glioma",
+      "decision": "Recognize selected IDH-mutant grade 2 glioma targeted-therapy indications and evidence"
+    },
+    {
+      "question": 9,
+      "title": "Observation of an Incidental Meningioma",
+      "decision": "Distinguish incidental meningioma observation from intervention indications"
+    },
+    {
+      "question": 10,
+      "title": "Large Vestibular Schwannoma With Brainstem Compression",
+      "decision": "Assess vestibular schwannoma treatment by size, symptoms and hearing"
+    },
+    {
+      "question": 11,
+      "title": "Tissue Diagnosis Before Steroids in Stable Suspected PCNSL",
+      "decision": "Plan tissue diagnosis before steroids in stable suspected primary CNS lymphoma"
+    },
+    {
+      "question": 12,
+      "title": "High-Dose Methotrexate in Primary CNS Lymphoma",
+      "decision": "Select high-dose methotrexate-based specialist treatment for primary CNS lymphoma"
+    },
+    {
+      "question": 13,
+      "title": "Symptomatic Brain Metastasis With Mass Effect",
+      "decision": "Prioritize local treatment for symptomatic brain metastases with mass effect"
+    },
+    {
+      "question": 14,
+      "title": "SRS for Limited Small Brain Metastases",
+      "decision": "Select surgery versus stereotactic radiation in an appropriate limited-metastasis setting"
+    },
+    {
+      "question": 15,
+      "title": "Cognitive Protection During Whole-Brain Radiotherapy",
+      "decision": "Use hippocampal avoidance and memantine when appropriate during whole-brain radiation"
+    },
+    {
+      "question": 16,
+      "title": "Selected Asymptomatic Metastases and CNS-Active Therapy",
+      "decision": "Individualize deferral of local therapy for selected asymptomatic targetable metastases"
+    },
+    {
+      "question": 17,
+      "title": "Dexamethasone for Symptomatic Vasogenic Edema",
+      "decision": "Use dexamethasone for symptomatic vasogenic edema and plan taper"
+    },
+    {
+      "question": 18,
+      "title": "Seizure Treatment Differs From Routine Prophylaxis",
+      "decision": "Distinguish routine seizure prophylaxis from treatment after a tumor-associated seizure"
+    },
+    {
+      "question": 19,
+      "title": "Radiation Necrosis Versus Tumor Progression",
+      "decision": "Evaluate progression versus treatment effect or radiation necrosis"
+    },
+    {
+      "question": 20,
+      "title": "Ifosfamide-Associated Encephalopathy",
+      "decision": "Recognize neurologic toxicity from selected cancer therapies without assuming tumor progression"
+    },
+    {
+      "question": 21,
+      "title": "Papilledema Assessment Must Include Visual Function",
+      "decision": "Confirm papilledema and document visual risk"
+    },
+    {
+      "question": 22,
+      "title": "Venous Imaging Before an Idiopathic Pressure Label",
+      "decision": "Exclude mass lesion and venous sinus thrombosis before labeling IIH"
+    },
+    {
+      "question": 23,
+      "title": "Opening Pressure Requires Technique and Context",
+      "decision": "Measure and interpret CSF opening pressure with technique and clinical context"
+    },
+    {
+      "question": 24,
+      "title": "Medicine-Associated Intracranial Hypertension",
+      "decision": "Identify secondary intracranial hypertension causes and medicine associations"
+    },
+    {
+      "question": 25,
+      "title": "Sustained Weight Loss in Typical IIH",
+      "decision": "Use sustained weight loss as disease-modifying IIH treatment"
+    },
+    {
+      "question": 26,
+      "title": "Acetazolamide for IIH With Mild Visual Loss",
+      "decision": "Select acetazolamide and monitor adverse effects in IIH"
+    },
+    {
+      "question": 27,
+      "title": "Rapid Visual Deterioration in IIH",
+      "decision": "Escalate urgently when IIH threatens vision"
+    },
+    {
+      "question": 28,
+      "title": "Persistent Headache After Papilledema Resolves",
+      "decision": "Distinguish headache treatment from vision-protection and avoid serial LP as routine care"
+    },
+    {
+      "question": 29,
+      "title": "Acute Obstructive Hydrocephalus",
+      "decision": "Assess hydrocephalus pattern and need for CSF diversion"
+    },
+    {
+      "question": 30,
+      "title": "A Negative Tap Test Does Not End an iNPH Evaluation",
+      "decision": "Recognize normal-pressure hydrocephalus and interpret drainage-test limitations"
+    },
+    {
+      "question": 31,
+      "title": "Spontaneous Intracranial Hypotension With Normal Opening Pressure",
+      "decision": "Recognize spontaneous intracranial hypotension despite potentially normal opening pressure"
+    },
+    {
+      "question": 32,
+      "title": "Blood Patch and Leak Localization",
+      "decision": "Select spinal leak investigation and epidural blood-patch strategy"
+    },
+    {
+      "question": 33,
+      "title": "Choose a Genetic Test From the Clinical Question",
+      "decision": "Choose genetic counseling and phenotype-directed testing with informed consent"
+    },
+    {
+      "question": 34,
+      "title": "A VUS Is Not a Confirmed Molecular Diagnosis",
+      "decision": "Interpret a variant of uncertain significance without assigning causality"
+    },
+    {
+      "question": 35,
+      "title": "A Negative Exome Does Not Exclude a Repeat Disorder",
+      "decision": "Recognize repeat-expansion assay limitations of standard sequencing"
+    },
+    {
+      "question": 36,
+      "title": "Predictive Huntington Testing Requires Voluntary Counseling",
+      "decision": "Recognize Huntington phenotype and predictive-testing safeguards"
+    },
+    {
+      "question": 37,
+      "title": "Heteroplasmy and Tissue Choice",
+      "decision": "Recognize mitochondrial inheritance and heteroplasmy limitations"
+    },
+    {
+      "question": 38,
+      "title": "Mitochondrial Stroke-Like Episodes",
+      "decision": "Recognize MELAS stroke-like episodes and distinguish them from arterial stroke"
+    },
+    {
+      "question": 39,
+      "title": "CADASIL and NOTCH3 Interpretation",
+      "decision": "Recognize CADASIL and select NOTCH3 testing in context"
+    },
+    {
+      "question": 40,
+      "title": "A Changing Plexiform Neurofibroma in NF1",
+      "decision": "Recognize NF1 and clinically meaningful surveillance"
+    },
+    {
+      "question": 41,
+      "title": "NF2-Related Schwannomatosis and Mosaicism",
+      "decision": "Recognize NF2-related schwannomatosis and consider mosaicism"
+    },
+    {
+      "question": 42,
+      "title": "Tuberous Sclerosis Needs Multisystem Follow-Up",
+      "decision": "Recognize tuberous sclerosis and targeted multisystem assessment"
+    },
+    {
+      "question": 43,
+      "title": "VHL Surveillance After a CNS Hemangioblastoma",
+      "decision": "Recognize VHL-associated CNS lesions and surveillance implications"
+    },
+    {
+      "question": 44,
+      "title": "Do Not Assign Every Adult Ataxia to Inheritance",
+      "decision": "Select an inherited adult ataxia workup including RFC1 and acquired mimics"
+    },
+    {
+      "question": 45,
+      "title": "Fabry Testing in a Symptomatic Woman",
+      "decision": "Recognize Fabry neurologic-renal-cardiac presentation and sex-dependent testing"
+    },
+    {
+      "question": 46,
+      "title": "Spastic Paraparesis With Adrenal Clues",
+      "decision": "Recognize X-linked adrenoleukodystrophy/adrenomyeloneuropathy and adrenal assessment"
+    },
+    {
+      "question": 47,
+      "title": "PRNP Testing and Variant-Specific Counseling",
+      "decision": "Recognize inherited prion-disease testing and counseling boundaries"
+    },
+    {
+      "question": 48,
+      "title": "Cascade Testing Starts With the Confirmed Familial Finding",
+      "decision": "Apply cascade testing and family-specific interpretation after a pathogenic result"
+    }
+  ]
+}

@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 13. Neuro-oncology, Intracranial Hypertension & Neurogenetic Disorders",
+  "currentChapter": "Neurology 14. Neurocritical Care, Coma, Brain Death & Miscellaneous Neurology",
   "chapters": [
     {
       "subject": "Neurology",
@@ -422,7 +422,27 @@
       "subject": "Neurology",
       "chapter": 13,
       "document": "13. Neuro-oncology, Intracranial Hypertension & Neurogenetic Disorders",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/13. Neuro-oncology, Intracranial Hypertension & Neurogenetic Disorders.json",
+      "validation": {
+        "questions": 48,
+        "answerDistribution": {
+          "A": 12,
+          "B": 12,
+          "C": 12,
+          "D": 12
+        },
+        "minimumExplanationWords": 273,
+        "distractorRationales": 144,
+        "questionStyles": {
+          "clinical_scenario": 42,
+          "direct": 6
+        },
+        "status": "passed"
+      },
+      "installedSha256": "9f95ee8de6d4768e174f97415530f4a19e695a03b7cc359a8deaeebc04534785",
+      "coverageMap": "Neurology/13. Neuro-oncology, Intracranial Hypertension & Neurogenetic Disorders.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Neurology",
