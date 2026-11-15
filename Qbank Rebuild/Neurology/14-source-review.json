@@ -1,0 +1,236 @@
+{
+  "chapter": 14,
+  "status": "installed_verified",
+  "draftedQuestions": 48,
+  "plannedQuestions": 48,
+  "installed": true,
+  "sourceChecks": [
+    {
+      "source": "AAN/AAP/CNS/SCCM 2023 BD/DNC guideline; NOTTO Form 10; NCS neuroprognostication 2023; post-resuscitation guidance 2025",
+      "checked": [
+        "Separate clinical US guideline from Indian certification framework",
+        "NOTTO adult minimum six-hour interval and certifying board notes",
+        "Delayed multimodal prognostication with confounders excluded"
+      ],
+      "pending": [
+        "Verify each exact prerequisite, apnea endpoint, accepted ancillary modality and local legal requirement before writing its question",
+        "Check current neurocritical rescue and post-arrest recommendations"
+      ]
+    },
+    {
+      "source": "ENLS version 6 coma protocol; AHA 2025 BLS/special circumstances",
+      "checked": [
+        "Immediate physiology and glucose before delayed diagnostic work",
+        "Ventilation plus naloxone with a definite pulse",
+        "Recurrence monitoring and CPR priority if arrest occurs"
+      ],
+      "pending": [
+        "Add verified preparation-specific naloxone dosing during full treatment-detail review"
+      ]
+    },
+    {
+      "source": "ENLS coma; ASAM 2020; ACNS cEEG indications and terminology",
+      "checked": [
+        "No delay of urgent glucose for thiamine sequencing",
+        "New focal pupillary/motor findings prompt structural emergency assessment",
+        "Cervical safety and untestable versus absent reflexes",
+        "Persistent impaired consciousness after convulsions warrants EEG"
+      ]
+    },
+    {
+      "source": "EAN disorders-of-consciousness guideline; ENLS ICP version 6; NCS edema guideline",
+      "checked": [
+        "Purposeful eye responses in locked-in syndrome",
+        "Serial component examination with drug confounders",
+        "Parallel herniation rescue and definitive evaluation",
+        "Head elevation/neutral alignment with perfusion and spinal safety"
+      ]
+    },
+    {
+      "source": "ENLS ICP/pharmacotherapy; NCS edema; BTF and ACS TBI guidance",
+      "checked": [
+        "Osmotic rescue dose examples and toxicity versus target distinction",
+        "Brief PaCO2 30–35 rescue versus harmful prolonged prophylactic hypocapnia",
+        "Severe TBI ICP >22 and CPP 60–70 framework",
+        "Progressive traumatic hematoma requires urgent surgical assessment"
+      ],
+      "pending": [
+        "Verify current ENLS concentrated saline access/administration details before final review",
+        "Add type-specific hematoma thresholds if needed for focused explanatory completeness"
+      ]
+    },
+    {
+      "source": "BTF decompression update 2020 and severe TBI guidance; AHA/ERC-ESICM 2025 post-arrest guidance",
+      "checked": [
+        "Procedure-specific ICP versus outcome distinctions",
+        "Corticosteroid harm in severe TBI",
+        "Deliberate temperature control with guideline-specific targets and duration",
+        "AHA oxygen/CO2/MAP targets and ERC differences"
+      ]
+    },
+    {
+      "source": "NCS neuroprognostication 2023; AHA/ERC-ESICM 2025",
+      "checked": [
+        "Myoclonus requires EEG context and no routine suppression without correlate",
+        "72-hour ROSC/rewarming timing plus confounder clearance",
+        "N20 and pupillary reliability with technical/timing conditions",
+        "Indeterminate prognosis and extended observation without guaranteed recovery"
+      ]
+    },
+    {
+      "source": "2023 AAN/AAP/CNS/SCCM BD/DNC guideline",
+      "checked": [
+        "Death determination distinct from disability prognosis",
+        "Known permanent catastrophic injury and exclusion of mimics",
+        "At least 36°C; 24-hour wait after rewarming if prior temperature <=35.5°C",
+        "Five-half-life limitations in overdose/clearance impairment and no ancillary bypass"
+      ],
+      "pending": [
+        "Check toxicology position statement for overdose qualifications during full review"
+      ]
+    },
+    {
+      "source": "2023 US BD/DNC primary consensus guideline",
+      "checked": [
+        "Peripheral blockade exclusion and severe metabolic correction",
+        "Adult SBP >=100 and MAP >=75",
+        "Specific OCR/OVR exception without generalizing untestable findings",
+        "Spinal versus brain-mediated movements and uncertain-origin ancillary indication"
+      ]
+    },
+    {
+      "source": "2023 US BD/DNC primary guideline and published apnea checklist",
+      "checked": [
+        "Baseline gases and preoxygenation",
+        "pH <7.30 plus PaCO2 >=60 and >=20 above baseline",
+        "Chronic hypercapnia unknown-baseline ancillary qualification",
+        "Desaturation abort and unresolved components ancillary indications"
+      ]
+    },
+    {
+      "source": "Official Indian Form 10 and 2023 US consensus guideline",
+      "checked": [
+        "Adult minimum six-hour repeat interval",
+        "Listed board positions, approved panel and substitution qualification",
+        "Pediatric increased-interval wording without invented statutory numbers",
+        "EEG is not an accepted US ancillary modality"
+      ]
+    },
+    {
+      "source": "UK alcohol-treatment guidance; ISCCM donor position statement 2024; PRES specialty review 2022",
+      "checked": [
+        "Suspected Wernicke treatment distinct from prophylaxis and prompt glucose correction",
+        "UK IV thiamine regimen with review and extension",
+        "Independent certification and donation authorization",
+        "PRES vasogenic imaging pattern and precipitant management"
+      ]
+    },
+    {
+      "source": "Austin serotonin toxicity protocol; BAP catatonia consensus 2023; serotonin toxicity management review",
+      "checked": [
+        "Serotonergic interaction, clonus and Hunter patterns",
+        "Supportive care first; cyproheptadine adjunct and evidence limitations",
+        "NMS trigger withdrawal and severity-based specialist adjuncts",
+        "Malignant catatonia lorazepam challenge and urgent ECT pathway"
+      ]
+    },
+    {
+      "source": "ATS ICU-acquired weakness guideline; AAN disorders of consciousness guideline 2018; Australian FND recommendations 2025",
+      "checked": [
+        "Peripheral weakness distinguished from impaired consciousness",
+        "Repeated standardized assessment and minimally conscious state distinction",
+        "Positive functional signs with coexistence and red-flag qualifications"
+      ]
+    },
+    {
+      "source": "DailyMed naloxone injection label and ENLS pharmacotherapy protocol",
+      "checked": [
+        "Adult opioid-overdose IV initial and repeat naloxone doses",
+        "Mannitol and concentrated saline rescue doses distinguished by formulation"
+      ]
+    },
+    {
+      "source": "JBDS hospital hypoglycaemia guidance and canonical BTF guideline page",
+      "checked": [
+        "20 g IV glucose example, repeat testing and IM glucagon alternative",
+        "Canonical severe TBI reference URL corrected"
+      ]
+    }
+  ],
+  "remaining": [],
+  "limitations": [
+    "No independent clinician review",
+    "Full Harrison subscription text not accessed"
+  ],
+  "draftValidation": {
+    "scope": "Complete 48-question JSON generated",
+    "status": "passed",
+    "distractorRationales": 144,
+    "answerDistribution": {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12
+    },
+    "minimumExplanationWords": 284
+  },
+  "editorialReview": {
+    "status": "completed",
+    "rewrittenOptionSets": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      10,
+      12,
+      13,
+      7,
+      8,
+      9,
+      11,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      26,
+      27,
+      29,
+      30,
+      31,
+      33,
+      34,
+      36,
+      39,
+      41,
+      44,
+      45,
+      46,
+      23,
+      40,
+      48
+    ],
+    "finding": "All 48 stems and keys reviewed; 39 option sets revised for closer competition; five comparison tables; rescue doses and jurisdiction qualifications checked.",
+    "comparisonTables": [
+      13,
+      32,
+      47,
+      11,
+      35
+    ],
+    "reviewedQuestions": 48
+  },
+  "installationEvidence": {
+    "preservedOtherBanks": 13,
+    "runtimeSourceComparison": "passed",
+    "installedProjectChapters": 14,
+    "installedProjectQuestions": 643
+  }
+}

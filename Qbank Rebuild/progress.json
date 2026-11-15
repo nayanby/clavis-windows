@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Neurology 14. Neurocritical Care, Coma, Brain Death & Miscellaneous Neurology",
+  "currentChapter": "Cardiology Chapter_01_Cardiovascular_Physiology_Hemodynamics_and_Investigations",
   "chapters": [
     {
       "subject": "Neurology",
@@ -448,7 +448,27 @@
       "subject": "Neurology",
       "chapter": 14,
       "document": "14. Neurocritical Care, Coma, Brain Death & Miscellaneous Neurology",
-      "status": "pending"
+      "status": "installed_verified",
+      "file": "Neurology/14. Neurocritical Care, Coma, Brain Death & Miscellaneous Neurology.json",
+      "validation": {
+        "questions": 48,
+        "answerDistribution": {
+          "A": 12,
+          "B": 12,
+          "C": 12,
+          "D": 12
+        },
+        "minimumExplanationWords": 284,
+        "distractorRationales": 144,
+        "questionStyles": {
+          "clinical_scenario": 38,
+          "direct": 10
+        },
+        "status": "passed"
+      },
+      "installedSha256": "d5e1258c047cb08c391d4a70898a8968914252a02cb3c0dc0c2cb8fa46a20fa8",
+      "coverageMap": "Neurology/14. Neurocritical Care, Coma, Brain Death & Miscellaneous Neurology.coverage.json",
+      "coverageReview": "mapped_and_cross_checked"
     },
     {
       "subject": "Cardiology",

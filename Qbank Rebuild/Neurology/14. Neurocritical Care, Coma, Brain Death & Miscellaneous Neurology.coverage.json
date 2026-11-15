@@ -1,0 +1,341 @@
+{
+  "chapter": "14. Neurocritical Care, Coma, Brain Death & Miscellaneous Neurology",
+  "status": "installed_verified",
+  "plannedQuestions": 48,
+  "countBasis": "Distinct high-yield decisions in the final Neurology chapter; not official exam weighting. Refine after duplication and source review.",
+  "boundaries": [
+    "Avoid repeating standard status drug sequences, stroke reperfusion and spinal emergencies from earlier chapters",
+    "Pressure rescue here complements Chapter 13 etiologic pressure syndromes",
+    "Label jurisdiction for brain-death standards; US guidance does not replace Indian statutory certification",
+    "Critical Care later covers systemic ICU topics in greater depth; retain standalone neurologic care here"
+  ],
+  "sections": [
+    {
+      "section": "Coma and acute consciousness assessment",
+      "questions": 8,
+      "decisions": [
+        "Prioritize airway, ventilation, circulation and bedside glucose in undifferentiated coma",
+        "Treat suspected opioid hypoventilation while protecting ventilation",
+        "Give thiamine promptly in at-risk patients without delaying hypoglycemia correction",
+        "Interpret asymmetric pupils and focal deficits as structural warning signs",
+        "Use brainstem examination with trauma and ocular safety precautions",
+        "Recognize nonconvulsive seizures as a reversible cause of impaired awareness",
+        "Distinguish locked-in syndrome from coma using purposeful vertical eye responses",
+        "Use serial standardized examinations and recognize sedation/paralysis confounders"
+      ]
+    },
+    {
+      "section": "Intracranial pressure and traumatic brain injury",
+      "questions": 8,
+      "decisions": [
+        "Recognize impending herniation and begin stabilization before definitive imaging or intervention",
+        "Use head positioning, venous drainage and oxygenation measures appropriately",
+        "Choose hyperosmolar rescue and monitor sodium, renal and hemodynamic consequences",
+        "Use brief hyperventilation only as a bridge for a herniation emergency",
+        "Apply ICP treatment and cerebral perfusion targets in severe TBI with qualifications",
+        "Assess epidural/subdural hematoma deterioration for urgent neurosurgical action",
+        "Distinguish CSF diversion and decompression roles according to anatomy",
+        "Avoid corticosteroids as treatment for severe TBI"
+      ]
+    },
+    {
+      "section": "Post-cardiac-arrest neurologic care",
+      "questions": 6,
+      "decisions": [
+        "Prevent fever and use contemporary temperature-control guidance without claiming universal deep cooling",
+        "Avoid hypoxemia, hypotension and excessive ventilation after ROSC",
+        "Treat seizures while interpreting myoclonus with EEG context",
+        "Delay prognostic synthesis until appropriate timing and confounder clearance",
+        "Use multimodal reliable or moderately reliable predictors rather than one examination sign",
+        "Communicate an indeterminate prognosis and avoid self-fulfilling premature withdrawal"
+      ]
+    },
+    {
+      "section": "Brain death clinical prerequisites and examination",
+      "questions": 8,
+      "decisions": [
+        "Distinguish death by neurologic criteria from coma and prognosis of severe disability",
+        "Establish a permanent catastrophic brain injury with a compatible mechanism",
+        "Exclude hypothermia and apply guideline-specific rewarming waiting rules",
+        "Exclude sedative intoxication and account for clearance, organ dysfunction and drug levels",
+        "Exclude neuromuscular blockade and severe metabolic confounding",
+        "Meet blood pressure and physiologic prerequisites under the stated guideline",
+        "Assess all required brainstem reflexes and interpret unsafe or untestable components",
+        "Interpret spinal reflex movements without mistaking them for brain-mediated activity"
+      ]
+    },
+    {
+      "section": "Apnea testing, ancillary studies and Indian certification",
+      "questions": 10,
+      "decisions": [
+        "Prepare safe apnea testing with adequate oxygenation and baseline gases",
+        "Apply 2023 US apnea-test PaCO2 and pH endpoints with chronic hypercapnia qualifications",
+        "Abort apnea testing for instability and select an appropriate next pathway",
+        "Recognize when ancillary testing is justified and when it cannot replace prerequisites",
+        "Select accepted perfusion ancillary modalities under the specified guideline",
+        "Distinguish EEG electrical silence from the accepted 2023 US ancillary framework",
+        "Apply Indian Form 10 adult repeat-testing interval rather than importing a US examination rule",
+        "Identify Indian certifying-board requirements and authorized substitution provisions",
+        "Keep pediatric certification intervals separate from adult rules and current local requirements",
+        "Document certification, family communication and donation independence appropriately"
+      ]
+    },
+    {
+      "section": "Other high-yield neurocritical and behavioral syndromes",
+      "questions": 8,
+      "decisions": [
+        "Recognize Wernicke encephalopathy without requiring the complete triad",
+        "Recognize posterior reversible encephalopathy and treat the precipitant",
+        "Differentiate serotonin syndrome from neuroleptic malignant syndrome",
+        "Treat neuroleptic malignant syndrome through withdrawal and supportive escalation",
+        "Recognize malignant catatonia and its urgent specialist pathway",
+        "Recognize ICU-acquired weakness and distinguish neuropathy/myopathy from CNS nonawakening",
+        "Distinguish unresponsive wakefulness from minimally conscious state using repeated assessment",
+        "Evaluate functional neurologic symptoms by positive signs while checking acute red flags"
+      ]
+    }
+  ],
+  "authoredQuestions": 48,
+  "questionDecisions": [
+    {
+      "question": 1,
+      "title": "Immediate Stabilization in Undifferentiated Coma",
+      "decision": "Prioritize airway, ventilation, circulation and bedside glucose in undifferentiated coma"
+    },
+    {
+      "question": 2,
+      "title": "Ventilation During Suspected Opioid Toxicity",
+      "decision": "Treat suspected opioid hypoventilation while protecting ventilation"
+    },
+    {
+      "question": 3,
+      "title": "Hypoglycemia and Thiamine Risk",
+      "decision": "Give thiamine promptly in at-risk patients without delaying hypoglycemia correction"
+    },
+    {
+      "question": 4,
+      "title": "New Anisocoria in Deteriorating Consciousness",
+      "decision": "Interpret asymmetric pupils and focal deficits as structural warning signs"
+    },
+    {
+      "question": 5,
+      "title": "Oculocephalic Testing and Cervical Safety",
+      "decision": "Use brainstem examination with trauma and ocular safety precautions"
+    },
+    {
+      "question": 6,
+      "title": "Persistent Impairment After Convulsions Stop",
+      "decision": "Recognize nonconvulsive seizures as a reversible cause of impaired awareness"
+    },
+    {
+      "question": 7,
+      "title": "Locked-In Syndrome Can Mimic Unresponsiveness",
+      "decision": "Distinguish locked-in syndrome from coma using purposeful vertical eye responses"
+    },
+    {
+      "question": 8,
+      "title": "A GCS Total Does Not Remove Sedation Confounding",
+      "decision": "Use serial standardized examinations and recognize sedation/paralysis confounders"
+    },
+    {
+      "question": 9,
+      "title": "Impending Herniation Requires Parallel Rescue and Definitive Planning",
+      "decision": "Recognize impending herniation and begin stabilization before definitive imaging or intervention"
+    },
+    {
+      "question": 10,
+      "title": "Optimize Venous Drainage Without Sacrificing Perfusion",
+      "decision": "Use head positioning, venous drainage and oxygenation measures appropriately"
+    },
+    {
+      "question": 11,
+      "title": "Hyperosmolar Rescue and Toxicity Monitoring",
+      "decision": "Choose hyperosmolar rescue and monitor sodium, renal and hemodynamic consequences"
+    },
+    {
+      "question": 12,
+      "title": "Hyperventilation as a Short Rescue Bridge",
+      "decision": "Use brief hyperventilation only as a bridge for a herniation emergency"
+    },
+    {
+      "question": 13,
+      "title": "ICP and CPP Targets in Severe TBI",
+      "decision": "Apply ICP treatment and cerebral perfusion targets in severe TBI with qualifications"
+    },
+    {
+      "question": 14,
+      "title": "Deterioration With a Traumatic Extra-Axial Hematoma",
+      "decision": "Assess epidural/subdural hematoma deterioration for urgent neurosurgical action"
+    },
+    {
+      "question": 15,
+      "title": "CSF Diversion and Decompression Address Different Problems",
+      "decision": "Distinguish CSF diversion and decompression roles according to anatomy"
+    },
+    {
+      "question": 16,
+      "title": "Corticosteroids Are Not TBI Edema Treatment",
+      "decision": "Avoid corticosteroids as treatment for severe TBI"
+    },
+    {
+      "question": 17,
+      "title": "Deliberate Temperature Control After ROSC",
+      "decision": "Prevent fever and use contemporary temperature-control guidance without claiming universal deep cooling"
+    },
+    {
+      "question": 18,
+      "title": "Oxygen, Carbon Dioxide and Perfusion After ROSC",
+      "decision": "Avoid hypoxemia, hypotension and excessive ventilation after ROSC"
+    },
+    {
+      "question": 19,
+      "title": "Post-Arrest Myoclonus Needs EEG Context",
+      "decision": "Treat seizures while interpreting myoclonus with EEG context"
+    },
+    {
+      "question": 20,
+      "title": "Timing of Prognostic Synthesis After Rewarming",
+      "decision": "Delay prognostic synthesis until appropriate timing and confounder clearance"
+    },
+    {
+      "question": 21,
+      "title": "Use Validated Predictors in a Multimodal Assessment",
+      "decision": "Use multimodal reliable or moderately reliable predictors rather than one examination sign"
+    },
+    {
+      "question": 22,
+      "title": "An Indeterminate Prognosis Requires Honest Follow-Up",
+      "decision": "Communicate an indeterminate prognosis and avoid self-fulfilling premature withdrawal"
+    },
+    {
+      "question": 23,
+      "title": "Death Determination Is Not a Disability Prognosis",
+      "decision": "Distinguish death by neurologic criteria from coma and prognosis of severe disability"
+    },
+    {
+      "question": 24,
+      "title": "A Known Catastrophic Mechanism Is Required",
+      "decision": "Establish a permanent catastrophic brain injury with a compatible mechanism"
+    },
+    {
+      "question": 25,
+      "title": "Rewarming Before the US BD/DNC Examination",
+      "decision": "Exclude hypothermia and apply guideline-specific rewarming waiting rules"
+    },
+    {
+      "question": 26,
+      "title": "Drug Clearance Is Not a Fixed Clock in Overdose",
+      "decision": "Exclude sedative intoxication and account for clearance, organ dysfunction and drug levels"
+    },
+    {
+      "question": 27,
+      "title": "Paralysis and Metabolic Confounding",
+      "decision": "Exclude neuromuscular blockade and severe metabolic confounding"
+    },
+    {
+      "question": 28,
+      "title": "Adult Blood Pressure Prerequisites in the 2023 US Guideline",
+      "decision": "Meet blood pressure and physiologic prerequisites under the stated guideline"
+    },
+    {
+      "question": 29,
+      "title": "An Untestable Reflex Requires a Defined Pathway",
+      "decision": "Assess all required brainstem reflexes and interpret unsafe or untestable components"
+    },
+    {
+      "question": 30,
+      "title": "Spinal Reflexes Can Persist",
+      "decision": "Interpret spinal reflex movements without mistaking them for brain-mediated activity"
+    },
+    {
+      "question": 31,
+      "title": "Preparation for a Safe Apnea Test",
+      "decision": "Prepare safe apnea testing with adequate oxygenation and baseline gases"
+    },
+    {
+      "question": 32,
+      "title": "The US Apnea Endpoint Requires Both CO2 and pH Criteria",
+      "decision": "Apply 2023 US apnea-test PaCO2 and pH endpoints with chronic hypercapnia qualifications"
+    },
+    {
+      "question": 33,
+      "title": "Stop an Unsafe Apnea Test",
+      "decision": "Abort apnea testing for instability and select an appropriate next pathway"
+    },
+    {
+      "question": 34,
+      "title": "Ancillary Testing Has Indications and Limits",
+      "decision": "Recognize when ancillary testing is justified and when it cannot replace prerequisites"
+    },
+    {
+      "question": 35,
+      "title": "Selecting an Accepted Adult Ancillary Perfusion Study",
+      "decision": "Select accepted perfusion ancillary modalities under the specified guideline"
+    },
+    {
+      "question": 36,
+      "title": "Electrical Silence Does Not Establish Brainstem Failure",
+      "decision": "Distinguish EEG electrical silence from the accepted 2023 US ancillary framework"
+    },
+    {
+      "question": 37,
+      "title": "Adult Repeat Examination in Indian Form 10",
+      "decision": "Apply Indian Form 10 adult repeat-testing interval rather than importing a US examination rule"
+    },
+    {
+      "question": 38,
+      "title": "Indian Brain-Stem Death Certifying Board",
+      "decision": "Identify Indian certifying-board requirements and authorized substitution provisions"
+    },
+    {
+      "question": 39,
+      "title": "Pediatric Intervals Require an Age-Specific Protocol",
+      "decision": "Keep pediatric certification intervals separate from adult rules and current local requirements"
+    },
+    {
+      "question": 40,
+      "title": "Certification and Donation Are Separate Decisions",
+      "decision": "Document certification, family communication and donation independence appropriately"
+    },
+    {
+      "question": 41,
+      "title": "Wernicke Encephalopathy Without the Complete Triad",
+      "decision": "Recognize Wernicke encephalopathy without requiring the complete triad"
+    },
+    {
+      "question": 42,
+      "title": "Posterior Reversible Encephalopathy Syndrome",
+      "decision": "Recognize posterior reversible encephalopathy and treat the precipitant"
+    },
+    {
+      "question": 43,
+      "title": "Serotonin Toxicity and Neuromuscular Excitation",
+      "decision": "Differentiate serotonin syndrome from neuroleptic malignant syndrome"
+    },
+    {
+      "question": 44,
+      "title": "Neuroleptic Malignant Syndrome Requires Withdrawal and Support",
+      "decision": "Treat neuroleptic malignant syndrome through withdrawal and supportive escalation"
+    },
+    {
+      "question": 45,
+      "title": "Malignant Catatonia and Early ECT Planning",
+      "decision": "Recognize malignant catatonia and its urgent specialist pathway"
+    },
+    {
+      "question": 46,
+      "title": "ICU-Acquired Weakness After Critical Illness",
+      "decision": "Recognize ICU-acquired weakness and distinguish neuropathy/myopathy from CNS nonawakening"
+    },
+    {
+      "question": 47,
+      "title": "Minimally Conscious State Requires Reproducible Evidence",
+      "decision": "Distinguish unresponsive wakefulness from minimally conscious state using repeated assessment"
+    },
+    {
+      "question": 48,
+      "title": "Functional Weakness Requires Positive Clinical Evidence",
+      "decision": "Evaluate functional neurologic symptoms by positive signs while checking acute red flags"
+    }
+  ]
+}
