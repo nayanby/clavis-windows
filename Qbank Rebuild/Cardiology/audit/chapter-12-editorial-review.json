@@ -1,7 +1,7 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "7b262df1204a8d24a996994f8b8d411ce1729f916cee30b587281d996a31b793",
+  "bankSha256": "ffa167eb489668b1d75d901d34d5e4b46a48040323f0e271ecf1ad58be1f6650",
   "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open.",
   "findings": [
     {
@@ -11,7 +11,7 @@
     },
     {
       "questionId": "cardiology-rebuild-03-047",
-      "action": "Removed explicit balloon-suitability giveaway and replaced severe-failure waiting choice with transcatheter pulmonary valve replacement; all representations updated and original/revised hashes audited.",
+      "action": "Removed explicit balloon-suitability giveaway and replaced severe-failure waiting choice with transcatheter pulmonary valve replacement; all representations updated and original/revised hashes audited. Added Noonan/dysplastic-valve context and pulmonary ejection-click respiratory behavior, with refreshed original/revised hash audit.",
       "status": "revised",
       "source": "https://doi.org/10.1161/CIR.0000000000001402"
     },
@@ -128,13 +128,18 @@
       "action": "Added scimitar drainage pattern, imaging clue and associated pulmonary/arterial anatomy.",
       "status": "revised",
       "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-044",
+      "status": "revised",
+      "correctIndexPreserved": true,
+      "action": "Replaced implausible pregnancy management choices with four competing mWHO classifications; retained individualized counselling and clarified symptom class versus pregnancy-risk class."
     }
   ],
   "remaining": [
-    "Add Noonan association and inspiratory pulmonary ejection-click behavior to the transferred pulmonary-stenosis explanation and refresh its revision audit.",
-    "Finish final per-question clinical/explanation review, including pregnancy distractor quality and actionable treatment/monitoring detail.",
-    "Verify rendered rich-text formatting and requested typography.",
-    "Seal release only after final review; install and verify exact app readback, then commit and push as authorized."
+    "Finish final clinical release checklist and seal the reviewed question hash.",
+    "Resolve application theme override: JSON-provided CSS passes standalone rendering, but app typography currently uses a different theme and does not read explanationCss.",
+    "Install sealed chapter, verify exact app readback, then commit and push as authorized."
   ],
   "sourceCoverageReview": {
     "status": "all_source_sections_read_final_review_pending",
@@ -162,10 +167,10 @@
       "Ductal runoff, left-heart loading, differential cyanosis, anatomical investigation and closure assessment are covered in Q013-Q015.",
       "Remaining source sections and final whole-chapter explanation/distractor review are not yet release-approved.",
       "Coarctation source reviewed against Q016-Q019: recognition, collateral-gradient limitations, anatomy, stent versus surgery, hypertension and surveillance are covered; intracranial screening and radiographic clues added.",
-      "BAV source thresholds and family screening are covered in Q021, and pulmonary stenosis grading/balloon selection in transferred Q03-047. Noonan association and pulmonary ejection-click physiology remain to be added to the pulmonary-stenosis explanation.",
+      "BAV source thresholds and family screening are covered in Q021, and pulmonary stenosis grading/balloon selection in transferred Q03-047. Noonan association and pulmonary ejection-click physiology have now been added to the pulmonary-stenosis explanation.",
       "TOF source reviewed against Q022-Q025 and transferred Q03-048: shunt physiology, residual lesions, replacement criteria, scar VT and preprocedural imaging covered. Source blanket ICD wording requires the existing expert-context qualification rather than automatic copying.",
       "Q024 now directly references the 2023 CT procedural white paper already used for its device-specific review.",
-      "Eisenmenger source reviewed: shunt reversal, erythrocytosis, iron, trial-specific PAH evidence and antithrombotic decisions are covered. Treatment escalation expanded; full current precapillary PH thresholds and transplant context remain to be added.",
+      "Eisenmenger source reviewed: shunt reversal, erythrocytosis, iron, trial-specific PAH evidence and antithrombotic decisions are covered. Treatment escalation expanded; current precapillary PH thresholds and transplant context were subsequently added.",
       "Ebstein source reviewed against Q031-Q032: indexed displacement, atrialized RV, cyanosis, accessory pathways and cone repair covered; current moderate-TR intervention qualifiers added.",
       "Transposition source reviewed against Q033-Q035: atrial-switch systemic RV/baffles, arterial-switch coronary transfer and great-vessel complications, and ccTGA anatomy/conduction covered; exact systemic-valve recommendation added.",
       "Final source sections read in full. Plastic bronchitis, scimitar syndrome and complete/partial AVSD context added to existing relevant explanations rather than duplicating decisions.",
@@ -178,5 +183,11 @@
       "https://doi.org/10.1093/eurheartj/ehaa554",
       "https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf"
     ]
+  },
+  "renderReview": {
+    "status": "passed_standalone_only",
+    "report": "chapter-12-render-review.json",
+    "visualReview": "Wide and narrow previews inspected; no clipped text in corrected captures.",
+    "limitation": "First 390px requested capture was cropped by Chrome minimum 500px layout; replaced with verified 540px capture (518px content viewport). App theme override remains unresolved."
   }
 }

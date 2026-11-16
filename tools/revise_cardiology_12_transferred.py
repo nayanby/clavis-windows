@@ -80,6 +80,24 @@ if __name__ == '__main__':
             originalSha256=digest(original), revisedSha256=digest(revised),
             changedFields=sorted(k for k in revised if revised[k] != original[k]),
             sources=[SOURCE], independentClinicianReview=False))
+    for i, question in enumerate(bank['questions']):
+        if question['id'] != 'cardiology-rebuild-03-047':
+            continue
+        old = 'Dysplastic valves, unsuitable anatomy, important regurgitation or failure of catheter treatment can shift the plan toward surgery.'
+        if 'Noonan syndrome' in question['explanation']:
+            continue
+        addition = ' Dysplastic pulmonary valves are associated with Noonan syndrome and may respond less well to balloon dilation than a thin doming valve. A mobile valvar pulmonary ejection click characteristically softens or merges with S1 during inspiration; the murmur and click are distinct sounds, and this finding is not a substitute for Doppler grading.'
+        revised = replace_strings(question, {old: old + addition})
+        ref = dict(label='Clinical Methods: Ejection Clicks', url='https://www.ncbi.nlm.nih.gov/books/NBK347/')
+        revised['references'].append(ref)
+        revised['explanation'] += '\n\n' + ref['label'] + ' — ' + ref['url']
+        revised['explanationHtml'] = revised['explanationHtml'][:-5] + '<li><a href="' + ref['url'] + '">' + ref['label'] + '</a></li></ul>'
+        record = next(r for r in audit['revisions'] if r['questionId'] == question['id'])
+        record['revisedSha256'] = digest(revised)
+        record['changedFields'] = sorted(set(record['changedFields']) | {'references'})
+        record['sources'].append(ref['url'])
+        record['reason'] += ' Added Noonan-associated dysplasia and respiratory behavior of a pulmonary ejection click.'
+        bank['questions'][i] = revised
     from qbank_json_chapters import validate
     print(json.dumps(validate(bank), indent=2))
     BANK.write_text(json.dumps(bank, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')

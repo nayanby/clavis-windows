@@ -62,19 +62,21 @@
       "questionId": "cardiology-rebuild-03-047",
       "status": "author_source_checked",
       "reviewedAt": "2026-11-16",
-      "reason": "Replace giveaway waiting strategies with competing procedures or assessment sequences, retaining the independently rechecked 2025 guideline answer.",
+      "reason": "Replace giveaway waiting strategies with competing procedures or assessment sequences, retaining the independently rechecked 2025 guideline answer. Added Noonan-associated dysplasia and respiratory behavior of a pulmonary ejection click.",
       "originalSha256": "6f1fd7d45284253193532ff8e35b505b0c286d6ddf5e9a657d419d06ab1e65e1",
-      "revisedSha256": "c1b235bb00828dcb6b2018683d4e2414de30575d78f365ae5f32b593fa9e6b02",
+      "revisedSha256": "516403f8dcafcd8555a305c72e805fd9ec7c93320c148311c43696d54c9ea5be",
       "changedFields": [
         "explanation",
         "explanationHtml",
         "explanationTeaching",
         "options",
         "question",
+        "references",
         "sourceCheckedAt"
       ],
       "sources": [
-        "https://doi.org/10.1161/CIR.0000000000001402"
+        "https://doi.org/10.1161/CIR.0000000000001402",
+        "https://www.ncbi.nlm.nih.gov/books/NBK347/"
       ],
       "independentClinicianReview": false
     },
