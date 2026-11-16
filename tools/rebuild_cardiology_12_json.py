@@ -13,6 +13,9 @@ REFERENCES.update(advanced_asd_references)
 from cardiology_12_vsd_pda_questions import rows as vsd_pda_rows, REFERENCES as vsd_pda_references
 rows.extend(vsd_pda_rows)
 REFERENCES.update(vsd_pda_references)
+from cardiology_12_obstruction_questions import rows as obstruction_rows, REFERENCES as obstruction_references
+rows.extend(obstruction_rows)
+REFERENCES.update(obstruction_references)
 
 DOC='12. Adult Congenital Heart Diseases'
 PREFIX='cardiology-rebuild-12-'
@@ -45,7 +48,7 @@ SECTIONS=[
   'Select arch imaging for residual obstruction aneurysm and collateral anatomy',
   'Interpret gradients with collateral flow and reduced cardiac output',
   'Choose an appropriate intervention for an anatomically suitable adult lesion',
-  'Assess persistent or exercise-related hypertension after repair']),
+  'Interpret postrepair Doppler gradients and monitor persistent or exercise-related hypertension']),
  ('Congenital valve and outflow obstruction',[
   'Choose balloon treatment for a suitable symptomatic doming pulmonary valve',
   'Differentiate valvar subvalvar and supravalvar RV outflow obstruction',
@@ -94,6 +97,8 @@ ASSIGNMENTS={
  PREFIX+'005':(1,3), PREFIX+'006':(1,6), PREFIX+'007':(1,7),
  PREFIX+'008':(2,0), PREFIX+'009':(2,1), PREFIX+'010':(2,2), PREFIX+'011':(2,3), PREFIX+'012':(2,4),
  PREFIX+'013':(3,0), PREFIX+'014':(3,1), PREFIX+'015':(3,2),
+ PREFIX+'016':(4,0), PREFIX+'017':(4,1), PREFIX+'018':(4,2), PREFIX+'019':(4,3),
+ PREFIX+'020':(5,1), PREFIX+'021':(5,2),
  'cardiology-rebuild-03-047':(5,0), 'cardiology-rebuild-03-048':(6,1),
 }
 
@@ -152,8 +157,10 @@ if __name__=='__main__':
            dict(section='Ventricular shunts',questionIds=[PREFIX+f'{i:03}' for i in range(8,13)],status='authored_cases_source_checked',
                 findings=['Independent calculation: 125 - 4*(4.5**2) = 44 mmHg RV systolic pressure under the stated assumptions.','Progressive VSD-related aortic regurgitation is a separate assessment indication despite a small shunt.','VSD volume-load closure evaluation requires attributable important/progressive LV enlargement as well as the flow assessment.','2025 VSD treat-and-repair usefulness is uncertain in the specified higher-PVR responder group; the ASD recommendation is not transferred.','Perimembranous closure has a proximal AV-conduction-axis risk distinct from an isolated fascicular lesion.']),
            dict(section='Ductal shunts',questionIds=[PREFIX+f'{i:03}' for i in range(13,16)],status='authored_cases_source_checked',
-                findings=['Left-to-right ductal flow primarily volume-loads LA/LV; a continuous murmur depends on the pressure gradient.','Right-to-left ductal entry beyond the usual left subclavian artery explains differential cyanosis in usual anatomy.','A suitable isolated adult PDA with attributable left-heart enlargement and low PVR favors transcatheter closure; pulmonary vascular disease and test-occlusion limits are qualified.'])],
-          nextWork='Atrial, ventricular and ductal shunt decisions are drafted; finish subsection review and then progress through coarctation and congenital outflow lesions.',
+                findings=['Left-to-right ductal flow primarily volume-loads LA/LV; a continuous murmur depends on the pressure gradient.','Right-to-left ductal entry beyond the usual left subclavian artery explains differential cyanosis in usual anatomy.','A suitable isolated adult PDA with attributable left-heart enlargement and low PVR favors transcatheter closure; pulmonary vascular disease and test-occlusion limits are qualified.']),
+           dict(section='Coarctation and congenital outflow lesions',questionIds=[PREFIX+f'{i:03}' for i in range(16,22)],status='authored_cases_source_checked',
+                findings=['Postrepair cross-sectional surveillance covers aneurysm and arch anatomy even with a low resting gradient; ESC 2024 gives an adapted 3–5-year interval.','A 7/20 isthmus ratio is 0.35; collaterals can lower a catheter gradient despite important anatomy.','ESC stenting preference is qualified by adult anatomy; current US guidance permits surgical or catheter repair by ACHD experts.','Doppler mean and maximum instantaneous gradients are distinguished from invasive peak-to-peak measurements.','A proximal/distal RV pressure step with little distal-RV-to-PA step localizes intracavitary rather than valvar obstruction.','BAV with aortic dilation prompts first-degree-relative TTE; isolated and concomitant aortic operation thresholds are not conflated.'])],
+          nextWork='Progress through repaired and unrepaired tetralogy of Fallot, then Eisenmenger and the remaining complex lesions; foundations and final whole-chapter review also remain pending.',
           limitations=['Four transferred questions retained verbatim with their original IDs.','New content has author source checks, not independent clinician review.','The 55-question plan is provisional and does not establish completeness.']))
     pp=ROOT/'progress.json';plan=json.loads(pp.read_text(encoding='utf-8'))
     entry=next(e for e in plan['chapters'] if e['subject']=='Cardiology' and e['document']==DOC)

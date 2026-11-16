@@ -4,9 +4,9 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 19,
+  "authoredQuestions": 25,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 15,
+  "newDraftQuestions": 21,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
@@ -60,18 +60,18 @@
     {
       "section": "Coarctation after diagnosis and repair",
       "plannedQuestions": 4,
-      "authoredQuestions": 0,
+      "authoredQuestions": 4,
       "decisions": [
         "Select arch imaging for residual obstruction aneurysm and collateral anatomy",
         "Interpret gradients with collateral flow and reduced cardiac output",
         "Choose an appropriate intervention for an anatomically suitable adult lesion",
-        "Assess persistent or exercise-related hypertension after repair"
+        "Interpret postrepair Doppler gradients and monitor persistent or exercise-related hypertension"
       ]
     },
     {
       "section": "Congenital valve and outflow obstruction",
       "plannedQuestions": 3,
-      "authoredQuestions": 1,
+      "authoredQuestions": 3,
       "decisions": [
         "Choose balloon treatment for a suitable symptomatic doming pulmonary valve",
         "Differentiate valvar subvalvar and supravalvar RV outflow obstruction",
@@ -243,9 +243,39 @@
       "decision": "Select adult PDA closure according to left-heart load and pulmonary resistance"
     },
     {
+      "questionId": "cardiology-rebuild-12-016",
+      "section": "Coarctation after diagnosis and repair",
+      "decision": "Select arch imaging for residual obstruction aneurysm and collateral anatomy"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-017",
+      "section": "Coarctation after diagnosis and repair",
+      "decision": "Interpret gradients with collateral flow and reduced cardiac output"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-018",
+      "section": "Coarctation after diagnosis and repair",
+      "decision": "Choose an appropriate intervention for an anatomically suitable adult lesion"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-019",
+      "section": "Coarctation after diagnosis and repair",
+      "decision": "Interpret postrepair Doppler gradients and monitor persistent or exercise-related hypertension"
+    },
+    {
       "questionId": "cardiology-rebuild-03-047",
       "section": "Congenital valve and outflow obstruction",
       "decision": "Choose balloon treatment for a suitable symptomatic doming pulmonary valve"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-020",
+      "section": "Congenital valve and outflow obstruction",
+      "decision": "Differentiate valvar subvalvar and supravalvar RV outflow obstruction"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-021",
+      "section": "Congenital valve and outflow obstruction",
+      "decision": "Assess congenital aortic valve disease with associated aortopathy and family risk"
     },
     {
       "questionId": "cardiology-rebuild-03-048",

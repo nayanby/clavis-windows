@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 19,
+  "targetQuestions": 25,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -1319,6 +1319,348 @@
       "coverageDecision": "Select adult PDA closure according to left-heart load and pulmonary resistance"
     },
     {
+      "id": "cardiology-rebuild-12-016",
+      "topic": "Coarctation after diagnosis and repair",
+      "question": "A 34-year-old had surgical coarctation repair in childhood. TTE shows preserved LV function and no large residual gradient, but the repair site is incompletely visualized. There has been no cross-sectional aortic imaging for many years. Which study most comprehensively assesses the repair segment, arch and collateral anatomy?",
+      "options": [
+        "CMR angiography of the thoracic aorta including the repair site",
+        "TTE with repeated suprasternal Doppler sweeps alone",
+        "TEE limited to the descending thoracic aorta",
+        "Duplex ultrasound of the abdominal aorta and renal arteries"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Thoracic Aortic Surveillance After Coarctation Repair\n\nCorrect answer: CMR angiography of the thoracic aorta including the repair site\n\nWhat a Normal Gradient Does Not Exclude\n\n**Repair-site aneurysm and other aortic complications can be present without a large resting obstruction gradient.** Surveillance must assess the vessel wall and surrounding anatomy, not only systolic flow velocity.\n\nCMR defines arch geometry, the repair segment, residual narrowing and collateral vessels without radiation. CTA is an appropriate alternative when CMR is unsuitable or CT provides a better answer to the particular anatomical question.\n\nThe imaging plan should also consider the aortic root and ascending aorta and associated bicuspid valve disease. With a prior stent, artifact and the need to assess the lumen or stent integrity may favor CT.\n\nLong-Term Follow-Up\n\n**Adults require continued assessment after apparently successful anatomical repair.** Check upper- and lower-extremity BP, LV remodeling, valve function and symptoms, and select imaging intervals from the current anatomy and prior findings.\n\nESC 2024 recommends aortic CT/CMR every three to five years, adapted to clinical status and previous imaging. Residual stenosis, aortic dilation, repair technique, growth and image quality can require earlier assessment; a normal TTE is not a reason to stop surveillance. Acute pain or pulse changes require assessment outside the routine schedule.\n\nHypertension may persist after relief of the obstruction. Ambulatory monitoring and exercise testing can reveal pressure burdens missed by a resting office reading. Detecting a high BP does not automatically prove recoarctation, just as a normal resting gradient does not rule out an aneurysm. Structural surveillance and physiological follow-up answer complementary questions.\n\nTTE with repeated suprasternal Doppler sweeps alone: TTE is useful for LV function, associated valve disease and flow assessment. The stated acoustic limitation leaves important aortic wall and repair-site anatomy unresolved, so repeating Doppler alone does not complete aneurysm and arch surveillance.\n\nTEE limited to the descending thoracic aorta: TEE can provide valuable information about accessible thoracic aortic segments. It has anatomical blind spots and does not offer the same comprehensive noninvasive arch, repair-site and collateral survey in this stable follow-up setting.\n\nDuplex ultrasound of the abdominal aorta and renal arteries: Abdominal and renal duplex can evaluate distal flow or selected renal causes of hypertension. It does not adequately examine the childhood thoracic repair site for focal aneurysm, pseudoaneurysm or arch abnormalities.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nACC/AHA aortic disease guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nESC peripheral arterial and aortic diseases guideline, 2024 — https://academic.oup.com/eurheartj/article/45/36/3538/7738955",
+      "explanationHtml": "<h2>Thoracic Aortic Surveillance After Coarctation Repair</h2><p><strong>Correct answer: A — CMR angiography of the thoracic aorta including the repair site</strong></p><h3>What a Normal Gradient Does Not Exclude</h3><ul><li><strong>Repair-site aneurysm and other aortic complications can be present without a large resting obstruction gradient.</strong> Surveillance must assess the vessel wall and surrounding anatomy, not only systolic flow velocity.<ul><li>CMR defines arch geometry, the repair segment, residual narrowing and collateral vessels without radiation. CTA is an appropriate alternative when CMR is unsuitable or CT provides a better answer to the particular anatomical question.</li><li>The imaging plan should also consider the aortic root and ascending aorta and associated bicuspid valve disease. With a prior stent, artifact and the need to assess the lumen or stent integrity may favor CT.</li></ul></li></ul><h3>Long-Term Follow-Up</h3><ul><li><strong>Adults require continued assessment after apparently successful anatomical repair.</strong> Check upper- and lower-extremity BP, LV remodeling, valve function and symptoms, and select imaging intervals from the current anatomy and prior findings.<ul><li>ESC 2024 recommends aortic CT/CMR every three to five years, adapted to clinical status and previous imaging. Residual stenosis, aortic dilation, repair technique, growth and image quality can require earlier assessment; a normal TTE is not a reason to stop surveillance. Acute pain or pulse changes require assessment outside the routine schedule.</li><li>Hypertension may persist after relief of the obstruction. Ambulatory monitoring and exercise testing can reveal pressure burdens missed by a resting office reading. Detecting a high BP does not automatically prove recoarctation, just as a normal resting gradient does not rule out an aneurysm. Structural surveillance and physiological follow-up answer complementary questions.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — TTE with repeated suprasternal Doppler sweeps alone:</strong> TTE is useful for LV function, associated valve disease and flow assessment. The stated acoustic limitation leaves important aortic wall and repair-site anatomy unresolved, so repeating Doppler alone does not complete aneurysm and arch surveillance.</li><li><strong>C — TEE limited to the descending thoracic aorta:</strong> TEE can provide valuable information about accessible thoracic aortic segments. It has anatomical blind spots and does not offer the same comprehensive noninvasive arch, repair-site and collateral survey in this stable follow-up setting.</li><li><strong>D — Duplex ultrasound of the abdominal aorta and renal arteries:</strong> Abdominal and renal duplex can evaluate distal flow or selected renal causes of hypertension. It does not adequately examine the childhood thoracic repair site for focal aneurysm, pseudoaneurysm or arch abnormalities.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA aortic disease guideline, 2022</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://academic.oup.com/eurheartj/article/45/36/3538/7738955\">ESC peripheral arterial and aortic diseases guideline, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Thoracic Aortic Surveillance After Coarctation Repair",
+        "sections": [
+          {
+            "heading": "What a Normal Gradient Does Not Exclude",
+            "bullets": [
+              {
+                "text": "**Repair-site aneurysm and other aortic complications can be present without a large resting obstruction gradient.** Surveillance must assess the vessel wall and surrounding anatomy, not only systolic flow velocity.",
+                "children": [
+                  "CMR defines arch geometry, the repair segment, residual narrowing and collateral vessels without radiation. CTA is an appropriate alternative when CMR is unsuitable or CT provides a better answer to the particular anatomical question.",
+                  "The imaging plan should also consider the aortic root and ascending aorta and associated bicuspid valve disease. With a prior stent, artifact and the need to assess the lumen or stent integrity may favor CT."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Long-Term Follow-Up",
+            "bullets": [
+              {
+                "text": "**Adults require continued assessment after apparently successful anatomical repair.** Check upper- and lower-extremity BP, LV remodeling, valve function and symptoms, and select imaging intervals from the current anatomy and prior findings.",
+                "children": [
+                  "ESC 2024 recommends aortic CT/CMR every three to five years, adapted to clinical status and previous imaging. Residual stenosis, aortic dilation, repair technique, growth and image quality can require earlier assessment; a normal TTE is not a reason to stop surveillance. Acute pain or pulse changes require assessment outside the routine schedule.",
+                  "Hypertension may persist after relief of the obstruction. Ambulatory monitoring and exercise testing can reveal pressure burdens missed by a resting office reading. Detecting a high BP does not automatically prove recoarctation, just as a normal resting gradient does not rule out an aneurysm. Structural surveillance and physiological follow-up answer complementary questions."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "TTE is useful for LV function, associated valve disease and flow assessment. The stated acoustic limitation leaves important aortic wall and repair-site anatomy unresolved, so repeating Doppler alone does not complete aneurysm and arch surveillance."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "TEE can provide valuable information about accessible thoracic aortic segments. It has anatomical blind spots and does not offer the same comprehensive noninvasive arch, repair-site and collateral survey in this stable follow-up setting."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Abdominal and renal duplex can evaluate distal flow or selected renal causes of hypertension. It does not adequately examine the childhood thoracic repair site for focal aneurysm, pseudoaneurysm or arch abnormalities."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ACC/AHA aortic disease guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        },
+        {
+          "label": "ESC peripheral arterial and aortic diseases guideline, 2024",
+          "url": "https://academic.oup.com/eurheartj/article/45/36/3538/7738955"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Select arch imaging for residual obstruction aneurysm and collateral anatomy"
+    },
+    {
+      "id": "cardiology-rebuild-12-017",
+      "topic": "Coarctation after diagnosis and repair",
+      "question": "An adult has arm BP 166/92 mmHg, leg BP 154/86 mmHg and an invasive coarctation peak-to-peak gradient of 12 mmHg. CTA shows a 7-mm isthmus, a 20-mm descending aorta at the diaphragm and extensive intercostal collaterals. Which interpretation is most appropriate?",
+      "options": [
+        "The modest arm–leg pressure difference makes hypertension unrelated to coarctation",
+        "The catheter gradient establishes that the anatomical narrowing is minor",
+        "The maximum instantaneous Doppler gradient can replace the catheter value directly",
+        "Important obstruction remains possible because collateral flow can reduce the measured gradient"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Severe Coarctation With a Modest Measured Gradient\n\nCorrect answer: Important obstruction remains possible because collateral flow can reduce the measured gradient\n\nAnatomy and Bypass Flow\n\n**Extensive collaterals can reduce flow through the narrowed isthmus and attenuate the pressure drop measured across it.** The case therefore needs integrated ACHD assessment rather than a single-gradient exclusion rule.\n\nThe aortic isthmus ratio is the minimum isthmus diameter divided by the descending aortic diameter at the diaphragm. Here it is 7/20 = 0.35, supporting substantial anatomical narrowing.\n\nLow LV output or associated severe aortic stenosis can also reduce measured coarctation gradients. Assess ventricular function, valve lesions, collateral flow and measurement conditions before judging severity.\n\nIntervention Assessment\n\n**The 2025 ACHD framework accepts physiological and anatomical evidence when evaluating significant coarctation.** Its table includes gradients above ==20 mmHg== as important findings while explicitly qualifying situations in which gradients are lower.\n\nExpert consensus has commonly used an isthmus ratio below 0.5 as a marker of major narrowing, while newer observational analyses support assessment at less extreme narrowing. A ratio is not a universal standalone command to intervene.\n\nReview hypertension, LV hypertrophy, symptoms, repair options and procedural risk with a congenital aortic team. Severe anatomy with compatible consequences can justify intervention assessment despite the supplied 12-mmHg gradient. Conversely, an isolated high velocity with a widely patent repaired aorta may have a different explanation. Specify the named guideline and measurement method rather than treating all values labeled gradient as interchangeable.\n\nAssessment | 2025 significance finding or case calculation | Qualification\n\nArm–leg systolic BP difference | Above ==20 mmHg== | Collateral flow can attenuate the difference\n\nInvasive peak-to-peak gradient | Above ==20 mmHg== | Flow and loading conditions affect the value\n\nDoppler mean systolic gradient | Above ==20 mmHg== | Do not substitute the maximum instantaneous value\n\nIsthmus / diaphragm-level descending aorta | 7/20 = 0.35 in this case | Anatomical severity complements physiological assessment\n\nThe modest arm–leg pressure difference makes hypertension unrelated to coarctation: A small limb pressure difference can also occur with collateral flow or other hemodynamic modifiers. It does not establish an unrelated cause when severe anatomical narrowing and proximal hypertension are documented.\n\nThe catheter gradient establishes that the anatomical narrowing is minor: A gradient is flow dependent. Extensive collateral pathways can bypass a severely narrowed segment; the low value must therefore be interpreted with anatomy, hypertension and ventricular consequences rather than used to dismiss them.\n\nThe maximum instantaneous Doppler gradient can replace the catheter value directly: Doppler maximum instantaneous and catheter peak-to-peak gradients are different measurements. They should not be substituted numerically without understanding the flow profile and pressure recovery.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nHeart-team management of adult coarctation — https://pmc.ncbi.nlm.nih.gov/articles/PMC8807410/\n\nLV diastolic function and exertional symptoms in adult coarctation — https://pmc.ncbi.nlm.nih.gov/articles/PMC7041882/",
+      "explanationHtml": "<h2>Severe Coarctation With a Modest Measured Gradient</h2><p><strong>Correct answer: D — Important obstruction remains possible because collateral flow can reduce the measured gradient</strong></p><h3>Anatomy and Bypass Flow</h3><ul><li><strong>Extensive collaterals can reduce flow through the narrowed isthmus and attenuate the pressure drop measured across it.</strong> The case therefore needs integrated ACHD assessment rather than a single-gradient exclusion rule.<ul><li>The aortic isthmus ratio is the minimum isthmus diameter divided by the descending aortic diameter at the diaphragm. Here it is 7/20 = 0.35, supporting substantial anatomical narrowing.</li><li>Low LV output or associated severe aortic stenosis can also reduce measured coarctation gradients. Assess ventricular function, valve lesions, collateral flow and measurement conditions before judging severity.</li></ul></li></ul><h3>Intervention Assessment</h3><ul><li><strong>The 2025 ACHD framework accepts physiological and anatomical evidence when evaluating significant coarctation.</strong> Its table includes gradients above <mark>20 mmHg</mark> as important findings while explicitly qualifying situations in which gradients are lower.<ul><li>Expert consensus has commonly used an isthmus ratio below 0.5 as a marker of major narrowing, while newer observational analyses support assessment at less extreme narrowing. A ratio is not a universal standalone command to intervene.</li><li>Review hypertension, LV hypertrophy, symptoms, repair options and procedural risk with a congenital aortic team. Severe anatomy with compatible consequences can justify intervention assessment despite the supplied 12-mmHg gradient. Conversely, an isolated high velocity with a widely patent repaired aorta may have a different explanation. Specify the named guideline and measurement method rather than treating all values labeled gradient as interchangeable.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Assessment</th><th>2025 significance finding or case calculation</th><th>Qualification</th></tr></thead><tbody><tr><td>Arm–leg systolic BP difference</td><td>Above <mark>20 mmHg</mark></td><td>Collateral flow can attenuate the difference</td></tr><tr><td>Invasive peak-to-peak gradient</td><td>Above <mark>20 mmHg</mark></td><td>Flow and loading conditions affect the value</td></tr><tr><td>Doppler mean systolic gradient</td><td>Above <mark>20 mmHg</mark></td><td>Do not substitute the maximum instantaneous value</td></tr><tr><td>Isthmus / diaphragm-level descending aorta</td><td>7/20 = 0.35 in this case</td><td>Anatomical severity complements physiological assessment</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — The modest arm–leg pressure difference makes hypertension unrelated to coarctation:</strong> A small limb pressure difference can also occur with collateral flow or other hemodynamic modifiers. It does not establish an unrelated cause when severe anatomical narrowing and proximal hypertension are documented.</li><li><strong>B — The catheter gradient establishes that the anatomical narrowing is minor:</strong> A gradient is flow dependent. Extensive collateral pathways can bypass a severely narrowed segment; the low value must therefore be interpreted with anatomy, hypertension and ventricular consequences rather than used to dismiss them.</li><li><strong>C — The maximum instantaneous Doppler gradient can replace the catheter value directly:</strong> Doppler maximum instantaneous and catheter peak-to-peak gradients are different measurements. They should not be substituted numerically without understanding the flow profile and pressure recovery.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC8807410/\">Heart-team management of adult coarctation</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC7041882/\">LV diastolic function and exertional symptoms in adult coarctation</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Severe Coarctation With a Modest Measured Gradient",
+        "sections": [
+          {
+            "heading": "Anatomy and Bypass Flow",
+            "bullets": [
+              {
+                "text": "**Extensive collaterals can reduce flow through the narrowed isthmus and attenuate the pressure drop measured across it.** The case therefore needs integrated ACHD assessment rather than a single-gradient exclusion rule.",
+                "children": [
+                  "The aortic isthmus ratio is the minimum isthmus diameter divided by the descending aortic diameter at the diaphragm. Here it is 7/20 = 0.35, supporting substantial anatomical narrowing.",
+                  "Low LV output or associated severe aortic stenosis can also reduce measured coarctation gradients. Assess ventricular function, valve lesions, collateral flow and measurement conditions before judging severity."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Intervention Assessment",
+            "bullets": [
+              {
+                "text": "**The 2025 ACHD framework accepts physiological and anatomical evidence when evaluating significant coarctation.** Its table includes gradients above ==20 mmHg== as important findings while explicitly qualifying situations in which gradients are lower.",
+                "children": [
+                  "Expert consensus has commonly used an isthmus ratio below 0.5 as a marker of major narrowing, while newer observational analyses support assessment at less extreme narrowing. A ratio is not a universal standalone command to intervene.",
+                  "Review hypertension, LV hypertrophy, symptoms, repair options and procedural risk with a congenital aortic team. Severe anatomy with compatible consequences can justify intervention assessment despite the supplied 12-mmHg gradient. Conversely, an isolated high velocity with a widely patent repaired aorta may have a different explanation. Specify the named guideline and measurement method rather than treating all values labeled gradient as interchangeable."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "Assessment",
+              "2025 significance finding or case calculation",
+              "Qualification"
+            ],
+            "rows": [
+              [
+                "Arm–leg systolic BP difference",
+                "Above ==20 mmHg==",
+                "Collateral flow can attenuate the difference"
+              ],
+              [
+                "Invasive peak-to-peak gradient",
+                "Above ==20 mmHg==",
+                "Flow and loading conditions affect the value"
+              ],
+              [
+                "Doppler mean systolic gradient",
+                "Above ==20 mmHg==",
+                "Do not substitute the maximum instantaneous value"
+              ],
+              [
+                "Isthmus / diaphragm-level descending aorta",
+                "7/20 = 0.35 in this case",
+                "Anatomical severity complements physiological assessment"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "A small limb pressure difference can also occur with collateral flow or other hemodynamic modifiers. It does not establish an unrelated cause when severe anatomical narrowing and proximal hypertension are documented."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "A gradient is flow dependent. Extensive collateral pathways can bypass a severely narrowed segment; the low value must therefore be interpreted with anatomy, hypertension and ventricular consequences rather than used to dismiss them."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Doppler maximum instantaneous and catheter peak-to-peak gradients are different measurements. They should not be substituted numerically without understanding the flow profile and pressure recovery."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "Heart-team management of adult coarctation",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8807410/"
+        },
+        {
+          "label": "LV diastolic function and exertional symptoms in adult coarctation",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7041882/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Interpret gradients with collateral flow and reduced cardiac output"
+    },
+    {
+      "id": "cardiology-rebuild-12-018",
+      "topic": "Coarctation after diagnosis and repair",
+      "question": "A 28-year-old with hypertension has discrete native coarctation, an invasive peak-to-peak gradient of 32 mmHg and suitable landing zones and arterial access. There is no extensive arch hypoplasia or associated lesion requiring surgery. Under the ESC adult congenital approach, which repair is generally preferred when technically feasible?",
+      "options": [
+        "Surgical ascending-to-descending aortic bypass",
+        "Balloon angioplasty without stent support",
+        "Surgical interposition graft repair",
+        "Endovascular stent repair of the narrowed segment"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Adult Native Coarctation: Choosing a Repair Approach\n\nCorrect answer: Endovascular stent repair of the narrowed segment\n\nIndication and Procedural Planning\n\n**Hypertension with a clearly significant coarctation warrants repair assessment.** This patient has a favorable anatomical target and a substantial invasive gradient, without the modifiers that complicate a borderline measurement.\n\nESC 2020 describes stenting as the first-choice approach in many adult congenital centers for suitable native or recurrent coarctation. Covered stents are often preferred to reduce aortic wall complications, but device choice remains anatomical and procedural.\n\nAssess the arch, head-and-neck branches, collateral vessels, aortic wall, any aneurysm and access-vessel size. A label of adult coarctation does not establish that every lesion can safely accept the same device.\n\nBenefits, Risks and Surveillance\n\n**Repair relieves the obstruction but does not guarantee normalization of BP.** Vascular stiffness, endothelial dysfunction and established ventricular remodeling can persist.\n\nDiscuss aortic wall injury, aneurysm, access complications, stent migration or fracture, residual gradient and possible later reintervention. Appropriate follow-up includes cross-sectional imaging and BP assessment.\n\nSurgery remains important for extensive arch disease, unsuitable landing zones, complex associated pathology or a need for combined repair. The 2025 US guideline permits surgical or transcatheter repair by ACHD experts rather than mandating one device. Continue BP treatment after repair; that guideline targets systolic BP below ==130 mmHg==, individualized for tolerance. Persistent hypertension does not by itself establish procedural failure.\n\nSurgical ascending-to-descending aortic bypass: Bypass can be valuable for complex arch anatomy or other difficult surgical situations. It is not usually the preferred initial repair of an isolated discrete lesion that is suitable for stenting.\n\nBalloon angioplasty without stent support: Balloon treatment has roles in selected contexts, including redilatation of a previously stented segment. For a suitable native adult coarctation, stent support better addresses recoil and is generally preferred to balloon angioplasty alone.\n\nSurgical interposition graft repair: An interposition graft is an established adult surgical option and can be appropriate for anatomy unsuitable for a catheter approach. The supplied discrete lesion, landing zones and access favor the less invasive stent pathway.\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nPersistent hypertension and LV hypertrophy after adult coarctation repair — https://pmc.ncbi.nlm.nih.gov/articles/PMC8363521/",
+      "explanationHtml": "<h2>Adult Native Coarctation: Choosing a Repair Approach</h2><p><strong>Correct answer: D — Endovascular stent repair of the narrowed segment</strong></p><h3>Indication and Procedural Planning</h3><ul><li><strong>Hypertension with a clearly significant coarctation warrants repair assessment.</strong> This patient has a favorable anatomical target and a substantial invasive gradient, without the modifiers that complicate a borderline measurement.<ul><li>ESC 2020 describes stenting as the first-choice approach in many adult congenital centers for suitable native or recurrent coarctation. Covered stents are often preferred to reduce aortic wall complications, but device choice remains anatomical and procedural.</li><li>Assess the arch, head-and-neck branches, collateral vessels, aortic wall, any aneurysm and access-vessel size. A label of adult coarctation does not establish that every lesion can safely accept the same device.</li></ul></li></ul><h3>Benefits, Risks and Surveillance</h3><ul><li><strong>Repair relieves the obstruction but does not guarantee normalization of BP.</strong> Vascular stiffness, endothelial dysfunction and established ventricular remodeling can persist.<ul><li>Discuss aortic wall injury, aneurysm, access complications, stent migration or fracture, residual gradient and possible later reintervention. Appropriate follow-up includes cross-sectional imaging and BP assessment.</li><li>Surgery remains important for extensive arch disease, unsuitable landing zones, complex associated pathology or a need for combined repair. The 2025 US guideline permits surgical or transcatheter repair by ACHD experts rather than mandating one device. Continue BP treatment after repair; that guideline targets systolic BP below <mark>130 mmHg</mark>, individualized for tolerance. Persistent hypertension does not by itself establish procedural failure.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Surgical ascending-to-descending aortic bypass:</strong> Bypass can be valuable for complex arch anatomy or other difficult surgical situations. It is not usually the preferred initial repair of an isolated discrete lesion that is suitable for stenting.</li><li><strong>B — Balloon angioplasty without stent support:</strong> Balloon treatment has roles in selected contexts, including redilatation of a previously stented segment. For a suitable native adult coarctation, stent support better addresses recoil and is generally preferred to balloon angioplasty alone.</li><li><strong>C — Surgical interposition graft repair:</strong> An interposition graft is an established adult surgical option and can be appropriate for anatomy unsuitable for a catheter approach. The supplied discrete lesion, landing zones and access favor the less invasive stent pathway.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC8363521/\">Persistent hypertension and LV hypertrophy after adult coarctation repair</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Adult Native Coarctation: Choosing a Repair Approach",
+        "sections": [
+          {
+            "heading": "Indication and Procedural Planning",
+            "bullets": [
+              {
+                "text": "**Hypertension with a clearly significant coarctation warrants repair assessment.** This patient has a favorable anatomical target and a substantial invasive gradient, without the modifiers that complicate a borderline measurement.",
+                "children": [
+                  "ESC 2020 describes stenting as the first-choice approach in many adult congenital centers for suitable native or recurrent coarctation. Covered stents are often preferred to reduce aortic wall complications, but device choice remains anatomical and procedural.",
+                  "Assess the arch, head-and-neck branches, collateral vessels, aortic wall, any aneurysm and access-vessel size. A label of adult coarctation does not establish that every lesion can safely accept the same device."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Benefits, Risks and Surveillance",
+            "bullets": [
+              {
+                "text": "**Repair relieves the obstruction but does not guarantee normalization of BP.** Vascular stiffness, endothelial dysfunction and established ventricular remodeling can persist.",
+                "children": [
+                  "Discuss aortic wall injury, aneurysm, access complications, stent migration or fracture, residual gradient and possible later reintervention. Appropriate follow-up includes cross-sectional imaging and BP assessment.",
+                  "Surgery remains important for extensive arch disease, unsuitable landing zones, complex associated pathology or a need for combined repair. The 2025 US guideline permits surgical or transcatheter repair by ACHD experts rather than mandating one device. Continue BP treatment after repair; that guideline targets systolic BP below ==130 mmHg==, individualized for tolerance. Persistent hypertension does not by itself establish procedural failure."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Bypass can be valuable for complex arch anatomy or other difficult surgical situations. It is not usually the preferred initial repair of an isolated discrete lesion that is suitable for stenting."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Balloon treatment has roles in selected contexts, including redilatation of a previously stented segment. For a suitable native adult coarctation, stent support better addresses recoil and is generally preferred to balloon angioplasty alone."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "An interposition graft is an established adult surgical option and can be appropriate for anatomy unsuitable for a catheter approach. The supplied discrete lesion, landing zones and access favor the less invasive stent pathway."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        },
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "Persistent hypertension and LV hypertrophy after adult coarctation repair",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8363521/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Choose an appropriate intervention for an anatomically suitable adult lesion"
+    },
+    {
+      "id": "cardiology-rebuild-12-019",
+      "topic": "Coarctation after diagnosis and repair",
+      "question": "For coarctation assessment, which Doppler-derived quantity best approximates the catheterization-derived peak-to-peak systolic gradient according to the 2025 ACHD guideline?",
+      "options": [
+        "The proximal-velocity-corrected maximum instantaneous gradient",
+        "The uncorrected maximum instantaneous systolic gradient",
+        "The Doppler mean systolic gradient",
+        "The maximum gradient derived from the diastolic flow tail"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "direct",
+      "calculation": false,
+      "explanation": "Coarctation: Doppler and Catheter Gradients\n\nCorrect answer: The Doppler mean systolic gradient\n\nWhy the Measurements Differ\n\n**An invasive peak-to-peak gradient compares proximal and distal systolic pressure peaks, which need not occur simultaneously.** Doppler maximum instantaneous gradients use the largest simultaneous velocity-derived difference.\n\nThe 2025 guideline identifies the Doppler mean coarctation gradient as the best approximation among these Doppler-derived indices. That is an empirical relationship, not proof that any two measurements are identical in every patient.\n\nFlow, collaterals, pressure recovery, proximal velocity, Doppler alignment and the repaired aorta’s compliance can change the relationship. A report must state whether its value is mean, maximum instantaneous, corrected or invasive.\n\nInterpretation After Repair\n\n**An elevated postrepair Doppler gradient can occur without a fixed recurrent narrowing.** Poor arterial compliance and pressure recovery are important reasons to integrate the velocity with cross-sectional anatomy and clinical findings.\n\nConversely, a modest resting gradient does not exclude important narrowing if collaterals or low output attenuate the pressure drop. Review arch dimensions, ventricular function, limb pressures and symptoms.\n\nDo not recommend repeat stenting from a single peak velocity alone. Determine whether there is an anatomical target and meaningful residual pressure burden. Continue surveillance for aortic complications and persistent hypertension even when no new intervention is required. Resting office measurements can miss hypertension; selected ambulatory and exercise assessment can refine physiological follow-up. The objective is agreement between the anatomy, the stated hemodynamic measurement and the patient’s consequences, not selection of the largest reported number.\n\nThe proximal-velocity-corrected maximum instantaneous gradient: Correcting for proximal velocity addresses one source of Doppler error. The result remains a maximum instantaneous index, with a different relationship and threshold from the catheter peak-to-peak measurement.\n\nThe uncorrected maximum instantaneous systolic gradient: The maximum instantaneous gradient compares simultaneous velocities and can exceed the invasive peak-to-peak value. It is useful in assessment but should not be treated as its numerically identical replacement.\n\nThe maximum gradient derived from the diastolic flow tail: Persistent diastolic forward flow can support significant coarctation. A peak diastolic estimate is not the systolic Doppler index used for the closest approximation of the invasive peak-to-peak gradient.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nACC/AHA aortic disease guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106\n\nLV diastolic function and exertional symptoms in adult coarctation — https://pmc.ncbi.nlm.nih.gov/articles/PMC7041882/",
+      "explanationHtml": "<h2>Coarctation: Doppler and Catheter Gradients</h2><p><strong>Correct answer: C — The Doppler mean systolic gradient</strong></p><h3>Why the Measurements Differ</h3><ul><li><strong>An invasive peak-to-peak gradient compares proximal and distal systolic pressure peaks, which need not occur simultaneously.</strong> Doppler maximum instantaneous gradients use the largest simultaneous velocity-derived difference.<ul><li>The 2025 guideline identifies the Doppler mean coarctation gradient as the best approximation among these Doppler-derived indices. That is an empirical relationship, not proof that any two measurements are identical in every patient.</li><li>Flow, collaterals, pressure recovery, proximal velocity, Doppler alignment and the repaired aorta’s compliance can change the relationship. A report must state whether its value is mean, maximum instantaneous, corrected or invasive.</li></ul></li></ul><h3>Interpretation After Repair</h3><ul><li><strong>An elevated postrepair Doppler gradient can occur without a fixed recurrent narrowing.</strong> Poor arterial compliance and pressure recovery are important reasons to integrate the velocity with cross-sectional anatomy and clinical findings.<ul><li>Conversely, a modest resting gradient does not exclude important narrowing if collaterals or low output attenuate the pressure drop. Review arch dimensions, ventricular function, limb pressures and symptoms.</li><li>Do not recommend repeat stenting from a single peak velocity alone. Determine whether there is an anatomical target and meaningful residual pressure burden. Continue surveillance for aortic complications and persistent hypertension even when no new intervention is required. Resting office measurements can miss hypertension; selected ambulatory and exercise assessment can refine physiological follow-up. The objective is agreement between the anatomy, the stated hemodynamic measurement and the patient’s consequences, not selection of the largest reported number.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — The proximal-velocity-corrected maximum instantaneous gradient:</strong> Correcting for proximal velocity addresses one source of Doppler error. The result remains a maximum instantaneous index, with a different relationship and threshold from the catheter peak-to-peak measurement.</li><li><strong>B — The uncorrected maximum instantaneous systolic gradient:</strong> The maximum instantaneous gradient compares simultaneous velocities and can exceed the invasive peak-to-peak value. It is useful in assessment but should not be treated as its numerically identical replacement.</li><li><strong>D — The maximum gradient derived from the diastolic flow tail:</strong> Persistent diastolic forward flow can support significant coarctation. A peak diastolic estimate is not the systolic Doppler index used for the closest approximation of the invasive peak-to-peak gradient.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA aortic disease guideline, 2022</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC7041882/\">LV diastolic function and exertional symptoms in adult coarctation</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Coarctation: Doppler and Catheter Gradients",
+        "sections": [
+          {
+            "heading": "Why the Measurements Differ",
+            "bullets": [
+              {
+                "text": "**An invasive peak-to-peak gradient compares proximal and distal systolic pressure peaks, which need not occur simultaneously.** Doppler maximum instantaneous gradients use the largest simultaneous velocity-derived difference.",
+                "children": [
+                  "The 2025 guideline identifies the Doppler mean coarctation gradient as the best approximation among these Doppler-derived indices. That is an empirical relationship, not proof that any two measurements are identical in every patient.",
+                  "Flow, collaterals, pressure recovery, proximal velocity, Doppler alignment and the repaired aorta’s compliance can change the relationship. A report must state whether its value is mean, maximum instantaneous, corrected or invasive."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Interpretation After Repair",
+            "bullets": [
+              {
+                "text": "**An elevated postrepair Doppler gradient can occur without a fixed recurrent narrowing.** Poor arterial compliance and pressure recovery are important reasons to integrate the velocity with cross-sectional anatomy and clinical findings.",
+                "children": [
+                  "Conversely, a modest resting gradient does not exclude important narrowing if collaterals or low output attenuate the pressure drop. Review arch dimensions, ventricular function, limb pressures and symptoms.",
+                  "Do not recommend repeat stenting from a single peak velocity alone. Determine whether there is an anatomical target and meaningful residual pressure burden. Continue surveillance for aortic complications and persistent hypertension even when no new intervention is required. Resting office measurements can miss hypertension; selected ambulatory and exercise assessment can refine physiological follow-up. The objective is agreement between the anatomy, the stated hemodynamic measurement and the patient’s consequences, not selection of the largest reported number."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Correcting for proximal velocity addresses one source of Doppler error. The result remains a maximum instantaneous index, with a different relationship and threshold from the catheter peak-to-peak measurement."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "The maximum instantaneous gradient compares simultaneous velocities and can exceed the invasive peak-to-peak value. It is useful in assessment but should not be treated as its numerically identical replacement."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Persistent diastolic forward flow can support significant coarctation. A peak diastolic estimate is not the systolic Doppler index used for the closest approximation of the invasive peak-to-peak gradient."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ACC/AHA aortic disease guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        },
+        {
+          "label": "LV diastolic function and exertional symptoms in adult coarctation",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7041882/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Interpret postrepair Doppler gradients and monitor persistent or exercise-related hypertension"
+    },
+    {
       "id": "cardiology-rebuild-03-047",
       "topic": "Tricuspid and pulmonary valve disease",
       "question": "An adult with isolated doming pulmonary valve stenosis has progressive exertional limitation, peak Doppler velocity 4.5 m/s and RV pressure loading. The valve is suitable for balloon treatment, with no important pulmonary regurgitation or subvalvular obstruction. Which intervention is preferred?",
@@ -1390,6 +1732,156 @@
       "sourceCheckedAt": "2026-11-15",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Pulmonary stenosis and regurgitation intervention assessment"
+    },
+    {
+      "id": "cardiology-rebuild-12-020",
+      "topic": "Congenital valve and outflow obstruction",
+      "question": "An adult with a small perimembranous VSD has exertional limitation. Catheter pullback shows PA systolic pressure 24 mmHg, distal RV systolic pressure 26 mmHg and proximal RV systolic pressure 78 mmHg. The pulmonary valve is structurally normal. Which obstruction best fits the pressure distribution?",
+      "options": [
+        "Intracavitary obstruction from a double-chambered right ventricle",
+        "Valvar pulmonary stenosis",
+        "Supravalvar main pulmonary artery stenosis",
+        "Peripheral branch pulmonary artery stenosis"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Intracavitary RV Pressure Step and Double-Chambered RV\n\nCorrect answer: Intracavitary obstruction from a double-chambered right ventricle\n\nLocalizing the Obstruction\n\n**Double-chambered RV results from obstructing muscle bundles dividing the ventricle into pressure compartments.** The major step in this case is between proximal and distal RV, not across the pulmonary valve.\n\nA perimembranous VSD is a recognized association. Its connection to the high- or low-pressure compartment can alter the apparent jet and shunt physiology, so define the full anatomy before VSD repair.\n\nTTE may miss the complete intraventricular partition. CMR, or CT when appropriate, can define the anatomy; catheterization helps clarify severity when symptoms or RV dysfunction need hemodynamic explanation.\n\nTreatment Implications\n\n**Symptomatic moderate or greater DCRV obstruction is a surgical muscle-bundle repair problem.** The 2025 guideline recommends repair for otherwise unexplained heart-failure symptoms, cyanosis or exercise limitation in that setting.\n\nStandard pulmonary balloon valvuloplasty treats suitable valvar stenosis and does not remove a muscular intracavitary partition. The normal valve and small distal-RV-to-PA pressure difference make that distinction important here.\n\nAssess associated VSD, valve disease, RV function and arrhythmia before repair. Follow for residual or recurrent obstruction, ventricular remodeling and other associated congenital lesions afterward. An asymptomatic severe lesion also merits expert assessment under current guidance; symptoms alone are not the only marker of future risk. Avoid interpreting the high proximal RV pressure automatically as pulmonary hypertension when the distal RV and PA pressures are low.\n\nValvar pulmonary stenosis: Valvar obstruction produces a major pressure step between the RV outflow and pulmonary artery. Here the distal RV and PA systolic pressures are similar, while the large step lies within the RV.\n\nSupravalvar main pulmonary artery stenosis: Supravalvar obstruction is beyond the pulmonary valve and produces an outflow-to-distal-PA pressure difference. It does not explain the supplied high proximal RV pressure with a relatively low distal RV pressure.\n\nPeripheral branch pulmonary artery stenosis: Branch stenosis requires assessment of main and branch PA pressures and the branch anatomy. It would not primarily partition the RV itself into a high-pressure proximal and low-pressure distal compartment.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nDouble density sign in double-chambered RV, 2025 — https://doi.org/10.1016/j.jaccas.2025.103529\n\nDiagnosis and Management of Ventricular Septal Defects, 2024 — https://pmc.ncbi.nlm.nih.gov/articles/PMC11607469/",
+      "explanationHtml": "<h2>Intracavitary RV Pressure Step and Double-Chambered RV</h2><p><strong>Correct answer: A — Intracavitary obstruction from a double-chambered right ventricle</strong></p><h3>Localizing the Obstruction</h3><ul><li><strong>Double-chambered RV results from obstructing muscle bundles dividing the ventricle into pressure compartments.</strong> The major step in this case is between proximal and distal RV, not across the pulmonary valve.<ul><li>A perimembranous VSD is a recognized association. Its connection to the high- or low-pressure compartment can alter the apparent jet and shunt physiology, so define the full anatomy before VSD repair.</li><li>TTE may miss the complete intraventricular partition. CMR, or CT when appropriate, can define the anatomy; catheterization helps clarify severity when symptoms or RV dysfunction need hemodynamic explanation.</li></ul></li></ul><h3>Treatment Implications</h3><ul><li><strong>Symptomatic moderate or greater DCRV obstruction is a surgical muscle-bundle repair problem.</strong> The 2025 guideline recommends repair for otherwise unexplained heart-failure symptoms, cyanosis or exercise limitation in that setting.<ul><li>Standard pulmonary balloon valvuloplasty treats suitable valvar stenosis and does not remove a muscular intracavitary partition. The normal valve and small distal-RV-to-PA pressure difference make that distinction important here.</li><li>Assess associated VSD, valve disease, RV function and arrhythmia before repair. Follow for residual or recurrent obstruction, ventricular remodeling and other associated congenital lesions afterward. An asymptomatic severe lesion also merits expert assessment under current guidance; symptoms alone are not the only marker of future risk. Avoid interpreting the high proximal RV pressure automatically as pulmonary hypertension when the distal RV and PA pressures are low.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Valvar pulmonary stenosis:</strong> Valvar obstruction produces a major pressure step between the RV outflow and pulmonary artery. Here the distal RV and PA systolic pressures are similar, while the large step lies within the RV.</li><li><strong>C — Supravalvar main pulmonary artery stenosis:</strong> Supravalvar obstruction is beyond the pulmonary valve and produces an outflow-to-distal-PA pressure difference. It does not explain the supplied high proximal RV pressure with a relatively low distal RV pressure.</li><li><strong>D — Peripheral branch pulmonary artery stenosis:</strong> Branch stenosis requires assessment of main and branch PA pressures and the branch anatomy. It would not primarily partition the RV itself into a high-pressure proximal and low-pressure distal compartment.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1016/j.jaccas.2025.103529\">Double density sign in double-chambered RV, 2025</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC11607469/\">Diagnosis and Management of Ventricular Septal Defects, 2024</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Intracavitary RV Pressure Step and Double-Chambered RV",
+        "sections": [
+          {
+            "heading": "Localizing the Obstruction",
+            "bullets": [
+              {
+                "text": "**Double-chambered RV results from obstructing muscle bundles dividing the ventricle into pressure compartments.** The major step in this case is between proximal and distal RV, not across the pulmonary valve.",
+                "children": [
+                  "A perimembranous VSD is a recognized association. Its connection to the high- or low-pressure compartment can alter the apparent jet and shunt physiology, so define the full anatomy before VSD repair.",
+                  "TTE may miss the complete intraventricular partition. CMR, or CT when appropriate, can define the anatomy; catheterization helps clarify severity when symptoms or RV dysfunction need hemodynamic explanation."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Treatment Implications",
+            "bullets": [
+              {
+                "text": "**Symptomatic moderate or greater DCRV obstruction is a surgical muscle-bundle repair problem.** The 2025 guideline recommends repair for otherwise unexplained heart-failure symptoms, cyanosis or exercise limitation in that setting.",
+                "children": [
+                  "Standard pulmonary balloon valvuloplasty treats suitable valvar stenosis and does not remove a muscular intracavitary partition. The normal valve and small distal-RV-to-PA pressure difference make that distinction important here.",
+                  "Assess associated VSD, valve disease, RV function and arrhythmia before repair. Follow for residual or recurrent obstruction, ventricular remodeling and other associated congenital lesions afterward. An asymptomatic severe lesion also merits expert assessment under current guidance; symptoms alone are not the only marker of future risk. Avoid interpreting the high proximal RV pressure automatically as pulmonary hypertension when the distal RV and PA pressures are low."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Valvar obstruction produces a major pressure step between the RV outflow and pulmonary artery. Here the distal RV and PA systolic pressures are similar, while the large step lies within the RV."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Supravalvar obstruction is beyond the pulmonary valve and produces an outflow-to-distal-PA pressure difference. It does not explain the supplied high proximal RV pressure with a relatively low distal RV pressure."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Branch stenosis requires assessment of main and branch PA pressures and the branch anatomy. It would not primarily partition the RV itself into a high-pressure proximal and low-pressure distal compartment."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "Double density sign in double-chambered RV, 2025",
+          "url": "https://doi.org/10.1016/j.jaccas.2025.103529"
+        },
+        {
+          "label": "Diagnosis and Management of Ventricular Septal Defects, 2024",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11607469/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Differentiate valvar subvalvar and supravalvar RV outflow obstruction"
+    },
+    {
+      "id": "cardiology-rebuild-12-021",
+      "topic": "Congenital valve and outflow obstruction",
+      "question": "A 41-year-old has a bicuspid aortic valve and a 4.6-cm ascending aorta. His asymptomatic first-degree relatives have normal cardiac examinations. Which initial family-screening strategy best follows the 2022 ACC/AHA aortic guideline?",
+      "options": [
+        "Resting ECG and ambulatory BP without structural imaging",
+        "TTE to assess the valve, aortic root and ascending aorta",
+        "Thoracic CTA as the first test for every relative",
+        "Genetic testing first, with imaging restricted to variant carriers"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Bicuspid Valve Aortopathy and First-Degree Relatives\n\nCorrect answer: TTE to assess the valve, aortic root and ascending aorta\n\nWhat the Family Screen Must Include\n\n**BAV and thoracic aortic enlargement can cluster in families and may be clinically silent.** The 2022 guideline recommends first-degree-relative TTE screening when the proband has BAV with a dilated root or ascending aorta.\n\nAssess both valve morphology/function and aortic dimensions. A relative may have aortic dilation even if the valve is tricuspid; looking only for a murmur or counting cusps is incomplete.\n\nIf TTE does not visualize the relevant aorta accurately or completely, CT or MRI is indicated to complete the assessment. An affected relative can lead to further family evaluation; normal imaging does not establish one fixed lifelong re-screening interval for every family.\n\nProband Surveillance and Intervention Context\n\n**The 4.6-cm aorta requires follow-up and risk assessment, not automatic isolated aortic replacement from its diameter alone.** Evaluate growth, family history, coarctation, root phenotype, body size and valve indications. The named ACC/AHA framework defines growth of at least ==0.3 cm== in one year as rapid in BAV.\n\nWithin the named 2022 ACC/AHA framework, BAV aortic surgery is recommended at ==5.5 cm==; selected earlier intervention is reasonable at ==5.0–5.4 cm== with additional risk, or with a cross-sectional aortic area-to-height ratio at least ==10 cm²/m==. A diameter of at least ==4.5 cm== can support concomitant replacement when aortic valve surgery is already being performed.\n\nUse reproducible serial measurements and review symptoms, BP and valve function. The concomitant-surgery threshold must not be mistaken for a universal isolated-operation threshold. Family imaging, the proband’s surveillance and the timing of intervention are related but separate decisions; finding a heritable risk does not mean every family member needs the same test schedule or operation.\n\nResting ECG and ambulatory BP without structural imaging: Electrical and BP assessment can identify other cardiovascular issues but cannot exclude bicuspid valve anatomy or aortic enlargement. A normal examination or ECG is not a substitute for the indicated structural screen.\n\nThoracic CTA as the first test for every relative: CT is useful when echo cannot assess the valve or thoracic aorta adequately and for selected anatomical questions. TTE is the appropriate initial family-screening test rather than exposing every relative to CT by default.\n\nGenetic testing first, with imaging restricted to variant carriers: Genetic evaluation is useful in selected heritable aortic-disease settings. Many BAV families do not have an identified pathogenic variant; a negative or uninformative genetic result does not remove the indication for screening imaging.\n\nACC/AHA aortic disease guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106\n\nAATS consensus on BAV-related aortopathy — https://pmc.ncbi.nlm.nih.gov/articles/PMC6413866/",
+      "explanationHtml": "<h2>Bicuspid Valve Aortopathy and First-Degree Relatives</h2><p><strong>Correct answer: B — TTE to assess the valve, aortic root and ascending aorta</strong></p><h3>What the Family Screen Must Include</h3><ul><li><strong>BAV and thoracic aortic enlargement can cluster in families and may be clinically silent.</strong> The 2022 guideline recommends first-degree-relative TTE screening when the proband has BAV with a dilated root or ascending aorta.<ul><li>Assess both valve morphology/function and aortic dimensions. A relative may have aortic dilation even if the valve is tricuspid; looking only for a murmur or counting cusps is incomplete.</li><li>If TTE does not visualize the relevant aorta accurately or completely, CT or MRI is indicated to complete the assessment. An affected relative can lead to further family evaluation; normal imaging does not establish one fixed lifelong re-screening interval for every family.</li></ul></li></ul><h3>Proband Surveillance and Intervention Context</h3><ul><li><strong>The 4.6-cm aorta requires follow-up and risk assessment, not automatic isolated aortic replacement from its diameter alone.</strong> Evaluate growth, family history, coarctation, root phenotype, body size and valve indications. The named ACC/AHA framework defines growth of at least <mark>0.3 cm</mark> in one year as rapid in BAV.<ul><li>Within the named 2022 ACC/AHA framework, BAV aortic surgery is recommended at <mark>5.5 cm</mark>; selected earlier intervention is reasonable at <mark>5.0–5.4 cm</mark> with additional risk, or with a cross-sectional aortic area-to-height ratio at least <mark>10 cm²/m</mark>. A diameter of at least <mark>4.5 cm</mark> can support concomitant replacement when aortic valve surgery is already being performed.</li><li>Use reproducible serial measurements and review symptoms, BP and valve function. The concomitant-surgery threshold must not be mistaken for a universal isolated-operation threshold. Family imaging, the proband’s surveillance and the timing of intervention are related but separate decisions; finding a heritable risk does not mean every family member needs the same test schedule or operation.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Resting ECG and ambulatory BP without structural imaging:</strong> Electrical and BP assessment can identify other cardiovascular issues but cannot exclude bicuspid valve anatomy or aortic enlargement. A normal examination or ECG is not a substitute for the indicated structural screen.</li><li><strong>C — Thoracic CTA as the first test for every relative:</strong> CT is useful when echo cannot assess the valve or thoracic aorta adequately and for selected anatomical questions. TTE is the appropriate initial family-screening test rather than exposing every relative to CT by default.</li><li><strong>D — Genetic testing first, with imaging restricted to variant carriers:</strong> Genetic evaluation is useful in selected heritable aortic-disease settings. Many BAV families do not have an identified pathogenic variant; a negative or uninformative genetic result does not remove the indication for screening imaging.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA aortic disease guideline, 2022</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC6413866/\">AATS consensus on BAV-related aortopathy</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Bicuspid Valve Aortopathy and First-Degree Relatives",
+        "sections": [
+          {
+            "heading": "What the Family Screen Must Include",
+            "bullets": [
+              {
+                "text": "**BAV and thoracic aortic enlargement can cluster in families and may be clinically silent.** The 2022 guideline recommends first-degree-relative TTE screening when the proband has BAV with a dilated root or ascending aorta.",
+                "children": [
+                  "Assess both valve morphology/function and aortic dimensions. A relative may have aortic dilation even if the valve is tricuspid; looking only for a murmur or counting cusps is incomplete.",
+                  "If TTE does not visualize the relevant aorta accurately or completely, CT or MRI is indicated to complete the assessment. An affected relative can lead to further family evaluation; normal imaging does not establish one fixed lifelong re-screening interval for every family."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Proband Surveillance and Intervention Context",
+            "bullets": [
+              {
+                "text": "**The 4.6-cm aorta requires follow-up and risk assessment, not automatic isolated aortic replacement from its diameter alone.** Evaluate growth, family history, coarctation, root phenotype, body size and valve indications. The named ACC/AHA framework defines growth of at least ==0.3 cm== in one year as rapid in BAV.",
+                "children": [
+                  "Within the named 2022 ACC/AHA framework, BAV aortic surgery is recommended at ==5.5 cm==; selected earlier intervention is reasonable at ==5.0–5.4 cm== with additional risk, or with a cross-sectional aortic area-to-height ratio at least ==10 cm²/m==. A diameter of at least ==4.5 cm== can support concomitant replacement when aortic valve surgery is already being performed.",
+                  "Use reproducible serial measurements and review symptoms, BP and valve function. The concomitant-surgery threshold must not be mistaken for a universal isolated-operation threshold. Family imaging, the proband’s surveillance and the timing of intervention are related but separate decisions; finding a heritable risk does not mean every family member needs the same test schedule or operation."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Electrical and BP assessment can identify other cardiovascular issues but cannot exclude bicuspid valve anatomy or aortic enlargement. A normal examination or ECG is not a substitute for the indicated structural screen."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "CT is useful when echo cannot assess the valve or thoracic aorta adequately and for selected anatomical questions. TTE is the appropriate initial family-screening test rather than exposing every relative to CT by default."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Genetic evaluation is useful in selected heritable aortic-disease settings. Many BAV families do not have an identified pathogenic variant; a negative or uninformative genetic result does not remove the indication for screening imaging."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA aortic disease guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        },
+        {
+          "label": "AATS consensus on BAV-related aortopathy",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6413866/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Assess congenital aortic valve disease with associated aortopathy and family risk"
     },
     {
       "id": "cardiology-rebuild-03-048",
@@ -1467,9 +1959,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 15,
+    "draftQuestions": 21,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 15
+    "newQuestionsAfterRedistribution": 21
   }
 }

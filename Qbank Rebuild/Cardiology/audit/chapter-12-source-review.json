@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 19,
+  "authoredQuestions": 25,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -44,7 +44,13 @@
     "cardiology-rebuild-12-012",
     "cardiology-rebuild-12-013",
     "cardiology-rebuild-12-014",
-    "cardiology-rebuild-12-015"
+    "cardiology-rebuild-12-015",
+    "cardiology-rebuild-12-016",
+    "cardiology-rebuild-12-017",
+    "cardiology-rebuild-12-018",
+    "cardiology-rebuild-12-019",
+    "cardiology-rebuild-12-020",
+    "cardiology-rebuild-12-021"
   ],
   "sources": [
     {
@@ -102,21 +108,49 @@
     {
       "label": "Merck Manual Professional: patent ductus arteriosus",
       "url": "https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/patent-ductus-arteriosus-pda"
+    },
+    {
+      "label": "ACC/AHA aortic disease guideline, 2022",
+      "url": "https://doi.org/10.1161/CIR.0000000000001106"
+    },
+    {
+      "label": "ESC peripheral arterial and aortic diseases guideline, 2024",
+      "url": "https://academic.oup.com/eurheartj/article/45/36/3538/7738955"
+    },
+    {
+      "label": "Persistent hypertension and LV hypertrophy after adult coarctation repair",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8363521/"
+    },
+    {
+      "label": "Heart-team management of adult coarctation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8807410/"
+    },
+    {
+      "label": "LV diastolic function and exertional symptoms in adult coarctation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7041882/"
+    },
+    {
+      "label": "Double density sign in double-chambered RV, 2025",
+      "url": "https://doi.org/10.1016/j.jaccas.2025.103529"
+    },
+    {
+      "label": "AATS consensus on BAV-related aortopathy",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6413866/"
     }
   ],
   "validation": {
-    "questions": 19,
+    "questions": 25,
     "answerDistribution": {
-      "A": 5,
-      "B": 5,
-      "C": 5,
-      "D": 4
+      "A": 7,
+      "B": 6,
+      "C": 6,
+      "D": 6
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 51,
+    "distractorRationales": 69,
     "questionStyles": {
-      "direct": 3,
-      "clinical_scenario": 16
+      "direct": 4,
+      "clinical_scenario": 21
     },
     "status": "passed"
   },
@@ -171,9 +205,29 @@
         "Right-to-left ductal entry beyond the usual left subclavian artery explains differential cyanosis in usual anatomy.",
         "A suitable isolated adult PDA with attributable left-heart enlargement and low PVR favors transcatheter closure; pulmonary vascular disease and test-occlusion limits are qualified."
       ]
+    },
+    {
+      "section": "Coarctation and congenital outflow lesions",
+      "questionIds": [
+        "cardiology-rebuild-12-016",
+        "cardiology-rebuild-12-017",
+        "cardiology-rebuild-12-018",
+        "cardiology-rebuild-12-019",
+        "cardiology-rebuild-12-020",
+        "cardiology-rebuild-12-021"
+      ],
+      "status": "authored_cases_source_checked",
+      "findings": [
+        "Postrepair cross-sectional surveillance covers aneurysm and arch anatomy even with a low resting gradient; ESC 2024 gives an adapted 3–5-year interval.",
+        "A 7/20 isthmus ratio is 0.35; collaterals can lower a catheter gradient despite important anatomy.",
+        "ESC stenting preference is qualified by adult anatomy; current US guidance permits surgical or catheter repair by ACHD experts.",
+        "Doppler mean and maximum instantaneous gradients are distinguished from invasive peak-to-peak measurements.",
+        "A proximal/distal RV pressure step with little distal-RV-to-PA step localizes intracavitary rather than valvar obstruction.",
+        "BAV with aortic dilation prompts first-degree-relative TTE; isolated and concomitant aortic operation thresholds are not conflated."
+      ]
     }
   ],
-  "nextWork": "Atrial, ventricular and ductal shunt decisions are drafted; finish subsection review and then progress through coarctation and congenital outflow lesions.",
+  "nextWork": "Progress through repaired and unrepaired tetralogy of Fallot, then Eisenmenger and the remaining complex lesions; foundations and final whole-chapter review also remain pending.",
   "limitations": [
     "Four transferred questions retained verbatim with their original IDs.",
     "New content has author source checks, not independent clinician review.",
