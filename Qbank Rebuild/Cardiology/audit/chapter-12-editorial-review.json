@@ -1,7 +1,7 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "a710273a351bf7fa17f4de18d07487e50fad0aa1e634b1ac1d9f6db20eaeb0ee",
+  "bankSha256": "cfb2cbc01ed43cbb94a66ea50856874601c3ba293c04a57cc076059e5957663c",
   "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis.",
   "findings": [
     {
@@ -21,8 +21,9 @@
     },
     {
       "questionId": "cardiology-rebuild-12-024",
-      "action": "Replace artificially restricted investigation choices with clinically competing imaging strategies.",
-      "status": "pending"
+      "action": "Replaced restricted tests with CMR angiography, 3D TEE and catheter balloon/coronary assessment; narrowed stem to self-expanding native-RVOT cycle-dependent fit analysis. Correct index retained.",
+      "status": "revised",
+      "source": "https://doi.org/10.1016/j.jcct.2023.06.005"
     }
   ],
   "remaining": [

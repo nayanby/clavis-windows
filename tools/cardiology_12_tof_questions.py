@@ -45,11 +45,11 @@ add(TOPIC,'Monomorphic VT After TOF Repair',
  ['TOF_ARRHYTHMIA','TOF_ISTHMUS','ACHD2025'])
 
 add(TOPIC,'Cardiac CT Before Native-RVOT Transcatheter Pulmonary Valve Treatment',
- 'A patient with repaired TOF and a native patched RVOT is being assessed for transcatheter pulmonary valve replacement. CMR has quantified pulmonary regurgitation and RV volumes. Which additional examination is recommended by the 2025 ACHD guideline to determine anatomical suitability?',
+ 'A patient with repaired TOF and a native patched RVOT is being screened for a self-expanding transcatheter pulmonary valve. CMR has quantified pulmonary regurgitation and RV volumes. Which additional examination best supplies the recommended three-dimensional, cardiac-cycle-dependent device-fit assessment?',
  'Cardiac CT defining RVOT geometry and coronary relationships',[
-  ('Repeat cine CMR confined to RV end-diastolic and end-systolic volumes','Those measurements are central to ventricular assessment and have already been obtained. Repeating only volumetry does not provide the additional detailed RVOT/device-planning assessment requested here.'),
-  ('TEE confined to pulmonary valve leaflet motion','TEE can answer selected valve questions but does not replace the recommended cross-sectional definition of the large patched RVOT, landing-zone geometry and neighboring coronary arteries.'),
-  ('A right-heart saturation run without anatomical imaging','Invasive sampling can characterize shunting and pressure-flow physiology when indicated. It does not define the dimensions, shape and coronary proximity needed to determine suitability of a native RVOT for a particular transcatheter valve.')],
+  ('Contrast-enhanced CMR angiography of the RVOT and pulmonary arteries','CMR supplies valuable anatomy, flow and ventricular function without radiation. For the specified self-expanding native-RVOT device-fit assessment, ECG-gated CT is the recommended method for detailed geometry through the cardiac cycle and coronary relationships.'),
+  ('Three-dimensional transesophageal echocardiography of the pulmonary outflow','TEE provides useful valve and procedural information. The anterior RVOT and its complete relationship to branch arteries and coronaries are not consistently characterized sufficiently for the requested device-fit analysis; CT provides the relevant volumetric dataset.'),
+  ('Catheter RVOT angiography with balloon sizing and coronary angiography','Catheter angiography and selected balloon testing are important for procedural assessment, particularly balloon-expandable pathways and coronary-compression testing. They complement rather than replace the recommended preprocedural CT fit analysis for a self-expanding valve in a native patched RVOT.')],
  [S('Procedure-Specific Anatomy',
    '**The 2025 guideline recommends cardiac CT for repaired TOF with native RVOT anatomy when transcatheter pulmonary valve treatment is being considered.** The purpose is anatomical suitability, not replacement of the preceding CMR functional assessment.',
    'Define the intended landing zone, its dimensions and shape, pulmonary artery anatomy and the coronary course relative to the outflow tract. A favorable regurgitant fraction or RV volume does not by itself establish that a device can be implanted safely.',
@@ -57,7 +57,7 @@ add(TOPIC,'Cardiac CT Before Native-RVOT Transcatheter Pulmonary Valve Treatment
   S('Coronary Compression and Alternative Repair',
    '**Expansion within the RVOT can compress a neighboring coronary artery.** The consequence can be acute ischemia, so coronary proximity is a central safety issue rather than an incidental imaging finding.',
    'Selected balloon-expandable conduit or RVOT procedures use test balloon inflation with simultaneous coronary angiography to assess compression. Apply the appropriate device-specific pathway; neither a generic negative test nor a simple coronary-distance estimate guarantees safety for every device.',
-   'Demonstrated compression risk or unsuitable landing anatomy can favor surgical or another tailored approach. Assess associated lesions that may also need repair, and discuss valve durability, endocarditis, residual obstruction/regurgitation and follow-up. The examination is chosen because it answers a specific procedural anatomy question that a repeated RV-volume study or oximetry run does not.')],
+   'Demonstrated compression risk or unsuitable landing anatomy can favor surgical or another tailored approach. Assess associated lesions that may also need repair, and discuss valve durability, endocarditis, residual obstruction/regurgitation and follow-up. CT provides the device-fit dataset; complementary functional and invasive assessments remain relevant to the complete procedural decision.')],
  ['ACHD2025','TPVR_CORONARY'])
 
 add(TOPIC,'Pressure-Loaded RV After TOF Repair',
