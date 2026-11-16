@@ -81,3 +81,22 @@ rows.append(Q(TOPIC,'Planning Noncardiac Surgery in Fontan Circulation',
   'Anticoagulant interruption and resumption require assessment of the actual indication, procedure bleeding risk and organ function. A blanket rule for every Fontan patient is inappropriate. The plan should identify who will manage postoperative congenital or rhythm problems and when reassessment is needed.',
   'Specialist involvement does not imply every operation requires the same invasive monitoring or intensive-care admission. It permits a proportionate plan based on anatomy, physiology and the anticipated stresses of the procedure.')],
  ['ACHD2025','ACHD_ANESTHESIA']))
+
+rows.append(Q(TOPIC,'Lifelong Surveillance After Tetralogy Repair',
+ 'A 23-year-old with repaired TOF feels well and asks to stop cardiology follow-up. Current assessment shows normal ventricular function, mild pulmonary regurgitation and no significant residual obstruction. Which follow-up strategy is best supported?',
+ 'Continue periodic ACHD review with testing intervals tailored to current physiology',[
+ ('Discharge to symptom-triggered assessment because residual lesions are mild','Some simple repaired defects require relatively infrequent follow-up, but repaired TOF can develop progressive valve, ventricular and rhythm complications before symptoms become obvious. Mild current findings do not justify permanent discharge.'),
+ ('Replace specialist review with a routine annual ECG alone','An ECG is useful for rhythm and conduction surveillance but does not quantify pulmonary regurgitation, RV volumes or outflow anatomy. It cannot provide the full longitudinal assessment needed after TOF repair.'),
+ ('Perform annual invasive catheterization to detect silent deterioration','Catheterization is appropriate for specific unresolved hemodynamic questions or planned intervention. Routine annual invasive assessment is not required in this stable patient when noninvasive surveillance is adequate.')],
+ [S('Repair Changes the Disease Trajectory',
+  '**Repair relieves the original cyanotic and obstructive physiology but leaves a circulation requiring longitudinal assessment.** Pulmonary valve dysfunction, residual obstruction, ventricular remodeling and surgical scar can have later consequences.',
+  'Patients may adapt to slowly declining exercise capacity. Waiting for overt symptoms can miss a period when objective changes already warrant closer review or intervention assessment. Preserve operative records and ensure a planned transition from pediatric to adult congenital care.'),
+  S('Choose the Test and Interval for the Question',
+  '**Clinical assessment, ECG and imaging provide complementary information.** Echocardiography assesses valve and outflow findings; CMR quantifies RV volumes, function and pulmonary flow when required.',
+  'The 2025 guideline lists ACHD visits every 12–24 months for repaired-TOF physiological stages A and B. In patients with normal ventricular function and no more than mild pulmonary regurgitation, CMR can be obtained every 3–5 years. These are qualified routine intervals, not instructions to defer evaluation of new symptoms.',
+  'Palpitations, syncope, new desaturation, declining exercise capacity or changing imaging findings warrant earlier assessment and selected rhythm or exercise testing. More advanced physiological stages require closer follow-up.'),
+  S('Maintain a Broader Adult Care Plan',
+  '**Surveillance also addresses exercise, reproductive health, procedural planning and acquired cardiovascular risks.** The congenital diagnosis should remain visible to clinicians treating otherwise unrelated conditions.',
+  'Explain what changes should prompt contact and provide a clear follow-up schedule. Shared care can improve access, but responsibility for congenital surveillance should be explicit. Neither the word repaired nor an isolated normal ejection fraction proves that all future risk has disappeared.',
+  'The same principle applies across ACHD, but the schedule is lesion-specific. Do not copy the TOF interval to every repaired ASD, systemic RV or Fontan circulation; use the actual anatomy and current physiological burden.')],
+ ['ACHD2025','ESC2020']))

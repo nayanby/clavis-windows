@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 51,
+  "targetQuestions": 52,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -4018,6 +4018,90 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Use specialist multidisciplinary planning for noncardiac procedures"
+    },
+    {
+      "id": "cardiology-rebuild-12-048",
+      "topic": "General adult congenital management",
+      "question": "A 23-year-old with repaired TOF feels well and asks to stop cardiology follow-up. Current assessment shows normal ventricular function, mild pulmonary regurgitation and no significant residual obstruction. Which follow-up strategy is best supported?",
+      "options": [
+        "Perform annual invasive catheterization to detect silent deterioration",
+        "Discharge to symptom-triggered assessment because residual lesions are mild",
+        "Replace specialist review with a routine annual ECG alone",
+        "Continue periodic ACHD review with testing intervals tailored to current physiology"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Lifelong Surveillance After Tetralogy Repair\n\nCorrect answer: Continue periodic ACHD review with testing intervals tailored to current physiology\n\nRepair Changes the Disease Trajectory\n\n**Repair relieves the original cyanotic and obstructive physiology but leaves a circulation requiring longitudinal assessment.** Pulmonary valve dysfunction, residual obstruction, ventricular remodeling and surgical scar can have later consequences.\n\nPatients may adapt to slowly declining exercise capacity. Waiting for overt symptoms can miss a period when objective changes already warrant closer review or intervention assessment. Preserve operative records and ensure a planned transition from pediatric to adult congenital care.\n\nChoose the Test and Interval for the Question\n\n**Clinical assessment, ECG and imaging provide complementary information.** Echocardiography assesses valve and outflow findings; CMR quantifies RV volumes, function and pulmonary flow when required.\n\nThe 2025 guideline lists ACHD visits every 12–24 months for repaired-TOF physiological stages A and B. In patients with normal ventricular function and no more than mild pulmonary regurgitation, CMR can be obtained every 3–5 years. These are qualified routine intervals, not instructions to defer evaluation of new symptoms.\n\nPalpitations, syncope, new desaturation, declining exercise capacity or changing imaging findings warrant earlier assessment and selected rhythm or exercise testing. More advanced physiological stages require closer follow-up.\n\nMaintain a Broader Adult Care Plan\n\n**Surveillance also addresses exercise, reproductive health, procedural planning and acquired cardiovascular risks.** The congenital diagnosis should remain visible to clinicians treating otherwise unrelated conditions.\n\nExplain what changes should prompt contact and provide a clear follow-up schedule. Shared care can improve access, but responsibility for congenital surveillance should be explicit. Neither the word repaired nor an isolated normal ejection fraction proves that all future risk has disappeared.\n\nThe same principle applies across ACHD, but the schedule is lesion-specific. Do not copy the TOF interval to every repaired ASD, systemic RV or Fontan circulation; use the actual anatomy and current physiological burden.\n\nPerform annual invasive catheterization to detect silent deterioration: Catheterization is appropriate for specific unresolved hemodynamic questions or planned intervention. Routine annual invasive assessment is not required in this stable patient when noninvasive surveillance is adequate.\n\nDischarge to symptom-triggered assessment because residual lesions are mild: Some simple repaired defects require relatively infrequent follow-up, but repaired TOF can develop progressive valve, ventricular and rhythm complications before symptoms become obvious. Mild current findings do not justify permanent discharge.\n\nReplace specialist review with a routine annual ECG alone: An ECG is useful for rhythm and conduction surveillance but does not quantify pulmonary regurgitation, RV volumes or outflow anatomy. It cannot provide the full longitudinal assessment needed after TOF repair.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Lifelong Surveillance After Tetralogy Repair</h2><p><strong>Correct answer: D — Continue periodic ACHD review with testing intervals tailored to current physiology</strong></p><h3>Repair Changes the Disease Trajectory</h3><ul><li><strong>Repair relieves the original cyanotic and obstructive physiology but leaves a circulation requiring longitudinal assessment.</strong> Pulmonary valve dysfunction, residual obstruction, ventricular remodeling and surgical scar can have later consequences.<ul><li>Patients may adapt to slowly declining exercise capacity. Waiting for overt symptoms can miss a period when objective changes already warrant closer review or intervention assessment. Preserve operative records and ensure a planned transition from pediatric to adult congenital care.</li></ul></li></ul><h3>Choose the Test and Interval for the Question</h3><ul><li><strong>Clinical assessment, ECG and imaging provide complementary information.</strong> Echocardiography assesses valve and outflow findings; CMR quantifies RV volumes, function and pulmonary flow when required.<ul><li>The 2025 guideline lists ACHD visits every 12–24 months for repaired-TOF physiological stages A and B. In patients with normal ventricular function and no more than mild pulmonary regurgitation, CMR can be obtained every 3–5 years. These are qualified routine intervals, not instructions to defer evaluation of new symptoms.</li><li>Palpitations, syncope, new desaturation, declining exercise capacity or changing imaging findings warrant earlier assessment and selected rhythm or exercise testing. More advanced physiological stages require closer follow-up.</li></ul></li></ul><h3>Maintain a Broader Adult Care Plan</h3><ul><li><strong>Surveillance also addresses exercise, reproductive health, procedural planning and acquired cardiovascular risks.</strong> The congenital diagnosis should remain visible to clinicians treating otherwise unrelated conditions.<ul><li>Explain what changes should prompt contact and provide a clear follow-up schedule. Shared care can improve access, but responsibility for congenital surveillance should be explicit. Neither the word repaired nor an isolated normal ejection fraction proves that all future risk has disappeared.</li><li>The same principle applies across ACHD, but the schedule is lesion-specific. Do not copy the TOF interval to every repaired ASD, systemic RV or Fontan circulation; use the actual anatomy and current physiological burden.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Perform annual invasive catheterization to detect silent deterioration:</strong> Catheterization is appropriate for specific unresolved hemodynamic questions or planned intervention. Routine annual invasive assessment is not required in this stable patient when noninvasive surveillance is adequate.</li><li><strong>B — Discharge to symptom-triggered assessment because residual lesions are mild:</strong> Some simple repaired defects require relatively infrequent follow-up, but repaired TOF can develop progressive valve, ventricular and rhythm complications before symptoms become obvious. Mild current findings do not justify permanent discharge.</li><li><strong>C — Replace specialist review with a routine annual ECG alone:</strong> An ECG is useful for rhythm and conduction surveillance but does not quantify pulmonary regurgitation, RV volumes or outflow anatomy. It cannot provide the full longitudinal assessment needed after TOF repair.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Lifelong Surveillance After Tetralogy Repair",
+        "sections": [
+          {
+            "heading": "Repair Changes the Disease Trajectory",
+            "bullets": [
+              {
+                "text": "**Repair relieves the original cyanotic and obstructive physiology but leaves a circulation requiring longitudinal assessment.** Pulmonary valve dysfunction, residual obstruction, ventricular remodeling and surgical scar can have later consequences.",
+                "children": [
+                  "Patients may adapt to slowly declining exercise capacity. Waiting for overt symptoms can miss a period when objective changes already warrant closer review or intervention assessment. Preserve operative records and ensure a planned transition from pediatric to adult congenital care."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Choose the Test and Interval for the Question",
+            "bullets": [
+              {
+                "text": "**Clinical assessment, ECG and imaging provide complementary information.** Echocardiography assesses valve and outflow findings; CMR quantifies RV volumes, function and pulmonary flow when required.",
+                "children": [
+                  "The 2025 guideline lists ACHD visits every 12–24 months for repaired-TOF physiological stages A and B. In patients with normal ventricular function and no more than mild pulmonary regurgitation, CMR can be obtained every 3–5 years. These are qualified routine intervals, not instructions to defer evaluation of new symptoms.",
+                  "Palpitations, syncope, new desaturation, declining exercise capacity or changing imaging findings warrant earlier assessment and selected rhythm or exercise testing. More advanced physiological stages require closer follow-up."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Maintain a Broader Adult Care Plan",
+            "bullets": [
+              {
+                "text": "**Surveillance also addresses exercise, reproductive health, procedural planning and acquired cardiovascular risks.** The congenital diagnosis should remain visible to clinicians treating otherwise unrelated conditions.",
+                "children": [
+                  "Explain what changes should prompt contact and provide a clear follow-up schedule. Shared care can improve access, but responsibility for congenital surveillance should be explicit. Neither the word repaired nor an isolated normal ejection fraction proves that all future risk has disappeared.",
+                  "The same principle applies across ACHD, but the schedule is lesion-specific. Do not copy the TOF interval to every repaired ASD, systemic RV or Fontan circulation; use the actual anatomy and current physiological burden."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Catheterization is appropriate for specific unresolved hemodynamic questions or planned intervention. Routine annual invasive assessment is not required in this stable patient when noninvasive surveillance is adequate."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Some simple repaired defects require relatively infrequent follow-up, but repaired TOF can develop progressive valve, ventricular and rhythm complications before symptoms become obvious. Mild current findings do not justify permanent discharge."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "An ECG is useful for rhythm and conduction surveillance but does not quantify pulmonary regurgitation, RV volumes or outflow anatomy. It cannot provide the full longitudinal assessment needed after TOF repair."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Plan lifelong follow-up after repair without relying only on anatomical labels"
     }
   ],
   "plannedQuestions": 55,
@@ -4026,9 +4110,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 47,
+    "draftQuestions": 48,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 47
+    "newQuestionsAfterRedistribution": 48
   }
 }
