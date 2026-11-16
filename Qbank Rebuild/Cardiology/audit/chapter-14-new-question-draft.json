@@ -1,0 +1,1140 @@
+{
+  "schemaVersion": 1,
+  "folder": "Cardiology",
+  "subject": "Cardiology",
+  "chapterOrder": 14,
+  "topicOrder": 1,
+  "headingIndex": 0,
+  "document": "14. Advanced ECG Interpretation and Electrophysiology",
+  "headingText": "Advanced ECG Interpretation and Electrophysiology",
+  "targetQuestions": 15,
+  "status": "uninstalled_authoring_draft",
+  "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
+  "sourceNote": "Local new-question draft only; existing 45 questions remain in the canonical bank. Final integration and review pending.",
+  "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3}",
+  "questions": [
+    {
+      "id": "cardiology-rebuild-14-001",
+      "topic": "ECG measurement and interpretation",
+      "question": "A regular rhythm is recorded at 50 mm/s. Consecutive R waves are separated by 24 small horizontal squares. What is the ventricular rate?",
+      "options": [
+        "125/min",
+        "62.5/min",
+        "100/min",
+        "150/min"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": true,
+      "explanation": "Paper Speed and Heart Rate\n\nCorrect answer: 125/min\n\nCalculation\n\n**At ==50 mm==/s, each ==1 mm== square is ==20 ms==.**\n\nRR = 24 × 0.020 = 0.480 s; rate = 60/0.480 = **125/min**.\n\nTechnical Interpretation\n\n**Check speed before intervals or rhythm rate.**\n\nThe familiar 1500/small-squares rule applies at ==25 mm==/s; at ==50 mm==/s use 3000/small squares.\n\n**Gain controls voltage, not timing.**\n\nStandard gain is ==10 mm==/mV; half or double gain changes apparent amplitude but not the RR interval.\n\n**Use a timed strip for irregular rhythms**, rather than treating one RR interval as the average rate.\n\nAHA/ACCF/HRS ECG Standardization, Part I — https://doi.org/10.1016/j.jacc.2007.01.024",
+      "explanationHtml": "<h2>Paper Speed and Heart Rate</h2><p><strong>Correct answer: A — 125/min</strong></p><h3>Calculation</h3><ul><li><strong>At <mark>50 mm</mark>/s, each <mark>1 mm</mark> square is <mark>20 ms</mark>.</strong><ul><li>RR = 24 × 0.020 = 0.480 s; rate = 60/0.480 = <strong>125/min</strong>.</li></ul></li></ul><h3>Technical Interpretation</h3><ul><li><strong>Check speed before intervals or rhythm rate.</strong><ul><li>The familiar 1500/small-squares rule applies at <mark>25 mm</mark>/s; at <mark>50 mm</mark>/s use 3000/small squares.</li></ul></li><li><strong>Gain controls voltage, not timing.</strong><ul><li>Standard gain is <mark>10 mm</mark>/mV; half or double gain changes apparent amplitude but not the RR interval.</li></ul></li><li><strong>Use a timed strip for irregular rhythms</strong>, rather than treating one RR interval as the average rate.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2007.01.024\">AHA/ACCF/HRS ECG Standardization, Part I</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Paper Speed and Heart Rate",
+        "sections": [
+          {
+            "heading": "Calculation",
+            "bullets": [
+              {
+                "text": "**At ==50 mm==/s, each ==1 mm== square is ==20 ms==.**",
+                "children": [
+                  "RR = 24 × 0.020 = 0.480 s; rate = 60/0.480 = **125/min**."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Technical Interpretation",
+            "bullets": [
+              {
+                "text": "**Check speed before intervals or rhythm rate.**",
+                "children": [
+                  "The familiar 1500/small-squares rule applies at ==25 mm==/s; at ==50 mm==/s use 3000/small squares."
+                ]
+              },
+              {
+                "text": "**Gain controls voltage, not timing.**",
+                "children": [
+                  "Standard gain is ==10 mm==/mV; half or double gain changes apparent amplitude but not the RR interval."
+                ]
+              },
+              {
+                "text": "**Use a timed strip for irregular rhythms**, rather than treating one RR interval as the average rate.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": []
+      },
+      "references": [
+        {
+          "label": "AHA/ACCF/HRS ECG Standardization, Part I",
+          "url": "https://doi.org/10.1016/j.jacc.2007.01.024"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-002",
+      "topic": "ECG measurement and interpretation",
+      "question": "An asymptomatic patient has negative P, QRS and T waves in lead I, unexpectedly positive aVR and normal precordial R-wave progression. A previous ECG was normal. What should be suspected first?",
+      "options": [
+        "Right-arm/left-arm electrode reversal",
+        "Dextrocardia",
+        "Left posterior fascicular block",
+        "Low atrial rhythm"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Arm-Electrode Reversal\n\nCorrect answer: Right-arm/left-arm electrode reversal\n\nRecognize the Technical Pattern\n\n**RA/LA reversal inverts lead I**, exchanges II with III and aVR with aVL; aVF is unchanged.\n\nPrecordial leads retain their usual progression because chest electrodes have not been swapped.\n\nConfirm Before Labeling Disease\n\n**Check the electrode connections and repeat the ECG.**\n\nCompare with prior tracings; do not diagnose a new axis disorder or infarction solely from the technically suspect tracing.\n\n**Dextrocardia affects chest-lead progression** as well as limb orientation; deliberate right-sided recording requires documented placement.\n\nDextrocardia: Dextrocardia can invert lead I but usually also reverses normal precordial progression with standard left-sided chest placement; normal progression favors arm reversal.\n\nLeft posterior fascicular block: LPFB shifts the QRS axis but does not invert the entire P–QRS–T sequence in lead I or exchange aVR/aVL relationships.\n\nLow atrial rhythm: A low atrial focus changes P-wave polarity and may shorten PR; it does not explain simultaneous reversal of ventricular depolarization and repolarization in lead I.\n\nAHA/ACCF/HRS ECG Standardization, Part I — https://doi.org/10.1016/j.jacc.2007.01.024",
+      "explanationHtml": "<h2>Arm-Electrode Reversal</h2><p><strong>Correct answer: A — Right-arm/left-arm electrode reversal</strong></p><h3>Recognize the Technical Pattern</h3><ul><li><strong>RA/LA reversal inverts lead I</strong>, exchanges II with III and aVR with aVL; aVF is unchanged.<ul><li>Precordial leads retain their usual progression because chest electrodes have not been swapped.</li></ul></li></ul><h3>Confirm Before Labeling Disease</h3><ul><li><strong>Check the electrode connections and repeat the ECG.</strong><ul><li>Compare with prior tracings; do not diagnose a new axis disorder or infarction solely from the technically suspect tracing.</li></ul></li><li><strong>Dextrocardia affects chest-lead progression</strong> as well as limb orientation; deliberate right-sided recording requires documented placement.</li></ul><h3>Other Options</h3><ul><li><strong>B — Dextrocardia:</strong> Dextrocardia can invert lead I but usually also reverses normal precordial progression with standard left-sided chest placement; normal progression favors arm reversal.</li><li><strong>C — Left posterior fascicular block:</strong> LPFB shifts the QRS axis but does not invert the entire P–QRS–T sequence in lead I or exchange aVR/aVL relationships.</li><li><strong>D — Low atrial rhythm:</strong> A low atrial focus changes P-wave polarity and may shorten PR; it does not explain simultaneous reversal of ventricular depolarization and repolarization in lead I.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2007.01.024\">AHA/ACCF/HRS ECG Standardization, Part I</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Arm-Electrode Reversal",
+        "sections": [
+          {
+            "heading": "Recognize the Technical Pattern",
+            "bullets": [
+              {
+                "text": "**RA/LA reversal inverts lead I**, exchanges II with III and aVR with aVL; aVF is unchanged.",
+                "children": [
+                  "Precordial leads retain their usual progression because chest electrodes have not been swapped."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Confirm Before Labeling Disease",
+            "bullets": [
+              {
+                "text": "**Check the electrode connections and repeat the ECG.**",
+                "children": [
+                  "Compare with prior tracings; do not diagnose a new axis disorder or infarction solely from the technically suspect tracing."
+                ]
+              },
+              {
+                "text": "**Dextrocardia affects chest-lead progression** as well as limb orientation; deliberate right-sided recording requires documented placement.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Dextrocardia can invert lead I but usually also reverses normal precordial progression with standard left-sided chest placement; normal progression favors arm reversal."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "LPFB shifts the QRS axis but does not invert the entire P–QRS–T sequence in lead I or exchange aVR/aVL relationships."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "A low atrial focus changes P-wave polarity and may shorten PR; it does not explain simultaneous reversal of ventricular depolarization and repolarization in lead I."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACCF/HRS ECG Standardization, Part I",
+          "url": "https://doi.org/10.1016/j.jacc.2007.01.024"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-003",
+      "topic": "ECG measurement and interpretation",
+      "question": "A monitor displays rapid wide oscillations, but the patient is alert with a regular palpable pulse at 78/min. Narrow QRS complexes continue at that rate through the oscillations in another lead. What is the best immediate interpretation?",
+      "options": [
+        "Hemodynamically tolerated sustained VT",
+        "Movement artifact superimposed on the underlying rhythm",
+        "Atrial flutter with 1:1 conduction",
+        "Pre-excited atrial fibrillation"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Tremor Artifact Mimicking Tachycardia\n\nCorrect answer: Movement artifact superimposed on the underlying rhythm\n\nReconcile Electrical and Clinical Data\n\n**Assess the patient and pulse immediately.**\n\nA monitor appearance alone is insufficient; inspect multiple leads for unaffected complexes marching through noise.\n\nRestore Signal Quality\n\n**Correct tremor, cable motion and poor electrode contact**, then obtain a diagnostic tracing.\n\n**Do not let apparent stability alone exclude real VT.**\n\nThe decisive evidence here is the preserved underlying electrical/pulse rhythm, not merely a conscious patient.\n\n**If perfusion is absent or unstable**, act on the emergency assessment while checking signal validity; artifact recognition must not delay needed resuscitation.\n\nHemodynamically tolerated sustained VT: Stable VT is possible, but persistent normal QRS complexes and a pulse matching the slower underlying rhythm strongly favor artifact here.\n\nAtrial flutter with 1:1 conduction: True rapid ventricular conduction would alter the ventricular/pulse rate; the preserved slower QRS sequence contradicts a 1:1 tachycardia.\n\nPre-excited atrial fibrillation: Pre-excited AF produces an irregular rapid ventricular rhythm with variable QRS morphology, not an independent unchanged regular QRS sequence beneath noise.\n\nAHA/ACCF/HRS ECG Standardization, Part I — https://doi.org/10.1016/j.jacc.2007.01.024",
+      "explanationHtml": "<h2>Tremor Artifact Mimicking Tachycardia</h2><p><strong>Correct answer: B — Movement artifact superimposed on the underlying rhythm</strong></p><h3>Reconcile Electrical and Clinical Data</h3><ul><li><strong>Assess the patient and pulse immediately.</strong><ul><li>A monitor appearance alone is insufficient; inspect multiple leads for unaffected complexes marching through noise.</li></ul></li></ul><h3>Restore Signal Quality</h3><ul><li><strong>Correct tremor, cable motion and poor electrode contact</strong>, then obtain a diagnostic tracing.</li><li><strong>Do not let apparent stability alone exclude real VT.</strong><ul><li>The decisive evidence here is the preserved underlying electrical/pulse rhythm, not merely a conscious patient.</li></ul></li><li><strong>If perfusion is absent or unstable</strong>, act on the emergency assessment while checking signal validity; artifact recognition must not delay needed resuscitation.</li></ul><h3>Other Options</h3><ul><li><strong>A — Hemodynamically tolerated sustained VT:</strong> Stable VT is possible, but persistent normal QRS complexes and a pulse matching the slower underlying rhythm strongly favor artifact here.</li><li><strong>C — Atrial flutter with 1:1 conduction:</strong> True rapid ventricular conduction would alter the ventricular/pulse rate; the preserved slower QRS sequence contradicts a 1:1 tachycardia.</li><li><strong>D — Pre-excited atrial fibrillation:</strong> Pre-excited AF produces an irregular rapid ventricular rhythm with variable QRS morphology, not an independent unchanged regular QRS sequence beneath noise.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2007.01.024\">AHA/ACCF/HRS ECG Standardization, Part I</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Tremor Artifact Mimicking Tachycardia",
+        "sections": [
+          {
+            "heading": "Reconcile Electrical and Clinical Data",
+            "bullets": [
+              {
+                "text": "**Assess the patient and pulse immediately.**",
+                "children": [
+                  "A monitor appearance alone is insufficient; inspect multiple leads for unaffected complexes marching through noise."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Restore Signal Quality",
+            "bullets": [
+              {
+                "text": "**Correct tremor, cable motion and poor electrode contact**, then obtain a diagnostic tracing.",
+                "children": []
+              },
+              {
+                "text": "**Do not let apparent stability alone exclude real VT.**",
+                "children": [
+                  "The decisive evidence here is the preserved underlying electrical/pulse rhythm, not merely a conscious patient."
+                ]
+              },
+              {
+                "text": "**If perfusion is absent or unstable**, act on the emergency assessment while checking signal validity; artifact recognition must not delay needed resuscitation.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Stable VT is possible, but persistent normal QRS complexes and a pulse matching the slower underlying rhythm strongly favor artifact here."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "True rapid ventricular conduction would alter the ventricular/pulse rate; the preserved slower QRS sequence contradicts a 1:1 tachycardia."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Pre-excited AF produces an irregular rapid ventricular rhythm with variable QRS morphology, not an independent unchanged regular QRS sequence beneath noise."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACCF/HRS ECG Standardization, Part I",
+          "url": "https://doi.org/10.1016/j.jacc.2007.01.024"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-004",
+      "topic": "ECG measurement and interpretation",
+      "question": "QRS is predominantly positive in lead I, negative in aVF and positive in lead II. Which axis range best fits?",
+      "options": [
+        "Between −180° and −90°",
+        "Between −90° and −30°",
+        "Between +90° and +180°",
+        "Between −30° and 0°"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Refining the Frontal QRS Axis\n\nCorrect answer: Between −30° and 0°\n\nStepwise Axis Assessment\n\n**I positive/aVF negative** places the axis in the left-superior quadrant.\n\nLead II positivity narrows it to −30° to 0°, usually still within the normal adult range.\n\nClinical Limits\n\n**Axis is a vector description, not a diagnosis.**\n\nLAFB, infarction, hypertrophy, pre-excitation and lead errors can alter it.\n\n**Check calibration and limb placement**, then integrate QRS morphology and clinical context.\n\nAn isoelectric lead can refine the estimate: the mean axis lies approximately perpendicular to that lead, with polarity resolving the direction.\n\nI | aVF | Initial quadrant\n\n+ | + | 0° to +90°\n\n+ | − | −90° to 0°; inspect II\n\n− | + | +90° to +180°\n\n− | − | Extreme superior axis\n\nBetween −180° and −90°: Extreme superior axis has negative QRS in both I and aVF; lead I is positive here.\n\nBetween −90° and −30°: More negative left-axis deviation would make lead II negative; its positive QRS refines this case to above −30 degrees.\n\nBetween +90° and +180°: Right-axis deviation produces a negative lead I with positive aVF, the opposite of the supplied limb-lead pattern.\n\nAHA/ACCF/HRS ECG Standardization, Part I — https://doi.org/10.1016/j.jacc.2007.01.024",
+      "explanationHtml": "<h2>Refining the Frontal QRS Axis</h2><p><strong>Correct answer: D — Between −30° and 0°</strong></p><h3>Stepwise Axis Assessment</h3><ul><li><strong>I positive/aVF negative</strong> places the axis in the left-superior quadrant.<ul><li>Lead II positivity narrows it to −30° to 0°, usually still within the normal adult range.</li></ul></li></ul><h3>Clinical Limits</h3><ul><li><strong>Axis is a vector description, not a diagnosis.</strong><ul><li>LAFB, infarction, hypertrophy, pre-excitation and lead errors can alter it.</li></ul></li><li><strong>Check calibration and limb placement</strong>, then integrate QRS morphology and clinical context.<ul><li>An isoelectric lead can refine the estimate: the mean axis lies approximately perpendicular to that lead, with polarity resolving the direction.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>I</th><th>aVF</th><th>Initial quadrant</th></tr></thead><tbody><tr><td>+</td><td>+</td><td>0° to +90°</td></tr><tr><td>+</td><td>−</td><td>−90° to 0°; inspect II</td></tr><tr><td>−</td><td>+</td><td>+90° to +180°</td></tr><tr><td>−</td><td>−</td><td>Extreme superior axis</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — Between −180° and −90°:</strong> Extreme superior axis has negative QRS in both I and aVF; lead I is positive here.</li><li><strong>B — Between −90° and −30°:</strong> More negative left-axis deviation would make lead II negative; its positive QRS refines this case to above −30 degrees.</li><li><strong>C — Between +90° and +180°:</strong> Right-axis deviation produces a negative lead I with positive aVF, the opposite of the supplied limb-lead pattern.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2007.01.024\">AHA/ACCF/HRS ECG Standardization, Part I</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Refining the Frontal QRS Axis",
+        "sections": [
+          {
+            "heading": "Stepwise Axis Assessment",
+            "bullets": [
+              {
+                "text": "**I positive/aVF negative** places the axis in the left-superior quadrant.",
+                "children": [
+                  "Lead II positivity narrows it to −30° to 0°, usually still within the normal adult range."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Clinical Limits",
+            "bullets": [
+              {
+                "text": "**Axis is a vector description, not a diagnosis.**",
+                "children": [
+                  "LAFB, infarction, hypertrophy, pre-excitation and lead errors can alter it."
+                ]
+              },
+              {
+                "text": "**Check calibration and limb placement**, then integrate QRS morphology and clinical context.",
+                "children": [
+                  "An isoelectric lead can refine the estimate: the mean axis lies approximately perpendicular to that lead, with polarity resolving the direction."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "I",
+              "aVF",
+              "Initial quadrant"
+            ],
+            "rows": [
+              [
+                "+",
+                "+",
+                "0° to +90°"
+              ],
+              [
+                "+",
+                "−",
+                "−90° to 0°; inspect II"
+              ],
+              [
+                "−",
+                "+",
+                "+90° to +180°"
+              ],
+              [
+                "−",
+                "−",
+                "Extreme superior axis"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Extreme superior axis has negative QRS in both I and aVF; lead I is positive here."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "More negative left-axis deviation would make lead II negative; its positive QRS refines this case to above −30 degrees."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Right-axis deviation produces a negative lead I with positive aVF, the opposite of the supplied limb-lead pattern."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACCF/HRS ECG Standardization, Part I",
+          "url": "https://doi.org/10.1016/j.jacc.2007.01.024"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-005",
+      "topic": "ECG measurement and interpretation",
+      "question": "A tracing shows QRS 104 ms, axis −60°, qR complexes in I/aVL and rS complexes in II/III/aVF. Which conduction abnormality best fits?",
+      "options": [
+        "Complete left bundle-branch block",
+        "Left anterior fascicular block",
+        "Left posterior fascicular block",
+        "Complete right bundle-branch block"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Left Anterior Fascicular Block\n\nCorrect answer: Left anterior fascicular block\n\nActivation Sequence\n\n**Delayed anterior-superior LV activation** produces a left-superior mean axis.\n\nTypical axis is −45° to −90°, qR in I/aVL and rS inferiorly; QRS is usually ==<120 ms==.\n\nInterpretation and Follow-up\n\n**Consider ischemic, hypertensive, degenerative or structural disease.**\n\nAn isolated fascicular pattern does not prove the underlying cause.\n\n**RBBB plus LAFB is bifascicular disease.**\n\nSyncope, alternating bundle patterns or advanced AV block require evaluation beyond an incidental isolated LAFB finding.\n\n**Exclude lead errors and infarct-related axis shifts** when morphology or clinical history is discordant.\n\nComplete left bundle-branch block: Complete LBBB requires a wider QRS with characteristic broad lateral R waves and loss of normal lateral septal q waves; the supplied narrow qR pattern favors LAFB.\n\nLeft posterior fascicular block: LPFB causes rightward rather than left-superior axis, with rS in I/aVL and qR inferiorly after excluding other right-axis causes.\n\nComplete right bundle-branch block: RBBB needs delayed terminal rightward activation, typically rSR-prime in V1 and broad terminal S in I/V6 with QRS ≥120 ms; these are not supplied.\n\nAHA/ACCF/HRS ECG Standardization, Part I — https://doi.org/10.1016/j.jacc.2007.01.024\n\nESC Cardiac Pacing and CRT Guideline, 2021 — https://doi.org/10.1093/eurheartj/ehab364",
+      "explanationHtml": "<h2>Left Anterior Fascicular Block</h2><p><strong>Correct answer: B — Left anterior fascicular block</strong></p><h3>Activation Sequence</h3><ul><li><strong>Delayed anterior-superior LV activation</strong> produces a left-superior mean axis.<ul><li>Typical axis is −45° to −90°, qR in I/aVL and rS inferiorly; QRS is usually <mark>&lt;120 ms</mark>.</li></ul></li></ul><h3>Interpretation and Follow-up</h3><ul><li><strong>Consider ischemic, hypertensive, degenerative or structural disease.</strong><ul><li>An isolated fascicular pattern does not prove the underlying cause.</li></ul></li><li><strong>RBBB plus LAFB is bifascicular disease.</strong><ul><li>Syncope, alternating bundle patterns or advanced AV block require evaluation beyond an incidental isolated LAFB finding.</li></ul></li><li><strong>Exclude lead errors and infarct-related axis shifts</strong> when morphology or clinical history is discordant.</li></ul><h3>Other Options</h3><ul><li><strong>A — Complete left bundle-branch block:</strong> Complete LBBB requires a wider QRS with characteristic broad lateral R waves and loss of normal lateral septal q waves; the supplied narrow qR pattern favors LAFB.</li><li><strong>C — Left posterior fascicular block:</strong> LPFB causes rightward rather than left-superior axis, with rS in I/aVL and qR inferiorly after excluding other right-axis causes.</li><li><strong>D — Complete right bundle-branch block:</strong> RBBB needs delayed terminal rightward activation, typically rSR-prime in V1 and broad terminal S in I/V6 with QRS ≥120 ms; these are not supplied.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2007.01.024\">AHA/ACCF/HRS ECG Standardization, Part I</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehab364\">ESC Cardiac Pacing and CRT Guideline, 2021</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Left Anterior Fascicular Block",
+        "sections": [
+          {
+            "heading": "Activation Sequence",
+            "bullets": [
+              {
+                "text": "**Delayed anterior-superior LV activation** produces a left-superior mean axis.",
+                "children": [
+                  "Typical axis is −45° to −90°, qR in I/aVL and rS inferiorly; QRS is usually ==<120 ms==."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Interpretation and Follow-up",
+            "bullets": [
+              {
+                "text": "**Consider ischemic, hypertensive, degenerative or structural disease.**",
+                "children": [
+                  "An isolated fascicular pattern does not prove the underlying cause."
+                ]
+              },
+              {
+                "text": "**RBBB plus LAFB is bifascicular disease.**",
+                "children": [
+                  "Syncope, alternating bundle patterns or advanced AV block require evaluation beyond an incidental isolated LAFB finding."
+                ]
+              },
+              {
+                "text": "**Exclude lead errors and infarct-related axis shifts** when morphology or clinical history is discordant.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Complete LBBB requires a wider QRS with characteristic broad lateral R waves and loss of normal lateral septal q waves; the supplied narrow qR pattern favors LAFB."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "LPFB causes rightward rather than left-superior axis, with rS in I/aVL and qR inferiorly after excluding other right-axis causes."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "RBBB needs delayed terminal rightward activation, typically rSR-prime in V1 and broad terminal S in I/V6 with QRS ≥120 ms; these are not supplied."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACCF/HRS ECG Standardization, Part I",
+          "url": "https://doi.org/10.1016/j.jacc.2007.01.024"
+        },
+        {
+          "label": "ESC Cardiac Pacing and CRT Guideline, 2021",
+          "url": "https://doi.org/10.1093/eurheartj/ehab364"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-006",
+      "topic": "ECG measurement and interpretation",
+      "question": "An asymptomatic adult has RBBB, LAFB and PR 240 ms. What can be concluded from the surface ECG alone?",
+      "options": [
+        "Bifascicular block with first-degree AV delay; the PR delay is not necessarily in the remaining fascicle",
+        "Definite failure of all three fascicles",
+        "Complete AV block with a junctional escape",
+        "Isolated AV nodal disease explaining every finding"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Bifascicular Block With Long PR\n\nCorrect answer: Bifascicular block with first-degree AV delay; the PR delay is not necessarily in the remaining fascicle\n\nAvoid Overlocalization\n\n**PR includes atrial, AV nodal and His–Purkinje conduction.**\n\nA long PR does not locate the delay; the label “trifascicular block” can overstate what the surface ECG proves.\n\nAssess Risk Clinically\n\n**Review symptoms, prior ECGs and reversible causes.**\n\nSyncope or intermittent advanced block changes the evaluation; routine pacing is not established solely by this asymptomatic combination.\n\n**EPS can measure HV conduction in selected patients.**\n\nAlternating bundle-branch block provides stronger evidence of extensive distal disease than PR prolongation alone.\n\nDefinite failure of all three fascicles: PR prolongation can arise in the AV node; the ECG does not prove that the remaining left posterior fascicle is diseased.\n\nComplete AV block with a junctional escape: Complete AV block requires absence of conducted atrial impulses and independent rhythms; this patient has first-degree delay with maintained conduction.\n\nIsolated AV nodal disease explaining every finding: AV nodal delay may explain PR prolongation but cannot itself account for the documented right bundle and left anterior fascicular patterns.\n\nESC Cardiac Pacing and CRT Guideline, 2021 — https://doi.org/10.1093/eurheartj/ehab364",
+      "explanationHtml": "<h2>Bifascicular Block With Long PR</h2><p><strong>Correct answer: A — Bifascicular block with first-degree AV delay; the PR delay is not necessarily in the remaining fascicle</strong></p><h3>Avoid Overlocalization</h3><ul><li><strong>PR includes atrial, AV nodal and His–Purkinje conduction.</strong><ul><li>A long PR does not locate the delay; the label “trifascicular block” can overstate what the surface ECG proves.</li></ul></li></ul><h3>Assess Risk Clinically</h3><ul><li><strong>Review symptoms, prior ECGs and reversible causes.</strong><ul><li>Syncope or intermittent advanced block changes the evaluation; routine pacing is not established solely by this asymptomatic combination.</li></ul></li><li><strong>EPS can measure HV conduction in selected patients.</strong><ul><li>Alternating bundle-branch block provides stronger evidence of extensive distal disease than PR prolongation alone.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Definite failure of all three fascicles:</strong> PR prolongation can arise in the AV node; the ECG does not prove that the remaining left posterior fascicle is diseased.</li><li><strong>C — Complete AV block with a junctional escape:</strong> Complete AV block requires absence of conducted atrial impulses and independent rhythms; this patient has first-degree delay with maintained conduction.</li><li><strong>D — Isolated AV nodal disease explaining every finding:</strong> AV nodal delay may explain PR prolongation but cannot itself account for the documented right bundle and left anterior fascicular patterns.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehab364\">ESC Cardiac Pacing and CRT Guideline, 2021</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Bifascicular Block With Long PR",
+        "sections": [
+          {
+            "heading": "Avoid Overlocalization",
+            "bullets": [
+              {
+                "text": "**PR includes atrial, AV nodal and His–Purkinje conduction.**",
+                "children": [
+                  "A long PR does not locate the delay; the label “trifascicular block” can overstate what the surface ECG proves."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Assess Risk Clinically",
+            "bullets": [
+              {
+                "text": "**Review symptoms, prior ECGs and reversible causes.**",
+                "children": [
+                  "Syncope or intermittent advanced block changes the evaluation; routine pacing is not established solely by this asymptomatic combination."
+                ]
+              },
+              {
+                "text": "**EPS can measure HV conduction in selected patients.**",
+                "children": [
+                  "Alternating bundle-branch block provides stronger evidence of extensive distal disease than PR prolongation alone."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "PR prolongation can arise in the AV node; the ECG does not prove that the remaining left posterior fascicle is diseased."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Complete AV block requires absence of conducted atrial impulses and independent rhythms; this patient has first-degree delay with maintained conduction."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "AV nodal delay may explain PR prolongation but cannot itself account for the documented right bundle and left anterior fascicular patterns."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC Cardiac Pacing and CRT Guideline, 2021",
+          "url": "https://doi.org/10.1093/eurheartj/ehab364"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-007",
+      "topic": "ECG measurement and interpretation",
+      "question": "QT is 400 ms and RR is 512 ms. What is the Fridericia-corrected QT?",
+      "options": [
+        "400 ms",
+        "500 ms",
+        "559 ms",
+        "781 ms"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": true,
+      "explanation": "Fridericia QT Correction\n\nCorrect answer: 500 ms\n\nCalculation\n\n**QTcF = QT / cube root(RR), with intervals in seconds.**\n\nQT = 0.400 s; RR = 0.512 s; cube root(0.512) = 0.800. QTcF = 0.400/0.800 = **0.500 s = ==500 ms==**.\n\nInterpretation\n\n**Bazett uses square root(RR)** and often overcorrects in tachycardia.\n\nHere QTcB is approximately ==559 ms==; the formula difference is clinically relevant.\n\n**QTc around ==500 ms== warrants review** of drugs, electrolytes, symptoms and clinical risk.\n\nIt does not alone prove congenital long QT syndrome; verify T-wave end and exclude a separate U wave.\n\nAHA ECG Monitoring Practice Standards, 2017 — https://doi.org/10.1161/CIR.0000000000000527",
+      "explanationHtml": "<h2>Fridericia QT Correction</h2><p><strong>Correct answer: B — 500 ms</strong></p><h3>Calculation</h3><ul><li><strong>QTcF = QT / cube root(RR), with intervals in seconds.</strong><ul><li>QT = 0.400 s; RR = 0.512 s; cube root(0.512) = 0.800. QTcF = 0.400/0.800 = <strong>0.500 s = <mark>500 ms</mark></strong>.</li></ul></li></ul><h3>Interpretation</h3><ul><li><strong>Bazett uses square root(RR)</strong> and often overcorrects in tachycardia.<ul><li>Here QTcB is approximately <mark>559 ms</mark>; the formula difference is clinically relevant.</li></ul></li><li><strong>QTc around <mark>500 ms</mark> warrants review</strong> of drugs, electrolytes, symptoms and clinical risk.<ul><li>It does not alone prove congenital long QT syndrome; verify T-wave end and exclude a separate U wave.</li></ul></li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000000527\">AHA ECG Monitoring Practice Standards, 2017</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Fridericia QT Correction",
+        "sections": [
+          {
+            "heading": "Calculation",
+            "bullets": [
+              {
+                "text": "**QTcF = QT / cube root(RR), with intervals in seconds.**",
+                "children": [
+                  "QT = 0.400 s; RR = 0.512 s; cube root(0.512) = 0.800. QTcF = 0.400/0.800 = **0.500 s = ==500 ms==**."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Interpretation",
+            "bullets": [
+              {
+                "text": "**Bazett uses square root(RR)** and often overcorrects in tachycardia.",
+                "children": [
+                  "Here QTcB is approximately ==559 ms==; the formula difference is clinically relevant."
+                ]
+              },
+              {
+                "text": "**QTc around ==500 ms== warrants review** of drugs, electrolytes, symptoms and clinical risk.",
+                "children": [
+                  "It does not alone prove congenital long QT syndrome; verify T-wave end and exclude a separate U wave."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": []
+      },
+      "references": [
+        {
+          "label": "AHA ECG Monitoring Practice Standards, 2017",
+          "url": "https://doi.org/10.1161/CIR.0000000000000527"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-008",
+      "topic": "ECG measurement and interpretation",
+      "question": "A patient with chronic LBBB has QRS 168 ms and an automated QTc of 525 ms. Which approach best evaluates whether repolarization itself is excessively prolonged?",
+      "options": [
+        "Exclude all arrhythmic risk because LBBB explains any QT prolongation",
+        "Diagnose congenital long QT syndrome from the automated QTc alone",
+        "Treat the uncorrected QT as independent of heart rate",
+        "Manual assessment using a QRS-adjusted QT or JT-based approach"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "QT Assessment With a Wide QRS\n\nCorrect answer: Manual assessment using a QRS-adjusted QT or JT-based approach\n\nSeparate Depolarization and Repolarization\n\n**QT = QRS duration + JT interval.**\n\nA wide QRS lengthens QT through activation delay, so unadjusted QTc can exaggerate repolarization abnormality.\n\nPractical Assessment\n\n**Measure manually and apply a validated adjustment**, with rate correction appropriate to the method.\n\nDifferent formulas have limitations; use a consistent approach and seek electrophysiology input for difficult cases.\n\n**Review the clinical substrate**, drugs, electrolytes and prior tracings.\n\nNo single adjusted cutoff substitutes for symptoms, documented arrhythmias or a family history of sudden death.\n\nExclude all arrhythmic risk because LBBB explains any QT prolongation: LBBB confounds measurement but does not prevent concurrent drug/electrolyte-related repolarization delay or ventricular arrhythmia risk.\n\nDiagnose congenital long QT syndrome from the automated QTc alone: The QT includes delayed depolarization; wide QRS can inflate QT without equivalent repolarization prolongation, so syndrome diagnosis needs more evidence.\n\nTreat the uncorrected QT as independent of heart rate: QT remains rate-dependent despite bundle-branch block; omitting rate assessment introduces a separate measurement error.\n\nAHA ECG Monitoring Practice Standards, 2017 — https://doi.org/10.1161/CIR.0000000000000527\n\nESC Cardiac Pacing and CRT Guideline, 2021 — https://doi.org/10.1093/eurheartj/ehab364",
+      "explanationHtml": "<h2>QT Assessment With a Wide QRS</h2><p><strong>Correct answer: D — Manual assessment using a QRS-adjusted QT or JT-based approach</strong></p><h3>Separate Depolarization and Repolarization</h3><ul><li><strong>QT = QRS duration + JT interval.</strong><ul><li>A wide QRS lengthens QT through activation delay, so unadjusted QTc can exaggerate repolarization abnormality.</li></ul></li></ul><h3>Practical Assessment</h3><ul><li><strong>Measure manually and apply a validated adjustment</strong>, with rate correction appropriate to the method.<ul><li>Different formulas have limitations; use a consistent approach and seek electrophysiology input for difficult cases.</li></ul></li><li><strong>Review the clinical substrate</strong>, drugs, electrolytes and prior tracings.<ul><li>No single adjusted cutoff substitutes for symptoms, documented arrhythmias or a family history of sudden death.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Exclude all arrhythmic risk because LBBB explains any QT prolongation:</strong> LBBB confounds measurement but does not prevent concurrent drug/electrolyte-related repolarization delay or ventricular arrhythmia risk.</li><li><strong>B — Diagnose congenital long QT syndrome from the automated QTc alone:</strong> The QT includes delayed depolarization; wide QRS can inflate QT without equivalent repolarization prolongation, so syndrome diagnosis needs more evidence.</li><li><strong>C — Treat the uncorrected QT as independent of heart rate:</strong> QT remains rate-dependent despite bundle-branch block; omitting rate assessment introduces a separate measurement error.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000000527\">AHA ECG Monitoring Practice Standards, 2017</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehab364\">ESC Cardiac Pacing and CRT Guideline, 2021</a></li></ul>",
+      "explanationTeaching": {
+        "title": "QT Assessment With a Wide QRS",
+        "sections": [
+          {
+            "heading": "Separate Depolarization and Repolarization",
+            "bullets": [
+              {
+                "text": "**QT = QRS duration + JT interval.**",
+                "children": [
+                  "A wide QRS lengthens QT through activation delay, so unadjusted QTc can exaggerate repolarization abnormality."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Practical Assessment",
+            "bullets": [
+              {
+                "text": "**Measure manually and apply a validated adjustment**, with rate correction appropriate to the method.",
+                "children": [
+                  "Different formulas have limitations; use a consistent approach and seek electrophysiology input for difficult cases."
+                ]
+              },
+              {
+                "text": "**Review the clinical substrate**, drugs, electrolytes and prior tracings.",
+                "children": [
+                  "No single adjusted cutoff substitutes for symptoms, documented arrhythmias or a family history of sudden death."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "LBBB confounds measurement but does not prevent concurrent drug/electrolyte-related repolarization delay or ventricular arrhythmia risk."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "The QT includes delayed depolarization; wide QRS can inflate QT without equivalent repolarization prolongation, so syndrome diagnosis needs more evidence."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "QT remains rate-dependent despite bundle-branch block; omitting rate assessment introduces a separate measurement error."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA ECG Monitoring Practice Standards, 2017",
+          "url": "https://doi.org/10.1161/CIR.0000000000000527"
+        },
+        {
+          "label": "ESC Cardiac Pacing and CRT Guideline, 2021",
+          "url": "https://doi.org/10.1093/eurheartj/ehab364"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-009",
+      "topic": "ECG measurement and interpretation",
+      "question": "A P wave is 136 ms wide with notching in lead II and a terminal negative component in V1 that is 1.2 mm deep and 48 ms wide. Which interpretation is most defensible?",
+      "options": [
+        "Normal P waves because duration remains below 200 ms",
+        "Definite mitral stenosis",
+        "Isolated right atrial enlargement",
+        "Left atrial electrical abnormality; imaging is needed to establish anatomical enlargement"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Left Atrial Abnormality Versus Interatrial Delay\n\nCorrect answer: Left atrial electrical abnormality; imaging is needed to establish anatomical enlargement\n\nElectrical Criteria\n\n**Broad/notched P in II and excessive terminal negative P force in V1** support left atrial abnormality.\n\nA terminal negative component ==≥1 mm== deep and ==≥40 ms== wide is a useful conventional criterion.\n\nAnatomy Is Not Guaranteed\n\n**Conduction delay can broaden P without major chamber enlargement.**\n\nAdvanced interatrial block typically has P ==≥120 ms== with positive–negative inferior P waves.\n\n**Echo quantifies atrial size and valve disease.**\n\nHypertension, mitral disease, diastolic dysfunction and cardiomyopathy can contribute; the historical term P mitrale is not specific for mitral stenosis.\n\nNormal P waves because duration remains below 200 ms: The 200 ms threshold applies to PR, not P duration; a P wave ≥120 ms is prolonged.\n\nDefinite mitral stenosis: This P-wave pattern can accompany many left-atrial loading conditions and interatrial delay; it does not identify a specific valve lesion.\n\nIsolated right atrial enlargement: RA abnormality primarily increases early/positive P forces, often with inferior height >2.5 mm; the prolonged terminal negative component favors left-atrial involvement.\n\nAHA/ACCF/HRS ECG Standardization, Part I — https://doi.org/10.1016/j.jacc.2007.01.024",
+      "explanationHtml": "<h2>Left Atrial Abnormality Versus Interatrial Delay</h2><p><strong>Correct answer: D — Left atrial electrical abnormality; imaging is needed to establish anatomical enlargement</strong></p><h3>Electrical Criteria</h3><ul><li><strong>Broad/notched P in II and excessive terminal negative P force in V1</strong> support left atrial abnormality.<ul><li>A terminal negative component <mark>≥1 mm</mark> deep and <mark>≥40 ms</mark> wide is a useful conventional criterion.</li></ul></li></ul><h3>Anatomy Is Not Guaranteed</h3><ul><li><strong>Conduction delay can broaden P without major chamber enlargement.</strong><ul><li>Advanced interatrial block typically has P <mark>≥120 ms</mark> with positive–negative inferior P waves.</li></ul></li><li><strong>Echo quantifies atrial size and valve disease.</strong><ul><li>Hypertension, mitral disease, diastolic dysfunction and cardiomyopathy can contribute; the historical term P mitrale is not specific for mitral stenosis.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Normal P waves because duration remains below 200 ms:</strong> The 200 ms threshold applies to PR, not P duration; a P wave ≥120 ms is prolonged.</li><li><strong>B — Definite mitral stenosis:</strong> This P-wave pattern can accompany many left-atrial loading conditions and interatrial delay; it does not identify a specific valve lesion.</li><li><strong>C — Isolated right atrial enlargement:</strong> RA abnormality primarily increases early/positive P forces, often with inferior height &gt;2.5 mm; the prolonged terminal negative component favors left-atrial involvement.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2007.01.024\">AHA/ACCF/HRS ECG Standardization, Part I</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Left Atrial Abnormality Versus Interatrial Delay",
+        "sections": [
+          {
+            "heading": "Electrical Criteria",
+            "bullets": [
+              {
+                "text": "**Broad/notched P in II and excessive terminal negative P force in V1** support left atrial abnormality.",
+                "children": [
+                  "A terminal negative component ==≥1 mm== deep and ==≥40 ms== wide is a useful conventional criterion."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Anatomy Is Not Guaranteed",
+            "bullets": [
+              {
+                "text": "**Conduction delay can broaden P without major chamber enlargement.**",
+                "children": [
+                  "Advanced interatrial block typically has P ==≥120 ms== with positive–negative inferior P waves."
+                ]
+              },
+              {
+                "text": "**Echo quantifies atrial size and valve disease.**",
+                "children": [
+                  "Hypertension, mitral disease, diastolic dysfunction and cardiomyopathy can contribute; the historical term P mitrale is not specific for mitral stenosis."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "The 200 ms threshold applies to PR, not P duration; a P wave ≥120 ms is prolonged."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "This P-wave pattern can accompany many left-atrial loading conditions and interatrial delay; it does not identify a specific valve lesion."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "RA abnormality primarily increases early/positive P forces, often with inferior height >2.5 mm; the prolonged terminal negative component favors left-atrial involvement."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACCF/HRS ECG Standardization, Part I",
+          "url": "https://doi.org/10.1016/j.jacc.2007.01.024"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-010",
+      "topic": "ECG measurement and interpretation",
+      "question": "An asymptomatic endurance athlete has S(V1)+R(V5) of 38 mm, normal repolarization and no pathological Q waves or family history. What is the best interpretation of the voltage finding alone?",
+      "options": [
+        "It is uninterpretable because athletes cannot meet ECG LVH criteria",
+        "It establishes hypertrophic cardiomyopathy",
+        "It meets a conventional LVH voltage criterion but does not prove pathological hypertrophy",
+        "It establishes hypertensive LVH despite normal blood pressure"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Voltage Criteria and Athletic Remodeling\n\nCorrect answer: It meets a conventional LVH voltage criterion but does not prove pathological hypertrophy\n\nVoltage Thresholds\n\n**Sokolow–Lyon:** S(V1)+larger R(V5/V6) ==≥35 mm==.\n\nCornell voltage: R(aVL)+S(V3) ==>28 mm== in men or ==>20 mm== in women; recording gain must be standard.\n\nRecognize Limits\n\n**Sensitivity and specificity depend on body habitus and training.**\n\nObesity/COPD can mask voltage; young thin athletes can have high voltage without disease.\n\n**Repolarization abnormalities, symptoms or family history change the concern.**\n\nLateral strain, marked T inversion or other abnormal findings warrant directed assessment; echocardiography/CMR establishes anatomy when indicated.\n\nIt is uninterpretable because athletes cannot meet ECG LVH criteria: The voltage can be measured and reported; the limitation is specificity for disease, not whether the criterion can be calculated.\n\nIt establishes hypertrophic cardiomyopathy: Isolated high voltage is common in trained or thin individuals; HCM requires structural/clinical evidence rather than a voltage sum alone.\n\nIt establishes hypertensive LVH despite normal blood pressure: Hypertension is one cause of LVH, but ECG voltage cannot infer an unrecorded pressure history or establish anatomical mass by itself.\n\nAHA/ACCF/HRS ECG Standardization, Part I — https://doi.org/10.1016/j.jacc.2007.01.024",
+      "explanationHtml": "<h2>Voltage Criteria and Athletic Remodeling</h2><p><strong>Correct answer: C — It meets a conventional LVH voltage criterion but does not prove pathological hypertrophy</strong></p><h3>Voltage Thresholds</h3><ul><li><strong>Sokolow–Lyon:</strong> S(V1)+larger R(V5/V6) <mark>≥35 mm</mark>.<ul><li>Cornell voltage: R(aVL)+S(V3) <mark>&gt;28 mm</mark> in men or <mark>&gt;20 mm</mark> in women; recording gain must be standard.</li></ul></li></ul><h3>Recognize Limits</h3><ul><li><strong>Sensitivity and specificity depend on body habitus and training.</strong><ul><li>Obesity/COPD can mask voltage; young thin athletes can have high voltage without disease.</li></ul></li><li><strong>Repolarization abnormalities, symptoms or family history change the concern.</strong><ul><li>Lateral strain, marked T inversion or other abnormal findings warrant directed assessment; echocardiography/CMR establishes anatomy when indicated.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — It is uninterpretable because athletes cannot meet ECG LVH criteria:</strong> The voltage can be measured and reported; the limitation is specificity for disease, not whether the criterion can be calculated.</li><li><strong>B — It establishes hypertrophic cardiomyopathy:</strong> Isolated high voltage is common in trained or thin individuals; HCM requires structural/clinical evidence rather than a voltage sum alone.</li><li><strong>D — It establishes hypertensive LVH despite normal blood pressure:</strong> Hypertension is one cause of LVH, but ECG voltage cannot infer an unrecorded pressure history or establish anatomical mass by itself.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2007.01.024\">AHA/ACCF/HRS ECG Standardization, Part I</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Voltage Criteria and Athletic Remodeling",
+        "sections": [
+          {
+            "heading": "Voltage Thresholds",
+            "bullets": [
+              {
+                "text": "**Sokolow–Lyon:** S(V1)+larger R(V5/V6) ==≥35 mm==.",
+                "children": [
+                  "Cornell voltage: R(aVL)+S(V3) ==>28 mm== in men or ==>20 mm== in women; recording gain must be standard."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Recognize Limits",
+            "bullets": [
+              {
+                "text": "**Sensitivity and specificity depend on body habitus and training.**",
+                "children": [
+                  "Obesity/COPD can mask voltage; young thin athletes can have high voltage without disease."
+                ]
+              },
+              {
+                "text": "**Repolarization abnormalities, symptoms or family history change the concern.**",
+                "children": [
+                  "Lateral strain, marked T inversion or other abnormal findings warrant directed assessment; echocardiography/CMR establishes anatomy when indicated."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "The voltage can be measured and reported; the limitation is specificity for disease, not whether the criterion can be calculated."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Isolated high voltage is common in trained or thin individuals; HCM requires structural/clinical evidence rather than a voltage sum alone."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Hypertension is one cause of LVH, but ECG voltage cannot infer an unrecorded pressure history or establish anatomical mass by itself."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACCF/HRS ECG Standardization, Part I",
+          "url": "https://doi.org/10.1016/j.jacc.2007.01.024"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-011",
+      "topic": "ECG measurement and interpretation",
+      "question": "A patient with chronic pulmonary hypertension has right axis deviation, R/S >1 in V1, deep S waves in V5–V6 and right-precordial T inversion. There is no acute chest pain or dynamic ST change. Which explanation best fits?",
+      "options": [
+        "Isolated left anterior fascicular block",
+        "Isolated posterior myocardial infarction",
+        "Right ventricular hypertrophy with strain",
+        "Typical complete LBBB"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Tall R Wave in V1\n\nCorrect answer: Right ventricular hypertrophy with strain\n\nIntegrate the Pattern\n\n**RVH:** right axis, dominant R in V1 and persistent lateral S waves.\n\nRA abnormality and anterior ST–T strain strengthen the interpretation in pulmonary hypertension.\n\nTall R Differential\n\n**Posterior infarction, RBBB, pre-excitation and lead errors** can also produce a tall R in V1.\n\n**One voltage finding is insufficient.**\n\nCheck QRS width, delta wave, terminal R-prime, chest-lead placement and symptoms.\n\n**Echo confirms RV structure and function**; ECG cannot quantify pulmonary pressure or exclude PE by itself.\n\nIsolated left anterior fascicular block: LAFB shifts the axis superior-leftward; it does not account for right axis, dominant anterior RV forces and lateral S waves.\n\nIsolated posterior myocardial infarction: Posterior infarction can produce tall anterior R waves but typically needs compatible ischemic context and reciprocal ST changes; the rightward forces and strain pattern support RVH here.\n\nTypical complete LBBB: LBBB usually produces a predominantly negative V1 complex with broad lateral R waves; that activation pattern is opposite to the supplied dominant rightward forces.\n\nAHA/ACCF/HRS ECG Standardization, Part I — https://doi.org/10.1016/j.jacc.2007.01.024",
+      "explanationHtml": "<h2>Tall R Wave in V1</h2><p><strong>Correct answer: C — Right ventricular hypertrophy with strain</strong></p><h3>Integrate the Pattern</h3><ul><li><strong>RVH:</strong> right axis, dominant R in V1 and persistent lateral S waves.<ul><li>RA abnormality and anterior ST–T strain strengthen the interpretation in pulmonary hypertension.</li></ul></li></ul><h3>Tall R Differential</h3><ul><li><strong>Posterior infarction, RBBB, pre-excitation and lead errors</strong> can also produce a tall R in V1.</li><li><strong>One voltage finding is insufficient.</strong><ul><li>Check QRS width, delta wave, terminal R-prime, chest-lead placement and symptoms.</li></ul></li><li><strong>Echo confirms RV structure and function</strong>; ECG cannot quantify pulmonary pressure or exclude PE by itself.</li></ul><h3>Other Options</h3><ul><li><strong>A — Isolated left anterior fascicular block:</strong> LAFB shifts the axis superior-leftward; it does not account for right axis, dominant anterior RV forces and lateral S waves.</li><li><strong>B — Isolated posterior myocardial infarction:</strong> Posterior infarction can produce tall anterior R waves but typically needs compatible ischemic context and reciprocal ST changes; the rightward forces and strain pattern support RVH here.</li><li><strong>D — Typical complete LBBB:</strong> LBBB usually produces a predominantly negative V1 complex with broad lateral R waves; that activation pattern is opposite to the supplied dominant rightward forces.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2007.01.024\">AHA/ACCF/HRS ECG Standardization, Part I</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Tall R Wave in V1",
+        "sections": [
+          {
+            "heading": "Integrate the Pattern",
+            "bullets": [
+              {
+                "text": "**RVH:** right axis, dominant R in V1 and persistent lateral S waves.",
+                "children": [
+                  "RA abnormality and anterior ST–T strain strengthen the interpretation in pulmonary hypertension."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Tall R Differential",
+            "bullets": [
+              {
+                "text": "**Posterior infarction, RBBB, pre-excitation and lead errors** can also produce a tall R in V1.",
+                "children": []
+              },
+              {
+                "text": "**One voltage finding is insufficient.**",
+                "children": [
+                  "Check QRS width, delta wave, terminal R-prime, chest-lead placement and symptoms."
+                ]
+              },
+              {
+                "text": "**Echo confirms RV structure and function**; ECG cannot quantify pulmonary pressure or exclude PE by itself.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "LAFB shifts the axis superior-leftward; it does not account for right axis, dominant anterior RV forces and lateral S waves."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Posterior infarction can produce tall anterior R waves but typically needs compatible ischemic context and reciprocal ST changes; the rightward forces and strain pattern support RVH here."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "LBBB usually produces a predominantly negative V1 complex with broad lateral R waves; that activation pattern is opposite to the supplied dominant rightward forces."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACCF/HRS ECG Standardization, Part I",
+          "url": "https://doi.org/10.1016/j.jacc.2007.01.024"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-012",
+      "topic": "ECG measurement and interpretation",
+      "question": "According to the Fifth Universal Definition of MI (2026), which statement describes the classical pathological Q-wave criterion?",
+      "options": [
+        "Duration ≥40 ms and/or depth ≥25% of the R wave, assessed in contiguous leads",
+        "Depth ≥2 mm alone in any single lead",
+        "Duration ≥20 ms in any limb lead regardless of depth",
+        "Any Q wave in a lateral lead"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "direct",
+      "calculation": false,
+      "explanation": "Pathological Q Waves in the 2026 Universal Definition\n\nCorrect answer: Duration ≥40 ms and/or depth ≥25% of the R wave, assessed in contiguous leads\n\nCurrent Definition\n\n**2026 classical criterion:** Q duration ==≥40 ms== and/or depth ==≥25%== of the same-lead R wave.\n\nAssess two contiguous leads and the full clinical/imaging context; isolated findings require caution.\n\nDo Not Equate Every Q Wave With Infarction\n\n**HCM, pre-excitation, conduction abnormalities and lead misplacement** can produce noninfarct Q waves.\n\n**A prior MI diagnosis needs compatible evidence.**\n\nCMR/echo scar or regional dysfunction can clarify; absence of Q waves does not exclude a previous infarct.\n\n**Late acute-occlusion presentations may show Q waves/T inversion** rather than persistent ST elevation; ongoing symptoms still require urgent assessment.\n\nDepth ≥2 mm alone in any single lead: An isolated absolute depth threshold does not represent the stated classical criterion and can misclassify normal or noninfarct Q waves.\n\nDuration ≥20 ms in any limb lead regardless of depth: This lower duration threshold without distribution/context is not the classical definition adopted in the cited 2026 document.\n\nAny Q wave in a lateral lead: Small lateral septal q waves can be physiological; their presence alone does not establish infarction.\n\nFifth Universal Definition of Myocardial Infarction, 2026 — https://doi.org/10.1016/j.jacc.2026.07.025",
+      "explanationHtml": "<h2>Pathological Q Waves in the 2026 Universal Definition</h2><p><strong>Correct answer: A — Duration ≥40 ms and/or depth ≥25% of the R wave, assessed in contiguous leads</strong></p><h3>Current Definition</h3><ul><li><strong>2026 classical criterion:</strong> Q duration <mark>≥40 ms</mark> and/or depth <mark>≥25%</mark> of the same-lead R wave.<ul><li>Assess two contiguous leads and the full clinical/imaging context; isolated findings require caution.</li></ul></li></ul><h3>Do Not Equate Every Q Wave With Infarction</h3><ul><li><strong>HCM, pre-excitation, conduction abnormalities and lead misplacement</strong> can produce noninfarct Q waves.</li><li><strong>A prior MI diagnosis needs compatible evidence.</strong><ul><li>CMR/echo scar or regional dysfunction can clarify; absence of Q waves does not exclude a previous infarct.</li></ul></li><li><strong>Late acute-occlusion presentations may show Q waves/T inversion</strong> rather than persistent ST elevation; ongoing symptoms still require urgent assessment.</li></ul><h3>Other Options</h3><ul><li><strong>B — Depth ≥2 mm alone in any single lead:</strong> An isolated absolute depth threshold does not represent the stated classical criterion and can misclassify normal or noninfarct Q waves.</li><li><strong>C — Duration ≥20 ms in any limb lead regardless of depth:</strong> This lower duration threshold without distribution/context is not the classical definition adopted in the cited 2026 document.</li><li><strong>D — Any Q wave in a lateral lead:</strong> Small lateral septal q waves can be physiological; their presence alone does not establish infarction.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2026.07.025\">Fifth Universal Definition of Myocardial Infarction, 2026</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Pathological Q Waves in the 2026 Universal Definition",
+        "sections": [
+          {
+            "heading": "Current Definition",
+            "bullets": [
+              {
+                "text": "**2026 classical criterion:** Q duration ==≥40 ms== and/or depth ==≥25%== of the same-lead R wave.",
+                "children": [
+                  "Assess two contiguous leads and the full clinical/imaging context; isolated findings require caution."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Do Not Equate Every Q Wave With Infarction",
+            "bullets": [
+              {
+                "text": "**HCM, pre-excitation, conduction abnormalities and lead misplacement** can produce noninfarct Q waves.",
+                "children": []
+              },
+              {
+                "text": "**A prior MI diagnosis needs compatible evidence.**",
+                "children": [
+                  "CMR/echo scar or regional dysfunction can clarify; absence of Q waves does not exclude a previous infarct."
+                ]
+              },
+              {
+                "text": "**Late acute-occlusion presentations may show Q waves/T inversion** rather than persistent ST elevation; ongoing symptoms still require urgent assessment.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "An isolated absolute depth threshold does not represent the stated classical criterion and can misclassify normal or noninfarct Q waves."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "This lower duration threshold without distribution/context is not the classical definition adopted in the cited 2026 document."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Small lateral septal q waves can be physiological; their presence alone does not establish infarction."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "Fifth Universal Definition of Myocardial Infarction, 2026",
+          "url": "https://doi.org/10.1016/j.jacc.2026.07.025"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-013",
+      "topic": "ECG measurement and interpretation",
+      "question": "After prolonged vomiting, a patient has flat T waves, ST depression and large U waves in V2–V4. The machine reports QTc 610 ms, but T and U are partly fused. What is the best interpretation?",
+      "options": [
+        "Hypercalcemia shortening the ST segment",
+        "Definite congenital long QT syndrome based on the machine value",
+        "Hypokalemic repolarization abnormality with possible QU mismeasurement",
+        "Therapeutic digoxin effect as the complete explanation"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Hypokalemia and Apparent QT Prolongation\n\nCorrect answer: Hypokalemic repolarization abnormality with possible QU mismeasurement\n\nMeasurement\n\n**Exclude a separate U wave from QT.**\n\nWhen T–U fusion obscures the endpoint, use a clearer lead and manual assessment; the machine may have measured QU.\n\nClinical Response\n\n**Check potassium, magnesium and renal function**, replace deficits and review QT-prolonging drugs.\n\nHypomagnesemia can cause refractory potassium depletion and increase ventricular arrhythmia risk.\n\n**Do not dismiss the tracing as merely a measurement error.**\n\nHypokalemia itself promotes ectopy and torsades; monitor severe abnormalities and reassess the ECG after correction.\n\nHypercalcemia shortening the ST segment: Hypercalcemia generally shortens QT through ST shortening; flat T waves and prominent U waves after vomiting favor potassium depletion.\n\nDefinite congenital long QT syndrome based on the machine value: Acquired electrolyte depletion and unclear T-wave end must be addressed before diagnosing an inherited syndrome from an automated number.\n\nTherapeutic digoxin effect as the complete explanation: Digoxin may cause scooped ST depression and shorter QT, but the supplied GI-loss context and prominent U waves require electrolyte assessment.\n\nAHA ECG Monitoring Practice Standards, 2017 — https://doi.org/10.1161/CIR.0000000000000527",
+      "explanationHtml": "<h2>Hypokalemia and Apparent QT Prolongation</h2><p><strong>Correct answer: C — Hypokalemic repolarization abnormality with possible QU mismeasurement</strong></p><h3>Measurement</h3><ul><li><strong>Exclude a separate U wave from QT.</strong><ul><li>When T–U fusion obscures the endpoint, use a clearer lead and manual assessment; the machine may have measured QU.</li></ul></li></ul><h3>Clinical Response</h3><ul><li><strong>Check potassium, magnesium and renal function</strong>, replace deficits and review QT-prolonging drugs.<ul><li>Hypomagnesemia can cause refractory potassium depletion and increase ventricular arrhythmia risk.</li></ul></li><li><strong>Do not dismiss the tracing as merely a measurement error.</strong><ul><li>Hypokalemia itself promotes ectopy and torsades; monitor severe abnormalities and reassess the ECG after correction.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Hypercalcemia shortening the ST segment:</strong> Hypercalcemia generally shortens QT through ST shortening; flat T waves and prominent U waves after vomiting favor potassium depletion.</li><li><strong>B — Definite congenital long QT syndrome based on the machine value:</strong> Acquired electrolyte depletion and unclear T-wave end must be addressed before diagnosing an inherited syndrome from an automated number.</li><li><strong>D — Therapeutic digoxin effect as the complete explanation:</strong> Digoxin may cause scooped ST depression and shorter QT, but the supplied GI-loss context and prominent U waves require electrolyte assessment.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000000527\">AHA ECG Monitoring Practice Standards, 2017</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Hypokalemia and Apparent QT Prolongation",
+        "sections": [
+          {
+            "heading": "Measurement",
+            "bullets": [
+              {
+                "text": "**Exclude a separate U wave from QT.**",
+                "children": [
+                  "When T–U fusion obscures the endpoint, use a clearer lead and manual assessment; the machine may have measured QU."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Clinical Response",
+            "bullets": [
+              {
+                "text": "**Check potassium, magnesium and renal function**, replace deficits and review QT-prolonging drugs.",
+                "children": [
+                  "Hypomagnesemia can cause refractory potassium depletion and increase ventricular arrhythmia risk."
+                ]
+              },
+              {
+                "text": "**Do not dismiss the tracing as merely a measurement error.**",
+                "children": [
+                  "Hypokalemia itself promotes ectopy and torsades; monitor severe abnormalities and reassess the ECG after correction."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Hypercalcemia generally shortens QT through ST shortening; flat T waves and prominent U waves after vomiting favor potassium depletion."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Acquired electrolyte depletion and unclear T-wave end must be addressed before diagnosing an inherited syndrome from an automated number."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Digoxin may cause scooped ST depression and shorter QT, but the supplied GI-loss context and prominent U waves require electrolyte assessment."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA ECG Monitoring Practice Standards, 2017",
+          "url": "https://doi.org/10.1161/CIR.0000000000000527"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-014",
+      "topic": "ECG measurement and interpretation",
+      "question": "A patient has a markedly abbreviated ST segment and short QT, with otherwise relatively preserved T-wave morphology. Which biochemical abnormality most directly explains this pattern?",
+      "options": [
+        "Hypokalemia",
+        "Hypocalcemia",
+        "Hypercalcemia",
+        "Hypomagnesemia"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Calcium and the ST Segment\n\nCorrect answer: Hypercalcemia\n\nRepolarization Mechanism\n\n**High calcium shortens the ventricular plateau**, abbreviating ST and QT.\n\nLow calcium prolongs ST; the effect need not require a major change in T-wave duration.\n\nConfirm and Distinguish\n\n**Measure calcium and assess the clinical cause.**\n\nAlbumin and ionized calcium may matter; ECG cannot quantify the biochemical level.\n\n**Short QT also occurs with digoxin or rare inherited disease.**\n\nExclude acquired causes before diagnosing short QT syndrome; severe hypercalcemia can also cause PR/QRS changes or bradyarrhythmia.\n\nHypokalemia: Potassium depletion typically produces flat T waves, ST depression and prominent U waves rather than isolated ST shortening.\n\nHypocalcemia: Low calcium prolongs the plateau/ST segment and QT, producing the opposite direction of change.\n\nHypomagnesemia: Magnesium depletion promotes arrhythmias and often accompanies QT-related risk; a very short ST segment points more directly to increased calcium.\n\nAHA/ACCF/HRS ECG Standardization, Part I — https://doi.org/10.1016/j.jacc.2007.01.024",
+      "explanationHtml": "<h2>Calcium and the ST Segment</h2><p><strong>Correct answer: C — Hypercalcemia</strong></p><h3>Repolarization Mechanism</h3><ul><li><strong>High calcium shortens the ventricular plateau</strong>, abbreviating ST and QT.<ul><li>Low calcium prolongs ST; the effect need not require a major change in T-wave duration.</li></ul></li></ul><h3>Confirm and Distinguish</h3><ul><li><strong>Measure calcium and assess the clinical cause.</strong><ul><li>Albumin and ionized calcium may matter; ECG cannot quantify the biochemical level.</li></ul></li><li><strong>Short QT also occurs with digoxin or rare inherited disease.</strong><ul><li>Exclude acquired causes before diagnosing short QT syndrome; severe hypercalcemia can also cause PR/QRS changes or bradyarrhythmia.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Hypokalemia:</strong> Potassium depletion typically produces flat T waves, ST depression and prominent U waves rather than isolated ST shortening.</li><li><strong>B — Hypocalcemia:</strong> Low calcium prolongs the plateau/ST segment and QT, producing the opposite direction of change.</li><li><strong>D — Hypomagnesemia:</strong> Magnesium depletion promotes arrhythmias and often accompanies QT-related risk; a very short ST segment points more directly to increased calcium.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2007.01.024\">AHA/ACCF/HRS ECG Standardization, Part I</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Calcium and the ST Segment",
+        "sections": [
+          {
+            "heading": "Repolarization Mechanism",
+            "bullets": [
+              {
+                "text": "**High calcium shortens the ventricular plateau**, abbreviating ST and QT.",
+                "children": [
+                  "Low calcium prolongs ST; the effect need not require a major change in T-wave duration."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Confirm and Distinguish",
+            "bullets": [
+              {
+                "text": "**Measure calcium and assess the clinical cause.**",
+                "children": [
+                  "Albumin and ionized calcium may matter; ECG cannot quantify the biochemical level."
+                ]
+              },
+              {
+                "text": "**Short QT also occurs with digoxin or rare inherited disease.**",
+                "children": [
+                  "Exclude acquired causes before diagnosing short QT syndrome; severe hypercalcemia can also cause PR/QRS changes or bradyarrhythmia."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Potassium depletion typically produces flat T waves, ST depression and prominent U waves rather than isolated ST shortening."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Low calcium prolongs the plateau/ST segment and QT, producing the opposite direction of change."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Magnesium depletion promotes arrhythmias and often accompanies QT-related risk; a very short ST segment points more directly to increased calcium."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA/ACCF/HRS ECG Standardization, Part I",
+          "url": "https://doi.org/10.1016/j.jacc.2007.01.024"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-14-015",
+      "topic": "ECG measurement and interpretation",
+      "question": "After amitriptyline ingestion, a patient develops hypotension, QRS 148 ms and a prominent terminal R wave in aVR. Which treatment most directly targets the conduction toxicity?",
+      "options": [
+        "Intravenous magnesium as the sole targeted therapy",
+        "Intravenous sodium bicarbonate",
+        "Intravenous amiodarone as the initial targeted treatment",
+        "Intravenous calcium gluconate as the principal antidote"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Sodium-Channel Blocker Cardiotoxicity\n\nCorrect answer: Intravenous sodium bicarbonate\n\nToxic ECG Pattern\n\n**Fast sodium-channel blockade slows phase-0 conduction**, widening QRS and shifting terminal forces toward aVR.\n\nSeizures, acidosis and shock can worsen toxicity; do not wait for a drug level.\n\nResuscitation\n\n**IV sodium bicarbonate boluses are titrated to improved QRS width and perfusion.**\n\nCommon initial dosing is 1–2 mEq/kg; monitor sodium, potassium and blood gas to avoid excessive alkalemia/hypernatremia.\n\n**Support ventilation and circulation and treat seizures**, with poison-center/critical-care involvement.\n\n**Continuous ECG reassessment is essential.**\n\nA transient response does not establish toxin clearance; ongoing therapy depends on recurrent conduction toxicity and hemodynamics.\n\nIntravenous magnesium as the sole targeted therapy: Magnesium is central in torsades with delayed repolarization; this pattern instead identifies sodium-channel conduction blockade requiring sodium/alkalinization therapy.\n\nIntravenous amiodarone as the initial targeted treatment: Amiodarone is used for selected arrhythmias, but it does not reverse the toxic sodium-channel mechanism and can add hypotension or electrophysiological effects.\n\nIntravenous calcium gluconate as the principal antidote: Calcium is used for hyperkalemic membrane stabilization or selected calcium-channel blocker poisoning; it is not the principal treatment for TCA conduction toxicity.\n\nAHA Special Circumstances of Resuscitation: Poisoning — https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-and-pediatric-special-circumstances-of-resuscitation/",
+      "explanationHtml": "<h2>Sodium-Channel Blocker Cardiotoxicity</h2><p><strong>Correct answer: B — Intravenous sodium bicarbonate</strong></p><h3>Toxic ECG Pattern</h3><ul><li><strong>Fast sodium-channel blockade slows phase-0 conduction</strong>, widening QRS and shifting terminal forces toward aVR.<ul><li>Seizures, acidosis and shock can worsen toxicity; do not wait for a drug level.</li></ul></li></ul><h3>Resuscitation</h3><ul><li><strong>IV sodium bicarbonate boluses are titrated to improved QRS width and perfusion.</strong><ul><li>Common initial dosing is 1–2 mEq/kg; monitor sodium, potassium and blood gas to avoid excessive alkalemia/hypernatremia.</li></ul></li><li><strong>Support ventilation and circulation and treat seizures</strong>, with poison-center/critical-care involvement.</li><li><strong>Continuous ECG reassessment is essential.</strong><ul><li>A transient response does not establish toxin clearance; ongoing therapy depends on recurrent conduction toxicity and hemodynamics.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Intravenous magnesium as the sole targeted therapy:</strong> Magnesium is central in torsades with delayed repolarization; this pattern instead identifies sodium-channel conduction blockade requiring sodium/alkalinization therapy.</li><li><strong>C — Intravenous amiodarone as the initial targeted treatment:</strong> Amiodarone is used for selected arrhythmias, but it does not reverse the toxic sodium-channel mechanism and can add hypotension or electrophysiological effects.</li><li><strong>D — Intravenous calcium gluconate as the principal antidote:</strong> Calcium is used for hyperkalemic membrane stabilization or selected calcium-channel blocker poisoning; it is not the principal treatment for TCA conduction toxicity.</li></ul><h3>References</h3><ul><li><a href=\"https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-and-pediatric-special-circumstances-of-resuscitation/\">AHA Special Circumstances of Resuscitation: Poisoning</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Sodium-Channel Blocker Cardiotoxicity",
+        "sections": [
+          {
+            "heading": "Toxic ECG Pattern",
+            "bullets": [
+              {
+                "text": "**Fast sodium-channel blockade slows phase-0 conduction**, widening QRS and shifting terminal forces toward aVR.",
+                "children": [
+                  "Seizures, acidosis and shock can worsen toxicity; do not wait for a drug level."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Resuscitation",
+            "bullets": [
+              {
+                "text": "**IV sodium bicarbonate boluses are titrated to improved QRS width and perfusion.**",
+                "children": [
+                  "Common initial dosing is 1–2 mEq/kg; monitor sodium, potassium and blood gas to avoid excessive alkalemia/hypernatremia."
+                ]
+              },
+              {
+                "text": "**Support ventilation and circulation and treat seizures**, with poison-center/critical-care involvement.",
+                "children": []
+              },
+              {
+                "text": "**Continuous ECG reassessment is essential.**",
+                "children": [
+                  "A transient response does not establish toxin clearance; ongoing therapy depends on recurrent conduction toxicity and hemodynamics."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Magnesium is central in torsades with delayed repolarization; this pattern instead identifies sodium-channel conduction blockade requiring sodium/alkalinization therapy."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Amiodarone is used for selected arrhythmias, but it does not reverse the toxic sodium-channel mechanism and can add hypotension or electrophysiological effects."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Calcium is used for hyperkalemic membrane stabilization or selected calcium-channel blocker poisoning; it is not the principal treatment for TCA conduction toxicity."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA Special Circumstances of Resuscitation: Poisoning",
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-and-pediatric-special-circumstances-of-resuscitation/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    }
+  ]
+}
