@@ -1,0 +1,81 @@
+{
+  "chapter": 12,
+  "document": "12. Adult Congenital Heart Diseases",
+  "status": "draft_in_progress",
+  "installedNewQuestions": false,
+  "authoredQuestions": 8,
+  "plannedQuestions": 55,
+  "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
+  "sourceHeadings": [
+    "ADULT CONGENITAL HEART DISEASES",
+    "I. OVERVIEW AND CLASSIFICATION",
+    "II. ATRIAL SEPTAL DEFECT",
+    "III. VENTRICULAR SEPTAL DEFECT",
+    "IV. PATENT DUCTUS ARTERIOSUS",
+    "V. COARCTATION OF THE AORTA",
+    "VI. CONGENITAL AORTIC AND PULMONARY VALVE STENOSIS",
+    "VII. TETRALOGY OF FALLOT",
+    "VIII. EISENMENGER SYNDROME",
+    "IX. EBSTEIN ANOMALY",
+    "X. TRANSPOSITION OF THE GREAT ARTERIES",
+    "XI. SINGLE-VENTRICLE PHYSIOLOGY AND FONTAN CIRCULATION",
+    "XII. OTHER IMPORTANT ADULT CONGENITAL HEART DISEASES",
+    "XIII. GENERAL MANAGEMENT OF ADULT CONGENITAL HEART DISEASE",
+    "XIV. COMPARATIVE CLINICAL FEATURES"
+  ],
+  "initialSourceFindings": [
+    "The source ASD PVR categories must not be attributed unqualified to the newer 2025 ACC/AHA framework.",
+    "The source statement that every sinus venosus lesion requires surgery needs qualification for selected modern transcatheter approaches.",
+    "Detailed current AP stages should be checked against the official 2025 classification, not the simplified source summary."
+  ],
+  "reviewedNewQuestionIds": [
+    "cardiology-rebuild-12-001",
+    "cardiology-rebuild-12-002",
+    "cardiology-rebuild-12-003",
+    "cardiology-rebuild-12-004"
+  ],
+  "sources": [
+    {
+      "label": "ACC/AHA multisociety ACHD guideline, 2025",
+      "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+    },
+    {
+      "label": "ESC adult congenital heart disease guideline, 2020",
+      "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+    },
+    {
+      "label": "ASE/SCAI echocardiographic assessment of ASD and PFO, 2015",
+      "url": "https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf"
+    },
+    {
+      "label": "Merck Manual Professional: atrial septal defect",
+      "url": "https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/atrial-septal-defect-asd"
+    },
+    {
+      "label": "Merck Manual Professional: cardiac auscultation",
+      "url": "https://www.merckmanuals.com/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiac-auscultation"
+    }
+  ],
+  "validation": {
+    "questions": 8,
+    "answerDistribution": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "minimumExplanationWords": 210,
+    "distractorRationales": 21,
+    "questionStyles": {
+      "direct": 1,
+      "clinical_scenario": 7
+    },
+    "status": "passed"
+  },
+  "nextWork": "Complete atrial-level shunt coverage, then progress through VSD and PDA before the obstructive and complex lesions.",
+  "limitations": [
+    "Four transferred questions retained verbatim with their original IDs.",
+    "New content has author source checks, not independent clinician review.",
+    "The 55-question plan is provisional and does not establish completeness."
+  ]
+}

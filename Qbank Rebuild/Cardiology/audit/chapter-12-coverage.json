@@ -1,0 +1,201 @@
+{
+  "subject": "Cardiology",
+  "chapterNumber": 12,
+  "chapter": "12. Adult Congenital Heart Diseases",
+  "status": "draft_in_progress",
+  "plannedQuestions": 55,
+  "authoredQuestions": 8,
+  "existingQuestionsPreserved": 4,
+  "newDraftQuestions": 4,
+  "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
+  "sections": [
+    {
+      "section": "Foundations and physiological classification",
+      "plannedQuestions": 4,
+      "authoredQuestions": 1,
+      "decisions": [
+        "Classify anatomical complexity separately from physiological stage",
+        "Calculate Qp/Qs from an appropriately sampled oximetry run",
+        "Distinguish pressure loading from shunt-related chamber volume loading",
+        "Choose expert surveillance using physiological sequelae after repair"
+      ]
+    },
+    {
+      "section": "Atrial septal defects and atrioventricular septal anatomy",
+      "plannedQuestions": 8,
+      "authoredQuestions": 5,
+      "decisions": [
+        "Explain the pulmonary flow murmur and fixed S2 splitting",
+        "Recognize partial AV septal anatomy from axis conduction and AV-valve findings",
+        "Interpret relative ventricular compliance and atrial shunt magnitude",
+        "Map sinus venosus communications and anomalous pulmonary venous connections",
+        "Use CMR for reproducible RV volumes and pulmonary-systemic flow assessment",
+        "Apply the 2025 uncomplicated ASD closure recommendation with its PVR and LV qualifications",
+        "Assess elevated PVR without assuming every large ASD should be closed",
+        "Assess left-heart filling tolerance before an appropriate selected closure strategy"
+      ]
+    },
+    {
+      "section": "Ventricular septal defects",
+      "plannedQuestions": 5,
+      "authoredQuestions": 0,
+      "decisions": [
+        "Distinguish restrictive from nonrestrictive VSD physiology",
+        "Recognize aortic cusp prolapse and regurgitation associated with a VSD",
+        "Select closure according to LV loading shunt magnitude and pulmonary vascular status",
+        "Assess recurrent endocarditis as an intervention consideration in a small defect",
+        "Recognize residual shunt and conduction complications after repair"
+      ]
+    },
+    {
+      "section": "Patent ductus arteriosus",
+      "plannedQuestions": 3,
+      "authoredQuestions": 0,
+      "decisions": [
+        "Interpret the continuous murmur and systemic-to-pulmonary runoff",
+        "Recognize differential cyanosis and its ductal physiology",
+        "Select adult PDA closure according to left-heart load and pulmonary resistance"
+      ]
+    },
+    {
+      "section": "Coarctation after diagnosis and repair",
+      "plannedQuestions": 4,
+      "authoredQuestions": 0,
+      "decisions": [
+        "Select arch imaging for residual obstruction aneurysm and collateral anatomy",
+        "Interpret gradients with collateral flow and reduced cardiac output",
+        "Choose an appropriate intervention for an anatomically suitable adult lesion",
+        "Assess persistent or exercise-related hypertension after repair"
+      ]
+    },
+    {
+      "section": "Congenital valve and outflow obstruction",
+      "plannedQuestions": 3,
+      "authoredQuestions": 1,
+      "decisions": [
+        "Choose balloon treatment for a suitable symptomatic doming pulmonary valve",
+        "Differentiate valvar subvalvar and supravalvar RV outflow obstruction",
+        "Assess congenital aortic valve disease with associated aortopathy and family risk"
+      ]
+    },
+    {
+      "section": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "plannedQuestions": 5,
+      "authoredQuestions": 1,
+      "decisions": [
+        "Interpret unrepaired TOF physiology and determinants of cyanosis",
+        "Apply current pulmonary-valve replacement assessment in repaired TOF",
+        "Identify arrhythmia substrates and appropriate sudden-death risk assessment",
+        "Evaluate anatomy and coronary safety before transcatheter pulmonary valve treatment",
+        "Investigate declining exercise capacity with residual obstruction or regurgitation"
+      ]
+    },
+    {
+      "section": "Eisenmenger syndrome and cyanotic physiology",
+      "plannedQuestions": 5,
+      "authoredQuestions": 0,
+      "decisions": [
+        "Recognize irreversible pulmonary vascular disease and unsafe defect closure",
+        "Distinguish adaptive erythrocytosis from an indication for phlebotomy",
+        "Assess iron deficiency and hyperviscosity symptoms in cyanotic disease",
+        "Select and monitor appropriate PAH-directed treatment using the relevant evidence",
+        "Assess hemoptysis thrombosis and anticoagulation without routine blanket treatment"
+      ]
+    },
+    {
+      "section": "Ebstein anomaly",
+      "plannedQuestions": 2,
+      "authoredQuestions": 0,
+      "decisions": [
+        "Interpret indexed tricuspid displacement and atrialized RV anatomy",
+        "Recognize the relevance of accessory pathways and arrhythmia assessment"
+      ]
+    },
+    {
+      "section": "Transposition and systemic right ventricle",
+      "plannedQuestions": 3,
+      "authoredQuestions": 0,
+      "decisions": [
+        "Investigate systemic RV and baffle complications after an atrial switch",
+        "Investigate coronary and great-artery complications after an arterial switch",
+        "Recognize AV block and systemic AV-valve disease in congenitally corrected TGA"
+      ]
+    },
+    {
+      "section": "Fontan and single-ventricle circulation",
+      "plannedQuestions": 5,
+      "authoredQuestions": 0,
+      "decisions": [
+        "Explain passive pulmonary flow and sensitivity to pulmonary resistance",
+        "Investigate failing Fontan and protein-losing enteropathy",
+        "Individualize thromboprophylaxis and evaluation of thromboembolism",
+        "Apply current liver surveillance and interpret congestive liver findings",
+        "Assess exercise limitation arrhythmia and procedural hemodynamic risk"
+      ]
+    },
+    {
+      "section": "Other important congenital lesions",
+      "plannedQuestions": 3,
+      "authoredQuestions": 0,
+      "decisions": [
+        "Distinguish isolated anomalous pulmonary venous drainage from an ASD",
+        "Recognize cor triatriatum and differentiate it from mitral inflow disease",
+        "Assess anomalous aortic coronary origin and an ischemia-risk phenotype"
+      ]
+    },
+    {
+      "section": "General adult congenital management",
+      "plannedQuestions": 5,
+      "authoredQuestions": 0,
+      "decisions": [
+        "Plan pregnancy and contraception using lesion-specific physiological risk",
+        "Select endocarditis prophylaxis according to the actual high-risk indication",
+        "Individualize activity and objective exercise assessment",
+        "Use specialist multidisciplinary planning for noncardiac procedures",
+        "Plan lifelong follow-up after repair without relying only on anatomical labels"
+      ]
+    }
+  ],
+  "questionDecisions": [
+    {
+      "questionId": "cardiology-rebuild-01-015",
+      "section": "Foundations and physiological classification",
+      "decision": "Calculate Qp/Qs from an appropriately sampled oximetry run"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-001",
+      "section": "Atrial septal defects and atrioventricular septal anatomy",
+      "decision": "Explain the pulmonary flow murmur and fixed S2 splitting"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-002",
+      "section": "Atrial septal defects and atrioventricular septal anatomy",
+      "decision": "Recognize partial AV septal anatomy from axis conduction and AV-valve findings"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-003",
+      "section": "Atrial septal defects and atrioventricular septal anatomy",
+      "decision": "Interpret relative ventricular compliance and atrial shunt magnitude"
+    },
+    {
+      "questionId": "cardiology-rebuild-01-048",
+      "section": "Atrial septal defects and atrioventricular septal anatomy",
+      "decision": "Use CMR for reproducible RV volumes and pulmonary-systemic flow assessment"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-004",
+      "section": "Atrial septal defects and atrioventricular septal anatomy",
+      "decision": "Apply the 2025 uncomplicated ASD closure recommendation with its PVR and LV qualifications"
+    },
+    {
+      "questionId": "cardiology-rebuild-03-047",
+      "section": "Congenital valve and outflow obstruction",
+      "decision": "Choose balloon treatment for a suitable symptomatic doming pulmonary valve"
+    },
+    {
+      "questionId": "cardiology-rebuild-03-048",
+      "section": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "decision": "Apply current pulmonary-valve replacement assessment in repaired TOF"
+    }
+  ]
+}

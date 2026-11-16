@@ -16,6 +16,11 @@ def rich(s):
 def question(topic,title,stem,answer,others,sections,refs,table=None,style='clinical_scenario',calculation=False):
     return dict(topic=topic,title=title,question=stem,answer=answer,others=others,sections=sections,refs=refs,table=table,style=style,calculation=calculation)
 
+
+def highlight_medical_values(text):
+    """Mark unit-bearing values in newly authored explanatory text."""
+    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:Wood units|mmHg|mm|cm/s|mg/kg/min|mg/kg/day|mg/kg|mg/hour|mg/h|mg/min|mg/g|mg/dL|mg|g/hour|g/h|g/day|g/week|g|mmol/L|nmol/L|ng/mL/h|ng/dL|µg/kg/min|µg/kg|µg/min|µg/dL|mU/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
+
 def validate(bank):
     rows=bank['questions'];assert len(rows)==bank['targetQuestions'] and rows
     assert len({q['id'] for q in rows})==len(rows)
@@ -43,19 +48,23 @@ def validate(bank):
         distractorRationales=sum(len(q['explanationTeaching']['otherOptions']) for q in rows),
         questionStyles=dict(collections.Counter(q.get('questionStyle','unspecified') for q in rows)),status='passed')
 
-def save(subject,number,document,rows,refs,source_note,preserved_questions=None,preserved_answer_indices=None):
+def save(subject,number,document,rows,refs,source_note,preserved_questions=None,preserved_answer_indices=None,additional_preserved_questions=None):
     positions=[i%4 for i in range(len(rows))];random.Random(2026111500+number).shuffle(positions)
     slug=re.sub('[^a-z0-9]+','-',subject.lower())
     preserved={q['id']:q for q in (preserved_questions or [])}
+    additional=copy.deepcopy(additional_preserved_questions or [])
+    assert len({q['id'] for q in additional})==len(additional)
     fixed=dict(preserved_answer_indices or {})
     assert all(isinstance(i,int) and 0<=i<4 for i in fixed.values())
     assert all(k not in fixed or fixed[k]==q['correctIndex'] for k,q in preserved.items())
     fixed.update({k:q['correctIndex'] for k,q in preserved.items()})
-    if fixed:
+    if fixed or additional:
         ids=[f'{slug}-rebuild-{number:02}-{i:03}' for i in range(1,len(rows)+1)]
         assert set(fixed)<=set(ids),'Preserved questions must belong to this chapter'
-        target=collections.Counter(i%4 for i in range(len(rows)))
+        assert not {q['id'] for q in additional}&set(ids),'Additional preserved IDs overlap generated IDs'
+        target=collections.Counter(i%4 for i in range(len(rows)+len(additional)))
         used=collections.Counter(fixed.values())
+        used.update(q['correctIndex'] for q in additional)
         assert all(used[i]<=target[i] for i in range(4)),'Cannot preserve keys with balanced final counts'
         remaining=[i for i in range(4) for _ in range(target[i]-used[i])]
         random.Random(2026111500+number).shuffle(remaining)
@@ -98,6 +107,7 @@ def save(subject,number,document,rows,refs,source_note,preserved_questions=None,
           explanationTeaching=dict(title=r['title'],sections=sections,tables=tables,otherOptions=other),references=references,
           sourceCheckedAt='2026-11-15',reviewStatus='source_checked_not_independently_clinician_reviewed'))
         if r.get('coverageDecision'):qs[-1]['coverageDecision']=r['coverageDecision']
+    qs.extend(additional)
     first=json.loads((ROOT/'Neurology/01. Neuroanatomy, Clinical Localization & Neurological Examination.json').read_text(encoding='utf-8'))
     bank=dict(schemaVersion=1,folder=subject,subject=subject,chapterOrder=number,topicOrder=1,headingIndex=0,document=document,
       headingText=re.sub(r'^\d+[. ]+','',document),targetQuestions=len(qs),status='chapter_authored',

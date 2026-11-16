@@ -672,16 +672,36 @@
       "chapter": 12,
       "document": "12. Adult Congenital Heart Diseases",
       "file": "Cardiology/12. Adult Congenital Heart Diseases.json",
-      "status": "redistributed_coverage_incomplete",
+      "status": "draft_in_progress",
       "originalIdsPreserved": true,
       "existingQuestions": 4,
       "previouslyInstalledQuestions": 4,
-      "draftQuestions": 0,
-      "coverageStatus": "incomplete_requires_chapter_review",
-      "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+      "draftQuestions": 4,
+      "coverageStatus": "incomplete_draft",
+      "explanationStructureStatus": "four_originals_preserved_new_questions_use_deep_explanations",
       "installedQuestions": 4,
-      "draftQuestionsWithheld": 0,
-      "runtimeStatus": "installed_redistributed_subset"
+      "draftQuestionsWithheld": 4,
+      "runtimeStatus": "installed_redistributed_subset",
+      "validation": {
+        "questions": 8,
+        "answerDistribution": {
+          "A": 2,
+          "B": 2,
+          "C": 2,
+          "D": 2
+        },
+        "minimumExplanationWords": 210,
+        "distractorRationales": 21,
+        "questionStyles": {
+          "clinical_scenario": 7,
+          "direct": 1
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 8,
+      "plannedQuestions": 55,
+      "newQuestionsAfterRedistribution": 4,
+      "coverageMap": "Cardiology/audit/chapter-12-coverage.json"
     },
     {
       "subject": "Cardiology",
@@ -1350,7 +1370,7 @@
     "sourceChapters": 15,
     "fullCoverage": false,
     "draftQuestionsNotInstalled": 74,
-    "currentAuthoredQuestions": 672,
-    "currentDraftQuestionsNotInstalled": 65
+    "currentAuthoredQuestions": 676,
+    "currentDraftQuestionsNotInstalled": 69
   }
 }
