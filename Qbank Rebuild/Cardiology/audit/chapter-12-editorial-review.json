@@ -1,7 +1,7 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "86a5893ceb428f98f5495683aa7868c492932a633ca5be90f75db70a1d813fce",
+  "bankSha256": "c0db1c898f509f6874565d1b78619abada8e1154701af2631105770b2ed23518",
   "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open.",
   "findings": [
     {
@@ -50,6 +50,30 @@
       "action": "Replaced unrelated coronary angiography and cursory echo-only choices with competing RCRI, CPET and Fontan catheterization strategies; explained test-selection limits and multidisciplinary assessment.",
       "status": "revised",
       "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-001",
+      "action": "Explicitly excluded both valvar and subvalvar RV outflow obstruction to distinguish increased pulmonary flow from the competing obstructive mechanism.",
+      "status": "revised",
+      "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-002",
+      "action": "Added source-document PFO versus true ASD distinction, anatomy and the limitation of attributing substantial chronic RV volume loading to an incidental PFO.",
+      "status": "revised",
+      "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-009",
+      "action": "Added a compact comparison of all four conventional VSD anatomical groups, with cusp, valve and conduction associations.",
+      "status": "revised",
+      "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-011",
+      "action": "Corrected initial PVR range from 5 to less than 8 to the guideline wording 5 to 8 Wood units; retained uncertainty of VSD closure after therapy reduces PVR below 5.",
+      "status": "revised",
+      "correctIndexPreserved": true
     }
   ],
   "remaining": [
@@ -58,5 +82,27 @@
     "Check complete classification framework and treatment detail requirements",
     "Verify rendered rich-text formatting",
     "Seal release only after review and install/readback checks"
-  ]
+  ],
+  "sourceCoverageReview": {
+    "status": "partial_review",
+    "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
+    "sectionsReadInFull": [
+      "I. OVERVIEW AND CLASSIFICATION",
+      "II. ATRIAL SEPTAL DEFECT",
+      "III. VENTRICULAR SEPTAL DEFECT",
+      "IV. PATENT DUCTUS ARTERIOSUS"
+    ],
+    "findings": [
+      "Source PFO distinction added to Q002; full VSD anatomy comparison added to Q009.",
+      "ASD closure PVR categories are explicitly attributed to the selected guideline; current selected sinus-venosus catheter treatment is qualified rather than repeating source all-surgical wording.",
+      "VSD recent-IE closure indication is already included in Q010; aortic cusp progression is separately tested in Q009.",
+      "Ductal runoff, left-heart loading, differential cyanosis, anatomical investigation and closure assessment are covered in Q013-Q015.",
+      "Remaining source sections and final whole-chapter explanation/distractor review are not yet release-approved."
+    ],
+    "references": [
+      "https://doi.org/10.1016/j.jacc.2025.09.006",
+      "https://doi.org/10.1093/eurheartj/ehaa554",
+      "https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf"
+    ]
+  }
 }

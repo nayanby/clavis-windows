@@ -15,7 +15,7 @@ def S(h,t,*children):return h,[(t,list(children))]
 def add(*args,**kwargs):rows.append(Q(*args,**kwargs))
 
 add(TOPIC,'Atrial Shunting and the Pulmonary Flow Murmur',
- 'An adult with a secundum ASD has RV enlargement, wide fixed splitting of S2 and a grade 2/6 midsystolic murmur at the upper left sternal border. Doppler shows no pulmonary valve stenosis. What principally generates this murmur?',
+ 'An adult with a secundum ASD has RV enlargement, wide fixed splitting of S2 and a grade 2/6 midsystolic murmur at the upper left sternal border. Doppler shows no valvar or subvalvar RV outflow obstruction. What principally generates this murmur?',
  'Increased systolic flow across the pulmonary valve',[
  ('High-velocity systolic flow through the atrial defect','A ventricular septal jet can produce a prominent systolic murmur because of its pressure gradient. The atrial communication usually has a much smaller pressure difference; the characteristic ASD ejection murmur is generated downstream by increased pulmonary flow.'),
  ('Systolic regurgitation through the tricuspid valve','Significant tricuspid regurgitation can accompany right-heart dilatation and produces its own usually holosystolic lower-sternal murmur. It does not explain the supplied pulmonary-area ejection murmur with no stated important regurgitation.'),
@@ -39,7 +39,8 @@ add(TOPIC,'Primum Communication and the Left Atrioventricular Valve',
  [S('Anatomy and Electrical Clues',
    '**A primum communication is part of an atrioventricular septal defect, not simply a low fossa-ovalis hole.** The common AV junction and abnormal left AV-valve anatomy determine investigation and repair.',
    'The leftward or superior QRS axis is a useful contrast with the common right-axis/incomplete-RBBB pattern of a secundum ASD. PR prolongation may accompany the conduction anatomy but is not sufficient alone to classify the defect.',
-   'Regurgitation may involve the zone of apposition of the left AV-valve leaflets, often described clinically as a cleft. Assess the valve, ventricular components of the septal defect and any associated obstruction rather than considering only the atrial communication.'),
+   'Regurgitation may involve the zone of apposition of the left AV-valve leaflets, often described clinically as a cleft. Assess the valve, ventricular components of the septal defect and any associated obstruction rather than considering only the atrial communication.',
+   'A patent foramen ovale is a flap or tunnel between overlapping septum primum and septum secundum, without the tissue deficiency of a secundum ASD. An incidental PFO should not be used to explain substantial chronic RV volume loading; look for a true shunt or another cause. PFO-associated embolic assessment follows a different clinical pathway from closure for ASD-related volume overload.'),
   S('Investigation and Treatment Implications',
    '**Detailed echocardiography must define both the shunt and the AV-valve lesion.** TEE or other imaging is selected when the initial study does not resolve the repair anatomy or pulmonary venous connections.',
    'An indicated partial AVSD repair is generally surgical and can address the left AV valve together with the septal communication. A conventional double-disc secundum device does not correct AV septal anatomy or associated valve dysfunction.',

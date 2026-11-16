@@ -66,7 +66,7 @@ add(VSD,'VSD With PAH: Uncertain Benefit After a Treatment Response',
   ('The ASD treat-and-repair recommendation can be directly transferred to the VSD','Both lesions can produce pulmonary overcirculation, but their pressure loading, ventricular effects and evidence bases differ. The current guideline gives more cautious wording for a VSD in this resistance range after treatment.'),
   ('The fall below 5 Wood units establishes that PAH treatment can stop after closure','An improved PVR does not demonstrate cure of pulmonary vascular disease. Continued specialist PAH treatment and surveillance may remain necessary regardless of whether a selected intervention is eventually chosen.')],
  [S('Guideline Interpretation',
-   '**For VSD with significant shunting, PVR initially 5 to less than 8 Wood units and no hypoxemia, the 2025 guideline describes closure usefulness as uncertain even if therapy lowers PVR below 5.** This is not the same wording as the selected ASD pathway.',
+   '**For VSD with significant shunting, PVR initially 5 to 8 Wood units and no hypoxemia, the 2025 guideline describes closure usefulness as uncertain even if therapy lowers PVR below 5.** This is not the same wording as the selected ASD pathway.',
    'The question supplies a treatment response but does not convert limited evidence into a proven outcome benefit. Reassess invasive hemodynamics, ventricular function, clinical risk and the anatomy with congenital and PH specialists.',
    'Avoid a binary rule that every PVR above a single cutoff mandates repair or that every treatment responder has irreversible disease. Neither a favorable short-term pressure response nor a large shunt answers the whole risk question.'),
   S('Treatment and Follow-Up',
@@ -143,4 +143,11 @@ rows[2]['table']=(['Shunt level','Usual primary volume-loaded chambers','Interpr
  ['ASD','RA and RV','Pulmonary flow murmur; assess atrial and pulmonary venous anatomy'],
  ['VSD','LA and LV','Jet velocity measures an LV–RV pressure difference, not shunt volume'],
  ['PDA','LA and LV','Continuous flow requires a persistent aortopulmonary gradient'],
+])
+
+rows[1]['table']=(['VSD anatomy','Location and clinical association'],[
+ ['Perimembranous','Membranous-septal region adjacent to the aortic and tricuspid valves; proximity to the AV conduction axis influences repair risk; aortic cusp prolapse may occur.'],
+ ['Muscular','Entirely muscular margins; may occur at apical, midseptal or other trabecular sites, sometimes with multiple defects; selected lesions are suitable for device closure.'],
+ ['Outlet / doubly committed subarterial','Beneath the semilunar valves; deficient cusp support predisposes to aortic prolapse and progressive regurgitation even with a small shunt.'],
+ ['Inlet','Beneath the AV valves; assess the AV junction and associated AV septal anatomy rather than assuming every inlet defect is an isolated lesion.'],
 ])
