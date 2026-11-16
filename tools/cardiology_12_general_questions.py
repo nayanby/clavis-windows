@@ -41,3 +41,22 @@ rows.append(Q(TOPIC,'Dental Prophylaxis After Congenital Defect Repair',
   '**Good oral hygiene and regular dental care remain central.** A prophylactic dose cannot compensate for untreated dental disease or replace prompt assessment of unexplained fever.',
   'Document the repaired anatomy, residual findings and prophylaxis indication so the dentist and cardiologist use the same information. Reassess when anatomy changes. The question uses AHA dental guidance; recommendations for other procedures or other guideline systems should be identified explicitly rather than assumed to be interchangeable.')],
  ['AHA_IE_CARD','ACHD2025']))
+
+rows.append(Q(TOPIC,'Objective Functional Assessment Before Exercise Advice',
+ 'A stable adult with repaired congenital heart disease reports no limitation but has gradually stopped climbing stairs and cycling. Resting echocardiography is unchanged. The patient can exercise and has no acute illness or test contraindication. Which investigation best quantifies integrated exercise capacity and guides individualized activity advice?',
+ 'Cardiopulmonary exercise testing with gas exchange, ECG and oxygen saturation monitoring',[
+ ('A six-minute walk test as the definitive physiological assessment','Walking distance is useful in established PAH or when reliable CPET cannot be performed. It provides a more limited assessment and does not measure the full gas-exchange and ventilatory response available in this exercise-capable patient.'),
+ ('Ambulatory ECG monitoring during usual daily activity','Ambulatory monitoring can identify intermittent arrhythmia and relate it to symptoms. It does not measure oxygen uptake, ventilatory efficiency or exercise capacity under a standardized graded workload.'),
+ ('Repeat resting CMR ventricular volumes as the sole basis for exercise clearance','CMR provides important anatomy and ventricular measurements when indicated. Resting volumes alone cannot quantify integrated exertional performance or exclude exercise-related desaturation, chronotropic limitation or arrhythmia.')],
+ [S('Recognize Adaptation to Functional Limitation',
+  '**Self-reported absence of symptoms can conceal progressive restriction of activity.** A person may avoid demanding tasks rather than describe breathlessness during them.',
+  'CPET measures the response to a controlled increasing workload and permits comparison with prior performance. The result integrates cardiovascular delivery, pulmonary gas exchange, peripheral conditioning and effort; it should not be reduced to a single resting imaging measurement.'),
+  S('Interpret the Pattern, Not One Number',
+  '**Review peak oxygen uptake, ventilatory efficiency, heart-rate response, blood pressure, oxygen saturation and rhythm together.** Interpret values with the congenital anatomy, repair, medication and test quality.',
+  'Reduced peak oxygen uptake can reflect cardiac limitation, deconditioning or inadequate effort. A reduced heart-rate response may relate to sinus-node disease, pacing or medication. Exertional desaturation requires assessment of shunting or pulmonary disease rather than a blanket diagnosis of poor fitness.',
+  'Serial change is most informative when protocol, effort and clinical conditions are comparable. A concerning trajectory should trigger evaluation for residual hemodynamic lesions, valve dysfunction or arrhythmia. CPET complements anatomical assessment; it does not identify every structural cause by itself.'),
+  S('Translate Findings Into Activity Advice',
+  '**Encourage appropriate activity using an individualized prescription.** Consider ventricular function, pulmonary pressure, aortic dimensions, arrhythmic risk and cyanosis along with the exercise findings.',
+  'Stable patients may benefit from progressive aerobic training and selected resistance exercise. The intensity and supervision should match the lesion and physiological risk; competitive sport requires a more specific assessment than ordinary daily activity.',
+  'Severe obstruction, significant aortopathy, uncontrolled arrhythmia or other high-risk findings can alter the plan. Conversely, a congenital diagnosis alone does not justify lifelong inactivity. When CPET is unsafe or cannot yield reliable information, use an appropriate alternative such as a six-minute walk test and interpret its narrower scope explicitly.')],
+ ['ACHD2025','AHA_CPET']))
