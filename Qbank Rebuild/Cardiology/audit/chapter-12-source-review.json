@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 29,
+  "authoredQuestions": 39,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -54,7 +54,17 @@
     "cardiology-rebuild-12-022",
     "cardiology-rebuild-12-023",
     "cardiology-rebuild-12-024",
-    "cardiology-rebuild-12-025"
+    "cardiology-rebuild-12-025",
+    "cardiology-rebuild-12-026",
+    "cardiology-rebuild-12-027",
+    "cardiology-rebuild-12-028",
+    "cardiology-rebuild-12-029",
+    "cardiology-rebuild-12-030",
+    "cardiology-rebuild-12-031",
+    "cardiology-rebuild-12-032",
+    "cardiology-rebuild-12-033",
+    "cardiology-rebuild-12-034",
+    "cardiology-rebuild-12-035"
   ],
   "sources": [
     {
@@ -156,21 +166,45 @@
     {
       "label": "Coronary compression during transcatheter pulmonary valve assessment: multicentre experience",
       "url": "https://pubmed.ncbi.nlm.nih.gov/24065444/"
+    },
+    {
+      "label": "Prospective iron replacement in cyanotic CHD, Tay et al., 2011",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20580108/"
+    },
+    {
+      "label": "Bosentan in Eisenmenger syndrome: BREATHE-5 randomized trial, 2006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16801459/"
+    },
+    {
+      "label": "Macitentan in Eisenmenger syndrome: MAESTRO randomized trial, 2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6314514/"
+    },
+    {
+      "label": "Bosentan FDA prescribing information, revised November 2025",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021290s048%2C209279s015lbl.pdf"
+    },
+    {
+      "label": "Canadian Cardiovascular Society ACHD intervention guideline, 2022",
+      "url": "https://www.cachnet.org/wp-content/uploads/2023/11/CCS-2022-ACHD-Guideline.pdf"
+    },
+    {
+      "label": "AHA statement: cardiopulmonary exercise testing in congenital heart disease, 2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12074744/"
     }
   ],
   "validation": {
-    "questions": 29,
+    "questions": 39,
     "answerDistribution": {
-      "A": 8,
-      "B": 7,
-      "C": 7,
-      "D": 7
+      "A": 10,
+      "B": 10,
+      "C": 10,
+      "D": 9
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 81,
+    "distractorRationales": 111,
     "questionStyles": {
-      "direct": 4,
-      "clinical_scenario": 25
+      "direct": 5,
+      "clinical_scenario": 34
     },
     "status": "passed"
   },
@@ -253,7 +287,21 @@
     "Native-RVOT transcatheter valve planning uses CT anatomy and coronary assessment, with device-specific compression evaluation.",
     "RV pressure above two-thirds systemic with obstruction is distinguished from PAH and from regurgitant volume-loading criteria."
   ],
-  "nextWork": "Continue with Eisenmenger and remaining complex lesions; foundations and final whole-chapter review also remain pending.",
+  "eisenmengerChecks": [
+    "Four PAH-CHD groups are distinguished using causal anatomy, repair status and shunt direction.",
+    "An asymptomatic hematocrit above 65% is not sufficient for phlebotomy; persistent symptoms require hydration, iron and alternative-cause assessment.",
+    "Iron deficiency is established by depleted stores despite a high hemoglobin; the ferrous fumarate study dose is salt mass and not a universal starting prescription.",
+    "BREATHE-5 primary safety and efficacy endpoints are separated from MAESTRO negative primary exercise outcome; bosentan dual ETA/ETB blockade is independently confirmed.",
+    "Routine oral anticoagulation is distinguished from a separate indication and individualized bleeding assessment."
+  ],
+  "ebsteinTranspositionChecks": [
+    "Septal hinge displacement is body-surface-area indexed: 18/1.8 = 10 mm/m², exceeding the adult 8 mm/m² criterion.",
+    "Manifest pre-excitation in Ebstein anomaly warrants EP assessment even without reported sustained tachycardia; preoperative access issues are explained.",
+    "Atrial-switch baffle leak is distinguished from isolated obstruction, systemic valve regurgitation and chronotropic limitation.",
+    "Post-arterial-switch ischemic symptoms prompt assessment of reimplanted coronary anatomy; functional tests answer a complementary question.",
+    "Double discordance is mapped to the systemic morphological RV and tricuspid valve, with spontaneous AV-block risk."
+  ],
+  "nextWork": "Continue with Fontan physiology; foundations, remaining congenital lesions, general management and final whole-chapter review also remain pending.",
   "limitations": [
     "Four transferred questions retained verbatim with their original IDs.",
     "New content has author source checks, not independent clinician review.",

@@ -19,6 +19,12 @@ REFERENCES.update(obstruction_references)
 from cardiology_12_tof_questions import rows as tof_rows, REFERENCES as tof_references
 rows.extend(tof_rows)
 REFERENCES.update(tof_references)
+from cardiology_12_eisenmenger_questions import rows as eisenmenger_rows, REFERENCES as eisenmenger_references
+rows.extend(eisenmenger_rows)
+REFERENCES.update(eisenmenger_references)
+from cardiology_12_ebstein_tga_questions import rows as ebstein_tga_rows, REFERENCES as ebstein_tga_references
+rows.extend(ebstein_tga_rows)
+REFERENCES.update(ebstein_tga_references)
 
 DOC='12. Adult Congenital Heart Diseases'
 PREFIX='cardiology-rebuild-12-'
@@ -103,6 +109,8 @@ ASSIGNMENTS={
  PREFIX+'016':(4,0), PREFIX+'017':(4,1), PREFIX+'018':(4,2), PREFIX+'019':(4,3),
  PREFIX+'020':(5,1), PREFIX+'021':(5,2),
  PREFIX+'022':(6,0), PREFIX+'023':(6,2), PREFIX+'024':(6,3), PREFIX+'025':(6,4),
+ PREFIX+'026':(7,0), PREFIX+'027':(7,1), PREFIX+'028':(7,2), PREFIX+'029':(7,3), PREFIX+'030':(7,4),
+ PREFIX+'031':(8,0), PREFIX+'032':(8,1), PREFIX+'033':(9,0), PREFIX+'034':(9,1), PREFIX+'035':(9,2),
  'cardiology-rebuild-03-047':(5,0), 'cardiology-rebuild-03-048':(6,1),
 }
 
@@ -165,7 +173,9 @@ if __name__=='__main__':
            dict(section='Coarctation and congenital outflow lesions',questionIds=[PREFIX+f'{i:03}' for i in range(16,22)],status='authored_cases_source_checked',
                 findings=['Postrepair cross-sectional surveillance covers aneurysm and arch anatomy even with a low resting gradient; ESC 2024 gives an adapted 3–5-year interval.','A 7/20 isthmus ratio is 0.35; collaterals can lower a catheter gradient despite important anatomy.','ESC stenting preference is qualified by adult anatomy; current US guidance permits surgical or catheter repair by ACHD experts.','Doppler mean and maximum instantaneous gradients are distinguished from invasive peak-to-peak measurements.','A proximal/distal RV pressure step with little distal-RV-to-PA step localizes intracavitary rather than valvar obstruction.','BAV with aortic dilation prompts first-degree-relative TTE; isolated and concomitant aortic operation thresholds are not conflated.'])],
           tetralogyChecks=['Systemic vascular resistance changes can alter unrepaired right-to-left flow despite unchanged RVOTO.','Scar-related macroreentry is distinguished from idiopathic RVOT triggered activity; a historical QRS marker is not a standalone ICD indication.','Native-RVOT transcatheter valve planning uses CT anatomy and coronary assessment, with device-specific compression evaluation.','RV pressure above two-thirds systemic with obstruction is distinguished from PAH and from regurgitant volume-loading criteria.'],
-          nextWork='Continue with Eisenmenger and remaining complex lesions; foundations and final whole-chapter review also remain pending.',
+          eisenmengerChecks=['Four PAH-CHD groups are distinguished using causal anatomy, repair status and shunt direction.','An asymptomatic hematocrit above 65% is not sufficient for phlebotomy; persistent symptoms require hydration, iron and alternative-cause assessment.','Iron deficiency is established by depleted stores despite a high hemoglobin; the ferrous fumarate study dose is salt mass and not a universal starting prescription.','BREATHE-5 primary safety and efficacy endpoints are separated from MAESTRO negative primary exercise outcome; bosentan dual ETA/ETB blockade is independently confirmed.','Routine oral anticoagulation is distinguished from a separate indication and individualized bleeding assessment.'],
+          ebsteinTranspositionChecks=['Septal hinge displacement is body-surface-area indexed: 18/1.8 = 10 mm/m², exceeding the adult 8 mm/m² criterion.','Manifest pre-excitation in Ebstein anomaly warrants EP assessment even without reported sustained tachycardia; preoperative access issues are explained.','Atrial-switch baffle leak is distinguished from isolated obstruction, systemic valve regurgitation and chronotropic limitation.','Post-arterial-switch ischemic symptoms prompt assessment of reimplanted coronary anatomy; functional tests answer a complementary question.','Double discordance is mapped to the systemic morphological RV and tricuspid valve, with spontaneous AV-block risk.'],
+          nextWork='Continue with Fontan physiology; foundations, remaining congenital lesions, general management and final whole-chapter review also remain pending.',
           limitations=['Four transferred questions retained verbatim with their original IDs.','New content has author source checks, not independent clinician review.','The 55-question plan is provisional and does not establish completeness.']))
     pp=ROOT/'progress.json';plan=json.loads(pp.read_text(encoding='utf-8'))
     entry=next(e for e in plan['chapters'] if e['subject']=='Cardiology' and e['document']==DOC)

@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 29,
+  "targetQuestions": 39,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -2247,6 +2247,786 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Investigate declining exercise capacity with residual obstruction or regurgitation"
+    },
+    {
+      "id": "cardiology-rebuild-12-026",
+      "topic": "Eisenmenger syndrome and cyanotic physiology",
+      "question": "A 34-year-old with a large unrepaired VSD had pulmonary overcirculation in childhood. Current catheterization shows mean PA pressure 75 mmHg, wedge pressure 10 mmHg, PVR 18 Wood units and Qp/Qs 0.8. Systemic saturation is 82%, with bidirectional flow and no RV outflow obstruction. Which PAH-CHD category best fits?",
+      "options": [
+        "PAH associated with a small coincidental defect",
+        "Eisenmenger syndrome",
+        "PAH persisting after correction of a congenital defect",
+        "PAH with a prevalent systemic-to-pulmonary shunt"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Eisenmenger Syndrome Within PAH Associated With Congenital Shunts\n\nCorrect answer: Eisenmenger syndrome\n\nEvolution of the Pulmonary Vascular Lesion\n\n**A large congenital systemic-to-pulmonary communication can produce progressive pulmonary vascular remodeling.** As resistance rises, the original flow excess diminishes and eventually becomes bidirectional or predominantly right-to-left.\n\nThe low wedge pressure supports a precapillary process rather than isolated pulmonary venous hypertension. The history establishes the causal large shunt; cyanosis alone would not distinguish pulmonary vascular disease from restricted pulmonary flow in another congenital lesion.\n\nImplications for Repair and Ongoing Care\n\n**Established Eisenmenger physiology is not an uncomplicated closure indication.** Eliminating the communication can remove a pressure-relief route and precipitate severe right-heart failure.\n\nA fall in pulmonary pressure during treatment does not by itself establish reversibility or justify closure. Expert assessment integrates resistance, flow direction, filling pressures and ventricular function; selected treat-and-repair pathways for other shunt phenotypes must not be transferred automatically.\n\nManagement includes ACHD and pulmonary-hypertension expertise, functional assessment, iron and renal monitoring, and evaluation for targeted PAH therapy. Bleeding, arrhythmia, paradoxical embolism and infection can complicate cyanotic disease. Pregnancy counseling is essential because maternal risk is very high. Intravascular procedures require meticulous exclusion of air from lines when right-to-left passage is possible.\n\nPAH-CHD group | Distinguishing context\n\nEisenmenger | Large causal shunt with advanced pulmonary vascular disease and reversal\n\nPrevalent systemic-to-pulmonary shunt | Predominantly left-to-right flow remains\n\nSmall/coincidental defect | Defect insufficient to explain the pulmonary vascular disease\n\nAfter correction | PAH persists or develops after anatomical repair\n\nPAH associated with a small coincidental defect: Small defects can coexist with a pulmonary arteriopathy resembling idiopathic PAH, without having caused the vascular disease. This patient instead has a large longstanding shunt, documented earlier overcirculation and subsequent reversal of its net direction.\n\nPAH persisting after correction of a congenital defect: PAH may persist or emerge after surgical or catheter correction. That category requires a repaired defect; the supplied VSD remains open and is the route for desaturated systemic flow.\n\nPAH with a prevalent systemic-to-pulmonary shunt: That group retains predominant left-to-right flow, generally without resting cyanosis from shunt reversal. The current net Qp/Qs below one and arterial desaturation place this patient in the Eisenmenger group.\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006",
+      "explanationHtml": "<h2>Eisenmenger Syndrome Within PAH Associated With Congenital Shunts</h2><p><strong>Correct answer: B — Eisenmenger syndrome</strong></p><h3>Evolution of the Pulmonary Vascular Lesion</h3><ul><li><strong>A large congenital systemic-to-pulmonary communication can produce progressive pulmonary vascular remodeling.</strong> As resistance rises, the original flow excess diminishes and eventually becomes bidirectional or predominantly right-to-left.<ul><li>The low wedge pressure supports a precapillary process rather than isolated pulmonary venous hypertension. The history establishes the causal large shunt; cyanosis alone would not distinguish pulmonary vascular disease from restricted pulmonary flow in another congenital lesion.</li></ul></li></ul><h3>Implications for Repair and Ongoing Care</h3><ul><li><strong>Established Eisenmenger physiology is not an uncomplicated closure indication.</strong> Eliminating the communication can remove a pressure-relief route and precipitate severe right-heart failure.<ul><li>A fall in pulmonary pressure during treatment does not by itself establish reversibility or justify closure. Expert assessment integrates resistance, flow direction, filling pressures and ventricular function; selected treat-and-repair pathways for other shunt phenotypes must not be transferred automatically.</li><li>Management includes ACHD and pulmonary-hypertension expertise, functional assessment, iron and renal monitoring, and evaluation for targeted PAH therapy. Bleeding, arrhythmia, paradoxical embolism and infection can complicate cyanotic disease. Pregnancy counseling is essential because maternal risk is very high. Intravascular procedures require meticulous exclusion of air from lines when right-to-left passage is possible.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>PAH-CHD group</th><th>Distinguishing context</th></tr></thead><tbody><tr><td>Eisenmenger</td><td>Large causal shunt with advanced pulmonary vascular disease and reversal</td></tr><tr><td>Prevalent systemic-to-pulmonary shunt</td><td>Predominantly left-to-right flow remains</td></tr><tr><td>Small/coincidental defect</td><td>Defect insufficient to explain the pulmonary vascular disease</td></tr><tr><td>After correction</td><td>PAH persists or develops after anatomical repair</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — PAH associated with a small coincidental defect:</strong> Small defects can coexist with a pulmonary arteriopathy resembling idiopathic PAH, without having caused the vascular disease. This patient instead has a large longstanding shunt, documented earlier overcirculation and subsequent reversal of its net direction.</li><li><strong>C — PAH persisting after correction of a congenital defect:</strong> PAH may persist or emerge after surgical or catheter correction. That category requires a repaired defect; the supplied VSD remains open and is the route for desaturated systemic flow.</li><li><strong>D — PAH with a prevalent systemic-to-pulmonary shunt:</strong> That group retains predominant left-to-right flow, generally without resting cyanosis from shunt reversal. The current net Qp/Qs below one and arterial desaturation place this patient in the Eisenmenger group.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Eisenmenger Syndrome Within PAH Associated With Congenital Shunts",
+        "sections": [
+          {
+            "heading": "Evolution of the Pulmonary Vascular Lesion",
+            "bullets": [
+              {
+                "text": "**A large congenital systemic-to-pulmonary communication can produce progressive pulmonary vascular remodeling.** As resistance rises, the original flow excess diminishes and eventually becomes bidirectional or predominantly right-to-left.",
+                "children": [
+                  "The low wedge pressure supports a precapillary process rather than isolated pulmonary venous hypertension. The history establishes the causal large shunt; cyanosis alone would not distinguish pulmonary vascular disease from restricted pulmonary flow in another congenital lesion."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Implications for Repair and Ongoing Care",
+            "bullets": [
+              {
+                "text": "**Established Eisenmenger physiology is not an uncomplicated closure indication.** Eliminating the communication can remove a pressure-relief route and precipitate severe right-heart failure.",
+                "children": [
+                  "A fall in pulmonary pressure during treatment does not by itself establish reversibility or justify closure. Expert assessment integrates resistance, flow direction, filling pressures and ventricular function; selected treat-and-repair pathways for other shunt phenotypes must not be transferred automatically.",
+                  "Management includes ACHD and pulmonary-hypertension expertise, functional assessment, iron and renal monitoring, and evaluation for targeted PAH therapy. Bleeding, arrhythmia, paradoxical embolism and infection can complicate cyanotic disease. Pregnancy counseling is essential because maternal risk is very high. Intravascular procedures require meticulous exclusion of air from lines when right-to-left passage is possible."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "PAH-CHD group",
+              "Distinguishing context"
+            ],
+            "rows": [
+              [
+                "Eisenmenger",
+                "Large causal shunt with advanced pulmonary vascular disease and reversal"
+              ],
+              [
+                "Prevalent systemic-to-pulmonary shunt",
+                "Predominantly left-to-right flow remains"
+              ],
+              [
+                "Small/coincidental defect",
+                "Defect insufficient to explain the pulmonary vascular disease"
+              ],
+              [
+                "After correction",
+                "PAH persists or develops after anatomical repair"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Small defects can coexist with a pulmonary arteriopathy resembling idiopathic PAH, without having caused the vascular disease. This patient instead has a large longstanding shunt, documented earlier overcirculation and subsequent reversal of its net direction."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "PAH may persist or emerge after surgical or catheter correction. That category requires a repaired defect; the supplied VSD remains open and is the route for desaturated systemic flow."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "That group retains predominant left-to-right flow, generally without resting cyanosis from shunt reversal. The current net Qp/Qs below one and arterial desaturation place this patient in the Eisenmenger group."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        },
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Recognize irreversible pulmonary vascular disease and unsafe defect closure"
+    },
+    {
+      "id": "cardiology-rebuild-12-027",
+      "topic": "Eisenmenger syndrome and cyanotic physiology",
+      "question": "A stable adult with Eisenmenger syndrome has hemoglobin 22 g/dL, hematocrit 68%, MCV 88 fL and ferritin 70 micrograms/L. Hydration is adequate, and there is no headache, visual disturbance or other hyperviscosity symptom. Which approach to the erythrocytosis is best?",
+      "options": [
+        "Start aspirin solely to counter the elevated red-cell mass",
+        "Perform isovolumic phlebotomy because hematocrit exceeds 65%",
+        "Schedule repeated phlebotomy to achieve the hematocrit target used in polycythemia vera",
+        "Maintain hydration and monitor without scheduled phlebotomy"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Compensated Secondary Erythrocytosis in Cyanotic CHD\n\nCorrect answer: Maintain hydration and monitor without scheduled phlebotomy\n\nOxygen Transport and Compensatory Red-Cell Mass\n\n**Chronic arterial desaturation stimulates erythropoiesis.** An increased hemoglobin concentration helps preserve oxygen content when the saturation of each hemoglobin molecule is reduced.\n\nThe hemoglobin value therefore requires interpretation with oxygen saturation, symptoms and iron status. A high value in this setting does not by itself establish a myeloproliferative neoplasm or a need to normalize the count.\n\nWhen Symptoms Change the Assessment\n\n**Persistent hyperviscosity is a clinical diagnosis after competing causes are considered.** Review hydration and iron indices before attributing fatigue, headache or dizziness to the hematocrit.\n\nThe current ACHD pathway considers phlebotomy for persistent symptoms with hematocrit above ==65%== despite adequate hydration and iron repletion. If selected, it requires experienced supervision with isovolumic replacement, not repeated unsupervised blood donation.\n\nNew severe headache, fever, focal neurological findings or altered consciousness requires urgent evaluation for causes such as stroke or brain abscess. It should not be labeled hyperviscosity from a blood count alone. Follow-up includes symptoms, saturation, full blood count and iron indices. Inappropriate repeated venesection can create iron deficiency even while the absolute hemoglobin remains above the usual laboratory reference interval.\n\nStart aspirin solely to counter the elevated red-cell mass: Antiplatelet therapy has established indications in atherosclerotic disease and selected hematological settings. Cyanotic erythrocytosis alone does not establish benefit, while abnormal hemostasis can increase bleeding risk.\n\nPerform isovolumic phlebotomy because hematocrit exceeds 65%: Expert isovolumic phlebotomy may be considered for persistent clinically important hyperviscosity after dehydration and iron deficiency are corrected. Exceeding a numerical threshold without symptoms does not supply that indication.\n\nSchedule repeated phlebotomy to achieve the hematocrit target used in polycythemia vera: Polycythemia vera is a clonal myeloproliferative disorder with a different thrombotic mechanism and treatment target. Applying its target to adaptive hypoxemic erythrocytosis can impair oxygen delivery and deplete iron.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Compensated Secondary Erythrocytosis in Cyanotic CHD</h2><p><strong>Correct answer: D — Maintain hydration and monitor without scheduled phlebotomy</strong></p><h3>Oxygen Transport and Compensatory Red-Cell Mass</h3><ul><li><strong>Chronic arterial desaturation stimulates erythropoiesis.</strong> An increased hemoglobin concentration helps preserve oxygen content when the saturation of each hemoglobin molecule is reduced.<ul><li>The hemoglobin value therefore requires interpretation with oxygen saturation, symptoms and iron status. A high value in this setting does not by itself establish a myeloproliferative neoplasm or a need to normalize the count.</li></ul></li></ul><h3>When Symptoms Change the Assessment</h3><ul><li><strong>Persistent hyperviscosity is a clinical diagnosis after competing causes are considered.</strong> Review hydration and iron indices before attributing fatigue, headache or dizziness to the hematocrit.<ul><li>The current ACHD pathway considers phlebotomy for persistent symptoms with hematocrit above <mark>65%</mark> despite adequate hydration and iron repletion. If selected, it requires experienced supervision with isovolumic replacement, not repeated unsupervised blood donation.</li><li>New severe headache, fever, focal neurological findings or altered consciousness requires urgent evaluation for causes such as stroke or brain abscess. It should not be labeled hyperviscosity from a blood count alone. Follow-up includes symptoms, saturation, full blood count and iron indices. Inappropriate repeated venesection can create iron deficiency even while the absolute hemoglobin remains above the usual laboratory reference interval.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Start aspirin solely to counter the elevated red-cell mass:</strong> Antiplatelet therapy has established indications in atherosclerotic disease and selected hematological settings. Cyanotic erythrocytosis alone does not establish benefit, while abnormal hemostasis can increase bleeding risk.</li><li><strong>B — Perform isovolumic phlebotomy because hematocrit exceeds 65%:</strong> Expert isovolumic phlebotomy may be considered for persistent clinically important hyperviscosity after dehydration and iron deficiency are corrected. Exceeding a numerical threshold without symptoms does not supply that indication.</li><li><strong>C — Schedule repeated phlebotomy to achieve the hematocrit target used in polycythemia vera:</strong> Polycythemia vera is a clonal myeloproliferative disorder with a different thrombotic mechanism and treatment target. Applying its target to adaptive hypoxemic erythrocytosis can impair oxygen delivery and deplete iron.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Compensated Secondary Erythrocytosis in Cyanotic CHD",
+        "sections": [
+          {
+            "heading": "Oxygen Transport and Compensatory Red-Cell Mass",
+            "bullets": [
+              {
+                "text": "**Chronic arterial desaturation stimulates erythropoiesis.** An increased hemoglobin concentration helps preserve oxygen content when the saturation of each hemoglobin molecule is reduced.",
+                "children": [
+                  "The hemoglobin value therefore requires interpretation with oxygen saturation, symptoms and iron status. A high value in this setting does not by itself establish a myeloproliferative neoplasm or a need to normalize the count."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "When Symptoms Change the Assessment",
+            "bullets": [
+              {
+                "text": "**Persistent hyperviscosity is a clinical diagnosis after competing causes are considered.** Review hydration and iron indices before attributing fatigue, headache or dizziness to the hematocrit.",
+                "children": [
+                  "The current ACHD pathway considers phlebotomy for persistent symptoms with hematocrit above ==65%== despite adequate hydration and iron repletion. If selected, it requires experienced supervision with isovolumic replacement, not repeated unsupervised blood donation.",
+                  "New severe headache, fever, focal neurological findings or altered consciousness requires urgent evaluation for causes such as stroke or brain abscess. It should not be labeled hyperviscosity from a blood count alone. Follow-up includes symptoms, saturation, full blood count and iron indices. Inappropriate repeated venesection can create iron deficiency even while the absolute hemoglobin remains above the usual laboratory reference interval."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Antiplatelet therapy has established indications in atherosclerotic disease and selected hematological settings. Cyanotic erythrocytosis alone does not establish benefit, while abnormal hemostasis can increase bleeding risk."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Expert isovolumic phlebotomy may be considered for persistent clinically important hyperviscosity after dehydration and iron deficiency are corrected. Exceeding a numerical threshold without symptoms does not supply that indication."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Polycythemia vera is a clonal myeloproliferative disorder with a different thrombotic mechanism and treatment target. Applying its target to adaptive hypoxemic erythrocytosis can impair oxygen delivery and deplete iron."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Distinguish adaptive erythrocytosis from an indication for phlebotomy"
+    },
+    {
+      "id": "cardiology-rebuild-12-028",
+      "topic": "Eisenmenger syndrome and cyanotic physiology",
+      "question": "A cyanotic adult has increasing fatigue, hemoglobin 19 g/dL, hematocrit 60%, MCV 66 fL, ferritin 7 micrograms/L and transferrin saturation 8%. There is no acute bleeding or hemodynamic deterioration. Which strategy best addresses the laboratory abnormality?",
+      "options": [
+        "Replace iron with monitored reassessment of blood count and iron indices",
+        "Withhold iron because the hemoglobin is already above the laboratory reference range",
+        "Perform venesection before giving iron to prevent a further hematocrit increase",
+        "Defer iron until a hemoglobinopathy panel explains the microcytosis"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Iron Deficiency Despite an Elevated Hemoglobin\n\nCorrect answer: Replace iron with monitored reassessment of blood count and iron indices\n\nRecognizing Relative Hematological Inadequacy\n\n**Laboratory reference ranges derived from noncyanotic adults can conceal iron deficiency in cyanotic CHD.** Interpret hemoglobin alongside saturation and iron studies rather than using a high hemoglobin to exclude deficiency.\n\nMicrocytosis supports the finding but is not a substitute for ferritin and transferrin saturation. Inflammatory states can complicate ferritin interpretation; the very low ferritin in this case is persuasive evidence of depleted stores.\n\nReplacement, Evidence and Monitoring\n\n**Correct the deficiency and investigate its source.** Review dietary intake, menstrual or gastrointestinal loss and prior phlebotomy. Route and dose depend on tolerability, severity and the specialist treatment plan.\n\nA small prospective cyanotic-CHD study used oral ferrous fumarate titrated up to ==200 mg== three times daily for three months. This is the mass of the iron salt, not ==200 mg== of elemental iron per dose, and is a study protocol rather than a mandatory starting regimen.\n\nThat study found improved iron stores, walking performance and reported quality of life; peak oxygen uptake did not significantly improve. Its uncontrolled design and mixed congenital population limit causal and survival claims. Recheck clinical response, hemoglobin and iron indices, and adjust replacement rather than withholding needed iron merely because erythropoiesis may increase. Persistent symptoms after correction require assessment for cardiac, pulmonary vascular and other systemic causes.\n\nWithhold iron because the hemoglobin is already above the laboratory reference range: A raised hemoglobin can be an appropriate response to hypoxemia. It does not exclude depleted stores; low ferritin and transferrin saturation provide direct evidence of iron deficiency here.\n\nPerform venesection before giving iron to prevent a further hematocrit increase: Venesection may have a narrow role in persistent symptomatic hyperviscosity after other factors are corrected. In this iron-deficient patient it would remove additional iron and red cells rather than address the demonstrated deficiency.\n\nDefer iron until a hemoglobinopathy panel explains the microcytosis: Thalassemia is a genuine cause of microcytosis and may coexist. However, the depleted iron indices already justify replacement and assessment of its cause; persistent unexplained microcytosis can subsequently prompt additional testing.\n\nProspective iron replacement in cyanotic CHD, Tay et al., 2011 — https://pubmed.ncbi.nlm.nih.gov/20580108/\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Iron Deficiency Despite an Elevated Hemoglobin</h2><p><strong>Correct answer: A — Replace iron with monitored reassessment of blood count and iron indices</strong></p><h3>Recognizing Relative Hematological Inadequacy</h3><ul><li><strong>Laboratory reference ranges derived from noncyanotic adults can conceal iron deficiency in cyanotic CHD.</strong> Interpret hemoglobin alongside saturation and iron studies rather than using a high hemoglobin to exclude deficiency.<ul><li>Microcytosis supports the finding but is not a substitute for ferritin and transferrin saturation. Inflammatory states can complicate ferritin interpretation; the very low ferritin in this case is persuasive evidence of depleted stores.</li></ul></li></ul><h3>Replacement, Evidence and Monitoring</h3><ul><li><strong>Correct the deficiency and investigate its source.</strong> Review dietary intake, menstrual or gastrointestinal loss and prior phlebotomy. Route and dose depend on tolerability, severity and the specialist treatment plan.<ul><li>A small prospective cyanotic-CHD study used oral ferrous fumarate titrated up to <mark>200 mg</mark> three times daily for three months. This is the mass of the iron salt, not <mark>200 mg</mark> of elemental iron per dose, and is a study protocol rather than a mandatory starting regimen.</li><li>That study found improved iron stores, walking performance and reported quality of life; peak oxygen uptake did not significantly improve. Its uncontrolled design and mixed congenital population limit causal and survival claims. Recheck clinical response, hemoglobin and iron indices, and adjust replacement rather than withholding needed iron merely because erythropoiesis may increase. Persistent symptoms after correction require assessment for cardiac, pulmonary vascular and other systemic causes.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Withhold iron because the hemoglobin is already above the laboratory reference range:</strong> A raised hemoglobin can be an appropriate response to hypoxemia. It does not exclude depleted stores; low ferritin and transferrin saturation provide direct evidence of iron deficiency here.</li><li><strong>C — Perform venesection before giving iron to prevent a further hematocrit increase:</strong> Venesection may have a narrow role in persistent symptomatic hyperviscosity after other factors are corrected. In this iron-deficient patient it would remove additional iron and red cells rather than address the demonstrated deficiency.</li><li><strong>D — Defer iron until a hemoglobinopathy panel explains the microcytosis:</strong> Thalassemia is a genuine cause of microcytosis and may coexist. However, the depleted iron indices already justify replacement and assessment of its cause; persistent unexplained microcytosis can subsequently prompt additional testing.</li></ul><h3>References</h3><ul><li><a href=\"https://pubmed.ncbi.nlm.nih.gov/20580108/\">Prospective iron replacement in cyanotic CHD, Tay et al., 2011</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Iron Deficiency Despite an Elevated Hemoglobin",
+        "sections": [
+          {
+            "heading": "Recognizing Relative Hematological Inadequacy",
+            "bullets": [
+              {
+                "text": "**Laboratory reference ranges derived from noncyanotic adults can conceal iron deficiency in cyanotic CHD.** Interpret hemoglobin alongside saturation and iron studies rather than using a high hemoglobin to exclude deficiency.",
+                "children": [
+                  "Microcytosis supports the finding but is not a substitute for ferritin and transferrin saturation. Inflammatory states can complicate ferritin interpretation; the very low ferritin in this case is persuasive evidence of depleted stores."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Replacement, Evidence and Monitoring",
+            "bullets": [
+              {
+                "text": "**Correct the deficiency and investigate its source.** Review dietary intake, menstrual or gastrointestinal loss and prior phlebotomy. Route and dose depend on tolerability, severity and the specialist treatment plan.",
+                "children": [
+                  "A small prospective cyanotic-CHD study used oral ferrous fumarate titrated up to ==200 mg== three times daily for three months. This is the mass of the iron salt, not ==200 mg== of elemental iron per dose, and is a study protocol rather than a mandatory starting regimen.",
+                  "That study found improved iron stores, walking performance and reported quality of life; peak oxygen uptake did not significantly improve. Its uncontrolled design and mixed congenital population limit causal and survival claims. Recheck clinical response, hemoglobin and iron indices, and adjust replacement rather than withholding needed iron merely because erythropoiesis may increase. Persistent symptoms after correction require assessment for cardiac, pulmonary vascular and other systemic causes."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "A raised hemoglobin can be an appropriate response to hypoxemia. It does not exclude depleted stores; low ferritin and transferrin saturation provide direct evidence of iron deficiency here."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Venesection may have a narrow role in persistent symptomatic hyperviscosity after other factors are corrected. In this iron-deficient patient it would remove additional iron and red cells rather than address the demonstrated deficiency."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Thalassemia is a genuine cause of microcytosis and may coexist. However, the depleted iron indices already justify replacement and assessment of its cause; persistent unexplained microcytosis can subsequently prompt additional testing."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "Prospective iron replacement in cyanotic CHD, Tay et al., 2011",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20580108/"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Assess iron deficiency and hyperviscosity symptoms in cyanotic disease"
+    },
+    {
+      "id": "cardiology-rebuild-12-029",
+      "topic": "Eisenmenger syndrome and cyanotic physiology",
+      "question": "Which statement correctly distinguishes randomized endothelin-receptor-antagonist evidence in Eisenmenger syndrome?",
+      "options": [
+        "BREATHE-5 established bosentan superiority over sildenafil in a direct randomized comparison",
+        "MAESTRO met its primary endpoint by improving six-minute walk distance over placebo",
+        "BREATHE-5 improved pulmonary vascular resistance without worsening systemic oxygen saturation",
+        "MAESTRO demonstrated lower mortality as its primary treatment effect"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "direct",
+      "calculation": false,
+      "explanation": "Interpreting Eisenmenger Endothelin-Antagonist Trials\n\nCorrect answer: BREATHE-5 improved pulmonary vascular resistance without worsening systemic oxygen saturation\n\nPopulation and Endpoint Matter\n\n**BREATHE-5 enrolled 54 WHO functional class III patients and compared bosentan with placebo for 16 weeks.** Oxygen saturation was the primary safety endpoint and pulmonary vascular resistance the primary efficacy endpoint.\n\nThe trial also found a favorable walking-distance effect. It supported treatment without the feared deterioration in systemic oxygenation; it was not a head-to-head trial or a mortality trial.\n\nMAESTRO enrolled 226 patients, included a more heterogeneous population and permitted selected background PAH treatment. Its negative primary exercise endpoint must remain explicit despite exploratory findings. Different populations and trial conduct prevent a simple indirect ranking of the two agents.\n\nApplying Treatment and Monitoring\n\n**Bosentan blocks both ETA and ETB receptors.** For an adult weighing more than 40 kg, the labeled oral regimen starts at ==62.5 mg== twice daily and increases after four weeks to ==125 mg== twice daily if appropriate.\n\nObtain aminotransferases before treatment and monthly thereafter; monitor hemoglobin, fluid retention and interactions. Pregnancy is contraindicated. Effective contraception is required during treatment and for one month after stopping, and bosentan can reduce hormonal contraceptive effectiveness.\n\nTherapy is selected and escalated by congenital and PAH specialists according to symptoms, functional assessment and response. ERA and PDE5-inhibitor strategies should not be judged from a false claim that every ERA trial was positive. Persistent deterioration warrants reassessment of the full physiology and specialist escalation rather than simply reproducing a regimen from an unrelated PAH population.\n\nTrial | Treatment / primary outcome interpretation\n\nBREATHE-5, 16 weeks | Bosentan: PVR benefit; systemic saturation safety preserved\n\nMAESTRO, 16 weeks | Macitentan: primary 6-minute walk superiority not demonstrated\n\nBREATHE-5 established bosentan superiority over sildenafil in a direct randomized comparison: BREATHE-5 compared bosentan with placebo. It did not randomize patients between an endothelin antagonist and a PDE5 inhibitor, so it cannot establish comparative superiority between those drug classes.\n\nMAESTRO met its primary endpoint by improving six-minute walk distance over placebo: MAESTRO studied macitentan in a broader Eisenmenger population, but did not show superiority for the primary six-minute walk endpoint. Exploratory biomarker and hemodynamic signals cannot be relabeled as a positive primary endpoint.\n\nMAESTRO demonstrated lower mortality as its primary treatment effect: MAESTRO assessed exercise capacity over 16 weeks, not a primary mortality endpoint. A short-term functional trial does not establish a survival benefit simply because its drug is used in PAH.\n\nBosentan in Eisenmenger syndrome: BREATHE-5 randomized trial, 2006 — https://pubmed.ncbi.nlm.nih.gov/16801459/\n\nMacitentan in Eisenmenger syndrome: MAESTRO randomized trial, 2019 — https://pmc.ncbi.nlm.nih.gov/articles/PMC6314514/\n\nBosentan FDA prescribing information, revised November 2025 — https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021290s048%2C209279s015lbl.pdf\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006",
+      "explanationHtml": "<h2>Interpreting Eisenmenger Endothelin-Antagonist Trials</h2><p><strong>Correct answer: C — BREATHE-5 improved pulmonary vascular resistance without worsening systemic oxygen saturation</strong></p><h3>Population and Endpoint Matter</h3><ul><li><strong>BREATHE-5 enrolled 54 WHO functional class III patients and compared bosentan with placebo for 16 weeks.</strong> Oxygen saturation was the primary safety endpoint and pulmonary vascular resistance the primary efficacy endpoint.<ul><li>The trial also found a favorable walking-distance effect. It supported treatment without the feared deterioration in systemic oxygenation; it was not a head-to-head trial or a mortality trial.</li><li>MAESTRO enrolled 226 patients, included a more heterogeneous population and permitted selected background PAH treatment. Its negative primary exercise endpoint must remain explicit despite exploratory findings. Different populations and trial conduct prevent a simple indirect ranking of the two agents.</li></ul></li></ul><h3>Applying Treatment and Monitoring</h3><ul><li><strong>Bosentan blocks both ETA and ETB receptors.</strong> For an adult weighing more than 40 kg, the labeled oral regimen starts at <mark>62.5 mg</mark> twice daily and increases after four weeks to <mark>125 mg</mark> twice daily if appropriate.<ul><li>Obtain aminotransferases before treatment and monthly thereafter; monitor hemoglobin, fluid retention and interactions. Pregnancy is contraindicated. Effective contraception is required during treatment and for one month after stopping, and bosentan can reduce hormonal contraceptive effectiveness.</li><li>Therapy is selected and escalated by congenital and PAH specialists according to symptoms, functional assessment and response. ERA and PDE5-inhibitor strategies should not be judged from a false claim that every ERA trial was positive. Persistent deterioration warrants reassessment of the full physiology and specialist escalation rather than simply reproducing a regimen from an unrelated PAH population.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Trial</th><th>Treatment / primary outcome interpretation</th></tr></thead><tbody><tr><td>BREATHE-5, 16 weeks</td><td>Bosentan: PVR benefit; systemic saturation safety preserved</td></tr><tr><td>MAESTRO, 16 weeks</td><td>Macitentan: primary 6-minute walk superiority not demonstrated</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — BREATHE-5 established bosentan superiority over sildenafil in a direct randomized comparison:</strong> BREATHE-5 compared bosentan with placebo. It did not randomize patients between an endothelin antagonist and a PDE5 inhibitor, so it cannot establish comparative superiority between those drug classes.</li><li><strong>B — MAESTRO met its primary endpoint by improving six-minute walk distance over placebo:</strong> MAESTRO studied macitentan in a broader Eisenmenger population, but did not show superiority for the primary six-minute walk endpoint. Exploratory biomarker and hemodynamic signals cannot be relabeled as a positive primary endpoint.</li><li><strong>D — MAESTRO demonstrated lower mortality as its primary treatment effect:</strong> MAESTRO assessed exercise capacity over 16 weeks, not a primary mortality endpoint. A short-term functional trial does not establish a survival benefit simply because its drug is used in PAH.</li></ul><h3>References</h3><ul><li><a href=\"https://pubmed.ncbi.nlm.nih.gov/16801459/\">Bosentan in Eisenmenger syndrome: BREATHE-5 randomized trial, 2006</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC6314514/\">Macitentan in Eisenmenger syndrome: MAESTRO randomized trial, 2019</a></li><li><a href=\"https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021290s048%2C209279s015lbl.pdf\">Bosentan FDA prescribing information, revised November 2025</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Interpreting Eisenmenger Endothelin-Antagonist Trials",
+        "sections": [
+          {
+            "heading": "Population and Endpoint Matter",
+            "bullets": [
+              {
+                "text": "**BREATHE-5 enrolled 54 WHO functional class III patients and compared bosentan with placebo for 16 weeks.** Oxygen saturation was the primary safety endpoint and pulmonary vascular resistance the primary efficacy endpoint.",
+                "children": [
+                  "The trial also found a favorable walking-distance effect. It supported treatment without the feared deterioration in systemic oxygenation; it was not a head-to-head trial or a mortality trial.",
+                  "MAESTRO enrolled 226 patients, included a more heterogeneous population and permitted selected background PAH treatment. Its negative primary exercise endpoint must remain explicit despite exploratory findings. Different populations and trial conduct prevent a simple indirect ranking of the two agents."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Applying Treatment and Monitoring",
+            "bullets": [
+              {
+                "text": "**Bosentan blocks both ETA and ETB receptors.** For an adult weighing more than 40 kg, the labeled oral regimen starts at ==62.5 mg== twice daily and increases after four weeks to ==125 mg== twice daily if appropriate.",
+                "children": [
+                  "Obtain aminotransferases before treatment and monthly thereafter; monitor hemoglobin, fluid retention and interactions. Pregnancy is contraindicated. Effective contraception is required during treatment and for one month after stopping, and bosentan can reduce hormonal contraceptive effectiveness.",
+                  "Therapy is selected and escalated by congenital and PAH specialists according to symptoms, functional assessment and response. ERA and PDE5-inhibitor strategies should not be judged from a false claim that every ERA trial was positive. Persistent deterioration warrants reassessment of the full physiology and specialist escalation rather than simply reproducing a regimen from an unrelated PAH population."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "Trial",
+              "Treatment / primary outcome interpretation"
+            ],
+            "rows": [
+              [
+                "BREATHE-5, 16 weeks",
+                "Bosentan: PVR benefit; systemic saturation safety preserved"
+              ],
+              [
+                "MAESTRO, 16 weeks",
+                "Macitentan: primary 6-minute walk superiority not demonstrated"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "BREATHE-5 compared bosentan with placebo. It did not randomize patients between an endothelin antagonist and a PDE5 inhibitor, so it cannot establish comparative superiority between those drug classes."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "MAESTRO studied macitentan in a broader Eisenmenger population, but did not show superiority for the primary six-minute walk endpoint. Exploratory biomarker and hemodynamic signals cannot be relabeled as a positive primary endpoint."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "MAESTRO assessed exercise capacity over 16 weeks, not a primary mortality endpoint. A short-term functional trial does not establish a survival benefit simply because its drug is used in PAH."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "Bosentan in Eisenmenger syndrome: BREATHE-5 randomized trial, 2006",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16801459/"
+        },
+        {
+          "label": "Macitentan in Eisenmenger syndrome: MAESTRO randomized trial, 2019",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6314514/"
+        },
+        {
+          "label": "Bosentan FDA prescribing information, revised November 2025",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021290s048%2C209279s015lbl.pdf"
+        },
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Select and monitor appropriate PAH-directed treatment using the relevant evidence"
+    },
+    {
+      "id": "cardiology-rebuild-12-030",
+      "topic": "Eisenmenger syndrome and cyanotic physiology",
+      "question": "An adult with Eisenmenger syndrome is in sinus rhythm, has no prior venous thromboembolism, no intracardiac thrombus and no mechanical valve. There have been intermittent minor hemoptysis episodes. Which long-term antithrombotic strategy is most appropriate solely for the Eisenmenger diagnosis?",
+      "options": [
+        "Start a vitamin K antagonist to prevent pulmonary vascular thrombosis",
+        "Do not prescribe routine oral anticoagulation; reassess if a separate indication develops",
+        "Start a direct oral anticoagulant because it avoids INR monitoring",
+        "Use aspirin as a lower-intensity substitute for preventive anticoagulation"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Antithrombotic Decisions in Eisenmenger Syndrome\n\nCorrect answer: Do not prescribe routine oral anticoagulation; reassess if a separate indication develops\n\nSimultaneous Thrombotic and Hemorrhagic Risk\n\n**Cyanotic CHD can produce both thrombosis and bleeding.** Altered platelet number or function and coagulation abnormalities coexist with vascular dilation, stasis and possible thrombus formation.\n\nAn elevated hematocrit does not mean that all clinical risk is thrombotic or that antithrombotic treatment will improve outcomes. The presence, location and likely age of any detected thrombus matter; organized in-situ pulmonary arterial thrombus is not automatically equivalent to a new embolic event.\n\nSeparate Indications and Bleeding Assessment\n\n**Current ACHD guidance advises against routine oral anticoagulation for Eisenmenger syndrome alone.** Reconsider treatment if atrial arrhythmia, documented thromboembolism, a mechanical prosthesis or another independent indication appears.\n\nEven with an indication, review bleeding history, platelet count, renal and hepatic function, concurrent drugs and the proposed agent with experienced clinicians. A mechanical valve has a specific vitamin K antagonist requirement; one should not substitute a DOAC merely to simplify follow-up.\n\nActive significant hemoptysis requires urgent clinical assessment and stabilization, with investigation of its cause and specialist decisions about antithrombotic interruption or reversal when relevant. Recurrent minor bleeding also deserves evaluation. If warfarin is used, a markedly high hematocrit requires the laboratory to consider citrate adjustment for coagulation sampling, because standard sampling can distort results. The decision is driven by the actual competing risks rather than a universal procoagulant label.\n\nStart a vitamin K antagonist to prevent pulmonary vascular thrombosis: A vitamin K antagonist may be appropriate for a separate established indication after individualized assessment. Eisenmenger physiology alone has not shown a preventive survival benefit sufficient to offset its bleeding risk.\n\nStart a direct oral anticoagulant because it avoids INR monitoring: Convenience does not create an anticoagulation indication. A DOAC requires an appropriate thromboembolic indication, consideration of the congenital phenotype, renal function and bleeding risk; none is established by the supplied history alone.\n\nUse aspirin as a lower-intensity substitute for preventive anticoagulation: Aspirin has distinct arterial indications but is not a proven substitute for routine thromboprophylaxis in cyanotic CHD. It can also worsen bleeding, including in a patient with hemoptysis.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Antithrombotic Decisions in Eisenmenger Syndrome</h2><p><strong>Correct answer: B — Do not prescribe routine oral anticoagulation; reassess if a separate indication develops</strong></p><h3>Simultaneous Thrombotic and Hemorrhagic Risk</h3><ul><li><strong>Cyanotic CHD can produce both thrombosis and bleeding.</strong> Altered platelet number or function and coagulation abnormalities coexist with vascular dilation, stasis and possible thrombus formation.<ul><li>An elevated hematocrit does not mean that all clinical risk is thrombotic or that antithrombotic treatment will improve outcomes. The presence, location and likely age of any detected thrombus matter; organized in-situ pulmonary arterial thrombus is not automatically equivalent to a new embolic event.</li></ul></li></ul><h3>Separate Indications and Bleeding Assessment</h3><ul><li><strong>Current ACHD guidance advises against routine oral anticoagulation for Eisenmenger syndrome alone.</strong> Reconsider treatment if atrial arrhythmia, documented thromboembolism, a mechanical prosthesis or another independent indication appears.<ul><li>Even with an indication, review bleeding history, platelet count, renal and hepatic function, concurrent drugs and the proposed agent with experienced clinicians. A mechanical valve has a specific vitamin K antagonist requirement; one should not substitute a DOAC merely to simplify follow-up.</li><li>Active significant hemoptysis requires urgent clinical assessment and stabilization, with investigation of its cause and specialist decisions about antithrombotic interruption or reversal when relevant. Recurrent minor bleeding also deserves evaluation. If warfarin is used, a markedly high hematocrit requires the laboratory to consider citrate adjustment for coagulation sampling, because standard sampling can distort results. The decision is driven by the actual competing risks rather than a universal procoagulant label.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Start a vitamin K antagonist to prevent pulmonary vascular thrombosis:</strong> A vitamin K antagonist may be appropriate for a separate established indication after individualized assessment. Eisenmenger physiology alone has not shown a preventive survival benefit sufficient to offset its bleeding risk.</li><li><strong>C — Start a direct oral anticoagulant because it avoids INR monitoring:</strong> Convenience does not create an anticoagulation indication. A DOAC requires an appropriate thromboembolic indication, consideration of the congenital phenotype, renal function and bleeding risk; none is established by the supplied history alone.</li><li><strong>D — Use aspirin as a lower-intensity substitute for preventive anticoagulation:</strong> Aspirin has distinct arterial indications but is not a proven substitute for routine thromboprophylaxis in cyanotic CHD. It can also worsen bleeding, including in a patient with hemoptysis.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Antithrombotic Decisions in Eisenmenger Syndrome",
+        "sections": [
+          {
+            "heading": "Simultaneous Thrombotic and Hemorrhagic Risk",
+            "bullets": [
+              {
+                "text": "**Cyanotic CHD can produce both thrombosis and bleeding.** Altered platelet number or function and coagulation abnormalities coexist with vascular dilation, stasis and possible thrombus formation.",
+                "children": [
+                  "An elevated hematocrit does not mean that all clinical risk is thrombotic or that antithrombotic treatment will improve outcomes. The presence, location and likely age of any detected thrombus matter; organized in-situ pulmonary arterial thrombus is not automatically equivalent to a new embolic event."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Separate Indications and Bleeding Assessment",
+            "bullets": [
+              {
+                "text": "**Current ACHD guidance advises against routine oral anticoagulation for Eisenmenger syndrome alone.** Reconsider treatment if atrial arrhythmia, documented thromboembolism, a mechanical prosthesis or another independent indication appears.",
+                "children": [
+                  "Even with an indication, review bleeding history, platelet count, renal and hepatic function, concurrent drugs and the proposed agent with experienced clinicians. A mechanical valve has a specific vitamin K antagonist requirement; one should not substitute a DOAC merely to simplify follow-up.",
+                  "Active significant hemoptysis requires urgent clinical assessment and stabilization, with investigation of its cause and specialist decisions about antithrombotic interruption or reversal when relevant. Recurrent minor bleeding also deserves evaluation. If warfarin is used, a markedly high hematocrit requires the laboratory to consider citrate adjustment for coagulation sampling, because standard sampling can distort results. The decision is driven by the actual competing risks rather than a universal procoagulant label."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "A vitamin K antagonist may be appropriate for a separate established indication after individualized assessment. Eisenmenger physiology alone has not shown a preventive survival benefit sufficient to offset its bleeding risk."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Convenience does not create an anticoagulation indication. A DOAC requires an appropriate thromboembolic indication, consideration of the congenital phenotype, renal function and bleeding risk; none is established by the supplied history alone."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Aspirin has distinct arterial indications but is not a proven substitute for routine thromboprophylaxis in cyanotic CHD. It can also worsen bleeding, including in a patient with hemoptysis."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Assess hemoptysis thrombosis and anticoagulation without routine blanket treatment"
+    },
+    {
+      "id": "cardiology-rebuild-12-031",
+      "topic": "Ebstein anomaly",
+      "question": "A 25-year-old with severe tricuspid regurgitation has a septal tricuspid leaflet hinge point 18 mm apical to the anterior mitral leaflet insertion in the four-chamber view. Body surface area is 1.8 m². Which structural diagnosis is best supported?",
+      "options": [
+        "Isolated tricuspid valve dysplasia without Ebstein displacement",
+        "Ebstein anomaly",
+        "Atrial functional tricuspid regurgitation",
+        "Ventricular functional tricuspid regurgitation"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Indexed Tricuspid Displacement and Ebstein Anatomy\n\nCorrect answer: Ebstein anomaly\n\nMeasurement and Functional Anatomy\n\n**Index the septal leaflet displacement to body surface area.** Here 18/1.8 = ==10 mm==/m²; an adult displacement of at least ==8 mm==/m² supports Ebstein anomaly in the appropriate imaging context.\n\nMeasure the septal tricuspid hinge relative to the anterior mitral insertion in a suitable four-chamber view. A raw millimeter threshold without body-size indexing is not equivalent. Confirm leaflet morphology and attachment rather than inferring the diagnosis from regurgitation severity alone.\n\nThe displaced valve divides the morphological RV into an atrialized proximal segment and a smaller functional distal RV. The right atrium can become markedly enlarged. Functional output depends on both valve competence and the remaining RV, not simply on the total apparent right-sided chamber size.\n\nAssociated Findings and Management Assessment\n\n**Evaluate atrial communication, cyanosis and accessory pathways.** Elevated right atrial pressure can drive right-to-left passage through a PFO or ASD, while accessory pathways can cause reentrant tachycardia.\n\nEchocardiography defines valve anatomy and flow; CMR helps quantify functional RV anatomy and systolic performance when needed. Serial symptoms, objective exercise capacity, regurgitation and ventricular response guide specialist repair assessment.\n\nCone reconstruction is an established valve-preserving approach in suitable anatomy. Severe regurgitation with symptoms or progressive ventricular consequences merits congenital surgical review. An atrial communication should not be closed in isolation without considering whether the right ventricle tolerates the additional filling load.\n\nIsolated tricuspid valve dysplasia without Ebstein displacement: Congenital dysplasia can cause severe regurgitation with thickened or poorly mobile leaflets. The supplied indexed apical displacement is 10 mm/m², supporting an Ebstein-type displaced attachment rather than an isolated normally inserted dysplastic valve.\n\nAtrial functional tricuspid regurgitation: Right atrial and annular dilation can cause functional regurgitation, often with atrial fibrillation. It does not explain marked congenital apical displacement of the septal leaflet attachment.\n\nVentricular functional tricuspid regurgitation: RV remodeling and papillary displacement can tether leaflets and produce secondary regurgitation. Tethering of a normally attached valve should be distinguished from the measured apical hinge-point displacement of Ebstein anatomy.\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nCanadian Cardiovascular Society ACHD intervention guideline, 2022 — https://www.cachnet.org/wp-content/uploads/2023/11/CCS-2022-ACHD-Guideline.pdf",
+      "explanationHtml": "<h2>Indexed Tricuspid Displacement and Ebstein Anatomy</h2><p><strong>Correct answer: B — Ebstein anomaly</strong></p><h3>Measurement and Functional Anatomy</h3><ul><li><strong>Index the septal leaflet displacement to body surface area.</strong> Here 18/1.8 = <mark>10 mm</mark>/m²; an adult displacement of at least <mark>8 mm</mark>/m² supports Ebstein anomaly in the appropriate imaging context.<ul><li>Measure the septal tricuspid hinge relative to the anterior mitral insertion in a suitable four-chamber view. A raw millimeter threshold without body-size indexing is not equivalent. Confirm leaflet morphology and attachment rather than inferring the diagnosis from regurgitation severity alone.</li><li>The displaced valve divides the morphological RV into an atrialized proximal segment and a smaller functional distal RV. The right atrium can become markedly enlarged. Functional output depends on both valve competence and the remaining RV, not simply on the total apparent right-sided chamber size.</li></ul></li></ul><h3>Associated Findings and Management Assessment</h3><ul><li><strong>Evaluate atrial communication, cyanosis and accessory pathways.</strong> Elevated right atrial pressure can drive right-to-left passage through a PFO or ASD, while accessory pathways can cause reentrant tachycardia.<ul><li>Echocardiography defines valve anatomy and flow; CMR helps quantify functional RV anatomy and systolic performance when needed. Serial symptoms, objective exercise capacity, regurgitation and ventricular response guide specialist repair assessment.</li><li>Cone reconstruction is an established valve-preserving approach in suitable anatomy. Severe regurgitation with symptoms or progressive ventricular consequences merits congenital surgical review. An atrial communication should not be closed in isolation without considering whether the right ventricle tolerates the additional filling load.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Isolated tricuspid valve dysplasia without Ebstein displacement:</strong> Congenital dysplasia can cause severe regurgitation with thickened or poorly mobile leaflets. The supplied indexed apical displacement is 10 mm/m², supporting an Ebstein-type displaced attachment rather than an isolated normally inserted dysplastic valve.</li><li><strong>C — Atrial functional tricuspid regurgitation:</strong> Right atrial and annular dilation can cause functional regurgitation, often with atrial fibrillation. It does not explain marked congenital apical displacement of the septal leaflet attachment.</li><li><strong>D — Ventricular functional tricuspid regurgitation:</strong> RV remodeling and papillary displacement can tether leaflets and produce secondary regurgitation. Tethering of a normally attached valve should be distinguished from the measured apical hinge-point displacement of Ebstein anatomy.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://www.cachnet.org/wp-content/uploads/2023/11/CCS-2022-ACHD-Guideline.pdf\">Canadian Cardiovascular Society ACHD intervention guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Indexed Tricuspid Displacement and Ebstein Anatomy",
+        "sections": [
+          {
+            "heading": "Measurement and Functional Anatomy",
+            "bullets": [
+              {
+                "text": "**Index the septal leaflet displacement to body surface area.** Here 18/1.8 = ==10 mm==/m²; an adult displacement of at least ==8 mm==/m² supports Ebstein anomaly in the appropriate imaging context.",
+                "children": [
+                  "Measure the septal tricuspid hinge relative to the anterior mitral insertion in a suitable four-chamber view. A raw millimeter threshold without body-size indexing is not equivalent. Confirm leaflet morphology and attachment rather than inferring the diagnosis from regurgitation severity alone.",
+                  "The displaced valve divides the morphological RV into an atrialized proximal segment and a smaller functional distal RV. The right atrium can become markedly enlarged. Functional output depends on both valve competence and the remaining RV, not simply on the total apparent right-sided chamber size."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Associated Findings and Management Assessment",
+            "bullets": [
+              {
+                "text": "**Evaluate atrial communication, cyanosis and accessory pathways.** Elevated right atrial pressure can drive right-to-left passage through a PFO or ASD, while accessory pathways can cause reentrant tachycardia.",
+                "children": [
+                  "Echocardiography defines valve anatomy and flow; CMR helps quantify functional RV anatomy and systolic performance when needed. Serial symptoms, objective exercise capacity, regurgitation and ventricular response guide specialist repair assessment.",
+                  "Cone reconstruction is an established valve-preserving approach in suitable anatomy. Severe regurgitation with symptoms or progressive ventricular consequences merits congenital surgical review. An atrial communication should not be closed in isolation without considering whether the right ventricle tolerates the additional filling load."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Congenital dysplasia can cause severe regurgitation with thickened or poorly mobile leaflets. The supplied indexed apical displacement is 10 mm/m², supporting an Ebstein-type displaced attachment rather than an isolated normally inserted dysplastic valve."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Right atrial and annular dilation can cause functional regurgitation, often with atrial fibrillation. It does not explain marked congenital apical displacement of the septal leaflet attachment."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "RV remodeling and papillary displacement can tether leaflets and produce secondary regurgitation. Tethering of a normally attached valve should be distinguished from the measured apical hinge-point displacement of Ebstein anatomy."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        },
+        {
+          "label": "Canadian Cardiovascular Society ACHD intervention guideline, 2022",
+          "url": "https://www.cachnet.org/wp-content/uploads/2023/11/CCS-2022-ACHD-Guideline.pdf"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Interpret indexed tricuspid displacement and atrialized RV anatomy"
+    },
+    {
+      "id": "cardiology-rebuild-12-032",
+      "topic": "Ebstein anomaly",
+      "question": "An adult with Ebstein anomaly is being assessed for tricuspid valve surgery. The ECG shows ventricular pre-excitation, although the patient reports no sustained palpitation. Which additional step is best supported before the operation?",
+      "options": [
+        "Begin an AV-nodal blocking drug as definitive management of the pre-excitation",
+        "Ambulatory monitoring alone, reserving pathway assessment for documented sustained tachycardia",
+        "Proceed with valve repair and defer pathway assessment until after surgery",
+        "Expert electrophysiological study to assess accessory pathways and potential ablation"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Accessory-Pathway Assessment Before Tricuspid Repair\n\nCorrect answer: Expert electrophysiological study to assess accessory pathways and potential ablation\n\nRisk Beyond Symptom Frequency\n\n**Ebstein anomaly is associated with accessory atrioventricular pathways, sometimes multiple.** A patient can have clinically important antegrade conduction without a reliable history of sustained palpitations.\n\nThe pathway can support AV reentrant tachycardia. During atrial fibrillation, rapid antegrade conduction over a high-risk pathway can produce dangerous ventricular rates. A resting tracing identifies pre-excitation but does not provide the complete risk assessment.\n\nSequence Assessment With Valve Treatment\n\n**The 2025 ACHD guideline recommends EP study for symptomatic arrhythmia or asymptomatic ventricular pre-excitation in Ebstein anomaly.** The aim is to identify substrates suitable for ablation, including multiple or high-risk pathways.\n\nHigh-risk accessory conduction or multiple pathways supports ablation. Before tricuspid surgery, an expert EP approach is useful because repair can make later access to pathways and other arrhythmia substrates more difficult. The precise ablation plan is based on mapping and conduction properties, not on an assumption that every delta wave has identical risk.\n\nAcute management still depends on rhythm and stability. Hemodynamic instability warrants synchronized cardioversion; irregular pre-excited tachycardia should not be treated with isolated AV-nodal blockade. Long-term successful pathway ablation does not correct severe tricuspid regurgitation, so structural and electrical treatment remain coordinated parts of the same care plan.\n\nBegin an AV-nodal blocking drug as definitive management of the pre-excitation: AV-nodal blockers treat selected regular supraventricular rhythms but do not eliminate an accessory pathway. They can be hazardous in pre-excited AF, where conduction over the pathway may accelerate ventricular activation.\n\nAmbulatory monitoring alone, reserving pathway assessment for documented sustained tachycardia: Ambulatory monitoring can document intermittent arrhythmia but does not reliably define antegrade accessory-pathway risk or exclude multiple pathways. Current guidance supports EP assessment for asymptomatic pre-excitation in Ebstein anomaly.\n\nProceed with valve repair and defer pathway assessment until after surgery: Valve surgery may alter or impede catheter access to relevant right-sided substrates. The absence of reported sustained tachycardia does not remove the rationale for assessing manifest pre-excitation before repair.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Accessory-Pathway Assessment Before Tricuspid Repair</h2><p><strong>Correct answer: D — Expert electrophysiological study to assess accessory pathways and potential ablation</strong></p><h3>Risk Beyond Symptom Frequency</h3><ul><li><strong>Ebstein anomaly is associated with accessory atrioventricular pathways, sometimes multiple.</strong> A patient can have clinically important antegrade conduction without a reliable history of sustained palpitations.<ul><li>The pathway can support AV reentrant tachycardia. During atrial fibrillation, rapid antegrade conduction over a high-risk pathway can produce dangerous ventricular rates. A resting tracing identifies pre-excitation but does not provide the complete risk assessment.</li></ul></li></ul><h3>Sequence Assessment With Valve Treatment</h3><ul><li><strong>The 2025 ACHD guideline recommends EP study for symptomatic arrhythmia or asymptomatic ventricular pre-excitation in Ebstein anomaly.</strong> The aim is to identify substrates suitable for ablation, including multiple or high-risk pathways.<ul><li>High-risk accessory conduction or multiple pathways supports ablation. Before tricuspid surgery, an expert EP approach is useful because repair can make later access to pathways and other arrhythmia substrates more difficult. The precise ablation plan is based on mapping and conduction properties, not on an assumption that every delta wave has identical risk.</li><li>Acute management still depends on rhythm and stability. Hemodynamic instability warrants synchronized cardioversion; irregular pre-excited tachycardia should not be treated with isolated AV-nodal blockade. Long-term successful pathway ablation does not correct severe tricuspid regurgitation, so structural and electrical treatment remain coordinated parts of the same care plan.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Begin an AV-nodal blocking drug as definitive management of the pre-excitation:</strong> AV-nodal blockers treat selected regular supraventricular rhythms but do not eliminate an accessory pathway. They can be hazardous in pre-excited AF, where conduction over the pathway may accelerate ventricular activation.</li><li><strong>B — Ambulatory monitoring alone, reserving pathway assessment for documented sustained tachycardia:</strong> Ambulatory monitoring can document intermittent arrhythmia but does not reliably define antegrade accessory-pathway risk or exclude multiple pathways. Current guidance supports EP assessment for asymptomatic pre-excitation in Ebstein anomaly.</li><li><strong>C — Proceed with valve repair and defer pathway assessment until after surgery:</strong> Valve surgery may alter or impede catheter access to relevant right-sided substrates. The absence of reported sustained tachycardia does not remove the rationale for assessing manifest pre-excitation before repair.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Accessory-Pathway Assessment Before Tricuspid Repair",
+        "sections": [
+          {
+            "heading": "Risk Beyond Symptom Frequency",
+            "bullets": [
+              {
+                "text": "**Ebstein anomaly is associated with accessory atrioventricular pathways, sometimes multiple.** A patient can have clinically important antegrade conduction without a reliable history of sustained palpitations.",
+                "children": [
+                  "The pathway can support AV reentrant tachycardia. During atrial fibrillation, rapid antegrade conduction over a high-risk pathway can produce dangerous ventricular rates. A resting tracing identifies pre-excitation but does not provide the complete risk assessment."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Sequence Assessment With Valve Treatment",
+            "bullets": [
+              {
+                "text": "**The 2025 ACHD guideline recommends EP study for symptomatic arrhythmia or asymptomatic ventricular pre-excitation in Ebstein anomaly.** The aim is to identify substrates suitable for ablation, including multiple or high-risk pathways.",
+                "children": [
+                  "High-risk accessory conduction or multiple pathways supports ablation. Before tricuspid surgery, an expert EP approach is useful because repair can make later access to pathways and other arrhythmia substrates more difficult. The precise ablation plan is based on mapping and conduction properties, not on an assumption that every delta wave has identical risk.",
+                  "Acute management still depends on rhythm and stability. Hemodynamic instability warrants synchronized cardioversion; irregular pre-excited tachycardia should not be treated with isolated AV-nodal blockade. Long-term successful pathway ablation does not correct severe tricuspid regurgitation, so structural and electrical treatment remain coordinated parts of the same care plan."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "AV-nodal blockers treat selected regular supraventricular rhythms but do not eliminate an accessory pathway. They can be hazardous in pre-excited AF, where conduction over the pathway may accelerate ventricular activation."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Ambulatory monitoring can document intermittent arrhythmia but does not reliably define antegrade accessory-pathway risk or exclude multiple pathways. Current guidance supports EP assessment for asymptomatic pre-excitation in Ebstein anomaly."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Valve surgery may alter or impede catheter access to relevant right-sided substrates. The absence of reported sustained tachycardia does not remove the rationale for assessing manifest pre-excitation before repair."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Recognize the relevance of accessory pathways and arrhythmia assessment"
+    },
+    {
+      "id": "cardiology-rebuild-12-033",
+      "topic": "Transposition and systemic right ventricle",
+      "question": "A 38-year-old underwent a Senning operation for d-TGA. Resting saturation is 96%, falling reproducibly to 84% on exercise. Systemic RV function is unchanged, with no important new valve regurgitation or pulmonary disease. Which residual lesion should be specifically sought?",
+      "options": [
+        "A baffle leak allowing systemic venous blood to reach the systemic arterial circuit",
+        "Isolated systemic venous baffle stenosis without a leak",
+        "Isolated systemic tricuspid regurgitation without a shunt",
+        "Isolated chronotropic incompetence from sinus-node dysfunction"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Exertional Desaturation After an Atrial Switch\n\nCorrect answer: A baffle leak allowing systemic venous blood to reach the systemic arterial circuit\n\nFollow the Surgically Redirected Blood\n\n**Mustard and Senning procedures redirect venous return within the atria.** The morphological RV still pumps to the aorta, and the morphological LV remains subpulmonary.\n\nThe systemic venous baffle normally channels caval blood toward the mitral valve and LV. A leak can permit desaturated systemic venous blood to enter the pulmonary venous atrium, then the systemic RV and aorta. Pressure relationships during exercise can make desaturation more evident than at rest.\n\nImaging and Intervention Assessment\n\n**Define both baffle integrity and patency.** Contrast echocardiography, CMR and selected transesophageal or catheter assessment answer complementary questions about communication, obstruction and flow.\n\nAn arm injection can miss an inferior systemic venous baffle leak; injection site should match the anatomy being interrogated. CMR also assesses systemic RV volumes, function and associated lesions. A negative limited study should not be treated as proof that every baffle segment is normal.\n\nA symptomatic leak requires congenital specialist assessment for closure when appropriate, with evaluation of the hemodynamic consequences. Before transvenous device leads, assess leaks and obstruction because systemic embolic risk and venous access issues may alter the procedure. Lifelong review also looks for systemic RV failure, systemic tricuspid regurgitation, atrial tachyarrhythmia and sinus-node disease.\n\nIsolated systemic venous baffle stenosis without a leak: Baffle stenosis can restrict preload, cause venous congestion and reduce exercise output. Without a communication or another source of admixture, obstruction alone does not directly explain systemic arterial desaturation.\n\nIsolated systemic tricuspid regurgitation without a shunt: Systemic AV-valve regurgitation contributes to systemic RV failure and exercise intolerance. It does not directly mix desaturated venous blood into the arterial circuit, and no important new regurgitation is present here.\n\nIsolated chronotropic incompetence from sinus-node dysfunction: Sinus-node dysfunction is common after atrial switch and can limit cardiac output during exercise. It usually produces an inadequate heart-rate response rather than a reproducible arterial oxygen-saturation fall of this magnitude.\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nAHA statement: cardiopulmonary exercise testing in congenital heart disease, 2025 — https://pmc.ncbi.nlm.nih.gov/articles/PMC12074744/",
+      "explanationHtml": "<h2>Exertional Desaturation After an Atrial Switch</h2><p><strong>Correct answer: A — A baffle leak allowing systemic venous blood to reach the systemic arterial circuit</strong></p><h3>Follow the Surgically Redirected Blood</h3><ul><li><strong>Mustard and Senning procedures redirect venous return within the atria.</strong> The morphological RV still pumps to the aorta, and the morphological LV remains subpulmonary.<ul><li>The systemic venous baffle normally channels caval blood toward the mitral valve and LV. A leak can permit desaturated systemic venous blood to enter the pulmonary venous atrium, then the systemic RV and aorta. Pressure relationships during exercise can make desaturation more evident than at rest.</li></ul></li></ul><h3>Imaging and Intervention Assessment</h3><ul><li><strong>Define both baffle integrity and patency.</strong> Contrast echocardiography, CMR and selected transesophageal or catheter assessment answer complementary questions about communication, obstruction and flow.<ul><li>An arm injection can miss an inferior systemic venous baffle leak; injection site should match the anatomy being interrogated. CMR also assesses systemic RV volumes, function and associated lesions. A negative limited study should not be treated as proof that every baffle segment is normal.</li><li>A symptomatic leak requires congenital specialist assessment for closure when appropriate, with evaluation of the hemodynamic consequences. Before transvenous device leads, assess leaks and obstruction because systemic embolic risk and venous access issues may alter the procedure. Lifelong review also looks for systemic RV failure, systemic tricuspid regurgitation, atrial tachyarrhythmia and sinus-node disease.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Isolated systemic venous baffle stenosis without a leak:</strong> Baffle stenosis can restrict preload, cause venous congestion and reduce exercise output. Without a communication or another source of admixture, obstruction alone does not directly explain systemic arterial desaturation.</li><li><strong>C — Isolated systemic tricuspid regurgitation without a shunt:</strong> Systemic AV-valve regurgitation contributes to systemic RV failure and exercise intolerance. It does not directly mix desaturated venous blood into the arterial circuit, and no important new regurgitation is present here.</li><li><strong>D — Isolated chronotropic incompetence from sinus-node dysfunction:</strong> Sinus-node dysfunction is common after atrial switch and can limit cardiac output during exercise. It usually produces an inadequate heart-rate response rather than a reproducible arterial oxygen-saturation fall of this magnitude.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC12074744/\">AHA statement: cardiopulmonary exercise testing in congenital heart disease, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Exertional Desaturation After an Atrial Switch",
+        "sections": [
+          {
+            "heading": "Follow the Surgically Redirected Blood",
+            "bullets": [
+              {
+                "text": "**Mustard and Senning procedures redirect venous return within the atria.** The morphological RV still pumps to the aorta, and the morphological LV remains subpulmonary.",
+                "children": [
+                  "The systemic venous baffle normally channels caval blood toward the mitral valve and LV. A leak can permit desaturated systemic venous blood to enter the pulmonary venous atrium, then the systemic RV and aorta. Pressure relationships during exercise can make desaturation more evident than at rest."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Imaging and Intervention Assessment",
+            "bullets": [
+              {
+                "text": "**Define both baffle integrity and patency.** Contrast echocardiography, CMR and selected transesophageal or catheter assessment answer complementary questions about communication, obstruction and flow.",
+                "children": [
+                  "An arm injection can miss an inferior systemic venous baffle leak; injection site should match the anatomy being interrogated. CMR also assesses systemic RV volumes, function and associated lesions. A negative limited study should not be treated as proof that every baffle segment is normal.",
+                  "A symptomatic leak requires congenital specialist assessment for closure when appropriate, with evaluation of the hemodynamic consequences. Before transvenous device leads, assess leaks and obstruction because systemic embolic risk and venous access issues may alter the procedure. Lifelong review also looks for systemic RV failure, systemic tricuspid regurgitation, atrial tachyarrhythmia and sinus-node disease."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Baffle stenosis can restrict preload, cause venous congestion and reduce exercise output. Without a communication or another source of admixture, obstruction alone does not directly explain systemic arterial desaturation."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Systemic AV-valve regurgitation contributes to systemic RV failure and exercise intolerance. It does not directly mix desaturated venous blood into the arterial circuit, and no important new regurgitation is present here."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Sinus-node dysfunction is common after atrial switch and can limit cardiac output during exercise. It usually produces an inadequate heart-rate response rather than a reproducible arterial oxygen-saturation fall of this magnitude."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        },
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "AHA statement: cardiopulmonary exercise testing in congenital heart disease, 2025",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12074744/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Investigate systemic RV and baffle complications after an atrial switch"
+    },
+    {
+      "id": "cardiology-rebuild-12-034",
+      "topic": "Transposition and systemic right ventricle",
+      "question": "A stable 29-year-old who had an arterial switch for d-TGA develops exertional chest pressure with new regional LV dysfunction. TTE shows no major neoaortic valve lesion. Renal function is normal. Which targeted investigation most directly defines a surgically related coronary anatomical cause?",
+      "options": [
+        "Exercise stress echocardiography focused on inducible wall-motion abnormalities",
+        "Vasodilator stress CMR focused on myocardial perfusion",
+        "Coronary CT angiography focused on the reimplanted coronary origins and proximal course",
+        "Exercise ECG focused on reproducible ST-segment changes"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Coronary Assessment After an Arterial Switch\n\nCorrect answer: Coronary CT angiography focused on the reimplanted coronary origins and proximal course\n\nRepair Determines the Late Complication\n\n**An arterial switch moves the great arteries and transfers the coronary arteries to the neoaorta.** The LV becomes the systemic ventricle, unlike the systemic RV after an atrial switch.\n\nLate coronary ostial narrowing, kinking or another proximal abnormality can cause ischemia. New symptoms, ventricular dysfunction or ventricular arrhythmia should prompt focused evaluation rather than reassurance based on young age and a low atherosclerotic risk profile.\n\nAnatomical and Functional Evaluation\n\n**Current ACHD guidance supports coronary evaluation when symptoms suggest ischemia after arterial switch.** CT usually provides the initial focused anatomical assessment; dedicated CMR or invasive angiography can be appropriate depending on the question and patient.\n\nAnatomical imaging defines the origins, proximal course and relation to the reconstructed great vessels. Functional perfusion assessment or catheter investigation may still be needed if symptoms persist despite unrevealing cross-sectional findings, because dynamic obstruction or functional significance can remain uncertain.\n\nThe stable vignette asks for a targeted anatomical test. An acute coronary syndrome or unstable presentation instead requires urgent clinical management. Ongoing surveillance also includes the neoaortic root and valve, neopulmonary outflow and branch pulmonary arteries. The Lecompte-related arterial relationships and coronary transfer make this a different follow-up problem from atrial baffle obstruction or leak.\n\nExercise stress echocardiography focused on inducible wall-motion abnormalities: Stress echocardiography can identify a functional ischemic response. It does not usually define the transferred coronary origins and their proximal anatomical relation to reconstructed great vessels.\n\nVasodilator stress CMR focused on myocardial perfusion: Stress CMR can assess inducible ischemia and may be needed to determine functional significance. A perfusion-focused study does not directly map the reimplanted ostia and proximal course as requested; a dedicated coronary CMR protocol is a different investigation.\n\nExercise ECG focused on reproducible ST-segment changes: Exercise ECG can relate symptoms to exertion and identify an ischemic electrical response. It does not show ostial narrowing or the proximal surgical coronary course, so it cannot directly resolve the anatomical question.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nAHA statement: cardiopulmonary exercise testing in congenital heart disease, 2025 — https://pmc.ncbi.nlm.nih.gov/articles/PMC12074744/",
+      "explanationHtml": "<h2>Coronary Assessment After an Arterial Switch</h2><p><strong>Correct answer: C — Coronary CT angiography focused on the reimplanted coronary origins and proximal course</strong></p><h3>Repair Determines the Late Complication</h3><ul><li><strong>An arterial switch moves the great arteries and transfers the coronary arteries to the neoaorta.</strong> The LV becomes the systemic ventricle, unlike the systemic RV after an atrial switch.<ul><li>Late coronary ostial narrowing, kinking or another proximal abnormality can cause ischemia. New symptoms, ventricular dysfunction or ventricular arrhythmia should prompt focused evaluation rather than reassurance based on young age and a low atherosclerotic risk profile.</li></ul></li></ul><h3>Anatomical and Functional Evaluation</h3><ul><li><strong>Current ACHD guidance supports coronary evaluation when symptoms suggest ischemia after arterial switch.</strong> CT usually provides the initial focused anatomical assessment; dedicated CMR or invasive angiography can be appropriate depending on the question and patient.<ul><li>Anatomical imaging defines the origins, proximal course and relation to the reconstructed great vessels. Functional perfusion assessment or catheter investigation may still be needed if symptoms persist despite unrevealing cross-sectional findings, because dynamic obstruction or functional significance can remain uncertain.</li><li>The stable vignette asks for a targeted anatomical test. An acute coronary syndrome or unstable presentation instead requires urgent clinical management. Ongoing surveillance also includes the neoaortic root and valve, neopulmonary outflow and branch pulmonary arteries. The Lecompte-related arterial relationships and coronary transfer make this a different follow-up problem from atrial baffle obstruction or leak.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Exercise stress echocardiography focused on inducible wall-motion abnormalities:</strong> Stress echocardiography can identify a functional ischemic response. It does not usually define the transferred coronary origins and their proximal anatomical relation to reconstructed great vessels.</li><li><strong>B — Vasodilator stress CMR focused on myocardial perfusion:</strong> Stress CMR can assess inducible ischemia and may be needed to determine functional significance. A perfusion-focused study does not directly map the reimplanted ostia and proximal course as requested; a dedicated coronary CMR protocol is a different investigation.</li><li><strong>D — Exercise ECG focused on reproducible ST-segment changes:</strong> Exercise ECG can relate symptoms to exertion and identify an ischemic electrical response. It does not show ostial narrowing or the proximal surgical coronary course, so it cannot directly resolve the anatomical question.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC12074744/\">AHA statement: cardiopulmonary exercise testing in congenital heart disease, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Coronary Assessment After an Arterial Switch",
+        "sections": [
+          {
+            "heading": "Repair Determines the Late Complication",
+            "bullets": [
+              {
+                "text": "**An arterial switch moves the great arteries and transfers the coronary arteries to the neoaorta.** The LV becomes the systemic ventricle, unlike the systemic RV after an atrial switch.",
+                "children": [
+                  "Late coronary ostial narrowing, kinking or another proximal abnormality can cause ischemia. New symptoms, ventricular dysfunction or ventricular arrhythmia should prompt focused evaluation rather than reassurance based on young age and a low atherosclerotic risk profile."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Anatomical and Functional Evaluation",
+            "bullets": [
+              {
+                "text": "**Current ACHD guidance supports coronary evaluation when symptoms suggest ischemia after arterial switch.** CT usually provides the initial focused anatomical assessment; dedicated CMR or invasive angiography can be appropriate depending on the question and patient.",
+                "children": [
+                  "Anatomical imaging defines the origins, proximal course and relation to the reconstructed great vessels. Functional perfusion assessment or catheter investigation may still be needed if symptoms persist despite unrevealing cross-sectional findings, because dynamic obstruction or functional significance can remain uncertain.",
+                  "The stable vignette asks for a targeted anatomical test. An acute coronary syndrome or unstable presentation instead requires urgent clinical management. Ongoing surveillance also includes the neoaortic root and valve, neopulmonary outflow and branch pulmonary arteries. The Lecompte-related arterial relationships and coronary transfer make this a different follow-up problem from atrial baffle obstruction or leak."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Stress echocardiography can identify a functional ischemic response. It does not usually define the transferred coronary origins and their proximal anatomical relation to reconstructed great vessels."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Stress CMR can assess inducible ischemia and may be needed to determine functional significance. A perfusion-focused study does not directly map the reimplanted ostia and proximal course as requested; a dedicated coronary CMR protocol is a different investigation."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Exercise ECG can relate symptoms to exertion and identify an ischemic electrical response. It does not show ostial narrowing or the proximal surgical coronary course, so it cannot directly resolve the anatomical question."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        },
+        {
+          "label": "AHA statement: cardiopulmonary exercise testing in congenital heart disease, 2025",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12074744/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Investigate coronary and great-artery complications after an arterial switch"
+    },
+    {
+      "id": "cardiology-rebuild-12-035",
+      "topic": "Transposition and systemic right ventricle",
+      "question": "An unoperated adult has AV discordance and ventriculoarterial discordance. The left-sided ventricle has coarse trabeculations and a moderator band, and ejects into the aorta. New complete AV block accompanies worsening systemic AV-valve regurgitation. Which valve and ventricle form the systemic pump?",
+      "options": [
+        "Morphological tricuspid valve and morphological left ventricle",
+        "Morphological mitral valve and morphological left ventricle",
+        "Morphological tricuspid valve and morphological right ventricle",
+        "Morphological mitral valve and morphological right ventricle"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Systemic AV-Valve Disease in Congenitally Corrected TGA\n\nCorrect answer: Morphological tricuspid valve and morphological right ventricle\n\nTwo Discordances Restore the Sequence\n\n**In ccTGA, AV and ventriculoarterial discordance occur together.** Systemic venous blood reaches the pulmonary artery through the morphological LV, while pulmonary venous blood reaches the aorta through the morphological RV.\n\nThe circulation is therefore physiologically in series, even though its connections are abnormal. Use segmental anatomy and ventricular markers; a left-sided chamber is not necessarily an LV. Associated VSD, pulmonary obstruction and an Ebstein-like systemic tricuspid valve can modify presentation.\n\nConduction, Valve and Ventricular Surveillance\n\n**The systemic RV and its tricuspid valve face chronic systemic loading.** Regurgitation and ventricular dysfunction can reinforce each other, making serial valve and ventricular assessment essential.\n\nAbnormal conduction-system anatomy predisposes to AV block, which can develop without surgery. Symptomatic complete block requires urgent rhythm assessment and pacing planning. Pacing route, ventricular activation and the risk of dyssynchrony require congenital EP expertise; a routine device approach may not suit the anatomy.\n\nValve intervention decisions should be made before advanced irreversible systemic RV dysfunction when possible, with expert evaluation of symptoms, regurgitation and ventricular response. Do not assume that evidence and thresholds for an ordinary systemic LV transfer unchanged. Follow-up also evaluates associated defects, arrhythmias and exercise capacity; the word corrected describes the circulatory sequence, not anatomical normality or freedom from lifelong complications.\n\nMorphological tricuspid valve and morphological left ventricle: Identify the ventricle by its morphology rather than left-right position. The moderator band and coarse trabeculation support an RV, and the AV valve connected to it is morphologically tricuspid.\n\nMorphological mitral valve and morphological left ventricle: That is the usual systemic pump and the expected arrangement after a successful arterial switch with AV concordance. Here double discordance routes pulmonary venous blood through a morphological RV to the aorta.\n\nMorphological mitral valve and morphological right ventricle: An AV valve is named by its morphological ventricular connection, not merely by which side of the chest it occupies. In the supplied concordance pattern of valve-to-ventricular morphology, the systemic RV has a tricuspid inlet.\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006",
+      "explanationHtml": "<h2>Systemic AV-Valve Disease in Congenitally Corrected TGA</h2><p><strong>Correct answer: C — Morphological tricuspid valve and morphological right ventricle</strong></p><h3>Two Discordances Restore the Sequence</h3><ul><li><strong>In ccTGA, AV and ventriculoarterial discordance occur together.</strong> Systemic venous blood reaches the pulmonary artery through the morphological LV, while pulmonary venous blood reaches the aorta through the morphological RV.<ul><li>The circulation is therefore physiologically in series, even though its connections are abnormal. Use segmental anatomy and ventricular markers; a left-sided chamber is not necessarily an LV. Associated VSD, pulmonary obstruction and an Ebstein-like systemic tricuspid valve can modify presentation.</li></ul></li></ul><h3>Conduction, Valve and Ventricular Surveillance</h3><ul><li><strong>The systemic RV and its tricuspid valve face chronic systemic loading.</strong> Regurgitation and ventricular dysfunction can reinforce each other, making serial valve and ventricular assessment essential.<ul><li>Abnormal conduction-system anatomy predisposes to AV block, which can develop without surgery. Symptomatic complete block requires urgent rhythm assessment and pacing planning. Pacing route, ventricular activation and the risk of dyssynchrony require congenital EP expertise; a routine device approach may not suit the anatomy.</li><li>Valve intervention decisions should be made before advanced irreversible systemic RV dysfunction when possible, with expert evaluation of symptoms, regurgitation and ventricular response. Do not assume that evidence and thresholds for an ordinary systemic LV transfer unchanged. Follow-up also evaluates associated defects, arrhythmias and exercise capacity; the word corrected describes the circulatory sequence, not anatomical normality or freedom from lifelong complications.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Morphological tricuspid valve and morphological left ventricle:</strong> Identify the ventricle by its morphology rather than left-right position. The moderator band and coarse trabeculation support an RV, and the AV valve connected to it is morphologically tricuspid.</li><li><strong>B — Morphological mitral valve and morphological left ventricle:</strong> That is the usual systemic pump and the expected arrangement after a successful arterial switch with AV concordance. Here double discordance routes pulmonary venous blood through a morphological RV to the aorta.</li><li><strong>D — Morphological mitral valve and morphological right ventricle:</strong> An AV valve is named by its morphological ventricular connection, not merely by which side of the chest it occupies. In the supplied concordance pattern of valve-to-ventricular morphology, the systemic RV has a tricuspid inlet.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Systemic AV-Valve Disease in Congenitally Corrected TGA",
+        "sections": [
+          {
+            "heading": "Two Discordances Restore the Sequence",
+            "bullets": [
+              {
+                "text": "**In ccTGA, AV and ventriculoarterial discordance occur together.** Systemic venous blood reaches the pulmonary artery through the morphological LV, while pulmonary venous blood reaches the aorta through the morphological RV.",
+                "children": [
+                  "The circulation is therefore physiologically in series, even though its connections are abnormal. Use segmental anatomy and ventricular markers; a left-sided chamber is not necessarily an LV. Associated VSD, pulmonary obstruction and an Ebstein-like systemic tricuspid valve can modify presentation."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Conduction, Valve and Ventricular Surveillance",
+            "bullets": [
+              {
+                "text": "**The systemic RV and its tricuspid valve face chronic systemic loading.** Regurgitation and ventricular dysfunction can reinforce each other, making serial valve and ventricular assessment essential.",
+                "children": [
+                  "Abnormal conduction-system anatomy predisposes to AV block, which can develop without surgery. Symptomatic complete block requires urgent rhythm assessment and pacing planning. Pacing route, ventricular activation and the risk of dyssynchrony require congenital EP expertise; a routine device approach may not suit the anatomy.",
+                  "Valve intervention decisions should be made before advanced irreversible systemic RV dysfunction when possible, with expert evaluation of symptoms, regurgitation and ventricular response. Do not assume that evidence and thresholds for an ordinary systemic LV transfer unchanged. Follow-up also evaluates associated defects, arrhythmias and exercise capacity; the word corrected describes the circulatory sequence, not anatomical normality or freedom from lifelong complications."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Identify the ventricle by its morphology rather than left-right position. The moderator band and coarse trabeculation support an RV, and the AV valve connected to it is morphologically tricuspid."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "That is the usual systemic pump and the expected arrangement after a successful arterial switch with AV concordance. Here double discordance routes pulmonary venous blood through a morphological RV to the aorta."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "An AV valve is named by its morphological ventricular connection, not merely by which side of the chest it occupies. In the supplied concordance pattern of valve-to-ventricular morphology, the systemic RV has a tricuspid inlet."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        },
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Recognize AV block and systemic AV-valve disease in congenitally corrected TGA"
     }
   ],
   "plannedQuestions": 55,
@@ -2255,9 +3035,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 25,
+    "draftQuestions": 35,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 25
+    "newQuestionsAfterRedistribution": 35
   }
 }

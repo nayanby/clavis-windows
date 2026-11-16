@@ -4,9 +4,9 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 29,
+  "authoredQuestions": 39,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 25,
+  "newDraftQuestions": 35,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
@@ -93,7 +93,7 @@
     {
       "section": "Eisenmenger syndrome and cyanotic physiology",
       "plannedQuestions": 5,
-      "authoredQuestions": 0,
+      "authoredQuestions": 5,
       "decisions": [
         "Recognize irreversible pulmonary vascular disease and unsafe defect closure",
         "Distinguish adaptive erythrocytosis from an indication for phlebotomy",
@@ -105,7 +105,7 @@
     {
       "section": "Ebstein anomaly",
       "plannedQuestions": 2,
-      "authoredQuestions": 0,
+      "authoredQuestions": 2,
       "decisions": [
         "Interpret indexed tricuspid displacement and atrialized RV anatomy",
         "Recognize the relevance of accessory pathways and arrhythmia assessment"
@@ -114,7 +114,7 @@
     {
       "section": "Transposition and systemic right ventricle",
       "plannedQuestions": 3,
-      "authoredQuestions": 0,
+      "authoredQuestions": 3,
       "decisions": [
         "Investigate systemic RV and baffle complications after an atrial switch",
         "Investigate coronary and great-artery complications after an arterial switch",
@@ -301,6 +301,56 @@
       "questionId": "cardiology-rebuild-12-025",
       "section": "Tetralogy of Fallot and repaired RV outflow physiology",
       "decision": "Investigate declining exercise capacity with residual obstruction or regurgitation"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-026",
+      "section": "Eisenmenger syndrome and cyanotic physiology",
+      "decision": "Recognize irreversible pulmonary vascular disease and unsafe defect closure"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-027",
+      "section": "Eisenmenger syndrome and cyanotic physiology",
+      "decision": "Distinguish adaptive erythrocytosis from an indication for phlebotomy"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-028",
+      "section": "Eisenmenger syndrome and cyanotic physiology",
+      "decision": "Assess iron deficiency and hyperviscosity symptoms in cyanotic disease"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-029",
+      "section": "Eisenmenger syndrome and cyanotic physiology",
+      "decision": "Select and monitor appropriate PAH-directed treatment using the relevant evidence"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-030",
+      "section": "Eisenmenger syndrome and cyanotic physiology",
+      "decision": "Assess hemoptysis thrombosis and anticoagulation without routine blanket treatment"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-031",
+      "section": "Ebstein anomaly",
+      "decision": "Interpret indexed tricuspid displacement and atrialized RV anatomy"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-032",
+      "section": "Ebstein anomaly",
+      "decision": "Recognize the relevance of accessory pathways and arrhythmia assessment"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-033",
+      "section": "Transposition and systemic right ventricle",
+      "decision": "Investigate systemic RV and baffle complications after an atrial switch"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-034",
+      "section": "Transposition and systemic right ventricle",
+      "decision": "Investigate coronary and great-artery complications after an arterial switch"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-035",
+      "section": "Transposition and systemic right ventricle",
+      "decision": "Recognize AV block and systemic AV-valve disease in congenitally corrected TGA"
     }
   ]
 }
