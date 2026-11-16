@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 41,
+  "authoredQuestions": 42,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -66,7 +66,8 @@
     "cardiology-rebuild-12-034",
     "cardiology-rebuild-12-035",
     "cardiology-rebuild-12-036",
-    "cardiology-rebuild-12-037"
+    "cardiology-rebuild-12-037",
+    "cardiology-rebuild-12-038"
   ],
   "sources": [
     {
@@ -211,18 +212,18 @@
     }
   ],
   "validation": {
-    "questions": 41,
+    "questions": 42,
     "answerDistribution": {
       "A": 11,
-      "B": 10,
+      "B": 11,
       "C": 10,
       "D": 10
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 117,
+    "distractorRationales": 120,
     "questionStyles": {
       "direct": 5,
-      "clinical_scenario": 36
+      "clinical_scenario": 37
     },
     "status": "passed"
   },
