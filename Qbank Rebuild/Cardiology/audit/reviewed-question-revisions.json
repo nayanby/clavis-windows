@@ -2861,6 +2861,1255 @@
       "revisedSha256": "fd91fdfe63262ef6df1f07f10ff4649a5411dc04d50bd4b84e31839c5defdf78",
       "reviewedAt": "2026-11-16",
       "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-05-048",
+      "originalSha256": "ca3875c4c4b4a67e9c20542ee8df30a1a69fff93e58c5d6ea3a165a0014c42c9",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/CIR.0000000000001187",
+        "https://doi.org/10.1093/europace/euz246",
+        "https://www.heartrhythmjournal.com/article/S1547-5271%2826%2902264-2/abstract"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "edbd724b05ce62b850604937b521c9543fe9c3bbefc23bdb1c6bdb3953e18419",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-001",
+      "originalSha256": "dfaf572a58aec803e08982e74d129cf0c90fc07cec827d0414bbbe7ecf2cf076",
+      "changedFields": [
+        "correctIndex",
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching",
+        "options"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "9409d067b31ba4df2f56e02679cf7a1edbd1533ec03506c2c4789955095eb6a9",
+      "reviewedAt": "2026-11-16",
+      "reason": "Condensed teaching into structured bullets. Same medical answer moved from A to B in this unpublished question; options and distractor indices reordered to balance the transferred chapter.",
+      "unpublishedAnswerReorder": {
+        "from": 0,
+        "to": 1,
+        "medicalAnswerUnchanged": true
+      }
+    },
+    {
+      "questionId": "cardiology-rebuild-10-002",
+      "originalSha256": "1ed20579396638485e2b4bb4fa7fa56f2f42d5d1ecb7199650fbcb3675acd1b2",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1093/cid/ciad271",
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "4d6ea9c5c27f782053d54ae39796fe610606471f6b262847a81eeb2fb176f3a7",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-003",
+      "originalSha256": "5dc87bb5cd8e186253d0393656c8e2801d4486ef50baeb5ef590f79dbfb413b3",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026",
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "d24d5a44de1dd5a90b0323cc6e620e9e8a08c528578f424ce944fd740bcbf141",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-004",
+      "originalSha256": "225642c25b7830575d88d3d00545846b7e8082041f25382f9a6e6fcbce14bb58",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "9b4311e3b58294b15006db219a6d433d57ff2e00ccee68652e21ca9e07c4d090",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-005",
+      "originalSha256": "60901ad524aa8cebba56778935e71d8d3be3d62535a7c7c1da7f7d0ae3c62e3c",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "a4db1881a17f62abdc464554ec61fb6aa7b5e0a8045561afeda1e8c737751133",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-006",
+      "originalSha256": "e498b60defca3e69947649e869ebf49d1c62467e49c20d1703a620da63863713",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "b794c05146f4f0fddd493a89a95df4e54ea860db78390f6b5588f5f7ad5feec7",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-007",
+      "originalSha256": "6eb313c71688524bb1514703f394cb4cbde387a778e861c0d8a095736d160279",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "2b322eae02bf0223b1806ccd169c52ac72b1431356eacf7bfe694aba44b9a44a",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-008",
+      "originalSha256": "936bdba02781d061d28fc389e7bdc6a8912bf660757568fbc446ddad4b3cbd58",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "2a8dff63677d23c03f0c65c9a7936468d2d739cf31cdd1673fe51b20521effe6",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-009",
+      "originalSha256": "469dc5f0022d736e91fde0a758b02c91b58d05d158377a9c74d9b27d5a12d204",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/cid/ciad271",
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "c6afc29abeb0c96e29f64406b9fc479d22ab0e227989230e6431322b2de211dd",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-010",
+      "originalSha256": "cb0436c02c4fb819cca365053f4e4e69642f8d578b7d54fab5a4c4a0eb68b8d1",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/cid/ciad271",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "a24cb1184cb7837c1c78bca251d20325bc771b10faded861bd81a140a1ebd3f6",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-011",
+      "originalSha256": "173b045805731c8357f8975354df95f5009a9d33c38f8028adba1f635d16ce71",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "3492bed655f1be6f85ec57e8e8c816494e82ba673706e522a6e1e39cefd98ed4",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-012",
+      "originalSha256": "d7853fb9e94c026cf698cd6dfd9068be7f48f1364329e13090593e249249251a",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "161531649472c12557287ba898ad3b15be95cb11d7317addc290df4e78d8f9cd",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-013",
+      "originalSha256": "cd77527228ce65d578ee563a5af848db4ed571f466a66228d7cdc6bbec8e6fde",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "278f25c5e69c5b08cfbb71c516be5f9df93d8aa48f462024f7d0726428f703dd",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-014",
+      "originalSha256": "5500282304e8c494455e5e1cb691215cf99cf4d9e212e4d684161bc7c12fbcea",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "e785be9d8fe1202f3b706c9e72f57e130d9c7bd88ef6e893a6dae012ef10567c",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-015",
+      "originalSha256": "8ed9db3005dc8685f6ce16e723ac5a0a68c8533fc26c1cad0cb2d7c3210fc8b8",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "12cf09e3868749b212462d15a743c79d6ed0fb905adac6f32a97391a57485b57",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-016",
+      "originalSha256": "12f2242ab6acc7aab6cee7c01af3c2ead82bb92b7d1602d4eb3393ec138d955f",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "a14dd65bad3f80407773008661eb60014c3f9f91f0da7f9385d83e6b9f859a13",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-017",
+      "originalSha256": "35313064f5a45195288fdb073031e8e77f5ccd2ccc6ae87ab6c607ff72372398",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "84cd584c906e2d3b2dae1d18865f9b87631f0cefa7a169ad54b22aa734c2964b",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-018",
+      "originalSha256": "79b2c0a575a5d3e36aec731de49639f67e3d19ed043078f0a208ed284f14dc14",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/JAHA.124.040218",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "1412ecee5b0b25d89c2f21d18ee62ca2e7d4da799601093c1323f6e8411251b1",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-019",
+      "originalSha256": "71ab286e34273f1ec09771ebc5f694e8d1312c5211aa9aeb572300358c7044e5",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "9d84a6fb36d7ca2e3e254bce0b6dd04f1b3f560f2d39b604bd3ad1755a487bf2",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-020",
+      "originalSha256": "012d94381397bdf17fcf7352e89ac19e0150c76c574d47df13acc4919e0e2b55",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/cid/ciad271",
+        "https://doi.org/10.1161/JAHA.124.040218",
+        "https://www.cdc.gov/q-fever/hcp/clinical-guidance/index.html"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "add10b5b9c68ef866e4e4bee8b4d1ca82e2d6e4e57792d667c9bf82cb469fce3",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-021",
+      "originalSha256": "4171e5073f3883d21db5eddef756565b344ad4403d040186653fd19ba001cfc5",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/JAHA.124.040218",
+        "https://doi.org/10.1093/cid/ciad271",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/bartonellosis"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "d8dc9f10061e352725eeb530448aafacebf07e274180706b901f88e95e66d31c",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-022",
+      "originalSha256": "0728b962642f140b4172a944f9ca2f37a33e5a933825672dd32574530ff3399c",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/cid/ciad271",
+        "https://doi.org/10.1161/JAHA.124.040218",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3837638/",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "3dba7d2a56e77a13c619c1607e7d4aade9dc3c3cededdf4e708f687e8e465235",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-023",
+      "originalSha256": "befeafac6adba49a4184ca0d1c79f42546dbdb7fe5f8e21b16f0a2b6652c223c",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/JAHA.124.040218",
+        "https://doi.org/10.1093/cid/ciad271"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "a9d832449caee97421425b994dcf655c1aadd98b8f1a307d652f24222e64b4e0",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-024",
+      "originalSha256": "0d7b311ae477fb458d5823a48798761e768a2dc37e2fa472208330315a3ea663",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/infective-endocarditis-in-adults-diagnosis-antimicrobial-therapy-and-management-of-complications.pdf"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "94ad4bd4d79f12670cc5fbcb8da6569c8fa016958b21584aa31d903e846c7238",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-025",
+      "originalSha256": "3c80a50e8c348eea3f5ceb2b5ca610ba43e0c37c8c06cab156502f70f9d597dc",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/CIR.0000000000001466",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "adb0e1501519559dee1217047c7ef4dcfd2de030f4c682b236f4bb08c0097980",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-026",
+      "originalSha256": "8c9250f4efdf496283c86f35c79ef91e85b426a559e7d66caa6809ff11b041d4",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/infective-endocarditis-in-adults-diagnosis-antimicrobial-therapy-and-management-of-complications.pdf"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "e552fc9ba9eac38e5f6b92fbe725c8fd3e98d94e94b51d0d006b180486e8a467",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-027",
+      "originalSha256": "26d10ac222db78e733d94dca6880a8f87edc780cbe258624e49a36c457227e06",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/infective-endocarditis-in-adults-diagnosis-antimicrobial-therapy-and-management-of-complications.pdf"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "44ca5934e543caae1661f3bb815e026ba47d38c6941122f4e0a5dcaad8c9f32b",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-028",
+      "originalSha256": "588efeceddfa2b20f1e189b10ee29752c295a7a8b40fdd95731e95959e724e8d",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://www.idsociety.org/practice-guideline/vancomycin/",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "7e3ac1dfe5f1fb4a23f9e5a2c7e5e5782f348318d12b33b73e89c3b39889e4a7",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-029",
+      "originalSha256": "92fb906219a0b1375576fa15b6ab945d3ff3a736dcb94824cd9bbf02788beaf3",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1161/CIR.0000000000001466"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "7fd8d4963289c0cbe61b4a5eeef3d105c7606e7fc11800a2a282b0b915963f08",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-030",
+      "originalSha256": "90dea2782f71fb4bba4aabeb2169f7f054f072b5a493c782fb312745a1a3bfa1",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/CIR.0000000000001466",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "d62ee8d55186309e9fc102f7cfcde5ab81e91c30e1dfbaa64c85cecb30691177",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-031",
+      "originalSha256": "5969851bf4e710ce394ca55e2f092be586482f8144e41a1de9a329f589489ce7",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/infective-endocarditis-in-adults-diagnosis-antimicrobial-therapy-and-management-of-complications.pdf"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "55480cf23dc167d08638a53e9a7fc129db8fb3e7e1cf3a27e90660c957e6e68b",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-032",
+      "originalSha256": "ce9b59a4b2d91857a80e0d81bada710431b1205e23f200d595b31e99323cb817",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "52a36b62b3b9edfbc504d9952dcaa88cca32e127f54f392a5ff725013c8eaf1d",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-033",
+      "originalSha256": "d8d232f3bb869759f4273d23672ce4d0dc3eb9ebbef9cb6c66fe4b22e6abd6e8",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/infective-endocarditis-in-adults-diagnosis-antimicrobial-therapy-and-management-of-complications.pdf"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "282f9aa88b531b0f5ac3b02c26e6b05044dbc23581c576a7401c23a97551937d",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-034",
+      "originalSha256": "25fc35bb76b9e7849af317a6f3563d88c3a372a56f77ee43c5503a20fdf0677f",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1016/S1473-3099(24)00749-7",
+        "https://www.idsociety.org/practice-guideline/candidiasis/",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "004505e1c8160f1a07f253a8410804ee9fc29bc2f815d9765fa3130cb74fe60f",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-035",
+      "originalSha256": "842c08bfd9a2c51dffc8cc42889da775ba01a97f2f8afbce979dace4b00809c4",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "25abc577f8780493a930ec6af6b4457cde1985fe1896699519f8fc2560c427e9",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-036",
+      "originalSha256": "2e2710e273e8bbad2e4c2e830464d4098e7e7589190c6a70ea130c7d8cca58ae",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "7b1b0eec61404af9092b8b271d3608f71a9ba4def38145d6c64a76901f44adfe",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-037",
+      "originalSha256": "bbb0b6eefeefbae762e03ab9ef9c26e5e66851eadb579947f39d3870d71a2b84",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1161/CIR.0000000000001466"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "f2733f37cb5d1a48c18bf50ac4f42d1c5d635174ec20fafa3c3f33888f33f21f",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-038",
+      "originalSha256": "66eaa954a3d9d32b796edd2f1369dad399f37ea846bc01fe1cdbd828644111b9",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/CIR.0000000000001466",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "dac23f073a1c58f5a193f837c1ce20e53f9716f13c8a4807259af3dfcf59fcf8",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-039",
+      "originalSha256": "2ab10c7d5d34c52690255c6f884612ff44a3dda510bf4047bb7bf967e49aadac",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1056/NEJMoa1808312",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "a8aa6804a22f530dc35969b5991d76957bef42a9f0bee5ca2cde7fd20ee7bf5c",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-040",
+      "originalSha256": "d89aca58ba656eb81a5773d46e18739f7bde7b8d68bffd63adcfdf5f3f79df19",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1056/NEJMoa1808312",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "74ed6a76b6420f4b6081192d06f1d66018ddd57301b46dfb4a18a6a1c3b1237b",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-041",
+      "originalSha256": "4ac05d15d0861d14793438156fd4b39262552a93d5b45c5dd30d4d08fc92339e",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12351474/",
+        "https://doi.org/10.1161/CIR.0000000000001466"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "da515d9edc0c292f95dfcf9000ee7f3711a8b7820214ffa3edce0166cd2840ef",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-042",
+      "originalSha256": "607231c349e839c0b9a199b7c3af5324fb14e4a888814c2d767f3d12af7bab11",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/infective-endocarditis-in-adults-diagnosis-antimicrobial-therapy-and-management-of-complications.pdf"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "ead9aa3f17a89d963af64985e079e0a929638d5e983c9918b9400db1ce008b87",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-043",
+      "originalSha256": "c80e6297f0adf057bcd922f5332346b1255b4d72787b586b6197f3f31dee694c",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "470661c3e047ac7f64f63ca85e34de360b0dafeb4aa1f83c5dee43aba85b26a9",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-044",
+      "originalSha256": "ac76299ceb4099322d6d6e51315b829b55946d7c6b458a327f0aab17b8aea545",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "b4dd351adfc6e05b277601446539afb87d489011ffcf8cb80fe6e013e8dfdd83",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-045",
+      "originalSha256": "654be65d4b4e5346e2e4fe3a24aa08595d3a0b0e17529983a6ddc5d5cca494f1",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "b7d2b6adfe1dc2271146530651c6a0461cb466bd2210cfeb8cde3234ff2e1778",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-046",
+      "originalSha256": "d9332e920b4ac8de080241a4129e4293dbda8d156acdd50e5c3d67ac4ee6b344",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "b99002a62dd0bc4936c6564967ac5c0b249572d5d359af38e36931404e0208a5",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-047",
+      "originalSha256": "4f40f9f1308fa3b20e4d30ba2ff320874edb81e0a0605fcfc994672d5410734c",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "79b908c2fba260815c81c97a352f5567bf4268b7f92a736f4a160295ebd3f50d",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-048",
+      "originalSha256": "99516cdd248ba31a1a2f6b65208eda0e49c634589ec8c7aae780b39cb102ca05",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1056/NEJMoa1112843",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "54e01ebb611c623c30e8a887c9726bf78a8cb81d6c27906a655ca9a61f48ee6f",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-049",
+      "originalSha256": "0f5381d063c32f36fd004a14497b0034e9ba80c95054aae50f4d1b176b76c90c",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "b2b33810f76c4997d1d714d7e8f8fc36654eedc069403ef9aefd683feb0e9989",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-050",
+      "originalSha256": "cb18711eb7b0556fa22b1bdeaa53a91e521a21317618015524497fbaf05b482b",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "fd66d2fa890a8c347f8e693544ef06cd590ce714fe294fb812fc47b4a7b33233",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-051",
+      "originalSha256": "ad5653c2ee1132ba69b0dab68ca316c5029babfae462961c99207bee3d3d968b",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "9e8f748328682a513a1441bef1b8a6e32a7fd98f35e2458fd5801e2e5bfacb46",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-052",
+      "originalSha256": "df41adba020bcdc5ad15ecbf078eb25d089601ddb4d88ef0076d354bcc10ce5f",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "60965d43f96cf5ffebd4026134f4df2a0a81625e981e43bd20c98471d4135262",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-053",
+      "originalSha256": "d252b683498d3097f9ec389819281f5f97bf174d3e923e4aaf91923b8b9a1c51",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1093/cid/ciad271",
+        "https://doi.org/10.1161/JAHA.124.040218"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "946a061fee2a40e3ee86a9067dcb1c71fc379f398e9a4e9fdaf08edab0f6f61f",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-054",
+      "originalSha256": "fcfba82e9ff5b5fb2c67a05ff0c18babd640e299bd15b4c43d8c1a50ce83770c",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "f4655ab1539561cb9c11d70e0fbb4e9544fe7f7668811bd8a1cda7cbcf9f105d",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-055",
+      "originalSha256": "21a21dfba75b740a4d5335edaa14e2270ecedd4023e5be00304989805b5ec3e3",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "997cb29249075fe2788f6804175ae32635480b522f89375a150db2ae402be5d0",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-056",
+      "originalSha256": "255d69531df275cc260861e2544939cb9e5d858abbb1c216858ac99ba700f280",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "ca77c6f0858558cc4ac275ec695909efce465f91332ec472766ab64c4229635c",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-057",
+      "originalSha256": "bc1ea7b19f149e50e4ac5975051e3ec34e120d6010a4dce7a0723a0a74c8032c",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/JAHA.126.050115",
+        "https://doi.org/10.1161/CIR.0000000000001466",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "afa9991269730037252192a4cd972efaf7fdcaca28797f8fa74c4a16322dc4d4",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-058",
+      "originalSha256": "e235666499a1ed893253650a64fe7dbc09aa37136cbb189659ea2df47138aaae",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://academic.oup.com/ejcts/article/57/1/e1/5625578",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "1d4ebdfe21112cf2822036f1d54346cb29a1f7ed438b2ad2f3757a268fcdece0",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-059",
+      "originalSha256": "4be95c964b4c566984696846a246e537bd9d4c5d2879b0cbf9dc7a4649c51b1e",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://academic.oup.com/ejcts/article/57/1/e1/5625578"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "1cf26fa3e217e04bb798fde7ce3fac281130fac6712b16e2a59dfa5aaf012e36",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-060",
+      "originalSha256": "a9d73d9c74f92ee7f5c58331ca5d97eb154af33842594ba6d7196e002950ffa7",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://academic.oup.com/ejcts/article/57/1/e1/5625578"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "43771d8295c1041fa7da398b3e0c9d44f2e79365a270defbc52df27f4c3ede9a",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-061",
+      "originalSha256": "b0dd3bf1ced6f93171e1921ba8f1c0bd79045e902831573f6f076f260a9fb8df",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "ce3c1b239a1b4565f2ee2e799b0e4c0febf1c6ed81abeb223d7bb4aea9800189",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-062",
+      "originalSha256": "ead585ea5bffd3c3657f31cc1210f9f8a5fd301a2341ba03d9da69a1746debd4",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "65f684357023c8ea846cbd74d0da7038d1237311adf604b24aac9720fa52e8e1",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-063",
+      "originalSha256": "9755b8c54b29cb897a207c333d015924135fc187dbe56cd16018d64dcac067f1",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "85944db9bb591174a599c3a9893aa1a7b9ac172c26022d211827498617de6e34",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-064",
+      "originalSha256": "35f2ce65a3c2bc89e2d19b1470ce3a73dd13c35e81eedc04e969e794fdf5bfde",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf",
+        "https://doi.org/10.1093/eurheartj/ehad193"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "9b4979203df359a069770a4e6c1f9b0dff2e6b7eba1526c5c95aa9e591d59ab6",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-10-065",
+      "originalSha256": "aaf2df9a1908ecbadb88d6ac3dc92affeb22dea3e9df87a1c3ed3ed94cf053ac",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehad193",
+        "https://doi.org/10.1161/CIR.0000000000001466"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "1110b3962e057185323d7768c21dc5bb210e4c3b4918b4001e1f85e0803db8e0",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved. Reframed against accessible primary guidance; unsupported version-specific detail removed without changing the tested clinical domain."
     }
   ]
 }

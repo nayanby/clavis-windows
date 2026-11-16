@@ -1,0 +1,141 @@
+{
+  "status": "installed_verified",
+  "sourceDocumentSha256": "ff3110b0317caa4a699cacc768dd47025eb8f6e0906045cb89687fe11442eb94",
+  "sourceParagraphsRead": 214,
+  "priorDetailedReview": "source-reviews/10-source-review.json",
+  "findings": [
+    "All 214 source-document paragraphs reviewed; existing 66 decisions retained and four source-gap decisions added.",
+    "All 70 explanations use concise topic-specific multilevel bullets; individual distractor reasons and useful comparison tables retained. Pathogenesis uses an ordered offline decision pathway.",
+    "Question order follows diagnosis, organism treatment, transition/duration, surgery/complications, devices, prognosis and prevention. Transferred pocket-management decision moved beside pocket diagnosis.",
+    "New decisions cover adhesion on previously normal valves, peripheral signs, Aspergillus endocarditis and multidomain prognosis. Primary guideline/study checks documented in references.",
+    "Unretrieved October AHA correction is not represented as read. Version-dependent ceftriaxone question replaced by a drug-specific MIC decision explicitly grounded in SPILF–AEPEI 2025.",
+    "Detailed 14-day postoperative minimum removed from the assessed material; postoperative question now tests residual DNA versus viable infection and individualized course completion, supported by accessible AHA summary and ESC principles.",
+    "Gentamicin PVE decision retains the accessible AHA public recommendation; unverified assertion about rifampin consensus removed. ESC rifampin timing remains explicitly framework-specific.",
+    "Enterococcal colorectal discussion now identifies observational evidence and its limits, rather than relying on the correction-linked statement.",
+    "POET and DOTS retain population, phase and endpoint limits; EASE composite is distinguished from isolated mortality.",
+    "Neurological surgical timing distinguishes selected nonhemorrhagic stroke from conditional delay after hemorrhage; emergency cardiac deterioration can alter timing.",
+    "Final A18/B18/C17/D17 positions, 210 individual distractor rationales, all original IDs preserved. One unpublished answer position was reordered without changing its medical answer.",
+    "Offline and app layout checks passed at desktop/narrow widths for every question; narrow app screenshot inspected."
+  ],
+  "limitations": [
+    "Full Harrison text was not accessed.",
+    "Author source review is not independent clinician peer review.",
+    "October 2026 AHA correction text was inaccessible. Affected detailed claims were reframed against accessible primary guidance; the correction itself is not certified as reviewed."
+  ],
+  "references": [
+    {
+      "label": "Experimental study of S. aureus adhesion to damaged and inflamed valves",
+      "url": "https://doi.org/10.1093/eurheartj/ehz175"
+    },
+    {
+      "label": "ESC infective endocarditis guideline, 2023",
+      "url": "https://doi.org/10.1093/eurheartj/ehad193"
+    },
+    {
+      "label": "Duke–ISCVID diagnostic criteria, 2023",
+      "url": "https://doi.org/10.1093/cid/ciad271"
+    },
+    {
+      "label": "AHA blood culture-negative endocarditis scientific statement, 2025",
+      "url": "https://doi.org/10.1161/JAHA.124.040218"
+    },
+    {
+      "label": "Surviving Sepsis Campaign adult guidelines, 2026",
+      "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026"
+    },
+    {
+      "label": "CDC clinical guidance for Q fever",
+      "url": "https://www.cdc.gov/q-fever/hcp/clinical-guidance/index.html"
+    },
+    {
+      "label": "NIH adult HIV opportunistic-infection guidance: Bartonellosis",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/bartonellosis"
+    },
+    {
+      "label": "Tropheryma whipplei endocarditis: primary clinical series, 2013",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3837638/"
+    },
+    {
+      "label": "AHA adult infective endocarditis scientific statement, 2015",
+      "url": "https://www.idsociety.org/globalassets/idsa/practice-guidelines/infective-endocarditis-in-adults-diagnosis-antimicrobial-therapy-and-management-of-complications.pdf"
+    },
+    {
+      "label": "SPILF–AEPEI antibiotic therapy position statement, 2025",
+      "url": "https://doi.org/10.1016/j.idnow.2024.105011"
+    },
+    {
+      "label": "ASHP/IDSA/PIDS/SIDP vancomycin monitoring consensus, 2020",
+      "url": "https://www.idsociety.org/practice-guideline/vancomycin/"
+    },
+    {
+      "label": "AHA IE diagnosis, antibiotic therapy and management scientific statement, 2026",
+      "url": "https://doi.org/10.1161/CIR.0000000000001466"
+    },
+    {
+      "label": "AHA official endocarditis statement summary, 2026",
+      "url": "https://professional.heart.org/en/science-news/infective-endocarditis-diagnosis-antibiotic-therapy-and-management/top-things-to-know"
+    },
+    {
+      "label": "ECMM/ISHAM/ASM global candidiasis guideline, 2025",
+      "url": "https://doi.org/10.1016/S1473-3099(24)00749-7"
+    },
+    {
+      "label": "IDSA candidiasis guideline, 2016",
+      "url": "https://www.idsociety.org/practice-guideline/candidiasis/"
+    },
+    {
+      "label": "IDSA aspergillosis guideline, 2016",
+      "url": "https://www.idsociety.org/practice-guideline/aspergillosis/"
+    },
+    {
+      "label": "POET randomized trial: partial oral versus IV treatment, 2019",
+      "url": "https://doi.org/10.1056/NEJMoa1808312"
+    },
+    {
+      "label": "DOTS randomized dalbavancin trial, 2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12351474/"
+    },
+    {
+      "label": "EASE randomized trial of early surgery, 2012",
+      "url": "https://doi.org/10.1056/NEJMoa1112843"
+    },
+    {
+      "label": "AHA right-sided IE mechanical-aspiration science advisory, 2026",
+      "url": "https://doi.org/10.1161/JAHA.126.050115"
+    },
+    {
+      "label": "EHRA international CIED-infection consensus, 2020",
+      "url": "https://academic.oup.com/ejcts/article/57/1/e1/5625578"
+    },
+    {
+      "label": "AHA scientific statement on CIED infection, published online 2023",
+      "url": "https://doi.org/10.1161/CIR.0000000000001187"
+    },
+    {
+      "label": "EHRA international consensus on CIED infection, 2020",
+      "url": "https://doi.org/10.1093/europace/euz246"
+    },
+    {
+      "label": "HRS multisociety lead management and extraction consensus update, 2026",
+      "url": "https://www.heartrhythmjournal.com/article/S1547-5271%2826%2902264-2/abstract"
+    },
+    {
+      "label": "AHA prevention of IE wallet card, current guidance",
+      "url": "https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf"
+    },
+    {
+      "label": "Multicenter observational study of colorectal disease in E. faecalis IE, 2020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31444092/"
+    }
+  ],
+  "releaseReview": {
+    "status": "passed",
+    "installed": true,
+    "runtimeReadback": "passed"
+  },
+  "editorialReviewProgress": {
+    "status": "passed",
+    "nextWork": "Release review and runtime readback completed."
+  },
+  "installed": true
+}

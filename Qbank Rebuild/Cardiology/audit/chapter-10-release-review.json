@@ -1,0 +1,33 @@
+{
+  "chapterNumber": 10,
+  "document": "10. Infective Endocarditis",
+  "status": "passed",
+  "installed": true,
+  "reviewedAt": "2026-11-16",
+  "reviewedQuestionsSha256": "1ea536d825d39f1ae8ad9827516accede296e14fd491df56a2ece788a6a21411",
+  "sourceDocumentSha256": "ff3110b0317caa4a699cacc768dd47025eb8f6e0906045cb89687fe11442eb94",
+  "questionCount": 70,
+  "validation": {
+    "questions": 70,
+    "answerDistribution": {
+      "A": 18,
+      "B": 18,
+      "C": 17,
+      "D": 17
+    },
+    "minimumExplanationWords": 192,
+    "distractorRationales": 210,
+    "questionStyles": {
+      "clinical_scenario": 60,
+      "direct": 10
+    },
+    "status": "passed"
+  },
+  "limitations": [
+    "Full Harrison text was not accessed.",
+    "Author source review is not independent clinician peer review.",
+    "October 2026 AHA correction text was inaccessible. Affected detailed claims were reframed against accessible primary guidance; the correction itself is not certified as reviewed."
+  ],
+  "installedPath": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\10. Infective Endocarditis\\Questions\\77d074746fb976441327.json",
+  "installedSha256": "eb946ef0fe3814aa64f99483442294238fad8248f9cc0d196012f1eae9460af9"
+}

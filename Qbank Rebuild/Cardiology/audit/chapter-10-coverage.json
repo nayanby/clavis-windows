@@ -1,0 +1,246 @@
+{
+  "chapter": 10,
+  "status": "installed_verified",
+  "sourceDocument": "10. Infective Endocarditis.docx",
+  "sourceDocumentSha256": "ff3110b0317caa4a699cacc768dd47025eb8f6e0906045cb89687fe11442eb94",
+  "sourceParagraphsRead": 214,
+  "authoredQuestions": 70,
+  "conciseExplanations": 70,
+  "coverage": [
+    {
+      "section": "Overview, predisposition and pathogenesis",
+      "sourceParagraphRange": [
+        2,
+        45
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-001",
+        "cardiology-rebuild-10-007",
+        "cardiology-rebuild-10-008",
+        "cardiology-rebuild-10-017",
+        "cardiology-rebuild-10-018",
+        "cardiology-rebuild-10-020",
+        "cardiology-rebuild-10-021",
+        "cardiology-rebuild-10-022",
+        "cardiology-rebuild-10-033",
+        "cardiology-rebuild-10-034",
+        "cardiology-rebuild-10-036",
+        "cardiology-rebuild-10-056",
+        "cardiology-rebuild-10-062"
+      ]
+    },
+    {
+      "section": "Clinical manifestations",
+      "sourceParagraphRange": [
+        46,
+        59
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-001",
+        "cardiology-rebuild-10-006",
+        "cardiology-rebuild-10-044",
+        "cardiology-rebuild-10-045",
+        "cardiology-rebuild-10-047",
+        "cardiology-rebuild-10-049",
+        "cardiology-rebuild-10-050",
+        "cardiology-rebuild-10-051",
+        "cardiology-rebuild-10-052",
+        "cardiology-rebuild-10-053",
+        "cardiology-rebuild-10-056"
+      ]
+    },
+    {
+      "section": "Diagnostic sampling and imaging",
+      "sourceParagraphRange": [
+        60,
+        77
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-002",
+        "cardiology-rebuild-10-003",
+        "cardiology-rebuild-10-004",
+        "cardiology-rebuild-10-012",
+        "cardiology-rebuild-10-013",
+        "cardiology-rebuild-10-014",
+        "cardiology-rebuild-10-015",
+        "cardiology-rebuild-10-016"
+      ]
+    },
+    {
+      "section": "Duke–ISCVID criteria",
+      "sourceParagraphRange": [
+        78,
+        106
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-005",
+        "cardiology-rebuild-10-006",
+        "cardiology-rebuild-10-007",
+        "cardiology-rebuild-10-008",
+        "cardiology-rebuild-10-009",
+        "cardiology-rebuild-10-010",
+        "cardiology-rebuild-10-011"
+      ]
+    },
+    {
+      "section": "Culture-negative infection",
+      "sourceParagraphRange": [
+        107,
+        111
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-017",
+        "cardiology-rebuild-10-018",
+        "cardiology-rebuild-10-019",
+        "cardiology-rebuild-10-020",
+        "cardiology-rebuild-10-021",
+        "cardiology-rebuild-10-022",
+        "cardiology-rebuild-10-023"
+      ]
+    },
+    {
+      "section": "Medical management",
+      "sourceParagraphRange": [
+        112,
+        144
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-024",
+        "cardiology-rebuild-10-025",
+        "cardiology-rebuild-10-026",
+        "cardiology-rebuild-10-027",
+        "cardiology-rebuild-10-028",
+        "cardiology-rebuild-10-029",
+        "cardiology-rebuild-10-030",
+        "cardiology-rebuild-10-031",
+        "cardiology-rebuild-10-032",
+        "cardiology-rebuild-10-033",
+        "cardiology-rebuild-10-034",
+        "cardiology-rebuild-10-035",
+        "cardiology-rebuild-10-036",
+        "cardiology-rebuild-10-037",
+        "cardiology-rebuild-10-038",
+        "cardiology-rebuild-10-039",
+        "cardiology-rebuild-10-040",
+        "cardiology-rebuild-10-041",
+        "cardiology-rebuild-10-042",
+        "cardiology-rebuild-10-043"
+      ]
+    },
+    {
+      "section": "Surgery and neurological complications",
+      "sourceParagraphRange": [
+        145,
+        161
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-044",
+        "cardiology-rebuild-10-045",
+        "cardiology-rebuild-10-046",
+        "cardiology-rebuild-10-047",
+        "cardiology-rebuild-10-048",
+        "cardiology-rebuild-10-049",
+        "cardiology-rebuild-10-050",
+        "cardiology-rebuild-10-051",
+        "cardiology-rebuild-10-055"
+      ]
+    },
+    {
+      "section": "Complications and prognosis",
+      "sourceParagraphRange": [
+        162,
+        171
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-014",
+        "cardiology-rebuild-10-016",
+        "cardiology-rebuild-10-044",
+        "cardiology-rebuild-10-045",
+        "cardiology-rebuild-10-046",
+        "cardiology-rebuild-10-049",
+        "cardiology-rebuild-10-050",
+        "cardiology-rebuild-10-051",
+        "cardiology-rebuild-10-052",
+        "cardiology-rebuild-10-053",
+        "cardiology-rebuild-10-056"
+      ]
+    },
+    {
+      "section": "Prevention and follow-up",
+      "sourceParagraphRange": [
+        172,
+        194
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-062",
+        "cardiology-rebuild-10-063",
+        "cardiology-rebuild-10-064",
+        "cardiology-rebuild-10-065"
+      ]
+    },
+    {
+      "section": "Clinical distinctions",
+      "sourceParagraphRange": [
+        195,
+        214
+      ],
+      "questionIds": [
+        "cardiology-rebuild-10-004",
+        "cardiology-rebuild-10-045",
+        "cardiology-rebuild-10-046",
+        "cardiology-rebuild-10-047",
+        "cardiology-rebuild-10-055",
+        "cardiology-rebuild-10-062",
+        "cardiology-rebuild-10-065"
+      ]
+    }
+  ],
+  "remainingDecisions": [],
+  "sourceCorrections": [
+    "Duke fever criterion is >38°C; do not copy the source ≥38°C wording.",
+    "Body-lice/housing exposure points to B. quintana; distinguish cat/flea-associated B. henselae.",
+    "Microbial rankings vary by cohort and acquisition; avoid universal frequency claims.",
+    "Keep AHA and ESC nondental prophylaxis and postoperative-duration approaches explicitly named."
+  ],
+  "remainingReleaseWork": [
+    "Install, verify runtime readback, commit and push."
+  ],
+  "resolvedGaps": [
+    {
+      "topic": "Vegetation pathogenesis and previously normal valves",
+      "sourceParagraphs": [
+        11,
+        17
+      ],
+      "decision": "Distinguish endothelial-injury/platelet–fibrin adhesion sequence from S. aureus capacity to infect previously normal valves.",
+      "questionId": "cardiology-rebuild-10-066"
+    },
+    {
+      "topic": "Peripheral clinical signs",
+      "sourceParagraphs": [
+        51,
+        56
+      ],
+      "decision": "Differentiate Janeway vascular lesions, Osler immune manifestations, Roth spots and nonspecific splinter hemorrhages.",
+      "questionId": "cardiology-rebuild-10-067"
+    },
+    {
+      "topic": "Aspergillus endocarditis",
+      "sourceParagraphs": [
+        43,
+        44
+      ],
+      "decision": "Recognize culture-negative fungal prosthetic infection with embolic disease; tissue diagnosis and antifungal plus surgical strategy.",
+      "questionId": "cardiology-rebuild-10-068"
+    },
+    {
+      "topic": "Prognostic assessment",
+      "sourceParagraphs": [
+        169,
+        171
+      ],
+      "decision": "Integrate HF, invasive infection, persistent bacteremia and renal/neurological injury rather than equating culture clearance with low risk.",
+      "questionId": "cardiology-rebuild-10-069"
+    }
+  ]
+}
