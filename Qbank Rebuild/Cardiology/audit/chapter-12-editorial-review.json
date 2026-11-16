@@ -1,7 +1,7 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "0a55ae57588a22ba87ae358f2aaddb50fba571376d504cce3d7659a96d8fc472",
+  "bankSha256": "86a5893ceb428f98f5495683aa7868c492932a633ca5be90f75db70a1d813fce",
   "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open.",
   "findings": [
     {
@@ -11,13 +11,15 @@
     },
     {
       "questionId": "cardiology-rebuild-03-047",
-      "action": "Revise severe-failure waiting distractor; audit original-question revision hashes before release.",
-      "status": "pending"
+      "action": "Removed explicit balloon-suitability giveaway and replaced severe-failure waiting choice with transcatheter pulmonary valve replacement; all representations updated and original/revised hashes audited.",
+      "status": "revised",
+      "source": "https://doi.org/10.1161/CIR.0000000000001402"
     },
     {
       "questionId": "cardiology-rebuild-03-048",
-      "action": "Improve arbitrary numerical waiting thresholds and balance option specificity; audit original-question revision hashes.",
-      "status": "pending"
+      "action": "Replaced arbitrary delay thresholds with competing serial surveillance, medication-first and EP-first pathways; shortened correct strategy and retained rechecked 2025 replacement criteria. Original/revised hashes audited.",
+      "status": "revised",
+      "source": "https://doi.org/10.1161/CIR.0000000000001402"
     },
     {
       "questionId": "cardiology-rebuild-12-024",

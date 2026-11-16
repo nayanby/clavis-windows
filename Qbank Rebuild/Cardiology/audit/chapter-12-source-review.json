@@ -358,7 +358,7 @@
   ],
   "nextWork": "Complete whole-chapter clinical, explanation, distractor and source-coverage review of all 55 authored questions before release; no new Chapter 12 questions are installed yet.",
   "limitations": [
-    "Four transferred questions retained verbatim with their original IDs.",
+    "Four transferred IDs retained: two questions are verbatim and two pulmonary-valve questions have hash-audited editorial revisions; runtime still contains all four original versions until chapter release.",
     "New content has author source checks, not independent clinician review.",
     "The 55-question plan is provisional and does not establish completeness."
   ]

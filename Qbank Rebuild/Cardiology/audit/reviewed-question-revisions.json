@@ -57,6 +57,45 @@
         "https://academic.oup.com/eurheartj/article/45/38/3912/7741010"
       ],
       "independentClinicianReview": false
+    },
+    {
+      "questionId": "cardiology-rebuild-03-047",
+      "status": "author_source_checked",
+      "reviewedAt": "2026-11-16",
+      "reason": "Replace giveaway waiting strategies with competing procedures or assessment sequences, retaining the independently rechecked 2025 guideline answer.",
+      "originalSha256": "6f1fd7d45284253193532ff8e35b505b0c286d6ddf5e9a657d419d06ab1e65e1",
+      "revisedSha256": "c1b235bb00828dcb6b2018683d4e2414de30575d78f365ae5f32b593fa9e6b02",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationTeaching",
+        "options",
+        "question",
+        "sourceCheckedAt"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/CIR.0000000000001402"
+      ],
+      "independentClinicianReview": false
+    },
+    {
+      "questionId": "cardiology-rebuild-03-048",
+      "status": "author_source_checked",
+      "reviewedAt": "2026-11-16",
+      "reason": "Replace giveaway waiting strategies with competing procedures or assessment sequences, retaining the independently rechecked 2025 guideline answer.",
+      "originalSha256": "528c6ffaa48d4fa774e67b9e7a5c0c1bc1f4fe9da0aa88da86b30d34df590f57",
+      "revisedSha256": "ca178d8564615c940442638f24b69382f9f7828b9bf1b5dfb899071f677b4687",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationTeaching",
+        "options",
+        "sourceCheckedAt"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/CIR.0000000000001402"
+      ],
+      "independentClinicianReview": false
     }
   ]
 }
