@@ -1,7 +1,7 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "bbaa3e352292c99de31773be005df23137498fde412a56830053d19895ec5d21",
+  "bankSha256": "faf20185ce08839169c883172bfd1575997b4ae2860a7c532941ed197b7a86c9",
   "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open.",
   "findings": [
     {
@@ -137,9 +137,8 @@
     }
   ],
   "remaining": [
-    "Complete concise structured rewrite for remaining 48 questions under the user's revised preference.",
-    "Validate and render the completed chapter once; resolve application theme without importing arbitrary CSS.",
-    "Seal, install and verify app readback, then commit and push."
+    "Verify app rendering of concise bullets, ordered lists, tables and decision flows.",
+    "Seal release review, install with runtime readback, then commit and push."
   ],
   "sourceCoverageReview": {
     "status": "all_source_sections_read_final_review_pending",
@@ -185,26 +184,89 @@
     ]
   },
   "renderReview": {
-    "status": "stale_after_concise_rewrite",
+    "status": "offline_html_css_passed",
     "report": "chapter-12-render-review.json",
-    "visualReview": "Wide and narrow previews inspected; no clipped text in corrected captures.",
-    "limitation": "First 390px requested capture was cropped by Chrome minimum 500px layout; replaced with verified 540px capture (518px content viewport). App theme override remains unresolved."
+    "limitation": "App theme integration remains to be verified."
   },
   "conciseRewrite": {
-    "status": "in_progress",
+    "status": "complete",
     "completedQuestionIds": [
+      "cardiology-rebuild-12-050",
+      "cardiology-rebuild-01-015",
+      "cardiology-rebuild-12-049",
       "cardiology-rebuild-12-001",
       "cardiology-rebuild-12-002",
       "cardiology-rebuild-12-003",
-      "cardiology-rebuild-12-004",
       "cardiology-rebuild-12-005",
+      "cardiology-rebuild-01-048",
+      "cardiology-rebuild-12-004",
       "cardiology-rebuild-12-006",
-      "cardiology-rebuild-12-007"
+      "cardiology-rebuild-12-007",
+      "cardiology-rebuild-12-008",
+      "cardiology-rebuild-12-009",
+      "cardiology-rebuild-12-010",
+      "cardiology-rebuild-12-011",
+      "cardiology-rebuild-12-012",
+      "cardiology-rebuild-12-013",
+      "cardiology-rebuild-12-014",
+      "cardiology-rebuild-12-015",
+      "cardiology-rebuild-12-016",
+      "cardiology-rebuild-12-017",
+      "cardiology-rebuild-12-018",
+      "cardiology-rebuild-12-019",
+      "cardiology-rebuild-03-047",
+      "cardiology-rebuild-12-020",
+      "cardiology-rebuild-12-021",
+      "cardiology-rebuild-12-022",
+      "cardiology-rebuild-03-048",
+      "cardiology-rebuild-12-023",
+      "cardiology-rebuild-12-024",
+      "cardiology-rebuild-12-025",
+      "cardiology-rebuild-12-026",
+      "cardiology-rebuild-12-027",
+      "cardiology-rebuild-12-028",
+      "cardiology-rebuild-12-029",
+      "cardiology-rebuild-12-030",
+      "cardiology-rebuild-12-031",
+      "cardiology-rebuild-12-032",
+      "cardiology-rebuild-12-033",
+      "cardiology-rebuild-12-034",
+      "cardiology-rebuild-12-035",
+      "cardiology-rebuild-12-036",
+      "cardiology-rebuild-12-037",
+      "cardiology-rebuild-12-038",
+      "cardiology-rebuild-12-039",
+      "cardiology-rebuild-12-040",
+      "cardiology-rebuild-12-041",
+      "cardiology-rebuild-12-042",
+      "cardiology-rebuild-12-043",
+      "cardiology-rebuild-12-051",
+      "cardiology-rebuild-12-044",
+      "cardiology-rebuild-12-045",
+      "cardiology-rebuild-12-046",
+      "cardiology-rebuild-12-047",
+      "cardiology-rebuild-12-048"
     ],
     "totalChapterQuestions": 55,
-    "teachingBulletWordsBefore": 1800,
-    "teachingBulletWordsAfter": 673,
-    "preserved": "Stems, options, answer positions and references retained; distractor explanations shortened.",
-    "next": "Complete all remaining explanations in a consolidated pass before final validation/render and release."
+    "teachingBulletWordsBeforeThisBatch": 12231,
+    "teachingBulletWordsAfter": 5387,
+    "preserved": "All stems, options, answer positions and references retained.",
+    "validation": {
+      "questions": 55,
+      "answerDistribution": {
+        "A": 14,
+        "B": 14,
+        "C": 14,
+        "D": 13
+      },
+      "minimumExplanationWords": 111,
+      "distractorRationales": 159,
+      "questionStyles": {
+        "clinical_scenario": 49,
+        "direct": 6
+      },
+      "status": "passed"
+    },
+    "next": "App display integration and final release review before installation."
   }
 }

@@ -690,7 +690,7 @@
           "C": 14,
           "D": 13
         },
-        "minimumExplanationWords": 210,
+        "minimumExplanationWords": 138,
         "distractorRationales": 159,
         "questionStyles": {
           "clinical_scenario": 49,

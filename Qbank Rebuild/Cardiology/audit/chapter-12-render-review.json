@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "scope": "Bank-provided offline HTML and CSS, not application theme overrides",
-  "bankSha256": "ffa167eb489668b1d75d901d34d5e4b46a48040323f0e271ecf1ad58be1f6650",
+  "bankSha256": "faf20185ce08839169c883172bfd1575997b4ae2860a7c532941ed197b7a86c9",
   "results": [
     {
       "status": "passed",

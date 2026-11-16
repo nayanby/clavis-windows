@@ -62,12 +62,13 @@
       "questionId": "cardiology-rebuild-03-047",
       "status": "author_source_checked",
       "reviewedAt": "2026-11-16",
-      "reason": "Replace giveaway waiting strategies with competing procedures or assessment sequences, retaining the independently rechecked 2025 guideline answer. Added Noonan-associated dysplasia and respiratory behavior of a pulmonary ejection click.",
+      "reason": "Replace giveaway waiting strategies with competing procedures or assessment sequences, retaining the independently rechecked 2025 guideline answer. Added Noonan-associated dysplasia and respiratory behavior of a pulmonary ejection click. Condensed teaching into structured bullets; stem, options, key and references preserved.",
       "originalSha256": "6f1fd7d45284253193532ff8e35b505b0c286d6ddf5e9a657d419d06ab1e65e1",
-      "revisedSha256": "516403f8dcafcd8555a305c72e805fd9ec7c93320c148311c43696d54c9ea5be",
+      "revisedSha256": "32ae09e0fd5acfb2355fbbcb0437072a3a0913ffb3997ae54249106b9b934e35",
       "changedFields": [
         "explanation",
         "explanationHtml",
+        "explanationStyle",
         "explanationTeaching",
         "options",
         "question",
@@ -84,12 +85,13 @@
       "questionId": "cardiology-rebuild-03-048",
       "status": "author_source_checked",
       "reviewedAt": "2026-11-16",
-      "reason": "Replace giveaway waiting strategies with competing procedures or assessment sequences, retaining the independently rechecked 2025 guideline answer.",
+      "reason": "Replace giveaway waiting strategies with competing procedures or assessment sequences, retaining the independently rechecked 2025 guideline answer. Condensed teaching into structured bullets; stem, options, key and references preserved.",
       "originalSha256": "528c6ffaa48d4fa774e67b9e7a5c0c1bc1f4fe9da0aa88da86b30d34df590f57",
-      "revisedSha256": "ca178d8564615c940442638f24b69382f9f7828b9bf1b5dfb899071f677b4687",
+      "revisedSha256": "86bfd8d264e09aa4fa4244fc6d6988428d7415f52a16f5cf4379a9346d3f726a",
       "changedFields": [
         "explanation",
         "explanationHtml",
+        "explanationStyle",
         "explanationTeaching",
         "options",
         "sourceCheckedAt"
@@ -98,6 +100,43 @@
         "https://doi.org/10.1161/CIR.0000000000001402"
       ],
       "independentClinicianReview": false
+    },
+    {
+      "questionId": "cardiology-rebuild-01-015",
+      "originalSha256": "73808b4d4fbbd305deb05314d58f31762e0414b0f41c3bef20d230867709c1d3",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1016/j.jcin.2021.12.020"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "4162826cd566273ab843b08cd43fd67e70f27023fd5ebaf2ad5ed96fddd38ea2",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-01-048",
+      "originalSha256": "3c07784ac9c57bc8c1149fdaf0a3d6eba5692db8781f8ee0350ded38374fafe1",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://www.journalofcmr.com/article/S1097-6647%2824%2901089-5/fulltext",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7066763/"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "b34ab7e6732849b91642c373bc916877d1f7d4c5c7d4c2afedccf04eed7b7a31",
+      "reviewedAt": "2026-11-16",
+      "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
     }
   ]
 }

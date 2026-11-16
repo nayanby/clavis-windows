@@ -123,10 +123,18 @@ def apply(rows):
        'Surgery helps unsuitable device anatomy or associated lesions, but a complete patch removes the same LA decompression route.',
        'PAH drugs target precapillary pulmonary vascular disease. High wedge pressure with low PVR instead identifies a left-heart filling problem.']),
     }
+    from cardiology_12_concise_shunts_outflow import edits as shunt_edits
+    edits.update(shunt_edits)
+    from cardiology_12_concise_complex import edits as complex_edits
+    edits.update(complex_edits)
+    from cardiology_12_concise_general import edits as general_edits
+    edits.update(general_edits)
     for number,edit in edits.items():
         row=rows[number-1]
         row['sections']=edit['sections']
-        row['others']=[(option,reason) for (option,_),reason in zip(row['others'],edit['reasons'])]
+        if 'reasons' in edit:
+            assert len(edit['reasons'])==3
+            row['others']=[(option,reason) for (option,_),reason in zip(row['others'],edit['reasons'])]
         row['explanationStyle']='concise_structured'
         for key in ['orderedSections','flow']:
             if key in edit:row[key]=edit[key]
