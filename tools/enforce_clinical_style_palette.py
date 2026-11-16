@@ -94,31 +94,19 @@ def character_role(run, styles):
     sid = val(props.find('w:rStyle', NS))
     style = styles.get(sid)
     labels = [canonical(sid), canonical(val(style.find('w:name', NS))) if style is not None else '']
-    if any('subtleemphasis' in label or 'hyperlink' in label or 'question' in label for label in labels):
+    if any('subtleemphasis' in label or 'hyperlink' in label for label in labels):
         return 'SubtleEmphasis'
     if any(label == 'emphasis' or 'intenseemphasis' in label for label in labels):
         return 'Emphasis'
-    if any('heading' in label or 'boldside' in label for label in labels):
-        return 'SubtleEmphasis' if any('side3' in label or 'heading3' in label for label in labels) else 'Emphasis'
-    color = props.find('w:color', NS)
-    if color is None:
-        color = inherited(styles, sid, 'w:rPr/w:color')
-    color_value = val(color).upper()
-    if color_value in BLUE:
-        return 'SubtleEmphasis'
-    if color_value not in NEUTRAL:
-        return 'Emphasis'
-    direct_emphasis = any(true(props.find(f'w:{name}', NS)) for name in ['b', 'bCs', 'i', 'iCs', 'u'])
-    style_emphasis = any(true(inherited(styles, sid, f'w:rPr/{name}')) for name in ['b', 'i'])
-    highlighted = props.find('w:highlight', NS) is not None or props.find('w:shd', NS) is not None
-    if direct_emphasis or style_emphasis or highlighted or any('strong' in label for label in labels):
-        return 'SubtleEmphasis'
     return None
 
 
 def clean_run_properties(props, role, table, header, diagram=False):
     # Keep language, direction, fields, revision metadata and super/subscript.
-    keep = {'lang', 'rtl', 'cs', 'vertAlign', 'noProof', 'vanish', 'specVanish', 'ins', 'del', 'rPrChange'}
+    keep = {'lang', 'rtl', 'cs', 'vertAlign', 'noProof', 'vanish', 'specVanish', 'ins', 'del', 'rPrChange',
+            'b', 'bCs', 'i', 'iCs', 'u', 'strike', 'dstrike', 'caps', 'smallCaps', 'highlight', 'shd'}
+    if role is None:
+        keep.add('color')
     font = props.find('w:rFonts', NS)
     if font is not None and any(t in v.casefold() for v in font.attrib.values()
                                 for t in ['symbol', 'wingdings', 'cambria math']):
@@ -196,6 +184,13 @@ def normalize(source, destination, reference):
                 rpr = E.Element(f'{{{W}}}rPr'); run.insert(0, rpr)
             if rpr.find('w:rStyle', NS) is not None and val(rpr.find('w:rStyle', NS)).endswith(('FootnoteReference', 'EndnoteReference')):
                 child(rpr, 'vertAlign').set(f'{{{W}}}val', 'superscript')
+            if not role and not styled_paragraph:
+                run_style = val(rpr.find('w:rStyle', NS))
+                for name in ('b', 'bCs', 'i', 'iCs', 'u', 'strike', 'dstrike', 'caps', 'smallCaps', 'color', 'highlight', 'shd'):
+                    if rpr.find(f'w:{name}', NS) is None:
+                        source_property = inherited(styles, run_style, f'w:rPr/{name}')
+                        if source_property is not None:
+                            rpr.append(deepcopy(source_property))
             clean_run_properties(rpr, role, table, header, diagram)
             if role:
                 used_r[role] += 1
