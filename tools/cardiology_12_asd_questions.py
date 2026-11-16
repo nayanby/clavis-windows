@@ -64,7 +64,7 @@ add(TOPIC,'Ventricular Compliance and Atrial Shunt Magnitude',
    'Increasing RV stiffness or pulmonary vascular resistance can move the physiology in the opposite direction. A single shunt ratio therefore does not describe all future behavior of an unrepaired lesion.'),
   S('Why Closure Requires Left-Heart Assessment',
    '**An ASD can partly decompress a high-pressure left atrium.** Eliminating that route in significant LV filling disease can raise left atrial pressure and precipitate congestion.',
-   'Assess LV diastolic disease, AV-valve pathology, blood pressure and volume status before closure. In selected patients with suspected high filling pressure, invasive assessment and temporary balloon occlusion can clarify tolerance of closing the communication.',
+   'Assess LV diastolic disease, AV-valve pathology, blood pressure and volume status before closure. Selected invasive assessment may include balloon occlusion, but the 2025 guideline gives it a limited Class 2b role. It can overestimate the actual postclosure wedge-pressure rise and is not a validated stand-alone pass/fail test.',
    'Treat reversible left-heart contributors and use an ACHD team to consider complete closure, a fenestrated strategy or deferral according to the findings. Do not apply the uncomplicated low-PVR closure pathway without checking its left-heart qualifications. Conversely, mild age-related LV abnormalities do not by themselves prohibit intervention. The decision requires the actual pressure response and clinical balance rather than an age cutoff or the assumption that every large shunt must be fully closed.')],
  ['ESC2020','ACHD2025'])
 

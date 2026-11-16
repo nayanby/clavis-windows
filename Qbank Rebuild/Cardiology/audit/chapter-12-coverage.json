@@ -4,9 +4,9 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 8,
+  "authoredQuestions": 19,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 4,
+  "newDraftQuestions": 15,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
@@ -23,7 +23,7 @@
     {
       "section": "Atrial septal defects and atrioventricular septal anatomy",
       "plannedQuestions": 8,
-      "authoredQuestions": 5,
+      "authoredQuestions": 8,
       "decisions": [
         "Explain the pulmonary flow murmur and fixed S2 splitting",
         "Recognize partial AV septal anatomy from axis conduction and AV-valve findings",
@@ -38,19 +38,19 @@
     {
       "section": "Ventricular septal defects",
       "plannedQuestions": 5,
-      "authoredQuestions": 0,
+      "authoredQuestions": 5,
       "decisions": [
         "Distinguish restrictive from nonrestrictive VSD physiology",
         "Recognize aortic cusp prolapse and regurgitation associated with a VSD",
         "Select closure according to LV loading shunt magnitude and pulmonary vascular status",
-        "Assess recurrent endocarditis as an intervention consideration in a small defect",
+        "Distinguish uncertain VSD treat-and-repair benefit from the ASD recommendation",
         "Recognize residual shunt and conduction complications after repair"
       ]
     },
     {
       "section": "Patent ductus arteriosus",
       "plannedQuestions": 3,
-      "authoredQuestions": 0,
+      "authoredQuestions": 3,
       "decisions": [
         "Interpret the continuous murmur and systemic-to-pulmonary runoff",
         "Recognize differential cyanosis and its ductal physiology",
@@ -178,6 +178,11 @@
       "decision": "Interpret relative ventricular compliance and atrial shunt magnitude"
     },
     {
+      "questionId": "cardiology-rebuild-12-005",
+      "section": "Atrial septal defects and atrioventricular septal anatomy",
+      "decision": "Map sinus venosus communications and anomalous pulmonary venous connections"
+    },
+    {
       "questionId": "cardiology-rebuild-01-048",
       "section": "Atrial septal defects and atrioventricular septal anatomy",
       "decision": "Use CMR for reproducible RV volumes and pulmonary-systemic flow assessment"
@@ -186,6 +191,56 @@
       "questionId": "cardiology-rebuild-12-004",
       "section": "Atrial septal defects and atrioventricular septal anatomy",
       "decision": "Apply the 2025 uncomplicated ASD closure recommendation with its PVR and LV qualifications"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-006",
+      "section": "Atrial septal defects and atrioventricular septal anatomy",
+      "decision": "Assess elevated PVR without assuming every large ASD should be closed"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-007",
+      "section": "Atrial septal defects and atrioventricular septal anatomy",
+      "decision": "Assess left-heart filling tolerance before an appropriate selected closure strategy"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-008",
+      "section": "Ventricular septal defects",
+      "decision": "Distinguish restrictive from nonrestrictive VSD physiology"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-009",
+      "section": "Ventricular septal defects",
+      "decision": "Recognize aortic cusp prolapse and regurgitation associated with a VSD"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-010",
+      "section": "Ventricular septal defects",
+      "decision": "Select closure according to LV loading shunt magnitude and pulmonary vascular status"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-011",
+      "section": "Ventricular septal defects",
+      "decision": "Distinguish uncertain VSD treat-and-repair benefit from the ASD recommendation"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-012",
+      "section": "Ventricular septal defects",
+      "decision": "Recognize residual shunt and conduction complications after repair"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-013",
+      "section": "Patent ductus arteriosus",
+      "decision": "Interpret the continuous murmur and systemic-to-pulmonary runoff"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-014",
+      "section": "Patent ductus arteriosus",
+      "decision": "Recognize differential cyanosis and its ductal physiology"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-015",
+      "section": "Patent ductus arteriosus",
+      "decision": "Select adult PDA closure according to left-heart load and pulmonary resistance"
     },
     {
       "questionId": "cardiology-rebuild-03-047",

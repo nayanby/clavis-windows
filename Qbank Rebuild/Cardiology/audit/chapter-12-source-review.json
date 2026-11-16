@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 8,
+  "authoredQuestions": 19,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -26,13 +26,25 @@
   "initialSourceFindings": [
     "The source ASD PVR categories must not be attributed unqualified to the newer 2025 ACC/AHA framework.",
     "The source statement that every sinus venosus lesion requires surgery needs qualification for selected modern transcatheter approaches.",
-    "Detailed current AP stages should be checked against the official 2025 classification, not the simplified source summary."
+    "Detailed current AP stages should be checked against the official 2025 classification, not the simplified source summary.",
+    "Balloon occlusion is Class 2b in 2025 and can overestimate the actual postclosure wedge-pressure response; question 003 and the new LV-filling assessment question include this limitation."
   ],
   "reviewedNewQuestionIds": [
     "cardiology-rebuild-12-001",
     "cardiology-rebuild-12-002",
     "cardiology-rebuild-12-003",
-    "cardiology-rebuild-12-004"
+    "cardiology-rebuild-12-004",
+    "cardiology-rebuild-12-005",
+    "cardiology-rebuild-12-006",
+    "cardiology-rebuild-12-007",
+    "cardiology-rebuild-12-008",
+    "cardiology-rebuild-12-009",
+    "cardiology-rebuild-12-010",
+    "cardiology-rebuild-12-011",
+    "cardiology-rebuild-12-012",
+    "cardiology-rebuild-12-013",
+    "cardiology-rebuild-12-014",
+    "cardiology-rebuild-12-015"
   ],
   "sources": [
     {
@@ -54,25 +66,114 @@
     {
       "label": "Merck Manual Professional: cardiac auscultation",
       "url": "https://www.merckmanuals.com/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiac-auscultation"
+    },
+    {
+      "label": "Covered-stent sinus venosus correction: international registry, 2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11913232/"
+    },
+    {
+      "label": "Treat-and-repair strategy for ASD with PAH: multicentre cohort",
+      "url": "https://doi.org/10.1136/heartjnl-2021-319096"
+    },
+    {
+      "label": "Balloon occlusion versus actual ASD closure hemodynamics, 2023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36640419/"
+    },
+    {
+      "label": "Sildenafil PAH prescribing information, FDA, 2025",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/203109s019lbl.pdf"
+    },
+    {
+      "label": "Macitentan prescribing information, DailyMed",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a654726e-f12f-4b03-8bfe-727f26761dce"
+    },
+    {
+      "label": "Merck Manual Professional: ventricular septal defect",
+      "url": "https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/ventricular-septal-defect-vsd"
+    },
+    {
+      "label": "Diagnosis and Management of Ventricular Septal Defects, 2024",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11607469/"
+    },
+    {
+      "label": "ACC clinical practice algorithm for VSD follow-up, updated 2026",
+      "url": "https://www.acc.org/latest-in-cardiology/articles/2023/05/30/10/47/clinical-practice-algorithm-for-the-follow-up-of-unrepaired-and-repaired-ventricular-septal-defects"
+    },
+    {
+      "label": "Merck Manual Professional: patent ductus arteriosus",
+      "url": "https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/patent-ductus-arteriosus-pda"
     }
   ],
   "validation": {
-    "questions": 8,
+    "questions": 19,
     "answerDistribution": {
-      "A": 2,
-      "B": 2,
-      "C": 2,
-      "D": 2
+      "A": 5,
+      "B": 5,
+      "C": 5,
+      "D": 4
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 21,
+    "distractorRationales": 51,
     "questionStyles": {
-      "direct": 1,
-      "clinical_scenario": 7
+      "direct": 3,
+      "clinical_scenario": 16
     },
     "status": "passed"
   },
-  "nextWork": "Complete atrial-level shunt coverage, then progress through VSD and PDA before the obstructive and complex lesions.",
+  "subsectionChecks": [
+    {
+      "section": "Atrial shunts",
+      "questionIds": [
+        "cardiology-rebuild-12-001",
+        "cardiology-rebuild-12-002",
+        "cardiology-rebuild-12-003",
+        "cardiology-rebuild-12-004",
+        "cardiology-rebuild-12-005",
+        "cardiology-rebuild-12-006",
+        "cardiology-rebuild-12-007"
+      ],
+      "status": "authored_cases_source_checked",
+      "findings": [
+        "Caval step-up localizes anomalous venous entry; it does not alone prove an ASD.",
+        "Selected superior sinus venosus covered-stent repair requires mapping and unobstructed pulmonary venous redirection.",
+        "ASD PVR 5–8 falling below 5 with PAH treatment is a qualified specialist pathway, not a reason to promise cessation of PAH therapy.",
+        "High resting left-heart filling pressure is distinct from low-PVR eligibility; balloon-test predictive limits are explicit."
+      ]
+    },
+    {
+      "section": "Ventricular shunts",
+      "questionIds": [
+        "cardiology-rebuild-12-008",
+        "cardiology-rebuild-12-009",
+        "cardiology-rebuild-12-010",
+        "cardiology-rebuild-12-011",
+        "cardiology-rebuild-12-012"
+      ],
+      "status": "authored_cases_source_checked",
+      "findings": [
+        "Independent calculation: 125 - 4*(4.5**2) = 44 mmHg RV systolic pressure under the stated assumptions.",
+        "Progressive VSD-related aortic regurgitation is a separate assessment indication despite a small shunt.",
+        "VSD volume-load closure evaluation requires attributable important/progressive LV enlargement as well as the flow assessment.",
+        "2025 VSD treat-and-repair usefulness is uncertain in the specified higher-PVR responder group; the ASD recommendation is not transferred.",
+        "Perimembranous closure has a proximal AV-conduction-axis risk distinct from an isolated fascicular lesion."
+      ]
+    },
+    {
+      "section": "Ductal shunts",
+      "questionIds": [
+        "cardiology-rebuild-12-013",
+        "cardiology-rebuild-12-014",
+        "cardiology-rebuild-12-015"
+      ],
+      "status": "authored_cases_source_checked",
+      "findings": [
+        "Left-to-right ductal flow primarily volume-loads LA/LV; a continuous murmur depends on the pressure gradient.",
+        "Right-to-left ductal entry beyond the usual left subclavian artery explains differential cyanosis in usual anatomy.",
+        "A suitable isolated adult PDA with attributable left-heart enlargement and low PVR favors transcatheter closure; pulmonary vascular disease and test-occlusion limits are qualified."
+      ]
+    }
+  ],
+  "nextWork": "Atrial, ventricular and ductal shunt decisions are drafted; finish subsection review and then progress through coarctation and congenital outflow lesions.",
   "limitations": [
     "Four transferred questions retained verbatim with their original IDs.",
     "New content has author source checks, not independent clinician review.",

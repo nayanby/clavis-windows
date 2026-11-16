@@ -7,6 +7,12 @@ from xml.etree import ElementTree as ET
 
 from qbank_json_chapters import ROOT, DATA, save, validate, highlight_medical_values
 from cardiology_12_asd_questions import rows, REFERENCES
+from cardiology_12_asd_advanced import rows as advanced_asd_rows, REFERENCES as advanced_asd_references
+rows.extend(advanced_asd_rows)
+REFERENCES.update(advanced_asd_references)
+from cardiology_12_vsd_pda_questions import rows as vsd_pda_rows, REFERENCES as vsd_pda_references
+rows.extend(vsd_pda_rows)
+REFERENCES.update(vsd_pda_references)
 
 DOC='12. Adult Congenital Heart Diseases'
 PREFIX='cardiology-rebuild-12-'
@@ -29,7 +35,7 @@ SECTIONS=[
   'Distinguish restrictive from nonrestrictive VSD physiology',
   'Recognize aortic cusp prolapse and regurgitation associated with a VSD',
   'Select closure according to LV loading shunt magnitude and pulmonary vascular status',
-  'Assess recurrent endocarditis as an intervention consideration in a small defect',
+  'Distinguish uncertain VSD treat-and-repair benefit from the ASD recommendation',
   'Recognize residual shunt and conduction complications after repair']),
  ('Patent ductus arteriosus',[
   'Interpret the continuous murmur and systemic-to-pulmonary runoff',
@@ -85,6 +91,9 @@ ASSIGNMENTS={
  'cardiology-rebuild-01-015':(0,1),
  PREFIX+'001':(1,0), PREFIX+'002':(1,1), PREFIX+'003':(1,2),
  'cardiology-rebuild-01-048':(1,4), PREFIX+'004':(1,5),
+ PREFIX+'005':(1,3), PREFIX+'006':(1,6), PREFIX+'007':(1,7),
+ PREFIX+'008':(2,0), PREFIX+'009':(2,1), PREFIX+'010':(2,2), PREFIX+'011':(2,3), PREFIX+'012':(2,4),
+ PREFIX+'013':(3,0), PREFIX+'014':(3,1), PREFIX+'015':(3,2),
  'cardiology-rebuild-03-047':(5,0), 'cardiology-rebuild-03-048':(6,1),
 }
 
@@ -135,9 +144,16 @@ if __name__=='__main__':
             headings.append(''.join(t.text or '' for t in p.findall('.//w:t',ns)))
     write(audit/'chapter-12-source-review.json',dict(chapter=12,document=DOC,status='draft_in_progress',installedNewQuestions=False,
           authoredQuestions=len(bank['questions']),plannedQuestions=planned,sourceDocumentSha256=hashlib.sha256(doc.read_bytes()).hexdigest(),sourceHeadings=headings,
-          initialSourceFindings=['The source ASD PVR categories must not be attributed unqualified to the newer 2025 ACC/AHA framework.','The source statement that every sinus venosus lesion requires surgery needs qualification for selected modern transcatheter approaches.','Detailed current AP stages should be checked against the official 2025 classification, not the simplified source summary.'],
+          initialSourceFindings=['The source ASD PVR categories must not be attributed unqualified to the newer 2025 ACC/AHA framework.','The source statement that every sinus venosus lesion requires surgery needs qualification for selected modern transcatheter approaches.','Detailed current AP stages should be checked against the official 2025 classification, not the simplified source summary.','Balloon occlusion is Class 2b in 2025 and can overestimate the actual postclosure wedge-pressure response; question 003 and the new LV-filling assessment question include this limitation.'],
           reviewedNewQuestionIds=[PREFIX+f'{i:03}' for i in range(1,len(rows)+1)],sources=[dict(label=v[0],url=v[1]) for v in REFERENCES.values()],validation=report,
-          nextWork='Complete atrial-level shunt coverage, then progress through VSD and PDA before the obstructive and complex lesions.',
+          subsectionChecks=[
+           dict(section='Atrial shunts',questionIds=[PREFIX+f'{i:03}' for i in range(1,8)],status='authored_cases_source_checked',
+                findings=['Caval step-up localizes anomalous venous entry; it does not alone prove an ASD.','Selected superior sinus venosus covered-stent repair requires mapping and unobstructed pulmonary venous redirection.','ASD PVR 5–8 falling below 5 with PAH treatment is a qualified specialist pathway, not a reason to promise cessation of PAH therapy.','High resting left-heart filling pressure is distinct from low-PVR eligibility; balloon-test predictive limits are explicit.']),
+           dict(section='Ventricular shunts',questionIds=[PREFIX+f'{i:03}' for i in range(8,13)],status='authored_cases_source_checked',
+                findings=['Independent calculation: 125 - 4*(4.5**2) = 44 mmHg RV systolic pressure under the stated assumptions.','Progressive VSD-related aortic regurgitation is a separate assessment indication despite a small shunt.','VSD volume-load closure evaluation requires attributable important/progressive LV enlargement as well as the flow assessment.','2025 VSD treat-and-repair usefulness is uncertain in the specified higher-PVR responder group; the ASD recommendation is not transferred.','Perimembranous closure has a proximal AV-conduction-axis risk distinct from an isolated fascicular lesion.']),
+           dict(section='Ductal shunts',questionIds=[PREFIX+f'{i:03}' for i in range(13,16)],status='authored_cases_source_checked',
+                findings=['Left-to-right ductal flow primarily volume-loads LA/LV; a continuous murmur depends on the pressure gradient.','Right-to-left ductal entry beyond the usual left subclavian artery explains differential cyanosis in usual anatomy.','A suitable isolated adult PDA with attributable left-heart enlargement and low PVR favors transcatheter closure; pulmonary vascular disease and test-occlusion limits are qualified.'])],
+          nextWork='Atrial, ventricular and ductal shunt decisions are drafted; finish subsection review and then progress through coarctation and congenital outflow lesions.',
           limitations=['Four transferred questions retained verbatim with their original IDs.','New content has author source checks, not independent clinician review.','The 55-question plan is provisional and does not establish completeness.']))
     pp=ROOT/'progress.json';plan=json.loads(pp.read_text(encoding='utf-8'))
     entry=next(e for e in plan['chapters'] if e['subject']=='Cardiology' and e['document']==DOC)
