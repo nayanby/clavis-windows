@@ -2,64 +2,49 @@
   "status": "in_progress",
   "sourceDocumentSha256": "85e0e9abdea9af772704e6d55c98b4ed407d1f7757d29dfae62f76f4bd4bf921",
   "existingCanonicalQuestions": 45,
-  "newDraftQuestions": 15,
+  "newDraftQuestions": 35,
   "provisionalPlannedTotal": 80,
   "countPolicy": "Retain 45 source-matched IDs and add approximately 35 uncovered high-yield decisions; revise after full source and duplicate review, not official examination weightage.",
   "sourceReadStatus": "Partial full-text review; initial whole-document output was truncated and is not counted as a full read.",
   "reviewedSourceRanges": [
     "ECG foundations and opening rhythm sections from initial output",
     "Axis/conduction and chamber/QRS sections, paragraphs 350–584",
-    "Electrolytes/drugs/channelopathies and opening other-disease sections, paragraphs 939–1108"
+    "Electrolytes/drugs/channelopathies and opening other-disease sections, paragraphs 939–1108",
+    "Pacing and other-disease/mimic sections, paragraphs 1130–1225",
+    "Syncope section: initial broad read supplemented by focused paragraphs 1556–1604 after output truncation; management and diagnostic sections read"
   ],
   "sourceSectionsPending": [
     "Remaining rate/rhythm text",
     "Ischemia/infarction",
     "Arrhythmias/emergency rhythms",
     "Remaining pacing/mimics and integrated reporting",
-    "Approach to tachyarrhythmia",
-    "Syncope full section"
+    "Approach to tachyarrhythmia"
   ],
   "sourceFindings": [
     "2026 Fifth Universal Definition and its classical Q-wave criteria independently confirmed in official JACC/AHA/ESC sources.",
-    "Preserved original answer positions are uneven (A8 B5 C12 D20); final 80-question integration permits A20 B20 C20 D20 without changing original keys."
+    "Preserved original answer positions are uneven (A8 B5 C12 D20); final 80-question integration permits A20 B20 C20 D20 without changing original keys.",
+    "Classical OH occurs WITHIN three minutes, not only after three minutes.",
+    "Source statement that seizure loss of consciousness usually lasts over five minutes is misleading; the new explanation distinguishes typical brief convulsions from postictal impairment.",
+    "CSM hypersensitivity is distinguished from symptom-reproducing carotid sinus syndrome."
   ],
-  "plannedNewDecisionsRemaining": [
-    "Therapeutic digoxin effect",
-    "Pacing failure to capture",
-    "Oversensing",
-    "Pacemaker-mediated tachycardia",
-    "Hypothermic J waves",
-    "Wellens pattern",
-    "Exercise-provoked CPVT interpretation",
-    "Convulsive syncope versus seizure",
-    "Classical orthostatic hypotension",
-    "POTS",
-    "Implantable loop recorder selection",
-    "Tilt-test interpretation",
-    "Carotid sinus syndrome",
-    "Reflex counterpressure maneuvers",
-    "Midodrine",
-    "Fludrocortisone safety",
-    "Pacing selected reflex syncope",
-    "Exertional versus postexercise syncope",
-    "Psychogenic pseudosyncope",
-    "Hyperkalemia despite a normal ECG"
-  ],
+  "plannedNewDecisionsRemaining": [],
   "validation": {
-    "questions": 15,
+    "questions": 80,
     "answerDistribution": {
-      "A": 4,
-      "B": 4,
-      "C": 4,
-      "D": 3
+      "A": 20,
+      "B": 20,
+      "C": 20,
+      "D": 20
     },
     "minimumExplanationWords": 100,
-    "distractorRationales": 39,
+    "distractorRationales": 234,
     "questionStyles": {
-      "clinical_scenario": 14,
-      "direct": 1
+      "clinical_scenario": 75,
+      "direct": 5
     },
     "status": "passed"
   },
-  "nextWork": "Read remaining source sections, author the remaining decisions, integrate all 80 questions, compact/review transferred explanations, then render and install."
+  "nextWork": "Complete remaining source read, concise review of 45 transferred explanations and consolidated final clinical/layout review before release.",
+  "integratedCanonicalQuestions": 80,
+  "newDraftIntegrated": true
 }

@@ -8,7 +8,7 @@
   "document": "14. Advanced ECG Interpretation and Electrophysiology",
   "headingText": "Advanced ECG Interpretation and Electrophysiology",
   "targetQuestions": 15,
-  "status": "uninstalled_authoring_draft",
+  "status": "superseded_authoring_snapshot",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Local new-question draft only; existing 45 questions remain in the canonical bank. Final integration and review pending.",
   "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3}",
@@ -1136,5 +1136,6 @@
       "reviewStatus": "draft_pending_final_source_review",
       "explanationStyle": "concise_structured"
     }
-  ]
+  ],
+  "supersededBy": "Cardiology/14. Advanced ECG Interpretation and Electrophysiology.json"
 }

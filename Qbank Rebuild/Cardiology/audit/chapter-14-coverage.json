@@ -1,0 +1,160 @@
+{
+  "status": "draft_in_progress",
+  "plannedQuestions": 80,
+  "authoredQuestions": 80,
+  "existingQuestions": 45,
+  "newDraftQuestions": 35,
+  "countPolicy": "45 retained decisions plus 35 uncovered decisions, provisional until complete source/overlap review; not official examination weightage.",
+  "groups": [
+    "Technical validity, axis, intervals and morphology",
+    "AV conduction and pauses",
+    "Ischemic and pericardial patterns",
+    "Supraventricular mechanisms",
+    "Ventricular mechanisms and inherited electrical patterns",
+    "Metabolic, toxic and temperature effects",
+    "Device ECGs",
+    "Syncope and autonomic assessment"
+  ],
+  "newDecisions": [
+    {
+      "questionId": "cardiology-rebuild-14-001",
+      "title": "Paper Speed and Heart Rate"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-002",
+      "title": "Arm-Electrode Reversal"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-003",
+      "title": "Tremor Artifact Mimicking Tachycardia"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-004",
+      "title": "Refining the Frontal QRS Axis"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-005",
+      "title": "Left Anterior Fascicular Block"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-006",
+      "title": "Bifascicular Block With Long PR"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-007",
+      "title": "Fridericia QT Correction"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-008",
+      "title": "QT Assessment With a Wide QRS"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-009",
+      "title": "Left Atrial Abnormality Versus Interatrial Delay"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-010",
+      "title": "Voltage Criteria and Athletic Remodeling"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-011",
+      "title": "Tall R Wave in V1"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-012",
+      "title": "Pathological Q Waves in the 2026 Universal Definition"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-013",
+      "title": "Hypokalemia and Apparent QT Prolongation"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-014",
+      "title": "Calcium and the ST Segment"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-015",
+      "title": "Sodium-Channel Blocker Cardiotoxicity"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-016",
+      "title": "Therapeutic Digoxin Effect"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-017",
+      "title": "Pacemaker Failure to Capture"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-018",
+      "title": "Pacemaker Oversensing"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-019",
+      "title": "Pacemaker-Mediated Tachycardia"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-020",
+      "title": "Hypothermic J Waves"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-021",
+      "title": "Wellens Pattern During a Pain-Free Interval"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-022",
+      "title": "Exercise-Provoked Polymorphic Arrhythmia With Normal Resting ECG"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-023",
+      "title": "Convulsive Syncope Versus Epileptic Seizure"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-024",
+      "title": "Classical Orthostatic Hypotension"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-025",
+      "title": "Postural Orthostatic Tachycardia Syndrome"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-026",
+      "title": "Monitoring Infrequent Unexplained Syncope"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-027",
+      "title": "Interpreting a Positive Tilt Test"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-028",
+      "title": "Carotid Sinus Hypersensitivity Versus Syndrome"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-029",
+      "title": "Counterpressure Maneuvers in Reflex Syncope"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-030",
+      "title": "Midodrine for Recurrent Vasovagal Syncope"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-031",
+      "title": "Fludrocortisone Safety in Orthostatic Hypotension"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-032",
+      "title": "Pacing Selected Reflex Syncope"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-033",
+      "title": "Syncope During Versus After Exercise"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-034",
+      "title": "Psychogenic Pseudosyncope"
+    },
+    {
+      "questionId": "cardiology-rebuild-14-035",
+      "title": "Hyperkalemia With a Reassuring ECG"
+    }
+  ]
+}
