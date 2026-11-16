@@ -35,7 +35,8 @@ def validate(bank):
             assert {x['optionIndex'] for x in d['otherOptions']}==set(range(4))-{q['correctIndex']}
             assert all(len(x['explanation'].split())>=10 for x in d['otherOptions'])
         assert q['references'] and all(x['url'].startswith('https://') for x in q['references'])
-        assert len(q['explanation'].split())>=180,(q['id'],len(q['explanation'].split()))
+        minimum=80 if q.get('explanationStyle')=='concise_structured' else 180
+        assert len(q['explanation'].split())>=minimum,(q['id'],len(q['explanation'].split()))
         assert '<h2>' in q['explanationHtml'] and '<strong>' in q['explanationHtml']
         # Parse and balance all generated HTML, including nested lists and table wrappers.
         class Check(HTMLParser):
@@ -83,12 +84,17 @@ def save(subject,number,document,rows,refs,source_note,preserved_questions=None,
         sections=[];html=['<h2>'+escape(r['title'])+'</h2><p><strong>Correct answer: '+chr(65+pos)+' — '+escape(r['answer'])+'</strong></p>']
         plain=[r['title'],'Correct answer: '+r['answer']]
         for heading,bullets in r['sections']:
-            html.append('<h3>'+escape(heading)+'</h3><ul>');bs=[];plain.append(heading)
+            list_tag='ol' if heading in r.get('orderedSections',[]) else 'ul'
+            html.append('<h3>'+escape(heading)+'</h3><'+list_tag+'>');bs=[];plain.append(heading)
             for text,children in bullets:
                 html.append('<li>'+rich(text))
                 if children:html.append('<ul>'+''.join('<li>'+rich(x)+'</li>' for x in children)+'</ul>')
                 html.append('</li>');bs.append(dict(text=text,children=children));plain.extend([text,*children])
-            html.append('</ul>');sections.append(dict(heading=heading,bullets=bs))
+            html.append('</'+list_tag+'>');sections.append(dict(heading=heading,bullets=bs))
+            if list_tag=='ol':sections[-1]['listType']='ol'
+        if r.get('flow'):
+            html.append('<h3>Decision Pathway</h3><ol class="decision-flow">'+''.join('<li>'+rich(x)+'</li>' for x in r['flow'])+'</ol>')
+            plain.append(' → '.join(r['flow']))
         tables=[]
         if r['table']:
             headers,values=r['table'];tables=[dict(headers=headers,rows=values)]
@@ -107,12 +113,16 @@ def save(subject,number,document,rows,refs,source_note,preserved_questions=None,
           explanationTeaching=dict(title=r['title'],sections=sections,tables=tables,otherOptions=other),references=references,
           sourceCheckedAt='2026-11-15',reviewStatus='source_checked_not_independently_clinician_reviewed'))
         if r.get('coverageDecision'):qs[-1]['coverageDecision']=r['coverageDecision']
+        if r.get('explanationStyle'):qs[-1]['explanationStyle']=r['explanationStyle']
+        if r.get('flow'):qs[-1]['explanationTeaching']['flow']=r['flow']
     qs.extend(additional)
     first=json.loads((ROOT/'Neurology/01. Neuroanatomy, Clinical Localization & Neurological Examination.json').read_text(encoding='utf-8'))
     bank=dict(schemaVersion=1,folder=subject,subject=subject,chapterOrder=number,topicOrder=1,headingIndex=0,document=document,
       headingText=re.sub(r'^\d+[. ]+','',document),targetQuestions=len(qs),status='chapter_authored',
       authorship='Original educational MCQs; not authenticated NEET-SS past questions',sourceNote=source_note,
       explanationCss=first['explanationCss'],questions=qs)
+    if any(r.get('flow') for r in rows):
+        bank['explanationCss']+=' .decision-flow{display:flex;flex-wrap:wrap;gap:8px;padding-left:24px}.decision-flow li{border:1px solid #bbc4d3;border-radius:4px;padding:7px;margin:3px 12px 3px 0;flex:1 1 150px}.decision-flow li:not(:last-child)::after{content:" →";color:#233D6B;font-weight:bold}'
     report=validate(bank);dest=ROOT/subject/(document+'.json');dest.parent.mkdir(parents=True,exist_ok=True)
     dest.write_text(json.dumps(bank,ensure_ascii=False,indent=2),encoding='utf-8')
     update_plan(subject,number,document,dest,report)

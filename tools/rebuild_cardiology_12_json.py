@@ -37,6 +37,8 @@ REFERENCES.update(general_references)
 from cardiology_12_foundation_questions import rows as foundation_rows, REFERENCES as foundation_references
 rows.extend(foundation_rows)
 REFERENCES.update(foundation_references)
+from cardiology_12_concise import apply as apply_concise_explanations
+apply_concise_explanations(rows)
 
 DOC='12. Adult Congenital Heart Diseases'
 PREFIX='cardiology-rebuild-12-'

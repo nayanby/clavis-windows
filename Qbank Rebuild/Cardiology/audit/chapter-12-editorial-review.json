@@ -1,7 +1,7 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "ffa167eb489668b1d75d901d34d5e4b46a48040323f0e271ecf1ad58be1f6650",
+  "bankSha256": "bbaa3e352292c99de31773be005df23137498fde412a56830053d19895ec5d21",
   "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open.",
   "findings": [
     {
@@ -137,9 +137,9 @@
     }
   ],
   "remaining": [
-    "Finish final clinical release checklist and seal the reviewed question hash.",
-    "Resolve application theme override: JSON-provided CSS passes standalone rendering, but app typography currently uses a different theme and does not read explanationCss.",
-    "Install sealed chapter, verify exact app readback, then commit and push as authorized."
+    "Complete concise structured rewrite for remaining 48 questions under the user's revised preference.",
+    "Validate and render the completed chapter once; resolve application theme without importing arbitrary CSS.",
+    "Seal, install and verify app readback, then commit and push."
   ],
   "sourceCoverageReview": {
     "status": "all_source_sections_read_final_review_pending",
@@ -185,9 +185,26 @@
     ]
   },
   "renderReview": {
-    "status": "passed_standalone_only",
+    "status": "stale_after_concise_rewrite",
     "report": "chapter-12-render-review.json",
     "visualReview": "Wide and narrow previews inspected; no clipped text in corrected captures.",
     "limitation": "First 390px requested capture was cropped by Chrome minimum 500px layout; replaced with verified 540px capture (518px content viewport). App theme override remains unresolved."
+  },
+  "conciseRewrite": {
+    "status": "in_progress",
+    "completedQuestionIds": [
+      "cardiology-rebuild-12-001",
+      "cardiology-rebuild-12-002",
+      "cardiology-rebuild-12-003",
+      "cardiology-rebuild-12-004",
+      "cardiology-rebuild-12-005",
+      "cardiology-rebuild-12-006",
+      "cardiology-rebuild-12-007"
+    ],
+    "totalChapterQuestions": 55,
+    "teachingBulletWordsBefore": 1800,
+    "teachingBulletWordsAfter": 673,
+    "preserved": "Stems, options, answer positions and references retained; distractor explanations shortened.",
+    "next": "Complete all remaining explanations in a consolidated pass before final validation/render and release."
   }
 }

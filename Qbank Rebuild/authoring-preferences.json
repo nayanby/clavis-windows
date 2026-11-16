@@ -1,0 +1,14 @@
+{
+  "updatedAt": "2026-11-16",
+  "explanationStyle": "concise_structured",
+  "userCorrection": "Explanations are too lengthy; use concise multilevel bullets, numbered lists, tables and smart art. Creation is taking too long.",
+  "rules": [
+    "Use short teaching bullets instead of long prose paragraphs.",
+    "Keep key diagnostic thresholds, doses, contraindications and differentiating facts.",
+    "Use numbered lists for actual clinical sequences and multilevel bullets for supporting details.",
+    "Use compact comparison tables and offline HTML decision pathways where helpful.",
+    "Explain each distractor briefly with its appropriate context and why it does not fit.",
+    "Do one consolidated authoring and review pass per chapter; batch validation and avoid repeated cosmetic revisions.",
+    "Keep drafts local and push scoped changes after installation."
+  ]
+}

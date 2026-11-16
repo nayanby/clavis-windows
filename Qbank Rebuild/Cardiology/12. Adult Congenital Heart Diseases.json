@@ -11,7 +11,7 @@
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
-  "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3}",
+  "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3} .decision-flow{display:flex;flex-wrap:wrap;gap:8px;padding-left:24px}.decision-flow li{border:1px solid #bbc4d3;border-radius:4px;padding:7px;margin:3px 12px 3px 0;flex:1 1 150px}.decision-flow li:not(:last-child)::after{content:\" →\";color:#233D6B;font-weight:bold}",
   "questions": [
     {
       "id": "cardiology-rebuild-12-050",
@@ -275,31 +275,41 @@
       "correctIndex": 0,
       "questionStyle": "clinical_scenario",
       "calculation": false,
-      "explanation": "Atrial Shunting and the Pulmonary Flow Murmur\n\nCorrect answer: Increased systolic flow across the pulmonary valve\n\nFlow and Sound Generation\n\n**The murmur of an uncomplicated ASD is usually a pulmonary flow murmur, not the sound of the interatrial jet.** Recirculated left-to-right flow increases RV stroke volume and pulmonary valve flow.\n\nA large shunt may also cause a tricuspid diastolic flow rumble. Its presence reflects increased inflow and should not automatically be labeled tricuspid stenosis.\n\nPersistent RV loading delays pulmonary closure; changes in systemic venous return and interatrial shunting buffer respiratory variation, producing relatively fixed S2 splitting. A fixed split is a useful clue, but congenital anatomy and hemodynamic significance require imaging.\n\nClinical Assessment\n\n**Establish anatomy, right-heart volume load and pulmonary vascular status before choosing treatment.** TTE is the initial examination; additional transesophageal or cross-sectional imaging is selected when rims, pulmonary veins or RV measurements remain uncertain.\n\nA soft murmur does not imply a small defect. Conversely, a prominent ejection murmur can be caused by valvar stenosis or another high-flow state. Integrate Doppler velocity, valve morphology and chamber loading rather than using loudness as a shunt measurement.\n\nAdults may present with reduced exercise capacity or atrial arrhythmias after years of right atrial enlargement. A suitable significant shunt can merit closure before advanced symptoms, provided pulmonary vascular disease and left-heart filling problems do not make closure hazardous. Do not infer a device indication from auscultation alone. Marked pulmonary hypertension or advanced RV dysfunction can change the usual examination, including the intensity and splitting of S2.\n\nHigh-velocity systolic flow through the atrial defect: A ventricular septal jet can produce a prominent systolic murmur because of its pressure gradient. The atrial communication usually has a much smaller pressure difference; the characteristic ASD ejection murmur is generated downstream by increased pulmonary flow.\n\nSystolic regurgitation through the tricuspid valve: Significant tricuspid regurgitation can accompany right-heart dilatation and produces its own usually holosystolic lower-sternal murmur. It does not explain the supplied pulmonary-area ejection murmur with no stated important regurgitation.\n\nDynamic systolic obstruction in the RV outflow tract: Dynamic or fixed RV outflow obstruction can create an ejection murmur and RV pressure loading. The supplied ASD produces a volume-loaded RV and the evaluation excludes pulmonary stenosis; increased flow is the appropriate mechanism here.\n\nMerck Manual Professional: atrial septal defect — https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/atrial-septal-defect-asd\n\nMerck Manual Professional: cardiac auscultation — https://www.merckmanuals.com/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiac-auscultation\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
-      "explanationHtml": "<h2>Atrial Shunting and the Pulmonary Flow Murmur</h2><p><strong>Correct answer: A — Increased systolic flow across the pulmonary valve</strong></p><h3>Flow and Sound Generation</h3><ul><li><strong>The murmur of an uncomplicated ASD is usually a pulmonary flow murmur, not the sound of the interatrial jet.</strong> Recirculated left-to-right flow increases RV stroke volume and pulmonary valve flow.<ul><li>A large shunt may also cause a tricuspid diastolic flow rumble. Its presence reflects increased inflow and should not automatically be labeled tricuspid stenosis.</li><li>Persistent RV loading delays pulmonary closure; changes in systemic venous return and interatrial shunting buffer respiratory variation, producing relatively fixed S2 splitting. A fixed split is a useful clue, but congenital anatomy and hemodynamic significance require imaging.</li></ul></li></ul><h3>Clinical Assessment</h3><ul><li><strong>Establish anatomy, right-heart volume load and pulmonary vascular status before choosing treatment.</strong> TTE is the initial examination; additional transesophageal or cross-sectional imaging is selected when rims, pulmonary veins or RV measurements remain uncertain.<ul><li>A soft murmur does not imply a small defect. Conversely, a prominent ejection murmur can be caused by valvar stenosis or another high-flow state. Integrate Doppler velocity, valve morphology and chamber loading rather than using loudness as a shunt measurement.</li><li>Adults may present with reduced exercise capacity or atrial arrhythmias after years of right atrial enlargement. A suitable significant shunt can merit closure before advanced symptoms, provided pulmonary vascular disease and left-heart filling problems do not make closure hazardous. Do not infer a device indication from auscultation alone. Marked pulmonary hypertension or advanced RV dysfunction can change the usual examination, including the intensity and splitting of S2.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — High-velocity systolic flow through the atrial defect:</strong> A ventricular septal jet can produce a prominent systolic murmur because of its pressure gradient. The atrial communication usually has a much smaller pressure difference; the characteristic ASD ejection murmur is generated downstream by increased pulmonary flow.</li><li><strong>C — Systolic regurgitation through the tricuspid valve:</strong> Significant tricuspid regurgitation can accompany right-heart dilatation and produces its own usually holosystolic lower-sternal murmur. It does not explain the supplied pulmonary-area ejection murmur with no stated important regurgitation.</li><li><strong>D — Dynamic systolic obstruction in the RV outflow tract:</strong> Dynamic or fixed RV outflow obstruction can create an ejection murmur and RV pressure loading. The supplied ASD produces a volume-loaded RV and the evaluation excludes pulmonary stenosis; increased flow is the appropriate mechanism here.</li></ul><h3>References</h3><ul><li><a href=\"https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/atrial-septal-defect-asd\">Merck Manual Professional: atrial septal defect</a></li><li><a href=\"https://www.merckmanuals.com/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiac-auscultation\">Merck Manual Professional: cardiac auscultation</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanation": "Atrial Shunting and the Pulmonary Flow Murmur\n\nCorrect answer: Increased systolic flow across the pulmonary valve\n\nAtrial Shunt Physiology\n\n**Pulmonary flow murmur: increased RV stroke volume across a normal pulmonary valve.**\n\nThe low-pressure atrial jet is usually inaudible; murmur loudness does not measure defect size.\n\n**Fixed S2 splitting: persistent RV volume loading with buffered respiratory variation.**\n\nA large shunt may also produce a tricuspid mid-diastolic flow rumble.\n\nAssessment\n\n**TTE: define the communication, RV enlargement and pulmonary pressure.**\n\nUse TEE for device rims; CMR/CT for uncertain pulmonary veins or chamber measurements.\n\n**Closure assessment: integrate shunt burden, PVR, anatomy and LV filling pressure.**\n\nAtrial arrhythmias may persist after closure; advanced pulmonary vascular disease changes eligibility.\n\nHigh-velocity systolic flow through the atrial defect: A high-pressure VSD jet can be loud. An uncomplicated ASD has a small atrial pressure gradient; its ejection murmur arises at the pulmonary valve.\n\nSystolic regurgitation through the tricuspid valve: Tricuspid regurgitation produces a lower-sternal, usually holosystolic murmur. It does not explain this pulmonary-area midsystolic flow murmur.\n\nDynamic systolic obstruction in the RV outflow tract: RV outflow obstruction can produce an ejection murmur, but Doppler excludes it here; the ASD instead increases pulmonary flow.\n\nMerck Manual Professional: atrial septal defect — https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/atrial-septal-defect-asd\n\nMerck Manual Professional: cardiac auscultation — https://www.merckmanuals.com/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiac-auscultation\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Atrial Shunting and the Pulmonary Flow Murmur</h2><p><strong>Correct answer: A — Increased systolic flow across the pulmonary valve</strong></p><h3>Atrial Shunt Physiology</h3><ul><li><strong>Pulmonary flow murmur: increased RV stroke volume across a normal pulmonary valve.</strong><ul><li>The low-pressure atrial jet is usually inaudible; murmur loudness does not measure defect size.</li></ul></li><li><strong>Fixed S2 splitting: persistent RV volume loading with buffered respiratory variation.</strong><ul><li>A large shunt may also produce a tricuspid mid-diastolic flow rumble.</li></ul></li></ul><h3>Assessment</h3><ul><li><strong>TTE: define the communication, RV enlargement and pulmonary pressure.</strong><ul><li>Use TEE for device rims; CMR/CT for uncertain pulmonary veins or chamber measurements.</li></ul></li><li><strong>Closure assessment: integrate shunt burden, PVR, anatomy and LV filling pressure.</strong><ul><li>Atrial arrhythmias may persist after closure; advanced pulmonary vascular disease changes eligibility.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — High-velocity systolic flow through the atrial defect:</strong> A high-pressure VSD jet can be loud. An uncomplicated ASD has a small atrial pressure gradient; its ejection murmur arises at the pulmonary valve.</li><li><strong>C — Systolic regurgitation through the tricuspid valve:</strong> Tricuspid regurgitation produces a lower-sternal, usually holosystolic murmur. It does not explain this pulmonary-area midsystolic flow murmur.</li><li><strong>D — Dynamic systolic obstruction in the RV outflow tract:</strong> RV outflow obstruction can produce an ejection murmur, but Doppler excludes it here; the ASD instead increases pulmonary flow.</li></ul><h3>References</h3><ul><li><a href=\"https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/atrial-septal-defect-asd\">Merck Manual Professional: atrial septal defect</a></li><li><a href=\"https://www.merckmanuals.com/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiac-auscultation\">Merck Manual Professional: cardiac auscultation</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
       "explanationTeaching": {
         "title": "Atrial Shunting and the Pulmonary Flow Murmur",
         "sections": [
           {
-            "heading": "Flow and Sound Generation",
+            "heading": "Atrial Shunt Physiology",
             "bullets": [
               {
-                "text": "**The murmur of an uncomplicated ASD is usually a pulmonary flow murmur, not the sound of the interatrial jet.** Recirculated left-to-right flow increases RV stroke volume and pulmonary valve flow.",
+                "text": "**Pulmonary flow murmur: increased RV stroke volume across a normal pulmonary valve.**",
                 "children": [
-                  "A large shunt may also cause a tricuspid diastolic flow rumble. Its presence reflects increased inflow and should not automatically be labeled tricuspid stenosis.",
-                  "Persistent RV loading delays pulmonary closure; changes in systemic venous return and interatrial shunting buffer respiratory variation, producing relatively fixed S2 splitting. A fixed split is a useful clue, but congenital anatomy and hemodynamic significance require imaging."
+                  "The low-pressure atrial jet is usually inaudible; murmur loudness does not measure defect size."
+                ]
+              },
+              {
+                "text": "**Fixed S2 splitting: persistent RV volume loading with buffered respiratory variation.**",
+                "children": [
+                  "A large shunt may also produce a tricuspid mid-diastolic flow rumble."
                 ]
               }
             ]
           },
           {
-            "heading": "Clinical Assessment",
+            "heading": "Assessment",
             "bullets": [
               {
-                "text": "**Establish anatomy, right-heart volume load and pulmonary vascular status before choosing treatment.** TTE is the initial examination; additional transesophageal or cross-sectional imaging is selected when rims, pulmonary veins or RV measurements remain uncertain.",
+                "text": "**TTE: define the communication, RV enlargement and pulmonary pressure.**",
                 "children": [
-                  "A soft murmur does not imply a small defect. Conversely, a prominent ejection murmur can be caused by valvar stenosis or another high-flow state. Integrate Doppler velocity, valve morphology and chamber loading rather than using loudness as a shunt measurement.",
-                  "Adults may present with reduced exercise capacity or atrial arrhythmias after years of right atrial enlargement. A suitable significant shunt can merit closure before advanced symptoms, provided pulmonary vascular disease and left-heart filling problems do not make closure hazardous. Do not infer a device indication from auscultation alone. Marked pulmonary hypertension or advanced RV dysfunction can change the usual examination, including the intensity and splitting of S2."
+                  "Use TEE for device rims; CMR/CT for uncertain pulmonary veins or chamber measurements."
+                ]
+              },
+              {
+                "text": "**Closure assessment: integrate shunt burden, PVR, anatomy and LV filling pressure.**",
+                "children": [
+                  "Atrial arrhythmias may persist after closure; advanced pulmonary vascular disease changes eligibility."
                 ]
               }
             ]
@@ -309,15 +319,15 @@
         "otherOptions": [
           {
             "optionIndex": 1,
-            "explanation": "A ventricular septal jet can produce a prominent systolic murmur because of its pressure gradient. The atrial communication usually has a much smaller pressure difference; the characteristic ASD ejection murmur is generated downstream by increased pulmonary flow."
+            "explanation": "A high-pressure VSD jet can be loud. An uncomplicated ASD has a small atrial pressure gradient; its ejection murmur arises at the pulmonary valve."
           },
           {
             "optionIndex": 2,
-            "explanation": "Significant tricuspid regurgitation can accompany right-heart dilatation and produces its own usually holosystolic lower-sternal murmur. It does not explain the supplied pulmonary-area ejection murmur with no stated important regurgitation."
+            "explanation": "Tricuspid regurgitation produces a lower-sternal, usually holosystolic murmur. It does not explain this pulmonary-area midsystolic flow murmur."
           },
           {
             "optionIndex": 3,
-            "explanation": "Dynamic or fixed RV outflow obstruction can create an ejection murmur and RV pressure loading. The supplied ASD produces a volume-loaded RV and the evaluation excludes pulmonary stenosis; increased flow is the appropriate mechanism here."
+            "explanation": "RV outflow obstruction can produce an ejection murmur, but Doppler excludes it here; the ASD instead increases pulmonary flow."
           }
         ]
       },
@@ -337,7 +347,8 @@
       ],
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Explain the pulmonary flow murmur and fixed S2 splitting"
+      "coverageDecision": "Explain the pulmonary flow murmur and fixed S2 splitting",
+      "explanationStyle": "concise_structured"
     },
     {
       "id": "cardiology-rebuild-12-002",
@@ -352,33 +363,48 @@
       "correctIndex": 0,
       "questionStyle": "clinical_scenario",
       "calculation": false,
-      "explanation": "Primum Communication and the Left Atrioventricular Valve\n\nCorrect answer: Ostium primum defect in a partial AV septal defect\n\nAnatomy and Electrical Clues\n\n**A primum communication is part of an atrioventricular septal defect, not simply a low fossa-ovalis hole.** The common AV junction and abnormal left AV-valve anatomy determine investigation and repair.\n\nThe leftward or superior QRS axis is a useful contrast with the common right-axis/incomplete-RBBB pattern of a secundum ASD. PR prolongation may accompany the conduction anatomy but is not sufficient alone to classify the defect.\n\nPartial AVSD usually has a primum atrial communication and separate AV-valve orifices within a common AV junction. Complete AVSD adds a ventricular component and a common AV-valve orifice. AVSD is strongly associated with trisomy 21; define the actual anatomy rather than predicting it solely from a syndromic diagnosis.\n\nRegurgitation may involve the zone of apposition of the left AV-valve leaflets, often described clinically as a cleft. Assess the valve, ventricular components of the septal defect and any associated obstruction rather than considering only the atrial communication.\n\nA patent foramen ovale is a flap or tunnel between overlapping septum primum and septum secundum, without the tissue deficiency of a secundum ASD. An incidental PFO should not be used to explain substantial chronic RV volume loading; look for a true shunt or another cause. PFO-associated embolic assessment follows a different clinical pathway from closure for ASD-related volume overload.\n\nInvestigation and Treatment Implications\n\n**Detailed echocardiography must define both the shunt and the AV-valve lesion.** TEE or other imaging is selected when the initial study does not resolve the repair anatomy or pulmonary venous connections.\n\nAn indicated partial AVSD repair is generally surgical and can address the left AV valve together with the septal communication. A conventional double-disc secundum device does not correct AV septal anatomy or associated valve dysfunction.\n\nEvaluate pulmonary pressure and resistance, ventricular size/function, exercise capacity and arrhythmias. Catheterization is appropriate when pulmonary vascular status is uncertain. Repair decisions balance the volume load and valve disease against operative and hemodynamic risk. Even after successful repair, residual AV-valve regurgitation, arrhythmia and conduction disease justify individualized follow-up; apparent closure of the atrial opening does not remove those associated risks.\n\nCommunication | Important associated anatomy\n\nSecundum | Fossa ovalis; assess device rims and pulmonary veins\n\nPrimum / partial AVSD | AV junction and left AV-valve abnormality\n\nSinus venosus | Caval–pulmonary venous junction; frequently anomalous pulmonary venous connection\n\nUnroofed coronary sinus | Coronary sinus roof; assess persistent left SVC\n\nOstium secundum defect at the fossa ovalis: Secundum defects are the common fossa-ovalis lesions and can produce RV volume overload and incomplete right bundle-branch block. The superior axis and associated left AV-valve abnormality instead point to AV septal anatomy.\n\nSuperior sinus venosus interatrial communication: A superior sinus venosus communication is associated particularly with anomalous right pulmonary venous drainage near the SVC. It can cause right-heart enlargement but does not characteristically explain the combined conduction-axis and left AV-valve findings.\n\nUnroofed coronary sinus communication: Unroofing of the coronary sinus may coexist with a persistent left SVC and produce an unusual interatrial shunt. Defining coronary venous anatomy is important in that lesion; the supplied AV-valve and superior-axis combination is more typical of a primum defect.\n\nASE/SCAI echocardiographic assessment of ASD and PFO, 2015 — https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
-      "explanationHtml": "<h2>Primum Communication and the Left Atrioventricular Valve</h2><p><strong>Correct answer: A — Ostium primum defect in a partial AV septal defect</strong></p><h3>Anatomy and Electrical Clues</h3><ul><li><strong>A primum communication is part of an atrioventricular septal defect, not simply a low fossa-ovalis hole.</strong> The common AV junction and abnormal left AV-valve anatomy determine investigation and repair.<ul><li>The leftward or superior QRS axis is a useful contrast with the common right-axis/incomplete-RBBB pattern of a secundum ASD. PR prolongation may accompany the conduction anatomy but is not sufficient alone to classify the defect.</li><li>Partial AVSD usually has a primum atrial communication and separate AV-valve orifices within a common AV junction. Complete AVSD adds a ventricular component and a common AV-valve orifice. AVSD is strongly associated with trisomy 21; define the actual anatomy rather than predicting it solely from a syndromic diagnosis.</li><li>Regurgitation may involve the zone of apposition of the left AV-valve leaflets, often described clinically as a cleft. Assess the valve, ventricular components of the septal defect and any associated obstruction rather than considering only the atrial communication.</li><li>A patent foramen ovale is a flap or tunnel between overlapping septum primum and septum secundum, without the tissue deficiency of a secundum ASD. An incidental PFO should not be used to explain substantial chronic RV volume loading; look for a true shunt or another cause. PFO-associated embolic assessment follows a different clinical pathway from closure for ASD-related volume overload.</li></ul></li></ul><h3>Investigation and Treatment Implications</h3><ul><li><strong>Detailed echocardiography must define both the shunt and the AV-valve lesion.</strong> TEE or other imaging is selected when the initial study does not resolve the repair anatomy or pulmonary venous connections.<ul><li>An indicated partial AVSD repair is generally surgical and can address the left AV valve together with the septal communication. A conventional double-disc secundum device does not correct AV septal anatomy or associated valve dysfunction.</li><li>Evaluate pulmonary pressure and resistance, ventricular size/function, exercise capacity and arrhythmias. Catheterization is appropriate when pulmonary vascular status is uncertain. Repair decisions balance the volume load and valve disease against operative and hemodynamic risk. Even after successful repair, residual AV-valve regurgitation, arrhythmia and conduction disease justify individualized follow-up; apparent closure of the atrial opening does not remove those associated risks.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Communication</th><th>Important associated anatomy</th></tr></thead><tbody><tr><td>Secundum</td><td>Fossa ovalis; assess device rims and pulmonary veins</td></tr><tr><td>Primum / partial AVSD</td><td>AV junction and left AV-valve abnormality</td></tr><tr><td>Sinus venosus</td><td>Caval–pulmonary venous junction; frequently anomalous pulmonary venous connection</td></tr><tr><td>Unroofed coronary sinus</td><td>Coronary sinus roof; assess persistent left SVC</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>B — Ostium secundum defect at the fossa ovalis:</strong> Secundum defects are the common fossa-ovalis lesions and can produce RV volume overload and incomplete right bundle-branch block. The superior axis and associated left AV-valve abnormality instead point to AV septal anatomy.</li><li><strong>C — Superior sinus venosus interatrial communication:</strong> A superior sinus venosus communication is associated particularly with anomalous right pulmonary venous drainage near the SVC. It can cause right-heart enlargement but does not characteristically explain the combined conduction-axis and left AV-valve findings.</li><li><strong>D — Unroofed coronary sinus communication:</strong> Unroofing of the coronary sinus may coexist with a persistent left SVC and produce an unusual interatrial shunt. Defining coronary venous anatomy is important in that lesion; the supplied AV-valve and superior-axis combination is more typical of a primum defect.</li></ul><h3>References</h3><ul><li><a href=\"https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\">ASE/SCAI echocardiographic assessment of ASD and PFO, 2015</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanation": "Primum Communication and the Left Atrioventricular Valve\n\nCorrect answer: Ostium primum defect in a partial AV septal defect\n\nPartial AV Septal Defect\n\n**Primum communication + abnormal left AV valve + superior QRS axis.**\n\nPR prolongation supports conduction involvement but is not diagnostic alone.\n\n**Common AV junction: partial AVSD has separate valve orifices; complete AVSD adds a ventricular defect and common valve orifice.**\n\nStrong association with trisomy 21; define anatomy directly.\n\n**PFO differs from ASD: overlapping septal flaps form a tunnel without tissue deficiency.**\n\nAn incidental PFO rarely explains substantial chronic RV volume overload.\n\nRepair and Follow-Up\n\n**Echocardiography: map AV valves, shunt, LV outflow and pulmonary veins.**\n\nMeasure PVR invasively when pulmonary vascular disease is suspected.\n\n**Indicated repair is generally surgical, addressing the septum and left AV valve.**\n\nA conventional secundum device does not correct AVSD anatomy.\n\nFollow residual valve regurgitation, shunts, outflow obstruction and conduction disease.\n\nCommunication | Important associated anatomy\n\nSecundum | Fossa ovalis; assess device rims and pulmonary veins\n\nPrimum / partial AVSD | AV junction and left AV-valve abnormality\n\nSinus venosus | Caval–pulmonary venous junction; frequently anomalous pulmonary venous connection\n\nUnroofed coronary sinus | Coronary sinus roof; assess persistent left SVC\n\nOstium secundum defect at the fossa ovalis: Secundum defects cause RV loading, often with incomplete RBBB/right axis. The superior axis and abnormal left AV valve favor partial AVSD.\n\nSuperior sinus venosus interatrial communication: Sinus venosus defects commonly accompany anomalous pulmonary venous drainage. They do not explain the characteristic AV-valve and superior-axis combination.\n\nUnroofed coronary sinus communication: Unroofed coronary sinus may accompany a persistent left SVC. The supplied valve and electrical findings instead support primum anatomy.\n\nASE/SCAI echocardiographic assessment of ASD and PFO, 2015 — https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Primum Communication and the Left Atrioventricular Valve</h2><p><strong>Correct answer: A — Ostium primum defect in a partial AV septal defect</strong></p><h3>Partial AV Septal Defect</h3><ul><li><strong>Primum communication + abnormal left AV valve + superior QRS axis.</strong><ul><li>PR prolongation supports conduction involvement but is not diagnostic alone.</li></ul></li><li><strong>Common AV junction: partial AVSD has separate valve orifices; complete AVSD adds a ventricular defect and common valve orifice.</strong><ul><li>Strong association with trisomy 21; define anatomy directly.</li></ul></li><li><strong>PFO differs from ASD: overlapping septal flaps form a tunnel without tissue deficiency.</strong><ul><li>An incidental PFO rarely explains substantial chronic RV volume overload.</li></ul></li></ul><h3>Repair and Follow-Up</h3><ul><li><strong>Echocardiography: map AV valves, shunt, LV outflow and pulmonary veins.</strong><ul><li>Measure PVR invasively when pulmonary vascular disease is suspected.</li></ul></li><li><strong>Indicated repair is generally surgical, addressing the septum and left AV valve.</strong><ul><li>A conventional secundum device does not correct AVSD anatomy.</li><li>Follow residual valve regurgitation, shunts, outflow obstruction and conduction disease.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Communication</th><th>Important associated anatomy</th></tr></thead><tbody><tr><td>Secundum</td><td>Fossa ovalis; assess device rims and pulmonary veins</td></tr><tr><td>Primum / partial AVSD</td><td>AV junction and left AV-valve abnormality</td></tr><tr><td>Sinus venosus</td><td>Caval–pulmonary venous junction; frequently anomalous pulmonary venous connection</td></tr><tr><td>Unroofed coronary sinus</td><td>Coronary sinus roof; assess persistent left SVC</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>B — Ostium secundum defect at the fossa ovalis:</strong> Secundum defects cause RV loading, often with incomplete RBBB/right axis. The superior axis and abnormal left AV valve favor partial AVSD.</li><li><strong>C — Superior sinus venosus interatrial communication:</strong> Sinus venosus defects commonly accompany anomalous pulmonary venous drainage. They do not explain the characteristic AV-valve and superior-axis combination.</li><li><strong>D — Unroofed coronary sinus communication:</strong> Unroofed coronary sinus may accompany a persistent left SVC. The supplied valve and electrical findings instead support primum anatomy.</li></ul><h3>References</h3><ul><li><a href=\"https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\">ASE/SCAI echocardiographic assessment of ASD and PFO, 2015</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
       "explanationTeaching": {
         "title": "Primum Communication and the Left Atrioventricular Valve",
         "sections": [
           {
-            "heading": "Anatomy and Electrical Clues",
+            "heading": "Partial AV Septal Defect",
             "bullets": [
               {
-                "text": "**A primum communication is part of an atrioventricular septal defect, not simply a low fossa-ovalis hole.** The common AV junction and abnormal left AV-valve anatomy determine investigation and repair.",
+                "text": "**Primum communication + abnormal left AV valve + superior QRS axis.**",
                 "children": [
-                  "The leftward or superior QRS axis is a useful contrast with the common right-axis/incomplete-RBBB pattern of a secundum ASD. PR prolongation may accompany the conduction anatomy but is not sufficient alone to classify the defect.",
-                  "Partial AVSD usually has a primum atrial communication and separate AV-valve orifices within a common AV junction. Complete AVSD adds a ventricular component and a common AV-valve orifice. AVSD is strongly associated with trisomy 21; define the actual anatomy rather than predicting it solely from a syndromic diagnosis.",
-                  "Regurgitation may involve the zone of apposition of the left AV-valve leaflets, often described clinically as a cleft. Assess the valve, ventricular components of the septal defect and any associated obstruction rather than considering only the atrial communication.",
-                  "A patent foramen ovale is a flap or tunnel between overlapping septum primum and septum secundum, without the tissue deficiency of a secundum ASD. An incidental PFO should not be used to explain substantial chronic RV volume loading; look for a true shunt or another cause. PFO-associated embolic assessment follows a different clinical pathway from closure for ASD-related volume overload."
+                  "PR prolongation supports conduction involvement but is not diagnostic alone."
+                ]
+              },
+              {
+                "text": "**Common AV junction: partial AVSD has separate valve orifices; complete AVSD adds a ventricular defect and common valve orifice.**",
+                "children": [
+                  "Strong association with trisomy 21; define anatomy directly."
+                ]
+              },
+              {
+                "text": "**PFO differs from ASD: overlapping septal flaps form a tunnel without tissue deficiency.**",
+                "children": [
+                  "An incidental PFO rarely explains substantial chronic RV volume overload."
                 ]
               }
             ]
           },
           {
-            "heading": "Investigation and Treatment Implications",
+            "heading": "Repair and Follow-Up",
             "bullets": [
               {
-                "text": "**Detailed echocardiography must define both the shunt and the AV-valve lesion.** TEE or other imaging is selected when the initial study does not resolve the repair anatomy or pulmonary venous connections.",
+                "text": "**Echocardiography: map AV valves, shunt, LV outflow and pulmonary veins.**",
                 "children": [
-                  "An indicated partial AVSD repair is generally surgical and can address the left AV valve together with the septal communication. A conventional double-disc secundum device does not correct AV septal anatomy or associated valve dysfunction.",
-                  "Evaluate pulmonary pressure and resistance, ventricular size/function, exercise capacity and arrhythmias. Catheterization is appropriate when pulmonary vascular status is uncertain. Repair decisions balance the volume load and valve disease against operative and hemodynamic risk. Even after successful repair, residual AV-valve regurgitation, arrhythmia and conduction disease justify individualized follow-up; apparent closure of the atrial opening does not remove those associated risks."
+                  "Measure PVR invasively when pulmonary vascular disease is suspected."
+                ]
+              },
+              {
+                "text": "**Indicated repair is generally surgical, addressing the septum and left AV valve.**",
+                "children": [
+                  "A conventional secundum device does not correct AVSD anatomy.",
+                  "Follow residual valve regurgitation, shunts, outflow obstruction and conduction disease."
                 ]
               }
             ]
@@ -413,15 +439,15 @@
         "otherOptions": [
           {
             "optionIndex": 1,
-            "explanation": "Secundum defects are the common fossa-ovalis lesions and can produce RV volume overload and incomplete right bundle-branch block. The superior axis and associated left AV-valve abnormality instead point to AV septal anatomy."
+            "explanation": "Secundum defects cause RV loading, often with incomplete RBBB/right axis. The superior axis and abnormal left AV valve favor partial AVSD."
           },
           {
             "optionIndex": 2,
-            "explanation": "A superior sinus venosus communication is associated particularly with anomalous right pulmonary venous drainage near the SVC. It can cause right-heart enlargement but does not characteristically explain the combined conduction-axis and left AV-valve findings."
+            "explanation": "Sinus venosus defects commonly accompany anomalous pulmonary venous drainage. They do not explain the characteristic AV-valve and superior-axis combination."
           },
           {
             "optionIndex": 3,
-            "explanation": "Unroofing of the coronary sinus may coexist with a persistent left SVC and produce an unusual interatrial shunt. Defining coronary venous anatomy is important in that lesion; the supplied AV-valve and superior-axis combination is more typical of a primum defect."
+            "explanation": "Unroofed coronary sinus may accompany a persistent left SVC. The supplied valve and electrical findings instead support primum anatomy."
           }
         ]
       },
@@ -437,7 +463,8 @@
       ],
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Recognize partial AV septal anatomy from axis conduction and AV-valve findings"
+      "coverageDecision": "Recognize partial AV septal anatomy from axis conduction and AV-valve findings",
+      "explanationStyle": "concise_structured"
     },
     {
       "id": "cardiology-rebuild-12-003",
@@ -452,50 +479,67 @@
       "correctIndex": 1,
       "questionStyle": "clinical_scenario",
       "calculation": false,
-      "explanation": "Ventricular Compliance and Atrial Shunt Magnitude\n\nCorrect answer: Reduced LV diastolic compliance\n\nDeterminants of Atrial-Level Flow\n\n**An atrial-level shunt depends on relative ventricular filling properties as well as communication size.** The normally more compliant RV can receive blood diverted from the left atrium through a substantial defect.\n\nAcquired LV stiffness can increase left atrial pressure and augment left-to-right flow even when the anatomical defect has not enlarged. Preserved ejection fraction does not establish normal diastolic function.\n\nIncreasing RV stiffness or pulmonary vascular resistance can move the physiology in the opposite direction. A single shunt ratio therefore does not describe all future behavior of an unrepaired lesion.\n\nWhy Closure Requires Left-Heart Assessment\n\n**An ASD can partly decompress a high-pressure left atrium.** Eliminating that route in significant LV filling disease can raise left atrial pressure and precipitate congestion.\n\nAssess LV diastolic disease, AV-valve pathology, blood pressure and volume status before closure. Selected invasive assessment may include balloon occlusion, but the 2025 guideline gives it a limited Class 2b role. It can overestimate the actual postclosure wedge-pressure rise and is not a validated stand-alone pass/fail test.\n\nTreat reversible left-heart contributors and use an ACHD team to consider complete closure, a fenestrated strategy or deferral according to the findings. Do not apply the uncomplicated low-PVR closure pathway without checking its left-heart qualifications. Conversely, mild age-related LV abnormalities do not by themselves prohibit intervention. The decision requires the actual pressure response and clinical balance rather than an age cutoff or the assumption that every large shunt must be fully closed.\n\nReduced RV diastolic compliance: A stiffer RV raises right-sided filling resistance and can reduce left-to-right flow or promote right-to-left flow in an appropriate pressure setting. It does not explain the supplied increase driven by higher left-heart filling pressure.\n\nIncreased pulmonary vascular resistance: Progressive pulmonary vascular disease raises RV afterload and can ultimately reduce or reverse a systemic-to-pulmonary shunt. The stem documents low resistance, separating this process from the left-heart compliance change.\n\nIncreased LV diastolic compliance: A more compliant LV accepts filling at a lower pressure and tends to reduce the pressure advantage favoring diversion to the right heart. The patient instead has LV hypertrophy, higher filling pressure and increased left-to-right flow.\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006",
-      "explanationHtml": "<h2>Ventricular Compliance and Atrial Shunt Magnitude</h2><p><strong>Correct answer: B — Reduced LV diastolic compliance</strong></p><h3>Determinants of Atrial-Level Flow</h3><ul><li><strong>An atrial-level shunt depends on relative ventricular filling properties as well as communication size.</strong> The normally more compliant RV can receive blood diverted from the left atrium through a substantial defect.<ul><li>Acquired LV stiffness can increase left atrial pressure and augment left-to-right flow even when the anatomical defect has not enlarged. Preserved ejection fraction does not establish normal diastolic function.</li><li>Increasing RV stiffness or pulmonary vascular resistance can move the physiology in the opposite direction. A single shunt ratio therefore does not describe all future behavior of an unrepaired lesion.</li></ul></li></ul><h3>Why Closure Requires Left-Heart Assessment</h3><ul><li><strong>An ASD can partly decompress a high-pressure left atrium.</strong> Eliminating that route in significant LV filling disease can raise left atrial pressure and precipitate congestion.<ul><li>Assess LV diastolic disease, AV-valve pathology, blood pressure and volume status before closure. Selected invasive assessment may include balloon occlusion, but the 2025 guideline gives it a limited Class 2b role. It can overestimate the actual postclosure wedge-pressure rise and is not a validated stand-alone pass/fail test.</li><li>Treat reversible left-heart contributors and use an ACHD team to consider complete closure, a fenestrated strategy or deferral according to the findings. Do not apply the uncomplicated low-PVR closure pathway without checking its left-heart qualifications. Conversely, mild age-related LV abnormalities do not by themselves prohibit intervention. The decision requires the actual pressure response and clinical balance rather than an age cutoff or the assumption that every large shunt must be fully closed.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Reduced RV diastolic compliance:</strong> A stiffer RV raises right-sided filling resistance and can reduce left-to-right flow or promote right-to-left flow in an appropriate pressure setting. It does not explain the supplied increase driven by higher left-heart filling pressure.</li><li><strong>C — Increased pulmonary vascular resistance:</strong> Progressive pulmonary vascular disease raises RV afterload and can ultimately reduce or reverse a systemic-to-pulmonary shunt. The stem documents low resistance, separating this process from the left-heart compliance change.</li><li><strong>D — Increased LV diastolic compliance:</strong> A more compliant LV accepts filling at a lower pressure and tends to reduce the pressure advantage favoring diversion to the right heart. The patient instead has LV hypertrophy, higher filling pressure and increased left-to-right flow.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li></ul>",
+      "explanation": "Ventricular Compliance and Atrial Shunt Magnitude\n\nCorrect answer: Reduced LV diastolic compliance\n\nCompliance and Shunt Direction\n\n**Reduced LV compliance raises LA pressure and increases left-to-right atrial flow.**\n\nThe defect can remain unchanged; preserved LVEF does not exclude diastolic dysfunction.\n\n**RV stiffness or rising PVR can reduce or reverse left-to-right flow.**\n\nBefore Closure\n\n**Assess BP, volume status, AV-valve disease and LV filling pressure.**\n\n**Treat reversible contributors, then reassess complete closure, fenestration or deferral.**\n\n**Selected balloon occlusion: 2025 Class 2b.**\n\nMay overestimate the wedge-pressure rise after actual device closure; not a validated pass/fail test.\n\nLV stiffness ↑ → LA pressure ↑ → Left-to-right shunt ↑ → Closure may unmask pulmonary congestion\n\nReduced RV diastolic compliance: A stiff RV resists filling and tends to reduce left-to-right shunting; the supplied change originates in the LV.\n\nIncreased pulmonary vascular resistance: Rising PVR can reduce or reverse flow, but PVR remains low here and left-to-right shunting increases.\n\nIncreased LV diastolic compliance: Improved LV compliance lowers filling pressure and favors LV filling; it is the opposite of the documented hypertensive change.\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006",
+      "explanationHtml": "<h2>Ventricular Compliance and Atrial Shunt Magnitude</h2><p><strong>Correct answer: B — Reduced LV diastolic compliance</strong></p><h3>Compliance and Shunt Direction</h3><ul><li><strong>Reduced LV compliance raises LA pressure and increases left-to-right atrial flow.</strong><ul><li>The defect can remain unchanged; preserved LVEF does not exclude diastolic dysfunction.</li></ul></li><li><strong>RV stiffness or rising PVR can reduce or reverse left-to-right flow.</strong></li></ul><h3>Before Closure</h3><ol><li><strong>Assess BP, volume status, AV-valve disease and LV filling pressure.</strong></li><li><strong>Treat reversible contributors, then reassess complete closure, fenestration or deferral.</strong></li><li><strong>Selected balloon occlusion: 2025 Class 2b.</strong><ul><li>May overestimate the wedge-pressure rise after actual device closure; not a validated pass/fail test.</li></ul></li></ol><h3>Decision Pathway</h3><ol class=\"decision-flow\"><li>LV stiffness ↑</li><li>LA pressure ↑</li><li>Left-to-right shunt ↑</li><li>Closure may unmask pulmonary congestion</li></ol><h3>Other Options</h3><ul><li><strong>A — Reduced RV diastolic compliance:</strong> A stiff RV resists filling and tends to reduce left-to-right shunting; the supplied change originates in the LV.</li><li><strong>C — Increased pulmonary vascular resistance:</strong> Rising PVR can reduce or reverse flow, but PVR remains low here and left-to-right shunting increases.</li><li><strong>D — Increased LV diastolic compliance:</strong> Improved LV compliance lowers filling pressure and favors LV filling; it is the opposite of the documented hypertensive change.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li></ul>",
       "explanationTeaching": {
         "title": "Ventricular Compliance and Atrial Shunt Magnitude",
         "sections": [
           {
-            "heading": "Determinants of Atrial-Level Flow",
+            "heading": "Compliance and Shunt Direction",
             "bullets": [
               {
-                "text": "**An atrial-level shunt depends on relative ventricular filling properties as well as communication size.** The normally more compliant RV can receive blood diverted from the left atrium through a substantial defect.",
+                "text": "**Reduced LV compliance raises LA pressure and increases left-to-right atrial flow.**",
                 "children": [
-                  "Acquired LV stiffness can increase left atrial pressure and augment left-to-right flow even when the anatomical defect has not enlarged. Preserved ejection fraction does not establish normal diastolic function.",
-                  "Increasing RV stiffness or pulmonary vascular resistance can move the physiology in the opposite direction. A single shunt ratio therefore does not describe all future behavior of an unrepaired lesion."
+                  "The defect can remain unchanged; preserved LVEF does not exclude diastolic dysfunction."
                 ]
+              },
+              {
+                "text": "**RV stiffness or rising PVR can reduce or reverse left-to-right flow.**",
+                "children": []
               }
             ]
           },
           {
-            "heading": "Why Closure Requires Left-Heart Assessment",
+            "heading": "Before Closure",
             "bullets": [
               {
-                "text": "**An ASD can partly decompress a high-pressure left atrium.** Eliminating that route in significant LV filling disease can raise left atrial pressure and precipitate congestion.",
+                "text": "**Assess BP, volume status, AV-valve disease and LV filling pressure.**",
+                "children": []
+              },
+              {
+                "text": "**Treat reversible contributors, then reassess complete closure, fenestration or deferral.**",
+                "children": []
+              },
+              {
+                "text": "**Selected balloon occlusion: 2025 Class 2b.**",
                 "children": [
-                  "Assess LV diastolic disease, AV-valve pathology, blood pressure and volume status before closure. Selected invasive assessment may include balloon occlusion, but the 2025 guideline gives it a limited Class 2b role. It can overestimate the actual postclosure wedge-pressure rise and is not a validated stand-alone pass/fail test.",
-                  "Treat reversible left-heart contributors and use an ACHD team to consider complete closure, a fenestrated strategy or deferral according to the findings. Do not apply the uncomplicated low-PVR closure pathway without checking its left-heart qualifications. Conversely, mild age-related LV abnormalities do not by themselves prohibit intervention. The decision requires the actual pressure response and clinical balance rather than an age cutoff or the assumption that every large shunt must be fully closed."
+                  "May overestimate the wedge-pressure rise after actual device closure; not a validated pass/fail test."
                 ]
               }
-            ]
+            ],
+            "listType": "ol"
           }
         ],
         "tables": [],
         "otherOptions": [
           {
             "optionIndex": 0,
-            "explanation": "A stiffer RV raises right-sided filling resistance and can reduce left-to-right flow or promote right-to-left flow in an appropriate pressure setting. It does not explain the supplied increase driven by higher left-heart filling pressure."
+            "explanation": "A stiff RV resists filling and tends to reduce left-to-right shunting; the supplied change originates in the LV."
           },
           {
             "optionIndex": 2,
-            "explanation": "Progressive pulmonary vascular disease raises RV afterload and can ultimately reduce or reverse a systemic-to-pulmonary shunt. The stem documents low resistance, separating this process from the left-heart compliance change."
+            "explanation": "Rising PVR can reduce or reverse flow, but PVR remains low here and left-to-right shunting increases."
           },
           {
             "optionIndex": 3,
-            "explanation": "A more compliant LV accepts filling at a lower pressure and tends to reduce the pressure advantage favoring diversion to the right heart. The patient instead has LV hypertrophy, higher filling pressure and increased left-to-right flow."
+            "explanation": "Improved LV compliance lowers filling pressure and favors LV filling; it is the opposite of the documented hypertensive change."
           }
+        ],
+        "flow": [
+          "LV stiffness ↑",
+          "LA pressure ↑",
+          "Left-to-right shunt ↑",
+          "Closure may unmask pulmonary congestion"
         ]
       },
       "references": [
@@ -510,7 +554,8 @@
       ],
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Interpret relative ventricular compliance and atrial shunt magnitude"
+      "coverageDecision": "Interpret relative ventricular compliance and atrial shunt magnitude",
+      "explanationStyle": "concise_structured"
     },
     {
       "id": "cardiology-rebuild-12-005",
@@ -525,49 +570,58 @@
       "correctIndex": 0,
       "questionStyle": "clinical_scenario",
       "calculation": false,
-      "explanation": "Caval Oximetry and Anomalous Pulmonary Venous Drainage\n\nCorrect answer: A right pulmonary vein draining into the SVC\n\nLocalizing the Entry of Oxygenated Blood\n\n**The sampling level of the first reliable step-up helps localize a shunt.** Oxygenated pulmonary venous blood entering the SVC can produce a caval increase that is already present before the blood reaches the atrium.\n\nConfirm catheter position and repeat samples because streaming, incomplete mixing and timing can mislead. A contaminated lower-SVC sample should not be accepted as representative pre-shunt mixed venous blood for an oxygen-based flow calculation.\n\nSuperior sinus venosus anatomy is frequently associated with anomalous right pulmonary venous drainage. The oximetry result identifies a suspected connection; it does not by itself prove an associated atrial communication or map every pulmonary vein.\n\nAnatomical Mapping and Repair\n\n**Define the pulmonary veins and cavoatrial anatomy with appropriate TEE and cross-sectional imaging.** A normal-looking fossa ovalis does not exclude a superior sinus venosus communication or isolated partial anomalous pulmonary venous connection.\n\nCMR can assess flow and RV volume as well as anatomy; CT provides detailed spatial definition when useful for procedural planning. Assess all pulmonary venous connections and any high-draining accessory vein rather than stopping after the first anomaly is found.\n\nSurgery remains an established repair for suitable significant lesions. Selected superior sinus venosus defects can instead be treated with a covered SVC stent that separates systemic venous flow from pulmonary venous return. Specialist imaging and test-balloon interrogation must show unobstructed redirection toward the LA. The evidence includes nonrandomized registry experience, so technical success in selected anatomy must not be generalized to every sinus venosus defect. Consider pulmonary venous obstruction, SVC obstruction, residual shunt and other associated lesions when choosing and following the repair.\n\nA fossa-ovalis communication between the atria: A secundum ASD introduces oxygenated blood at atrial level and can enlarge the RV. A reproducible step-up already within the SVC, above the atrium, directs attention to anomalous pulmonary venous entry rather than assuming an isolated fossa-ovalis lesion.\n\nA perimembranous communication between the ventricles: A left-to-right VSD classically introduces oxygenated blood at ventricular level. It does not explain why the lower SVC is substantially more oxygenated than the upper SVC before blood reaches the RA or RV.\n\nA persistent connection from descending aorta to pulmonary artery: A PDA introduces oxygenated blood into the pulmonary arterial circulation. It can produce pulmonary overcirculation but would not account for the earliest reproducible step-up within the SVC.\n\nASE/SCAI echocardiographic assessment of ASD and PFO, 2015 — https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nCovered-stent sinus venosus correction: international registry, 2025 — https://pmc.ncbi.nlm.nih.gov/articles/PMC11913232/",
-      "explanationHtml": "<h2>Caval Oximetry and Anomalous Pulmonary Venous Drainage</h2><p><strong>Correct answer: A — A right pulmonary vein draining into the SVC</strong></p><h3>Localizing the Entry of Oxygenated Blood</h3><ul><li><strong>The sampling level of the first reliable step-up helps localize a shunt.</strong> Oxygenated pulmonary venous blood entering the SVC can produce a caval increase that is already present before the blood reaches the atrium.<ul><li>Confirm catheter position and repeat samples because streaming, incomplete mixing and timing can mislead. A contaminated lower-SVC sample should not be accepted as representative pre-shunt mixed venous blood for an oxygen-based flow calculation.</li><li>Superior sinus venosus anatomy is frequently associated with anomalous right pulmonary venous drainage. The oximetry result identifies a suspected connection; it does not by itself prove an associated atrial communication or map every pulmonary vein.</li></ul></li></ul><h3>Anatomical Mapping and Repair</h3><ul><li><strong>Define the pulmonary veins and cavoatrial anatomy with appropriate TEE and cross-sectional imaging.</strong> A normal-looking fossa ovalis does not exclude a superior sinus venosus communication or isolated partial anomalous pulmonary venous connection.<ul><li>CMR can assess flow and RV volume as well as anatomy; CT provides detailed spatial definition when useful for procedural planning. Assess all pulmonary venous connections and any high-draining accessory vein rather than stopping after the first anomaly is found.</li><li>Surgery remains an established repair for suitable significant lesions. Selected superior sinus venosus defects can instead be treated with a covered SVC stent that separates systemic venous flow from pulmonary venous return. Specialist imaging and test-balloon interrogation must show unobstructed redirection toward the LA. The evidence includes nonrandomized registry experience, so technical success in selected anatomy must not be generalized to every sinus venosus defect. Consider pulmonary venous obstruction, SVC obstruction, residual shunt and other associated lesions when choosing and following the repair.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — A fossa-ovalis communication between the atria:</strong> A secundum ASD introduces oxygenated blood at atrial level and can enlarge the RV. A reproducible step-up already within the SVC, above the atrium, directs attention to anomalous pulmonary venous entry rather than assuming an isolated fossa-ovalis lesion.</li><li><strong>C — A perimembranous communication between the ventricles:</strong> A left-to-right VSD classically introduces oxygenated blood at ventricular level. It does not explain why the lower SVC is substantially more oxygenated than the upper SVC before blood reaches the RA or RV.</li><li><strong>D — A persistent connection from descending aorta to pulmonary artery:</strong> A PDA introduces oxygenated blood into the pulmonary arterial circulation. It can produce pulmonary overcirculation but would not account for the earliest reproducible step-up within the SVC.</li></ul><h3>References</h3><ul><li><a href=\"https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\">ASE/SCAI echocardiographic assessment of ASD and PFO, 2015</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC11913232/\">Covered-stent sinus venosus correction: international registry, 2025</a></li></ul>",
+      "explanation": "Caval Oximetry and Anomalous Pulmonary Venous Drainage\n\nCorrect answer: A right pulmonary vein draining into the SVC\n\nLocalize the First Step-Up\n\n**Lower-SVC oxygen enrichment suggests pulmonary venous entry into the SVC.**\n\nRepeat samples and confirm position: streaming or contamination can mislead.\n\nDo not use an enriched lower-SVC sample as pre-shunt mixed venous blood.\n\nMap and Treat the Connection\n\n**TEE plus CMR/CT: map all pulmonary veins, caval junctions and atrial septum.**\n\n**Quantify Qp/Qs and RV volume burden; the step-up alone does not prove a sinus venosus defect.**\n\n**Significant suitable lesions: surgical repair or selected expert covered-stent correction.**\n\nCovered-stent evidence is mainly observational; test-balloon assessment must confirm unobstructed pulmonary venous redirection.\n\nMonitor SVC/pulmonary venous obstruction and residual shunting.\n\nA fossa-ovalis communication between the atria: A secundum ASD produces an atrial-level step-up. It does not explain reproducible enrichment in the SVC above the atrium.\n\nA perimembranous communication between the ventricles: VSD flow produces a ventricular-level step-up, downstream of the normal SVC and right atrium.\n\nA persistent connection from descending aorta to pulmonary artery: PDA flow enters the pulmonary artery. It cannot explain the earliest step-up within the SVC.\n\nASE/SCAI echocardiographic assessment of ASD and PFO, 2015 — https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nCovered-stent sinus venosus correction: international registry, 2025 — https://pmc.ncbi.nlm.nih.gov/articles/PMC11913232/",
+      "explanationHtml": "<h2>Caval Oximetry and Anomalous Pulmonary Venous Drainage</h2><p><strong>Correct answer: A — A right pulmonary vein draining into the SVC</strong></p><h3>Localize the First Step-Up</h3><ul><li><strong>Lower-SVC oxygen enrichment suggests pulmonary venous entry into the SVC.</strong><ul><li>Repeat samples and confirm position: streaming or contamination can mislead.</li><li>Do not use an enriched lower-SVC sample as pre-shunt mixed venous blood.</li></ul></li></ul><h3>Map and Treat the Connection</h3><ol><li><strong>TEE plus CMR/CT: map all pulmonary veins, caval junctions and atrial septum.</strong></li><li><strong>Quantify Qp/Qs and RV volume burden; the step-up alone does not prove a sinus venosus defect.</strong></li><li><strong>Significant suitable lesions: surgical repair or selected expert covered-stent correction.</strong><ul><li>Covered-stent evidence is mainly observational; test-balloon assessment must confirm unobstructed pulmonary venous redirection.</li><li>Monitor SVC/pulmonary venous obstruction and residual shunting.</li></ul></li></ol><h3>Other Options</h3><ul><li><strong>B — A fossa-ovalis communication between the atria:</strong> A secundum ASD produces an atrial-level step-up. It does not explain reproducible enrichment in the SVC above the atrium.</li><li><strong>C — A perimembranous communication between the ventricles:</strong> VSD flow produces a ventricular-level step-up, downstream of the normal SVC and right atrium.</li><li><strong>D — A persistent connection from descending aorta to pulmonary artery:</strong> PDA flow enters the pulmonary artery. It cannot explain the earliest step-up within the SVC.</li></ul><h3>References</h3><ul><li><a href=\"https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\">ASE/SCAI echocardiographic assessment of ASD and PFO, 2015</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC11913232/\">Covered-stent sinus venosus correction: international registry, 2025</a></li></ul>",
       "explanationTeaching": {
         "title": "Caval Oximetry and Anomalous Pulmonary Venous Drainage",
         "sections": [
           {
-            "heading": "Localizing the Entry of Oxygenated Blood",
+            "heading": "Localize the First Step-Up",
             "bullets": [
               {
-                "text": "**The sampling level of the first reliable step-up helps localize a shunt.** Oxygenated pulmonary venous blood entering the SVC can produce a caval increase that is already present before the blood reaches the atrium.",
+                "text": "**Lower-SVC oxygen enrichment suggests pulmonary venous entry into the SVC.**",
                 "children": [
-                  "Confirm catheter position and repeat samples because streaming, incomplete mixing and timing can mislead. A contaminated lower-SVC sample should not be accepted as representative pre-shunt mixed venous blood for an oxygen-based flow calculation.",
-                  "Superior sinus venosus anatomy is frequently associated with anomalous right pulmonary venous drainage. The oximetry result identifies a suspected connection; it does not by itself prove an associated atrial communication or map every pulmonary vein."
+                  "Repeat samples and confirm position: streaming or contamination can mislead.",
+                  "Do not use an enriched lower-SVC sample as pre-shunt mixed venous blood."
                 ]
               }
             ]
           },
           {
-            "heading": "Anatomical Mapping and Repair",
+            "heading": "Map and Treat the Connection",
             "bullets": [
               {
-                "text": "**Define the pulmonary veins and cavoatrial anatomy with appropriate TEE and cross-sectional imaging.** A normal-looking fossa ovalis does not exclude a superior sinus venosus communication or isolated partial anomalous pulmonary venous connection.",
+                "text": "**TEE plus CMR/CT: map all pulmonary veins, caval junctions and atrial septum.**",
+                "children": []
+              },
+              {
+                "text": "**Quantify Qp/Qs and RV volume burden; the step-up alone does not prove a sinus venosus defect.**",
+                "children": []
+              },
+              {
+                "text": "**Significant suitable lesions: surgical repair or selected expert covered-stent correction.**",
                 "children": [
-                  "CMR can assess flow and RV volume as well as anatomy; CT provides detailed spatial definition when useful for procedural planning. Assess all pulmonary venous connections and any high-draining accessory vein rather than stopping after the first anomaly is found.",
-                  "Surgery remains an established repair for suitable significant lesions. Selected superior sinus venosus defects can instead be treated with a covered SVC stent that separates systemic venous flow from pulmonary venous return. Specialist imaging and test-balloon interrogation must show unobstructed redirection toward the LA. The evidence includes nonrandomized registry experience, so technical success in selected anatomy must not be generalized to every sinus venosus defect. Consider pulmonary venous obstruction, SVC obstruction, residual shunt and other associated lesions when choosing and following the repair."
+                  "Covered-stent evidence is mainly observational; test-balloon assessment must confirm unobstructed pulmonary venous redirection.",
+                  "Monitor SVC/pulmonary venous obstruction and residual shunting."
                 ]
               }
-            ]
+            ],
+            "listType": "ol"
           }
         ],
         "tables": [],
         "otherOptions": [
           {
             "optionIndex": 1,
-            "explanation": "A secundum ASD introduces oxygenated blood at atrial level and can enlarge the RV. A reproducible step-up already within the SVC, above the atrium, directs attention to anomalous pulmonary venous entry rather than assuming an isolated fossa-ovalis lesion."
+            "explanation": "A secundum ASD produces an atrial-level step-up. It does not explain reproducible enrichment in the SVC above the atrium."
           },
           {
             "optionIndex": 2,
-            "explanation": "A left-to-right VSD classically introduces oxygenated blood at ventricular level. It does not explain why the lower SVC is substantially more oxygenated than the upper SVC before blood reaches the RA or RV."
+            "explanation": "VSD flow produces a ventricular-level step-up, downstream of the normal SVC and right atrium."
           },
           {
             "optionIndex": 3,
-            "explanation": "A PDA introduces oxygenated blood into the pulmonary arterial circulation. It can produce pulmonary overcirculation but would not account for the earliest reproducible step-up within the SVC."
+            "explanation": "PDA flow enters the pulmonary artery. It cannot explain the earliest step-up within the SVC."
           }
         ]
       },
@@ -587,7 +641,8 @@
       ],
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Map sinus venosus communications and anomalous pulmonary venous connections"
+      "coverageDecision": "Map sinus venosus communications and anomalous pulmonary venous connections",
+      "explanationStyle": "concise_structured"
     },
     {
       "id": "cardiology-rebuild-01-048",
@@ -675,49 +730,65 @@
       "correctIndex": 2,
       "questionStyle": "clinical_scenario",
       "calculation": false,
-      "explanation": "ASD Closure for Right-Ventricular Volume Overload\n\nCorrect answer: Refer for anatomically appropriate ASD closure\n\nNamed Guideline Criteria\n\n**The 2025 ACC/AHA pathway recommends closure for an unrepaired ASD with Qp:Qs at least 1.5 and RV dilatation when PVR is no more than ==2 Wood units== and significant LV disease is absent.** All those qualifications are supplied here.\n\nThis is a lesion-specific recommendation. A shunt ratio alone does not establish suitability if the RV is not volume loaded, pulmonary vascular disease is substantial or closure would cause a problematic rise in left-heart filling pressure.\n\nOlder ESC guidance uses different PVR categories, including below ==3 Wood units== for its straightforward pathway. Name the framework and year instead of merging thresholds into an unqualified universal rule.\n\nAnatomy, Procedure and Follow-Up\n\n**For a suitable secundum defect, transcatheter closure is generally the preferred approach.** Assess size, rims, adjacent structures, pulmonary venous connections and any other lesion needing surgery.\n\nPrimum/AV septal anatomy and unsuitable secundum rims can require surgical repair. Sinus venosus anatomy needs specialist mapping and lesion-specific procedural assessment rather than a standard fossa-ovalis device assumption.\n\nDiscuss procedural complications, residual shunt, device thrombus and atrial arrhythmia risk. ESC 2020 specifies antiplatelet treatment for at least six months after device closure, with aspirin at least ==75 mg== once daily; individualize for allergy, bleeding risk, other antithrombotic indications and device protocol. Follow-up imaging documents position, residual flow and right-heart remodeling. Closure does not automatically erase an established atrial arrhythmia substrate. The referral addresses an existing hemodynamic burden rather than promising that every future risk will disappear.\n\nStart PAH-targeted treatment before reconsidering closure: PAH treatment and reassessment can form part of selected specialist pathways with elevated pulmonary vascular resistance. PVR 1.6 Wood units does not identify that problem and does not justify introducing PAH drugs to prepare for uncomplicated closure.\n\nContinue surveillance until exercise symptoms develop: Surveillance is suitable for a small shunt without important chamber loading or when intervention risk outweighs benefit. The guideline recommendation here is driven by significant left-to-right flow and RV dilation with favorable pulmonary and left-heart physiology, not by waiting for symptoms.\n\nUse chronic diuretics to reduce the need for closure: Diuretics can relieve congestion or optimize volume status in selected patients. They do not remove the continuing right-heart volume burden of an otherwise suitable significant ASD and are not an equivalent definitive strategy in this asymptomatic favorable-risk case.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nASE/SCAI echocardiographic assessment of ASD and PFO, 2015 — https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf",
-      "explanationHtml": "<h2>ASD Closure for Right-Ventricular Volume Overload</h2><p><strong>Correct answer: C — Refer for anatomically appropriate ASD closure</strong></p><h3>Named Guideline Criteria</h3><ul><li><strong>The 2025 ACC/AHA pathway recommends closure for an unrepaired ASD with Qp:Qs at least 1.5 and RV dilatation when PVR is no more than <mark>2 Wood units</mark> and significant LV disease is absent.</strong> All those qualifications are supplied here.<ul><li>This is a lesion-specific recommendation. A shunt ratio alone does not establish suitability if the RV is not volume loaded, pulmonary vascular disease is substantial or closure would cause a problematic rise in left-heart filling pressure.</li><li>Older ESC guidance uses different PVR categories, including below <mark>3 Wood units</mark> for its straightforward pathway. Name the framework and year instead of merging thresholds into an unqualified universal rule.</li></ul></li></ul><h3>Anatomy, Procedure and Follow-Up</h3><ul><li><strong>For a suitable secundum defect, transcatheter closure is generally the preferred approach.</strong> Assess size, rims, adjacent structures, pulmonary venous connections and any other lesion needing surgery.<ul><li>Primum/AV septal anatomy and unsuitable secundum rims can require surgical repair. Sinus venosus anatomy needs specialist mapping and lesion-specific procedural assessment rather than a standard fossa-ovalis device assumption.</li><li>Discuss procedural complications, residual shunt, device thrombus and atrial arrhythmia risk. ESC 2020 specifies antiplatelet treatment for at least six months after device closure, with aspirin at least <mark>75 mg</mark> once daily; individualize for allergy, bleeding risk, other antithrombotic indications and device protocol. Follow-up imaging documents position, residual flow and right-heart remodeling. Closure does not automatically erase an established atrial arrhythmia substrate. The referral addresses an existing hemodynamic burden rather than promising that every future risk will disappear.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Start PAH-targeted treatment before reconsidering closure:</strong> PAH treatment and reassessment can form part of selected specialist pathways with elevated pulmonary vascular resistance. PVR 1.6 Wood units does not identify that problem and does not justify introducing PAH drugs to prepare for uncomplicated closure.</li><li><strong>B — Continue surveillance until exercise symptoms develop:</strong> Surveillance is suitable for a small shunt without important chamber loading or when intervention risk outweighs benefit. The guideline recommendation here is driven by significant left-to-right flow and RV dilation with favorable pulmonary and left-heart physiology, not by waiting for symptoms.</li><li><strong>D — Use chronic diuretics to reduce the need for closure:</strong> Diuretics can relieve congestion or optimize volume status in selected patients. They do not remove the continuing right-heart volume burden of an otherwise suitable significant ASD and are not an equivalent definitive strategy in this asymptomatic favorable-risk case.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\">ASE/SCAI echocardiographic assessment of ASD and PFO, 2015</a></li></ul>",
+      "explanation": "ASD Closure for Right-Ventricular Volume Overload\n\nCorrect answer: Refer for anatomically appropriate ASD closure\n\n2025 ACC/AHA Closure Criteria\n\n**Unrepaired ASD: Qp:Qs ≥1.5 + RV dilation + PVR ==≤2 Wood units== + no significant LV disease.**\n\nSymptoms are not required when these favorable criteria are met.\n\nESC 2020 uses a different low-PVR category (==<3 Wood units==); do not merge frameworks.\n\nClosure and Follow-Up\n\n**Confirm anatomy: defect size, rims, adjacent structures and pulmonary veins.**\n\n**Suitable secundum ASD: prefer transcatheter closure.**\n\nAVSD/primum or unsuitable anatomy generally requires surgery.\n\n**After device closure: ESC 2020 specifies antiplatelet therapy for ≥6 months, aspirin ==≥75 mg==/day.**\n\nIndividualize for bleeding, allergy and other antithrombotic indications.\n\n**Image device position, residual shunt and RV remodeling.**\n\nMonitor thrombus and atrial arrhythmias; closure does not erase established rhythm substrate.\n\nStart PAH-targeted treatment before reconsidering closure: PAH treatment is used for selected elevated-PVR pathways. PVR 1.6 Wood units does not justify preparatory PAH medication.\n\nContinue surveillance until exercise symptoms develop: Observation suits a small shunt without important RV loading. This asymptomatic patient already meets favorable hemodynamic closure criteria.\n\nUse chronic diuretics to reduce the need for closure: Diuretics relieve congestion but do not remove the persistent shunt; they are not definitive treatment for this suitable significant ASD.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nASE/SCAI echocardiographic assessment of ASD and PFO, 2015 — https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf",
+      "explanationHtml": "<h2>ASD Closure for Right-Ventricular Volume Overload</h2><p><strong>Correct answer: C — Refer for anatomically appropriate ASD closure</strong></p><h3>2025 ACC/AHA Closure Criteria</h3><ul><li><strong>Unrepaired ASD: Qp:Qs ≥1.5 + RV dilation + PVR <mark>≤2 Wood units</mark> + no significant LV disease.</strong><ul><li>Symptoms are not required when these favorable criteria are met.</li><li>ESC 2020 uses a different low-PVR category (<mark>&lt;3 Wood units</mark>); do not merge frameworks.</li></ul></li></ul><h3>Closure and Follow-Up</h3><ol><li><strong>Confirm anatomy: defect size, rims, adjacent structures and pulmonary veins.</strong></li><li><strong>Suitable secundum ASD: prefer transcatheter closure.</strong><ul><li>AVSD/primum or unsuitable anatomy generally requires surgery.</li></ul></li><li><strong>After device closure: ESC 2020 specifies antiplatelet therapy for ≥6 months, aspirin <mark>≥75 mg</mark>/day.</strong><ul><li>Individualize for bleeding, allergy and other antithrombotic indications.</li></ul></li><li><strong>Image device position, residual shunt and RV remodeling.</strong><ul><li>Monitor thrombus and atrial arrhythmias; closure does not erase established rhythm substrate.</li></ul></li></ol><h3>Other Options</h3><ul><li><strong>A — Start PAH-targeted treatment before reconsidering closure:</strong> PAH treatment is used for selected elevated-PVR pathways. PVR 1.6 Wood units does not justify preparatory PAH medication.</li><li><strong>B — Continue surveillance until exercise symptoms develop:</strong> Observation suits a small shunt without important RV loading. This asymptomatic patient already meets favorable hemodynamic closure criteria.</li><li><strong>D — Use chronic diuretics to reduce the need for closure:</strong> Diuretics relieve congestion but do not remove the persistent shunt; they are not definitive treatment for this suitable significant ASD.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://www.asecho.org/wp-content/uploads/2025/04/2015_ASD-PFO.pdf\">ASE/SCAI echocardiographic assessment of ASD and PFO, 2015</a></li></ul>",
       "explanationTeaching": {
         "title": "ASD Closure for Right-Ventricular Volume Overload",
         "sections": [
           {
-            "heading": "Named Guideline Criteria",
+            "heading": "2025 ACC/AHA Closure Criteria",
             "bullets": [
               {
-                "text": "**The 2025 ACC/AHA pathway recommends closure for an unrepaired ASD with Qp:Qs at least 1.5 and RV dilatation when PVR is no more than ==2 Wood units== and significant LV disease is absent.** All those qualifications are supplied here.",
+                "text": "**Unrepaired ASD: Qp:Qs ≥1.5 + RV dilation + PVR ==≤2 Wood units== + no significant LV disease.**",
                 "children": [
-                  "This is a lesion-specific recommendation. A shunt ratio alone does not establish suitability if the RV is not volume loaded, pulmonary vascular disease is substantial or closure would cause a problematic rise in left-heart filling pressure.",
-                  "Older ESC guidance uses different PVR categories, including below ==3 Wood units== for its straightforward pathway. Name the framework and year instead of merging thresholds into an unqualified universal rule."
+                  "Symptoms are not required when these favorable criteria are met.",
+                  "ESC 2020 uses a different low-PVR category (==<3 Wood units==); do not merge frameworks."
                 ]
               }
             ]
           },
           {
-            "heading": "Anatomy, Procedure and Follow-Up",
+            "heading": "Closure and Follow-Up",
             "bullets": [
               {
-                "text": "**For a suitable secundum defect, transcatheter closure is generally the preferred approach.** Assess size, rims, adjacent structures, pulmonary venous connections and any other lesion needing surgery.",
+                "text": "**Confirm anatomy: defect size, rims, adjacent structures and pulmonary veins.**",
+                "children": []
+              },
+              {
+                "text": "**Suitable secundum ASD: prefer transcatheter closure.**",
                 "children": [
-                  "Primum/AV septal anatomy and unsuitable secundum rims can require surgical repair. Sinus venosus anatomy needs specialist mapping and lesion-specific procedural assessment rather than a standard fossa-ovalis device assumption.",
-                  "Discuss procedural complications, residual shunt, device thrombus and atrial arrhythmia risk. ESC 2020 specifies antiplatelet treatment for at least six months after device closure, with aspirin at least ==75 mg== once daily; individualize for allergy, bleeding risk, other antithrombotic indications and device protocol. Follow-up imaging documents position, residual flow and right-heart remodeling. Closure does not automatically erase an established atrial arrhythmia substrate. The referral addresses an existing hemodynamic burden rather than promising that every future risk will disappear."
+                  "AVSD/primum or unsuitable anatomy generally requires surgery."
+                ]
+              },
+              {
+                "text": "**After device closure: ESC 2020 specifies antiplatelet therapy for ≥6 months, aspirin ==≥75 mg==/day.**",
+                "children": [
+                  "Individualize for bleeding, allergy and other antithrombotic indications."
+                ]
+              },
+              {
+                "text": "**Image device position, residual shunt and RV remodeling.**",
+                "children": [
+                  "Monitor thrombus and atrial arrhythmias; closure does not erase established rhythm substrate."
                 ]
               }
-            ]
+            ],
+            "listType": "ol"
           }
         ],
         "tables": [],
         "otherOptions": [
           {
             "optionIndex": 0,
-            "explanation": "PAH treatment and reassessment can form part of selected specialist pathways with elevated pulmonary vascular resistance. PVR 1.6 Wood units does not identify that problem and does not justify introducing PAH drugs to prepare for uncomplicated closure."
+            "explanation": "PAH treatment is used for selected elevated-PVR pathways. PVR 1.6 Wood units does not justify preparatory PAH medication."
           },
           {
             "optionIndex": 1,
-            "explanation": "Surveillance is suitable for a small shunt without important chamber loading or when intervention risk outweighs benefit. The guideline recommendation here is driven by significant left-to-right flow and RV dilation with favorable pulmonary and left-heart physiology, not by waiting for symptoms."
+            "explanation": "Observation suits a small shunt without important RV loading. This asymptomatic patient already meets favorable hemodynamic closure criteria."
           },
           {
             "optionIndex": 3,
-            "explanation": "Diuretics can relieve congestion or optimize volume status in selected patients. They do not remove the continuing right-heart volume burden of an otherwise suitable significant ASD and are not an equivalent definitive strategy in this asymptomatic favorable-risk case."
+            "explanation": "Diuretics relieve congestion but do not remove the persistent shunt; they are not definitive treatment for this suitable significant ASD."
           }
         ]
       },
@@ -737,7 +808,8 @@
       ],
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Apply the 2025 uncomplicated ASD closure recommendation with its PVR and LV qualifications"
+      "coverageDecision": "Apply the 2025 uncomplicated ASD closure recommendation with its PVR and LV qualifications",
+      "explanationStyle": "concise_structured"
     },
     {
       "id": "cardiology-rebuild-12-006",
@@ -752,32 +824,47 @@
       "correctIndex": 2,
       "questionStyle": "clinical_scenario",
       "calculation": false,
-      "explanation": "ASD With PAH: Response to Therapy and Closure Reassessment\n\nCorrect answer: Closure can be considered by the ACHD/PH team with ongoing PAH follow-up\n\nQualified Treat-and-Reassess Pathway\n\n**Initial PVR ==5–8 Wood units== is not equivalent to an uncomplicated closure indication or an automatic diagnosis of Eisenmenger syndrome.** In the named 2025 pathway, reduction below 5 with targeted therapy can make closure beneficial in selected patients with significant shunting, RV dilatation and no important LV disease.\n\nRepeat invasive hemodynamics and review functional status, RV function, oxygenation and anatomy with ACHD and PH specialists. Do not use an improved echocardiographic pressure estimate as a substitute for the resistance assessment needed for this decision.\n\nTreat-and-repair cohorts provide supportive medium-term evidence but involve selected responders and do not establish universal reversibility or a guaranteed survival benefit. Complete versus fenestrated repair is individualized; a residual controlled outlet may be desirable in selected higher-risk physiology.\n\nPAH Treatment and Monitoring\n\n**PAH drugs are selected by risk and phenotype; shunt closure does not replace specialist medical care.** A PDE-5 inhibitor and an endothelin-receptor antagonist are common oral treatment classes in eligible patients.\n\nExamples of labeled adult doses are sildenafil ==20 mg== three times daily and macitentan ==10 mg== once daily. These examples do not prescribe an identical combination for every ASD patient. Sildenafil must not be combined with organic nitrates or riociguat; monitor pressure and symptomatic adverse effects.\n\nMacitentan is contraindicated in pregnancy. Assess pregnancy status, contraception, hemoglobin, liver status and fluid retention according to its label and clinical context. Reassess treatment response and adverse effects after any intervention. Persistent pulmonary vascular disease may remain clinically important even if the atrial volume load improves. Avoid defect closure in established Eisenmenger physiology, where eliminating the outlet can precipitate RV failure.\n\nClosure should be paired with planned discontinuation of PAH therapy: Successful shunt closure does not establish resolution of pulmonary vascular disease. Long-term PAH treatment and surveillance may still be needed; medication withdrawal is not a consequence that should be promised as part of this referral.\n\nClosure assessment should wait until PVR reaches 2 Wood units or less: That is the uncomplicated low-resistance pathway, not a universal requirement for every patient with ASD and PAH. The 2025 guideline also permits a specialist treat-and-reassess pathway when PVR initially 5–8 Wood units falls below 5 with therapy.\n\nThe baseline PVR establishes Eisenmenger physiology and favors nonclosure: Eisenmenger syndrome requires the relevant advanced pulmonary vascular and bidirectional/right-to-left shunt physiology, not an elevated PVR number alone. The supplied net left-to-right shunt, normal resting saturation and treatment response do not establish it.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nTreat-and-repair strategy for ASD with PAH: multicentre cohort — https://doi.org/10.1136/heartjnl-2021-319096\n\nSildenafil PAH prescribing information, FDA, 2025 — https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/203109s019lbl.pdf\n\nMacitentan prescribing information, DailyMed — https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a654726e-f12f-4b03-8bfe-727f26761dce",
-      "explanationHtml": "<h2>ASD With PAH: Response to Therapy and Closure Reassessment</h2><p><strong>Correct answer: C — Closure can be considered by the ACHD/PH team with ongoing PAH follow-up</strong></p><h3>Qualified Treat-and-Reassess Pathway</h3><ul><li><strong>Initial PVR <mark>5–8 Wood units</mark> is not equivalent to an uncomplicated closure indication or an automatic diagnosis of Eisenmenger syndrome.</strong> In the named 2025 pathway, reduction below 5 with targeted therapy can make closure beneficial in selected patients with significant shunting, RV dilatation and no important LV disease.<ul><li>Repeat invasive hemodynamics and review functional status, RV function, oxygenation and anatomy with ACHD and PH specialists. Do not use an improved echocardiographic pressure estimate as a substitute for the resistance assessment needed for this decision.</li><li>Treat-and-repair cohorts provide supportive medium-term evidence but involve selected responders and do not establish universal reversibility or a guaranteed survival benefit. Complete versus fenestrated repair is individualized; a residual controlled outlet may be desirable in selected higher-risk physiology.</li></ul></li></ul><h3>PAH Treatment and Monitoring</h3><ul><li><strong>PAH drugs are selected by risk and phenotype; shunt closure does not replace specialist medical care.</strong> A PDE-5 inhibitor and an endothelin-receptor antagonist are common oral treatment classes in eligible patients.<ul><li>Examples of labeled adult doses are sildenafil <mark>20 mg</mark> three times daily and macitentan <mark>10 mg</mark> once daily. These examples do not prescribe an identical combination for every ASD patient. Sildenafil must not be combined with organic nitrates or riociguat; monitor pressure and symptomatic adverse effects.</li><li>Macitentan is contraindicated in pregnancy. Assess pregnancy status, contraception, hemoglobin, liver status and fluid retention according to its label and clinical context. Reassess treatment response and adverse effects after any intervention. Persistent pulmonary vascular disease may remain clinically important even if the atrial volume load improves. Avoid defect closure in established Eisenmenger physiology, where eliminating the outlet can precipitate RV failure.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Closure should be paired with planned discontinuation of PAH therapy:</strong> Successful shunt closure does not establish resolution of pulmonary vascular disease. Long-term PAH treatment and surveillance may still be needed; medication withdrawal is not a consequence that should be promised as part of this referral.</li><li><strong>B — Closure assessment should wait until PVR reaches 2 Wood units or less:</strong> That is the uncomplicated low-resistance pathway, not a universal requirement for every patient with ASD and PAH. The 2025 guideline also permits a specialist treat-and-reassess pathway when PVR initially 5–8 Wood units falls below 5 with therapy.</li><li><strong>D — The baseline PVR establishes Eisenmenger physiology and favors nonclosure:</strong> Eisenmenger syndrome requires the relevant advanced pulmonary vascular and bidirectional/right-to-left shunt physiology, not an elevated PVR number alone. The supplied net left-to-right shunt, normal resting saturation and treatment response do not establish it.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1136/heartjnl-2021-319096\">Treat-and-repair strategy for ASD with PAH: multicentre cohort</a></li><li><a href=\"https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/203109s019lbl.pdf\">Sildenafil PAH prescribing information, FDA, 2025</a></li><li><a href=\"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a654726e-f12f-4b03-8bfe-727f26761dce\">Macitentan prescribing information, DailyMed</a></li></ul>",
+      "explanation": "ASD With PAH: Response to Therapy and Closure Reassessment\n\nCorrect answer: Closure can be considered by the ACHD/PH team with ongoing PAH follow-up\n\nSelected Treat-and-Reassess Pathway\n\n**2025 ASD pathway: initial PVR ==5–8 Wood units== falling below 5 on PAH therapy may permit closure.**\n\nRequire significant left-to-right flow, RV dilation and no important LV disease.\n\nRepeat invasive hemodynamics; a lower echo-estimated pressure is insufficient.\n\n**ACHD/PH team selects complete closure, fenestration or nonclosure.**\n\nSelected-responder cohorts do not prove universal reversibility or cure.\n\nDrug Examples and Monitoring\n\n**Sildenafil: ==20 mg== orally three times daily.**\n\nDo not combine with organic nitrates or riociguat; monitor BP.\n\n**Macitentan: ==10 mg== orally daily.**\n\nPregnancy contraindicated; assess contraception, hemoglobin, liver status and fluid retention.\n\n**Continue PAH surveillance after closure; treatment may still be required.**\n\nPAH treatment → Repeat PVR and shunt assessment → Expert closure decision → Long-term PAH follow-up\n\nClosure should be paired with planned discontinuation of PAH therapy: Closure removes the shunt but may leave pulmonary vascular disease; it does not justify planned withdrawal of PAH therapy.\n\nClosure assessment should wait until PVR reaches 2 Wood units or less: PVR ≤2 defines the uncomplicated pathway. Selected treated responders below 5 may still undergo specialist closure assessment.\n\nThe baseline PVR establishes Eisenmenger physiology and favors nonclosure: Elevated baseline PVR alone is not Eisenmenger syndrome. Net left-to-right flow, normal resting saturation and response require separate assessment.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nTreat-and-repair strategy for ASD with PAH: multicentre cohort — https://doi.org/10.1136/heartjnl-2021-319096\n\nSildenafil PAH prescribing information, FDA, 2025 — https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/203109s019lbl.pdf\n\nMacitentan prescribing information, DailyMed — https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a654726e-f12f-4b03-8bfe-727f26761dce",
+      "explanationHtml": "<h2>ASD With PAH: Response to Therapy and Closure Reassessment</h2><p><strong>Correct answer: C — Closure can be considered by the ACHD/PH team with ongoing PAH follow-up</strong></p><h3>Selected Treat-and-Reassess Pathway</h3><ul><li><strong>2025 ASD pathway: initial PVR <mark>5–8 Wood units</mark> falling below 5 on PAH therapy may permit closure.</strong><ul><li>Require significant left-to-right flow, RV dilation and no important LV disease.</li><li>Repeat invasive hemodynamics; a lower echo-estimated pressure is insufficient.</li></ul></li><li><strong>ACHD/PH team selects complete closure, fenestration or nonclosure.</strong><ul><li>Selected-responder cohorts do not prove universal reversibility or cure.</li></ul></li></ul><h3>Drug Examples and Monitoring</h3><ul><li><strong>Sildenafil: <mark>20 mg</mark> orally three times daily.</strong><ul><li>Do not combine with organic nitrates or riociguat; monitor BP.</li></ul></li><li><strong>Macitentan: <mark>10 mg</mark> orally daily.</strong><ul><li>Pregnancy contraindicated; assess contraception, hemoglobin, liver status and fluid retention.</li></ul></li><li><strong>Continue PAH surveillance after closure; treatment may still be required.</strong></li></ul><h3>Decision Pathway</h3><ol class=\"decision-flow\"><li>PAH treatment</li><li>Repeat PVR and shunt assessment</li><li>Expert closure decision</li><li>Long-term PAH follow-up</li></ol><h3>Other Options</h3><ul><li><strong>A — Closure should be paired with planned discontinuation of PAH therapy:</strong> Closure removes the shunt but may leave pulmonary vascular disease; it does not justify planned withdrawal of PAH therapy.</li><li><strong>B — Closure assessment should wait until PVR reaches 2 Wood units or less:</strong> PVR ≤2 defines the uncomplicated pathway. Selected treated responders below 5 may still undergo specialist closure assessment.</li><li><strong>D — The baseline PVR establishes Eisenmenger physiology and favors nonclosure:</strong> Elevated baseline PVR alone is not Eisenmenger syndrome. Net left-to-right flow, normal resting saturation and response require separate assessment.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1136/heartjnl-2021-319096\">Treat-and-repair strategy for ASD with PAH: multicentre cohort</a></li><li><a href=\"https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/203109s019lbl.pdf\">Sildenafil PAH prescribing information, FDA, 2025</a></li><li><a href=\"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a654726e-f12f-4b03-8bfe-727f26761dce\">Macitentan prescribing information, DailyMed</a></li></ul>",
       "explanationTeaching": {
         "title": "ASD With PAH: Response to Therapy and Closure Reassessment",
         "sections": [
           {
-            "heading": "Qualified Treat-and-Reassess Pathway",
+            "heading": "Selected Treat-and-Reassess Pathway",
             "bullets": [
               {
-                "text": "**Initial PVR ==5–8 Wood units== is not equivalent to an uncomplicated closure indication or an automatic diagnosis of Eisenmenger syndrome.** In the named 2025 pathway, reduction below 5 with targeted therapy can make closure beneficial in selected patients with significant shunting, RV dilatation and no important LV disease.",
+                "text": "**2025 ASD pathway: initial PVR ==5–8 Wood units== falling below 5 on PAH therapy may permit closure.**",
                 "children": [
-                  "Repeat invasive hemodynamics and review functional status, RV function, oxygenation and anatomy with ACHD and PH specialists. Do not use an improved echocardiographic pressure estimate as a substitute for the resistance assessment needed for this decision.",
-                  "Treat-and-repair cohorts provide supportive medium-term evidence but involve selected responders and do not establish universal reversibility or a guaranteed survival benefit. Complete versus fenestrated repair is individualized; a residual controlled outlet may be desirable in selected higher-risk physiology."
+                  "Require significant left-to-right flow, RV dilation and no important LV disease.",
+                  "Repeat invasive hemodynamics; a lower echo-estimated pressure is insufficient."
+                ]
+              },
+              {
+                "text": "**ACHD/PH team selects complete closure, fenestration or nonclosure.**",
+                "children": [
+                  "Selected-responder cohorts do not prove universal reversibility or cure."
                 ]
               }
             ]
           },
           {
-            "heading": "PAH Treatment and Monitoring",
+            "heading": "Drug Examples and Monitoring",
             "bullets": [
               {
-                "text": "**PAH drugs are selected by risk and phenotype; shunt closure does not replace specialist medical care.** A PDE-5 inhibitor and an endothelin-receptor antagonist are common oral treatment classes in eligible patients.",
+                "text": "**Sildenafil: ==20 mg== orally three times daily.**",
                 "children": [
-                  "Examples of labeled adult doses are sildenafil ==20 mg== three times daily and macitentan ==10 mg== once daily. These examples do not prescribe an identical combination for every ASD patient. Sildenafil must not be combined with organic nitrates or riociguat; monitor pressure and symptomatic adverse effects.",
-                  "Macitentan is contraindicated in pregnancy. Assess pregnancy status, contraception, hemoglobin, liver status and fluid retention according to its label and clinical context. Reassess treatment response and adverse effects after any intervention. Persistent pulmonary vascular disease may remain clinically important even if the atrial volume load improves. Avoid defect closure in established Eisenmenger physiology, where eliminating the outlet can precipitate RV failure."
+                  "Do not combine with organic nitrates or riociguat; monitor BP."
                 ]
+              },
+              {
+                "text": "**Macitentan: ==10 mg== orally daily.**",
+                "children": [
+                  "Pregnancy contraindicated; assess contraception, hemoglobin, liver status and fluid retention."
+                ]
+              },
+              {
+                "text": "**Continue PAH surveillance after closure; treatment may still be required.**",
+                "children": []
               }
             ]
           }
@@ -786,16 +873,22 @@
         "otherOptions": [
           {
             "optionIndex": 0,
-            "explanation": "Successful shunt closure does not establish resolution of pulmonary vascular disease. Long-term PAH treatment and surveillance may still be needed; medication withdrawal is not a consequence that should be promised as part of this referral."
+            "explanation": "Closure removes the shunt but may leave pulmonary vascular disease; it does not justify planned withdrawal of PAH therapy."
           },
           {
             "optionIndex": 1,
-            "explanation": "That is the uncomplicated low-resistance pathway, not a universal requirement for every patient with ASD and PAH. The 2025 guideline also permits a specialist treat-and-reassess pathway when PVR initially 5–8 Wood units falls below 5 with therapy."
+            "explanation": "PVR ≤2 defines the uncomplicated pathway. Selected treated responders below 5 may still undergo specialist closure assessment."
           },
           {
             "optionIndex": 3,
-            "explanation": "Eisenmenger syndrome requires the relevant advanced pulmonary vascular and bidirectional/right-to-left shunt physiology, not an elevated PVR number alone. The supplied net left-to-right shunt, normal resting saturation and treatment response do not establish it."
+            "explanation": "Elevated baseline PVR alone is not Eisenmenger syndrome. Net left-to-right flow, normal resting saturation and response require separate assessment."
           }
+        ],
+        "flow": [
+          "PAH treatment",
+          "Repeat PVR and shunt assessment",
+          "Expert closure decision",
+          "Long-term PAH follow-up"
         ]
       },
       "references": [
@@ -818,7 +911,8 @@
       ],
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Assess elevated PVR without assuming every large ASD should be closed"
+      "coverageDecision": "Assess elevated PVR without assuming every large ASD should be closed",
+      "explanationStyle": "concise_structured"
     },
     {
       "id": "cardiology-rebuild-12-007",
@@ -833,49 +927,62 @@
       "correctIndex": 1,
       "questionStyle": "clinical_scenario",
       "calculation": false,
-      "explanation": "High Left-Heart Filling Pressure Before ASD Closure\n\nCorrect answer: Optimize left-heart filling pressure and reassess the closure strategy\n\nWhy Low PVR Does Not Establish Closure Safety\n\n**Significant LV filling disease is a separate qualification from pulmonary vascular resistance.** An ASD can allow high-pressure left atrial blood to escape to the right heart; complete closure removes that route and may produce pulmonary congestion.\n\nPreserved LVEF does not exclude impaired relaxation, increased chamber stiffness or HFpEF. The resting wedge pressure and LVEDP supplied here provide direct evidence that the uncomplicated ASD closure pathway cannot simply be applied.\n\nReassess blood pressure, volume status, ischemia, AV-valve disease and other contributors to high filling pressure. Optimize treatable causes before deciding whether the benefit of reducing right-heart volume load outweighs the left-heart risk.\n\nIndividualized Assessment and Balloon-Test Limitations\n\n**Discuss complete closure, selected fenestrated repair or nonclosure with an experienced ACHD team after optimization.** These are physiological choices, not a rule that every older patient must remain unrepaired.\n\nThe 2025 guideline states that balloon test occlusion may be reasonable, a Class 2b recommendation. It is not a validated stand-alone prediction rule. Retrospective data show that the temporary balloon can overestimate the wedge-pressure increase after actual device closure.\n\nIn a 42-patient study, some patients with a substantial wedge rise during balloon occlusion did not have the same rise after device closure. That observation limits interpretation of the test; it does not prove that a patient with markedly elevated resting LV filling pressures is safe for immediate complete closure. Integrate the baseline findings, symptoms, response to treatment and procedural measurements. Maintain individualized follow-up for congestion, residual shunt, RV remodeling and arrhythmia after the selected strategy.\n\nProceed with standard complete transcatheter ASD closure: Complete device closure is suitable for many significant secundum defects with favorable pulmonary and left-heart physiology. Here resting left-heart filling pressures are markedly elevated, and removing the atrial decompression route can worsen congestion despite low PVR.\n\nChoose complete surgical patch closure instead of device closure: Surgery is appropriate for unsuitable device anatomy or associated surgical lesions. A complete patch still abolishes the same decompression route; changing the procedural access alone does not remove the left-heart filling-pressure problem.\n\nStart PAH-targeted vasodilation before planning complete closure: Targeted PAH treatment is relevant to precapillary pulmonary vascular disease. This patient has low PVR with high wedge and LV end-diastolic pressures, so the principal issue is left-heart filling disease rather than an indication to lower pulmonary vascular resistance.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nBalloon occlusion versus actual ASD closure hemodynamics, 2023 — https://pubmed.ncbi.nlm.nih.gov/36640419/",
-      "explanationHtml": "<h2>High Left-Heart Filling Pressure Before ASD Closure</h2><p><strong>Correct answer: B — Optimize left-heart filling pressure and reassess the closure strategy</strong></p><h3>Why Low PVR Does Not Establish Closure Safety</h3><ul><li><strong>Significant LV filling disease is a separate qualification from pulmonary vascular resistance.</strong> An ASD can allow high-pressure left atrial blood to escape to the right heart; complete closure removes that route and may produce pulmonary congestion.<ul><li>Preserved LVEF does not exclude impaired relaxation, increased chamber stiffness or HFpEF. The resting wedge pressure and LVEDP supplied here provide direct evidence that the uncomplicated ASD closure pathway cannot simply be applied.</li><li>Reassess blood pressure, volume status, ischemia, AV-valve disease and other contributors to high filling pressure. Optimize treatable causes before deciding whether the benefit of reducing right-heart volume load outweighs the left-heart risk.</li></ul></li></ul><h3>Individualized Assessment and Balloon-Test Limitations</h3><ul><li><strong>Discuss complete closure, selected fenestrated repair or nonclosure with an experienced ACHD team after optimization.</strong> These are physiological choices, not a rule that every older patient must remain unrepaired.<ul><li>The 2025 guideline states that balloon test occlusion may be reasonable, a Class 2b recommendation. It is not a validated stand-alone prediction rule. Retrospective data show that the temporary balloon can overestimate the wedge-pressure increase after actual device closure.</li><li>In a 42-patient study, some patients with a substantial wedge rise during balloon occlusion did not have the same rise after device closure. That observation limits interpretation of the test; it does not prove that a patient with markedly elevated resting LV filling pressures is safe for immediate complete closure. Integrate the baseline findings, symptoms, response to treatment and procedural measurements. Maintain individualized follow-up for congestion, residual shunt, RV remodeling and arrhythmia after the selected strategy.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Proceed with standard complete transcatheter ASD closure:</strong> Complete device closure is suitable for many significant secundum defects with favorable pulmonary and left-heart physiology. Here resting left-heart filling pressures are markedly elevated, and removing the atrial decompression route can worsen congestion despite low PVR.</li><li><strong>C — Choose complete surgical patch closure instead of device closure:</strong> Surgery is appropriate for unsuitable device anatomy or associated surgical lesions. A complete patch still abolishes the same decompression route; changing the procedural access alone does not remove the left-heart filling-pressure problem.</li><li><strong>D — Start PAH-targeted vasodilation before planning complete closure:</strong> Targeted PAH treatment is relevant to precapillary pulmonary vascular disease. This patient has low PVR with high wedge and LV end-diastolic pressures, so the principal issue is left-heart filling disease rather than an indication to lower pulmonary vascular resistance.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://pubmed.ncbi.nlm.nih.gov/36640419/\">Balloon occlusion versus actual ASD closure hemodynamics, 2023</a></li></ul>",
+      "explanation": "High Left-Heart Filling Pressure Before ASD Closure\n\nCorrect answer: Optimize left-heart filling pressure and reassess the closure strategy\n\nWhy Closure Can Cause Congestion\n\n**The ASD decompresses a high-pressure LA; complete closure removes this outlet.**\n\nWedge ==24 mmHg== and LVEDP ==26 mmHg== indicate significant left-heart filling disease.\n\nLow PVR and preserved LVEF do not establish closure safety.\n\nManagement Sequence\n\n**Optimize BP and volume status; assess ischemia and AV-valve disease.**\n\n**Reassess symptoms and filling pressures with ACHD expertise.**\n\n**Choose complete closure, selected fenestration or nonclosure from the resulting physiology.**\n\n**Balloon occlusion may help selected cases: 2025 Class 2b.**\n\nTemporary occlusion may overestimate the post-device wedge rise; combine baseline findings and treatment response.\n\nFollow congestion, residual shunt, RV remodeling and arrhythmia.\n\nProceed with standard complete transcatheter ASD closure: Complete device closure suits favorable pulmonary and left-heart physiology. Markedly elevated filling pressure creates a pulmonary-congestion hazard here.\n\nChoose complete surgical patch closure instead of device closure: Surgery helps unsuitable device anatomy or associated lesions, but a complete patch removes the same LA decompression route.\n\nStart PAH-targeted vasodilation before planning complete closure: PAH drugs target precapillary pulmonary vascular disease. High wedge pressure with low PVR instead identifies a left-heart filling problem.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554\n\nBalloon occlusion versus actual ASD closure hemodynamics, 2023 — https://pubmed.ncbi.nlm.nih.gov/36640419/",
+      "explanationHtml": "<h2>High Left-Heart Filling Pressure Before ASD Closure</h2><p><strong>Correct answer: B — Optimize left-heart filling pressure and reassess the closure strategy</strong></p><h3>Why Closure Can Cause Congestion</h3><ul><li><strong>The ASD decompresses a high-pressure LA; complete closure removes this outlet.</strong><ul><li>Wedge <mark>24 mmHg</mark> and LVEDP <mark>26 mmHg</mark> indicate significant left-heart filling disease.</li><li>Low PVR and preserved LVEF do not establish closure safety.</li></ul></li></ul><h3>Management Sequence</h3><ol><li><strong>Optimize BP and volume status; assess ischemia and AV-valve disease.</strong></li><li><strong>Reassess symptoms and filling pressures with ACHD expertise.</strong></li><li><strong>Choose complete closure, selected fenestration or nonclosure from the resulting physiology.</strong></li><li><strong>Balloon occlusion may help selected cases: 2025 Class 2b.</strong><ul><li>Temporary occlusion may overestimate the post-device wedge rise; combine baseline findings and treatment response.</li><li>Follow congestion, residual shunt, RV remodeling and arrhythmia.</li></ul></li></ol><h3>Other Options</h3><ul><li><strong>A — Proceed with standard complete transcatheter ASD closure:</strong> Complete device closure suits favorable pulmonary and left-heart physiology. Markedly elevated filling pressure creates a pulmonary-congestion hazard here.</li><li><strong>C — Choose complete surgical patch closure instead of device closure:</strong> Surgery helps unsuitable device anatomy or associated lesions, but a complete patch removes the same LA decompression route.</li><li><strong>D — Start PAH-targeted vasodilation before planning complete closure:</strong> PAH drugs target precapillary pulmonary vascular disease. High wedge pressure with low PVR instead identifies a left-heart filling problem.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li><li><a href=\"https://pubmed.ncbi.nlm.nih.gov/36640419/\">Balloon occlusion versus actual ASD closure hemodynamics, 2023</a></li></ul>",
       "explanationTeaching": {
         "title": "High Left-Heart Filling Pressure Before ASD Closure",
         "sections": [
           {
-            "heading": "Why Low PVR Does Not Establish Closure Safety",
+            "heading": "Why Closure Can Cause Congestion",
             "bullets": [
               {
-                "text": "**Significant LV filling disease is a separate qualification from pulmonary vascular resistance.** An ASD can allow high-pressure left atrial blood to escape to the right heart; complete closure removes that route and may produce pulmonary congestion.",
+                "text": "**The ASD decompresses a high-pressure LA; complete closure removes this outlet.**",
                 "children": [
-                  "Preserved LVEF does not exclude impaired relaxation, increased chamber stiffness or HFpEF. The resting wedge pressure and LVEDP supplied here provide direct evidence that the uncomplicated ASD closure pathway cannot simply be applied.",
-                  "Reassess blood pressure, volume status, ischemia, AV-valve disease and other contributors to high filling pressure. Optimize treatable causes before deciding whether the benefit of reducing right-heart volume load outweighs the left-heart risk."
+                  "Wedge ==24 mmHg== and LVEDP ==26 mmHg== indicate significant left-heart filling disease.",
+                  "Low PVR and preserved LVEF do not establish closure safety."
                 ]
               }
             ]
           },
           {
-            "heading": "Individualized Assessment and Balloon-Test Limitations",
+            "heading": "Management Sequence",
             "bullets": [
               {
-                "text": "**Discuss complete closure, selected fenestrated repair or nonclosure with an experienced ACHD team after optimization.** These are physiological choices, not a rule that every older patient must remain unrepaired.",
+                "text": "**Optimize BP and volume status; assess ischemia and AV-valve disease.**",
+                "children": []
+              },
+              {
+                "text": "**Reassess symptoms and filling pressures with ACHD expertise.**",
+                "children": []
+              },
+              {
+                "text": "**Choose complete closure, selected fenestration or nonclosure from the resulting physiology.**",
+                "children": []
+              },
+              {
+                "text": "**Balloon occlusion may help selected cases: 2025 Class 2b.**",
                 "children": [
-                  "The 2025 guideline states that balloon test occlusion may be reasonable, a Class 2b recommendation. It is not a validated stand-alone prediction rule. Retrospective data show that the temporary balloon can overestimate the wedge-pressure increase after actual device closure.",
-                  "In a 42-patient study, some patients with a substantial wedge rise during balloon occlusion did not have the same rise after device closure. That observation limits interpretation of the test; it does not prove that a patient with markedly elevated resting LV filling pressures is safe for immediate complete closure. Integrate the baseline findings, symptoms, response to treatment and procedural measurements. Maintain individualized follow-up for congestion, residual shunt, RV remodeling and arrhythmia after the selected strategy."
+                  "Temporary occlusion may overestimate the post-device wedge rise; combine baseline findings and treatment response.",
+                  "Follow congestion, residual shunt, RV remodeling and arrhythmia."
                 ]
               }
-            ]
+            ],
+            "listType": "ol"
           }
         ],
         "tables": [],
         "otherOptions": [
           {
             "optionIndex": 0,
-            "explanation": "Complete device closure is suitable for many significant secundum defects with favorable pulmonary and left-heart physiology. Here resting left-heart filling pressures are markedly elevated, and removing the atrial decompression route can worsen congestion despite low PVR."
+            "explanation": "Complete device closure suits favorable pulmonary and left-heart physiology. Markedly elevated filling pressure creates a pulmonary-congestion hazard here."
           },
           {
             "optionIndex": 2,
-            "explanation": "Surgery is appropriate for unsuitable device anatomy or associated surgical lesions. A complete patch still abolishes the same decompression route; changing the procedural access alone does not remove the left-heart filling-pressure problem."
+            "explanation": "Surgery helps unsuitable device anatomy or associated lesions, but a complete patch removes the same LA decompression route."
           },
           {
             "optionIndex": 3,
-            "explanation": "Targeted PAH treatment is relevant to precapillary pulmonary vascular disease. This patient has low PVR with high wedge and LV end-diastolic pressures, so the principal issue is left-heart filling disease rather than an indication to lower pulmonary vascular resistance."
+            "explanation": "PAH drugs target precapillary pulmonary vascular disease. High wedge pressure with low PVR instead identifies a left-heart filling problem."
           }
         ]
       },
@@ -895,7 +1002,8 @@
       ],
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Assess left-heart filling tolerance before an appropriate selected closure strategy"
+      "coverageDecision": "Assess left-heart filling tolerance before an appropriate selected closure strategy",
+      "explanationStyle": "concise_structured"
     },
     {
       "id": "cardiology-rebuild-12-008",
