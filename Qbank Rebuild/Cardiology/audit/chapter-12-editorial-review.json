@@ -1,0 +1,35 @@
+{
+  "status": "review_in_progress_not_release_approved",
+  "questions": 55,
+  "bankSha256": "a710273a351bf7fa17f4de18d07487e50fad0aa1e634b1ac1d9f6db20eaeb0ee",
+  "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis.",
+  "findings": [
+    {
+      "questionId": "cardiology-rebuild-12-048",
+      "action": "Replaced implausible annual catheterization and ECG-only strategies with competing follow-up intervals and imaging strategies; correct index retained.",
+      "status": "revised"
+    },
+    {
+      "questionId": "cardiology-rebuild-03-047",
+      "action": "Revise severe-failure waiting distractor; audit original-question revision hashes before release.",
+      "status": "pending"
+    },
+    {
+      "questionId": "cardiology-rebuild-03-048",
+      "action": "Improve arbitrary numerical waiting thresholds and balance option specificity; audit original-question revision hashes.",
+      "status": "pending"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-024",
+      "action": "Replace artificially restricted investigation choices with clinically competing imaging strategies.",
+      "status": "pending"
+    }
+  ],
+  "remaining": [
+    "Review every explanation and source-document topic for clinical accuracy and completeness",
+    "Improve remaining weak distractors identified in the full stem scan",
+    "Check complete classification framework and treatment detail requirements",
+    "Verify rendered rich-text formatting",
+    "Seal release only after review and install/readback checks"
+  ]
+}
