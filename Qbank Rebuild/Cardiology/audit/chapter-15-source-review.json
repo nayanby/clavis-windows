@@ -1,0 +1,675 @@
+{
+  "status": "installed_verified",
+  "sourceDocumentSha256": "4a8f80a885d0c16e50f500fd0a46253b456d885de2847eed582748ada3109c6b",
+  "sourceSectionsRead": [
+    "Antiplatelets, anticoagulants and fibrinolytics",
+    "Antiarrhythmic and antianginal drugs",
+    "Lipid drugs",
+    "Inotropes, chronotropes, vasopressors and vasodilators"
+  ],
+  "corrections": [
+    "All 1232 source paragraphs read in contiguous batches; 93 transferred decisions retained and 35 source-gap decisions added.",
+    "All 93 retained explanations manually condensed to topic-specific nested bullets. Tables, references and three individualized distractor rationales retained; original IDs, stems, options and answer slots unchanged.",
+    "Final answer positions A32/B32/C32/D32; continuous subject groups separate antiplatelet, anticoagulant, fibrinolytic, rhythm, angina, HF, disease-specific, lipid, vasoactive and structural-trial decisions.",
+    "Cangrelor transition differentiates clopidogrel/prasugrel from ticagrelor timing. CYP2C19 result interpretation does not imply mandatory universal genotyping.",
+    "Age and renal enoxaparin adjustments are combined. Tirofiban renal adjustment changes infusion while preserving the loading dose.",
+    "Acute VTE apixaban dosing is kept separate from AF dose reduction and extended secondary prevention. Fondaparinux prophylactic/ACS doses are distinguished from weight-tier VTE treatment.",
+    "HIT treatment starts from clinical probability, preserves nonheparin anticoagulation, and defers VKA until platelet recovery. Acute VTE VKA overlap is not the same question as perioperative bridging.",
+    "Reversal differentiates VKA factor replacement plus vitamin K, specific dabigatran binding, partial LMWH neutralization and nonspecific Xa-inhibitor hemostatic support. FDA December 2025 Andexxa US availability/safety change verified.",
+    "Normal PT/INR/aPTT do not exclude apixaban. Calibrated anti-Xa testing is interpreted with timing and urgency, not as a universal procedural safety threshold.",
+    "Mechanical-valve targets are explicitly anchored to ACC/AHA 2020; reduced INR in On-X aortic valves is not evidence for apixaban substitution. Rheumatic MS and triple-positive APS remain distinct high-risk contexts.",
+    "Dronedarone permanent-AF restriction, dofetilide interactions, sotalol renal/QT risk, nitrate tolerance and nicorandil/trimetazidine adverse effects retained.",
+    "2026 finerenone HF label and September 2026 mavacamten interruption threshold rechecked in FDA sources; indication-specific dose and monitoring frameworks preserved.",
+    "Trial notes distinguish populations, randomized comparators and composite versus individual endpoints, including DIGIT-HF, preserved-EF post-MI beta-blocker meta-analysis, ADVENT, VANISH2, ALONE-AF and OCEAN.",
+    "Lipid questions distinguish siRNA from antibodies, clinical-outcome evidence from LDL lowering, formulation-specific EPA evidence, renal fenofibrate dosing, bempedoic interactions and ANGPTL3 inhibition.",
+    "2026 SSC vasoactive questions specify predominant vasodilation versus low-output cardiac dysfunction. Pressure response is not equated with restored flow or survival benefit.",
+    "Milrinone accumulation, angiotensin-II thrombosis precautions, nitroprusside thiocyanate toxicity, epinephrine aerobic lactate and clevidipine formulation restrictions cover major monitoring decisions.",
+    "Offline and actual-app rendering passed at desktop and narrow widths; narrow app screenshot visually inspected."
+  ],
+  "references": [
+    {
+      "label": "ACC/AHA/ACEP/NAEMSP/SCAI ACS guideline, 2025",
+      "url": "https://doi.org/10.1016/j.jacc.2024.11.009"
+    },
+    {
+      "label": "ESC ACS guideline, 2023",
+      "url": "https://doi.org/10.1093/eurheartj/ehad191"
+    },
+    {
+      "label": "Academic Research Consortium high bleeding risk consensus, 2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6636810/"
+    },
+    {
+      "label": "BSG/ESGE antithrombotic and endoscopy guideline update, 2021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8390296/"
+    },
+    {
+      "label": "COMPASS randomized trial, 2017",
+      "url": "https://doi.org/10.1056/NEJMoa1709118"
+    },
+    {
+      "label": "AHA/ACC chronic coronary disease guideline, 2023",
+      "url": "https://doi.org/10.1016/j.jacc.2023.04.003"
+    },
+    {
+      "label": "Cangrelor US prescribing information",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/204958Orig1s003lbl.pdf"
+    },
+    {
+      "label": "CPIC CYP2C19–clopidogrel guideline, 2022",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9287492/"
+    },
+    {
+      "label": "Tirofiban prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d554acff-22e9-4f28-b826-ee1b91daa2df"
+    },
+    {
+      "label": "Lovenox prescribing information, renal and geriatric STEMI dosing",
+      "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5017a927-2a24-4f27-89f9-27c805bf7d59"
+    },
+    {
+      "label": "FUTURA/OASIS-8 randomized trial, 2010",
+      "url": "https://doi.org/10.1001/jama.2010.1320"
+    },
+    {
+      "label": "ESC/EACTS valvular heart disease guideline, 2025",
+      "url": "https://doi.org/10.1093/eurheartj/ehaf194"
+    },
+    {
+      "label": "INVICTUS randomized trial, 2022",
+      "url": "https://doi.org/10.1056/NEJMoa2209051"
+    },
+    {
+      "label": "ACC/AHA valvular heart disease guideline, 2020",
+      "url": "https://doi.org/10.1161/CIR.0000000000000923"
+    },
+    {
+      "label": "PROACT Xa randomized trial, 2023",
+      "url": "https://doi.org/10.1056/EVIDoa2300067"
+    },
+    {
+      "label": "RE-ALIGN randomized study, 2013",
+      "url": "https://doi.org/10.1056/NEJMoa1300615"
+    },
+    {
+      "label": "Apixaban US prescribing information, 2026",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/202155s042lbl.pdf"
+    },
+    {
+      "label": "ACC/AHA/ACCP/HRS AF guideline, 2023",
+      "url": "https://doi.org/10.1161/CIR.0000000000001193"
+    },
+    {
+      "label": "Rivaroxaban US prescribing information",
+      "url": "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610&type=display"
+    },
+    {
+      "label": "ARTESiA randomized trial, 2024",
+      "url": "https://doi.org/10.1056/NEJMoa2310234"
+    },
+    {
+      "label": "NOAH-AFNET 6 randomized trial, 2023",
+      "url": "https://doi.org/10.1056/NEJMoa2303062"
+    },
+    {
+      "label": "ESC atrial fibrillation guideline, 2024",
+      "url": "https://doi.org/10.1093/eurheartj/ehae176"
+    },
+    {
+      "label": "ALONE-AF randomized trial, 2025",
+      "url": "https://doi.org/10.1001/jama.2025.14679"
+    },
+    {
+      "label": "OCEAN randomized trial, online 2025; print 2026",
+      "url": "https://doi.org/10.1056/NEJMoa2509688"
+    },
+    {
+      "label": "EHRA/HRS/APHRS/LAHRS AF ablation consensus, 2024",
+      "url": "https://doi.org/10.1002/joa3.13082"
+    },
+    {
+      "label": "ASH HIT guideline, 2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/6258919/"
+    },
+    {
+      "label": "ASH HIT pocket guide",
+      "url": "https://www.hematology.org/-/media/hematology/files/education/clinicians/guidelines-quality/documents/ash_vte_hit_pocketguide.pdf"
+    },
+    {
+      "label": "Fondaparinux US prescribing information",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/021345s052lbl.pdf"
+    },
+    {
+      "label": "ACC Anticoagulant Bleeding Pathway, 2020",
+      "url": "https://doi.org/10.1016/j.jacc.2020.04.053"
+    },
+    {
+      "label": "Idarucizumab prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c7400f8a-dcf4-a6df-6d07-983081b1bf34"
+    },
+    {
+      "label": "Enoxaparin prescribing information: reversal",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/020164s116lbl.pdf"
+    },
+    {
+      "label": "ADLM guidance on DOAC testing",
+      "url": "https://doi.org/10.1093/jalm/jfaf155"
+    },
+    {
+      "label": "FDA safety communication on Andexxa, December 2025",
+      "url": "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
+    },
+    {
+      "label": "British guideline on oral anticoagulation with warfarin",
+      "url": "https://www.gloshospitals.nhs.uk/media/documents/BCSH_Guidelines_for_Oral_Anticoagulation_with_Warfarin.pdf"
+    },
+    {
+      "label": "EULAR antiphospholipid syndrome recommendations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11034817/"
+    },
+    {
+      "label": "TNKase FDA prescribing information, 2025: indication-specific dosing",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/103909s5197lbl.pdf"
+    },
+    {
+      "label": "AHA adult advanced life support guideline, 2025",
+      "url": "https://doi.org/10.1161/CIR.0000000000001376"
+    },
+    {
+      "label": "Adenosine rapid-bolus injection prescribing information",
+      "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=91a601ab-d3cc-4013-9108-1b5432476076"
+    },
+    {
+      "label": "ESC supraventricular tachycardia guideline, 2019",
+      "url": "https://doi.org/10.1093/eurheartj/ehz467"
+    },
+    {
+      "label": "AHA tachyarrhythmia with pulse algorithm, 2025",
+      "url": "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf"
+    },
+    {
+      "label": "Ibutilide fumarate prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cf8724a-f0d1-4ce2-b7c1-cf5fac345fd0"
+    },
+    {
+      "label": "Digoxin prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b7e5c6e-e052-41b0-a4ce-05dfe62faaaf"
+    },
+    {
+      "label": "Dofetilide US prescribing information",
+      "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cff8d66a-ed43-46dd-97de-3dd21a7f2572"
+    },
+    {
+      "label": "EAST-AFNET 4 randomized trial, 2020",
+      "url": "https://doi.org/10.1056/NEJMoa2019422"
+    },
+    {
+      "label": "ADVENT randomized trial, 2023",
+      "url": "https://doi.org/10.1056/NEJMoa2307291"
+    },
+    {
+      "label": "ESC ventricular arrhythmias and sudden cardiac death guideline, 2022",
+      "url": "https://doi.org/10.1093/eurheartj/ehac262"
+    },
+    {
+      "label": "PROCAMIO randomized trial, online 2016; print 2017",
+      "url": "https://doi.org/10.1093/eurheartj/ehw230"
+    },
+    {
+      "label": "AHA adult cardiac arrest algorithm, 2025",
+      "url": "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-CA-250527.pdf"
+    },
+    {
+      "label": "VANISH randomized trial, 2016",
+      "url": "https://doi.org/10.1056/NEJMoa1513614"
+    },
+    {
+      "label": "VANISH2 randomized trial, online 2024; print 2025",
+      "url": "https://doi.org/10.1056/NEJMoa2409501"
+    },
+    {
+      "label": "CAST encainide/flecainide mortality report, 1991",
+      "url": "https://doi.org/10.1056/NEJM199103213241201"
+    },
+    {
+      "label": "EHRA practical antiarrhythmic drug compendium, 2025",
+      "url": "https://doi.org/10.1093/europace/euaf076"
+    },
+    {
+      "label": "IRIS early post-MI ICD randomized trial, 2009",
+      "url": "https://doi.org/10.1056/NEJMoa0901889"
+    },
+    {
+      "label": "AHA/ACC/HFSA heart failure guideline, 2022",
+      "url": "https://doi.org/10.1016/j.jacc.2021.12.012"
+    },
+    {
+      "label": "DANISH randomized trial, 2016",
+      "url": "https://doi.org/10.1056/NEJMoa1608029"
+    },
+    {
+      "label": "ESC cardiomyopathy guideline, 2023",
+      "url": "https://doi.org/10.1093/eurheartj/ehad194"
+    },
+    {
+      "label": "VEST randomized wearable-defibrillator trial, 2018",
+      "url": "https://doi.org/10.1056/NEJMoa1800781"
+    },
+    {
+      "label": "Multisociety ICD/CRT/pacing appropriate use criteria, 2025",
+      "url": "https://doi.org/10.1016/j.jacc.2024.11.023"
+    },
+    {
+      "label": "Dronedarone US prescribing information",
+      "url": "https://products.sanofi.us/Multaq/multaq.pdf"
+    },
+    {
+      "label": "Dofetilide US prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02438044-d6a3-49e9-a1ac-3aad21ef2c8c"
+    },
+    {
+      "label": "Sotalol US prescribing information",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/205108s003lbl.pdf"
+    },
+    {
+      "label": "Individual-patient meta-analysis of beta blockers after MI with normal EF, 2025",
+      "url": "https://doi.org/10.1056/NEJMoa2512686"
+    },
+    {
+      "label": "ABYSS beta-blocker interruption trial, 2024",
+      "url": "https://doi.org/10.1056/NEJMoa2404204"
+    },
+    {
+      "label": "Ranolazine extended-release prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a624dc7f-921d-4554-a813-f72dca0133c3"
+    },
+    {
+      "label": "Ranexa UK Summary of Product Characteristics",
+      "url": "https://www.medicines.org.uk/emc/product/6442/smpc"
+    },
+    {
+      "label": "ESC chronic coronary syndromes guideline, 2024",
+      "url": "https://doi.org/10.1093/eurheartj/ehae177"
+    },
+    {
+      "label": "MINT randomized transfusion trial, 2023",
+      "url": "https://doi.org/10.1056/NEJMoa2307983"
+    },
+    {
+      "label": "ISCHEMIA randomized trial baseline population and exclusions, 2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6439551/"
+    },
+    {
+      "label": "ISCHEMIA-EXTEND long-term survival report, 2026",
+      "url": "https://doi.org/10.1001/jama.2026.20375"
+    },
+    {
+      "label": "COURAGE randomized trial, 2007",
+      "url": "https://doi.org/10.1056/NEJMoa070829"
+    },
+    {
+      "label": "FAME randomized trial, 2009",
+      "url": "https://doi.org/10.1056/NEJMoa0807611"
+    },
+    {
+      "label": "Nitroglycerin patch prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f85d2e0-2e37-fcd1-276d-5a6466554289"
+    },
+    {
+      "label": "MHRA nicorandil ulceration warning",
+      "url": "https://www.gov.uk/drug-safety-update/nicorandil-risk-of-gastrointestinal-ulceration"
+    },
+    {
+      "label": "EMA trimetazidine referral and restrictions",
+      "url": "https://www.ema.europa.eu/en/medicines/human/referrals/trimetazidine"
+    },
+    {
+      "label": "FDA Entresto prescribing information, 2024",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/218591Orig1s000%2C207620Orig1s025lbl.pdf"
+    },
+    {
+      "label": "AHA/ACC/HFSA heart failure guideline, 2022",
+      "url": "https://doi.org/10.1161/CIR.0000000000001063"
+    },
+    {
+      "label": "ACC HFrEF treatment consensus pathway, 2024",
+      "url": "https://doi.org/10.1016/j.jacc.2023.12.024"
+    },
+    {
+      "label": "FDA dapagliflozin prescribing information, 2026",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/202293s035lbl.pdf"
+    },
+    {
+      "label": "KDIGO CKD guideline, 2024: RAS inhibitor monitoring",
+      "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf"
+    },
+    {
+      "label": "DIAMOND patiromer randomized trial, 2022",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9622299/"
+    },
+    {
+      "label": "TRED-HF randomized pilot trial, 2018 online/2019 print",
+      "url": "https://doi.org/10.1016/S0140-6736(18)32484-X"
+    },
+    {
+      "label": "FDA ivabradine prescribing information",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/206143s008%2C209964s002lbl.pdf"
+    },
+    {
+      "label": "A-HeFT randomized trial, 2004",
+      "url": "https://doi.org/10.1056/NEJMoa042934"
+    },
+    {
+      "label": "Isosorbide dinitrate/hydralazine prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=8f54d5a3-169f-48dd-9250-2c176d2bd9ad&type=display"
+    },
+    {
+      "label": "FDA digoxin prescribing information, 2024",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/009330s039lbl.pdf"
+    },
+    {
+      "label": "DIGIT-HF randomized trial, 2025",
+      "url": "https://doi.org/10.1056/NEJMoa2415471"
+    },
+    {
+      "label": "DECISION low-dose digoxin randomized trial, 2026",
+      "url": "https://doi.org/10.1038/s41591-026-04406-6"
+    },
+    {
+      "label": "VICTORIA randomized trial, 2020",
+      "url": "https://doi.org/10.1056/NEJMoa1915928"
+    },
+    {
+      "label": "VICTOR randomized trial, 2025",
+      "url": "https://doi.org/10.1016/S0140-6736(25)01665-4"
+    },
+    {
+      "label": "FDA vericiguat prescribing information, January 2026",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/214377s005lbl.pdf"
+    },
+    {
+      "label": "SERVE-HF randomized trial, 2015",
+      "url": "https://doi.org/10.1056/NEJMoa1506459"
+    },
+    {
+      "label": "ADVENT-HF randomized trial, 2024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38142697/"
+    },
+    {
+      "label": "AASM central sleep apnea guideline, 2025",
+      "url": "https://doi.org/10.5664/jcsm.11858"
+    },
+    {
+      "label": "ESC heart failure guideline, 2026",
+      "url": "https://doi.org/10.1093/eurheartj/ehag100"
+    },
+    {
+      "label": "DELIVER randomized trial, 2022",
+      "url": "https://doi.org/10.1056/NEJMoa2206286"
+    },
+    {
+      "label": "FINEARTS-HF randomized trial, 2024",
+      "url": "https://doi.org/10.1056/NEJMoa2407107"
+    },
+    {
+      "label": "FDA finerenone prescribing information, 2026",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/215341s011lbl.pdf"
+    },
+    {
+      "label": "STEP-HFpEF randomized trial, 2023",
+      "url": "https://doi.org/10.1056/NEJMoa2306963"
+    },
+    {
+      "label": "SUMMIT tirzepatide randomized trial, 2024 online",
+      "url": "https://doi.org/10.1056/NEJMoa2410027"
+    },
+    {
+      "label": "ADVOR randomized trial, 2022",
+      "url": "https://doi.org/10.1056/NEJMoa2203094"
+    },
+    {
+      "label": "ADVOR prespecified renal analysis, 2023",
+      "url": "https://doi.org/10.1093/eurheartj/ehad557"
+    },
+    {
+      "label": "ACC hospitalized HF consensus pathway, 2024",
+      "url": "https://doi.org/10.1016/j.jacc.2024.06.002"
+    },
+    {
+      "label": "STRONG-HF randomized trial, 2022",
+      "url": "https://doi.org/10.1016/S0140-6736(22)02076-1"
+    },
+    {
+      "label": "AHA/ACC multisociety hypertrophic cardiomyopathy guideline, 2024",
+      "url": "https://doi.org/10.1016/j.jacc.2024.02.014"
+    },
+    {
+      "label": "Mavacamten US prescribing information, revised September 2026",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/214998s013lbl.pdf"
+    },
+    {
+      "label": "Aficamten US prescribing information, 2025",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/219083s000lbl.pdf"
+    },
+    {
+      "label": "EXPLORER-HCM randomized trial, 2020",
+      "url": "https://doi.org/10.1016/S0140-6736(20)31792-X"
+    },
+    {
+      "label": "SEQUOIA-HCM randomized trial, 2024",
+      "url": "https://doi.org/10.1056/NEJMoa2401424"
+    },
+    {
+      "label": "MAPLE-HCM aficamten versus metoprolol monotherapy trial, 2025",
+      "url": "https://doi.org/10.1056/NEJMoa2504654"
+    },
+    {
+      "label": "ACC transthyretin cardiac amyloidosis concise clinical guidance, 2025",
+      "url": "https://doi.org/10.1016/j.jacc.2025.09.004"
+    },
+    {
+      "label": "Vutrisiran US prescribing information, 2025 ATTR-CM indication",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215515s006lbl.pdf"
+    },
+    {
+      "label": "Acoramidis current US prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=913552ef-875d-4cb7-bf05-a7d20a394c38"
+    },
+    {
+      "label": "Tafamidis US prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1b4121ee-a733-4456-a917-be2603477839"
+    },
+    {
+      "label": "ATTR-ACT randomized tafamidis trial, 2018",
+      "url": "https://doi.org/10.1056/NEJMoa1805689"
+    },
+    {
+      "label": "ATTRibute-CM randomized acoramidis trial, 2024",
+      "url": "https://doi.org/10.1056/NEJMoa2305434"
+    },
+    {
+      "label": "HELIOS-B randomized vutrisiran trial, 2025",
+      "url": "https://doi.org/10.1056/NEJMoa2409134"
+    },
+    {
+      "label": "ANDROMEDA randomized trial, 2021",
+      "url": "https://doi.org/10.1056/NEJMoa2028631"
+    },
+    {
+      "label": "ANDROMEDA final survival analysis, 2026",
+      "url": "https://doi.org/10.1182/blood.2025032099"
+    },
+    {
+      "label": "Daratumumab/hyaluronidase US prescribing information, 2025",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/761145s032lbl.pdf"
+    },
+    {
+      "label": "ACC cardiac amyloidosis expert consensus decision pathway, 2023",
+      "url": "https://doi.org/10.1016/j.jacc.2022.11.022"
+    },
+    {
+      "label": "ICAP randomized colchicine trial in first-episode acute pericarditis, 2013",
+      "url": "https://doi.org/10.1056/NEJMoa1208536"
+    },
+    {
+      "label": "ESC myocarditis and pericarditis guideline, 2025",
+      "url": "https://doi.org/10.1093/eurheartj/ehaf192"
+    },
+    {
+      "label": "Colchicine prescribing information: interactions and organ impairment",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d6adc880-5499-4691-93f3-27c87902d5fc"
+    },
+    {
+      "label": "RHAPSODY randomized-withdrawal rilonacept trial, 2021",
+      "url": "https://doi.org/10.1056/NEJMoa2027892"
+    },
+    {
+      "label": "Rilonacept current US prescribing information, revised 2025",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/125249Orig1s057lbl.pdf"
+    },
+    {
+      "label": "AIRTRIP randomized-withdrawal anakinra trial, 2016",
+      "url": "https://doi.org/10.1001/jama.2016.15826"
+    },
+    {
+      "label": "Anakinra current US prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9d74915-6606-4570-9c52-c4001d3177de"
+    },
+    {
+      "label": "COPPS-2 randomized perioperative colchicine prevention trial, 2014",
+      "url": "https://doi.org/10.1001/jama.2014.11026"
+    },
+    {
+      "label": "COPPS randomized postoperative colchicine prevention trial, 2010",
+      "url": "https://doi.org/10.1093/eurheartj/ehq319"
+    },
+    {
+      "label": "ACC/AHA Dyslipidemia Guideline, 2026",
+      "url": "https://doi.org/10.1016/j.jacc.2025.11.016"
+    },
+    {
+      "label": "Ezetimibe US prescribing information",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/021445s043lbl.pdf"
+    },
+    {
+      "label": "Inclisiran US prescribing information, 2026",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/214012s021lbl.pdf"
+    },
+    {
+      "label": "CLEAR Outcomes randomized trial: ACC report",
+      "url": "https://www.acc.org/Latest-in-Cardiology/Clinical-Trials/2023/03/01/23/31/clear-outcomes"
+    },
+    {
+      "label": "Bempedoic acid US prescribing information",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/211616s022s023lbl.pdf"
+    },
+    {
+      "label": "REDUCE-IT randomized trial",
+      "url": "https://doi.org/10.1056/NEJMoa1812792"
+    },
+    {
+      "label": "Fenofibrate 48/145-mg tablet prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=085109a6-f006-44f0-a170-980d8899a365"
+    },
+    {
+      "label": "Evinacumab US prescribing information",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/761181s002lbl.pdf"
+    },
+    {
+      "label": "AHA adult bradycardia with a pulse algorithm, 2025",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Bradycardia-250514.pdf"
+    },
+    {
+      "label": "AHA special circumstances of resuscitation guideline, 2025",
+      "url": "https://doi.org/10.1161/CIR.0000000000001380"
+    },
+    {
+      "label": "Utah Poison Control high-dose insulin protocol, 2021",
+      "url": "https://poisoncontrol.utah.edu/news/2021/07/high-dose-insulin-therapy"
+    },
+    {
+      "label": "DOREMI randomized trial of milrinone versus dobutamine, 2021",
+      "url": "https://doi.org/10.1056/NEJMoa2026845"
+    },
+    {
+      "label": "ACC cardiogenic shock consensus guidance, 2025",
+      "url": "https://doi.org/10.1016/j.jacc.2025.02.018"
+    },
+    {
+      "label": "IABP-SHOCK II randomized trial, 2012",
+      "url": "https://doi.org/10.1056/NEJMoa1208410"
+    },
+    {
+      "label": "ACC/AHA multisociety acute coronary syndromes guideline, 2025",
+      "url": "https://doi.org/10.1161/CIR.0000000000001309"
+    },
+    {
+      "label": "ECLS-SHOCK randomized trial, 2023",
+      "url": "https://doi.org/10.1056/NEJMoa2307227"
+    },
+    {
+      "label": "EAPCI/ACVC consensus on temporary mechanical circulatory support, 2026",
+      "url": "https://doi.org/10.1093/eurheartj/ehag708"
+    },
+    {
+      "label": "DanGer-Shock randomized trial, 2024",
+      "url": "https://doi.org/10.1056/NEJMoa2312572"
+    },
+    {
+      "label": "Surviving Sepsis Campaign, 2026",
+      "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026"
+    },
+    {
+      "label": "Milrinone prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=0fdaee3c-2144-4ca7-9868-54d251f468c0"
+    },
+    {
+      "label": "Angiotensin II prescribing information",
+      "url": "https://giapreza-assets.s3.amazonaws.com/prescribing-information.pdf"
+    },
+    {
+      "label": "Sodium nitroprusside prescribing information",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=820eadcb-1230-4b17-a652-e69b52b3c12f"
+    },
+    {
+      "label": "FDA epinephrine clinical pharmacology review",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2014/205029Orig1s000MedR.pdf"
+    },
+    {
+      "label": "Clevidipine US prescribing information",
+      "url": "https://www.dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=a6826aa3-fabb-4ff1-a7a3-cd4c34e3a330&type=pdf"
+    },
+    {
+      "label": "EARLY TAVR randomized trial, 2024 online/2025 print",
+      "url": "https://doi.org/10.1056/NEJMoa2405880"
+    },
+    {
+      "label": "COAPT randomized trial, 2018",
+      "url": "https://doi.org/10.1056/NEJMoa1806640"
+    },
+    {
+      "label": "MITRA-FR randomized trial, 2018",
+      "url": "https://doi.org/10.1056/NEJMoa1805374"
+    },
+    {
+      "label": "RESHAPE-HF2 randomized trial, 2024",
+      "url": "https://doi.org/10.1056/NEJMoa2314328"
+    }
+  ],
+  "checks": {
+    "finalClinicalReview": "author_review_passed",
+    "transferredExplanationCompaction": "passed",
+    "rendering": "passed_offline_and_app_two_widths"
+  },
+  "releaseReview": {
+    "status": "passed",
+    "installed": true,
+    "report": "chapter-15-release-review.json",
+    "runtimeReadback": "passed"
+  },
+  "editorialReviewProgress": {
+    "status": "passed",
+    "nextWork": "Release review and runtime readback completed."
+  },
+  "installed": true
+}

@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology 15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials",
+  "currentChapter": "Cardiology 10. Infective Endocarditis: resolve remaining source review and complete source-matched coverage",
   "chapters": [
     {
       "subject": "Neurology",
@@ -781,16 +781,38 @@
       "chapter": 15,
       "document": "15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials",
       "file": "Cardiology/15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials.json",
-      "status": "redistributed_coverage_incomplete",
+      "status": "installed_verified",
       "originalIdsPreserved": true,
       "existingQuestions": 93,
       "previouslyInstalledQuestions": 93,
       "draftQuestions": 0,
-      "coverageStatus": "incomplete_requires_chapter_review",
+      "coverageStatus": "review_pending",
       "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-      "installedQuestions": 93,
+      "installedQuestions": 128,
       "draftQuestionsWithheld": 0,
-      "runtimeStatus": "installed_redistributed_subset"
+      "runtimeStatus": "installed_reviewed_chapter",
+      "authoringStatus": "source_read_new_gap_questions_in_progress",
+      "additionalLocalDraftQuestions": 31,
+      "authoringProgress": "Cardiology/audit/chapter-15-authoring-progress.json",
+      "validation": {
+        "questions": 128,
+        "answerDistribution": {
+          "A": 32,
+          "B": 32,
+          "C": 32,
+          "D": 32
+        },
+        "minimumExplanationWords": 120,
+        "distractorRationales": 384,
+        "questionStyles": {
+          "clinical_scenario": 88,
+          "direct": 40
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 128,
+      "coverageMap": "Cardiology/audit/chapter-15-coverage.json",
+      "installedSha256": "0f119ada191ba9da2db98f01bbef64ff9c9e9d3231b87821957d30a20683c6b6"
     },
     {
       "subject": "Rheumatology",
@@ -1411,7 +1433,7 @@
     "sourceChapters": 15,
     "fullCoverage": false,
     "draftQuestionsNotInstalled": 74,
-    "currentAuthoredQuestions": 803,
+    "currentAuthoredQuestions": 838,
     "currentDraftQuestionsNotInstalled": 65
   }
 }

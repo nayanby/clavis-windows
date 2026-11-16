@@ -1,0 +1,163 @@
+{
+  "status": "installed_verified",
+  "authoredQuestions": 128,
+  "existingQuestions": 93,
+  "newDraftQuestions": 35,
+  "groups": [
+    "Antiplatelets and ACS antithrombotics",
+    "Anticoagulants and reversal",
+    "Fibrinolytic regimens",
+    "Antiarrhythmic selection and safety",
+    "Antianginal therapy and coronary evidence",
+    "Heart failure pharmacology and trials",
+    "Cardiomyopathy and pericardial therapies",
+    "Lipid pharmacology",
+    "Vasoactive and shock therapies",
+    "Structural intervention trials"
+  ],
+  "countPolicy": "128 high-yield decisions: 93 retained plus 35 source-gap additions; count follows source breadth and avoids duplicating other chapter decisions, not official examination weightage.",
+  "newDecisions": [
+    {
+      "questionId": "cardiology-rebuild-15-001",
+      "title": "Transition From Intravenous Cangrelor"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-002",
+      "title": "CYP2C19 and Clopidogrel Activation"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-003",
+      "title": "Renal Adjustment of Tirofiban"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-004",
+      "title": "High-Probability HIT With Thrombosis"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-005",
+      "title": "Warfarin During Acute HIT"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-006",
+      "title": "Fondaparinux Dose for Acute VTE"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-007",
+      "title": "Apixaban: VTE Versus AF Dose Reduction"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-008",
+      "title": "Urgent Reversal of Warfarin"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-009",
+      "title": "Specific Reversal of Dabigatran"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-010",
+      "title": "Partial Reversal of Enoxaparin"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-011",
+      "title": "Coagulation Tests During Apixaban Exposure"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-012",
+      "title": "Factor Xa Reversal and Changing Availability"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-013",
+      "title": "Dronedarone in Permanent AF"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-014",
+      "title": "Dofetilide–Hydrochlorothiazide Interaction"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-015",
+      "title": "Sotalol Accumulation and QT Prolongation"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-016",
+      "title": "Preventing Nitrate Tolerance"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-017",
+      "title": "Nicorandil-Associated Ulceration"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-018",
+      "title": "Trimetazidine and Movement Disorders"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-019",
+      "title": "Statin Intensity"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-020",
+      "title": "Ezetimibe Target"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-021",
+      "title": "Inclisiran Dosing and Mechanism"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-022",
+      "title": "CLEAR Outcomes"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-023",
+      "title": "Bempedoic Acid–Statin Interaction"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-024",
+      "title": "REDUCE-IT and Formulation-Specific Evidence"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-025",
+      "title": "Fenofibrate in Moderate Renal Impairment"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-026",
+      "title": "Evinacumab in Homozygous FH"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-027",
+      "title": "Vasopressin as an Adjunct"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-028",
+      "title": "Milrinone During Renal Deterioration"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-029",
+      "title": "Angiotensin II and Thrombosis"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-030",
+      "title": "Thiocyanate Accumulation"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-031",
+      "title": "Inotropy Despite an Adequate MAP"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-032",
+      "title": "Warfarin Initiation for Acute VTE"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-033",
+      "title": "Anticoagulant Selection in Triple-Positive APS"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-034",
+      "title": "Epinephrine-Associated Lactate Rise"
+    },
+    {
+      "questionId": "cardiology-rebuild-15-035",
+      "title": "Clevidipine and the Lipid Vehicle"
+    }
+  ],
+  "remainingCoverage": [],
+  "remainingDecisions": []
+}

@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "installedChapters": 15,
-  "installedQuestions": 738,
+  "installedQuestions": 773,
   "draftQuestionsWithheld": 65,
   "otherBanksPreserved": 14,
   "backup": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\qbank-reset-backups\\cardiology-redistribution-1794740990274378600.zip",
@@ -16,21 +16,22 @@
     "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\8. Cardiomyopathies Myocarditis and Genetic Cardiac Diseases\\Questions\\739e732b8594c25552d9.json",
     "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\9. Pericardial Diseases and Cardiac Tamponade\\Questions\\337b8357465f89962f0c.json",
     "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\10. Infective Endocarditis\\Questions\\77d074746fb976441327.json",
-    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials\\Questions\\1461ca452734870759d3.json",
     "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\11. Systemic Hypertension and Hypertensive Emergencies\\Questions\\f639ee485f4a58bd3a2e.json",
     "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\12. Adult Congenital Heart Diseases\\Questions\\4b70c167bdabde8405b5.json",
     "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\13. Aortic Diseases and Peripheral Vascular Diseases\\Questions\\23d4748ea19e17a0615b.json",
-    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\14. Advanced ECG Interpretation and Electrophysiology\\Questions\\841ef689be4d26fd0bb7.json"
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\14. Advanced ECG Interpretation and Electrophysiology\\Questions\\841ef689be4d26fd0bb7.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials\\Questions\\1461ca452734870759d3.json"
   ],
   "note": "Redistributed subsets plus individually reviewed full chapters; other chapters may still have incomplete coverage.",
   "releasedChapterOrders": [
     11,
     12,
     13,
-    14
+    14,
+    15
   ],
-  "lastInstalledChapter": 14,
-  "lastBackup": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\qbank-reset-backups\\reviewed-cardiology-14-1794803002269113900.zip",
+  "lastInstalledChapter": 15,
+  "lastBackup": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\qbank-reset-backups\\reviewed-cardiology-15-1794804290656188800.zip",
   "lastReadback": "passed",
   "lastInstalledAt": "2026-11-16"
 }

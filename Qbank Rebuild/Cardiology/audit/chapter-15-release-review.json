@@ -1,0 +1,42 @@
+{
+  "chapterNumber": 15,
+  "document": "15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials",
+  "status": "passed",
+  "installed": true,
+  "reviewedAt": "2026-11-16",
+  "reviewedQuestionsSha256": "d1f550dd8c1f2e2b050183de9045896ff0e880ce23930f2ae88f0ae5c77656f4",
+  "sourceDocumentSha256": "4a8f80a885d0c16e50f500fd0a46253b456d885de2847eed582748ada3109c6b",
+  "questionCount": 128,
+  "coverageAudit": "chapter-15-coverage.json",
+  "sourceReview": "chapter-15-source-review.json",
+  "editorialReview": "chapter-15-editorial-review.json",
+  "validation": {
+    "questions": 128,
+    "answerDistribution": {
+      "A": 32,
+      "B": 32,
+      "C": 32,
+      "D": 32
+    },
+    "minimumExplanationWords": 120,
+    "distractorRationales": 384,
+    "questionStyles": {
+      "direct": 40,
+      "clinical_scenario": 88
+    },
+    "status": "passed"
+  },
+  "checks": {
+    "continuousTopicOrder": "passed",
+    "individualDistractorExplanations": "passed",
+    "stableIdsAndAnswerSlots": "passed",
+    "rendering": "passed_offline_and_app_two_widths"
+  },
+  "limitations": [
+    "Full Harrison text was not accessed.",
+    "Author source review is not independent clinician peer review.",
+    "Named regulatory and guideline frameworks can differ by jurisdiction."
+  ],
+  "installedPath": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials\\Questions\\1461ca452734870759d3.json",
+  "installedSha256": "0f119ada191ba9da2db98f01bbef64ff9c9e9d3231b87821957d30a20683c6b6"
+}

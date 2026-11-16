@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "scope": "Bank-provided offline HTML and CSS, not application theme overrides",
+  "bankSha256": "4b53daaa4e7e2e7fb03792f3b76b275e12361657950bff4aa09416e0a9ed8147",
+  "results": [
+    {
+      "status": "passed",
+      "questions": 128,
+      "viewport": 1178,
+      "failures": [],
+      "screenshot": "C:\\Users\\ANT-PC\\OneDrive\\Documents\\ChatGPT\\cortex windows\\outputs\\qbank-render\\cardiology-15\\preview-1200.png"
+    },
+    {
+      "status": "passed",
+      "questions": 128,
+      "viewport": 518,
+      "failures": [],
+      "screenshot": "C:\\Users\\ANT-PC\\OneDrive\\Documents\\ChatGPT\\cortex windows\\outputs\\qbank-render\\cardiology-15\\preview-540.png"
+    }
+  ]
+}
