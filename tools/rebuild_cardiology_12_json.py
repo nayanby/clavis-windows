@@ -123,6 +123,7 @@ ASSIGNMENTS={
  PREFIX+'039':(10,3),
  PREFIX+'040':(10,4),
  PREFIX+'041':(11,0),
+ PREFIX+'042':(11,1),
  'cardiology-rebuild-03-047':(5,0), 'cardiology-rebuild-03-048':(6,1),
 }
 

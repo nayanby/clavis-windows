@@ -18,3 +18,22 @@ rows=[Q('Other important congenital lesions','Small Isolated Anomalous Pulmonary
   'Repair planning must define the entire venous pathway and associated defects. Potential postoperative problems include pulmonary venous or systemic venous obstruction and rhythm complications, depending on the reconstruction. These risks reinforce the need for a demonstrable physiological indication rather than intervention based solely on an unusual image.',
   'An intact atrial septum excludes the assumed ASD closure target but does not exclude a left-to-right shunt from anomalous drainage. Conversely, an unexplained enlarged RV should prompt a search for anomalous veins even when routine echocardiography does not show an ASD.')],
  ['ACHD2025','ESC2020'])]
+
+rows.append(Q('Other important congenital lesions','Localizing Obstruction in Cor Triatriatum Sinister',
+ 'An adult with exertional dyspnea has a left atrial membrane on TEE. All pulmonary veins enter the chamber upstream of it; the left atrial appendage and a normally opening mitral valve lie downstream. Doppler localizes acceleration to a small membrane opening. Which diagnosis best explains the obstruction?',
+ 'Cor triatriatum sinister',[
+ ('Supramitral ring','A supramitral ring produces obstruction close to the mitral valve, typically below the left atrial appendage. The supplied appendage lies downstream of the membrane with the mitral valve, supporting cor triatriatum anatomy instead.'),
+ ('Congenital valvar mitral stenosis','Congenital mitral stenosis involves the valve apparatus and may accompany other left-sided obstructive lesions. Here the valve opens normally and the flow acceleration is localized to a separate atrial membrane.'),
+ ('Pulmonary vein stenosis','Pulmonary vein stenosis obstructs one or more venous entry pathways and can cause pulmonary venous hypertension. The observed obstructing structure instead separates the pulmonary venous chamber from the appendage-containing distal atrium.')],
+ [S('Use the Appendage as an Anatomical Landmark',
+  '**Cor triatriatum sinister partitions the left atrium into a proximal pulmonary venous chamber and a distal chamber containing the appendage and mitral valve.** The size and number of membrane openings determine the physiological obstruction.',
+  'A restrictive opening can mimic mitral stenosis by raising upstream pulmonary venous pressure despite a normal valve. A nonrestrictive membrane may be discovered incidentally in an adult without a clinically important gradient.',
+  'The relationship to the appendage helps distinguish a supramitral ring, but the entire membrane, valve apparatus and pulmonary venous anatomy should be mapped. Do not diagnose valvar stenosis from pulmonary congestion or a diastolic flow disturbance alone.'),
+  S('Assess Physiology and Associated Lesions',
+  '**Echocardiography defines the membrane and localizes flow acceleration.** TEE and three-dimensional imaging can clarify anatomy; CMR or CT can assess pulmonary veins and associated congenital lesions when needed.',
+  'Interpret gradients with flow, heart rate and symptoms. Pulmonary hypertension or discordant noninvasive findings may justify invasive assessment. Symptoms after prior repair require consideration of residual obstruction and associated pulmonary vein disease.'),
+  S('Treatment According to Obstruction',
+  '**Symptoms attributable to membrane obstruction warrant surgical resection under current ACHD guidance.** The aim is to relieve pulmonary venous hypertension rather than intervene on a normally opening mitral valve.',
+  'Severe obstruction can also justify surgical assessment in an asymptomatic adult. Conversely, a reassuring nonobstructive lesion can be followed without automatic surgery. Evaluate associated defects, atrial arrhythmia and ventricular or valve disease as part of the same decision.',
+  'Diuretics may temporarily relieve congestion but do not remove the membrane. Long-term follow-up after treatment considers residual lesions, pulmonary venous abnormalities and recurrent symptoms; anatomical repair does not eliminate every associated congenital problem.')],
+ ['ACHD2025','ESC2020']))
