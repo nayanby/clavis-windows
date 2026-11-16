@@ -131,7 +131,12 @@
  body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation{box-sizing:border-box;width:80%;max-width:80%;min-width:0;margin:16px auto 0!important;padding:20px!important;border:1px solid #d6def1!important;border-radius:14px!important;background:#fff!important;box-shadow:0 4px 16px rgba(41,38,100,.08)!important}
  body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation,body .ai-quiz .ai-quiz-explain .cnl-notes-explanation{font-size:16px!important}
  body .ai-quiz .ai-quiz-explain p{margin:0 0 5px!important}
- body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation :is(h1,h2,h3,h4,p.boldside1,p.boldside2,p.boldside3,p.boldside4){font-family:"Averia Serif Libre",serif!important;font-size:16px!important;font-weight:700!important;line-height:1.2!important;color:#5C3A52!important;text-transform:uppercase!important;background:none!important;border:0!important;border-bottom:1.333333px solid #D9D9D9!important;border-radius:0!important;padding:0 0 3px!important;margin:10px 0 5px!important}
+ body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation :is(h3,h4,p.boldside1,p.boldside2,p.boldside3,p.boldside4){font-family:"Averia Serif Libre",serif!important;font-size:16px!important;font-weight:700!important;line-height:1.2!important;color:#5C3A52!important;text-transform:uppercase!important;background:none!important;border:0!important;border-bottom:1.333333px solid #D9D9D9!important;border-radius:0!important;padding:0 0 2px!important;margin:6px 0 3px!important}
+ body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation :is(h1,h2){font-family:"Averia Serif Libre",serif!important;font-size:18px!important;font-weight:700!important;line-height:1.2!important;color:#5C3A52!important;text-transform:uppercase!important;background:#E7E1E4!important;border:0!important;border-left:4px solid #E7E1E4!important;border-radius:0!important;padding:6px 8px!important;margin:0 0 6px!important}
+ body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation :is(ul,ol){margin:3px 0 5px!important}
+ body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation :is(ul,ol) :is(ul,ol){margin:2px 0 0!important}
+ body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation li{margin:2px 0!important;padding-bottom:1px!important}
+ body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation li:last-child{margin-bottom:0!important;padding-bottom:0!important}
  body .ai-quiz .ai-quiz-explain table{font-size:15px!important}
  @media(max-width:600px){body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation{padding:14px!important}}
  .cnl-qbank-your-answer{font-weight:700}.cnl-qbank-session .ai-quiz-explain{display:block!important;max-height:none!important;overflow:visible!important}
