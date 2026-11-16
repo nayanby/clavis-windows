@@ -117,13 +117,14 @@ def install(source, apply=False):
     entry.update(status='installed_verified',runtimeStatus='installed_reviewed_chapter',installedQuestions=len(bank['questions']),
                  draftQuestions=0,draftQuestionsWithheld=0,installedSha256=release['installedSha256'])
     plan['cardiologyRedistribution'].update(currentAuthoredQuestions=authored,currentDraftQuestionsNotInstalled=manifest['draftQuestionsWithheld'])
-    next_doc='12. Adult Congenital Heart Diseases'
-    plan['currentChapter']='Cardiology '+next_doc
+    next_entry=next((x for x in plan['chapters'] if x['subject']=='Cardiology' and x.get('chapter',0)>number and x.get('status')!='installed_verified'),None)
+    next_label=('Cardiology '+next_entry['document']) if next_entry else 'Continue pending source-matched chapters'
+    plan['currentChapter']=next_label
     write(ROOT/'progress.json',plan)
     summary=read(ROOT/'validation-summary.json')
     summary.update(installedChapters=len(loaded),installedQuestions=sum(len(b['questions']) for b in loaded),
                    currentCardiologyAuthoredQuestions=authored,currentCardiologyDraftQuestionsNotInstalled=manifest['draftQuestionsWithheld'],
-                   runtimeSourceComparison='passed_current_banks_against_released_subsets_and_reviewed_chapters',nextChapter='Cardiology '+next_doc)
+                   runtimeSourceComparison='passed_current_banks_against_released_subsets_and_reviewed_chapters',nextChapter=next_label)
     write(ROOT/'validation-summary.json',summary)
     print(json.dumps(dict(installed=str(dest),cardiologyChapters=len(cardio),cardiologyQuestions=manifest['installedQuestions'],
                           totalBanks=len(loaded),totalQuestions=summary['installedQuestions'],otherBanksPreserved=len(before)-len(previous),validation=validation),indent=2))

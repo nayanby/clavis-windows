@@ -32,14 +32,22 @@ document.getElementById('render-report').textContent=JSON.stringify({status:fail
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('bank');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('bank');ap.add_argument('--app',action='store_true');args=ap.parse_args()
     source=Path(args.bank).resolve();bank=json.loads(source.read_text(encoding='utf-8'))
     root=Path(__file__).resolve().parents[1]
     out=root/'outputs'/'qbank-render'/f"cardiology-{bank['chapterOrder']:02}"
+    if args.app:out=out/'app'
     out.mkdir(parents=True,exist_ok=True)
     markup=''.join('<article id="'+q['id']+'"><p>'+html.escape(q['question'])+'</p>'+q['explanationHtml']+'</article>' for q in bank['questions'])
+    css=bank['explanationCss']
+    if args.app:
+        assets=Path('C:/Users/ANT-PC/OneDrive/Cortex Windows/_internal/assets/vendor')
+        css=(assets/'qbank-explanations.css').read_text(encoding='utf-8')
+        scripts='\n'.join((assets/n).read_text(encoding='utf-8') for n in ['study-rich-text.js','qbank-explanations.js'])+'\n'+(root/'assets/vendor/qbank-concise.js').read_text(encoding='utf-8')
+        data=json.dumps(bank['questions'],ensure_ascii=True).replace('<','\\u003c')
+        markup='<script>'+scripts+'\nconst questions='+data+'; for(const q of questions){const host=document.createElement("article");host.id=q.id;document.body.append(host);window.cnlRenderQbankExplanation(host,q,true);}</script>'
     page=out/'explanations.html'
-    page.write_text('<!doctype html><html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>'+bank['explanationCss']+'body{margin:16px;line-height:1.45}article{max-width:1100px;margin:0 auto 32px}#render-report{display:none}</style><body>'+markup+'<pre id="render-report"></pre>'+CHECK+'</body></html>',encoding='utf-8')
+    page.write_text('<!doctype html><html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>'+css+'body{margin:16px;line-height:1.45}article{max-width:1100px;margin:0 auto 32px}#render-report{display:none}</style><body>'+markup+'<pre id="render-report"></pre>'+CHECK+'</body></html>',encoding='utf-8')
     chrome=Path('C:/Program Files/Google/Chrome/Application/chrome.exe')
     results=[]
     with tempfile.TemporaryDirectory(prefix='qbank-render-',dir=out,ignore_cleanup_errors=True) as tmp:
@@ -55,7 +63,7 @@ def main():
             assert report['questions']==len(bank['questions'])
             assert screenshot.is_file()
             report['screenshot']=str(screenshot);results.append(report)
-    audit=dict(status='passed',scope='Bank-provided offline HTML and CSS, not application theme overrides',bankSha256=hashlib.sha256(source.read_bytes()).hexdigest(),results=results)
+    audit=dict(status='passed',scope='Application renderer with concise adapter' if args.app else 'Bank-provided offline HTML and CSS, not application theme overrides',bankSha256=hashlib.sha256(source.read_bytes()).hexdigest(),results=results)
     (out/'render-report.json').write_text(json.dumps(audit,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(audit,indent=2))
 

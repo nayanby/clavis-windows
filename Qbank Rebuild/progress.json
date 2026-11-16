@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology 12. Adult Congenital Heart Diseases",
+  "currentChapter": "Cardiology 13. Aortic Diseases and Peripheral Vascular Diseases",
   "chapters": [
     {
       "subject": "Neurology",
@@ -672,16 +672,16 @@
       "chapter": 12,
       "document": "12. Adult Congenital Heart Diseases",
       "file": "Cardiology/12. Adult Congenital Heart Diseases.json",
-      "status": "draft_in_progress",
+      "status": "installed_verified",
       "originalIdsPreserved": true,
       "existingQuestions": 4,
       "previouslyInstalledQuestions": 4,
-      "draftQuestions": 51,
+      "draftQuestions": 0,
       "coverageStatus": "incomplete_draft",
       "explanationStructureStatus": "four_originals_preserved_new_questions_use_deep_explanations",
-      "installedQuestions": 4,
-      "draftQuestionsWithheld": 51,
-      "runtimeStatus": "installed_redistributed_subset",
+      "installedQuestions": 55,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_reviewed_chapter",
       "validation": {
         "questions": 55,
         "answerDistribution": {
@@ -701,7 +701,8 @@
       "authoredQuestions": 55,
       "plannedQuestions": 55,
       "newQuestionsAfterRedistribution": 51,
-      "coverageMap": "Cardiology/audit/chapter-12-coverage.json"
+      "coverageMap": "Cardiology/audit/chapter-12-coverage.json",
+      "installedSha256": "ad35ee06f233f4e80ff874251d5fcc4adda954c62686eb499606f80d22c013ad"
     },
     {
       "subject": "Cardiology",
@@ -1371,6 +1372,6 @@
     "fullCoverage": false,
     "draftQuestionsNotInstalled": 74,
     "currentAuthoredQuestions": 723,
-    "currentDraftQuestionsNotInstalled": 116
+    "currentDraftQuestionsNotInstalled": 65
   }
 }

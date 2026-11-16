@@ -1,7 +1,7 @@
 {
   "chapter": 12,
   "document": "12. Adult Congenital Heart Diseases",
-  "status": "draft_in_progress",
+  "status": "installed_verified",
   "installedNewQuestions": false,
   "authoredQuestions": 55,
   "plannedQuestions": 55,
@@ -368,10 +368,21 @@
   "fontanChecks": [
     "Increased pulmonary resistance limits passive pulmonary flow and systemic ventricular preload; a preserved ejection fraction does not establish normal output."
   ],
-  "nextWork": "Complete whole-chapter clinical, explanation, distractor and source-coverage review of all 55 authored questions before release; no new Chapter 12 questions are installed yet.",
+  "nextWork": "Install sealed chapter and verify runtime readback.",
   "limitations": [
-    "Four transferred IDs retained: two questions are verbatim and two pulmonary-valve questions have hash-audited editorial revisions; runtime still contains all four original versions until chapter release.",
-    "New content has author source checks, not independent clinician review.",
-    "The 55-question plan is provisional and does not establish completeness."
-  ]
+    "Four transferred IDs retained with hash-audited explanation revisions.",
+    "Author source review is not independent clinician peer review.",
+    "55 distinct decisions cover the documented source scope; not official examination weightage."
+  ],
+  "releaseReview": {
+    "status": "passed",
+    "installed": true,
+    "report": "chapter-12-release-review.json",
+    "runtimeReadback": "passed"
+  },
+  "editorialReviewProgress": {
+    "status": "passed",
+    "nextWork": "Release review and runtime readback completed."
+  },
+  "installed": true
 }

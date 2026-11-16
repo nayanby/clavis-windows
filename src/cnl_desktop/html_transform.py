@@ -3125,6 +3125,7 @@ def transform_html(html: str) -> str:
             + (paths.resource_root() / "vendor" / "qbank-html-import.js").read_text(encoding="utf-8")
             + "</script><script>"
             + (paths.resource_root() / "vendor" / "qbank-explanations.js").read_text(encoding="utf-8")
+            + (paths.resource_root() / "vendor" / "qbank-concise.js").read_text(encoding="utf-8")
             + (paths.resource_root() / "vendor" / "qbank-progress.js").read_text(encoding="utf-8")
             + "</script><script>"
             + (paths.resource_root() / "vendor" / "reader-listen.js").read_text(encoding="utf-8")

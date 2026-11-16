@@ -1,8 +1,8 @@
 {
-  "status": "review_in_progress_not_release_approved",
+  "status": "author_review_passed",
   "questions": 55,
-  "bankSha256": "faf20185ce08839169c883172bfd1575997b4ae2860a7c532941ed197b7a86c9",
-  "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open.",
+  "bankSha256": "dba594507903e5b857284d230c380fb9e33bbd95c8bf9f723a1c8a25df9a50e4",
+  "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open. Consolidated concise rewrite complete for all 55 explanations; offline and application-renderer checks passed at wide and narrow widths; narrow preview visually inspected.",
   "findings": [
     {
       "questionId": "cardiology-rebuild-12-048",
@@ -137,11 +137,10 @@
     }
   ],
   "remaining": [
-    "Verify app rendering of concise bullets, ordered lists, tables and decision flows.",
-    "Seal release review, install with runtime readback, then commit and push."
+    "Install sealed chapter and verify runtime readback; commit and push installed changes."
   ],
   "sourceCoverageReview": {
-    "status": "all_source_sections_read_final_review_pending",
+    "status": "all_14_source_sections_reviewed",
     "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
     "sectionsReadInFull": [
       "I. OVERVIEW AND CLASSIFICATION",
@@ -184,9 +183,9 @@
     ]
   },
   "renderReview": {
-    "status": "offline_html_css_passed",
-    "report": "chapter-12-render-review.json",
-    "limitation": "App theme integration remains to be verified."
+    "status": "passed_offline_and_app_renderer",
+    "report": "chapter-12-app-render-review.json",
+    "visualReview": "Narrow preview inspected; title, nested bullets and table remain readable."
   },
   "conciseRewrite": {
     "status": "complete",

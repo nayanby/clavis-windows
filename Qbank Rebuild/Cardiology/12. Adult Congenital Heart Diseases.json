@@ -8,9 +8,9 @@
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
   "targetQuestions": 55,
-  "status": "draft_in_progress",
+  "status": "installed_verified",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
-  "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
+  "sourceNote": "Original educational synthesis with retained question identities; author source review completed against documented primary guidance. Full Harrison text not accessed; independent clinician review not claimed.",
   "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3} .decision-flow{display:flex;flex-wrap:wrap;gap:8px;padding-left:24px}.decision-flow li{border:1px solid #bbc4d3;border-radius:4px;padding:7px;margin:3px 12px 3px 0;flex:1 1 150px}.decision-flow li:not(:last-child)::after{content:\" →\";color:#233D6B;font-weight:bold}",
   "questions": [
     {
@@ -5176,7 +5176,7 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 51,
+    "draftQuestions": 0,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
     "newQuestionsAfterRedistribution": 51

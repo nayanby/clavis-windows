@@ -1,0 +1,7 @@
+{
+  "status": "installed_verified",
+  "backup": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\qbank-reset-backups\\concise-renderer-1794800975538195100.zip",
+  "adapterSha256": "cd30108e6b2f13199dd31273bcd388997a746437fe44942fc33a18e85d5acf4b",
+  "baseRendererPreserved": true,
+  "runtimeRenderer": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\_internal\\assets\\vendor\\qbank-explanations.js"
+}

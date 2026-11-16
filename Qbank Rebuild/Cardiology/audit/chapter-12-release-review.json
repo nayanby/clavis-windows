@@ -1,0 +1,44 @@
+{
+  "chapterNumber": 12,
+  "document": "12. Adult Congenital Heart Diseases",
+  "status": "passed",
+  "installed": true,
+  "reviewedAt": "2026-11-16",
+  "reviewedQuestionsSha256": "29642d158758002e9796b0786911e20ec0d90e884141815b6546891a9f377ce8",
+  "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
+  "questionCount": 55,
+  "coverageAudit": "chapter-12-coverage.json",
+  "sourceReview": "chapter-12-source-review.json",
+  "editorialReview": "chapter-12-editorial-review.json",
+  "validation": {
+    "questions": 55,
+    "answerDistribution": {
+      "A": 14,
+      "B": 14,
+      "C": 14,
+      "D": 13
+    },
+    "minimumExplanationWords": 111,
+    "distractorRationales": 159,
+    "questionStyles": {
+      "clinical_scenario": 49,
+      "direct": 6
+    },
+    "status": "passed"
+  },
+  "checks": {
+    "singleBestAnswerAuthorReview": "passed",
+    "continuousTopicOrder": "passed",
+    "individualDistractorExplanations": "passed",
+    "sourceCoverageAndCurrentUpdates": "passed_for_documented_scope",
+    "stableIdsAndAnswerSlots": "passed",
+    "offlineRichTextAndRequiredStyles": "passed_offline_and_app_renderer_at_two_widths"
+  },
+  "limitations": [
+    "Full Harrison text was not accessed.",
+    "Author source verification is not independent clinician peer review.",
+    "Publisher-access limitations and the primary references used are documented in the source review."
+  ],
+  "installedPath": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\12. Adult Congenital Heart Diseases\\Questions\\4b70c167bdabde8405b5.json",
+  "installedSha256": "ad35ee06f233f4e80ff874251d5fcc4adda954c62686eb499606f80d22c013ad"
+}

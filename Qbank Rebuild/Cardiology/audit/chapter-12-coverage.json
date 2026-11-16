@@ -2,12 +2,12 @@
   "subject": "Cardiology",
   "chapterNumber": 12,
   "chapter": "12. Adult Congenital Heart Diseases",
-  "status": "draft_in_progress",
+  "status": "installed_verified",
   "plannedQuestions": 55,
   "authoredQuestions": 55,
   "existingQuestionsPreserved": 4,
   "newDraftQuestions": 51,
-  "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
+  "countPolicy": "55 distinct high-yield decisions mapped to all 14 source sections and reviewed for overlap; not official examination weightage.",
   "sections": [
     {
       "section": "Foundations and physiological classification",
