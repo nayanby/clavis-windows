@@ -67,6 +67,8 @@ def choose_paragraph(paragraph, styles):
             target = BY_KEY[label]
             # Select the existing list depth while retaining explicit numId/ilvl.
             if target.startswith('level'):
+                if val(paragraph.find('w:pPr/w:numPr/w:numId', NS)) == '0':
+                    return 'Normal', level
                 ilvl = val(paragraph.find('w:pPr/w:numPr/w:ilvl', NS)) or '0'
                 return f'level{min(int(ilvl), 2)+1}', level
             return target, level
