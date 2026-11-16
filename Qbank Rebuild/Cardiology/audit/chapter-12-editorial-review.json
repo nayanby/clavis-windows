@@ -1,8 +1,8 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "8ada384536226a1f59cc5d60f210ce6c2fab45352fda6789c856d9b87156be97",
-  "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis.",
+  "bankSha256": "0a55ae57588a22ba87ae358f2aaddb50fba571376d504cce3d7659a96d8fc472",
+  "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open.",
   "findings": [
     {
       "questionId": "cardiology-rebuild-12-048",
@@ -30,6 +30,24 @@
       "action": "Replaced abstract framework recall with a repaired-TOF case distinguishing II-C, II-D, III-C and III-D; added all four physiological stage criteria with time windows and thresholds from the official 2025 AHA classification table. Correct answer index retained.",
       "status": "revised",
       "source": "https://professional.heart.org/en/science-news/2025-adult-congenital-heart-disease-anatomic-and-physiological-classification-system"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-036",
+      "action": "Replaced absent-subpulmonary-pump and preserved-EF giveaway distractors with diastolic dysfunction and chronotropic limitation; explained the differing mechanisms and supplied pressure findings.",
+      "status": "revised",
+      "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-046",
+      "action": "Removed definitive/sole wording from six-minute walk and CMR choices while preserving their clinical indications and limitations.",
+      "status": "revised",
+      "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-047",
+      "action": "Replaced unrelated coronary angiography and cursory echo-only choices with competing RCRI, CPET and Fontan catheterization strategies; explained test-selection limits and multidisciplinary assessment.",
+      "status": "revised",
+      "correctIndexPreserved": true
     }
   ],
   "remaining": [
