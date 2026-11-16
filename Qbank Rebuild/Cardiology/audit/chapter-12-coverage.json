@@ -4,9 +4,9 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 25,
+  "authoredQuestions": 29,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 21,
+  "newDraftQuestions": 25,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
@@ -81,7 +81,7 @@
     {
       "section": "Tetralogy of Fallot and repaired RV outflow physiology",
       "plannedQuestions": 5,
-      "authoredQuestions": 1,
+      "authoredQuestions": 5,
       "decisions": [
         "Interpret unrepaired TOF physiology and determinants of cyanosis",
         "Apply current pulmonary-valve replacement assessment in repaired TOF",
@@ -278,9 +278,29 @@
       "decision": "Assess congenital aortic valve disease with associated aortopathy and family risk"
     },
     {
+      "questionId": "cardiology-rebuild-12-022",
+      "section": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "decision": "Interpret unrepaired TOF physiology and determinants of cyanosis"
+    },
+    {
       "questionId": "cardiology-rebuild-03-048",
       "section": "Tetralogy of Fallot and repaired RV outflow physiology",
       "decision": "Apply current pulmonary-valve replacement assessment in repaired TOF"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-023",
+      "section": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "decision": "Identify arrhythmia substrates and appropriate sudden-death risk assessment"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-024",
+      "section": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "decision": "Evaluate anatomy and coronary safety before transcatheter pulmonary valve treatment"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-025",
+      "section": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "decision": "Investigate declining exercise capacity with residual obstruction or regurgitation"
     }
   ]
 }

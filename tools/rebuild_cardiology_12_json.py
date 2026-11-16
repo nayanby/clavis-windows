@@ -16,6 +16,9 @@ REFERENCES.update(vsd_pda_references)
 from cardiology_12_obstruction_questions import rows as obstruction_rows, REFERENCES as obstruction_references
 rows.extend(obstruction_rows)
 REFERENCES.update(obstruction_references)
+from cardiology_12_tof_questions import rows as tof_rows, REFERENCES as tof_references
+rows.extend(tof_rows)
+REFERENCES.update(tof_references)
 
 DOC='12. Adult Congenital Heart Diseases'
 PREFIX='cardiology-rebuild-12-'
@@ -99,6 +102,7 @@ ASSIGNMENTS={
  PREFIX+'013':(3,0), PREFIX+'014':(3,1), PREFIX+'015':(3,2),
  PREFIX+'016':(4,0), PREFIX+'017':(4,1), PREFIX+'018':(4,2), PREFIX+'019':(4,3),
  PREFIX+'020':(5,1), PREFIX+'021':(5,2),
+ PREFIX+'022':(6,0), PREFIX+'023':(6,2), PREFIX+'024':(6,3), PREFIX+'025':(6,4),
  'cardiology-rebuild-03-047':(5,0), 'cardiology-rebuild-03-048':(6,1),
 }
 
@@ -160,7 +164,8 @@ if __name__=='__main__':
                 findings=['Left-to-right ductal flow primarily volume-loads LA/LV; a continuous murmur depends on the pressure gradient.','Right-to-left ductal entry beyond the usual left subclavian artery explains differential cyanosis in usual anatomy.','A suitable isolated adult PDA with attributable left-heart enlargement and low PVR favors transcatheter closure; pulmonary vascular disease and test-occlusion limits are qualified.']),
            dict(section='Coarctation and congenital outflow lesions',questionIds=[PREFIX+f'{i:03}' for i in range(16,22)],status='authored_cases_source_checked',
                 findings=['Postrepair cross-sectional surveillance covers aneurysm and arch anatomy even with a low resting gradient; ESC 2024 gives an adapted 3–5-year interval.','A 7/20 isthmus ratio is 0.35; collaterals can lower a catheter gradient despite important anatomy.','ESC stenting preference is qualified by adult anatomy; current US guidance permits surgical or catheter repair by ACHD experts.','Doppler mean and maximum instantaneous gradients are distinguished from invasive peak-to-peak measurements.','A proximal/distal RV pressure step with little distal-RV-to-PA step localizes intracavitary rather than valvar obstruction.','BAV with aortic dilation prompts first-degree-relative TTE; isolated and concomitant aortic operation thresholds are not conflated.'])],
-          nextWork='Progress through repaired and unrepaired tetralogy of Fallot, then Eisenmenger and the remaining complex lesions; foundations and final whole-chapter review also remain pending.',
+          tetralogyChecks=['Systemic vascular resistance changes can alter unrepaired right-to-left flow despite unchanged RVOTO.','Scar-related macroreentry is distinguished from idiopathic RVOT triggered activity; a historical QRS marker is not a standalone ICD indication.','Native-RVOT transcatheter valve planning uses CT anatomy and coronary assessment, with device-specific compression evaluation.','RV pressure above two-thirds systemic with obstruction is distinguished from PAH and from regurgitant volume-loading criteria.'],
+          nextWork='Continue with Eisenmenger and remaining complex lesions; foundations and final whole-chapter review also remain pending.',
           limitations=['Four transferred questions retained verbatim with their original IDs.','New content has author source checks, not independent clinician review.','The 55-question plan is provisional and does not establish completeness.']))
     pp=ROOT/'progress.json';plan=json.loads(pp.read_text(encoding='utf-8'))
     entry=next(e for e in plan['chapters'] if e['subject']=='Cardiology' and e['document']==DOC)

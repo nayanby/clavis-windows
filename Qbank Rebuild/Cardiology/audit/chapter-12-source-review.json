@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 25,
+  "authoredQuestions": 29,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -50,7 +50,11 @@
     "cardiology-rebuild-12-018",
     "cardiology-rebuild-12-019",
     "cardiology-rebuild-12-020",
-    "cardiology-rebuild-12-021"
+    "cardiology-rebuild-12-021",
+    "cardiology-rebuild-12-022",
+    "cardiology-rebuild-12-023",
+    "cardiology-rebuild-12-024",
+    "cardiology-rebuild-12-025"
   ],
   "sources": [
     {
@@ -136,21 +140,37 @@
     {
       "label": "AATS consensus on BAV-related aortopathy",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6413866/"
+    },
+    {
+      "label": "Merck Manual Professional: tetralogy of Fallot",
+      "url": "https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/tetralogy-of-fallot"
+    },
+    {
+      "label": "AHA scientific statement: arrhythmias in repaired TOF, 2022",
+      "url": "https://doi.org/10.1161/HAE.0000000000000084"
+    },
+    {
+      "label": "Anatomical substrates and ablation in repaired congenital heart disease",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5013179/"
+    },
+    {
+      "label": "Coronary compression during transcatheter pulmonary valve assessment: multicentre experience",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24065444/"
     }
   ],
   "validation": {
-    "questions": 25,
+    "questions": 29,
     "answerDistribution": {
-      "A": 7,
-      "B": 6,
-      "C": 6,
-      "D": 6
+      "A": 8,
+      "B": 7,
+      "C": 7,
+      "D": 7
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 69,
+    "distractorRationales": 81,
     "questionStyles": {
       "direct": 4,
-      "clinical_scenario": 21
+      "clinical_scenario": 25
     },
     "status": "passed"
   },
@@ -227,7 +247,13 @@
       ]
     }
   ],
-  "nextWork": "Progress through repaired and unrepaired tetralogy of Fallot, then Eisenmenger and the remaining complex lesions; foundations and final whole-chapter review also remain pending.",
+  "tetralogyChecks": [
+    "Systemic vascular resistance changes can alter unrepaired right-to-left flow despite unchanged RVOTO.",
+    "Scar-related macroreentry is distinguished from idiopathic RVOT triggered activity; a historical QRS marker is not a standalone ICD indication.",
+    "Native-RVOT transcatheter valve planning uses CT anatomy and coronary assessment, with device-specific compression evaluation.",
+    "RV pressure above two-thirds systemic with obstruction is distinguished from PAH and from regurgitant volume-loading criteria."
+  ],
+  "nextWork": "Continue with Eisenmenger and remaining complex lesions; foundations and final whole-chapter review also remain pending.",
   "limitations": [
     "Four transferred questions retained verbatim with their original IDs.",
     "New content has author source checks, not independent clinician review.",

@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 25,
+  "targetQuestions": 29,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -1884,6 +1884,79 @@
       "coverageDecision": "Assess congenital aortic valve disease with associated aortopathy and family risk"
     },
     {
+      "id": "cardiology-rebuild-12-022",
+      "topic": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "question": "An adult with unrepaired TOF and a large nonrestrictive VSD becomes more cyanotic after systemic vasodilation. RV outflow obstruction has not changed. Which hemodynamic change best explains the desaturation?",
+      "options": [
+        "Lower systemic resistance increases the LV-to-RV gradient across a restrictive VSD",
+        "Lower systemic resistance favors right-to-left flow through the VSD",
+        "Lower systemic resistance directly relieves the fixed RV outflow obstruction",
+        "Lower systemic resistance reduces the proportion of RV output entering the aorta"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Systemic Resistance and Right-to-Left Flow in Unrepaired TOF\n\nCorrect answer: Lower systemic resistance favors right-to-left flow through the VSD\n\nCompeting Outflow Routes\n\n**The pulmonary and systemic outflow pathways compete in the presence of a large TOF VSD.** Significant RV outflow obstruction directs desaturated blood toward the overriding aorta.\n\nA fall in systemic vascular resistance can increase right-to-left flow without any change in the anatomical obstruction. Conversely, raising systemic resistance can reduce this diversion in an appropriate acute setting.\n\nThe four defining components are a malalignment VSD, RV outflow obstruction, overriding aorta and RV hypertrophy. The degree of outflow obstruction and the resistance balance matter more for cyanosis than merely counting those components.\n\nClinical Implications\n\n**Avoid assuming that a systemic vasodilator must improve oxygenation in every cyanotic patient.** Volume status, vascular tone, ventricular filling and the exact congenital connections determine the response.\n\nHypotension, dehydration or an acute hypercyanotic episode requires prompt assessment of airway, oxygenation and hemodynamics with congenital expertise. A persistent unrepaired lesion merits full anatomical and physiological evaluation rather than symptom treatment alone.\n\nThe murmur in uncomplicated TOF usually arises from outflow obstruction, not the large low-gradient VSD. Reduced murmur intensity during deterioration can reflect less pulmonary flow rather than improvement. Repaired TOF has a different balance of residual obstruction, pulmonary regurgitation and surgical scar; this unrepaired-shunt mechanism should not be transferred automatically to every postrepair episode of desaturation.\n\nLower systemic resistance increases the LV-to-RV gradient across a restrictive VSD: A small restrictive VSD behaves primarily as a pressure-gradient-limited jet. The supplied large nonrestrictive TOF defect permits pressure communication; lowering systemic afterload favors systemic ejection of desaturated RV blood rather than increasing a restrictive left-to-right jet.\n\nLower systemic resistance directly relieves the fixed RV outflow obstruction: Systemic arteriolar dilation does not remove infundibular or valvar pulmonary obstruction. Even if ventricular loading changes, it cannot be assumed to increase pulmonary flow by mechanically relieving the lesion.\n\nLower systemic resistance reduces the proportion of RV output entering the aorta: That direction would tend to improve systemic oxygenation. With substantial pulmonary outflow obstruction and a large VSD, a lower systemic resistance instead makes the systemic route relatively easier for RV ejection.\n\nMerck Manual Professional: tetralogy of Fallot — https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/tetralogy-of-fallot\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Systemic Resistance and Right-to-Left Flow in Unrepaired TOF</h2><p><strong>Correct answer: B — Lower systemic resistance favors right-to-left flow through the VSD</strong></p><h3>Competing Outflow Routes</h3><ul><li><strong>The pulmonary and systemic outflow pathways compete in the presence of a large TOF VSD.</strong> Significant RV outflow obstruction directs desaturated blood toward the overriding aorta.<ul><li>A fall in systemic vascular resistance can increase right-to-left flow without any change in the anatomical obstruction. Conversely, raising systemic resistance can reduce this diversion in an appropriate acute setting.</li><li>The four defining components are a malalignment VSD, RV outflow obstruction, overriding aorta and RV hypertrophy. The degree of outflow obstruction and the resistance balance matter more for cyanosis than merely counting those components.</li></ul></li></ul><h3>Clinical Implications</h3><ul><li><strong>Avoid assuming that a systemic vasodilator must improve oxygenation in every cyanotic patient.</strong> Volume status, vascular tone, ventricular filling and the exact congenital connections determine the response.<ul><li>Hypotension, dehydration or an acute hypercyanotic episode requires prompt assessment of airway, oxygenation and hemodynamics with congenital expertise. A persistent unrepaired lesion merits full anatomical and physiological evaluation rather than symptom treatment alone.</li><li>The murmur in uncomplicated TOF usually arises from outflow obstruction, not the large low-gradient VSD. Reduced murmur intensity during deterioration can reflect less pulmonary flow rather than improvement. Repaired TOF has a different balance of residual obstruction, pulmonary regurgitation and surgical scar; this unrepaired-shunt mechanism should not be transferred automatically to every postrepair episode of desaturation.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Lower systemic resistance increases the LV-to-RV gradient across a restrictive VSD:</strong> A small restrictive VSD behaves primarily as a pressure-gradient-limited jet. The supplied large nonrestrictive TOF defect permits pressure communication; lowering systemic afterload favors systemic ejection of desaturated RV blood rather than increasing a restrictive left-to-right jet.</li><li><strong>C — Lower systemic resistance directly relieves the fixed RV outflow obstruction:</strong> Systemic arteriolar dilation does not remove infundibular or valvar pulmonary obstruction. Even if ventricular loading changes, it cannot be assumed to increase pulmonary flow by mechanically relieving the lesion.</li><li><strong>D — Lower systemic resistance reduces the proportion of RV output entering the aorta:</strong> That direction would tend to improve systemic oxygenation. With substantial pulmonary outflow obstruction and a large VSD, a lower systemic resistance instead makes the systemic route relatively easier for RV ejection.</li></ul><h3>References</h3><ul><li><a href=\"https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/tetralogy-of-fallot\">Merck Manual Professional: tetralogy of Fallot</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Systemic Resistance and Right-to-Left Flow in Unrepaired TOF",
+        "sections": [
+          {
+            "heading": "Competing Outflow Routes",
+            "bullets": [
+              {
+                "text": "**The pulmonary and systemic outflow pathways compete in the presence of a large TOF VSD.** Significant RV outflow obstruction directs desaturated blood toward the overriding aorta.",
+                "children": [
+                  "A fall in systemic vascular resistance can increase right-to-left flow without any change in the anatomical obstruction. Conversely, raising systemic resistance can reduce this diversion in an appropriate acute setting.",
+                  "The four defining components are a malalignment VSD, RV outflow obstruction, overriding aorta and RV hypertrophy. The degree of outflow obstruction and the resistance balance matter more for cyanosis than merely counting those components."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Clinical Implications",
+            "bullets": [
+              {
+                "text": "**Avoid assuming that a systemic vasodilator must improve oxygenation in every cyanotic patient.** Volume status, vascular tone, ventricular filling and the exact congenital connections determine the response.",
+                "children": [
+                  "Hypotension, dehydration or an acute hypercyanotic episode requires prompt assessment of airway, oxygenation and hemodynamics with congenital expertise. A persistent unrepaired lesion merits full anatomical and physiological evaluation rather than symptom treatment alone.",
+                  "The murmur in uncomplicated TOF usually arises from outflow obstruction, not the large low-gradient VSD. Reduced murmur intensity during deterioration can reflect less pulmonary flow rather than improvement. Repaired TOF has a different balance of residual obstruction, pulmonary regurgitation and surgical scar; this unrepaired-shunt mechanism should not be transferred automatically to every postrepair episode of desaturation."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "A small restrictive VSD behaves primarily as a pressure-gradient-limited jet. The supplied large nonrestrictive TOF defect permits pressure communication; lowering systemic afterload favors systemic ejection of desaturated RV blood rather than increasing a restrictive left-to-right jet."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Systemic arteriolar dilation does not remove infundibular or valvar pulmonary obstruction. Even if ventricular loading changes, it cannot be assumed to increase pulmonary flow by mechanically relieving the lesion."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "That direction would tend to improve systemic oxygenation. With substantial pulmonary outflow obstruction and a large VSD, a lower systemic resistance instead makes the systemic route relatively easier for RV ejection."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "Merck Manual Professional: tetralogy of Fallot",
+          "url": "https://www.merckmanuals.com/professional/pediatrics/congenital-cardiovascular-anomalies/tetralogy-of-fallot"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Interpret unrepaired TOF physiology and determinants of cyanosis"
+    },
+    {
       "id": "cardiology-rebuild-03-048",
       "topic": "Tricuspid and pulmonary valve disease",
       "question": "An asymptomatic adult with repaired tetralogy of Fallot has moderate-to-severe pulmonary regurgitation. CMR shows RV end-systolic volume index 92 mL/m² and RVEF 43%; serial exercise testing shows declining capacity. Under the 2025 ACC/AHA ACHD framework, which approach is appropriate?",
@@ -1951,6 +2024,229 @@
       "sourceCheckedAt": "2026-11-15",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Chronic pulmonary regurgitation and RV-based replacement assessment after repaired tetralogy"
+    },
+    {
+      "id": "cardiology-rebuild-12-023",
+      "topic": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "question": "A 39-year-old with repaired TOF and an old RVOT patch has sustained monomorphic VT. CMR shows fibrosis near the patch and ventricular septal repair. Which mechanism most commonly explains this arrhythmia substrate?",
+      "options": [
+        "Macroreentry through slow-conducting anatomical isthmuses",
+        "cAMP-mediated triggered activity in an otherwise structurally normal RVOT",
+        "Bundle-branch reentry using the His–Purkinje system as the principal circuit",
+        "Enhanced automaticity from a single normal Purkinje focus"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Monomorphic VT After TOF Repair\n\nCorrect answer: Macroreentry through slow-conducting anatomical isthmuses\n\nAnatomical Substrate\n\n**Patches, valve annuli and surgical scars create nonconducting boundaries around potential VT isthmuses.** Progressive fibrosis and slow conduction can allow a macroreentrant circuit.\n\nA clinically important example lies between the pulmonary annulus and the VSD patch. The available pathways depend on the original anatomy and repair, so ablation planning needs the operative history and electroanatomical assessment.\n\nCMR scar, ventricular function, clinical VT and electrophysiological findings contribute to risk assessment. A historical QRS duration threshold of ==180 ms== is a risk marker, not an isolated rule deciding every patient’s ICD treatment.\n\nManagement Implications\n\n**Congenital electrophysiology assessment integrates arrhythmia treatment with residual hemodynamic disease.** Ablation can target the critical slow-conducting isthmus; evaluate pulmonary valve dysfunction and ventricular loading at the same time.\n\nICD decisions depend on the presenting event, ventricular function, reversible causes and the contemporary risk assessment. Successful ablation or pulmonary valve replacement must not be assumed to eliminate every future ventricular arrhythmia risk.\n\nSelected well-tolerated VT presentations may have individualized ablation and device pathways in expert care. Do not apply an automatic device rule from the presence of a long QRS alone. Conversely, syncope, sustained VT or resuscitated arrest should not be dismissed as the expected RBBB of repaired TOF. Long-term follow-up addresses both the electrical substrate and the changing ventricular physiology.\n\ncAMP-mediated triggered activity in an otherwise structurally normal RVOT: Triggered idiopathic RVOT VT is a genuine mechanism and can occur without surgical scar. The repaired congenital substrate here instead favors scar- and anatomy-related slow-conduction circuits.\n\nBundle-branch reentry using the His–Purkinje system as the principal circuit: Bundle-branch reentry occurs in selected patients with conduction disease and ventricular pathology. A postrepair RBBB alone does not establish that mechanism; anatomical isthmuses around patches and valve boundaries are the dominant substrate in repaired TOF.\n\nEnhanced automaticity from a single normal Purkinje focus: Automatic focal ventricular rhythms are possible in other settings. They do not explain the common stable macroreentrant substrate created by congenital anatomy, surgical boundaries and progressive fibrosis in repaired TOF.\n\nAHA scientific statement: arrhythmias in repaired TOF, 2022 — https://doi.org/10.1161/HAE.0000000000000084\n\nAnatomical substrates and ablation in repaired congenital heart disease — https://pmc.ncbi.nlm.nih.gov/articles/PMC5013179/\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006",
+      "explanationHtml": "<h2>Monomorphic VT After TOF Repair</h2><p><strong>Correct answer: A — Macroreentry through slow-conducting anatomical isthmuses</strong></p><h3>Anatomical Substrate</h3><ul><li><strong>Patches, valve annuli and surgical scars create nonconducting boundaries around potential VT isthmuses.</strong> Progressive fibrosis and slow conduction can allow a macroreentrant circuit.<ul><li>A clinically important example lies between the pulmonary annulus and the VSD patch. The available pathways depend on the original anatomy and repair, so ablation planning needs the operative history and electroanatomical assessment.</li><li>CMR scar, ventricular function, clinical VT and electrophysiological findings contribute to risk assessment. A historical QRS duration threshold of <mark>180 ms</mark> is a risk marker, not an isolated rule deciding every patient’s ICD treatment.</li></ul></li></ul><h3>Management Implications</h3><ul><li><strong>Congenital electrophysiology assessment integrates arrhythmia treatment with residual hemodynamic disease.</strong> Ablation can target the critical slow-conducting isthmus; evaluate pulmonary valve dysfunction and ventricular loading at the same time.<ul><li>ICD decisions depend on the presenting event, ventricular function, reversible causes and the contemporary risk assessment. Successful ablation or pulmonary valve replacement must not be assumed to eliminate every future ventricular arrhythmia risk.</li><li>Selected well-tolerated VT presentations may have individualized ablation and device pathways in expert care. Do not apply an automatic device rule from the presence of a long QRS alone. Conversely, syncope, sustained VT or resuscitated arrest should not be dismissed as the expected RBBB of repaired TOF. Long-term follow-up addresses both the electrical substrate and the changing ventricular physiology.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — cAMP-mediated triggered activity in an otherwise structurally normal RVOT:</strong> Triggered idiopathic RVOT VT is a genuine mechanism and can occur without surgical scar. The repaired congenital substrate here instead favors scar- and anatomy-related slow-conduction circuits.</li><li><strong>C — Bundle-branch reentry using the His–Purkinje system as the principal circuit:</strong> Bundle-branch reentry occurs in selected patients with conduction disease and ventricular pathology. A postrepair RBBB alone does not establish that mechanism; anatomical isthmuses around patches and valve boundaries are the dominant substrate in repaired TOF.</li><li><strong>D — Enhanced automaticity from a single normal Purkinje focus:</strong> Automatic focal ventricular rhythms are possible in other settings. They do not explain the common stable macroreentrant substrate created by congenital anatomy, surgical boundaries and progressive fibrosis in repaired TOF.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/HAE.0000000000000084\">AHA scientific statement: arrhythmias in repaired TOF, 2022</a></li><li><a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC5013179/\">Anatomical substrates and ablation in repaired congenital heart disease</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Monomorphic VT After TOF Repair",
+        "sections": [
+          {
+            "heading": "Anatomical Substrate",
+            "bullets": [
+              {
+                "text": "**Patches, valve annuli and surgical scars create nonconducting boundaries around potential VT isthmuses.** Progressive fibrosis and slow conduction can allow a macroreentrant circuit.",
+                "children": [
+                  "A clinically important example lies between the pulmonary annulus and the VSD patch. The available pathways depend on the original anatomy and repair, so ablation planning needs the operative history and electroanatomical assessment.",
+                  "CMR scar, ventricular function, clinical VT and electrophysiological findings contribute to risk assessment. A historical QRS duration threshold of ==180 ms== is a risk marker, not an isolated rule deciding every patient’s ICD treatment."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Management Implications",
+            "bullets": [
+              {
+                "text": "**Congenital electrophysiology assessment integrates arrhythmia treatment with residual hemodynamic disease.** Ablation can target the critical slow-conducting isthmus; evaluate pulmonary valve dysfunction and ventricular loading at the same time.",
+                "children": [
+                  "ICD decisions depend on the presenting event, ventricular function, reversible causes and the contemporary risk assessment. Successful ablation or pulmonary valve replacement must not be assumed to eliminate every future ventricular arrhythmia risk.",
+                  "Selected well-tolerated VT presentations may have individualized ablation and device pathways in expert care. Do not apply an automatic device rule from the presence of a long QRS alone. Conversely, syncope, sustained VT or resuscitated arrest should not be dismissed as the expected RBBB of repaired TOF. Long-term follow-up addresses both the electrical substrate and the changing ventricular physiology."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Triggered idiopathic RVOT VT is a genuine mechanism and can occur without surgical scar. The repaired congenital substrate here instead favors scar- and anatomy-related slow-conduction circuits."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Bundle-branch reentry occurs in selected patients with conduction disease and ventricular pathology. A postrepair RBBB alone does not establish that mechanism; anatomical isthmuses around patches and valve boundaries are the dominant substrate in repaired TOF."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Automatic focal ventricular rhythms are possible in other settings. They do not explain the common stable macroreentrant substrate created by congenital anatomy, surgical boundaries and progressive fibrosis in repaired TOF."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA scientific statement: arrhythmias in repaired TOF, 2022",
+          "url": "https://doi.org/10.1161/HAE.0000000000000084"
+        },
+        {
+          "label": "Anatomical substrates and ablation in repaired congenital heart disease",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5013179/"
+        },
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Identify arrhythmia substrates and appropriate sudden-death risk assessment"
+    },
+    {
+      "id": "cardiology-rebuild-12-024",
+      "topic": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "question": "A patient with repaired TOF and a native patched RVOT is being assessed for transcatheter pulmonary valve replacement. CMR has quantified pulmonary regurgitation and RV volumes. Which additional examination is recommended by the 2025 ACHD guideline to determine anatomical suitability?",
+      "options": [
+        "TEE confined to pulmonary valve leaflet motion",
+        "Repeat cine CMR confined to RV end-diastolic and end-systolic volumes",
+        "Cardiac CT defining RVOT geometry and coronary relationships",
+        "A right-heart saturation run without anatomical imaging"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Cardiac CT Before Native-RVOT Transcatheter Pulmonary Valve Treatment\n\nCorrect answer: Cardiac CT defining RVOT geometry and coronary relationships\n\nProcedure-Specific Anatomy\n\n**The 2025 guideline recommends cardiac CT for repaired TOF with native RVOT anatomy when transcatheter pulmonary valve treatment is being considered.** The purpose is anatomical suitability, not replacement of the preceding CMR functional assessment.\n\nDefine the intended landing zone, its dimensions and shape, pulmonary artery anatomy and the coronary course relative to the outflow tract. A favorable regurgitant fraction or RV volume does not by itself establish that a device can be implanted safely.\n\nCT planning and device selection are anatomy specific. A native patched RVOT and an RV-to-PA conduit do not have identical dimensions, mechanical constraints or procedural approaches.\n\nCoronary Compression and Alternative Repair\n\n**Expansion within the RVOT can compress a neighboring coronary artery.** The consequence can be acute ischemia, so coronary proximity is a central safety issue rather than an incidental imaging finding.\n\nSelected balloon-expandable conduit or RVOT procedures use test balloon inflation with simultaneous coronary angiography to assess compression. Apply the appropriate device-specific pathway; neither a generic negative test nor a simple coronary-distance estimate guarantees safety for every device.\n\nDemonstrated compression risk or unsuitable landing anatomy can favor surgical or another tailored approach. Assess associated lesions that may also need repair, and discuss valve durability, endocarditis, residual obstruction/regurgitation and follow-up. The examination is chosen because it answers a specific procedural anatomy question that a repeated RV-volume study or oximetry run does not.\n\nTEE confined to pulmonary valve leaflet motion: TEE can answer selected valve questions but does not replace the recommended cross-sectional definition of the large patched RVOT, landing-zone geometry and neighboring coronary arteries.\n\nRepeat cine CMR confined to RV end-diastolic and end-systolic volumes: Those measurements are central to ventricular assessment and have already been obtained. Repeating only volumetry does not provide the additional detailed RVOT/device-planning assessment requested here.\n\nA right-heart saturation run without anatomical imaging: Invasive sampling can characterize shunting and pressure-flow physiology when indicated. It does not define the dimensions, shape and coronary proximity needed to determine suitability of a native RVOT for a particular transcatheter valve.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nCoronary compression during transcatheter pulmonary valve assessment: multicentre experience — https://pubmed.ncbi.nlm.nih.gov/24065444/",
+      "explanationHtml": "<h2>Cardiac CT Before Native-RVOT Transcatheter Pulmonary Valve Treatment</h2><p><strong>Correct answer: C — Cardiac CT defining RVOT geometry and coronary relationships</strong></p><h3>Procedure-Specific Anatomy</h3><ul><li><strong>The 2025 guideline recommends cardiac CT for repaired TOF with native RVOT anatomy when transcatheter pulmonary valve treatment is being considered.</strong> The purpose is anatomical suitability, not replacement of the preceding CMR functional assessment.<ul><li>Define the intended landing zone, its dimensions and shape, pulmonary artery anatomy and the coronary course relative to the outflow tract. A favorable regurgitant fraction or RV volume does not by itself establish that a device can be implanted safely.</li><li>CT planning and device selection are anatomy specific. A native patched RVOT and an RV-to-PA conduit do not have identical dimensions, mechanical constraints or procedural approaches.</li></ul></li></ul><h3>Coronary Compression and Alternative Repair</h3><ul><li><strong>Expansion within the RVOT can compress a neighboring coronary artery.</strong> The consequence can be acute ischemia, so coronary proximity is a central safety issue rather than an incidental imaging finding.<ul><li>Selected balloon-expandable conduit or RVOT procedures use test balloon inflation with simultaneous coronary angiography to assess compression. Apply the appropriate device-specific pathway; neither a generic negative test nor a simple coronary-distance estimate guarantees safety for every device.</li><li>Demonstrated compression risk or unsuitable landing anatomy can favor surgical or another tailored approach. Assess associated lesions that may also need repair, and discuss valve durability, endocarditis, residual obstruction/regurgitation and follow-up. The examination is chosen because it answers a specific procedural anatomy question that a repeated RV-volume study or oximetry run does not.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — TEE confined to pulmonary valve leaflet motion:</strong> TEE can answer selected valve questions but does not replace the recommended cross-sectional definition of the large patched RVOT, landing-zone geometry and neighboring coronary arteries.</li><li><strong>B — Repeat cine CMR confined to RV end-diastolic and end-systolic volumes:</strong> Those measurements are central to ventricular assessment and have already been obtained. Repeating only volumetry does not provide the additional detailed RVOT/device-planning assessment requested here.</li><li><strong>D — A right-heart saturation run without anatomical imaging:</strong> Invasive sampling can characterize shunting and pressure-flow physiology when indicated. It does not define the dimensions, shape and coronary proximity needed to determine suitability of a native RVOT for a particular transcatheter valve.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://pubmed.ncbi.nlm.nih.gov/24065444/\">Coronary compression during transcatheter pulmonary valve assessment: multicentre experience</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Cardiac CT Before Native-RVOT Transcatheter Pulmonary Valve Treatment",
+        "sections": [
+          {
+            "heading": "Procedure-Specific Anatomy",
+            "bullets": [
+              {
+                "text": "**The 2025 guideline recommends cardiac CT for repaired TOF with native RVOT anatomy when transcatheter pulmonary valve treatment is being considered.** The purpose is anatomical suitability, not replacement of the preceding CMR functional assessment.",
+                "children": [
+                  "Define the intended landing zone, its dimensions and shape, pulmonary artery anatomy and the coronary course relative to the outflow tract. A favorable regurgitant fraction or RV volume does not by itself establish that a device can be implanted safely.",
+                  "CT planning and device selection are anatomy specific. A native patched RVOT and an RV-to-PA conduit do not have identical dimensions, mechanical constraints or procedural approaches."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Coronary Compression and Alternative Repair",
+            "bullets": [
+              {
+                "text": "**Expansion within the RVOT can compress a neighboring coronary artery.** The consequence can be acute ischemia, so coronary proximity is a central safety issue rather than an incidental imaging finding.",
+                "children": [
+                  "Selected balloon-expandable conduit or RVOT procedures use test balloon inflation with simultaneous coronary angiography to assess compression. Apply the appropriate device-specific pathway; neither a generic negative test nor a simple coronary-distance estimate guarantees safety for every device.",
+                  "Demonstrated compression risk or unsuitable landing anatomy can favor surgical or another tailored approach. Assess associated lesions that may also need repair, and discuss valve durability, endocarditis, residual obstruction/regurgitation and follow-up. The examination is chosen because it answers a specific procedural anatomy question that a repeated RV-volume study or oximetry run does not."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "TEE can answer selected valve questions but does not replace the recommended cross-sectional definition of the large patched RVOT, landing-zone geometry and neighboring coronary arteries."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Those measurements are central to ventricular assessment and have already been obtained. Repeating only volumetry does not provide the additional detailed RVOT/device-planning assessment requested here."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Invasive sampling can characterize shunting and pressure-flow physiology when indicated. It does not define the dimensions, shape and coronary proximity needed to determine suitability of a native RVOT for a particular transcatheter valve."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "Coronary compression during transcatheter pulmonary valve assessment: multicentre experience",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24065444/"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Evaluate anatomy and coronary safety before transcatheter pulmonary valve treatment"
+    },
+    {
+      "id": "cardiology-rebuild-12-025",
+      "topic": "Tetralogy of Fallot and repaired RV outflow physiology",
+      "question": "An adult with repaired TOF has worsening exercise tolerance. CMR pulmonary regurgitant fraction is 12%, but imaging shows substantial RVOT obstruction. RV systolic pressure is 90 mmHg while systemic systolic pressure is 120 mmHg; distal PA pressure is not elevated. Which next approach is most appropriate?",
+      "options": [
+        "Wait until RV end-systolic volume exceeds the regurgitation-related referral marker",
+        "Defer intervention assessment until pulmonary regurgitant fraction reaches 25%",
+        "Treat presumed PAH solely because RV systolic pressure is 90 mmHg",
+        "Refer for assessment of relief of the residual RVOT obstruction"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Pressure-Loaded RV After TOF Repair\n\nCorrect answer: Refer for assessment of relief of the residual RVOT obstruction\n\nPressure Versus Volume Loading\n\n**Residual RVOT obstruction can create important pulmonary valve/outflow dysfunction despite little regurgitation.** Here RV pressure is 90/120 = 0.75 of systemic, exceeding two-thirds systemic pressure.\n\nDistinguish valvar, subvalvar, conduit and branch pulmonary arterial obstruction. Define where the pressure drop occurs and whether another lesion contributes to exercise limitation.\n\nA high RV pressure is not automatically pulmonary hypertension: obstruction between the RV and PA can generate the difference. Interpret tricuspid-regurgitation-derived RV pressure estimates within the known outflow anatomy.\n\nIntervention Assessment and Follow-Up\n\n**Symptoms with important residual obstruction warrant specialist repair assessment rather than waiting for severe regurgitation or advanced ventricular dilation.** The procedure depends on the actual level and anatomy of the lesion.\n\nOptions may include catheter relief or valve intervention for a suitable target, while complex muscular, patched or associated lesions may favor surgery. CMR, CT, Doppler and selected catheter measurements answer complementary functional and anatomical questions.\n\nReview RV and LV function, tricuspid regurgitation, arrhythmias and objective exercise measurements. A fall in exercise capacity can result from multiple residual lesions, so intervention planning should not use a single number in isolation. After treatment, follow residual gradients, new or persisting regurgitation and ventricular response. Relief of the mechanical load does not remove the established scar-related arrhythmia substrate.\n\nWait until RV end-systolic volume exceeds the regurgitation-related referral marker: Volume criteria are important in selected regurgitant repaired-TOF pathways. Waiting for that marker alone can overlook symptomatic pressure-overload disease and inappropriate application of one phenotype’s thresholds to another.\n\nDefer intervention assessment until pulmonary regurgitant fraction reaches 25%: A regurgitant threshold addresses one form of pulmonary valve dysfunction. Significant obstructive pressure loading is another; the low regurgitant fraction does not negate the symptomatic RVOT problem.\n\nTreat presumed PAH solely because RV systolic pressure is 90 mmHg: RV systolic pressure approximates PA systolic pressure only in the absence of important intervening obstruction. The supplied RVOT lesion and lower distal PA pressure localize the pressure load rather than establishing PAH.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Pressure-Loaded RV After TOF Repair</h2><p><strong>Correct answer: D — Refer for assessment of relief of the residual RVOT obstruction</strong></p><h3>Pressure Versus Volume Loading</h3><ul><li><strong>Residual RVOT obstruction can create important pulmonary valve/outflow dysfunction despite little regurgitation.</strong> Here RV pressure is 90/120 = 0.75 of systemic, exceeding two-thirds systemic pressure.<ul><li>Distinguish valvar, subvalvar, conduit and branch pulmonary arterial obstruction. Define where the pressure drop occurs and whether another lesion contributes to exercise limitation.</li><li>A high RV pressure is not automatically pulmonary hypertension: obstruction between the RV and PA can generate the difference. Interpret tricuspid-regurgitation-derived RV pressure estimates within the known outflow anatomy.</li></ul></li></ul><h3>Intervention Assessment and Follow-Up</h3><ul><li><strong>Symptoms with important residual obstruction warrant specialist repair assessment rather than waiting for severe regurgitation or advanced ventricular dilation.</strong> The procedure depends on the actual level and anatomy of the lesion.<ul><li>Options may include catheter relief or valve intervention for a suitable target, while complex muscular, patched or associated lesions may favor surgery. CMR, CT, Doppler and selected catheter measurements answer complementary functional and anatomical questions.</li><li>Review RV and LV function, tricuspid regurgitation, arrhythmias and objective exercise measurements. A fall in exercise capacity can result from multiple residual lesions, so intervention planning should not use a single number in isolation. After treatment, follow residual gradients, new or persisting regurgitation and ventricular response. Relief of the mechanical load does not remove the established scar-related arrhythmia substrate.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Wait until RV end-systolic volume exceeds the regurgitation-related referral marker:</strong> Volume criteria are important in selected regurgitant repaired-TOF pathways. Waiting for that marker alone can overlook symptomatic pressure-overload disease and inappropriate application of one phenotype’s thresholds to another.</li><li><strong>B — Defer intervention assessment until pulmonary regurgitant fraction reaches 25%:</strong> A regurgitant threshold addresses one form of pulmonary valve dysfunction. Significant obstructive pressure loading is another; the low regurgitant fraction does not negate the symptomatic RVOT problem.</li><li><strong>C — Treat presumed PAH solely because RV systolic pressure is 90 mmHg:</strong> RV systolic pressure approximates PA systolic pressure only in the absence of important intervening obstruction. The supplied RVOT lesion and lower distal PA pressure localize the pressure load rather than establishing PAH.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Pressure-Loaded RV After TOF Repair",
+        "sections": [
+          {
+            "heading": "Pressure Versus Volume Loading",
+            "bullets": [
+              {
+                "text": "**Residual RVOT obstruction can create important pulmonary valve/outflow dysfunction despite little regurgitation.** Here RV pressure is 90/120 = 0.75 of systemic, exceeding two-thirds systemic pressure.",
+                "children": [
+                  "Distinguish valvar, subvalvar, conduit and branch pulmonary arterial obstruction. Define where the pressure drop occurs and whether another lesion contributes to exercise limitation.",
+                  "A high RV pressure is not automatically pulmonary hypertension: obstruction between the RV and PA can generate the difference. Interpret tricuspid-regurgitation-derived RV pressure estimates within the known outflow anatomy."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Intervention Assessment and Follow-Up",
+            "bullets": [
+              {
+                "text": "**Symptoms with important residual obstruction warrant specialist repair assessment rather than waiting for severe regurgitation or advanced ventricular dilation.** The procedure depends on the actual level and anatomy of the lesion.",
+                "children": [
+                  "Options may include catheter relief or valve intervention for a suitable target, while complex muscular, patched or associated lesions may favor surgery. CMR, CT, Doppler and selected catheter measurements answer complementary functional and anatomical questions.",
+                  "Review RV and LV function, tricuspid regurgitation, arrhythmias and objective exercise measurements. A fall in exercise capacity can result from multiple residual lesions, so intervention planning should not use a single number in isolation. After treatment, follow residual gradients, new or persisting regurgitation and ventricular response. Relief of the mechanical load does not remove the established scar-related arrhythmia substrate."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Volume criteria are important in selected regurgitant repaired-TOF pathways. Waiting for that marker alone can overlook symptomatic pressure-overload disease and inappropriate application of one phenotype’s thresholds to another."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "A regurgitant threshold addresses one form of pulmonary valve dysfunction. Significant obstructive pressure loading is another; the low regurgitant fraction does not negate the symptomatic RVOT problem."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "RV systolic pressure approximates PA systolic pressure only in the absence of important intervening obstruction. The supplied RVOT lesion and lower distal PA pressure localize the pressure load rather than establishing PAH."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Investigate declining exercise capacity with residual obstruction or regurgitation"
     }
   ],
   "plannedQuestions": 55,
@@ -1959,9 +2255,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 21,
+    "draftQuestions": 25,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 21
+    "newQuestionsAfterRedistribution": 25
   }
 }
