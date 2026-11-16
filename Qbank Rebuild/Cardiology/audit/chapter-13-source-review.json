@@ -1,0 +1,32 @@
+{
+  "status": "in_progress",
+  "sourceDocumentSha256": "89a8747279d5379353f73c1a6683d6e97aea03631391c69e8760547808fc2854",
+  "sourceSectionsRead": [
+    "I. Aortic dissection",
+    "II. Aortic aneurysm",
+    "III. Peripheral arterial disease",
+    "IV. Acute limb ischemia"
+  ],
+  "corrections": [
+    "2022 ACC/AHA AAS heart-rate target is 60–80/min, not an unqualified ≤60/min.",
+    "Cilostazol dose reduction includes strong OR moderate CYP3A4 inhibitors and CYP2C19 inhibitors; label verification available.",
+    "Exercise ABI fall thresholds vary by protocol and should not be presented as universally definitive."
+  ],
+  "references": [
+    {
+      "label": "ACC/AHA Aortic Disease Guideline, 2022",
+      "url": "https://doi.org/10.1161/CIR.0000000000001106"
+    },
+    {
+      "label": "ESC Peripheral Arterial and Aortic Diseases Guideline, 2024",
+      "url": "https://doi.org/10.1093/eurheartj/ehae179"
+    }
+  ],
+  "checks": {
+    "aorticQuestionStructure": "22 new questions authored with four options and individual distractor rationales",
+    "finalClinicalReview": "pending",
+    "transferredExplanationCompaction": "pending",
+    "rendering": "pending"
+  },
+  "nextWork": "Finish PAD and ALI authoring in one content pass; then perform the consolidated full-chapter review and installation checks."
+}

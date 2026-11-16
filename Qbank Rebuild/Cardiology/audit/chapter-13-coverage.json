@@ -1,0 +1,142 @@
+{
+  "status": "draft_in_progress",
+  "plannedQuestions": 48,
+  "authoredQuestions": 25,
+  "installedQuestions": 3,
+  "countPolicy": "45 new distinct decisions plus 3 transferred questions; provisional until consolidated source-coverage and duplication review, not official examination weightage.",
+  "sections": [
+    {
+      "section": "Acute aortic syndromes",
+      "newQuestions": 10,
+      "transferredQuestions": 2
+    },
+    {
+      "section": "Aortic aneurysms",
+      "newQuestions": 12,
+      "transferredQuestions": 1
+    },
+    {
+      "section": "Chronic peripheral arterial disease",
+      "plannedNewQuestions": 16
+    },
+    {
+      "section": "Acute limb ischemia",
+      "plannedNewQuestions": 7
+    }
+  ],
+  "authoredDecisions": [
+    {
+      "questionId": "cardiology-rebuild-13-001",
+      "title": "Anatomical Classification of Aortic Dissection"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-002",
+      "title": "Dynamic and Static Malperfusion"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-003",
+      "title": "Aortic Dissection Detection Risk Score"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-004",
+      "title": "Imaging an Unstable Suspected Aortic Dissection"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-005",
+      "title": "Anti-Impulse Therapy in Acute Aortic Syndrome"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-006",
+      "title": "Rate Control When Beta-Blockade Is Unsuitable"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-007",
+      "title": "Complicated Type B Aortic Dissection"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-008",
+      "title": "High-Risk Uncomplicated Type B Dissection"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-009",
+      "title": "Aortic Intramural Hematoma"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-010",
+      "title": "Surveillance After Aortic Dissection"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-011",
+      "title": "Family Screening in Thoracic Aortic Disease"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-012",
+      "title": "Screening for Abdominal Aortic Aneurysm"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-013",
+      "title": "Sex-Specific AAA Surveillance"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-014",
+      "title": "Elective AAA Repair Thresholds"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-015",
+      "title": "Rapid Growth of a Sporadic Ascending Aneurysm"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-016",
+      "title": "Marfan Aortic Root Intervention"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-017",
+      "title": "Loeys–Dietz Aortopathy"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-018",
+      "title": "Repair of a Descending Thoracic Aneurysm"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-019",
+      "title": "Infective Aortic Aneurysm"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-020",
+      "title": "Type I Endoleak"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-021",
+      "title": "Type III Endoleak"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-022",
+      "title": "Symptomatic AAA Below the Elective Size Threshold"
+    }
+  ],
+  "remainingDecisions": [
+    "ABI calculation",
+    "Exercise ABI",
+    "Noncompressible ABI and TBI",
+    "CLTI perfusion assessment",
+    "Anatomical localization",
+    "Vascular versus neurogenic claudication",
+    "Lipid lowering",
+    "Single antiplatelet therapy",
+    "Dual-pathway inhibition",
+    "Postprocedural DAPT",
+    "Cilostazol",
+    "Structured exercise",
+    "Claudication revascularization",
+    "WIfI",
+    "BEST-CLI",
+    "BASIL-2",
+    "ALI viability classification",
+    "Initial anticoagulation",
+    "Immediately threatened limb",
+    "Irreversible ischemia",
+    "Reperfusion compartment syndrome",
+    "Catheter thrombolysis selection",
+    "Embolic versus thrombotic occlusion"
+  ]
+}

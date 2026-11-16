@@ -709,16 +709,34 @@
       "chapter": 13,
       "document": "13. Aortic Diseases and Peripheral Vascular Diseases",
       "file": "Cardiology/13. Aortic Diseases and Peripheral Vascular Diseases.json",
-      "status": "redistributed_coverage_incomplete",
+      "status": "draft_in_progress",
       "originalIdsPreserved": true,
       "existingQuestions": 3,
       "previouslyInstalledQuestions": 3,
-      "draftQuestions": 0,
-      "coverageStatus": "incomplete_requires_chapter_review",
+      "draftQuestions": 22,
+      "coverageStatus": "incomplete_draft",
       "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
       "installedQuestions": 3,
-      "draftQuestionsWithheld": 0,
-      "runtimeStatus": "installed_redistributed_subset"
+      "draftQuestionsWithheld": 22,
+      "runtimeStatus": "installed_redistributed_subset",
+      "validation": {
+        "questions": 25,
+        "answerDistribution": {
+          "A": 7,
+          "B": 6,
+          "C": 6,
+          "D": 6
+        },
+        "minimumExplanationWords": 151,
+        "distractorRationales": 75,
+        "questionStyles": {
+          "clinical_scenario": 25
+        },
+        "status": "passed"
+      },
+      "authoredQuestions": 25,
+      "plannedQuestions": 48,
+      "coverageMap": "Cardiology/audit/chapter-13-coverage.json"
     },
     {
       "subject": "Cardiology",
@@ -1371,7 +1389,7 @@
     "sourceChapters": 15,
     "fullCoverage": false,
     "draftQuestionsNotInstalled": 74,
-    "currentAuthoredQuestions": 723,
-    "currentDraftQuestionsNotInstalled": 65
+    "currentAuthoredQuestions": 745,
+    "currentDraftQuestionsNotInstalled": 87
   }
 }

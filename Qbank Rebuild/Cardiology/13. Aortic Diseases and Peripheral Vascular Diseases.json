@@ -7,12 +7,273 @@
   "headingIndex": 0,
   "document": "13. Aortic Diseases and Peripheral Vascular Diseases",
   "headingText": "Aortic Diseases and Peripheral Vascular Diseases",
-  "targetQuestions": 3,
-  "status": "redistributed_existing_questions",
+  "targetQuestions": 25,
+  "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
-  "sourceNote": "Existing questions redistributed by clinical focus to the canonical files/Cardiology chapters. Question content and source-review status are unchanged. This is not a claim of complete source coverage or a deep-dive explanation rewrite.",
-  "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3}",
+  "sourceNote": "Local authoring draft; final clinical, source-coverage and rendering review pending. Full Harrison text not accessed.",
+  "explanationCss": "body{font:17px Arial,Helvetica,sans-serif;color:#252525}p{margin:0 0 8px}h2{font-size:18px;color:#6F3D5D;background:#E7E1E4;margin:4px 0 8px;padding:7px}h3{font-size:17px;color:#233D6B;border-bottom:1px solid #bbc4d3;margin:4px 0 8px}strong{color:#233D6B;font-size:17px}li{margin:3px 0}li li{margin:2.83px 0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}th,td{border:1px solid #c9c9c9;padding:6px;text-align:left}th{background:#6F3D5D;color:white}tr:nth-child(even){background:#f7f5f6}mark{background:#FFF2B3} .decision-flow{display:flex;flex-wrap:wrap;gap:8px;padding-left:24px}.decision-flow li{border:1px solid #bbc4d3;border-radius:4px;padding:7px;margin:3px 12px 3px 0;flex:1 1 150px}.decision-flow li:not(:last-child)::after{content:\" →\";color:#233D6B;font-weight:bold}",
   "questions": [
+    {
+      "id": "cardiology-rebuild-13-001",
+      "topic": "Aortic diseases",
+      "question": "CTA shows an entry tear distal to the left subclavian artery, with retrograde extension into the ascending aorta. Which classification and initial definitive pathway are appropriate?",
+      "options": [
+        "Stanford B; urgent descending-aortic TEVAR",
+        "Stanford B; anti-impulse therapy and surveillance",
+        "Stanford A; emergency open aortic repair",
+        "Stanford A; planned elective repair after stabilization"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Anatomical Classification of Aortic Dissection\n\nCorrect answer: Stanford A; emergency open aortic repair\n\nClassify the Extent\n\n**Stanford depends on ascending involvement, not the entry-tear site.**\n\nAny ascending involvement is A; B spares the ascending aorta. Isolated arch disease may require more detailed contemporary classification.\n\nClinical Consequence\n\n**Urgent surgical assessment and anti-impulse treatment proceed together.**\n\nMedical stabilization is a bridge to repair, not a reason to defer an operable acute type A lesion.\n\n**DeBakey describes origin and propagation.**\n\nI originates in the ascending aorta and extends beyond it; II is confined to ascending; III originates in descending.\n\nDeBakey III subtype | Extent\n\nIIIa | Descending thoracic, above diaphragm\n\nIIIb | Extends below diaphragm\n\nStanford B; urgent descending-aortic TEVAR: TEVAR is commonly used for complicated descending dissection; an entry tear there does not negate ascending involvement.\n\nStanford B; anti-impulse therapy and surveillance: This fits disease sparing the ascending aorta without complications; retrograde ascending involvement changes the Stanford category.\n\nStanford A; planned elective repair after stabilization: Elective repair suits selected stable chronic disease; acute ascending dissection carries immediate rupture, regurgitation and tamponade risks.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Anatomical Classification of Aortic Dissection</h2><p><strong>Correct answer: C — Stanford A; emergency open aortic repair</strong></p><h3>Classify the Extent</h3><ul><li><strong>Stanford depends on ascending involvement, not the entry-tear site.</strong><ul><li>Any ascending involvement is A; B spares the ascending aorta. Isolated arch disease may require more detailed contemporary classification.</li></ul></li></ul><h3>Clinical Consequence</h3><ul><li><strong>Urgent surgical assessment and anti-impulse treatment proceed together.</strong><ul><li>Medical stabilization is a bridge to repair, not a reason to defer an operable acute type A lesion.</li></ul></li><li><strong>DeBakey describes origin and propagation.</strong><ul><li>I originates in the ascending aorta and extends beyond it; II is confined to ascending; III originates in descending.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>DeBakey III subtype</th><th>Extent</th></tr></thead><tbody><tr><td>IIIa</td><td>Descending thoracic, above diaphragm</td></tr><tr><td>IIIb</td><td>Extends below diaphragm</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — Stanford B; urgent descending-aortic TEVAR:</strong> TEVAR is commonly used for complicated descending dissection; an entry tear there does not negate ascending involvement.</li><li><strong>B — Stanford B; anti-impulse therapy and surveillance:</strong> This fits disease sparing the ascending aorta without complications; retrograde ascending involvement changes the Stanford category.</li><li><strong>D — Stanford A; planned elective repair after stabilization:</strong> Elective repair suits selected stable chronic disease; acute ascending dissection carries immediate rupture, regurgitation and tamponade risks.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Anatomical Classification of Aortic Dissection",
+        "sections": [
+          {
+            "heading": "Classify the Extent",
+            "bullets": [
+              {
+                "text": "**Stanford depends on ascending involvement, not the entry-tear site.**",
+                "children": [
+                  "Any ascending involvement is A; B spares the ascending aorta. Isolated arch disease may require more detailed contemporary classification."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Clinical Consequence",
+            "bullets": [
+              {
+                "text": "**Urgent surgical assessment and anti-impulse treatment proceed together.**",
+                "children": [
+                  "Medical stabilization is a bridge to repair, not a reason to defer an operable acute type A lesion."
+                ]
+              },
+              {
+                "text": "**DeBakey describes origin and propagation.**",
+                "children": [
+                  "I originates in the ascending aorta and extends beyond it; II is confined to ascending; III originates in descending."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "DeBakey III subtype",
+              "Extent"
+            ],
+            "rows": [
+              [
+                "IIIa",
+                "Descending thoracic, above diaphragm"
+              ],
+              [
+                "IIIb",
+                "Extends below diaphragm"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "TEVAR is commonly used for complicated descending dissection; an entry tear there does not negate ascending involvement."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "This fits disease sparing the ascending aorta without complications; retrograde ascending involvement changes the Stanford category."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Elective repair suits selected stable chronic disease; acute ascending dissection carries immediate rupture, regurgitation and tamponade risks."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-002",
+      "topic": "Aortic diseases",
+      "question": "In type B dissection, renal hypoperfusion varies with pressure. CTA shows compression of the aortic true lumen across the renal ostium without a flap extending into the renal artery. What mechanism predominates?",
+      "options": [
+        "Dynamic branch-vessel obstruction",
+        "Static branch-vessel obstruction",
+        "Renal artery thromboembolism",
+        "Atheroembolic renal disease"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Dynamic and Static Malperfusion\n\nCorrect answer: Dynamic branch-vessel obstruction\n\nMechanism\n\n**Dynamic:** false-lumen pressure compresses the true lumen and obstructs a branch origin.\n\nSeverity can change with the pressure relationship between lumina.\n\n**Static:** the dissection propagates into the branch, producing fixed narrowing or thrombosis.\n\nTreatment Implications\n\n**Malperfusion makes type B dissection complicated.**\n\nUrgent aortic-team treatment is needed; proximal tear coverage may restore true-lumen flow.\n\n**Persistent branch obstruction may need fenestration or branch stenting.**\n\nMonitor lactate, urine output, abdominal findings and limb perfusion; imaging anatomy alone does not quantify organ injury.\n\nStatic branch-vessel obstruction: Static obstruction results from dissection entering the branch with fixed stenosis or thrombosis; that branch extension is absent here.\n\nRenal artery thromboembolism: An embolus creates a branch filling defect and generally fixed occlusion; ostial obstruction varying with true-lumen compression suggests a flap mechanism.\n\nAtheroembolic renal disease: Cholesterol emboli affect small vessels, often with skin signs after instrumentation; this is major-ostial perfusion compromise.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Dynamic and Static Malperfusion</h2><p><strong>Correct answer: A — Dynamic branch-vessel obstruction</strong></p><h3>Mechanism</h3><ul><li><strong>Dynamic:</strong> false-lumen pressure compresses the true lumen and obstructs a branch origin.<ul><li>Severity can change with the pressure relationship between lumina.</li></ul></li><li><strong>Static:</strong> the dissection propagates into the branch, producing fixed narrowing or thrombosis.</li></ul><h3>Treatment Implications</h3><ul><li><strong>Malperfusion makes type B dissection complicated.</strong><ul><li>Urgent aortic-team treatment is needed; proximal tear coverage may restore true-lumen flow.</li></ul></li><li><strong>Persistent branch obstruction may need fenestration or branch stenting.</strong><ul><li>Monitor lactate, urine output, abdominal findings and limb perfusion; imaging anatomy alone does not quantify organ injury.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Static branch-vessel obstruction:</strong> Static obstruction results from dissection entering the branch with fixed stenosis or thrombosis; that branch extension is absent here.</li><li><strong>C — Renal artery thromboembolism:</strong> An embolus creates a branch filling defect and generally fixed occlusion; ostial obstruction varying with true-lumen compression suggests a flap mechanism.</li><li><strong>D — Atheroembolic renal disease:</strong> Cholesterol emboli affect small vessels, often with skin signs after instrumentation; this is major-ostial perfusion compromise.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Dynamic and Static Malperfusion",
+        "sections": [
+          {
+            "heading": "Mechanism",
+            "bullets": [
+              {
+                "text": "**Dynamic:** false-lumen pressure compresses the true lumen and obstructs a branch origin.",
+                "children": [
+                  "Severity can change with the pressure relationship between lumina."
+                ]
+              },
+              {
+                "text": "**Static:** the dissection propagates into the branch, producing fixed narrowing or thrombosis.",
+                "children": []
+              }
+            ]
+          },
+          {
+            "heading": "Treatment Implications",
+            "bullets": [
+              {
+                "text": "**Malperfusion makes type B dissection complicated.**",
+                "children": [
+                  "Urgent aortic-team treatment is needed; proximal tear coverage may restore true-lumen flow."
+                ]
+              },
+              {
+                "text": "**Persistent branch obstruction may need fenestration or branch stenting.**",
+                "children": [
+                  "Monitor lactate, urine output, abdominal findings and limb perfusion; imaging anatomy alone does not quantify organ injury."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Static obstruction results from dissection entering the branch with fixed stenosis or thrombosis; that branch extension is absent here."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "An embolus creates a branch filling defect and generally fixed occlusion; ostial obstruction varying with true-lumen compression suggests a flap mechanism."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Cholesterol emboli affect small vessels, often with skin signs after instrumentation; this is major-ostial perfusion compromise."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-003",
+      "topic": "Aortic diseases",
+      "question": "A patient with Marfan syndrome has abrupt, severe tearing chest pain, equal pulses and normal blood pressure, with no new murmur or neurological deficit. What is the ADD-RS?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Aortic Dissection Detection Risk Score\n\nCorrect answer: 2\n\nScoring\n\n**Count positive categories, not individual features.**\n\nMarfan syndrome gives 1 for predisposition; abrupt/severe/tearing pain collectively gives 1; examination gives 0.\n\nUse in Diagnosis\n\n**A high-risk presentation requires definitive imaging.**\n\nD-dimer is an adjunct in selected low-probability pathways, not a replacement for CTA in this case.\n\n**A normal ECG or chest radiograph does not exclude dissection.**\n\nIntramural hematoma, limited disease or thrombosed false lumen can complicate biomarker interpretation.\n\nCategory | Examples; maximum 1 point each\n\nPredisposition | Heritable aortopathy, family history, known aneurysm, recent aortic manipulation\n\nPain | Abrupt onset, severe intensity, ripping/tearing quality\n\nExamination | Pulse/BP differential, painful neurological deficit or new AR, shock\n\n1: One point would apply if only one risk category were present; this patient has both a predisposing condition and high-risk pain.\n\n3: Three requires a high-risk examination category as well; the supplied examination does not provide one.\n\n4: ADD-RS is capped at three categories; multiple pain descriptors do not each contribute a separate point.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Aortic Dissection Detection Risk Score</h2><p><strong>Correct answer: B — 2</strong></p><h3>Scoring</h3><ul><li><strong>Count positive categories, not individual features.</strong><ul><li>Marfan syndrome gives 1 for predisposition; abrupt/severe/tearing pain collectively gives 1; examination gives 0.</li></ul></li></ul><h3>Use in Diagnosis</h3><ul><li><strong>A high-risk presentation requires definitive imaging.</strong><ul><li>D-dimer is an adjunct in selected low-probability pathways, not a replacement for CTA in this case.</li></ul></li><li><strong>A normal ECG or chest radiograph does not exclude dissection.</strong><ul><li>Intramural hematoma, limited disease or thrombosed false lumen can complicate biomarker interpretation.</li></ul></li></ul><div class=\"table-wrap\"><table><thead><tr><th>Category</th><th>Examples; maximum 1 point each</th></tr></thead><tbody><tr><td>Predisposition</td><td>Heritable aortopathy, family history, known aneurysm, recent aortic manipulation</td></tr><tr><td>Pain</td><td>Abrupt onset, severe intensity, ripping/tearing quality</td></tr><tr><td>Examination</td><td>Pulse/BP differential, painful neurological deficit or new AR, shock</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — 1:</strong> One point would apply if only one risk category were present; this patient has both a predisposing condition and high-risk pain.</li><li><strong>C — 3:</strong> Three requires a high-risk examination category as well; the supplied examination does not provide one.</li><li><strong>D — 4:</strong> ADD-RS is capped at three categories; multiple pain descriptors do not each contribute a separate point.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Aortic Dissection Detection Risk Score",
+        "sections": [
+          {
+            "heading": "Scoring",
+            "bullets": [
+              {
+                "text": "**Count positive categories, not individual features.**",
+                "children": [
+                  "Marfan syndrome gives 1 for predisposition; abrupt/severe/tearing pain collectively gives 1; examination gives 0."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Use in Diagnosis",
+            "bullets": [
+              {
+                "text": "**A high-risk presentation requires definitive imaging.**",
+                "children": [
+                  "D-dimer is an adjunct in selected low-probability pathways, not a replacement for CTA in this case."
+                ]
+              },
+              {
+                "text": "**A normal ECG or chest radiograph does not exclude dissection.**",
+                "children": [
+                  "Intramural hematoma, limited disease or thrombosed false lumen can complicate biomarker interpretation."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "Category",
+              "Examples; maximum 1 point each"
+            ],
+            "rows": [
+              [
+                "Predisposition",
+                "Heritable aortopathy, family history, known aneurysm, recent aortic manipulation"
+              ],
+              [
+                "Pain",
+                "Abrupt onset, severe intensity, ripping/tearing quality"
+              ],
+              [
+                "Examination",
+                "Pulse/BP differential, painful neurological deficit or new AR, shock"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "One point would apply if only one risk category were present; this patient has both a predisposing condition and high-risk pain."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Three requires a high-risk examination category as well; the supplied examination does not provide one."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "ADD-RS is capped at three categories; multiple pain descriptors do not each contribute a separate point."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
     {
       "id": "cardiology-rebuild-02-008",
       "topic": "ACS diagnosis and myocardial infarction classification",
@@ -87,43 +348,129 @@
       "coverageDecision": "Differentiate acute coronary syndromes from dissection pulmonary embolism and inflammatory mimics"
     },
     {
-      "id": "cardiology-rebuild-03-017",
-      "topic": "Aortic regurgitation",
-      "question": "A low-risk patient is scheduled for surgery for symptomatic severe aortic regurgitation. Cross-sectional imaging confirms a maximal ascending aortic diameter of 48 mm. Under ESC 2025 guidance, what should the surgical plan include?",
+      "id": "cardiology-rebuild-13-004",
+      "topic": "Aortic diseases",
+      "question": "A patient with suspected proximal dissection has shock and cannot safely leave the resuscitation area. An experienced echocardiographer is immediately available. Which test best provides rapid definitive proximal-aortic information?",
       "options": [
-        "Isolated valve surgery with aortic intervention deferred until fifty-five millimeters",
-        "Assessment for concomitant replacement of the enlarged ascending aorta",
-        "Isolated valve surgery with aortic replacement considered only if subsequent rapid growth occurs",
-        "Plan a root replacement instead of evaluating the tubular ascending segment"
+        "Transthoracic echocardiography alone",
+        "Contrast-enhanced whole-aorta CT",
+        "Aortic magnetic resonance angiography",
+        "Bedside transesophageal echocardiography"
       ],
-      "correctIndex": 1,
+      "correctIndex": 3,
       "questionStyle": "clinical_scenario",
       "calculation": false,
-      "explanation": "Addressing Aortic Disease During Valve Surgery\n\nCorrect answer: Assessment for concomitant replacement of the enlarged ascending aorta\n\nConcomitant Aortic Assessment\n\n**Valve disease and aortic disease require a combined anatomical plan.** The root and tubular ascending segment are different structures and should be measured and described separately.\n\nESC 2025 advises considering concomitant root or ascending replacement at maximal diameter ≥45 mm when a valve operation is indicated and predicted surgical risk is low.\n\nThis is not a universal isolated-aorta threshold. Etiology, genetic disease, growth, body size, family history and operative circumstances influence aortic decisions.\n\nRepair, Replacement and Valve Preservation\n\n**Choose the operation according to the mechanism and the involved aortic segment.** Root enlargement with suitable pliable cusps may allow valve-sparing root replacement at an experienced center.\n\nCalcification, cusp destruction or an unlikely durable repair may favor valve replacement. A tubular ascending graft and an operation on the root are not interchangeable labels.\n\nReview CT or CMR alongside echocardiographic valve assessment and discuss durability, prosthesis implications and reintervention. A successful isolated correction of regurgitation does not remove untreated aortic risk. Conversely, a forty-eight-millimeter ascending measurement does not by itself prove that every part of the root must be replaced. The clinical value of the threshold is to prompt an integrated surgical decision rather than two disconnected treatment plans.\n\nIsolated valve surgery with aortic intervention deferred until fifty-five millimeters: An isolated aortopathy threshold should not be copied into a patient already undergoing valve surgery; concomitant replacement can be considered at a lower diameter with low predicted surgical risk.\n\nIsolated valve surgery with aortic replacement considered only if subsequent rapid growth occurs: Rapid growth is an important aortopathy risk feature, but the opportunity for concomitant replacement at the specified size should be assessed during the already indicated operation rather than reserved solely for documented future growth.\n\nPlan a root replacement instead of evaluating the tubular ascending segment: Root replacement is relevant to root pathology; a tubular ascending measurement does not establish root enlargement. The operation should address the demonstrated segment and valve mechanism.\n\nESC/EACTS valvular heart disease guideline, 2025 — https://doi.org/10.1093/eurheartj/ehaf194",
-      "explanationHtml": "<h2>Addressing Aortic Disease During Valve Surgery</h2><p><strong>Correct answer: B — Assessment for concomitant replacement of the enlarged ascending aorta</strong></p><h3>Concomitant Aortic Assessment</h3><ul><li><strong>Valve disease and aortic disease require a combined anatomical plan.</strong> The root and tubular ascending segment are different structures and should be measured and described separately.<ul><li>ESC 2025 advises considering concomitant root or ascending replacement at maximal diameter ≥45 mm when a valve operation is indicated and predicted surgical risk is low.</li><li>This is not a universal isolated-aorta threshold. Etiology, genetic disease, growth, body size, family history and operative circumstances influence aortic decisions.</li></ul></li></ul><h3>Repair, Replacement and Valve Preservation</h3><ul><li><strong>Choose the operation according to the mechanism and the involved aortic segment.</strong> Root enlargement with suitable pliable cusps may allow valve-sparing root replacement at an experienced center.<ul><li>Calcification, cusp destruction or an unlikely durable repair may favor valve replacement. A tubular ascending graft and an operation on the root are not interchangeable labels.</li><li>Review CT or CMR alongside echocardiographic valve assessment and discuss durability, prosthesis implications and reintervention. A successful isolated correction of regurgitation does not remove untreated aortic risk. Conversely, a forty-eight-millimeter ascending measurement does not by itself prove that every part of the root must be replaced. The clinical value of the threshold is to prompt an integrated surgical decision rather than two disconnected treatment plans.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Isolated valve surgery with aortic intervention deferred until fifty-five millimeters:</strong> An isolated aortopathy threshold should not be copied into a patient already undergoing valve surgery; concomitant replacement can be considered at a lower diameter with low predicted surgical risk.</li><li><strong>C — Isolated valve surgery with aortic replacement considered only if subsequent rapid growth occurs:</strong> Rapid growth is an important aortopathy risk feature, but the opportunity for concomitant replacement at the specified size should be assessed during the already indicated operation rather than reserved solely for documented future growth.</li><li><strong>D — Plan a root replacement instead of evaluating the tubular ascending segment:</strong> Root replacement is relevant to root pathology; a tubular ascending measurement does not establish root enlargement. The operation should address the demonstrated segment and valve mechanism.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaf194\">ESC/EACTS valvular heart disease guideline, 2025</a></li></ul>",
+      "explanation": "Imaging an Unstable Suspected Aortic Dissection\n\nCorrect answer: Bedside transesophageal echocardiography\n\nImmediate Information\n\n**TEE assesses proximal flap, AR, tamponade and ventricular function.**\n\nIt can be performed bedside or in theatre while surgical management is organized.\n\nLimitations and Complementary Imaging\n\n**A negative study is not universally definitive.**\n\nDistal ascending/arch blind regions and operator dependence matter; persistent suspicion requires further assessment.\n\n**CTA maps the entire aorta and branches when feasible.**\n\nECG gating reduces proximal motion artifact; MRI is useful for selected stable patients and follow-up.\n\n**Avoid delaying emergency repair** merely to obtain every imaging modality when diagnosis and operative need are established.\n\nTransthoracic echocardiography alone: TTE quickly assesses effusion and regurgitation but incompletely visualizes the thoracic aorta; a negative result cannot exclude dissection.\n\nContrast-enhanced whole-aorta CT: CTA is preferred in most stable patients and maps branch anatomy; unsafe transfer makes bedside TEE the immediate choice.\n\nAortic magnetic resonance angiography: MRI offers comprehensive imaging without ionizing radiation but is impractical for an unstable patient requiring active resuscitation.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Imaging an Unstable Suspected Aortic Dissection</h2><p><strong>Correct answer: D — Bedside transesophageal echocardiography</strong></p><h3>Immediate Information</h3><ul><li><strong>TEE assesses proximal flap, AR, tamponade and ventricular function.</strong><ul><li>It can be performed bedside or in theatre while surgical management is organized.</li></ul></li></ul><h3>Limitations and Complementary Imaging</h3><ul><li><strong>A negative study is not universally definitive.</strong><ul><li>Distal ascending/arch blind regions and operator dependence matter; persistent suspicion requires further assessment.</li></ul></li><li><strong>CTA maps the entire aorta and branches when feasible.</strong><ul><li>ECG gating reduces proximal motion artifact; MRI is useful for selected stable patients and follow-up.</li></ul></li><li><strong>Avoid delaying emergency repair</strong> merely to obtain every imaging modality when diagnosis and operative need are established.</li></ul><h3>Other Options</h3><ul><li><strong>A — Transthoracic echocardiography alone:</strong> TTE quickly assesses effusion and regurgitation but incompletely visualizes the thoracic aorta; a negative result cannot exclude dissection.</li><li><strong>B — Contrast-enhanced whole-aorta CT:</strong> CTA is preferred in most stable patients and maps branch anatomy; unsafe transfer makes bedside TEE the immediate choice.</li><li><strong>C — Aortic magnetic resonance angiography:</strong> MRI offers comprehensive imaging without ionizing radiation but is impractical for an unstable patient requiring active resuscitation.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
       "explanationTeaching": {
-        "title": "Addressing Aortic Disease During Valve Surgery",
+        "title": "Imaging an Unstable Suspected Aortic Dissection",
         "sections": [
           {
-            "heading": "Concomitant Aortic Assessment",
+            "heading": "Immediate Information",
             "bullets": [
               {
-                "text": "**Valve disease and aortic disease require a combined anatomical plan.** The root and tubular ascending segment are different structures and should be measured and described separately.",
+                "text": "**TEE assesses proximal flap, AR, tamponade and ventricular function.**",
                 "children": [
-                  "ESC 2025 advises considering concomitant root or ascending replacement at maximal diameter ≥45 mm when a valve operation is indicated and predicted surgical risk is low.",
-                  "This is not a universal isolated-aorta threshold. Etiology, genetic disease, growth, body size, family history and operative circumstances influence aortic decisions."
+                  "It can be performed bedside or in theatre while surgical management is organized."
                 ]
               }
             ]
           },
           {
-            "heading": "Repair, Replacement and Valve Preservation",
+            "heading": "Limitations and Complementary Imaging",
             "bullets": [
               {
-                "text": "**Choose the operation according to the mechanism and the involved aortic segment.** Root enlargement with suitable pliable cusps may allow valve-sparing root replacement at an experienced center.",
+                "text": "**A negative study is not universally definitive.**",
                 "children": [
-                  "Calcification, cusp destruction or an unlikely durable repair may favor valve replacement. A tubular ascending graft and an operation on the root are not interchangeable labels.",
-                  "Review CT or CMR alongside echocardiographic valve assessment and discuss durability, prosthesis implications and reintervention. A successful isolated correction of regurgitation does not remove untreated aortic risk. Conversely, a forty-eight-millimeter ascending measurement does not by itself prove that every part of the root must be replaced. The clinical value of the threshold is to prompt an integrated surgical decision rather than two disconnected treatment plans."
+                  "Distal ascending/arch blind regions and operator dependence matter; persistent suspicion requires further assessment."
+                ]
+              },
+              {
+                "text": "**CTA maps the entire aorta and branches when feasible.**",
+                "children": [
+                  "ECG gating reduces proximal motion artifact; MRI is useful for selected stable patients and follow-up."
+                ]
+              },
+              {
+                "text": "**Avoid delaying emergency repair** merely to obtain every imaging modality when diagnosis and operative need are established.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "TTE quickly assesses effusion and regurgitation but incompletely visualizes the thoracic aorta; a negative result cannot exclude dissection."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "CTA is preferred in most stable patients and maps branch anatomy; unsafe transfer makes bedside TEE the immediate choice."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "MRI offers comprehensive imaging without ionizing radiation but is impractical for an unstable patient requiring active resuscitation."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-005",
+      "topic": "Aortic diseases",
+      "question": "A hypertensive patient with uncomplicated acute type B dissection has HR 112/min and BP 186/104 mmHg, with preserved perfusion and no beta-blocker contraindication. What is the best initial pharmacological sequence?",
+      "options": [
+        "Oral labetalol followed by oral amlodipine",
+        "IV nicardipine, then add esmolol after pressure normalizes",
+        "IV nitroprusside followed by oral metoprolol",
+        "IV esmolol, then add nicardipine if pressure remains high"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Anti-Impulse Therapy in Acute Aortic Syndrome\n\nCorrect answer: IV esmolol, then add nicardipine if pressure remains high\n\nTreatment Sequence\n\n**Analgesia and arterial-line monitoring; initiate IV beta-blockade.**\n\nEsmolol: 500 micrograms/kg over 1 minute, then 50 micrograms/kg/min; titrate to response, commonly up to 200 micrograms/kg/min.\n\n**Add IV vasodilator if needed after rate control.**\n\nNicardipine ==5 mg/hour==; increase ==2.5 mg/hour== every 5–15 minutes, maximum ==15 mg/hour==.\n\nTargets and Safety\n\n**2022 ACC/AHA:** HR 60–80/min; SBP ==<120 mmHg== or the lowest pressure maintaining organ perfusion.\n\n**Monitor bradycardia, AV block, bronchospasm and hypoperfusion.**\n\nShock, major malperfusion or acute severe AR requires individualized hemodynamic management rather than automatic target chasing.\n\nControl pain and impulse → Reassess perfusion → Add vasodilator if required\n\nOral labetalol followed by oral amlodipine: Oral drugs suit longer-term control; the acute hypertensive tachycardic emergency requires titratable IV treatment and invasive monitoring.\n\nIV nicardipine, then add esmolol after pressure normalizes: Nicardipine is useful after rate control; vasodilation first can provoke reflex tachycardia and increase aortic impulse.\n\nIV nitroprusside followed by oral metoprolol: Nitroprusside is an adjunct after adequate rate control; oral beta-blockade does not provide the initial rapid titration needed here.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Anti-Impulse Therapy in Acute Aortic Syndrome</h2><p><strong>Correct answer: D — IV esmolol, then add nicardipine if pressure remains high</strong></p><h3>Treatment Sequence</h3><ol><li><strong>Analgesia and arterial-line monitoring; initiate IV beta-blockade.</strong><ul><li>Esmolol: 500 micrograms/kg over 1 minute, then 50 micrograms/kg/min; titrate to response, commonly up to 200 micrograms/kg/min.</li></ul></li><li><strong>Add IV vasodilator if needed after rate control.</strong><ul><li>Nicardipine <mark>5 mg/hour</mark>; increase <mark>2.5 mg/hour</mark> every 5–15 minutes, maximum <mark>15 mg/hour</mark>.</li></ul></li></ol><h3>Targets and Safety</h3><ul><li><strong>2022 ACC/AHA:</strong> HR 60–80/min; SBP <mark>&lt;120 mmHg</mark> or the lowest pressure maintaining organ perfusion.</li><li><strong>Monitor bradycardia, AV block, bronchospasm and hypoperfusion.</strong><ul><li>Shock, major malperfusion or acute severe AR requires individualized hemodynamic management rather than automatic target chasing.</li></ul></li></ul><h3>Decision Pathway</h3><ol class=\"decision-flow\"><li>Control pain and impulse</li><li>Reassess perfusion</li><li>Add vasodilator if required</li></ol><h3>Other Options</h3><ul><li><strong>A — Oral labetalol followed by oral amlodipine:</strong> Oral drugs suit longer-term control; the acute hypertensive tachycardic emergency requires titratable IV treatment and invasive monitoring.</li><li><strong>B — IV nicardipine, then add esmolol after pressure normalizes:</strong> Nicardipine is useful after rate control; vasodilation first can provoke reflex tachycardia and increase aortic impulse.</li><li><strong>C — IV nitroprusside followed by oral metoprolol:</strong> Nitroprusside is an adjunct after adequate rate control; oral beta-blockade does not provide the initial rapid titration needed here.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Anti-Impulse Therapy in Acute Aortic Syndrome",
+        "sections": [
+          {
+            "heading": "Treatment Sequence",
+            "bullets": [
+              {
+                "text": "**Analgesia and arterial-line monitoring; initiate IV beta-blockade.**",
+                "children": [
+                  "Esmolol: 500 micrograms/kg over 1 minute, then 50 micrograms/kg/min; titrate to response, commonly up to 200 micrograms/kg/min."
+                ]
+              },
+              {
+                "text": "**Add IV vasodilator if needed after rate control.**",
+                "children": [
+                  "Nicardipine ==5 mg/hour==; increase ==2.5 mg/hour== every 5–15 minutes, maximum ==15 mg/hour==."
+                ]
+              }
+            ],
+            "listType": "ol"
+          },
+          {
+            "heading": "Targets and Safety",
+            "bullets": [
+              {
+                "text": "**2022 ACC/AHA:** HR 60–80/min; SBP ==<120 mmHg== or the lowest pressure maintaining organ perfusion.",
+                "children": []
+              },
+              {
+                "text": "**Monitor bradycardia, AV block, bronchospasm and hypoperfusion.**",
+                "children": [
+                  "Shock, major malperfusion or acute severe AR requires individualized hemodynamic management rather than automatic target chasing."
                 ]
               }
             ]
@@ -133,27 +480,109 @@
         "otherOptions": [
           {
             "optionIndex": 0,
-            "explanation": "An isolated aortopathy threshold should not be copied into a patient already undergoing valve surgery; concomitant replacement can be considered at a lower diameter with low predicted surgical risk."
+            "explanation": "Oral drugs suit longer-term control; the acute hypertensive tachycardic emergency requires titratable IV treatment and invasive monitoring."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Nicardipine is useful after rate control; vasodilation first can provoke reflex tachycardia and increase aortic impulse."
           },
           {
             "optionIndex": 2,
-            "explanation": "Rapid growth is an important aortopathy risk feature, but the opportunity for concomitant replacement at the specified size should be assessed during the already indicated operation rather than reserved solely for documented future growth."
+            "explanation": "Nitroprusside is an adjunct after adequate rate control; oral beta-blockade does not provide the initial rapid titration needed here."
+          }
+        ],
+        "flow": [
+          "Control pain and impulse",
+          "Reassess perfusion",
+          "Add vasodilator if required"
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-006",
+      "topic": "Aortic diseases",
+      "question": "A patient with acute type B dissection has active severe bronchospasm, HR 118/min and preserved LV systolic function, without shock or AV block. Which IV agent is the most appropriate alternative for initial rate control?",
+      "options": [
+        "Nicardipine",
+        "Diltiazem",
+        "Nitroprusside",
+        "Amiodarone"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Rate Control When Beta-Blockade Is Unsuitable\n\nCorrect answer: Diltiazem\n\nAlternative Strategy\n\n**IV non-dihydropyridine calcium-channel blockade** can substitute when beta-blockers are contraindicated or not tolerated.\n\nDiltiazem or verapamil slows AV nodal conduction and reduces rate; titrate under continuous monitoring.\n\nPatient Selection\n\n**Preserved ventricular function and adequate pressure matter.**\n\nAvoid this strategy in decompensated systolic failure, significant AV block or hypotension.\n\n**Reassess pressure after rate control.**\n\nAdd a titratable vasodilator if needed; maintain organ perfusion and coordinate definitive aortic management.\n\n**This acute alternative does not imply chronic preference** for calcium-channel blockers in every inherited aortopathy.\n\nNicardipine: Nicardipine lowers pressure but does not reliably suppress heart rate; it is added once impulse control is established.\n\nNitroprusside: Nitroprusside rapidly reduces afterload but may trigger reflex tachycardia; it does not replace initial rate control.\n\nAmiodarone: Amiodarone treats selected tachyarrhythmias; this sinus tachycardia needs impulse control rather than antiarrhythmic conversion.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Rate Control When Beta-Blockade Is Unsuitable</h2><p><strong>Correct answer: B — Diltiazem</strong></p><h3>Alternative Strategy</h3><ul><li><strong>IV non-dihydropyridine calcium-channel blockade</strong> can substitute when beta-blockers are contraindicated or not tolerated.<ul><li>Diltiazem or verapamil slows AV nodal conduction and reduces rate; titrate under continuous monitoring.</li></ul></li></ul><h3>Patient Selection</h3><ul><li><strong>Preserved ventricular function and adequate pressure matter.</strong><ul><li>Avoid this strategy in decompensated systolic failure, significant AV block or hypotension.</li></ul></li><li><strong>Reassess pressure after rate control.</strong><ul><li>Add a titratable vasodilator if needed; maintain organ perfusion and coordinate definitive aortic management.</li></ul></li><li><strong>This acute alternative does not imply chronic preference</strong> for calcium-channel blockers in every inherited aortopathy.</li></ul><h3>Other Options</h3><ul><li><strong>A — Nicardipine:</strong> Nicardipine lowers pressure but does not reliably suppress heart rate; it is added once impulse control is established.</li><li><strong>C — Nitroprusside:</strong> Nitroprusside rapidly reduces afterload but may trigger reflex tachycardia; it does not replace initial rate control.</li><li><strong>D — Amiodarone:</strong> Amiodarone treats selected tachyarrhythmias; this sinus tachycardia needs impulse control rather than antiarrhythmic conversion.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Rate Control When Beta-Blockade Is Unsuitable",
+        "sections": [
+          {
+            "heading": "Alternative Strategy",
+            "bullets": [
+              {
+                "text": "**IV non-dihydropyridine calcium-channel blockade** can substitute when beta-blockers are contraindicated or not tolerated.",
+                "children": [
+                  "Diltiazem or verapamil slows AV nodal conduction and reduces rate; titrate under continuous monitoring."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Patient Selection",
+            "bullets": [
+              {
+                "text": "**Preserved ventricular function and adequate pressure matter.**",
+                "children": [
+                  "Avoid this strategy in decompensated systolic failure, significant AV block or hypotension."
+                ]
+              },
+              {
+                "text": "**Reassess pressure after rate control.**",
+                "children": [
+                  "Add a titratable vasodilator if needed; maintain organ perfusion and coordinate definitive aortic management."
+                ]
+              },
+              {
+                "text": "**This acute alternative does not imply chronic preference** for calcium-channel blockers in every inherited aortopathy.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Nicardipine lowers pressure but does not reliably suppress heart rate; it is added once impulse control is established."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Nitroprusside rapidly reduces afterload but may trigger reflex tachycardia; it does not replace initial rate control."
           },
           {
             "optionIndex": 3,
-            "explanation": "Root replacement is relevant to root pathology; a tubular ascending measurement does not establish root enlargement. The operation should address the demonstrated segment and valve mechanism."
+            "explanation": "Amiodarone treats selected tachyarrhythmias; this sinus tachycardia needs impulse control rather than antiarrhythmic conversion."
           }
         ]
       },
       "references": [
         {
-          "label": "ESC/EACTS valvular heart disease guideline, 2025",
-          "url": "https://doi.org/10.1093/eurheartj/ehaf194"
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
         }
       ],
-      "sourceCheckedAt": "2026-11-15",
-      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
-      "coverageDecision": "Root disease and valve-sparing options"
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
     },
     {
       "id": "cardiology-rebuild-09-042",
@@ -231,15 +660,1315 @@
       "sourceCheckedAt": "2026-11-15",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Choose surgical management for suspected aortic-dissection hemopericardium"
+    },
+    {
+      "id": "cardiology-rebuild-13-007",
+      "topic": "Aortic diseases",
+      "question": "Despite analgesia and controlled HR/BP, a patient with acute type B dissection develops rising lactate, abdominal pain and reduced superior mesenteric artery perfusion. The anatomy is suitable for endovascular treatment. What is the best next strategy?",
+      "options": [
+        "Continue anti-impulse therapy with repeat imaging in one week",
+        "Urgent TEVAR-based repair with assessment of residual branch malperfusion",
+        "Isolated superior mesenteric thrombolysis without aortic treatment",
+        "Routine open descending replacement as the preferred first procedure"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Complicated Type B Aortic Dissection\n\nCorrect answer: Urgent TEVAR-based repair with assessment of residual branch malperfusion\n\nRecognize Complication\n\n**Malperfusion, rupture, extension, progressive enlargement, refractory pain or uncontrolled BP** require escalation.\n\nNormal arm pressure does not establish visceral perfusion; monitor lactate and organ function.\n\nRestore Flow\n\n**TEVAR covers the proximal tear** and expands the true lumen when anatomy permits.\n\n**Check branch vessels after aortic treatment.**\n\nStatic obstruction may persist and need fenestration or branch intervention; bowel viability may require surgical assessment.\n\n**Continue anti-impulse therapy and surveillance.**\n\nIntervention does not remove every residual dissected segment or future aneurysm risk.\n\nContinue anti-impulse therapy with repeat imaging in one week: Medical management is initial treatment for uncomplicated disease; evolving mesenteric ischemia demands urgent intervention rather than scheduled surveillance.\n\nIsolated superior mesenteric thrombolysis without aortic treatment: Thrombolysis treats selected thrombotic occlusions; flap-related malperfusion requires correcting aortic/branch anatomy and carries bleeding concerns.\n\nRoutine open descending replacement as the preferred first procedure: Open repair remains important when endovascular treatment is unsuitable or fails; suitable complicated type B anatomy generally favors TEVAR.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Complicated Type B Aortic Dissection</h2><p><strong>Correct answer: B — Urgent TEVAR-based repair with assessment of residual branch malperfusion</strong></p><h3>Recognize Complication</h3><ul><li><strong>Malperfusion, rupture, extension, progressive enlargement, refractory pain or uncontrolled BP</strong> require escalation.<ul><li>Normal arm pressure does not establish visceral perfusion; monitor lactate and organ function.</li></ul></li></ul><h3>Restore Flow</h3><ul><li><strong>TEVAR covers the proximal tear</strong> and expands the true lumen when anatomy permits.</li><li><strong>Check branch vessels after aortic treatment.</strong><ul><li>Static obstruction may persist and need fenestration or branch intervention; bowel viability may require surgical assessment.</li></ul></li><li><strong>Continue anti-impulse therapy and surveillance.</strong><ul><li>Intervention does not remove every residual dissected segment or future aneurysm risk.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Continue anti-impulse therapy with repeat imaging in one week:</strong> Medical management is initial treatment for uncomplicated disease; evolving mesenteric ischemia demands urgent intervention rather than scheduled surveillance.</li><li><strong>C — Isolated superior mesenteric thrombolysis without aortic treatment:</strong> Thrombolysis treats selected thrombotic occlusions; flap-related malperfusion requires correcting aortic/branch anatomy and carries bleeding concerns.</li><li><strong>D — Routine open descending replacement as the preferred first procedure:</strong> Open repair remains important when endovascular treatment is unsuitable or fails; suitable complicated type B anatomy generally favors TEVAR.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Complicated Type B Aortic Dissection",
+        "sections": [
+          {
+            "heading": "Recognize Complication",
+            "bullets": [
+              {
+                "text": "**Malperfusion, rupture, extension, progressive enlargement, refractory pain or uncontrolled BP** require escalation.",
+                "children": [
+                  "Normal arm pressure does not establish visceral perfusion; monitor lactate and organ function."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Restore Flow",
+            "bullets": [
+              {
+                "text": "**TEVAR covers the proximal tear** and expands the true lumen when anatomy permits.",
+                "children": []
+              },
+              {
+                "text": "**Check branch vessels after aortic treatment.**",
+                "children": [
+                  "Static obstruction may persist and need fenestration or branch intervention; bowel viability may require surgical assessment."
+                ]
+              },
+              {
+                "text": "**Continue anti-impulse therapy and surveillance.**",
+                "children": [
+                  "Intervention does not remove every residual dissected segment or future aneurysm risk."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Medical management is initial treatment for uncomplicated disease; evolving mesenteric ischemia demands urgent intervention rather than scheduled surveillance."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Thrombolysis treats selected thrombotic occlusions; flap-related malperfusion requires correcting aortic/branch anatomy and carries bleeding concerns."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Open repair remains important when endovascular treatment is unsuitable or fails; suitable complicated type B anatomy generally favors TEVAR."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-008",
+      "topic": "Aortic diseases",
+      "question": "A stable patient with acute type B dissection has no pain, rupture or organ malperfusion after treatment. CTA shows total aortic diameter 43 mm and false-lumen diameter 24 mm. Which statement best reflects the 2022 ACC/AHA approach?",
+      "options": [
+        "These are high-risk imaging features; selected pre-emptive endovascular management may be considered",
+        "These measurements establish rupture and mandate immediate open repair",
+        "These measurements prove branch malperfusion and require branch stenting",
+        "These measurements have no role until chronic diameter reaches 55 mm"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "High-Risk Uncomplicated Type B Dissection\n\nCorrect answer: These are high-risk imaging features; selected pre-emptive endovascular management may be considered\n\nRisk Features\n\n**Examples:** maximal aorta ==>40 mm==; false lumen ==>20–22 mm==; entry tear ==>10 mm==.\n\nOther findings include lesser-curvature entry, interval enlargement, bloody effusion or imaging-only malperfusion.\n\nQualified Intervention\n\n**Initially uncomplicated does not mean low long-term risk.**\n\nSelected TEVAR can be considered after expert assessment; it is not mandatory for every uncomplicated case.\n\n**Balance remodeling benefit against procedural risk.**\n\nConsider landing zones, connective-tissue disease, stroke/spinal injury risk and follow-up capacity; continue medical treatment whichever pathway is chosen.\n\nThese measurements establish rupture and mandate immediate open repair: Rupture requires hemorrhage or other rupture evidence; enlargement markers alone identify risk, not established rupture.\n\nThese measurements prove branch malperfusion and require branch stenting: Branch malperfusion depends on vascular and organ findings; the patient has no supplied perfusion deficit.\n\nThese measurements have no role until chronic diameter reaches 55 mm: High-risk acute morphology can inform earlier multidisciplinary decisions; chronic aneurysm thresholds do not exhaust the acute assessment.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>High-Risk Uncomplicated Type B Dissection</h2><p><strong>Correct answer: A — These are high-risk imaging features; selected pre-emptive endovascular management may be considered</strong></p><h3>Risk Features</h3><ul><li><strong>Examples:</strong> maximal aorta <mark>&gt;40 mm</mark>; false lumen <mark>&gt;20–22 mm</mark>; entry tear <mark>&gt;10 mm</mark>.<ul><li>Other findings include lesser-curvature entry, interval enlargement, bloody effusion or imaging-only malperfusion.</li></ul></li></ul><h3>Qualified Intervention</h3><ul><li><strong>Initially uncomplicated does not mean low long-term risk.</strong><ul><li>Selected TEVAR can be considered after expert assessment; it is not mandatory for every uncomplicated case.</li></ul></li><li><strong>Balance remodeling benefit against procedural risk.</strong><ul><li>Consider landing zones, connective-tissue disease, stroke/spinal injury risk and follow-up capacity; continue medical treatment whichever pathway is chosen.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — These measurements establish rupture and mandate immediate open repair:</strong> Rupture requires hemorrhage or other rupture evidence; enlargement markers alone identify risk, not established rupture.</li><li><strong>C — These measurements prove branch malperfusion and require branch stenting:</strong> Branch malperfusion depends on vascular and organ findings; the patient has no supplied perfusion deficit.</li><li><strong>D — These measurements have no role until chronic diameter reaches 55 mm:</strong> High-risk acute morphology can inform earlier multidisciplinary decisions; chronic aneurysm thresholds do not exhaust the acute assessment.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "High-Risk Uncomplicated Type B Dissection",
+        "sections": [
+          {
+            "heading": "Risk Features",
+            "bullets": [
+              {
+                "text": "**Examples:** maximal aorta ==>40 mm==; false lumen ==>20–22 mm==; entry tear ==>10 mm==.",
+                "children": [
+                  "Other findings include lesser-curvature entry, interval enlargement, bloody effusion or imaging-only malperfusion."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Qualified Intervention",
+            "bullets": [
+              {
+                "text": "**Initially uncomplicated does not mean low long-term risk.**",
+                "children": [
+                  "Selected TEVAR can be considered after expert assessment; it is not mandatory for every uncomplicated case."
+                ]
+              },
+              {
+                "text": "**Balance remodeling benefit against procedural risk.**",
+                "children": [
+                  "Consider landing zones, connective-tissue disease, stroke/spinal injury risk and follow-up capacity; continue medical treatment whichever pathway is chosen."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Rupture requires hemorrhage or other rupture evidence; enlargement markers alone identify risk, not established rupture."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Branch malperfusion depends on vascular and organ findings; the patient has no supplied perfusion deficit."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "High-risk acute morphology can inform earlier multidisciplinary decisions; chronic aneurysm thresholds do not exhaust the acute assessment."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-009",
+      "topic": "Aortic diseases",
+      "question": "Noncontrast CT shows crescentic hyperattenuating thickening of the ascending aortic wall. Contrast imaging shows no opacified false lumen or visible intimal flap. Which diagnosis best fits?",
+      "options": [
+        "Type A intramural hematoma",
+        "Penetrating atherosclerotic ulcer",
+        "Aortic pseudoaneurysm",
+        "Uncomplicated mural thrombus"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Aortic Intramural Hematoma\n\nCorrect answer: Type A intramural hematoma\n\nImaging Pattern\n\n**Intramural blood without a perfused false lumen** can produce acute aortic syndrome.\n\nAbsence of a visible flap does not make the lesion benign; progression to dissection or rupture can occur.\n\nManagement by Location\n\n**Ascending involvement generally prompts urgent surgical management.**\n\nSelected high-operative-risk type A cases without high-risk imaging may be managed expectantly in expert centers, not by routine outpatient observation.\n\n**Uncomplicated type B IMH can start with medical treatment.**\n\nComplications or high-risk progression change the intervention threshold; noncontrast and contrast CT provide complementary information.\n\nPenetrating atherosclerotic ulcer: An ulcer is a focal contrast-filled crater penetrating atherosclerotic intima; the supplied lesion is crescentic mural blood without that crater.\n\nAortic pseudoaneurysm: Pseudoaneurysm is a contained wall disruption with an outpouching communicating with the lumen; no focal outpouching is described.\n\nUncomplicated mural thrombus: Luminal thrombus lies within the intimal boundary and usually lacks the characteristic acute hyperattenuating intramural crescent.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Aortic Intramural Hematoma</h2><p><strong>Correct answer: A — Type A intramural hematoma</strong></p><h3>Imaging Pattern</h3><ul><li><strong>Intramural blood without a perfused false lumen</strong> can produce acute aortic syndrome.<ul><li>Absence of a visible flap does not make the lesion benign; progression to dissection or rupture can occur.</li></ul></li></ul><h3>Management by Location</h3><ul><li><strong>Ascending involvement generally prompts urgent surgical management.</strong><ul><li>Selected high-operative-risk type A cases without high-risk imaging may be managed expectantly in expert centers, not by routine outpatient observation.</li></ul></li><li><strong>Uncomplicated type B IMH can start with medical treatment.</strong><ul><li>Complications or high-risk progression change the intervention threshold; noncontrast and contrast CT provide complementary information.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Penetrating atherosclerotic ulcer:</strong> An ulcer is a focal contrast-filled crater penetrating atherosclerotic intima; the supplied lesion is crescentic mural blood without that crater.</li><li><strong>C — Aortic pseudoaneurysm:</strong> Pseudoaneurysm is a contained wall disruption with an outpouching communicating with the lumen; no focal outpouching is described.</li><li><strong>D — Uncomplicated mural thrombus:</strong> Luminal thrombus lies within the intimal boundary and usually lacks the characteristic acute hyperattenuating intramural crescent.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Aortic Intramural Hematoma",
+        "sections": [
+          {
+            "heading": "Imaging Pattern",
+            "bullets": [
+              {
+                "text": "**Intramural blood without a perfused false lumen** can produce acute aortic syndrome.",
+                "children": [
+                  "Absence of a visible flap does not make the lesion benign; progression to dissection or rupture can occur."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Management by Location",
+            "bullets": [
+              {
+                "text": "**Ascending involvement generally prompts urgent surgical management.**",
+                "children": [
+                  "Selected high-operative-risk type A cases without high-risk imaging may be managed expectantly in expert centers, not by routine outpatient observation."
+                ]
+              },
+              {
+                "text": "**Uncomplicated type B IMH can start with medical treatment.**",
+                "children": [
+                  "Complications or high-risk progression change the intervention threshold; noncontrast and contrast CT provide complementary information."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "An ulcer is a focal contrast-filled crater penetrating atherosclerotic intima; the supplied lesion is crescentic mural blood without that crater."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Pseudoaneurysm is a contained wall disruption with an outpouching communicating with the lumen; no focal outpouching is described."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Luminal thrombus lies within the intimal boundary and usually lacks the characteristic acute hyperattenuating intramural crescent."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-010",
+      "topic": "Aortic diseases",
+      "question": "After successful proximal repair of type A dissection, a patient has a residual dissected descending aorta. Which CT/MRI schedule is recommended by the 2022 ACC/AHA guideline if findings remain stable?",
+      "options": [
+        "At 12 months, then only for recurrent symptoms",
+        "At 6 months, then every three years",
+        "At 1, 6 and 12 months, then annually",
+        "Every month for the first year, then every five years"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Surveillance After Aortic Dissection\n\nCorrect answer: At 1, 6 and 12 months, then annually\n\nWhy Follow-up Continues\n\n**Repair treats the immediate segment, not the entire aortopathy.**\n\nResidual false-lumen flow, distal expansion and new aneurysm formation may require later intervention.\n\nLong-Term Care\n\n**CT or MRI at 1, 6, 12 months and annually if stable.**\n\nNew symptoms or growth require earlier evaluation; compare consistent measurement planes and techniques.\n\n**Continue BP/heart-rate control**, commonly beta-blockade with additional agents as needed.\n\n**Assess familial disease and counsel activity.**\n\nScreen relatives when appropriate; avoid intense isometric strain and individualize aerobic activity and pregnancy planning.\n\nAt 12 months, then only for recurrent symptoms: Aortic enlargement may be asymptomatic; symptom-driven imaging misses progressive residual disease after proximal repair.\n\nAt 6 months, then every three years: Long intervals may suit selected small stable aneurysms; residual dissection requires earlier and continuing annual cross-sectional assessment.\n\nEvery month for the first year, then every five years: Monthly imaging is not the standard stable follow-up schedule, and five-year intervals are too long for residual dissection.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Surveillance After Aortic Dissection</h2><p><strong>Correct answer: C — At 1, 6 and 12 months, then annually</strong></p><h3>Why Follow-up Continues</h3><ul><li><strong>Repair treats the immediate segment, not the entire aortopathy.</strong><ul><li>Residual false-lumen flow, distal expansion and new aneurysm formation may require later intervention.</li></ul></li></ul><h3>Long-Term Care</h3><ul><li><strong>CT or MRI at 1, 6, 12 months and annually if stable.</strong><ul><li>New symptoms or growth require earlier evaluation; compare consistent measurement planes and techniques.</li></ul></li><li><strong>Continue BP/heart-rate control</strong>, commonly beta-blockade with additional agents as needed.</li><li><strong>Assess familial disease and counsel activity.</strong><ul><li>Screen relatives when appropriate; avoid intense isometric strain and individualize aerobic activity and pregnancy planning.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — At 12 months, then only for recurrent symptoms:</strong> Aortic enlargement may be asymptomatic; symptom-driven imaging misses progressive residual disease after proximal repair.</li><li><strong>B — At 6 months, then every three years:</strong> Long intervals may suit selected small stable aneurysms; residual dissection requires earlier and continuing annual cross-sectional assessment.</li><li><strong>D — Every month for the first year, then every five years:</strong> Monthly imaging is not the standard stable follow-up schedule, and five-year intervals are too long for residual dissection.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Surveillance After Aortic Dissection",
+        "sections": [
+          {
+            "heading": "Why Follow-up Continues",
+            "bullets": [
+              {
+                "text": "**Repair treats the immediate segment, not the entire aortopathy.**",
+                "children": [
+                  "Residual false-lumen flow, distal expansion and new aneurysm formation may require later intervention."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Long-Term Care",
+            "bullets": [
+              {
+                "text": "**CT or MRI at 1, 6, 12 months and annually if stable.**",
+                "children": [
+                  "New symptoms or growth require earlier evaluation; compare consistent measurement planes and techniques."
+                ]
+              },
+              {
+                "text": "**Continue BP/heart-rate control**, commonly beta-blockade with additional agents as needed.",
+                "children": []
+              },
+              {
+                "text": "**Assess familial disease and counsel activity.**",
+                "children": [
+                  "Screen relatives when appropriate; avoid intense isometric strain and individualize aerobic activity and pregnancy planning."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Aortic enlargement may be asymptomatic; symptom-driven imaging misses progressive residual disease after proximal repair."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Long intervals may suit selected small stable aneurysms; residual dissection requires earlier and continuing annual cross-sectional assessment."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Monthly imaging is not the standard stable follow-up schedule, and five-year intervals are too long for residual dissection."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-011",
+      "topic": "Aortic diseases",
+      "question": "A 42-year-old has a root aneurysm and a father who died from aortic dissection. A multigene panel finds no pathogenic variant. What should be offered to first-degree relatives?",
+      "options": [
+        "Aortic imaging despite the negative genetic panel",
+        "Imaging only if a relative develops hypertension",
+        "Cascade testing of a variant of uncertain significance as a definitive risk classifier",
+        "No screening because the genetic panel excludes inherited disease"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Family Screening in Thoracic Aortic Disease\n\nCorrect answer: Aortic imaging despite the negative genetic panel\n\nGenetic Evaluation\n\n**Young presentation, syndromic features or family history** support genetic counseling and testing.\n\nA pathogenic/likely pathogenic variant enables targeted cascade testing; a VUS requires cautious interpretation.\n\nImaging Relatives\n\n**Screen first-degree relatives with TTE**, adding CT/MRI when the root or ascending aorta is incompletely seen.\n\n**Negative genetic testing does not exclude heritability.**\n\nDetermine repeat imaging from age, baseline dimensions and family events.\n\n**Recognize gene–phenotype patterns:** FBN1 in Marfan; TGFBR1/2 in Loeys–Dietz; COL3A1 in vascular Ehlers–Danlos; ACTA2 in nonsyndromic familial disease.\n\nImaging only if a relative develops hypertension: Hypertension raises risk but is not required for familial thoracic aortopathy; waiting for it can miss silent dilation.\n\nCascade testing of a variant of uncertain significance as a definitive risk classifier: A VUS does not establish a disease-causing genotype and should not replace phenotype-based family imaging.\n\nNo screening because the genetic panel excludes inherited disease: Current panels do not identify every causal variant; a negative result cannot negate the strongly suggestive family history.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Family Screening in Thoracic Aortic Disease</h2><p><strong>Correct answer: A — Aortic imaging despite the negative genetic panel</strong></p><h3>Genetic Evaluation</h3><ul><li><strong>Young presentation, syndromic features or family history</strong> support genetic counseling and testing.<ul><li>A pathogenic/likely pathogenic variant enables targeted cascade testing; a VUS requires cautious interpretation.</li></ul></li></ul><h3>Imaging Relatives</h3><ul><li><strong>Screen first-degree relatives with TTE</strong>, adding CT/MRI when the root or ascending aorta is incompletely seen.</li><li><strong>Negative genetic testing does not exclude heritability.</strong><ul><li>Determine repeat imaging from age, baseline dimensions and family events.</li></ul></li><li><strong>Recognize gene–phenotype patterns:</strong> FBN1 in Marfan; TGFBR1/2 in Loeys–Dietz; COL3A1 in vascular Ehlers–Danlos; ACTA2 in nonsyndromic familial disease.</li></ul><h3>Other Options</h3><ul><li><strong>B — Imaging only if a relative develops hypertension:</strong> Hypertension raises risk but is not required for familial thoracic aortopathy; waiting for it can miss silent dilation.</li><li><strong>C — Cascade testing of a variant of uncertain significance as a definitive risk classifier:</strong> A VUS does not establish a disease-causing genotype and should not replace phenotype-based family imaging.</li><li><strong>D — No screening because the genetic panel excludes inherited disease:</strong> Current panels do not identify every causal variant; a negative result cannot negate the strongly suggestive family history.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Family Screening in Thoracic Aortic Disease",
+        "sections": [
+          {
+            "heading": "Genetic Evaluation",
+            "bullets": [
+              {
+                "text": "**Young presentation, syndromic features or family history** support genetic counseling and testing.",
+                "children": [
+                  "A pathogenic/likely pathogenic variant enables targeted cascade testing; a VUS requires cautious interpretation."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Imaging Relatives",
+            "bullets": [
+              {
+                "text": "**Screen first-degree relatives with TTE**, adding CT/MRI when the root or ascending aorta is incompletely seen.",
+                "children": []
+              },
+              {
+                "text": "**Negative genetic testing does not exclude heritability.**",
+                "children": [
+                  "Determine repeat imaging from age, baseline dimensions and family events."
+                ]
+              },
+              {
+                "text": "**Recognize gene–phenotype patterns:** FBN1 in Marfan; TGFBR1/2 in Loeys–Dietz; COL3A1 in vascular Ehlers–Danlos; ACTA2 in nonsyndromic familial disease.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Hypertension raises risk but is not required for familial thoracic aortopathy; waiting for it can miss silent dilation."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "A VUS does not establish a disease-causing genotype and should not replace phenotype-based family imaging."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Current panels do not identify every causal variant; a negative result cannot negate the strongly suggestive family history."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-012",
+      "topic": "Aortic diseases",
+      "question": "A 67-year-old man with a 30-pack-year smoking history, now abstinent, has no abdominal symptoms and no prior aortic imaging. What screening test is appropriate?",
+      "options": [
+        "Contrast abdominal CT as the initial screening test",
+        "One-time abdominal aortic ultrasound",
+        "Abdominal MRI every year beginning now",
+        "No screening after smoking cessation"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Screening for Abdominal Aortic Aneurysm\n\nCorrect answer: One-time abdominal aortic ultrasound\n\nEligibility\n\n**Men aged ≥65 who have ever smoked** are a standard ACC/AHA screening group.\n\nFamily history also informs screening; other organizations specify different age windows and selective eligibility.\n\nInterpret and Act\n\n**AAA is conventionally diameter ==≥3.0 cm==.**\n\nDocument maximal diameter with a consistent measurement convention; body size and morphology can modify clinical interpretation.\n\n**Ultrasound is first-line for screening and surveillance.**\n\nUse CT when ultrasound is inadequate or detailed anatomy is needed.\n\n**Screening is preventive, not an emergency pathway.**\n\nPain, shock or suspected rupture requires immediate clinical/vascular assessment rather than routine screening scheduling.\n\nContrast abdominal CT as the initial screening test: CTA is valuable for symptomatic disease and repair planning; ultrasound provides screening without contrast or radiation.\n\nAbdominal MRI every year beginning now: MRI can characterize aortic disease but is unnecessary as repeated screening in an otherwise eligible unscreened asymptomatic patient.\n\nNo screening after smoking cessation: Ever-smoking remains an eligibility factor; cessation improves risk but does not erase the accumulated aneurysm risk.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Screening for Abdominal Aortic Aneurysm</h2><p><strong>Correct answer: B — One-time abdominal aortic ultrasound</strong></p><h3>Eligibility</h3><ul><li><strong>Men aged ≥65 who have ever smoked</strong> are a standard ACC/AHA screening group.<ul><li>Family history also informs screening; other organizations specify different age windows and selective eligibility.</li></ul></li></ul><h3>Interpret and Act</h3><ul><li><strong>AAA is conventionally diameter <mark>≥3.0 cm</mark>.</strong><ul><li>Document maximal diameter with a consistent measurement convention; body size and morphology can modify clinical interpretation.</li></ul></li><li><strong>Ultrasound is first-line for screening and surveillance.</strong><ul><li>Use CT when ultrasound is inadequate or detailed anatomy is needed.</li></ul></li><li><strong>Screening is preventive, not an emergency pathway.</strong><ul><li>Pain, shock or suspected rupture requires immediate clinical/vascular assessment rather than routine screening scheduling.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Contrast abdominal CT as the initial screening test:</strong> CTA is valuable for symptomatic disease and repair planning; ultrasound provides screening without contrast or radiation.</li><li><strong>C — Abdominal MRI every year beginning now:</strong> MRI can characterize aortic disease but is unnecessary as repeated screening in an otherwise eligible unscreened asymptomatic patient.</li><li><strong>D — No screening after smoking cessation:</strong> Ever-smoking remains an eligibility factor; cessation improves risk but does not erase the accumulated aneurysm risk.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Screening for Abdominal Aortic Aneurysm",
+        "sections": [
+          {
+            "heading": "Eligibility",
+            "bullets": [
+              {
+                "text": "**Men aged ≥65 who have ever smoked** are a standard ACC/AHA screening group.",
+                "children": [
+                  "Family history also informs screening; other organizations specify different age windows and selective eligibility."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Interpret and Act",
+            "bullets": [
+              {
+                "text": "**AAA is conventionally diameter ==≥3.0 cm==.**",
+                "children": [
+                  "Document maximal diameter with a consistent measurement convention; body size and morphology can modify clinical interpretation."
+                ]
+              },
+              {
+                "text": "**Ultrasound is first-line for screening and surveillance.**",
+                "children": [
+                  "Use CT when ultrasound is inadequate or detailed anatomy is needed."
+                ]
+              },
+              {
+                "text": "**Screening is preventive, not an emergency pathway.**",
+                "children": [
+                  "Pain, shock or suspected rupture requires immediate clinical/vascular assessment rather than routine screening scheduling."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "CTA is valuable for symptomatic disease and repair planning; ultrasound provides screening without contrast or radiation."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "MRI can characterize aortic disease but is unnecessary as repeated screening in an otherwise eligible unscreened asymptomatic patient."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Ever-smoking remains an eligibility factor; cessation improves risk but does not erase the accumulated aneurysm risk."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-013",
+      "topic": "Aortic diseases",
+      "question": "An asymptomatic woman has a stable fusiform infrarenal AAA measuring 4.6 cm, with no rapid growth. Under the 2022 ACC/AHA framework, what is the usual ultrasound surveillance interval?",
+      "options": [
+        "Every 12 months",
+        "Every 3 years",
+        "Every 6 months",
+        "Every 24 months"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Sex-Specific AAA Surveillance\n\nCorrect answer: Every 6 months\n\nSurveillance\n\n**Sex-specific intervals reflect different rupture risks at a given diameter.**\n\nThis ==4.6 cm== aneurysm falls in the six-month group, not the male ==4.0–4.9 cm== annual group.\n\nChange the Plan When Needed\n\n**New attributable pain or rapid enlargement** triggers earlier evaluation, regardless of the scheduled interval.\n\n**Use reproducible measurements.**\n\nSmall differences between modalities or planes may reflect technique; confirm clinically important growth.\n\n**Treat vascular risk:** smoking cessation, BP control and atherosclerotic risk reduction; these do not replace surveillance.\n\nDiameter | Interval\n\n3.0–3.9 cm, either sex | 3 years\n\nMen 4.0–4.9; women 4.0–4.4 cm | 1 year\n\nMen ≥5.0; women ≥4.5 cm | 6 months\n\nEvery 12 months: Annual imaging applies to women with 4.0–4.4 cm AAA; women at 4.5 cm or greater need shorter surveillance.\n\nEvery 3 years: Three-year surveillance applies to uncomplicated 3.0–3.9 cm AAA; this lesion is substantially closer to the female repair threshold.\n\nEvery 24 months: Two-year intervals are not the recommended schedule for a woman with a 4.6 cm AAA approaching intervention size.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Sex-Specific AAA Surveillance</h2><p><strong>Correct answer: C — Every 6 months</strong></p><h3>Surveillance</h3><ul><li><strong>Sex-specific intervals reflect different rupture risks at a given diameter.</strong><ul><li>This <mark>4.6 cm</mark> aneurysm falls in the six-month group, not the male <mark>4.0–4.9 cm</mark> annual group.</li></ul></li></ul><h3>Change the Plan When Needed</h3><ul><li><strong>New attributable pain or rapid enlargement</strong> triggers earlier evaluation, regardless of the scheduled interval.</li><li><strong>Use reproducible measurements.</strong><ul><li>Small differences between modalities or planes may reflect technique; confirm clinically important growth.</li></ul></li><li><strong>Treat vascular risk:</strong> smoking cessation, BP control and atherosclerotic risk reduction; these do not replace surveillance.</li></ul><div class=\"table-wrap\"><table><thead><tr><th>Diameter</th><th>Interval</th></tr></thead><tbody><tr><td>3.0–3.9 cm, either sex</td><td>3 years</td></tr><tr><td>Men 4.0–4.9; women 4.0–4.4 cm</td><td>1 year</td></tr><tr><td>Men ≥5.0; women ≥4.5 cm</td><td>6 months</td></tr></tbody></table></div><h3>Other Options</h3><ul><li><strong>A — Every 12 months:</strong> Annual imaging applies to women with 4.0–4.4 cm AAA; women at 4.5 cm or greater need shorter surveillance.</li><li><strong>B — Every 3 years:</strong> Three-year surveillance applies to uncomplicated 3.0–3.9 cm AAA; this lesion is substantially closer to the female repair threshold.</li><li><strong>D — Every 24 months:</strong> Two-year intervals are not the recommended schedule for a woman with a 4.6 cm AAA approaching intervention size.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Sex-Specific AAA Surveillance",
+        "sections": [
+          {
+            "heading": "Surveillance",
+            "bullets": [
+              {
+                "text": "**Sex-specific intervals reflect different rupture risks at a given diameter.**",
+                "children": [
+                  "This ==4.6 cm== aneurysm falls in the six-month group, not the male ==4.0–4.9 cm== annual group."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Change the Plan When Needed",
+            "bullets": [
+              {
+                "text": "**New attributable pain or rapid enlargement** triggers earlier evaluation, regardless of the scheduled interval.",
+                "children": []
+              },
+              {
+                "text": "**Use reproducible measurements.**",
+                "children": [
+                  "Small differences between modalities or planes may reflect technique; confirm clinically important growth."
+                ]
+              },
+              {
+                "text": "**Treat vascular risk:** smoking cessation, BP control and atherosclerotic risk reduction; these do not replace surveillance.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "headers": [
+              "Diameter",
+              "Interval"
+            ],
+            "rows": [
+              [
+                "3.0–3.9 cm, either sex",
+                "3 years"
+              ],
+              [
+                "Men 4.0–4.9; women 4.0–4.4 cm",
+                "1 year"
+              ],
+              [
+                "Men ≥5.0; women ≥4.5 cm",
+                "6 months"
+              ]
+            ]
+          }
+        ],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Annual imaging applies to women with 4.0–4.4 cm AAA; women at 4.5 cm or greater need shorter surveillance."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Three-year surveillance applies to uncomplicated 3.0–3.9 cm AAA; this lesion is substantially closer to the female repair threshold."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Two-year intervals are not the recommended schedule for a woman with a 4.6 cm AAA approaching intervention size."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-014",
+      "topic": "Aortic diseases",
+      "question": "An otherwise fit woman has an asymptomatic fusiform infrarenal AAA measuring 5.1 cm on reproducible imaging. Under 2022 ACC/AHA guidance, which is the best next step?",
+      "options": [
+        "Refer for elective repair assessment now",
+        "Continue surveillance until the diameter reaches 5.5 cm",
+        "Defer repair assessment until growth reaches 0.5 cm in six months",
+        "Proceed directly to emergency repair without anatomical planning"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Elective AAA Repair Thresholds\n\nCorrect answer: Refer for elective repair assessment now\n\nWhen to Repair\n\n**2022 ACC/AHA: ==≥5.5 cm== in men; ==≥5.0 cm== in women.**\n\nSymptoms attributable to the aneurysm, rapid growth or unstable morphology can justify earlier repair.\n\nChoose the Procedure\n\n**CTA defines neck, visceral branches and iliac access.**\n\nEVAR suitability depends on seal zones and device anatomy, not diameter alone.\n\n**EVAR reduces early invasiveness but requires lifelong surveillance.**\n\nOpen repair may provide better durability for selected fit patients or unsuitable endovascular anatomy.\n\n**Discuss life expectancy and operative risk** before committing to either strategy.\n\nContinue surveillance until the diameter reaches 5.5 cm: The usual male threshold is 5.5 cm; applying it unchanged to women overlooks the recommended female threshold of 5.0 cm.\n\nDefer repair assessment until growth reaches 0.5 cm in six months: Rapid growth is an additional reason for intervention, not a prerequisite after the sex-specific diameter threshold is reached.\n\nProceed directly to emergency repair without anatomical planning: Emergency intervention applies to rupture or unstable symptomatic disease; this stable elective case needs anatomical and operative assessment.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Elective AAA Repair Thresholds</h2><p><strong>Correct answer: A — Refer for elective repair assessment now</strong></p><h3>When to Repair</h3><ul><li><strong>2022 ACC/AHA: <mark>≥5.5 cm</mark> in men; <mark>≥5.0 cm</mark> in women.</strong><ul><li>Symptoms attributable to the aneurysm, rapid growth or unstable morphology can justify earlier repair.</li></ul></li></ul><h3>Choose the Procedure</h3><ul><li><strong>CTA defines neck, visceral branches and iliac access.</strong><ul><li>EVAR suitability depends on seal zones and device anatomy, not diameter alone.</li></ul></li><li><strong>EVAR reduces early invasiveness but requires lifelong surveillance.</strong><ul><li>Open repair may provide better durability for selected fit patients or unsuitable endovascular anatomy.</li></ul></li><li><strong>Discuss life expectancy and operative risk</strong> before committing to either strategy.</li></ul><h3>Other Options</h3><ul><li><strong>B — Continue surveillance until the diameter reaches 5.5 cm:</strong> The usual male threshold is 5.5 cm; applying it unchanged to women overlooks the recommended female threshold of 5.0 cm.</li><li><strong>C — Defer repair assessment until growth reaches 0.5 cm in six months:</strong> Rapid growth is an additional reason for intervention, not a prerequisite after the sex-specific diameter threshold is reached.</li><li><strong>D — Proceed directly to emergency repair without anatomical planning:</strong> Emergency intervention applies to rupture or unstable symptomatic disease; this stable elective case needs anatomical and operative assessment.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Elective AAA Repair Thresholds",
+        "sections": [
+          {
+            "heading": "When to Repair",
+            "bullets": [
+              {
+                "text": "**2022 ACC/AHA: ==≥5.5 cm== in men; ==≥5.0 cm== in women.**",
+                "children": [
+                  "Symptoms attributable to the aneurysm, rapid growth or unstable morphology can justify earlier repair."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Choose the Procedure",
+            "bullets": [
+              {
+                "text": "**CTA defines neck, visceral branches and iliac access.**",
+                "children": [
+                  "EVAR suitability depends on seal zones and device anatomy, not diameter alone."
+                ]
+              },
+              {
+                "text": "**EVAR reduces early invasiveness but requires lifelong surveillance.**",
+                "children": [
+                  "Open repair may provide better durability for selected fit patients or unsuitable endovascular anatomy."
+                ]
+              },
+              {
+                "text": "**Discuss life expectancy and operative risk** before committing to either strategy.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "The usual male threshold is 5.5 cm; applying it unchanged to women overlooks the recommended female threshold of 5.0 cm."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Rapid growth is an additional reason for intervention, not a prerequisite after the sex-specific diameter threshold is reached."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Emergency intervention applies to rupture or unstable symptomatic disease; this stable elective case needs anatomical and operative assessment."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-015",
+      "topic": "Aortic diseases",
+      "question": "A sporadic ascending aneurysm measures 4.7, 5.0 and 5.3 cm on standardized gated CT examinations exactly one year apart. There is no heritable syndrome. Under 2022 ACC/AHA guidance, what does this establish?",
+      "options": [
+        "A growth-rate indication for surgery despite diameter below 5.5 cm",
+        "Surveillance only because growth is below 0.5 cm in the latest year",
+        "A growth indication only if the patient also has a bicuspid valve",
+        "A diagnosis of acute dissection based on enlargement alone"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Rapid Growth of a Sporadic Ascending Aneurysm\n\nCorrect answer: A growth-rate indication for surgery despite diameter below 5.5 cm\n\nConfirm Growth\n\n**Sporadic root/ascending rapid growth:** ==≥0.5 cm== in one year OR ==≥0.3 cm/year== for two consecutive years.\n\nUse comparable tomographic measurements; apparent growth from technique changes is not equivalent evidence.\n\nOperative Assessment\n\n**Surgery is indicated when confirmed rapid growth meets this framework.**\n\nSymptoms attributable to the aneurysm or diameter ==≥5.5 cm== are separate indications.\n\n**Selected patients may undergo repair at ==≥5.0 cm==** in experienced multidisciplinary aortic centers.\n\n**Heritable disease and BAV use additional risk-specific criteria** rather than applying every sporadic threshold unchanged.\n\nSurveillance only because growth is below 0.5 cm in the latest year: The alternative criterion is at least 0.3 cm/year in two consecutive years; both annual increments meet it.\n\nA growth indication only if the patient also has a bicuspid valve: The two-year 0.3 cm/year criterion applies to sporadic root/ascending aneurysms; BAV is not required.\n\nA diagnosis of acute dissection based on enlargement alone: Serial growth increases risk but does not prove a dissection flap or acute aortic syndrome.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Rapid Growth of a Sporadic Ascending Aneurysm</h2><p><strong>Correct answer: A — A growth-rate indication for surgery despite diameter below 5.5 cm</strong></p><h3>Confirm Growth</h3><ul><li><strong>Sporadic root/ascending rapid growth:</strong> <mark>≥0.5 cm</mark> in one year OR <mark>≥0.3 cm/year</mark> for two consecutive years.<ul><li>Use comparable tomographic measurements; apparent growth from technique changes is not equivalent evidence.</li></ul></li></ul><h3>Operative Assessment</h3><ul><li><strong>Surgery is indicated when confirmed rapid growth meets this framework.</strong><ul><li>Symptoms attributable to the aneurysm or diameter <mark>≥5.5 cm</mark> are separate indications.</li></ul></li><li><strong>Selected patients may undergo repair at <mark>≥5.0 cm</mark></strong> in experienced multidisciplinary aortic centers.</li><li><strong>Heritable disease and BAV use additional risk-specific criteria</strong> rather than applying every sporadic threshold unchanged.</li></ul><h3>Other Options</h3><ul><li><strong>B — Surveillance only because growth is below 0.5 cm in the latest year:</strong> The alternative criterion is at least 0.3 cm/year in two consecutive years; both annual increments meet it.</li><li><strong>C — A growth indication only if the patient also has a bicuspid valve:</strong> The two-year 0.3 cm/year criterion applies to sporadic root/ascending aneurysms; BAV is not required.</li><li><strong>D — A diagnosis of acute dissection based on enlargement alone:</strong> Serial growth increases risk but does not prove a dissection flap or acute aortic syndrome.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Rapid Growth of a Sporadic Ascending Aneurysm",
+        "sections": [
+          {
+            "heading": "Confirm Growth",
+            "bullets": [
+              {
+                "text": "**Sporadic root/ascending rapid growth:** ==≥0.5 cm== in one year OR ==≥0.3 cm/year== for two consecutive years.",
+                "children": [
+                  "Use comparable tomographic measurements; apparent growth from technique changes is not equivalent evidence."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Operative Assessment",
+            "bullets": [
+              {
+                "text": "**Surgery is indicated when confirmed rapid growth meets this framework.**",
+                "children": [
+                  "Symptoms attributable to the aneurysm or diameter ==≥5.5 cm== are separate indications."
+                ]
+              },
+              {
+                "text": "**Selected patients may undergo repair at ==≥5.0 cm==** in experienced multidisciplinary aortic centers.",
+                "children": []
+              },
+              {
+                "text": "**Heritable disease and BAV use additional risk-specific criteria** rather than applying every sporadic threshold unchanged.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "The alternative criterion is at least 0.3 cm/year in two consecutive years; both annual increments meet it."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "The two-year 0.3 cm/year criterion applies to sporadic root/ascending aneurysms; BAV is not required."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Serial growth increases risk but does not prove a dissection flap or acute aortic syndrome."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-03-017",
+      "topic": "Aortic regurgitation",
+      "question": "A low-risk patient is scheduled for surgery for symptomatic severe aortic regurgitation. Cross-sectional imaging confirms a maximal ascending aortic diameter of 48 mm. Under ESC 2025 guidance, what should the surgical plan include?",
+      "options": [
+        "Isolated valve surgery with aortic intervention deferred until fifty-five millimeters",
+        "Assessment for concomitant replacement of the enlarged ascending aorta",
+        "Isolated valve surgery with aortic replacement considered only if subsequent rapid growth occurs",
+        "Plan a root replacement instead of evaluating the tubular ascending segment"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Addressing Aortic Disease During Valve Surgery\n\nCorrect answer: Assessment for concomitant replacement of the enlarged ascending aorta\n\nConcomitant Aortic Assessment\n\n**Valve disease and aortic disease require a combined anatomical plan.** The root and tubular ascending segment are different structures and should be measured and described separately.\n\nESC 2025 advises considering concomitant root or ascending replacement at maximal diameter ≥45 mm when a valve operation is indicated and predicted surgical risk is low.\n\nThis is not a universal isolated-aorta threshold. Etiology, genetic disease, growth, body size, family history and operative circumstances influence aortic decisions.\n\nRepair, Replacement and Valve Preservation\n\n**Choose the operation according to the mechanism and the involved aortic segment.** Root enlargement with suitable pliable cusps may allow valve-sparing root replacement at an experienced center.\n\nCalcification, cusp destruction or an unlikely durable repair may favor valve replacement. A tubular ascending graft and an operation on the root are not interchangeable labels.\n\nReview CT or CMR alongside echocardiographic valve assessment and discuss durability, prosthesis implications and reintervention. A successful isolated correction of regurgitation does not remove untreated aortic risk. Conversely, a forty-eight-millimeter ascending measurement does not by itself prove that every part of the root must be replaced. The clinical value of the threshold is to prompt an integrated surgical decision rather than two disconnected treatment plans.\n\nIsolated valve surgery with aortic intervention deferred until fifty-five millimeters: An isolated aortopathy threshold should not be copied into a patient already undergoing valve surgery; concomitant replacement can be considered at a lower diameter with low predicted surgical risk.\n\nIsolated valve surgery with aortic replacement considered only if subsequent rapid growth occurs: Rapid growth is an important aortopathy risk feature, but the opportunity for concomitant replacement at the specified size should be assessed during the already indicated operation rather than reserved solely for documented future growth.\n\nPlan a root replacement instead of evaluating the tubular ascending segment: Root replacement is relevant to root pathology; a tubular ascending measurement does not establish root enlargement. The operation should address the demonstrated segment and valve mechanism.\n\nESC/EACTS valvular heart disease guideline, 2025 — https://doi.org/10.1093/eurheartj/ehaf194",
+      "explanationHtml": "<h2>Addressing Aortic Disease During Valve Surgery</h2><p><strong>Correct answer: B — Assessment for concomitant replacement of the enlarged ascending aorta</strong></p><h3>Concomitant Aortic Assessment</h3><ul><li><strong>Valve disease and aortic disease require a combined anatomical plan.</strong> The root and tubular ascending segment are different structures and should be measured and described separately.<ul><li>ESC 2025 advises considering concomitant root or ascending replacement at maximal diameter ≥45 mm when a valve operation is indicated and predicted surgical risk is low.</li><li>This is not a universal isolated-aorta threshold. Etiology, genetic disease, growth, body size, family history and operative circumstances influence aortic decisions.</li></ul></li></ul><h3>Repair, Replacement and Valve Preservation</h3><ul><li><strong>Choose the operation according to the mechanism and the involved aortic segment.</strong> Root enlargement with suitable pliable cusps may allow valve-sparing root replacement at an experienced center.<ul><li>Calcification, cusp destruction or an unlikely durable repair may favor valve replacement. A tubular ascending graft and an operation on the root are not interchangeable labels.</li><li>Review CT or CMR alongside echocardiographic valve assessment and discuss durability, prosthesis implications and reintervention. A successful isolated correction of regurgitation does not remove untreated aortic risk. Conversely, a forty-eight-millimeter ascending measurement does not by itself prove that every part of the root must be replaced. The clinical value of the threshold is to prompt an integrated surgical decision rather than two disconnected treatment plans.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Isolated valve surgery with aortic intervention deferred until fifty-five millimeters:</strong> An isolated aortopathy threshold should not be copied into a patient already undergoing valve surgery; concomitant replacement can be considered at a lower diameter with low predicted surgical risk.</li><li><strong>C — Isolated valve surgery with aortic replacement considered only if subsequent rapid growth occurs:</strong> Rapid growth is an important aortopathy risk feature, but the opportunity for concomitant replacement at the specified size should be assessed during the already indicated operation rather than reserved solely for documented future growth.</li><li><strong>D — Plan a root replacement instead of evaluating the tubular ascending segment:</strong> Root replacement is relevant to root pathology; a tubular ascending measurement does not establish root enlargement. The operation should address the demonstrated segment and valve mechanism.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1093/eurheartj/ehaf194\">ESC/EACTS valvular heart disease guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Addressing Aortic Disease During Valve Surgery",
+        "sections": [
+          {
+            "heading": "Concomitant Aortic Assessment",
+            "bullets": [
+              {
+                "text": "**Valve disease and aortic disease require a combined anatomical plan.** The root and tubular ascending segment are different structures and should be measured and described separately.",
+                "children": [
+                  "ESC 2025 advises considering concomitant root or ascending replacement at maximal diameter ≥45 mm when a valve operation is indicated and predicted surgical risk is low.",
+                  "This is not a universal isolated-aorta threshold. Etiology, genetic disease, growth, body size, family history and operative circumstances influence aortic decisions."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Repair, Replacement and Valve Preservation",
+            "bullets": [
+              {
+                "text": "**Choose the operation according to the mechanism and the involved aortic segment.** Root enlargement with suitable pliable cusps may allow valve-sparing root replacement at an experienced center.",
+                "children": [
+                  "Calcification, cusp destruction or an unlikely durable repair may favor valve replacement. A tubular ascending graft and an operation on the root are not interchangeable labels.",
+                  "Review CT or CMR alongside echocardiographic valve assessment and discuss durability, prosthesis implications and reintervention. A successful isolated correction of regurgitation does not remove untreated aortic risk. Conversely, a forty-eight-millimeter ascending measurement does not by itself prove that every part of the root must be replaced. The clinical value of the threshold is to prompt an integrated surgical decision rather than two disconnected treatment plans."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "An isolated aortopathy threshold should not be copied into a patient already undergoing valve surgery; concomitant replacement can be considered at a lower diameter with low predicted surgical risk."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Rapid growth is an important aortopathy risk feature, but the opportunity for concomitant replacement at the specified size should be assessed during the already indicated operation rather than reserved solely for documented future growth."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Root replacement is relevant to root pathology; a tubular ascending measurement does not establish root enlargement. The operation should address the demonstrated segment and valve mechanism."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ESC/EACTS valvular heart disease guideline, 2025",
+          "url": "https://doi.org/10.1093/eurheartj/ehaf194"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-15",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Root disease and valve-sparing options"
+    },
+    {
+      "id": "cardiology-rebuild-13-016",
+      "topic": "Aortic diseases",
+      "question": "A patient with Marfan syndrome has a 4.7 cm aortic root and a first-degree relative who dissected at a small diameter. Which 2022 ACC/AHA approach is most appropriate?",
+      "options": [
+        "Wait until 5.5 cm because this is an asymptomatic aneurysm",
+        "Discuss root replacement now at an experienced aortic center",
+        "Wait until 5.0 cm regardless of family history",
+        "Use thoracic endografting as the preferred definitive root treatment"
+      ],
+      "correctIndex": 1,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Marfan Aortic Root Intervention\n\nCorrect answer: Discuss root replacement now at an experienced aortic center\n\nThresholds\n\n**Marfan root replacement:** recommended at ==≥5.0 cm==; reasonable at ==≥4.5 cm== with high-risk features.\n\nFamily dissection, rapid growth and adverse root/aortic morphology inform individualized decisions.\n\nTreatment Before and After Repair\n\n**Beta-blocker or ARB at maximally tolerated doses** slows dilation; combination therapy may be reasonable.\n\n**Continue lifelong imaging.**\n\nRoot replacement does not eliminate distal disease; screen relatives and plan pregnancy before conception.\n\n**Valve-sparing versus composite root replacement** depends on valve anatomy, expertise and patient preferences.\n\nWait until 5.5 cm because this is an asymptomatic aneurysm: The general sporadic threshold is too high for Marfan aortopathy, particularly with a high-risk family history.\n\nWait until 5.0 cm regardless of family history: Five centimeters is the usual Marfan threshold without added risk; high-risk features support considering repair from 4.5 cm.\n\nUse thoracic endografting as the preferred definitive root treatment: Root replacement is generally open surgery; routine TEVAR does not provide a durable solution for the root and valve apparatus.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Marfan Aortic Root Intervention</h2><p><strong>Correct answer: B — Discuss root replacement now at an experienced aortic center</strong></p><h3>Thresholds</h3><ul><li><strong>Marfan root replacement:</strong> recommended at <mark>≥5.0 cm</mark>; reasonable at <mark>≥4.5 cm</mark> with high-risk features.<ul><li>Family dissection, rapid growth and adverse root/aortic morphology inform individualized decisions.</li></ul></li></ul><h3>Treatment Before and After Repair</h3><ul><li><strong>Beta-blocker or ARB at maximally tolerated doses</strong> slows dilation; combination therapy may be reasonable.</li><li><strong>Continue lifelong imaging.</strong><ul><li>Root replacement does not eliminate distal disease; screen relatives and plan pregnancy before conception.</li></ul></li><li><strong>Valve-sparing versus composite root replacement</strong> depends on valve anatomy, expertise and patient preferences.</li></ul><h3>Other Options</h3><ul><li><strong>A — Wait until 5.5 cm because this is an asymptomatic aneurysm:</strong> The general sporadic threshold is too high for Marfan aortopathy, particularly with a high-risk family history.</li><li><strong>C — Wait until 5.0 cm regardless of family history:</strong> Five centimeters is the usual Marfan threshold without added risk; high-risk features support considering repair from 4.5 cm.</li><li><strong>D — Use thoracic endografting as the preferred definitive root treatment:</strong> Root replacement is generally open surgery; routine TEVAR does not provide a durable solution for the root and valve apparatus.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Marfan Aortic Root Intervention",
+        "sections": [
+          {
+            "heading": "Thresholds",
+            "bullets": [
+              {
+                "text": "**Marfan root replacement:** recommended at ==≥5.0 cm==; reasonable at ==≥4.5 cm== with high-risk features.",
+                "children": [
+                  "Family dissection, rapid growth and adverse root/aortic morphology inform individualized decisions."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Treatment Before and After Repair",
+            "bullets": [
+              {
+                "text": "**Beta-blocker or ARB at maximally tolerated doses** slows dilation; combination therapy may be reasonable.",
+                "children": []
+              },
+              {
+                "text": "**Continue lifelong imaging.**",
+                "children": [
+                  "Root replacement does not eliminate distal disease; screen relatives and plan pregnancy before conception."
+                ]
+              },
+              {
+                "text": "**Valve-sparing versus composite root replacement** depends on valve anatomy, expertise and patient preferences.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "The general sporadic threshold is too high for Marfan aortopathy, particularly with a high-risk family history."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Five centimeters is the usual Marfan threshold without added risk; high-risk features support considering repair from 4.5 cm."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Root replacement is generally open surgery; routine TEVAR does not provide a durable solution for the root and valve apparatus."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-017",
+      "topic": "Aortic diseases",
+      "question": "A young adult has arterial tortuosity, hypertelorism, a bifid uvula and a pathogenic TGFBR2 variant. The aortic root is 4.3 cm. Which principle should guide the repair discussion?",
+      "options": [
+        "Base intervention solely on a normal exercise stress test",
+        "Apply the sporadic 5.5 cm threshold without modification",
+        "Use the Marfan 5.0 cm threshold for every TGFBR2 carrier",
+        "Use genotype- and phenotype-specific thresholds that may be below 5.0 cm"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Loeys–Dietz Aortopathy\n\nCorrect answer: Use genotype- and phenotype-specific thresholds that may be below 5.0 cm\n\nRecognize the Syndrome\n\n**Loeys–Dietz:** TGF-beta signaling-pathway disease with aneurysm/tortuosity and variable craniofacial features.\n\nAbsence of a classic external phenotype does not exclude genetically confirmed disease.\n\nIndividualize Risk\n\n**Gene, sex/body size, growth, family events and severe extra-aortic features** influence intervention.\n\nSome TGFBR1/2 patients warrant discussion around ==4.0–4.5 cm==; the exact threshold requires the applicable risk table.\n\n**Image beyond the root.**\n\nHead-to-pelvis arterial assessment detects extra-aortic aneurysms and tortuosity; continue periodic surveillance and family evaluation.\n\nBase intervention solely on a normal exercise stress test: Stress testing evaluates functional ischemia or exercise response, not the mechanical dissection risk of a fragile aortic wall.\n\nApply the sporadic 5.5 cm threshold without modification: Sporadic thresholds do not account for dissection at smaller dimensions in heritable TGF-beta-pathway aortopathy.\n\nUse the Marfan 5.0 cm threshold for every TGFBR2 carrier: Risk differs by gene, phenotype and family history; a single universal Marfan threshold can delay needed assessment.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Loeys–Dietz Aortopathy</h2><p><strong>Correct answer: D — Use genotype- and phenotype-specific thresholds that may be below 5.0 cm</strong></p><h3>Recognize the Syndrome</h3><ul><li><strong>Loeys–Dietz:</strong> TGF-beta signaling-pathway disease with aneurysm/tortuosity and variable craniofacial features.<ul><li>Absence of a classic external phenotype does not exclude genetically confirmed disease.</li></ul></li></ul><h3>Individualize Risk</h3><ul><li><strong>Gene, sex/body size, growth, family events and severe extra-aortic features</strong> influence intervention.<ul><li>Some TGFBR1/2 patients warrant discussion around <mark>4.0–4.5 cm</mark>; the exact threshold requires the applicable risk table.</li></ul></li><li><strong>Image beyond the root.</strong><ul><li>Head-to-pelvis arterial assessment detects extra-aortic aneurysms and tortuosity; continue periodic surveillance and family evaluation.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Base intervention solely on a normal exercise stress test:</strong> Stress testing evaluates functional ischemia or exercise response, not the mechanical dissection risk of a fragile aortic wall.</li><li><strong>B — Apply the sporadic 5.5 cm threshold without modification:</strong> Sporadic thresholds do not account for dissection at smaller dimensions in heritable TGF-beta-pathway aortopathy.</li><li><strong>C — Use the Marfan 5.0 cm threshold for every TGFBR2 carrier:</strong> Risk differs by gene, phenotype and family history; a single universal Marfan threshold can delay needed assessment.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Loeys–Dietz Aortopathy",
+        "sections": [
+          {
+            "heading": "Recognize the Syndrome",
+            "bullets": [
+              {
+                "text": "**Loeys–Dietz:** TGF-beta signaling-pathway disease with aneurysm/tortuosity and variable craniofacial features.",
+                "children": [
+                  "Absence of a classic external phenotype does not exclude genetically confirmed disease."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Individualize Risk",
+            "bullets": [
+              {
+                "text": "**Gene, sex/body size, growth, family events and severe extra-aortic features** influence intervention.",
+                "children": [
+                  "Some TGFBR1/2 patients warrant discussion around ==4.0–4.5 cm==; the exact threshold requires the applicable risk table."
+                ]
+              },
+              {
+                "text": "**Image beyond the root.**",
+                "children": [
+                  "Head-to-pelvis arterial assessment detects extra-aortic aneurysms and tortuosity; continue periodic surveillance and family evaluation."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Stress testing evaluates functional ischemia or exercise response, not the mechanical dissection risk of a fragile aortic wall."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Sporadic thresholds do not account for dissection at smaller dimensions in heritable TGF-beta-pathway aortopathy."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Risk differs by gene, phenotype and family history; a single universal Marfan threshold can delay needed assessment."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-018",
+      "topic": "Aortic diseases",
+      "question": "A 73-year-old with a degenerative 5.8 cm descending thoracic aneurysm has suitable landing zones and access, with no Marfan, Loeys–Dietz or vascular Ehlers–Danlos syndrome. Which approach is generally favored under ACC/AHA guidance?",
+      "options": [
+        "Medical therapy alone because endovascular repair lacks any role in degenerative disease",
+        "Open repair is preferred solely because the diameter exceeds 5.5 cm",
+        "Surveillance until 6.5 cm because the aneurysm is asymptomatic",
+        "TEVAR rather than open repair when intervention is appropriate"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Repair of a Descending Thoracic Aneurysm\n\nCorrect answer: TEVAR rather than open repair when intervention is appropriate\n\nSelection\n\n**Descending TAA repair is generally recommended at ==≥5.5 cm==.**\n\nSymptoms, rapid growth or other rupture-risk features may lower the threshold; high operative risk may raise it.\n\nProcedural Planning\n\n**TEVAR is favored over open repair in suitable anatomy without the named heritable syndromes.**\n\nAssess access, seal zones, left-subclavian coverage and spinal-cord perfusion risk.\n\n**Open repair remains important** for unsuitable anatomy and selected durable-repair needs.\n\n**Thoracoabdominal disease uses different thresholds:** usually ==≥6.0 cm==; ==≥5.5 cm== may be reasonable in experienced centers.\n\nMedical therapy alone because endovascular repair lacks any role in degenerative disease: Degenerative descending aneurysm is a principal TEVAR setting; medical treatment accompanies rather than universally replaces indicated repair.\n\nOpen repair is preferred solely because the diameter exceeds 5.5 cm: Diameter establishes the usual repair threshold but does not itself favor open surgery over anatomically suitable TEVAR.\n\nSurveillance until 6.5 cm because the aneurysm is asymptomatic: The usual descending thoracic threshold is 5.5 cm; asymptomatic status does not mandate waiting to 6.5 cm.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Repair of a Descending Thoracic Aneurysm</h2><p><strong>Correct answer: D — TEVAR rather than open repair when intervention is appropriate</strong></p><h3>Selection</h3><ul><li><strong>Descending TAA repair is generally recommended at <mark>≥5.5 cm</mark>.</strong><ul><li>Symptoms, rapid growth or other rupture-risk features may lower the threshold; high operative risk may raise it.</li></ul></li></ul><h3>Procedural Planning</h3><ul><li><strong>TEVAR is favored over open repair in suitable anatomy without the named heritable syndromes.</strong><ul><li>Assess access, seal zones, left-subclavian coverage and spinal-cord perfusion risk.</li></ul></li><li><strong>Open repair remains important</strong> for unsuitable anatomy and selected durable-repair needs.</li><li><strong>Thoracoabdominal disease uses different thresholds:</strong> usually <mark>≥6.0 cm</mark>; <mark>≥5.5 cm</mark> may be reasonable in experienced centers.</li></ul><h3>Other Options</h3><ul><li><strong>A — Medical therapy alone because endovascular repair lacks any role in degenerative disease:</strong> Degenerative descending aneurysm is a principal TEVAR setting; medical treatment accompanies rather than universally replaces indicated repair.</li><li><strong>B — Open repair is preferred solely because the diameter exceeds 5.5 cm:</strong> Diameter establishes the usual repair threshold but does not itself favor open surgery over anatomically suitable TEVAR.</li><li><strong>C — Surveillance until 6.5 cm because the aneurysm is asymptomatic:</strong> The usual descending thoracic threshold is 5.5 cm; asymptomatic status does not mandate waiting to 6.5 cm.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Repair of a Descending Thoracic Aneurysm",
+        "sections": [
+          {
+            "heading": "Selection",
+            "bullets": [
+              {
+                "text": "**Descending TAA repair is generally recommended at ==≥5.5 cm==.**",
+                "children": [
+                  "Symptoms, rapid growth or other rupture-risk features may lower the threshold; high operative risk may raise it."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Procedural Planning",
+            "bullets": [
+              {
+                "text": "**TEVAR is favored over open repair in suitable anatomy without the named heritable syndromes.**",
+                "children": [
+                  "Assess access, seal zones, left-subclavian coverage and spinal-cord perfusion risk."
+                ]
+              },
+              {
+                "text": "**Open repair remains important** for unsuitable anatomy and selected durable-repair needs.",
+                "children": []
+              },
+              {
+                "text": "**Thoracoabdominal disease uses different thresholds:** usually ==≥6.0 cm==; ==≥5.5 cm== may be reasonable in experienced centers.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Degenerative descending aneurysm is a principal TEVAR setting; medical treatment accompanies rather than universally replaces indicated repair."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Diameter establishes the usual repair threshold but does not itself favor open surgery over anatomically suitable TEVAR."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "The usual descending thoracic threshold is 5.5 cm; asymptomatic status does not mandate waiting to 6.5 cm."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-019",
+      "topic": "Aortic diseases",
+      "question": "A patient with Salmonella bacteremia has persistent back pain and a new irregular saccular aortic lesion with surrounding inflammatory tissue. Which treatment strategy is most appropriate?",
+      "options": [
+        "High-dose glucocorticoids for presumed sterile inflammatory aneurysm",
+        "Short-course oral antibiotics followed by routine annual surveillance",
+        "Culture-directed prolonged IV antibiotics plus urgent aortic repair assessment",
+        "Elective repair only after the usual fusiform diameter threshold is reached"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Infective Aortic Aneurysm\n\nCorrect answer: Culture-directed prolonged IV antibiotics plus urgent aortic repair assessment\n\nDiagnosis\n\n**Infective aortitis/aneurysm:** bacteremia plus compatible wall or periaortic changes.\n\nSalmonella and S. aureus are important causes; obtain cultures and assess other infectious foci.\n\nManagement\n\n**Antibiotics and aortic source control are coordinated.**\n\nProlonged IV therapy is generally at least six weeks, individualized by organism, repair and persistent infection.\n\n**Repair timing and technique depend on instability and anatomy.**\n\nOpen debridement/reconstruction or selected endovascular bridging/treatment needs expert discussion; infection surveillance remains essential.\n\n**“Mycotic” does not mean fungal**; most such aneurysms are bacterial.\n\nHigh-dose glucocorticoids for presumed sterile inflammatory aneurysm: Sterile periaortitis can require immunosuppression; bacteremia and an evolving saccular lesion favor infection, which steroids could worsen.\n\nShort-course oral antibiotics followed by routine annual surveillance: A superficial infection may need a short course, but infected aortic tissue risks rupture and usually requires prolonged therapy and source control.\n\nElective repair only after the usual fusiform diameter threshold is reached: Degenerative size thresholds do not safely govern infected aneurysms; infection can cause rapid wall destruction and rupture at smaller sizes.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Infective Aortic Aneurysm</h2><p><strong>Correct answer: C — Culture-directed prolonged IV antibiotics plus urgent aortic repair assessment</strong></p><h3>Diagnosis</h3><ul><li><strong>Infective aortitis/aneurysm:</strong> bacteremia plus compatible wall or periaortic changes.<ul><li>Salmonella and S. aureus are important causes; obtain cultures and assess other infectious foci.</li></ul></li></ul><h3>Management</h3><ul><li><strong>Antibiotics and aortic source control are coordinated.</strong><ul><li>Prolonged IV therapy is generally at least six weeks, individualized by organism, repair and persistent infection.</li></ul></li><li><strong>Repair timing and technique depend on instability and anatomy.</strong><ul><li>Open debridement/reconstruction or selected endovascular bridging/treatment needs expert discussion; infection surveillance remains essential.</li></ul></li><li><strong>“Mycotic” does not mean fungal</strong>; most such aneurysms are bacterial.</li></ul><h3>Other Options</h3><ul><li><strong>A — High-dose glucocorticoids for presumed sterile inflammatory aneurysm:</strong> Sterile periaortitis can require immunosuppression; bacteremia and an evolving saccular lesion favor infection, which steroids could worsen.</li><li><strong>B — Short-course oral antibiotics followed by routine annual surveillance:</strong> A superficial infection may need a short course, but infected aortic tissue risks rupture and usually requires prolonged therapy and source control.</li><li><strong>D — Elective repair only after the usual fusiform diameter threshold is reached:</strong> Degenerative size thresholds do not safely govern infected aneurysms; infection can cause rapid wall destruction and rupture at smaller sizes.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Infective Aortic Aneurysm",
+        "sections": [
+          {
+            "heading": "Diagnosis",
+            "bullets": [
+              {
+                "text": "**Infective aortitis/aneurysm:** bacteremia plus compatible wall or periaortic changes.",
+                "children": [
+                  "Salmonella and S. aureus are important causes; obtain cultures and assess other infectious foci."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Management",
+            "bullets": [
+              {
+                "text": "**Antibiotics and aortic source control are coordinated.**",
+                "children": [
+                  "Prolonged IV therapy is generally at least six weeks, individualized by organism, repair and persistent infection."
+                ]
+              },
+              {
+                "text": "**Repair timing and technique depend on instability and anatomy.**",
+                "children": [
+                  "Open debridement/reconstruction or selected endovascular bridging/treatment needs expert discussion; infection surveillance remains essential."
+                ]
+              },
+              {
+                "text": "**“Mycotic” does not mean fungal**; most such aneurysms are bacterial.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Sterile periaortitis can require immunosuppression; bacteremia and an evolving saccular lesion favor infection, which steroids could worsen."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "A superficial infection may need a short course, but infected aortic tissue risks rupture and usually requires prolonged therapy and source control."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Degenerative size thresholds do not safely govern infected aneurysms; infection can cause rapid wall destruction and rupture at smaller sizes."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-020",
+      "topic": "Aortic diseases",
+      "question": "After EVAR, arterial-phase CTA shows contrast entering the aneurysm sac alongside the proximal graft attachment. Which interpretation and action are most appropriate?",
+      "options": [
+        "Type IV endoleak; expect spontaneous resolution of graft porosity",
+        "Type II endoleak; surveillance if the sac is stable",
+        "Type Ia endoleak; prompt correction of the proximal seal",
+        "Type V endoleak; investigate occult sac pressurization"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Type I Endoleak\n\nCorrect answer: Type Ia endoleak; prompt correction of the proximal seal\n\nWhy It Matters\n\n**Attachment-site leaks transmit systemic pressure to the sac.**\n\nType Ia is proximal, Ib distal; prompt repair is needed because successful graft deployment has not excluded the aneurysm.\n\nComparison and Follow-up\n\n**Type II:** retrograde lumbar/IMA flow; stable sacs can be observed, enlargement prompts reassessment/intervention.\n\n**Type III:** component separation or fabric failure; also a high-pressure leak requiring correction.\n\n**Type IV:** porosity; **type V:** endotension without identified leak.\n\nSurveillance assesses sac size, migration and graft integrity, not merely the presence of contrast.\n\nType IV endoleak; expect spontaneous resolution of graft porosity: Type IV arises through porous graft material, usually early; a discrete proximal attachment leak indicates failed seal.\n\nType II endoleak; surveillance if the sac is stable: Type II reflects retrograde collateral filling, not direct inflow at the graft attachment site described here.\n\nType V endoleak; investigate occult sac pressurization: Type V is sac expansion without a demonstrable leak; visible direct proximal inflow establishes another mechanism.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Type I Endoleak</h2><p><strong>Correct answer: C — Type Ia endoleak; prompt correction of the proximal seal</strong></p><h3>Why It Matters</h3><ul><li><strong>Attachment-site leaks transmit systemic pressure to the sac.</strong><ul><li>Type Ia is proximal, Ib distal; prompt repair is needed because successful graft deployment has not excluded the aneurysm.</li></ul></li></ul><h3>Comparison and Follow-up</h3><ul><li><strong>Type II:</strong> retrograde lumbar/IMA flow; stable sacs can be observed, enlargement prompts reassessment/intervention.</li><li><strong>Type III:</strong> component separation or fabric failure; also a high-pressure leak requiring correction.</li><li><strong>Type IV:</strong> porosity; <strong>type V:</strong> endotension without identified leak.<ul><li>Surveillance assesses sac size, migration and graft integrity, not merely the presence of contrast.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Type IV endoleak; expect spontaneous resolution of graft porosity:</strong> Type IV arises through porous graft material, usually early; a discrete proximal attachment leak indicates failed seal.</li><li><strong>B — Type II endoleak; surveillance if the sac is stable:</strong> Type II reflects retrograde collateral filling, not direct inflow at the graft attachment site described here.</li><li><strong>D — Type V endoleak; investigate occult sac pressurization:</strong> Type V is sac expansion without a demonstrable leak; visible direct proximal inflow establishes another mechanism.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Type I Endoleak",
+        "sections": [
+          {
+            "heading": "Why It Matters",
+            "bullets": [
+              {
+                "text": "**Attachment-site leaks transmit systemic pressure to the sac.**",
+                "children": [
+                  "Type Ia is proximal, Ib distal; prompt repair is needed because successful graft deployment has not excluded the aneurysm."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Comparison and Follow-up",
+            "bullets": [
+              {
+                "text": "**Type II:** retrograde lumbar/IMA flow; stable sacs can be observed, enlargement prompts reassessment/intervention.",
+                "children": []
+              },
+              {
+                "text": "**Type III:** component separation or fabric failure; also a high-pressure leak requiring correction.",
+                "children": []
+              },
+              {
+                "text": "**Type IV:** porosity; **type V:** endotension without identified leak.",
+                "children": [
+                  "Surveillance assesses sac size, migration and graft integrity, not merely the presence of contrast."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Type IV arises through porous graft material, usually early; a discrete proximal attachment leak indicates failed seal."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Type II reflects retrograde collateral filling, not direct inflow at the graft attachment site described here."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Type V is sac expansion without a demonstrable leak; visible direct proximal inflow establishes another mechanism."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-021",
+      "topic": "Aortic diseases",
+      "question": "Three years after EVAR, CTA shows aneurysm sac expansion and contrast passing through a gap between modular graft components. What is the most appropriate diagnosis?",
+      "options": [
+        "Type II endoleak",
+        "Type I endoleak",
+        "Type III endoleak",
+        "Type V endoleak"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Type III Endoleak\n\nCorrect answer: Type III endoleak\n\nMechanism\n\n**Type IIIa:** component disconnection; **IIIb:** fabric disruption.\n\nBoth can directly pressurize the excluded sac and require prompt correction.\n\nManagement\n\n**Endovascular relining or component bridging** may restore graft integrity; open conversion is used when necessary.\n\n**Evaluate seal zones and the whole graft**, because more than one leak mechanism may coexist.\n\n**Late surveillance remains necessary.**\n\nAn initially satisfactory EVAR result does not exclude delayed migration, separation or sac expansion; compare serial measurements and images.\n\nType II endoleak: Type II comes from collateral backflow such as lumbar or inferior mesenteric arteries; a modular gap is a graft-integrity failure.\n\nType I endoleak: Type I is loss of proximal or distal attachment seal; the described defect lies between components rather than at a native-vessel seal.\n\nType V endoleak: Type V denotes enlargement without a visible source; this study demonstrates a specific high-pressure communication.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Type III Endoleak</h2><p><strong>Correct answer: C — Type III endoleak</strong></p><h3>Mechanism</h3><ul><li><strong>Type IIIa:</strong> component disconnection; <strong>IIIb:</strong> fabric disruption.<ul><li>Both can directly pressurize the excluded sac and require prompt correction.</li></ul></li></ul><h3>Management</h3><ul><li><strong>Endovascular relining or component bridging</strong> may restore graft integrity; open conversion is used when necessary.</li><li><strong>Evaluate seal zones and the whole graft</strong>, because more than one leak mechanism may coexist.</li><li><strong>Late surveillance remains necessary.</strong><ul><li>An initially satisfactory EVAR result does not exclude delayed migration, separation or sac expansion; compare serial measurements and images.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Type II endoleak:</strong> Type II comes from collateral backflow such as lumbar or inferior mesenteric arteries; a modular gap is a graft-integrity failure.</li><li><strong>B — Type I endoleak:</strong> Type I is loss of proximal or distal attachment seal; the described defect lies between components rather than at a native-vessel seal.</li><li><strong>D — Type V endoleak:</strong> Type V denotes enlargement without a visible source; this study demonstrates a specific high-pressure communication.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Type III Endoleak",
+        "sections": [
+          {
+            "heading": "Mechanism",
+            "bullets": [
+              {
+                "text": "**Type IIIa:** component disconnection; **IIIb:** fabric disruption.",
+                "children": [
+                  "Both can directly pressurize the excluded sac and require prompt correction."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Management",
+            "bullets": [
+              {
+                "text": "**Endovascular relining or component bridging** may restore graft integrity; open conversion is used when necessary.",
+                "children": []
+              },
+              {
+                "text": "**Evaluate seal zones and the whole graft**, because more than one leak mechanism may coexist.",
+                "children": []
+              },
+              {
+                "text": "**Late surveillance remains necessary.**",
+                "children": [
+                  "An initially satisfactory EVAR result does not exclude delayed migration, separation or sac expansion; compare serial measurements and images."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Type II comes from collateral backflow such as lumbar or inferior mesenteric arteries; a modular gap is a graft-integrity failure."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Type I is loss of proximal or distal attachment seal; the described defect lies between components rather than at a native-vessel seal."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Type V denotes enlargement without a visible source; this study demonstrates a specific high-pressure communication."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
+    },
+    {
+      "id": "cardiology-rebuild-13-022",
+      "topic": "Aortic diseases",
+      "question": "A 70-year-old man has new persistent abdominal and back pain, a tender 4.8 cm infrarenal AAA and no alternative cause on CTA. There is no free rupture and he is stable. What is the best next step?",
+      "options": [
+        "Admit for urgent vascular repair assessment and monitored optimization",
+        "Continue six-month ultrasound surveillance because diameter is below 5.5 cm",
+        "Treat pain and reassess after a routine outpatient interval",
+        "Begin therapeutic anticoagulation for mural thrombus as the principal treatment"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Symptomatic AAA Below the Elective Size Threshold\n\nCorrect answer: Admit for urgent vascular repair assessment and monitored optimization\n\nSymptomatic Disease\n\n**Attributable pain or tenderness warrants repair evaluation irrespective of usual elective diameter.**\n\nExclude alternative diagnoses, contained rupture and infection; absence of free rupture does not establish benign disease.\n\nImmediate Care\n\n**Monitor, control pain and BP, and involve the vascular team.**\n\nStable patients permit rapid anatomical planning and optimization; deterioration requires emergency intervention.\n\n**CTA defines anatomy and complications.**\n\nAneurysm-related embolization, fistulation or rapid growth can also justify intervention below standard fusiform thresholds.\n\n**Long-term care continues after repair:** tobacco cessation, cardiovascular prevention and procedure-specific surveillance.\n\nContinue six-month ultrasound surveillance because diameter is below 5.5 cm: Size-based surveillance applies to asymptomatic stable aneurysms; new attributable pain changes the repair indication.\n\nTreat pain and reassess after a routine outpatient interval: Analgesia is supportive but does not remove the risk signaled by a newly symptomatic aneurysm; inpatient urgent evaluation is needed.\n\nBegin therapeutic anticoagulation for mural thrombus as the principal treatment: Mural thrombus is common within AAA; it is not by itself an indication for anticoagulation or an explanation permitting delayed repair assessment.\n\nACC/AHA Aortic Disease Guideline, 2022 — https://doi.org/10.1161/CIR.0000000000001106",
+      "explanationHtml": "<h2>Symptomatic AAA Below the Elective Size Threshold</h2><p><strong>Correct answer: A — Admit for urgent vascular repair assessment and monitored optimization</strong></p><h3>Symptomatic Disease</h3><ul><li><strong>Attributable pain or tenderness warrants repair evaluation irrespective of usual elective diameter.</strong><ul><li>Exclude alternative diagnoses, contained rupture and infection; absence of free rupture does not establish benign disease.</li></ul></li></ul><h3>Immediate Care</h3><ul><li><strong>Monitor, control pain and BP, and involve the vascular team.</strong><ul><li>Stable patients permit rapid anatomical planning and optimization; deterioration requires emergency intervention.</li></ul></li><li><strong>CTA defines anatomy and complications.</strong><ul><li>Aneurysm-related embolization, fistulation or rapid growth can also justify intervention below standard fusiform thresholds.</li></ul></li><li><strong>Long-term care continues after repair:</strong> tobacco cessation, cardiovascular prevention and procedure-specific surveillance.</li></ul><h3>Other Options</h3><ul><li><strong>B — Continue six-month ultrasound surveillance because diameter is below 5.5 cm:</strong> Size-based surveillance applies to asymptomatic stable aneurysms; new attributable pain changes the repair indication.</li><li><strong>C — Treat pain and reassess after a routine outpatient interval:</strong> Analgesia is supportive but does not remove the risk signaled by a newly symptomatic aneurysm; inpatient urgent evaluation is needed.</li><li><strong>D — Begin therapeutic anticoagulation for mural thrombus as the principal treatment:</strong> Mural thrombus is common within AAA; it is not by itself an indication for anticoagulation or an explanation permitting delayed repair assessment.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1161/CIR.0000000000001106\">ACC/AHA Aortic Disease Guideline, 2022</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Symptomatic AAA Below the Elective Size Threshold",
+        "sections": [
+          {
+            "heading": "Symptomatic Disease",
+            "bullets": [
+              {
+                "text": "**Attributable pain or tenderness warrants repair evaluation irrespective of usual elective diameter.**",
+                "children": [
+                  "Exclude alternative diagnoses, contained rupture and infection; absence of free rupture does not establish benign disease."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Immediate Care",
+            "bullets": [
+              {
+                "text": "**Monitor, control pain and BP, and involve the vascular team.**",
+                "children": [
+                  "Stable patients permit rapid anatomical planning and optimization; deterioration requires emergency intervention."
+                ]
+              },
+              {
+                "text": "**CTA defines anatomy and complications.**",
+                "children": [
+                  "Aneurysm-related embolization, fistulation or rapid growth can also justify intervention below standard fusiform thresholds."
+                ]
+              },
+              {
+                "text": "**Long-term care continues after repair:** tobacco cessation, cardiovascular prevention and procedure-specific surveillance.",
+                "children": []
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Size-based surveillance applies to asymptomatic stable aneurysms; new attributable pain changes the repair indication."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Analgesia is supportive but does not remove the risk signaled by a newly symptomatic aneurysm; inpatient urgent evaluation is needed."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Mural thrombus is common within AAA; it is not by itself an indication for anticoagulation or an explanation permitting delayed repair assessment."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA Aortic Disease Guideline, 2022",
+          "url": "https://doi.org/10.1161/CIR.0000000000001106"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "draft_pending_final_source_review",
+      "explanationStyle": "concise_structured"
     }
   ],
+  "plannedQuestions": 48,
   "sourceDocument": "13. Aortic Diseases and Peripheral Vascular Diseases.docx",
   "redistribution": {
     "originalIdsPreserved": true,
     "existingQuestions": 3,
     "previouslyInstalledQuestions": 3,
-    "draftQuestions": 0,
+    "draftQuestions": 22,
     "coverageStatus": "incomplete_requires_chapter_review",
-    "explanationStructureStatus": "original_explanations_preserved_not_rewritten"
+    "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
+    "newQuestionsAfterRedistribution": 22
   }
 }
