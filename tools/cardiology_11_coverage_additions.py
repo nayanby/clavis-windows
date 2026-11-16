@@ -2,6 +2,7 @@
 from qbank_json_chapters import question as Q
 
 REFERENCES = {
+ 'ESC_ECG_LVH': ('ESC/ESH hypertension guideline, Table 16: ECG LVH criteria', 'https://academic.oup.com/eurheartj/article/39/33/3021/5079119'),
  'STIFFNESS': ('ACCF/AHA hypertension in older adults consensus: arterial mechanics', 'https://doi.org/10.1016/j.jacc.2011.01.008'),
  'FRAMINGHAM_HEMODYNAMICS': ('Framingham: hemodynamic correlates of BP across adult ages, 2010', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2981604/'),
  'CUSHING_DIAGNOSIS': ('Endocrine Society diagnosis of Cushing syndrome guideline', 'https://www.endocrine.org/clinical-practice-guidelines/diagnosis-of-cushing-syndrome'),
@@ -66,3 +67,8 @@ rows = [Q(
    'Continue BP and vascular-risk treatment when stable atherosclerotic stenosis is managed medically. Recurrent flash pulmonary edema, progressive ischemic kidney dysfunction or selected refractory cases may justify specialist revascularization review. Assess kidney viability and distinguish atherosclerotic ostial disease from FMD, for which balloon angioplasty rather than routine primary stenting is the usual intervention when indicated. An equivocal or technically inadequate study requires another assessment rather than forced grading from an unreliable velocity.')],
  ['ESC_VASCULAR2024', 'RENAL_DUPLEX']),
 ]
+
+rows[0]['sections'].append(S('Electrical Evidence of Hypertrophy',
+ '**ECG voltage supports but cannot exclude structural LV hypertrophy.** At standard calibration, the ESC/ESH table lists Sokolow–Lyon S in V1 plus R in V5 above 35 mm, or R in aVL at least 11 mm; Cornell voltage is S in V3 plus R in aVL above 28 mm in men or 20 mm in women.',
+ 'Voltage depends on habitus, lead placement and conduction. Interpret the tracing with its repolarization pattern and clinical context; echocardiography is more sensitive for structural hypertrophy when knowing the geometry or function will change management.'))
+rows[0]['refs'].append('ESC_ECG_LVH')

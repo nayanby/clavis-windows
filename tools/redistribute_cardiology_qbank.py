@@ -307,14 +307,23 @@ def verify(banks, report):
     runtime = [read_json(Path(p)) for p in installed['files']]
     expected = {q['id']: q for b in banks for q in b['questions']
                 if int(q['id'].split('-')[-2]) <= 9}
+    for number in installed.get('releasedChapterOrders',[]):
+        review=read_json(AUDIT/f'chapter-{number:02}-release-review.json')
+        released=current[number-1]
+        assert review['status']=='passed' and review['installed']
+        assert review['reviewedQuestionsSha256']==digest(released['questions'])
+        assert released['status']=='installed_verified'
+        expected.update({q['id']:q for q in released['questions']})
     actual = {q['id']: q for b in runtime for q in b['questions']}
-    assert actual == expected and sum(len(b['questions']) for b in runtime) == 541
+    installed_count=sum(len(b['questions']) for b in runtime)
+    assert actual == expected and installed_count==len(expected)==installed['installedQuestions']
+    assert len(runtime)==installed['installedChapters']
     for b in runtime:
         original = banks[b['chapterOrder']-1]
         assert b['document'] == original['document']
         assert b['headingText'] == original['headingText']
         assert b['targetQuestions'] == len(b['questions'])
-    print(f'Verified: 15 source-matched JSON files; 615 original IDs retained ({615-len(revised)} questions unchanged, {len(revised)} reviewed revisions); {len(all_questions)} current unique questions; 541 released; {len(all_questions)-541} drafts withheld.')
+    print(f'Verified: 15 source-matched JSON files; 615 original IDs retained ({615-len(revised)} questions unchanged, {len(revised)} reviewed revisions); {len(all_questions)} current unique questions; {installed_count} released; {len(all_questions)-installed_count} drafts withheld.')
 
 
 if __name__ == '__main__':

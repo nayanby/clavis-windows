@@ -2,7 +2,7 @@
 
 Names and numbers match the 15 DOCX files in `data/files/Cardiology`.
 
-The redistribution allocated 615 existing questions once each, preserving their IDs, stems, options, answer keys, explanations and references at redistribution. Two subsequent reviewed hypertension revisions retain IDs and answer-letter slots; exact original/revised hashes are recorded in `audit/reviewed-question-revisions.json`. Subsequent hypertension authoring has added 57 questions, bringing the current total to 672.
+The redistribution allocated 615 existing questions once each, preserving their IDs, stems, options, answer keys, explanations and references at redistribution. Three subsequent reviewed hypertension revisions retain IDs and answer-letter slots; exact original/revised hashes are recorded in `audit/reviewed-question-revisions.json`. Subsequent hypertension authoring has added 57 questions, bringing the current total to 672.
 
 | Chapter | Topic | Authored questions | Draft questions |
 |---|---|---:|---:|
@@ -16,7 +16,7 @@ The redistribution allocated 615 existing questions once each, preserving their 
 | 8 | Cardiomyopathies Myocarditis and Genetic Cardiac Diseases | 56 | 0 |
 | 9 | Pericardial Diseases and Cardiac Tamponade | 45 | 0 |
 | 10 | Infective Endocarditis | 66 | 65 |
-| 11 | Systemic Hypertension and Hypertensive Emergencies | 66 | 66 |
+| 11 | Systemic Hypertension and Hypertensive Emergencies | 66 | 0 |
 | 12 | Adult Congenital Heart Diseases | 4 | 0 |
 | 13 | Aortic Diseases and Peripheral Vascular Diseases | 3 | 0 |
 | 14 | Advanced ECG Interpretation and Electrophysiology | 45 | 0 |
@@ -24,11 +24,11 @@ The redistribution allocated 615 existing questions once each, preserving their 
 
 ## Review and installation status
 
-The 541 previously installed questions are released under the matching source chapter names. The 65 original endocarditis draft questions and 66 current hypertension draft questions remain withheld from the app. Chapter 10 has one previously installed device-infection question in addition to its 65 draft questions. Chapter 11 contains only drafts, so it has a delivered JSON file but no installed bank.
+The original 541 installed questions remain released under matching source chapter names. The fully reviewed 66-question hypertension chapter is now installed, bringing Cardiology to 607 installed questions. The 65 original endocarditis draft questions remain withheld; chapter 10 also contains one previously installed device-infection question.
 
-Hypertension has all 66 provisionally planned questions drafted: measurement and phenotypes (9), risk-based initiation and targets (6), organ injury and arterial stiffness (2), lifestyle/contributors (4), initial drug selection/adverse effects (8), resistant hypertension (6), secondary causes (13), general emergencies (5), specific emergencies (8) and target trials (5). Its status is `draft_awaiting_final_review`: final chapter-wide source, coverage and editorial review remains required before installation. The current coverage ledger is `audit/chapter-11-coverage.json`; the original nine-question ledger remains archived.
+Hypertension has 66 reviewed questions: measurement and phenotypes (9), risk-based initiation and targets (6), organ injury and arterial stiffness (2), lifestyle/contributors (4), initial drug selection/adverse effects (8), resistant hypertension (6), secondary causes (13), general emergencies (5), specific emergencies (8) and target trials (5). Release review, documented source checks, source coverage and exact app readback passed. The current coverage ledger is `audit/chapter-11-coverage.json`; release evidence is `audit/chapter-11-release-review.json`. Source-access limitations and the absence of independent clinician peer review remain documented.
 
-All 15 files contain existing questions, but full chapter coverage is incomplete. In particular, chapters 12 and 13 contain only 4 and 3 questions respectively. 613 of the 615 redistributed questions remain verbatim; two hypertension questions have reviewed distractor revisions. A full medical deep-dive revision of the other chapter explanations remains pending. Answer positions are preserved, so the new chapter subsets have uneven answer-letter distributions.
+All 15 files contain existing questions, but full chapter coverage is incomplete. In particular, chapters 12 and 13 contain only 4 and 3 questions respectively. 612 of the 615 redistributed questions remain verbatim; three hypertension questions have reviewed revisions (two distractor improvements and one ABPM explanation expansion). A full medical deep-dive revision of the other chapter explanations remains pending. Original answer positions are preserved, so redistributed subsets have uneven answer-letter distributions; the completed hypertension bank is balanced at A17/B17/C16/D16.
 
 The original source-review ledgers describe the old authoring groups, not the redistributed chapter coverage. Use `audit/redistribution-report.json` for the original question-by-question allocation and content hashes. It is a historical record of the 615-question redistribution, not a current authoring total. The verified original artifacts are retained in `audit/pre-redistribution.zip`.
 

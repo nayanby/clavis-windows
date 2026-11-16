@@ -1,7 +1,7 @@
 {
   "chapter": 11,
-  "status": "draft_awaiting_final_review",
-  "installed": false,
+  "status": "installed_verified",
+  "installed": true,
   "authoredQuestions": 66,
   "plannedQuestions": 66,
   "scopeNote": "All 62 provisionally planned decisions authored in continuous order across nine sections. Final chapter-wide source-document coverage, clinical and editorial review remains pending; not installed.",
@@ -352,14 +352,25 @@
     "status": "passed"
   },
   "editorialReviewProgress": {
-    "status": "planned_questions_authored_final_chapter_audit_pending",
+    "status": "completed_for_release",
     "questionsReviewedInFull": [
+      "cardiology-rebuild-11-001",
+      "cardiology-rebuild-11-002",
+      "cardiology-rebuild-11-003",
+      "cardiology-rebuild-11-004",
+      "cardiology-rebuild-11-005",
+      "cardiology-rebuild-11-006",
+      "cardiology-rebuild-11-007",
+      "cardiology-rebuild-11-008",
+      "cardiology-rebuild-11-009",
       "cardiology-rebuild-11-010",
       "cardiology-rebuild-11-011",
       "cardiology-rebuild-11-012",
       "cardiology-rebuild-11-013",
       "cardiology-rebuild-11-014",
       "cardiology-rebuild-11-015",
+      "cardiology-rebuild-11-063",
+      "cardiology-rebuild-11-064",
       "cardiology-rebuild-11-016",
       "cardiology-rebuild-11-017",
       "cardiology-rebuild-11-018",
@@ -383,11 +394,13 @@
       "cardiology-rebuild-11-036",
       "cardiology-rebuild-11-037",
       "cardiology-rebuild-11-038",
+      "cardiology-rebuild-11-066",
       "cardiology-rebuild-11-039",
       "cardiology-rebuild-11-040",
       "cardiology-rebuild-11-041",
       "cardiology-rebuild-11-042",
       "cardiology-rebuild-11-043",
+      "cardiology-rebuild-11-065",
       "cardiology-rebuild-11-044",
       "cardiology-rebuild-11-045",
       "cardiology-rebuild-11-046",
@@ -408,7 +421,7 @@
       "cardiology-rebuild-11-061",
       "cardiology-rebuild-11-062"
     ],
-    "nextWork": "Final generated review of original measurement questions 1–9; source-DOCX coverage audit, chapter-wide editorial/medical consistency and current-update review, then installation if passed.",
+    "nextWork": "Release review and runtime readback completed.",
     "duplicateReview": "Replaced the initial new HFrEF beta-blocker question with an exertional-angina/HTN selection problem to avoid duplicating existing question cardiology-rebuild-04-012. Recast new question 51 as fluid redistribution to avoid duplicating existing questions cardiology-rebuild-04-043 and cardiology-rebuild-04-047; the coronary perfusion-gradient question addresses a different mechanism from the existing tachycardia-duration question."
   },
   "limitations": [
@@ -430,12 +443,39 @@
     }
   ],
   "releaseReview": {
-    "status": "pending_coverage_and_editorial_work",
-    "installed": false,
-    "originalMeasurementBlockFinalReview": "answer_keys_thresholds_and_flagged_distractor_revisions_reviewed",
-    "sourceDocumentCoverageAudit": "in_progress_gaps_identified",
-    "chapterWideConsistencyReview": "pending_final_consistency_and_remaining_source_details",
-    "sourceCoverageReview": "audit/chapter-11-source-coverage-review.json"
+    "status": "passed",
+    "installed": true,
+    "originalMeasurementBlockFinalReview": "passed_with_three_documented_original_revisions",
+    "sourceDocumentCoverageAudit": "passed_for_selected_high_yield_scope",
+    "chapterWideConsistencyReview": "passed_author_review",
+    "sourceCoverageReview": "audit/chapter-11-source-coverage-review.json",
+    "finalDetailReview": [
+      {
+        "topic": "ABPM recording adequacy",
+        "questionIds": [
+          "cardiology-rebuild-11-005"
+        ],
+        "result": "ESC 2024 minimum 70% usable readings, typically >=27 over 24 h, with time-distribution and diary limitations included.",
+        "source": "https://academic.oup.com/eurheartj/article/45/38/3912/7741010"
+      },
+      {
+        "topic": "ECG LV hypertrophy",
+        "questionIds": [
+          "cardiology-rebuild-11-064"
+        ],
+        "result": "Named ESC/ESH voltage cutoffs, poor sensitivity and role of directed echocardiography included; source uses >35 mm rather than silently treating the source DOCX >= convention as identical.",
+        "source": "https://academic.oup.com/eurheartj/article/39/33/3021/5079119"
+      },
+      {
+        "topic": "Perioperative hypertension",
+        "questionIds": [
+          "cardiology-rebuild-11-049"
+        ],
+        "result": "Surgery-risk and timing qualifications, selected RAS-inhibitor omission, HFrEF continuation and established beta-blocker continuation included.",
+        "source": "https://professional.heart.org/en/-/media/PHD-Files-2/Science-News/2/2024/2024-Guideline-for-Perioperative-Cardiovascular-Management-slide-set.pdf"
+      }
+    ],
+    "runtimeReadback": "passed"
   },
   "organDamageAdditionReview": {
     "questionId": "cardiology-rebuild-11-063",

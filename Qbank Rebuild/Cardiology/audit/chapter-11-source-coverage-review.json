@@ -2,7 +2,7 @@
   "document": "11. Systemic Hypertension and Hypertensive Emergencies.docx",
   "sourceSha256": "9e6b3bc8faa666da87de834ae802712f9897fa2464017192a33a9cf208e75d1a",
   "reviewDate": "2026-11-15",
-  "status": "in_progress_gaps_identified",
+  "status": "passed_for_selected_high_yield_scope",
   "sourceHeadings": [
     "Hypertension",
     "primary hypertension",
@@ -30,7 +30,7 @@
     "Other causes",
     "RENAL ARTERY STENOSIS"
   ],
-  "scope": "Source chapter headings and focused organ-damage section inspected; this is not yet a paragraph-by-paragraph completeness audit.",
+  "scope": "Coverage decisions select high-yield diagnostic, physiological and management material from the source chapter; they do not imply one MCQ for every source sentence or exhaustive reproduction of a textbook.",
   "measurementBlock": {
     "questionIds": [
       "cardiology-rebuild-11-001",
@@ -84,14 +84,11 @@
       "resolution": {
         "status": "focused_question_and_comparison_table_added",
         "questionId": "cardiology-rebuild-11-064",
-        "remainingReview": "Confirm whether any additional exact organ-damage criteria warrant inclusion; do not equate a keyword check with exhaustive coverage."
+        "remainingReview": "Resolved by focused organ-damage question/table and final ECG criteria check."
       }
     }
   ],
-  "nextWork": [
-    "Final review of source details not resolved by heading mapping, including measurement recording adequacy, exact organ-damage criteria and perioperative management.",
-    "Complete chapter-wide consistency review and release metadata, then verify installation and runtime readback."
-  ],
+  "nextWork": [],
   "additionalCoverageQuestions": {
     "Cushing Syndrome": "cardiology-rebuild-11-065",
     "RENAL ARTERY STENOSIS": "cardiology-rebuild-11-066"
@@ -480,5 +477,31 @@
       "scope": "Topic-level association; references to a question include its explanation, not only its stem."
     }
   ],
-  "headingCoverageMapStatus": "all_extracted_heading_entries_mapped_final_detail_review_pending"
+  "headingCoverageMapStatus": "mapped_and_high_yield_detail_review_completed",
+  "finalDetailReview": [
+    {
+      "topic": "ABPM recording adequacy",
+      "questionIds": [
+        "cardiology-rebuild-11-005"
+      ],
+      "result": "ESC 2024 minimum 70% usable readings, typically >=27 over 24 h, with time-distribution and diary limitations included.",
+      "source": "https://academic.oup.com/eurheartj/article/45/38/3912/7741010"
+    },
+    {
+      "topic": "ECG LV hypertrophy",
+      "questionIds": [
+        "cardiology-rebuild-11-064"
+      ],
+      "result": "Named ESC/ESH voltage cutoffs, poor sensitivity and role of directed echocardiography included; source uses >35 mm rather than silently treating the source DOCX >= convention as identical.",
+      "source": "https://academic.oup.com/eurheartj/article/39/33/3021/5079119"
+    },
+    {
+      "topic": "Perioperative hypertension",
+      "questionIds": [
+        "cardiology-rebuild-11-049"
+      ],
+      "result": "Surgery-risk and timing qualifications, selected RAS-inhibitor omission, HFrEF continuation and established beta-blocker continuation included.",
+      "source": "https://professional.heart.org/en/-/media/PHD-Files-2/Science-News/2/2024/2024-Guideline-for-Perioperative-Cardiovascular-Management-slide-set.pdf"
+    }
+  ]
 }

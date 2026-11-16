@@ -39,6 +39,24 @@
         "https://doi.org/10.1161/CIR.0000000000001356"
       ],
       "independentClinicianReview": false
+    },
+    {
+      "questionId": "cardiology-rebuild-11-005",
+      "status": "author_source_checked",
+      "reviewedAt": "2026-11-16",
+      "reason": "Add the verified ESC 2024 usable-recording requirement and recording-quality limitations to the ABPM explanation.",
+      "originalSha256": "c5e88227fabf51943d2052ab7ca195fcee5823f91a64b506cffd717ed13477b4",
+      "revisedSha256": "78f131b9b139509fd8a53767c024ca29f45dae068f0b82509f3bfd2449809552",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationTeaching",
+        "sourceCheckedAt"
+      ],
+      "sources": [
+        "https://academic.oup.com/eurheartj/article/45/38/3912/7741010"
+      ],
+      "independentClinicianReview": false
     }
   ]
 }

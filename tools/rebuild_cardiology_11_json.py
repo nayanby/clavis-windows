@@ -1,5 +1,5 @@
 """Original hypertension chapter; incomplete drafts are not installed."""
-import json,re
+import hashlib,json,re
 from qbank_json_chapters import question as Q,save,ROOT
 DOC='11. Systemic Hypertension and Hypertensive Emergencies'
 R={
@@ -374,7 +374,10 @@ for topic,decision in ADDED_DECISIONS:
 # Reviewed editorial revisions retain the original IDs and answer-letter slots.
 # Frozen originals remain in audit/pre-redistribution.zip; the revision ledger
 # records the exact original and revised content digests.
-REVISED_ORIGINAL_IDS={'cardiology-rebuild-11-003','cardiology-rebuild-11-007'}
+REVISED_ORIGINAL_IDS={'cardiology-rebuild-11-003','cardiology-rebuild-11-005','cardiology-rebuild-11-007'}
+rows[4]['sections'].append(S('Recording Adequacy',
+ '**ESC 2024 requires at least 70% usable ambulatory readings for a valid session, typically at least ==27== measurements across 24 hours.** Inspect the distribution as well as the total: a record with a long missing sleep interval cannot reliably answer a nocturnal-pressure question.',
+ 'Check the diary, wake–sleep timing, cuff fit and artifacts. Repeat an inadequate or unrepresentative study rather than making a confident phenotype assignment from a few surviving peaks. Monitoring schedules and completeness rules from other guidelines should be identified by name rather than substituted silently.'))
 rows[2]['answer']='Wait 30 minutes after caffeine/exercise, rest five minutes and average repeat seated readings'
 rows[2]['others']=[
  ('Wait five minutes after caffeine/exercise, rest five minutes and average repeat seated readings',
@@ -393,7 +396,7 @@ rows[6]['others']=[
   'Isolated nocturnal hypertension describes elevated sleep pressure despite daytime averages below the relevant threshold. The awake ambulatory and home averages here are clearly elevated, and no sleep average is supplied to establish a separate nocturnal phenotype.')]
 
 def highlight_values(text):
-    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|cm/s|mg/kg/min|mg/kg/day|mg/kg|mg/hour|mg/h|mg/min|mg/g|mg/dL|mg|g/hour|g/h|g/day|g/week|g|mmol/L|nmol/L|ng/mL/h|ng/dL|µg/kg/min|µg/kg|µg/min|µg/dL|mU/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
+    return re.sub(r'(?<![\w.])(?:[<>≤≥]\s*)?\d+(?:\.\d+)?(?:[–−-]\d+(?:\.\d+)?)?(?:/\d+(?:[–−-]\d+)?)?\s*(?:mmHg|mm|cm/s|mg/kg/min|mg/kg/day|mg/kg|mg/hour|mg/h|mg/min|mg/g|mg/dL|mg|g/hour|g/h|g/day|g/week|g|mmol/L|nmol/L|ng/mL/h|ng/dL|µg/kg/min|µg/kg|µg/min|µg/dL|mU/L|mOsm/kg|mL/min/1\.73 m²|mL/min|%)(?!\w)',lambda m:'=='+m.group(0)+'==',text)
 
 if __name__=='__main__':
     existing_path=ROOT/'Cardiology'/(DOC+'.json')
@@ -416,19 +419,32 @@ if __name__=='__main__':
     # and cortisol interpretation with endocrine differential diagnosis.
     position_overrides={'cardiology-rebuild-11-066':38.5,'cardiology-rebuild-11-065':43.5}
     b['questions'].sort(key=lambda q:(DISPLAY_TOPICS.index(q['topic']),position_overrides.get(q['id'],int(q['id'].split('-')[-1]))))
+    for q in b['questions']:
+        if q['id'] in {'cardiology-rebuild-11-005','cardiology-rebuild-11-049','cardiology-rebuild-11-064'}:
+            q['sourceCheckedAt']='2026-11-16'
+    release_path=p.parent/'audit/chapter-11-release-review.json'
+    release=json.loads(release_path.read_text(encoding='utf-8')) if release_path.exists() else {}
+    question_digest=hashlib.sha256(json.dumps(b['questions'],sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+    if release.get('status')=='passed' and release.get('reviewedQuestionsSha256')==question_digest:
+        chapter_status='installed_verified' if release.get('installed') else 'reviewed_ready_to_install'
+        b.update(status=chapter_status,sourceNote='Original educational synthesis; author source and chapter coverage review completed. Full Harrison text not accessed; independent clinician review not claimed.')
+    installed_count=len(rows) if chapter_status=='installed_verified' else 0
     if existing and 'redistribution' in existing:
         b['redistribution']=existing['redistribution']
-        b['redistribution'].update(draftQuestions=len(rows),newQuestionsAfterRedistribution=len(rows)-9)
+        b['redistribution'].update(draftQuestions=len(rows)-installed_count,newQuestionsAfterRedistribution=len(rows)-9)
     p.write_text(json.dumps(b,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     display_sections=sorted(SECTIONS,key=lambda s:DISPLAY_TOPICS.index(s[0]))
     c=dict(subject='Cardiology',chapterNumber=11,chapter=DOC,status=chapter_status,countPolicy='Provisional coverage-driven distinct decisions; not official examination weights.',plannedQuestions=len(decisions),authoredQuestions=len(rows),sections=[dict(section=t,questions=len(items),authoredQuestions=sum(r['topic']==t for r in rows),decisions=items)for t,items in display_sections],questionDecisions=[dict(questionId=q['id'],title=q['explanationTeaching']['title'],section=q['topic'],decision=q['coverageDecision'])for q in b['questions']])
     (p.parent/'audit/chapter-11-coverage.json').write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    pp=ROOT/'progress.json';plan=json.loads(pp.read_text(encoding='utf-8'));entry=next(x for x in plan['chapters']if x['subject']=='Cardiology'and x['document']==DOC);entry.update(status=chapter_status,authoredQuestions=len(rows),plannedQuestions=len(decisions),draftQuestions=len(rows),draftQuestionsWithheld=len(rows),newQuestionsAfterRedistribution=len(rows)-9,coverageMap='Cardiology/audit/chapter-11-coverage.json');plan['currentChapter']='Cardiology '+DOC;pp.write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    pp=ROOT/'progress.json';plan=json.loads(pp.read_text(encoding='utf-8'));entry=next(x for x in plan['chapters']if x['subject']=='Cardiology'and x['document']==DOC);entry.update(status=chapter_status,authoredQuestions=len(rows),plannedQuestions=len(decisions),installedQuestions=installed_count,draftQuestions=len(rows)-installed_count,draftQuestionsWithheld=len(rows)-installed_count,newQuestionsAfterRedistribution=len(rows)-9,coverageMap='Cardiology/audit/chapter-11-coverage.json');
+    if not installed_count:plan['currentChapter']='Cardiology '+DOC
+    pp.write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     cardio=[json.loads(f.read_text(encoding='utf-8'))for f in p.parent.glob('*.json')]
     total=sum(len(bank.get('questions',[]))for bank in cardio)
     installed=json.loads((p.parent/'audit/installation-report.json').read_text(encoding='utf-8'))['installedQuestions']
     plan['cardiologyRedistribution'].update(currentAuthoredQuestions=total,currentDraftQuestionsNotInstalled=total-installed)
     pp.write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     summary_path=ROOT/'validation-summary.json';summary=json.loads(summary_path.read_text(encoding='utf-8'))
-    summary.update(currentCardiologyAuthoredQuestions=total,currentCardiologyDraftQuestionsNotInstalled=total-installed,nextChapter='Cardiology '+DOC)
+    summary.update(currentCardiologyAuthoredQuestions=total,currentCardiologyDraftQuestionsNotInstalled=total-installed)
+    if not installed_count:summary['nextChapter']='Cardiology '+DOC
     summary_path.write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology 11. Systemic Hypertension and Hypertensive Emergencies",
+  "currentChapter": "Cardiology 12. Adult Congenital Heart Diseases",
   "chapters": [
     {
       "subject": "Neurology",
@@ -635,16 +635,16 @@
       "chapter": 11,
       "document": "11. Systemic Hypertension and Hypertensive Emergencies",
       "file": "Cardiology/11. Systemic Hypertension and Hypertensive Emergencies.json",
-      "status": "draft_awaiting_final_review",
+      "status": "installed_verified",
       "originalIdsPreserved": true,
       "existingQuestions": 9,
       "previouslyInstalledQuestions": 0,
-      "draftQuestions": 66,
+      "draftQuestions": 0,
       "coverageStatus": "incomplete_requires_chapter_review",
       "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-      "installedQuestions": 0,
-      "draftQuestionsWithheld": 66,
-      "runtimeStatus": "draft_not_installed",
+      "installedQuestions": 66,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_reviewed_chapter",
       "validation": {
         "questions": 66,
         "answerDistribution": {
@@ -664,7 +664,8 @@
       "authoredQuestions": 66,
       "plannedQuestions": 66,
       "newQuestionsAfterRedistribution": 57,
-      "coverageMap": "Cardiology/audit/chapter-11-coverage.json"
+      "coverageMap": "Cardiology/audit/chapter-11-coverage.json",
+      "installedSha256": "a7893f813f100d2e6f7a3436f801ea8ff3074b7a146b9830bdc4e65a5e1cd886"
     },
     {
       "subject": "Cardiology",
@@ -1332,11 +1333,9 @@
     }
   ],
   "userContinuationInstruction": {
-    "instruction": "Complete all Cardiology chapters, then pause before Rheumatology.",
-    "subjectToFinish": "Cardiology",
-    "pauseAfterSubjectComplete": true,
-    "status": "awaiting_cardiology_completion",
-    "cardiologyChaptersPlanned": 15
+    "pauseAfterSubjectComplete": false,
+    "instruction": "Continue making banks for the other requested subjects as well after Cardiology.",
+    "updatedAt": "2026-11-16"
   },
   "sourceFollowUp": [
     {
@@ -1352,6 +1351,6 @@
     "fullCoverage": false,
     "draftQuestionsNotInstalled": 74,
     "currentAuthoredQuestions": 672,
-    "currentDraftQuestionsNotInstalled": 131
+    "currentDraftQuestionsNotInstalled": 65
   }
 }

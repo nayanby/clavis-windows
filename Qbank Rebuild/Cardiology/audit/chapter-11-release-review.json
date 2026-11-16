@@ -1,0 +1,43 @@
+{
+  "chapterNumber": 11,
+  "document": "11. Systemic Hypertension and Hypertensive Emergencies",
+  "status": "passed",
+  "installed": true,
+  "reviewedAt": "2026-11-16",
+  "reviewedQuestionsSha256": "526c6c2fb1b7d69cba2e806d3f2a7ebd0b36d15de2d680dc952851fe74145492",
+  "sourceDocumentSha256": "9e6b3bc8faa666da87de834ae802712f9897fa2464017192a33a9cf208e75d1a",
+  "questionCount": 66,
+  "coverageAudit": "chapter-11-source-coverage-review.json",
+  "sourceReview": "chapter-11-source-review.json",
+  "validation": {
+    "questions": 66,
+    "answerDistribution": {
+      "A": 17,
+      "B": 17,
+      "C": 16,
+      "D": 16
+    },
+    "minimumExplanationWords": 329,
+    "distractorRationales": 195,
+    "questionStyles": {
+      "direct": 14,
+      "clinical_scenario": 52
+    },
+    "status": "passed"
+  },
+  "checks": {
+    "singleBestAnswerAuthorReview": "passed",
+    "continuousTopicOrder": "passed",
+    "individualDistractorExplanations": "passed",
+    "sourceCoverageAndCurrentUpdates": "passed_for_documented_scope",
+    "stableIdsAndAnswerSlots": "passed",
+    "offlineRichTextAndRequiredStyles": "passed_css_and_generated_html_check"
+  },
+  "limitations": [
+    "Full Harrison text was not accessed.",
+    "Verification is author source review, not independent clinician peer review.",
+    "Relevant primary indexed recommendations were used where full publisher pages were blocked; access limitations remain documented."
+  ],
+  "installedPath": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\11. Systemic Hypertension and Hypertensive Emergencies\\Questions\\f639ee485f4a58bd3a2e.json",
+  "installedSha256": "a7893f813f100d2e6f7a3436f801ea8ff3074b7a146b9830bdc4e65a5e1cd886"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "installedChapters": 14,
+  "installedQuestions": 541,
+  "draftQuestionsWithheld": 74,
+  "otherBanksPreserved": 14,
+  "backup": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\qbank-reset-backups\\cardiology-redistribution-1794740990274378600.zip",
+  "files": [
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\1. Cardiovascular Physiology Hemodynamics and Investigations\\Questions\\3c176577fb16930450ab.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\2. Coronary Artery Disease ACS and Myocardial Infarction\\Questions\\ad0240f01c2ede24347a.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\3. Valvular Heart Diseases\\Questions\\f8d0504d0edac86d869f.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\4. Heart Failure and Cardiogenic Shock\\Questions\\0c4850ca080ac7affebd.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\5. Bradyarrhythmias Conduction Disorders and Pacemakers\\Questions\\fb08c73bac87a8a0ac3c.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\6. Supraventricular Tachyarrhythmias and Atrial Fibrillation\\Questions\\b57e8711258adfcb0ea4.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\7. Ventricular Arrhythmias Sudden Cardiac Death and ICD\\Questions\\a1f92a954412a69ab3eb.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\8. Cardiomyopathies Myocarditis and Genetic Cardiac Diseases\\Questions\\739e732b8594c25552d9.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\9. Pericardial Diseases and Cardiac Tamponade\\Questions\\337b8357465f89962f0c.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\10. Infective Endocarditis\\Questions\\77d074746fb976441327.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\12. Adult Congenital Heart Diseases\\Questions\\4b70c167bdabde8405b5.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\13. Aortic Diseases and Peripheral Vascular Diseases\\Questions\\23d4748ea19e17a0615b.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\14. Advanced ECG Interpretation and Electrophysiology\\Questions\\841ef689be4d26fd0bb7.json",
+    "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials\\Questions\\1461ca452734870759d3.json"
+  ],
+  "note": "Chapter 11 has only draft questions and remains uninstalled. All 15 canonical JSON files are delivered in the repository."
+}
