@@ -7,6 +7,7 @@ REFERENCES={
  'BREATHE5':('Bosentan in Eisenmenger syndrome: BREATHE-5 randomized trial, 2006','https://pubmed.ncbi.nlm.nih.gov/16801459/'),
  'MAESTRO':('Macitentan in Eisenmenger syndrome: MAESTRO randomized trial, 2019','https://pmc.ncbi.nlm.nih.gov/articles/PMC6314514/'),
  'BOSENTAN_LABEL':('Bosentan FDA prescribing information, revised November 2025','https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021290s048%2C209279s015lbl.pdf'),
+ 'EPOPROSTENOL_LABEL':('Epoprostenol prescribing information, DailyMed, 2026','https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=47f64fcd-cbf7-457a-9548-661fb10ff7e0'),
 }
 def S(h,t,*children):return h,[(t,list(children))]
 rows=[]
@@ -74,8 +75,13 @@ add(TOPIC,'Interpreting Eisenmenger Endothelin-Antagonist Trials',
   S('Applying Treatment and Monitoring',
   '**Bosentan blocks both ETA and ETB receptors.** For an adult weighing more than 40 kg, the labeled oral regimen starts at 62.5 mg twice daily and increases after four weeks to 125 mg twice daily if appropriate.',
   'Obtain aminotransferases before treatment and monthly thereafter; monitor hemoglobin, fluid retention and interactions. Pregnancy is contraindicated. Effective contraception is required during treatment and for one month after stopping, and bosentan can reduce hormonal contraceptive effectiveness.',
-  'Therapy is selected and escalated by congenital and PAH specialists according to symptoms, functional assessment and response. ERA and PDE5-inhibitor strategies should not be judged from a false claim that every ERA trial was positive. Persistent deterioration warrants reassessment of the full physiology and specialist escalation rather than simply reproducing a regimen from an unrelated PAH population.')],
- ['BREATHE5','MAESTRO','BOSENTAN_LABEL','ACHD2025'],style='direct',
+  'Therapy is selected and escalated by congenital and PAH specialists according to symptoms, functional assessment and response. ERA and PDE5-inhibitor strategies should not be judged from a false claim that every ERA trial was positive.'),
+  S('Escalation Beyond Oral Monotherapy',
+  '**Persistent limitation or deterioration requires reassessment and specialist escalation.** A PDE5 inhibitor is another initial option, and an ERA/PDE5-inhibitor combination may be selected according to the clinical response. Adult sildenafil commonly starts at 20 mg orally three times daily; organic nitrates and riociguat must not be coadministered.',
+  'Prostacyclin-pathway treatment may be considered when oral therapy is ineffective or poorly tolerated. For selected advanced disease, continuous IV epoprostenol is an expert-center option. The labeled initial infusion is 2 ng/kg/min, with initial increments of 2 ng/kg/min at intervals of at least 15 minutes according to tolerance; this is a monitored initiation regimen, not a fixed maintenance dose or an automatic prescription for all Eisenmenger patients.',
+  'Monitor systemic pressure, oxygenation, symptoms and fluid status. Flushing, headache, jaw pain, diarrhea and hypotension can limit titration. Interruption of a continuous epoprostenol infusion can cause dangerous rebound pulmonary hypertension; infusion access, backup delivery and infection prevention require explicit planning. Right-to-left shunting adds the need for meticulous exclusion of air from lines.',
+  'Evidence from other PAH phenotypes must not be treated as proof of the same benefit in Eisenmenger syndrome. Clinical deterioration also warrants assessment of arrhythmia, infection, iron deficiency, thromboembolism and ventricular function rather than dose escalation without reassessment.')],
+ ['BREATHE5','MAESTRO','BOSENTAN_LABEL','ACHD2025','SILDENAFIL_LABEL','EPOPROSTENOL_LABEL'],style='direct',
  table=(['Trial','Treatment / primary outcome interpretation'],[
  ['BREATHE-5, 16 weeks','Bosentan: PVR benefit; systemic saturation safety preserved'],
  ['MAESTRO, 16 weeks','Macitentan: primary 6-minute walk superiority not demonstrated']]))

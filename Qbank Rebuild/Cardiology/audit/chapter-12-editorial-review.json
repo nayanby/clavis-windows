@@ -1,7 +1,7 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "cc0ff6eda6cb2a7de1748f21a90882f6433e7115f086b828a09842c087b53c8f",
+  "bankSha256": "c8870e2adc339eec216c986c14583587250ac6bf0df0f38a6b9a0394d02a8c54",
   "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open.",
   "findings": [
     {
@@ -92,6 +92,24 @@
       "action": "Replaced arbitrary regurgitation/volume waiting thresholds and giveaway PAH-treatment wording with competing serial CMR, pulmonary vasodilator assessment and medical-optimization pathways; explained their appropriate settings.",
       "status": "revised",
       "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-029",
+      "action": "Expanded specialist escalation beyond oral monotherapy, sildenafil dose/interactions, selected IV epoprostenol initial dosing and monitoring, rebound risk and line precautions. Preserved BREATHE-5/MAESTRO primary-endpoint distinctions.",
+      "status": "revised",
+      "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-031",
+      "action": "Added precise 2025 surgical indication: at least moderate TR with HF, worsening exercise capacity or progressive RV systolic dysfunction; included qualified asymptomatic intervention features.",
+      "status": "revised",
+      "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-035",
+      "action": "Added current recommendation for surgical systemic tricuspid replacement in symptomatic severe TR with normal/mildly impaired systemic RV function; distinguished this from usual Ebstein cone reconstruction.",
+      "status": "revised",
+      "correctIndexPreserved": true
     }
   ],
   "remaining": [
@@ -111,7 +129,10 @@
       "IV. PATENT DUCTUS ARTERIOSUS",
       "V. COARCTATION OF THE AORTA",
       "VI. CONGENITAL AORTIC AND PULMONARY VALVE STENOSIS",
-      "VII. TETRALOGY OF FALLOT"
+      "VII. TETRALOGY OF FALLOT",
+      "VIII. EISENMENGER SYNDROME",
+      "IX. EBSTEIN ANOMALY",
+      "X. TRANSPOSITION OF THE GREAT ARTERIES"
     ],
     "findings": [
       "Source PFO distinction added to Q002; full VSD anatomy comparison added to Q009.",
@@ -122,7 +143,10 @@
       "Coarctation source reviewed against Q016-Q019: recognition, collateral-gradient limitations, anatomy, stent versus surgery, hypertension and surveillance are covered; intracranial screening and radiographic clues added.",
       "BAV source thresholds and family screening are covered in Q021, and pulmonary stenosis grading/balloon selection in transferred Q03-047. Noonan association and pulmonary ejection-click physiology remain to be added to the pulmonary-stenosis explanation.",
       "TOF source reviewed against Q022-Q025 and transferred Q03-048: shunt physiology, residual lesions, replacement criteria, scar VT and preprocedural imaging covered. Source blanket ICD wording requires the existing expert-context qualification rather than automatic copying.",
-      "Q024 now directly references the 2023 CT procedural white paper already used for its device-specific review."
+      "Q024 now directly references the 2023 CT procedural white paper already used for its device-specific review.",
+      "Eisenmenger source reviewed: shunt reversal, erythrocytosis, iron, trial-specific PAH evidence and antithrombotic decisions are covered. Treatment escalation expanded; full current precapillary PH thresholds and transplant context remain to be added.",
+      "Ebstein source reviewed against Q031-Q032: indexed displacement, atrialized RV, cyanosis, accessory pathways and cone repair covered; current moderate-TR intervention qualifiers added.",
+      "Transposition source reviewed against Q033-Q035: atrial-switch systemic RV/baffles, arterial-switch coronary transfer and great-vessel complications, and ccTGA anatomy/conduction covered; exact systemic-valve recommendation added."
     ],
     "references": [
       "https://doi.org/10.1016/j.jacc.2025.09.006",

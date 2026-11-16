@@ -21,8 +21,9 @@ add('Ebstein anomaly','Indexed Tricuspid Displacement and Ebstein Anatomy',
   S('Associated Findings and Management Assessment',
   '**Evaluate atrial communication, cyanosis and accessory pathways.** Elevated right atrial pressure can drive right-to-left passage through a PFO or ASD, while accessory pathways can cause reentrant tachycardia.',
   'Echocardiography defines valve anatomy and flow; CMR helps quantify functional RV anatomy and systolic performance when needed. Serial symptoms, objective exercise capacity, regurgitation and ventricular response guide specialist repair assessment.',
-  'Cone reconstruction is an established valve-preserving approach in suitable anatomy. Severe regurgitation with symptoms or progressive ventricular consequences merits congenital surgical review. An atrial communication should not be closed in isolation without considering whether the right ventricle tolerates the additional filling load.')],
- ['ESC2020','CCS2022'])
+  'Cone reconstruction is an established valve-preserving approach in suitable anatomy. The 2025 guideline recommends surgery for at least moderate tricuspid regurgitation with heart failure, worsening exercise capacity or progressive RV systolic dysfunction. Thus, severe regurgitation is not an obligatory prerequisite when these consequences are present.',
+  'In an asymptomatic patient with at least moderate regurgitation, progressive RV enlargement, right-to-left atrial desaturation, recurrent arrhythmia or paradoxical embolism can also support intervention. An atrial communication should not be closed in isolation without considering whether the right ventricle tolerates the additional filling load.')],
+ ['ESC2020','CCS2022','ACHD2025'])
 
 add('Ebstein anomaly','Accessory-Pathway Assessment Before Tricuspid Repair',
  'An adult with Ebstein anomaly is being assessed for tricuspid valve surgery. The ECG shows ventricular pre-excitation, although the patient reports no sustained palpitation. Which additional step is best supported before the operation?',
@@ -81,5 +82,6 @@ add('Transposition and systemic right ventricle','Systemic AV-Valve Disease in C
   S('Conduction, Valve and Ventricular Surveillance',
   '**The systemic RV and its tricuspid valve face chronic systemic loading.** Regurgitation and ventricular dysfunction can reinforce each other, making serial valve and ventricular assessment essential.',
   'Abnormal conduction-system anatomy predisposes to AV block, which can develop without surgery. Symptomatic complete block requires urgent rhythm assessment and pacing planning. Pacing route, ventricular activation and the risk of dyssynchrony require congenital EP expertise; a routine device approach may not suit the anatomy.',
-  'Valve intervention decisions should be made before advanced irreversible systemic RV dysfunction when possible, with expert evaluation of symptoms, regurgitation and ventricular response. Do not assume that evidence and thresholds for an ordinary systemic LV transfer unchanged. Follow-up also evaluates associated defects, arrhythmias and exercise capacity; the word corrected describes the circulatory sequence, not anatomical normality or freedom from lifelong complications.')],
+  'For symptomatic adults with severe systemic tricuspid regurgitation and normal or mildly impaired systemic RV function, the 2025 guideline recommends surgical tricuspid valve replacement. This is distinct from the valve-preserving cone-repair approach often used in ordinary Ebstein anatomy. Assess valve intervention before advanced irreversible systemic RV dysfunction when possible.',
+  'Do not assume that evidence and thresholds for an ordinary systemic LV transfer unchanged. Follow-up also evaluates associated defects, arrhythmias and exercise capacity; the word corrected describes the circulatory sequence, not anatomical normality or freedom from lifelong complications.')],
  ['ESC2020','ACHD2025'])
