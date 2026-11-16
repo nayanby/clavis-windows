@@ -42,7 +42,11 @@ rows.append(Q(TOPIC,'Confirming Protein-Losing Enteropathy After Fontan Palliati
   ('Evaluate the Failing Fontan Circuit',[
   ('**Confirmation should trigger assessment for reversible hemodynamic and lymphatic contributors.** Preserved ventricular ejection fraction does not exclude an important Fontan circulation problem.',[
    'Evaluate pathway obstruction, pulmonary resistance, ventricular filling pressure, AV-valve regurgitation and rhythm. Catheterization and specialist lymphatic imaging may be appropriate according to the findings.',
-   'Management combines nutritional support and careful fluid treatment with correction of identified lesions. Selected patients require targeted lymphatic interventions or advanced heart-failure and transplant assessment. Albumin infusion can provide temporary support in selected circumstances but does not by itself correct the cause of continuing intestinal loss.'])])],
+   'Management combines nutritional support and careful fluid treatment with correction of identified lesions. Selected patients require targeted lymphatic interventions or advanced heart-failure and transplant assessment. Albumin infusion can provide temporary support in selected circumstances but does not by itself correct the cause of continuing intestinal loss.'])]),
+  ('Related Lymphatic Complication: Plastic Bronchitis',[
+  ('**Abnormal lymphatic flow can also produce branching bronchial casts.** Cough, expectoration of casts, hypoxemia or airway obstruction suggest plastic bronchitis rather than intestinal protein loss.',[
+   'Airway compromise requires urgent respiratory assessment and, when needed, bronchoscopic cast removal. Dynamic contrast MR lymphangiography can identify abnormal pulmonary lymphatic perfusion and help plan selected lymphatic intervention at an experienced center.',
+   'Assess Fontan pressures, pathway patency and ventricular filling in parallel. A preserved ejection fraction does not exclude either lymphatic complication. Targeted treatment is anatomy-dependent; recurrent casts should not be managed as uncomplicated asthma or infection without evaluating the Fontan and lymphatic systems.'])])],
  ['ACHD2025','AAT_CLEARANCE','FONTAN_KOREA']))
 
 rows.append(Q(TOPIC,'Anticoagulation After Atrial Flutter in Fontan Circulation',

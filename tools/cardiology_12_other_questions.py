@@ -11,6 +11,7 @@ rows=[Q('Other important congenital lesions','Small Isolated Anomalous Pulmonary
  [S('Anatomy Does Not Establish an Intervention Indication',
   '**An anomalous pulmonary vein returns oxygenated blood to the systemic venous circuit.** This creates recirculation through the right heart and lungs even when the atrial septum is intact.',
   'The number and size of anomalous veins, and the lung territory they drain, influence flow burden. Unlike an ASD, the communication is not an atrial opening whose shunt is chiefly determined by relative ventricular diastolic compliance.',
+  'Scimitar syndrome is a related pattern in which anomalous right pulmonary venous drainage usually reaches the IVC. A curved vein along the right cardiac border may accompany right-lung hypoplasia and abnormal systemic arterial supply. CT/CMR should map both the venous connection and associated lung and arterial anatomy before selecting treatment.',
   'The 2025 ACHD guideline advises against surgical repair when Qp/Qs is below 1.5 and the RV is normal to mildly enlarged, because benefit has not been demonstrated. This patient fits that qualified recommendation; it is not a rule that every anomalous vein should remain untreated.'),
   S('Surveillance and Reassessment',
   '**Follow symptoms, exercise capacity, RV size and function, and pulmonary hemodynamics.** CMR can map the veins and quantify flow and chamber volumes; CT provides detailed anatomy when CMR is unsuitable.',

@@ -1,7 +1,7 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "c8870e2adc339eec216c986c14583587250ac6bf0df0f38a6b9a0394d02a8c54",
+  "bankSha256": "7b262df1204a8d24a996994f8b8d411ce1729f916cee30b587281d996a31b793",
   "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis. Focused review of Fontan preload physiology, exercise testing and noncardiac surgical planning completed with revised distractors; whole-chapter release review remains open.",
   "findings": [
     {
@@ -59,7 +59,7 @@
     },
     {
       "questionId": "cardiology-rebuild-12-002",
-      "action": "Added source-document PFO versus true ASD distinction, anatomy and the limitation of attributing substantial chronic RV volume loading to an incidental PFO.",
+      "action": "Added source-document PFO versus true ASD distinction, anatomy and the limitation of attributing substantial chronic RV volume loading to an incidental PFO. Added partial versus complete AVSD anatomy and trisomy 21 association to close the other-lesions source subsection.",
       "status": "revised",
       "correctIndexPreserved": true
     },
@@ -95,7 +95,7 @@
     },
     {
       "questionId": "cardiology-rebuild-12-029",
-      "action": "Expanded specialist escalation beyond oral monotherapy, sildenafil dose/interactions, selected IV epoprostenol initial dosing and monitoring, rebound risk and line precautions. Preserved BREATHE-5/MAESTRO primary-endpoint distinctions.",
+      "action": "Expanded specialist escalation beyond oral monotherapy, sildenafil dose/interactions, selected IV epoprostenol initial dosing and monitoring, rebound risk and line precautions. Preserved BREATHE-5/MAESTRO primary-endpoint distinctions. Specified 2025 dual-therapy recommendation and LVEF >40% qualification; added refractory-disease lung-plus-defect-repair versus heart-lung transplant context.",
       "status": "revised",
       "correctIndexPreserved": true
     },
@@ -110,17 +110,34 @@
       "action": "Added current recommendation for surgical systemic tricuspid replacement in symptomatic severe TR with normal/mildly impaired systemic RV function; distinguished this from usual Ebstein cone reconstruction.",
       "status": "revised",
       "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-026",
+      "action": "Added complete 2022 ESC/ERS precapillary PH thresholds and PVR formula using Qp rather than Qs in shunt physiology.",
+      "status": "revised",
+      "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-037",
+      "action": "Added plastic bronchitis as a related Fontan lymphatic complication, cast/airway recognition, bronchoscopic management and targeted lymphatic assessment.",
+      "status": "revised",
+      "correctIndexPreserved": true
+    },
+    {
+      "questionId": "cardiology-rebuild-12-041",
+      "action": "Added scimitar drainage pattern, imaging clue and associated pulmonary/arterial anatomy.",
+      "status": "revised",
+      "correctIndexPreserved": true
     }
   ],
   "remaining": [
-    "Review every explanation and source-document topic for clinical accuracy and completeness",
-    "Improve remaining weak distractors identified in the full stem scan",
-    "Check complete classification framework and treatment detail requirements",
-    "Verify rendered rich-text formatting",
-    "Seal release only after review and install/readback checks"
+    "Add Noonan association and inspiratory pulmonary ejection-click behavior to the transferred pulmonary-stenosis explanation and refresh its revision audit.",
+    "Finish final per-question clinical/explanation review, including pregnancy distractor quality and actionable treatment/monitoring detail.",
+    "Verify rendered rich-text formatting and requested typography.",
+    "Seal release only after final review; install and verify exact app readback, then commit and push as authorized."
   ],
   "sourceCoverageReview": {
-    "status": "partial_review",
+    "status": "all_source_sections_read_final_review_pending",
     "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
     "sectionsReadInFull": [
       "I. OVERVIEW AND CLASSIFICATION",
@@ -132,7 +149,11 @@
       "VII. TETRALOGY OF FALLOT",
       "VIII. EISENMENGER SYNDROME",
       "IX. EBSTEIN ANOMALY",
-      "X. TRANSPOSITION OF THE GREAT ARTERIES"
+      "X. TRANSPOSITION OF THE GREAT ARTERIES",
+      "XI. SINGLE-VENTRICLE PHYSIOLOGY AND FONTAN CIRCULATION",
+      "XII. OTHER IMPORTANT ADULT CONGENITAL HEART DISEASES",
+      "XIII. GENERAL MANAGEMENT OF ADULT CONGENITAL HEART DISEASE",
+      "XIV. COMPARATIVE CLINICAL FEATURES"
     ],
     "findings": [
       "Source PFO distinction added to Q002; full VSD anatomy comparison added to Q009.",
@@ -146,7 +167,11 @@
       "Q024 now directly references the 2023 CT procedural white paper already used for its device-specific review.",
       "Eisenmenger source reviewed: shunt reversal, erythrocytosis, iron, trial-specific PAH evidence and antithrombotic decisions are covered. Treatment escalation expanded; full current precapillary PH thresholds and transplant context remain to be added.",
       "Ebstein source reviewed against Q031-Q032: indexed displacement, atrialized RV, cyanosis, accessory pathways and cone repair covered; current moderate-TR intervention qualifiers added.",
-      "Transposition source reviewed against Q033-Q035: atrial-switch systemic RV/baffles, arterial-switch coronary transfer and great-vessel complications, and ccTGA anatomy/conduction covered; exact systemic-valve recommendation added."
+      "Transposition source reviewed against Q033-Q035: atrial-switch systemic RV/baffles, arterial-switch coronary transfer and great-vessel complications, and ccTGA anatomy/conduction covered; exact systemic-valve recommendation added.",
+      "Final source sections read in full. Plastic bronchitis, scimitar syndrome and complete/partial AVSD context added to existing relevant explanations rather than duplicating decisions.",
+      "Precapillary PH thresholds, Qp-based PVR calculation, transplant context and the qualified dual-therapy recommendation are now included.",
+      "General diagnostic investigations, shunt assessment, arrhythmia, endocarditis prophylaxis, pregnancy and lifelong surveillance are mapped to existing questions. Final display and whole-chapter clinical review remain open.",
+      "Source comparative findings are represented across the individual lesion explanations; a second duplicate comparison question is not required."
     ],
     "references": [
       "https://doi.org/10.1016/j.jacc.2025.09.006",

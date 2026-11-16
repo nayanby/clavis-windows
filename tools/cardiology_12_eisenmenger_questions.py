@@ -3,6 +3,7 @@ from qbank_json_chapters import question as Q
 
 TOPIC='Eisenmenger syndrome and cyanotic physiology'
 REFERENCES={
+ 'PH2022':('ESC/ERS pulmonary hypertension guideline, 2022','https://doi.org/10.1183/13993003.00879-2022'),
  'EISEN_IRON':('Prospective iron replacement in cyanotic CHD, Tay et al., 2011','https://pubmed.ncbi.nlm.nih.gov/20580108/'),
  'BREATHE5':('Bosentan in Eisenmenger syndrome: BREATHE-5 randomized trial, 2006','https://pubmed.ncbi.nlm.nih.gov/16801459/'),
  'MAESTRO':('Macitentan in Eisenmenger syndrome: MAESTRO randomized trial, 2019','https://pmc.ncbi.nlm.nih.gov/articles/PMC6314514/'),
@@ -21,12 +22,13 @@ add(TOPIC,'Eisenmenger Syndrome Within PAH Associated With Congenital Shunts',
  ('PAH with a prevalent systemic-to-pulmonary shunt','That group retains predominant left-to-right flow, generally without resting cyanosis from shunt reversal. The current net Qp/Qs below one and arterial desaturation place this patient in the Eisenmenger group.')],
  [S('Evolution of the Pulmonary Vascular Lesion',
   '**A large congenital systemic-to-pulmonary communication can produce progressive pulmonary vascular remodeling.** As resistance rises, the original flow excess diminishes and eventually becomes bidirectional or predominantly right-to-left.',
-  'The low wedge pressure supports a precapillary process rather than isolated pulmonary venous hypertension. The history establishes the causal large shunt; cyanosis alone would not distinguish pulmonary vascular disease from restricted pulmonary flow in another congenital lesion.'),
+  'The 2022 ESC/ERS definition of precapillary PH requires resting mean PA pressure >20 mmHg, wedge pressure ≤15 mmHg and PVR >2 Wood units on right-heart catheterization. These thresholds identify a hemodynamic category; Eisenmenger diagnosis additionally requires the causal congenital shunt and its advanced bidirectional or right-to-left physiology.',
+  'PVR = (mean PA pressure − wedge pressure)/Qp, with pressures in mmHg and pulmonary flow in L/min, yielding Wood units. In a shunt, Qp and systemic flow Qs are not interchangeable. The low wedge pressure here supports a precapillary process; cyanosis alone would not distinguish pulmonary vascular disease from restricted pulmonary flow in another congenital lesion.'),
   S('Implications for Repair and Ongoing Care',
   '**Established Eisenmenger physiology is not an uncomplicated closure indication.** Eliminating the communication can remove a pressure-relief route and precipitate severe right-heart failure.',
   'A fall in pulmonary pressure during treatment does not by itself establish reversibility or justify closure. Expert assessment integrates resistance, flow direction, filling pressures and ventricular function; selected treat-and-repair pathways for other shunt phenotypes must not be transferred automatically.',
   'Management includes ACHD and pulmonary-hypertension expertise, functional assessment, iron and renal monitoring, and evaluation for targeted PAH therapy. Bleeding, arrhythmia, paradoxical embolism and infection can complicate cyanotic disease. Pregnancy counseling is essential because maternal risk is very high. Intravascular procedures require meticulous exclusion of air from lines when right-to-left passage is possible.')],
- ['ESC2020','ACHD2025'],table=(['PAH-CHD group','Distinguishing context'],[
+ ['ESC2020','ACHD2025','PH2022'],table=(['PAH-CHD group','Distinguishing context'],[
  ['Eisenmenger','Large causal shunt with advanced pulmonary vascular disease and reversal'],
  ['Prevalent systemic-to-pulmonary shunt','Predominantly left-to-right flow remains'],
  ['Small/coincidental defect','Defect insufficient to explain the pulmonary vascular disease'],
@@ -77,10 +79,11 @@ add(TOPIC,'Interpreting Eisenmenger Endothelin-Antagonist Trials',
   'Obtain aminotransferases before treatment and monthly thereafter; monitor hemoglobin, fluid retention and interactions. Pregnancy is contraindicated. Effective contraception is required during treatment and for one month after stopping, and bosentan can reduce hormonal contraceptive effectiveness.',
   'Therapy is selected and escalated by congenital and PAH specialists according to symptoms, functional assessment and response. ERA and PDE5-inhibitor strategies should not be judged from a false claim that every ERA trial was positive.'),
   S('Escalation Beyond Oral Monotherapy',
-  '**Persistent limitation or deterioration requires reassessment and specialist escalation.** A PDE5 inhibitor is another initial option, and an ERA/PDE5-inhibitor combination may be selected according to the clinical response. Adult sildenafil commonly starts at 20 mg orally three times daily; organic nitrates and riociguat must not be coadministered.',
+  '**Persistent limitation or deterioration requires reassessment and specialist escalation.** The 2025 ACHD guideline recommends an ERA plus a PDE5 inhibitor for patients with LVEF >40% who remain symptomatic or develop worsening exercise capacity on single-agent PAH treatment. Adult sildenafil commonly starts at 20 mg orally three times daily; organic nitrates and riociguat must not be coadministered.',
   'Prostacyclin-pathway treatment may be considered when oral therapy is ineffective or poorly tolerated. For selected advanced disease, continuous IV epoprostenol is an expert-center option. The labeled initial infusion is 2 ng/kg/min, with initial increments of 2 ng/kg/min at intervals of at least 15 minutes according to tolerance; this is a monitored initiation regimen, not a fixed maintenance dose or an automatic prescription for all Eisenmenger patients.',
   'Monitor systemic pressure, oxygenation, symptoms and fluid status. Flushing, headache, jaw pain, diarrhea and hypotension can limit titration. Interruption of a continuous epoprostenol infusion can cause dangerous rebound pulmonary hypertension; infusion access, backup delivery and infection prevention require explicit planning. Right-to-left shunting adds the need for meticulous exclusion of air from lines.',
-  'Evidence from other PAH phenotypes must not be treated as proof of the same benefit in Eisenmenger syndrome. Clinical deterioration also warrants assessment of arrhythmia, infection, iron deficiency, thromboembolism and ventricular function rather than dose escalation without reassessment.')],
+  'Evidence from other PAH phenotypes must not be treated as proof of the same benefit in Eisenmenger syndrome. Clinical deterioration also warrants assessment of arrhythmia, infection, iron deficiency, thromboembolism and ventricular function rather than dose escalation without reassessment.',
+  'High-risk disease remaining symptomatic despite optimal treatment warrants transplant-center assessment. Options include lung transplantation with repair of a suitable cardiac defect or heart–lung transplantation; ventricular function, defect anatomy and other organ disease determine the pathway. This combined advanced-care strategy is distinct from closing the shunt alone in established Eisenmenger physiology.')],
  ['BREATHE5','MAESTRO','BOSENTAN_LABEL','ACHD2025','SILDENAFIL_LABEL','EPOPROSTENOL_LABEL'],style='direct',
  table=(['Trial','Treatment / primary outcome interpretation'],[
  ['BREATHE-5, 16 weeks','Bosentan: PVR benefit; systemic saturation safety preserved'],
