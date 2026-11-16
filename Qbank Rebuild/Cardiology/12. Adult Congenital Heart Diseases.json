@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 43,
+  "targetQuestions": 44,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3352,6 +3352,89 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Apply current liver surveillance and interpret congestive liver findings"
+    },
+    {
+      "id": "cardiology-rebuild-12-040",
+      "topic": "Fontan and single-ventricle circulation",
+      "question": "An adult with Fontan circulation develops new atrial flutter and worsening exercise intolerance. After initial rate slowing, blood pressure is maintained, but venous congestion and fatigue persist. Which strategy best addresses the risk of progressive Fontan failure?",
+      "options": [
+        "Start pulmonary vasodilator treatment and reserve cardioversion for failure of that therapy",
+        "Continue rate control alone and reassess ventricular function at routine follow-up",
+        "Escalate diuresis first and defer rhythm restoration until congestion has resolved",
+        "Plan timely rhythm restoration with thrombus assessment and anticoagulation, while evaluating the Fontan circuit"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "New Atrial Flutter and Fontan Hemodynamic Deterioration\n\nCorrect answer: Plan timely rhythm restoration with thrombus assessment and anticoagulation, while evaluating the Fontan circuit\n\nWhy Rate Control May Be Insufficient\n\n**Effective atrial rhythm supports filling in a circulation already limited by passive pulmonary flow.** Flutter can impair atrioventricular coordination and reduce output even after the ventricular rate has slowed.\n\nLoss of atrial contribution, pulmonary venous flow disturbance and shortened or ineffective filling can interact with AV-valve regurgitation and abnormal ventricular relaxation. Symptoms may therefore be disproportionate to the apparent rate or resting ejection fraction.\n\nRhythm Restoration and Procedural Planning\n\n**The 2025 ACHD guideline recommends timely cardioversion for new atrial flutter or fibrillation in Fontan adults.** Pharmacological or electrical restoration is selected according to rhythm, stability and specialist assessment.\n\nIn a stable patient, assess thrombus risk, anticoagulation and the need for imaging before cardioversion. Do not assume a short reported duration excludes thrombus in this complex circulation. If the rhythm causes hemodynamic instability, urgent synchronized electrical cardioversion takes priority and should not be delayed for an elective anticoagulation interval.\n\nSedation and ventilation require attention to venous return, preload and pulmonary resistance. Excessive airway pressures, hypoxemia or acidosis can compromise passive pulmonary flow. Plan with clinicians familiar with the anatomy and circulation rather than treating procedural preparation as routine.\n\nSearch for a Hemodynamic Trigger\n\n**New or worsening atrial tachyarrhythmia should prompt imaging and catheter assessment when indicated.** Consider pathway obstruction or thrombosis, AV-valve disease, ventricular dysfunction and elevated filling pressure.\n\nLong-term management may include congenital EP evaluation and ablation, recurrence monitoring and appropriate anticoagulation. Correcting a contributory lesion and maintaining an effective rhythm are complementary goals. Persistent Fontan failure despite treatment warrants advanced specialist assessment, including transplantation evaluation when appropriate.\n\nStart pulmonary vasodilator treatment and reserve cardioversion for failure of that therapy: Selected Fontan patients with pulmonary vascular limitation may benefit from vasodilators after physiological assessment. This does not substitute for treating a new atrial arrhythmia, and unmeasured filling pressures may alter the suitability of vasodilator therapy.\n\nContinue rate control alone and reassess ventricular function at routine follow-up: Rate slowing can provide initial stabilization, but loss of effective atrial rhythm can impair Fontan filling even with an acceptable ventricular rate. Persistent symptoms warrant timely rhythm restoration and hemodynamic evaluation rather than routine delayed review.\n\nEscalate diuresis first and defer rhythm restoration until congestion has resolved: Careful diuresis may help congestion, but excessive preload reduction can worsen output. The atrial arrhythmia itself may be driving the deterioration and should not be left untreated while waiting for complete decongestion.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nKorean Fontan clinical practice consensus, 2025 — https://doi.org/10.4070/kcj.2025.0455",
+      "explanationHtml": "<h2>New Atrial Flutter and Fontan Hemodynamic Deterioration</h2><p><strong>Correct answer: D — Plan timely rhythm restoration with thrombus assessment and anticoagulation, while evaluating the Fontan circuit</strong></p><h3>Why Rate Control May Be Insufficient</h3><ul><li><strong>Effective atrial rhythm supports filling in a circulation already limited by passive pulmonary flow.</strong> Flutter can impair atrioventricular coordination and reduce output even after the ventricular rate has slowed.<ul><li>Loss of atrial contribution, pulmonary venous flow disturbance and shortened or ineffective filling can interact with AV-valve regurgitation and abnormal ventricular relaxation. Symptoms may therefore be disproportionate to the apparent rate or resting ejection fraction.</li></ul></li></ul><h3>Rhythm Restoration and Procedural Planning</h3><ul><li><strong>The 2025 ACHD guideline recommends timely cardioversion for new atrial flutter or fibrillation in Fontan adults.</strong> Pharmacological or electrical restoration is selected according to rhythm, stability and specialist assessment.<ul><li>In a stable patient, assess thrombus risk, anticoagulation and the need for imaging before cardioversion. Do not assume a short reported duration excludes thrombus in this complex circulation. If the rhythm causes hemodynamic instability, urgent synchronized electrical cardioversion takes priority and should not be delayed for an elective anticoagulation interval.</li><li>Sedation and ventilation require attention to venous return, preload and pulmonary resistance. Excessive airway pressures, hypoxemia or acidosis can compromise passive pulmonary flow. Plan with clinicians familiar with the anatomy and circulation rather than treating procedural preparation as routine.</li></ul></li></ul><h3>Search for a Hemodynamic Trigger</h3><ul><li><strong>New or worsening atrial tachyarrhythmia should prompt imaging and catheter assessment when indicated.</strong> Consider pathway obstruction or thrombosis, AV-valve disease, ventricular dysfunction and elevated filling pressure.<ul><li>Long-term management may include congenital EP evaluation and ablation, recurrence monitoring and appropriate anticoagulation. Correcting a contributory lesion and maintaining an effective rhythm are complementary goals. Persistent Fontan failure despite treatment warrants advanced specialist assessment, including transplantation evaluation when appropriate.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Start pulmonary vasodilator treatment and reserve cardioversion for failure of that therapy:</strong> Selected Fontan patients with pulmonary vascular limitation may benefit from vasodilators after physiological assessment. This does not substitute for treating a new atrial arrhythmia, and unmeasured filling pressures may alter the suitability of vasodilator therapy.</li><li><strong>B — Continue rate control alone and reassess ventricular function at routine follow-up:</strong> Rate slowing can provide initial stabilization, but loss of effective atrial rhythm can impair Fontan filling even with an acceptable ventricular rate. Persistent symptoms warrant timely rhythm restoration and hemodynamic evaluation rather than routine delayed review.</li><li><strong>C — Escalate diuresis first and defer rhythm restoration until congestion has resolved:</strong> Careful diuresis may help congestion, but excessive preload reduction can worsen output. The atrial arrhythmia itself may be driving the deterioration and should not be left untreated while waiting for complete decongestion.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.4070/kcj.2025.0455\">Korean Fontan clinical practice consensus, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "New Atrial Flutter and Fontan Hemodynamic Deterioration",
+        "sections": [
+          {
+            "heading": "Why Rate Control May Be Insufficient",
+            "bullets": [
+              {
+                "text": "**Effective atrial rhythm supports filling in a circulation already limited by passive pulmonary flow.** Flutter can impair atrioventricular coordination and reduce output even after the ventricular rate has slowed.",
+                "children": [
+                  "Loss of atrial contribution, pulmonary venous flow disturbance and shortened or ineffective filling can interact with AV-valve regurgitation and abnormal ventricular relaxation. Symptoms may therefore be disproportionate to the apparent rate or resting ejection fraction."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Rhythm Restoration and Procedural Planning",
+            "bullets": [
+              {
+                "text": "**The 2025 ACHD guideline recommends timely cardioversion for new atrial flutter or fibrillation in Fontan adults.** Pharmacological or electrical restoration is selected according to rhythm, stability and specialist assessment.",
+                "children": [
+                  "In a stable patient, assess thrombus risk, anticoagulation and the need for imaging before cardioversion. Do not assume a short reported duration excludes thrombus in this complex circulation. If the rhythm causes hemodynamic instability, urgent synchronized electrical cardioversion takes priority and should not be delayed for an elective anticoagulation interval.",
+                  "Sedation and ventilation require attention to venous return, preload and pulmonary resistance. Excessive airway pressures, hypoxemia or acidosis can compromise passive pulmonary flow. Plan with clinicians familiar with the anatomy and circulation rather than treating procedural preparation as routine."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Search for a Hemodynamic Trigger",
+            "bullets": [
+              {
+                "text": "**New or worsening atrial tachyarrhythmia should prompt imaging and catheter assessment when indicated.** Consider pathway obstruction or thrombosis, AV-valve disease, ventricular dysfunction and elevated filling pressure.",
+                "children": [
+                  "Long-term management may include congenital EP evaluation and ablation, recurrence monitoring and appropriate anticoagulation. Correcting a contributory lesion and maintaining an effective rhythm are complementary goals. Persistent Fontan failure despite treatment warrants advanced specialist assessment, including transplantation evaluation when appropriate."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Selected Fontan patients with pulmonary vascular limitation may benefit from vasodilators after physiological assessment. This does not substitute for treating a new atrial arrhythmia, and unmeasured filling pressures may alter the suitability of vasodilator therapy."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Rate slowing can provide initial stabilization, but loss of effective atrial rhythm can impair Fontan filling even with an acceptable ventricular rate. Persistent symptoms warrant timely rhythm restoration and hemodynamic evaluation rather than routine delayed review."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Careful diuresis may help congestion, but excessive preload reduction can worsen output. The atrial arrhythmia itself may be driving the deterioration and should not be left untreated while waiting for complete decongestion."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "Korean Fontan clinical practice consensus, 2025",
+          "url": "https://doi.org/10.4070/kcj.2025.0455"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Assess exercise limitation arrhythmia and procedural hemodynamic risk"
     }
   ],
   "plannedQuestions": 55,
@@ -3360,9 +3443,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 39,
+    "draftQuestions": 40,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 39
+    "newQuestionsAfterRedistribution": 40
   }
 }

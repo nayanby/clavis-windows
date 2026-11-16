@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 43,
+  "authoredQuestions": 44,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -68,7 +68,8 @@
     "cardiology-rebuild-12-036",
     "cardiology-rebuild-12-037",
     "cardiology-rebuild-12-038",
-    "cardiology-rebuild-12-039"
+    "cardiology-rebuild-12-039",
+    "cardiology-rebuild-12-040"
   ],
   "sources": [
     {
@@ -217,18 +218,18 @@
     }
   ],
   "validation": {
-    "questions": 43,
+    "questions": 44,
     "answerDistribution": {
       "A": 11,
       "B": 11,
       "C": 11,
-      "D": 10
+      "D": 11
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 123,
+    "distractorRationales": 126,
     "questionStyles": {
       "direct": 5,
-      "clinical_scenario": 38
+      "clinical_scenario": 39
     },
     "status": "passed"
   },
@@ -328,7 +329,7 @@
   "fontanChecks": [
     "Increased pulmonary resistance limits passive pulmonary flow and systemic ventricular preload; a preserved ejection fraction does not establish normal output."
   ],
-  "nextWork": "Continue with Fontan complications, thromboprophylaxis and liver surveillance; foundations, remaining congenital lesions, general management and final whole-chapter review also remain pending.",
+  "nextWork": "Continue with remaining congenital lesions, foundations and general management, followed by whole-chapter coverage and medical review.",
   "limitations": [
     "Four transferred questions retained verbatim with their original IDs.",
     "New content has author source checks, not independent clinician review.",
