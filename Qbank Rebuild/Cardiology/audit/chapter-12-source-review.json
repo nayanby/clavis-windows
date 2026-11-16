@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 50,
+  "authoredQuestions": 51,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -75,7 +75,8 @@
     "cardiology-rebuild-12-043",
     "cardiology-rebuild-12-044",
     "cardiology-rebuild-12-045",
-    "cardiology-rebuild-12-046"
+    "cardiology-rebuild-12-046",
+    "cardiology-rebuild-12-047"
   ],
   "sources": [
     {
@@ -229,21 +230,25 @@
     {
       "label": "AHA prevention of infective endocarditis wallet card",
       "url": "https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf"
+    },
+    {
+      "label": "ESC and partner societies: anesthesia for ACHD noncardiac surgery, 2026",
+      "url": "https://academic.oup.com/ehjvshd/article/2/1/xwaf005/8539866"
     }
   ],
   "validation": {
-    "questions": 50,
+    "questions": 51,
     "answerDistribution": {
       "A": 13,
       "B": 13,
-      "C": 12,
+      "C": 13,
       "D": 12
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 144,
+    "distractorRationales": 147,
     "questionStyles": {
       "direct": 5,
-      "clinical_scenario": 45
+      "clinical_scenario": 46
     },
     "status": "passed"
   },

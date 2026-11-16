@@ -60,3 +60,24 @@ rows.append(Q(TOPIC,'Objective Functional Assessment Before Exercise Advice',
   'Stable patients may benefit from progressive aerobic training and selected resistance exercise. The intensity and supervision should match the lesion and physiological risk; competitive sport requires a more specific assessment than ordinary daily activity.',
   'Severe obstruction, significant aortopathy, uncontrolled arrhythmia or other high-risk findings can alter the plan. Conversely, a congenital diagnosis alone does not justify lifelong inactivity. When CPET is unsafe or cannot yield reliable information, use an appropriate alternative such as a six-minute walk test and interpret its narrower scope explicitly.')],
  ['ACHD2025','AHA_CPET']))
+
+REFERENCES['ACHD_ANESTHESIA']=('ESC and partner societies: anesthesia for ACHD noncardiac surgery, 2026','https://academic.oup.com/ehjvshd/article/2/1/xwaf005/8539866')
+rows.append(Q(TOPIC,'Planning Noncardiac Surgery in Fontan Circulation',
+ 'A clinically stable 31-year-old with Fontan circulation is scheduled for elective laparoscopic abdominal surgery. Ventricular ejection fraction is preserved, but there is mild cyanosis and Fontan-associated liver disease. Which preoperative approach is most appropriate?',
+ 'Arrange ACHD and anesthesia planning of physiology, procedure location and postoperative support',[
+ ('Use the standard acquired-heart-disease risk score as the sole cardiac assessment','General risk tools can contribute information about comorbidity and the operation. They do not adequately encode Fontan preload dependence, venous pathways, cyanosis and organ complications, so they cannot replace congenital assessment.'),
+ ('Obtain a normal resting echocardiogram and proceed without further congenital review','Echocardiography is useful, but preserved ventricular systolic function does not establish normal Fontan hemodynamics or exclude extracardiac risk. The surgical and anesthetic effects on the entire circuit require planning.'),
+ ('Perform routine coronary angiography before determining whether surgery is feasible','Coronary angiography is appropriate for specific coronary indications. In this patient the major known issues concern Fontan physiology, cyanosis and liver disease; an invasive coronary study is not a universal preoperative requirement.')],
+ [S('Evaluate the Patient and the Planned Procedure',
+  '**Risk depends on congenital anatomy, current physiology, organ complications and the operation itself.** A childhood procedure described as successful does not make the adult circulation equivalent to a normal biventricular heart.',
+  'Review operative records, functional status, rhythm, ventricular and AV-valve function, oxygen saturation, venous pathway patency and relevant imaging. Assess hepatic and renal function, blood count, coagulation and current antithrombotic treatment.',
+  'An ACHD cardiologist should help determine the appropriate center, additional investigations, optimization and postoperative observation. Elective procedures allow coordinated planning; urgent procedures require rapid risk assessment without delaying necessary treatment for tests unlikely to change immediate care.'),
+  S('Anticipate Fontan Hemodynamic Vulnerability',
+  '**Pulmonary flow depends on systemic venous pressure and low resistance without a subpulmonary pump.** Positive-pressure ventilation, pneumoperitoneum and positioning may alter venous return and pulmonary flow.',
+  'Avoid hypoxemia, hypercapnia, acidosis and substantial hypovolemia. Balance fluid administration against venous congestion rather than using either unrestricted loading or aggressive depletion. Ventilation and insufflation strategies require individualized discussion with the surgical and anesthesia teams.',
+  'Residual right-to-left communication increases concern about paradoxical air embolism. Meticulous line preparation and appropriate air precautions matter. Abnormal venous anatomy may also affect vascular access and interpretation of pressure measurements.'),
+  S('Plan Recovery as Well as Induction',
+  '**Postoperative pain, hypoventilation, bleeding, arrhythmia and fluid shifts can destabilize the circulation.** Decide monitoring intensity and escalation resources before the procedure.',
+  'Anticoagulant interruption and resumption require assessment of the actual indication, procedure bleeding risk and organ function. A blanket rule for every Fontan patient is inappropriate. The plan should identify who will manage postoperative congenital or rhythm problems and when reassessment is needed.',
+  'Specialist involvement does not imply every operation requires the same invasive monitoring or intensive-care admission. It permits a proportionate plan based on anatomy, physiology and the anticipated stresses of the procedure.')],
+ ['ACHD2025','ACHD_ANESTHESIA']))

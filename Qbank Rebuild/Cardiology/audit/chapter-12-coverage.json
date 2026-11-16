@@ -4,9 +4,9 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 50,
+  "authoredQuestions": 51,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 46,
+  "newDraftQuestions": 47,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
@@ -146,7 +146,7 @@
     {
       "section": "General adult congenital management",
       "plannedQuestions": 5,
-      "authoredQuestions": 3,
+      "authoredQuestions": 4,
       "decisions": [
         "Plan pregnancy and contraception using lesion-specific physiological risk",
         "Select endocarditis prophylaxis according to the actual high-risk indication",
@@ -406,6 +406,11 @@
       "questionId": "cardiology-rebuild-12-046",
       "section": "General adult congenital management",
       "decision": "Individualize activity and objective exercise assessment"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-047",
+      "section": "General adult congenital management",
+      "decision": "Use specialist multidisciplinary planning for noncardiac procedures"
     }
   ]
 }

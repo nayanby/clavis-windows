@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 50,
+  "targetQuestions": 51,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3933,6 +3933,91 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Individualize activity and objective exercise assessment"
+    },
+    {
+      "id": "cardiology-rebuild-12-047",
+      "topic": "General adult congenital management",
+      "question": "A clinically stable 31-year-old with Fontan circulation is scheduled for elective laparoscopic abdominal surgery. Ventricular ejection fraction is preserved, but there is mild cyanosis and Fontan-associated liver disease. Which preoperative approach is most appropriate?",
+      "options": [
+        "Obtain a normal resting echocardiogram and proceed without further congenital review",
+        "Use the standard acquired-heart-disease risk score as the sole cardiac assessment",
+        "Arrange ACHD and anesthesia planning of physiology, procedure location and postoperative support",
+        "Perform routine coronary angiography before determining whether surgery is feasible"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Planning Noncardiac Surgery in Fontan Circulation\n\nCorrect answer: Arrange ACHD and anesthesia planning of physiology, procedure location and postoperative support\n\nEvaluate the Patient and the Planned Procedure\n\n**Risk depends on congenital anatomy, current physiology, organ complications and the operation itself.** A childhood procedure described as successful does not make the adult circulation equivalent to a normal biventricular heart.\n\nReview operative records, functional status, rhythm, ventricular and AV-valve function, oxygen saturation, venous pathway patency and relevant imaging. Assess hepatic and renal function, blood count, coagulation and current antithrombotic treatment.\n\nAn ACHD cardiologist should help determine the appropriate center, additional investigations, optimization and postoperative observation. Elective procedures allow coordinated planning; urgent procedures require rapid risk assessment without delaying necessary treatment for tests unlikely to change immediate care.\n\nAnticipate Fontan Hemodynamic Vulnerability\n\n**Pulmonary flow depends on systemic venous pressure and low resistance without a subpulmonary pump.** Positive-pressure ventilation, pneumoperitoneum and positioning may alter venous return and pulmonary flow.\n\nAvoid hypoxemia, hypercapnia, acidosis and substantial hypovolemia. Balance fluid administration against venous congestion rather than using either unrestricted loading or aggressive depletion. Ventilation and insufflation strategies require individualized discussion with the surgical and anesthesia teams.\n\nResidual right-to-left communication increases concern about paradoxical air embolism. Meticulous line preparation and appropriate air precautions matter. Abnormal venous anatomy may also affect vascular access and interpretation of pressure measurements.\n\nPlan Recovery as Well as Induction\n\n**Postoperative pain, hypoventilation, bleeding, arrhythmia and fluid shifts can destabilize the circulation.** Decide monitoring intensity and escalation resources before the procedure.\n\nAnticoagulant interruption and resumption require assessment of the actual indication, procedure bleeding risk and organ function. A blanket rule for every Fontan patient is inappropriate. The plan should identify who will manage postoperative congenital or rhythm problems and when reassessment is needed.\n\nSpecialist involvement does not imply every operation requires the same invasive monitoring or intensive-care admission. It permits a proportionate plan based on anatomy, physiology and the anticipated stresses of the procedure.\n\nObtain a normal resting echocardiogram and proceed without further congenital review: Echocardiography is useful, but preserved ventricular systolic function does not establish normal Fontan hemodynamics or exclude extracardiac risk. The surgical and anesthetic effects on the entire circuit require planning.\n\nUse the standard acquired-heart-disease risk score as the sole cardiac assessment: General risk tools can contribute information about comorbidity and the operation. They do not adequately encode Fontan preload dependence, venous pathways, cyanosis and organ complications, so they cannot replace congenital assessment.\n\nPerform routine coronary angiography before determining whether surgery is feasible: Coronary angiography is appropriate for specific coronary indications. In this patient the major known issues concern Fontan physiology, cyanosis and liver disease; an invasive coronary study is not a universal preoperative requirement.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC and partner societies: anesthesia for ACHD noncardiac surgery, 2026 — https://academic.oup.com/ehjvshd/article/2/1/xwaf005/8539866",
+      "explanationHtml": "<h2>Planning Noncardiac Surgery in Fontan Circulation</h2><p><strong>Correct answer: C — Arrange ACHD and anesthesia planning of physiology, procedure location and postoperative support</strong></p><h3>Evaluate the Patient and the Planned Procedure</h3><ul><li><strong>Risk depends on congenital anatomy, current physiology, organ complications and the operation itself.</strong> A childhood procedure described as successful does not make the adult circulation equivalent to a normal biventricular heart.<ul><li>Review operative records, functional status, rhythm, ventricular and AV-valve function, oxygen saturation, venous pathway patency and relevant imaging. Assess hepatic and renal function, blood count, coagulation and current antithrombotic treatment.</li><li>An ACHD cardiologist should help determine the appropriate center, additional investigations, optimization and postoperative observation. Elective procedures allow coordinated planning; urgent procedures require rapid risk assessment without delaying necessary treatment for tests unlikely to change immediate care.</li></ul></li></ul><h3>Anticipate Fontan Hemodynamic Vulnerability</h3><ul><li><strong>Pulmonary flow depends on systemic venous pressure and low resistance without a subpulmonary pump.</strong> Positive-pressure ventilation, pneumoperitoneum and positioning may alter venous return and pulmonary flow.<ul><li>Avoid hypoxemia, hypercapnia, acidosis and substantial hypovolemia. Balance fluid administration against venous congestion rather than using either unrestricted loading or aggressive depletion. Ventilation and insufflation strategies require individualized discussion with the surgical and anesthesia teams.</li><li>Residual right-to-left communication increases concern about paradoxical air embolism. Meticulous line preparation and appropriate air precautions matter. Abnormal venous anatomy may also affect vascular access and interpretation of pressure measurements.</li></ul></li></ul><h3>Plan Recovery as Well as Induction</h3><ul><li><strong>Postoperative pain, hypoventilation, bleeding, arrhythmia and fluid shifts can destabilize the circulation.</strong> Decide monitoring intensity and escalation resources before the procedure.<ul><li>Anticoagulant interruption and resumption require assessment of the actual indication, procedure bleeding risk and organ function. A blanket rule for every Fontan patient is inappropriate. The plan should identify who will manage postoperative congenital or rhythm problems and when reassessment is needed.</li><li>Specialist involvement does not imply every operation requires the same invasive monitoring or intensive-care admission. It permits a proportionate plan based on anatomy, physiology and the anticipated stresses of the procedure.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Obtain a normal resting echocardiogram and proceed without further congenital review:</strong> Echocardiography is useful, but preserved ventricular systolic function does not establish normal Fontan hemodynamics or exclude extracardiac risk. The surgical and anesthetic effects on the entire circuit require planning.</li><li><strong>B — Use the standard acquired-heart-disease risk score as the sole cardiac assessment:</strong> General risk tools can contribute information about comorbidity and the operation. They do not adequately encode Fontan preload dependence, venous pathways, cyanosis and organ complications, so they cannot replace congenital assessment.</li><li><strong>D — Perform routine coronary angiography before determining whether surgery is feasible:</strong> Coronary angiography is appropriate for specific coronary indications. In this patient the major known issues concern Fontan physiology, cyanosis and liver disease; an invasive coronary study is not a universal preoperative requirement.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://academic.oup.com/ehjvshd/article/2/1/xwaf005/8539866\">ESC and partner societies: anesthesia for ACHD noncardiac surgery, 2026</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Planning Noncardiac Surgery in Fontan Circulation",
+        "sections": [
+          {
+            "heading": "Evaluate the Patient and the Planned Procedure",
+            "bullets": [
+              {
+                "text": "**Risk depends on congenital anatomy, current physiology, organ complications and the operation itself.** A childhood procedure described as successful does not make the adult circulation equivalent to a normal biventricular heart.",
+                "children": [
+                  "Review operative records, functional status, rhythm, ventricular and AV-valve function, oxygen saturation, venous pathway patency and relevant imaging. Assess hepatic and renal function, blood count, coagulation and current antithrombotic treatment.",
+                  "An ACHD cardiologist should help determine the appropriate center, additional investigations, optimization and postoperative observation. Elective procedures allow coordinated planning; urgent procedures require rapid risk assessment without delaying necessary treatment for tests unlikely to change immediate care."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Anticipate Fontan Hemodynamic Vulnerability",
+            "bullets": [
+              {
+                "text": "**Pulmonary flow depends on systemic venous pressure and low resistance without a subpulmonary pump.** Positive-pressure ventilation, pneumoperitoneum and positioning may alter venous return and pulmonary flow.",
+                "children": [
+                  "Avoid hypoxemia, hypercapnia, acidosis and substantial hypovolemia. Balance fluid administration against venous congestion rather than using either unrestricted loading or aggressive depletion. Ventilation and insufflation strategies require individualized discussion with the surgical and anesthesia teams.",
+                  "Residual right-to-left communication increases concern about paradoxical air embolism. Meticulous line preparation and appropriate air precautions matter. Abnormal venous anatomy may also affect vascular access and interpretation of pressure measurements."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Plan Recovery as Well as Induction",
+            "bullets": [
+              {
+                "text": "**Postoperative pain, hypoventilation, bleeding, arrhythmia and fluid shifts can destabilize the circulation.** Decide monitoring intensity and escalation resources before the procedure.",
+                "children": [
+                  "Anticoagulant interruption and resumption require assessment of the actual indication, procedure bleeding risk and organ function. A blanket rule for every Fontan patient is inappropriate. The plan should identify who will manage postoperative congenital or rhythm problems and when reassessment is needed.",
+                  "Specialist involvement does not imply every operation requires the same invasive monitoring or intensive-care admission. It permits a proportionate plan based on anatomy, physiology and the anticipated stresses of the procedure."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Echocardiography is useful, but preserved ventricular systolic function does not establish normal Fontan hemodynamics or exclude extracardiac risk. The surgical and anesthetic effects on the entire circuit require planning."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "General risk tools can contribute information about comorbidity and the operation. They do not adequately encode Fontan preload dependence, venous pathways, cyanosis and organ complications, so they cannot replace congenital assessment."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Coronary angiography is appropriate for specific coronary indications. In this patient the major known issues concern Fontan physiology, cyanosis and liver disease; an invasive coronary study is not a universal preoperative requirement."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC and partner societies: anesthesia for ACHD noncardiac surgery, 2026",
+          "url": "https://academic.oup.com/ehjvshd/article/2/1/xwaf005/8539866"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Use specialist multidisciplinary planning for noncardiac procedures"
     }
   ],
   "plannedQuestions": 55,
@@ -3941,9 +4026,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 46,
+    "draftQuestions": 47,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 46
+    "newQuestionsAfterRedistribution": 47
   }
 }
