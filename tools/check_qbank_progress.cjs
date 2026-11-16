@@ -55,7 +55,8 @@ async function until(run,label){for(let i=0;i<150;i++){try{const value=await run
  assert.equal((await state()).attempt.status,'submitted');await sessionButton('Back to Qbank');
  await until(()=>has('[data-qbank-tile]','Result: 2 / 3'),'result on tile');await shot('module-result');await click('[data-qbank-tile] button','Review');
  await until(()=>evaluate("document.querySelectorAll('.cnl-qbank-review-card').length===3"),'review all questions');
- assert.equal(await evaluate("document.querySelectorAll('.cnl-qbank-review-card .ai-quiz-explain').length"),3);
+ assert.equal(await evaluate("document.querySelectorAll('.cnl-qbank-question-group > .ai-quiz-explain').length"),3);
+ assert.equal(await evaluate("document.querySelectorAll('.cnl-qbank-review-card .ai-quiz-explain').length"),0,'Explanations have their own sibling card');
  assert.equal(await evaluate("document.querySelectorAll('.cnl-qbank-review-card [data-candidate-answer]').length"),3);
  assert.equal(await evaluate("document.querySelectorAll('.cnl-qbank-review-card .incorrect[data-candidate-answer]').length"),1,'Wrong candidate choice stays marked');
  await shot('submitted-review');await sessionButton('Back to Qbank');await until(()=>has('[data-qbank-tile]','Result:'),'module list');await backLevel();
@@ -67,7 +68,7 @@ async function until(run,label){for(let i=0;i<150;i++){try{const value=await run
  assert.equal(await evaluate("document.querySelectorAll('#cnlQuizPage .cnl-tab-list .cnl-study-row').length"),2,'Only bookmarked questions');await shot('bookmarked-stems');
  await evaluate("Array.from(document.querySelectorAll('#cnlQuizPage .cnl-tab-list .cnl-study-row')).find(n=>n.textContent.includes('Second question?')).click()");
  await until(()=>evaluate("document.querySelectorAll('.cnl-qbank-review-card').length===1"),'single bookmark detail');
- assert.ok(await has('.cnl-qbank-your-answer','A. Alpha'));assert.ok(await evaluate("!!document.querySelector('.cnl-qbank-review-card .ai-quiz-explain')"));
+ assert.ok(await has('.cnl-qbank-your-answer','A. Alpha'));assert.ok(await evaluate("!!document.querySelector('.cnl-qbank-question-group > .ai-quiz-explain')"));
  await sessionButton('Back to bookmarks');await until(()=>has('#cnlQuizPage .cnl-study-row','Second question?'),'back to stems');
  await backLevel();await pause(200);await backLevel();await pause(200);await backLevel();
  await until(()=>evaluate("!!document.querySelector('.cnl-qbank-bookmarks-tile')"),'back to subject');await general();

@@ -82,6 +82,7 @@
    };
    function renderQuestionCard(index,review){
      const q=questions[index],chosen=session.answers[index],card=el('section',null,review?'cnl-qbank-review-card':'cnl-qbank-question-card');
+     const group=el('div',null,'cnl-qbank-question-group');group.append(card);
      const tools=el('div',null,'cnl-qbank-tools');tools.append(el('span','Question '+(index+1)+' of '+questions.length));markButton(tools,row,index);card.append(tools);
      card.append(el('div',q.question,'ai-quiz-question'));
      if(review)card.append(el('p',chosen===null?'Your answer: Not answered':chosen===-1?'Reviewed as recall':'Your answer: '+String.fromCharCode(65+chosen)+'. '+q.options[chosen],'cnl-qbank-your-answer'));
@@ -89,10 +90,10 @@
      (q.options||[]).forEach((text,i)=>{const b=el('button',String.fromCharCode(65+i)+'. '+text,'ai-quiz-opt');b.type='button';b.dataset.optionIndex=String(i);b.disabled=review||chosen!==null||!gradable(q);
        if(chosen!==null||review){if(gradable(q)&&i===q.correctIndex)b.classList.add('correct');else if(i===chosen)b.classList.add('incorrect');if(i===chosen)b.dataset.candidateAnswer='true';}
        b.onclick=()=>{if(session.answers[index]!==null)return;session.answers[index]=i;session.dirty=true;render();};opts.append(b);});card.append(opts);
-     if(review||chosen!==null){const explanation=el('div',null,'ai-quiz-explain');window.cnlRenderQbankExplanation(explanation,q,gradable(q));card.append(explanation);}
+     if(review||chosen!==null){const explanation=el('section',null,'ai-quiz-explain');explanation.setAttribute('aria-label','Explanation');window.cnlRenderQbankExplanation(explanation,q,gradable(q));group.append(explanation);}
      if(!review&&!gradable(q)&&chosen===null)button(card,'Show answer and mark reviewed',()=>{session.answers[index]=-1;session.dirty=true;render();});
      if(!review)window.cnlAddSavedQuizEditor?.(card,q,row,index,()=>{session.signature=Q.signature(row);session.answers[index]=null;session.id=crypto.randomUUID();session.dirty=true;render();});
-     return card;
+     return group;
    }
    function review(){
      wrap.replaceChildren();const toolbar=el('div',null,'cnl-qbank-tools');button(toolbar,options.bookmarksOnly?'Back to bookmarks':'Back to Qbank',exit);wrap.append(toolbar);
@@ -125,7 +126,10 @@
  body #cnlQuizPage [data-qbank-tile]>.cnl-qbank-status{grid-column:2;grid-row:2!important;margin:0!important;padding:3px 0!important;border:0;background:transparent;font:600 14px/1.4 system-ui,sans-serif!important;text-transform:none!important}
  body #cnlQuizPage [data-qbank-tile]>.cnl-qbank-review-button{grid-column:2;grid-row:3!important;justify-self:start;width:auto!important;min-width:90px!important;max-width:100%;padding:7px 14px!important;margin:4px 0 0!important;display:inline-flex;justify-content:center;font:600 13px/1.4 system-ui,sans-serif;text-transform:none}
  .cnl-qbank-session{scroll-margin-top:70px}
- .cnl-qbank-review-card{padding:20px;border:1px solid #d6def1;border-radius:14px;background:#fff;margin:16px 0}
+ .cnl-qbank-question-group{margin:16px 0;min-width:0}
+ .cnl-qbank-question-card,.cnl-qbank-review-card{box-sizing:border-box;width:100%;padding:20px;border:1px solid #d6def1;border-radius:14px;background:#fff;margin:0}
+ body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation{box-sizing:border-box;width:80%;max-width:80%;min-width:0;margin:16px auto 0!important;padding:20px!important;border:1px solid #d6def1!important;border-radius:14px!important;background:#fff!important;box-shadow:0 4px 16px rgba(41,38,100,.08)!important}
+ @media(max-width:600px){body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation{padding:14px!important}}
  .cnl-qbank-your-answer{font-weight:700}.cnl-qbank-session .ai-quiz-explain{display:block!important;max-height:none!important;overflow:visible!important}
  .cnl-qbank-session .ai-quiz-opt[data-candidate-answer]{box-shadow:inset 0 0 0 2px #775374}
  article.cnl-study-row{cursor:pointer;text-align:left}.cnl-qbank-session [disabled]{cursor:default}
