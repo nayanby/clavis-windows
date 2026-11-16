@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 44,
+  "targetQuestions": 45,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3435,6 +3435,80 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Assess exercise limitation arrhythmia and procedural hemodynamic risk"
+    },
+    {
+      "id": "cardiology-rebuild-12-041",
+      "topic": "Other important congenital lesions",
+      "question": "CMR in an asymptomatic adult shows one right upper pulmonary vein draining to the SVC, an intact atrial septum, Qp/Qs 1.2 and a mildly enlarged RV with normal function. Pulmonary pressure is normal and serial measurements are stable. Which strategy is best supported?",
+      "options": [
+        "Continue congenital cardiology surveillance without repair at present",
+        "Refer for surgical redirection based on the anomalous connection alone",
+        "Plan covered-stent correction using the sinus venosus ASD pathway",
+        "Perform invasive hemodynamic assessment before deciding whether any observation is acceptable"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Small Isolated Anomalous Pulmonary Venous Shunt\n\nCorrect answer: Continue congenital cardiology surveillance without repair at present\n\nAnatomy Does Not Establish an Intervention Indication\n\n**An anomalous pulmonary vein returns oxygenated blood to the systemic venous circuit.** This creates recirculation through the right heart and lungs even when the atrial septum is intact.\n\nThe number and size of anomalous veins, and the lung territory they drain, influence flow burden. Unlike an ASD, the communication is not an atrial opening whose shunt is chiefly determined by relative ventricular diastolic compliance.\n\nThe 2025 ACHD guideline advises against surgical repair when Qp/Qs is below 1.5 and the RV is normal to mildly enlarged, because benefit has not been demonstrated. This patient fits that qualified recommendation; it is not a rule that every anomalous vein should remain untreated.\n\nSurveillance and Reassessment\n\n**Follow symptoms, exercise capacity, RV size and function, and pulmonary hemodynamics.** CMR can map the veins and quantify flow and chamber volumes; CT provides detailed anatomy when CMR is unsuitable.\n\nWorsening exercise limitation, progressive RV enlargement or dysfunction, a larger shunt or suspected pulmonary vascular disease changes the assessment. Significant attributable volume loading may warrant repair after congenital surgical review.\n\nRepair planning must define the entire venous pathway and associated defects. Potential postoperative problems include pulmonary venous or systemic venous obstruction and rhythm complications, depending on the reconstruction. These risks reinforce the need for a demonstrable physiological indication rather than intervention based solely on an unusual image.\n\nAn intact atrial septum excludes the assumed ASD closure target but does not exclude a left-to-right shunt from anomalous drainage. Conversely, an unexplained enlarged RV should prompt a search for anomalous veins even when routine echocardiography does not show an ASD.\n\nRefer for surgical redirection based on the anomalous connection alone: Surgical redirection is appropriate for selected hemodynamically important anomalous drainage. The anatomical finding alone does not establish benefit when the shunt is small, RV enlargement is mild and function and clinical status are stable.\n\nPlan covered-stent correction using the sinus venosus ASD pathway: Selected superior sinus venosus defects with suitable venous anatomy may undergo specialized covered-stent correction. This isolated anomalous vein with an intact septum is not the same lesion, and its small physiological burden does not justify applying that pathway.\n\nPerform invasive hemodynamic assessment before deciding whether any observation is acceptable: Catheterization is useful for suspected pulmonary hypertension, uncertain hemodynamics or discordant noninvasive findings. Clear concordant CMR data, normal pressure estimates and stable mild RV enlargement do not require an invasive study merely to justify surveillance.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Small Isolated Anomalous Pulmonary Venous Shunt</h2><p><strong>Correct answer: A — Continue congenital cardiology surveillance without repair at present</strong></p><h3>Anatomy Does Not Establish an Intervention Indication</h3><ul><li><strong>An anomalous pulmonary vein returns oxygenated blood to the systemic venous circuit.</strong> This creates recirculation through the right heart and lungs even when the atrial septum is intact.<ul><li>The number and size of anomalous veins, and the lung territory they drain, influence flow burden. Unlike an ASD, the communication is not an atrial opening whose shunt is chiefly determined by relative ventricular diastolic compliance.</li><li>The 2025 ACHD guideline advises against surgical repair when Qp/Qs is below 1.5 and the RV is normal to mildly enlarged, because benefit has not been demonstrated. This patient fits that qualified recommendation; it is not a rule that every anomalous vein should remain untreated.</li></ul></li></ul><h3>Surveillance and Reassessment</h3><ul><li><strong>Follow symptoms, exercise capacity, RV size and function, and pulmonary hemodynamics.</strong> CMR can map the veins and quantify flow and chamber volumes; CT provides detailed anatomy when CMR is unsuitable.<ul><li>Worsening exercise limitation, progressive RV enlargement or dysfunction, a larger shunt or suspected pulmonary vascular disease changes the assessment. Significant attributable volume loading may warrant repair after congenital surgical review.</li><li>Repair planning must define the entire venous pathway and associated defects. Potential postoperative problems include pulmonary venous or systemic venous obstruction and rhythm complications, depending on the reconstruction. These risks reinforce the need for a demonstrable physiological indication rather than intervention based solely on an unusual image.</li><li>An intact atrial septum excludes the assumed ASD closure target but does not exclude a left-to-right shunt from anomalous drainage. Conversely, an unexplained enlarged RV should prompt a search for anomalous veins even when routine echocardiography does not show an ASD.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Refer for surgical redirection based on the anomalous connection alone:</strong> Surgical redirection is appropriate for selected hemodynamically important anomalous drainage. The anatomical finding alone does not establish benefit when the shunt is small, RV enlargement is mild and function and clinical status are stable.</li><li><strong>C — Plan covered-stent correction using the sinus venosus ASD pathway:</strong> Selected superior sinus venosus defects with suitable venous anatomy may undergo specialized covered-stent correction. This isolated anomalous vein with an intact septum is not the same lesion, and its small physiological burden does not justify applying that pathway.</li><li><strong>D — Perform invasive hemodynamic assessment before deciding whether any observation is acceptable:</strong> Catheterization is useful for suspected pulmonary hypertension, uncertain hemodynamics or discordant noninvasive findings. Clear concordant CMR data, normal pressure estimates and stable mild RV enlargement do not require an invasive study merely to justify surveillance.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Small Isolated Anomalous Pulmonary Venous Shunt",
+        "sections": [
+          {
+            "heading": "Anatomy Does Not Establish an Intervention Indication",
+            "bullets": [
+              {
+                "text": "**An anomalous pulmonary vein returns oxygenated blood to the systemic venous circuit.** This creates recirculation through the right heart and lungs even when the atrial septum is intact.",
+                "children": [
+                  "The number and size of anomalous veins, and the lung territory they drain, influence flow burden. Unlike an ASD, the communication is not an atrial opening whose shunt is chiefly determined by relative ventricular diastolic compliance.",
+                  "The 2025 ACHD guideline advises against surgical repair when Qp/Qs is below 1.5 and the RV is normal to mildly enlarged, because benefit has not been demonstrated. This patient fits that qualified recommendation; it is not a rule that every anomalous vein should remain untreated."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Surveillance and Reassessment",
+            "bullets": [
+              {
+                "text": "**Follow symptoms, exercise capacity, RV size and function, and pulmonary hemodynamics.** CMR can map the veins and quantify flow and chamber volumes; CT provides detailed anatomy when CMR is unsuitable.",
+                "children": [
+                  "Worsening exercise limitation, progressive RV enlargement or dysfunction, a larger shunt or suspected pulmonary vascular disease changes the assessment. Significant attributable volume loading may warrant repair after congenital surgical review.",
+                  "Repair planning must define the entire venous pathway and associated defects. Potential postoperative problems include pulmonary venous or systemic venous obstruction and rhythm complications, depending on the reconstruction. These risks reinforce the need for a demonstrable physiological indication rather than intervention based solely on an unusual image.",
+                  "An intact atrial septum excludes the assumed ASD closure target but does not exclude a left-to-right shunt from anomalous drainage. Conversely, an unexplained enlarged RV should prompt a search for anomalous veins even when routine echocardiography does not show an ASD."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Surgical redirection is appropriate for selected hemodynamically important anomalous drainage. The anatomical finding alone does not establish benefit when the shunt is small, RV enlargement is mild and function and clinical status are stable."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Selected superior sinus venosus defects with suitable venous anatomy may undergo specialized covered-stent correction. This isolated anomalous vein with an intact septum is not the same lesion, and its small physiological burden does not justify applying that pathway."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Catheterization is useful for suspected pulmonary hypertension, uncertain hemodynamics or discordant noninvasive findings. Clear concordant CMR data, normal pressure estimates and stable mild RV enlargement do not require an invasive study merely to justify surveillance."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Distinguish isolated anomalous pulmonary venous drainage from an ASD"
     }
   ],
   "plannedQuestions": 55,
@@ -3443,9 +3517,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 40,
+    "draftQuestions": 41,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 40
+    "newQuestionsAfterRedistribution": 41
   }
 }

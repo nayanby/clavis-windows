@@ -4,9 +4,9 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 44,
+  "authoredQuestions": 45,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 40,
+  "newDraftQuestions": 41,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
@@ -136,7 +136,7 @@
     {
       "section": "Other important congenital lesions",
       "plannedQuestions": 3,
-      "authoredQuestions": 0,
+      "authoredQuestions": 1,
       "decisions": [
         "Distinguish isolated anomalous pulmonary venous drainage from an ASD",
         "Recognize cor triatriatum and differentiate it from mitral inflow disease",
@@ -376,6 +376,11 @@
       "questionId": "cardiology-rebuild-12-040",
       "section": "Fontan and single-ventricle circulation",
       "decision": "Assess exercise limitation arrhythmia and procedural hemodynamic risk"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-041",
+      "section": "Other important congenital lesions",
+      "decision": "Distinguish isolated anomalous pulmonary venous drainage from an ASD"
     }
   ]
 }

@@ -28,6 +28,9 @@ REFERENCES.update(ebstein_tga_references)
 from cardiology_12_fontan_questions import rows as fontan_rows, REFERENCES as fontan_references
 rows.extend(fontan_rows)
 REFERENCES.update(fontan_references)
+from cardiology_12_other_questions import rows as other_rows, REFERENCES as other_references
+rows.extend(other_rows)
+REFERENCES.update(other_references)
 
 DOC='12. Adult Congenital Heart Diseases'
 PREFIX='cardiology-rebuild-12-'
@@ -119,6 +122,7 @@ ASSIGNMENTS={
  PREFIX+'038':(10,2),
  PREFIX+'039':(10,3),
  PREFIX+'040':(10,4),
+ PREFIX+'041':(11,0),
  'cardiology-rebuild-03-047':(5,0), 'cardiology-rebuild-03-048':(6,1),
 }
 
