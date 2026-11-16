@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 48,
+  "authoredQuestions": 49,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -73,7 +73,8 @@
     "cardiology-rebuild-12-041",
     "cardiology-rebuild-12-042",
     "cardiology-rebuild-12-043",
-    "cardiology-rebuild-12-044"
+    "cardiology-rebuild-12-044",
+    "cardiology-rebuild-12-045"
   ],
   "sources": [
     {
@@ -223,21 +224,25 @@
     {
       "label": "ESC cardiovascular disease and pregnancy guideline, 2025",
       "url": "https://doi.org/10.1093/eurheartj/ehaf193"
+    },
+    {
+      "label": "AHA prevention of infective endocarditis wallet card",
+      "url": "https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf"
     }
   ],
   "validation": {
-    "questions": 48,
+    "questions": 49,
     "answerDistribution": {
-      "A": 12,
+      "A": 13,
       "B": 12,
       "C": 12,
       "D": 12
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 138,
+    "distractorRationales": 141,
     "questionStyles": {
       "direct": 5,
-      "clinical_scenario": 43
+      "clinical_scenario": 44
     },
     "status": "passed"
   },

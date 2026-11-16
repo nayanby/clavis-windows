@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 48,
+  "targetQuestions": 49,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3765,6 +3765,90 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Plan pregnancy and contraception using lesion-specific physiological risk"
+    },
+    {
+      "id": "cardiology-rebuild-12-045",
+      "topic": "General adult congenital management",
+      "question": "Four adults are scheduled for dental extraction involving gingival manipulation. None has previous endocarditis or a prosthetic valve. Under AHA prevention guidance, which congenital finding supports antibiotic prophylaxis?",
+      "options": [
+        "A residual VSD jet adjacent to a prosthetic patch placed five years ago",
+        "A completely closed secundum ASD device placed five years ago with no residual defect",
+        "An isolated bicuspid aortic valve with mild regurgitation",
+        "A small unrepaired acyanotic muscular VSD without prior endocarditis"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Dental Prophylaxis After Congenital Defect Repair\n\nCorrect answer: A residual VSD jet adjacent to a prosthetic patch placed five years ago\n\nIdentify Both the Cardiac and Procedural Indication\n\n**A residual shunt at or adjacent to a prosthetic patch or device is a qualifying repaired-CHD finding.** The elapsed time since repair does not remove that continuing anatomical indication.\n\nThe dental procedure must also be relevant: gingival manipulation, work around the periapical region or oral mucosal perforation qualifies. A cardiac diagnosis alone does not mean antibiotics are needed before every dental contact.\n\nOther major AHA high-risk categories include previous IE, prosthetic cardiac valves or valve-repair material, unrepaired cyanotic CHD and transplant-associated structural valvular disease. Increased lifetime infection risk and eligibility for procedural prophylaxis are related but not identical concepts.\n\nRegimen and Allergy Assessment\n\n**For an eligible adult able to take oral medication without penicillin allergy, use amoxicillin ==2 g== once 30–60 minutes before the procedure.** Prophylaxis is a single procedural dose rather than a routine multi-day treatment course.\n\nReview the exact allergy history and current medications before selecting an alternative. The AHA no longer recommends clindamycin for dental prophylaxis. Cephalosporins should not be used in patients with penicillin-associated anaphylaxis, angioedema or urticaria.\n\nIf infection is already suspected, diagnostic cultures and an appropriate treatment plan take precedence over simply applying a prophylaxis regimen. A dose intended to prevent dental bacteremia is not adequate therapy for established endocarditis.\n\nLong-Term Prevention\n\n**Good oral hygiene and regular dental care remain central.** A prophylactic dose cannot compensate for untreated dental disease or replace prompt assessment of unexplained fever.\n\nDocument the repaired anatomy, residual findings and prophylaxis indication so the dentist and cardiologist use the same information. Reassess when anatomy changes. The question uses AHA dental guidance; recommendations for other procedures or other guideline systems should be identified explicitly rather than assumed to be interchangeable.\n\nA completely closed secundum ASD device placed five years ago with no residual defect: A remote, completely repaired defect without residual shunt or another high-risk condition does not supply the ongoing indication described here. The crucial distinction is the residual defect adjacent to prosthetic material.\n\nAn isolated bicuspid aortic valve with mild regurgitation: Bicuspid valve disease carries endocarditis risk, but an unoperated native bicuspid valve alone is not among the AHA highest-risk indications for dental antibiotic prophylaxis.\n\nA small unrepaired acyanotic muscular VSD without prior endocarditis: An unrepaired acyanotic VSD can predispose to infection, but it does not by itself meet the listed AHA high-risk prophylaxis categories. Unrepaired cyanotic CHD and residual defects adjacent to prosthetic repair material are different categories.\n\nAHA prevention of infective endocarditis wallet card — https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006",
+      "explanationHtml": "<h2>Dental Prophylaxis After Congenital Defect Repair</h2><p><strong>Correct answer: A — A residual VSD jet adjacent to a prosthetic patch placed five years ago</strong></p><h3>Identify Both the Cardiac and Procedural Indication</h3><ul><li><strong>A residual shunt at or adjacent to a prosthetic patch or device is a qualifying repaired-CHD finding.</strong> The elapsed time since repair does not remove that continuing anatomical indication.<ul><li>The dental procedure must also be relevant: gingival manipulation, work around the periapical region or oral mucosal perforation qualifies. A cardiac diagnosis alone does not mean antibiotics are needed before every dental contact.</li><li>Other major AHA high-risk categories include previous IE, prosthetic cardiac valves or valve-repair material, unrepaired cyanotic CHD and transplant-associated structural valvular disease. Increased lifetime infection risk and eligibility for procedural prophylaxis are related but not identical concepts.</li></ul></li></ul><h3>Regimen and Allergy Assessment</h3><ul><li><strong>For an eligible adult able to take oral medication without penicillin allergy, use amoxicillin <mark>2 g</mark> once 30–60 minutes before the procedure.</strong> Prophylaxis is a single procedural dose rather than a routine multi-day treatment course.<ul><li>Review the exact allergy history and current medications before selecting an alternative. The AHA no longer recommends clindamycin for dental prophylaxis. Cephalosporins should not be used in patients with penicillin-associated anaphylaxis, angioedema or urticaria.</li><li>If infection is already suspected, diagnostic cultures and an appropriate treatment plan take precedence over simply applying a prophylaxis regimen. A dose intended to prevent dental bacteremia is not adequate therapy for established endocarditis.</li></ul></li></ul><h3>Long-Term Prevention</h3><ul><li><strong>Good oral hygiene and regular dental care remain central.</strong> A prophylactic dose cannot compensate for untreated dental disease or replace prompt assessment of unexplained fever.<ul><li>Document the repaired anatomy, residual findings and prophylaxis indication so the dentist and cardiologist use the same information. Reassess when anatomy changes. The question uses AHA dental guidance; recommendations for other procedures or other guideline systems should be identified explicitly rather than assumed to be interchangeable.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — A completely closed secundum ASD device placed five years ago with no residual defect:</strong> A remote, completely repaired defect without residual shunt or another high-risk condition does not supply the ongoing indication described here. The crucial distinction is the residual defect adjacent to prosthetic material.</li><li><strong>C — An isolated bicuspid aortic valve with mild regurgitation:</strong> Bicuspid valve disease carries endocarditis risk, but an unoperated native bicuspid valve alone is not among the AHA highest-risk indications for dental antibiotic prophylaxis.</li><li><strong>D — A small unrepaired acyanotic muscular VSD without prior endocarditis:</strong> An unrepaired acyanotic VSD can predispose to infection, but it does not by itself meet the listed AHA high-risk prophylaxis categories. Unrepaired cyanotic CHD and residual defects adjacent to prosthetic repair material are different categories.</li></ul><h3>References</h3><ul><li><a href=\"https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf\">AHA prevention of infective endocarditis wallet card</a></li><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Dental Prophylaxis After Congenital Defect Repair",
+        "sections": [
+          {
+            "heading": "Identify Both the Cardiac and Procedural Indication",
+            "bullets": [
+              {
+                "text": "**A residual shunt at or adjacent to a prosthetic patch or device is a qualifying repaired-CHD finding.** The elapsed time since repair does not remove that continuing anatomical indication.",
+                "children": [
+                  "The dental procedure must also be relevant: gingival manipulation, work around the periapical region or oral mucosal perforation qualifies. A cardiac diagnosis alone does not mean antibiotics are needed before every dental contact.",
+                  "Other major AHA high-risk categories include previous IE, prosthetic cardiac valves or valve-repair material, unrepaired cyanotic CHD and transplant-associated structural valvular disease. Increased lifetime infection risk and eligibility for procedural prophylaxis are related but not identical concepts."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Regimen and Allergy Assessment",
+            "bullets": [
+              {
+                "text": "**For an eligible adult able to take oral medication without penicillin allergy, use amoxicillin ==2 g== once 30–60 minutes before the procedure.** Prophylaxis is a single procedural dose rather than a routine multi-day treatment course.",
+                "children": [
+                  "Review the exact allergy history and current medications before selecting an alternative. The AHA no longer recommends clindamycin for dental prophylaxis. Cephalosporins should not be used in patients with penicillin-associated anaphylaxis, angioedema or urticaria.",
+                  "If infection is already suspected, diagnostic cultures and an appropriate treatment plan take precedence over simply applying a prophylaxis regimen. A dose intended to prevent dental bacteremia is not adequate therapy for established endocarditis."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Long-Term Prevention",
+            "bullets": [
+              {
+                "text": "**Good oral hygiene and regular dental care remain central.** A prophylactic dose cannot compensate for untreated dental disease or replace prompt assessment of unexplained fever.",
+                "children": [
+                  "Document the repaired anatomy, residual findings and prophylaxis indication so the dentist and cardiologist use the same information. Reassess when anatomy changes. The question uses AHA dental guidance; recommendations for other procedures or other guideline systems should be identified explicitly rather than assumed to be interchangeable."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "A remote, completely repaired defect without residual shunt or another high-risk condition does not supply the ongoing indication described here. The crucial distinction is the residual defect adjacent to prosthetic material."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Bicuspid valve disease carries endocarditis risk, but an unoperated native bicuspid valve alone is not among the AHA highest-risk indications for dental antibiotic prophylaxis."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "An unrepaired acyanotic VSD can predispose to infection, but it does not by itself meet the listed AHA high-risk prophylaxis categories. Unrepaired cyanotic CHD and residual defects adjacent to prosthetic repair material are different categories."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "AHA prevention of infective endocarditis wallet card",
+          "url": "https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf"
+        },
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Select endocarditis prophylaxis according to the actual high-risk indication"
     }
   ],
   "plannedQuestions": 55,
@@ -3773,9 +3857,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 44,
+    "draftQuestions": 45,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 44
+    "newQuestionsAfterRedistribution": 45
   }
 }

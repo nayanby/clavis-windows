@@ -21,3 +21,23 @@ rows=[Q(TOPIC,'Pregnancy Counseling in Eisenmenger Syndrome',
   '**Arrange prompt expert review and shared decision-making.** Discuss all management options, including termination where appropriate, without delaying care or assuming the patient has chosen an option.',
   'If pregnancy continues, coordinated maternal-fetal, ACHD, pulmonary-hypertension and anesthesia care is required throughout pregnancy and postpartum. The team should plan surveillance, treatment and delivery in an experienced center. The availability of intensive monitoring does not eliminate the underlying risk.')],
  ['ACHD2025','PREGNANCY2025','BOSENTAN_LABEL'])]
+
+REFERENCES['AHA_IE_CARD']=('AHA prevention of infective endocarditis wallet card','https://www.heart.org/-/media/files/health-topics/infective-endocarditis/infective-endocarditis-wallet-card.pdf')
+rows.append(Q(TOPIC,'Dental Prophylaxis After Congenital Defect Repair',
+ 'Four adults are scheduled for dental extraction involving gingival manipulation. None has previous endocarditis or a prosthetic valve. Under AHA prevention guidance, which congenital finding supports antibiotic prophylaxis?',
+ 'A residual VSD jet adjacent to a prosthetic patch placed five years ago',[
+ ('A completely closed secundum ASD device placed five years ago with no residual defect','A remote, completely repaired defect without residual shunt or another high-risk condition does not supply the ongoing indication described here. The crucial distinction is the residual defect adjacent to prosthetic material.'),
+ ('An isolated bicuspid aortic valve with mild regurgitation','Bicuspid valve disease carries endocarditis risk, but an unoperated native bicuspid valve alone is not among the AHA highest-risk indications for dental antibiotic prophylaxis.'),
+ ('A small unrepaired acyanotic muscular VSD without prior endocarditis','An unrepaired acyanotic VSD can predispose to infection, but it does not by itself meet the listed AHA high-risk prophylaxis categories. Unrepaired cyanotic CHD and residual defects adjacent to prosthetic repair material are different categories.')],
+ [S('Identify Both the Cardiac and Procedural Indication',
+  '**A residual shunt at or adjacent to a prosthetic patch or device is a qualifying repaired-CHD finding.** The elapsed time since repair does not remove that continuing anatomical indication.',
+  'The dental procedure must also be relevant: gingival manipulation, work around the periapical region or oral mucosal perforation qualifies. A cardiac diagnosis alone does not mean antibiotics are needed before every dental contact.',
+  'Other major AHA high-risk categories include previous IE, prosthetic cardiac valves or valve-repair material, unrepaired cyanotic CHD and transplant-associated structural valvular disease. Increased lifetime infection risk and eligibility for procedural prophylaxis are related but not identical concepts.'),
+  S('Regimen and Allergy Assessment',
+  '**For an eligible adult able to take oral medication without penicillin allergy, use amoxicillin 2 g once 30–60 minutes before the procedure.** Prophylaxis is a single procedural dose rather than a routine multi-day treatment course.',
+  'Review the exact allergy history and current medications before selecting an alternative. The AHA no longer recommends clindamycin for dental prophylaxis. Cephalosporins should not be used in patients with penicillin-associated anaphylaxis, angioedema or urticaria.',
+  'If infection is already suspected, diagnostic cultures and an appropriate treatment plan take precedence over simply applying a prophylaxis regimen. A dose intended to prevent dental bacteremia is not adequate therapy for established endocarditis.'),
+  S('Long-Term Prevention',
+  '**Good oral hygiene and regular dental care remain central.** A prophylactic dose cannot compensate for untreated dental disease or replace prompt assessment of unexplained fever.',
+  'Document the repaired anatomy, residual findings and prophylaxis indication so the dentist and cardiologist use the same information. Reassess when anatomy changes. The question uses AHA dental guidance; recommendations for other procedures or other guideline systems should be identified explicitly rather than assumed to be interchangeable.')],
+ ['AHA_IE_CARD','ACHD2025']))
