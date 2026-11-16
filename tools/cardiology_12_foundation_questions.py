@@ -41,3 +41,22 @@ rows.append(Q(TOPIC,'Anatomical Complexity and Physiological Stage',
   'Reassess stage when status changes, and investigate the cause rather than merely changing a label. The framework supports judgment; it does not replace lesion-specific management or evaluation of acquired disease.',
   'A small incidental congenital defect does not account for every later symptom. Conditions such as coronary disease, renal dysfunction or acquired valve disease need assessment under their own relevant guidance. Record the anatomical diagnosis and current physiological findings explicitly so the classification remains interpretable.')],
  ['ACHD2025','AP2025'],style='direct'))
+
+rows.append(Q('Other important congenital lesions','Adult ALCAPA and Restoration of Coronary Supply',
+ 'An asymptomatic 30-year-old is found to have the left coronary artery originating from the pulmonary artery. There are extensive right-to-left coronary collaterals and retrograde flow into the pulmonary artery. LV ejection fraction is 58%. Which strategy is most appropriate?',
+ 'Refer for surgical restoration of a two-coronary system',[
+ ('Observe until LV ejection fraction falls because collateral supply is currently adequate','Collateral development explains survival into adulthood but does not eliminate ischemic or sudden-death risk. Preserved ejection fraction is not a reason to defer the recommended repair of ALCAPA until myocardial damage develops.'),
+ ('Use a negative stress study as the criterion for avoiding repair','Stress imaging can help assess ischemia and myocardial consequences. A negative result does not reliably establish long-term safety in ALCAPA, and the surgical recommendation is not contingent on demonstrating inducible ischemia.'),
+ ('Close the pulmonary origin alone and retain collateral-dependent single-coronary supply','Eliminating runoff can be part of reconstruction, but ligation alone leaves the left coronary territory dependent on collateral supply. The operative objective is a reliable two-coronary circulation, with the technique chosen for the anatomy.')],
+ [S('Why Adult Survival Does Not Establish Safety',
+  '**ALCAPA connects the left coronary circulation to the pulmonary artery rather than the aorta.** After pulmonary pressure falls, adequate antegrade systemic-pressure coronary perfusion is lost.',
+  'Adults who survive commonly have extensive collaterals from the right coronary artery. Blood can pass through these channels into the left coronary system and run off into the low-pressure pulmonary artery. This creates a coronary steal pathway and can leave myocardium vulnerable despite a normal resting ejection fraction.',
+  'Clinical manifestations include ischemia, ventricular dysfunction, mitral regurgitation and arrhythmia. Mitral regurgitation may reflect ischemic papillary dysfunction or ventricular remodeling rather than a primary congenital leaflet abnormality.'),
+  S('Define Anatomy and Myocardial Consequences',
+  '**Cross-sectional coronary imaging establishes the origin and course.** Echocardiography evaluates ventricular and valve function and may demonstrate an enlarged right coronary artery or abnormal flow.',
+  'CMR can assess ventricular function and scar; functional ischemia testing provides additional information but should not be used as a stand-alone guarantee against future events. Coronary anatomy, collateral pathways and myocardial viability inform the repair plan.'),
+  S('Surgical Goal and Follow-Up',
+  '**Current ACHD guidance recommends surgery for adults with ALCAPA.** Restore a two-coronary system, usually by reimplantation when anatomically feasible or another suitable reconstructive approach.',
+  'The precise operation depends on the distance and relationship of the anomalous origin to the aorta and surrounding structures. Closing the pulmonary origin without securing an adequate independent left-coronary supply is not the general objective.',
+  'Assess associated mitral disease and ventricular injury during planning. After repair, follow coronary patency, ventricular recovery, residual mitral regurgitation and arrhythmias. Established scar may persist even when perfusion improves, so successful reconstruction does not remove the need for surveillance.')],
+ ['ACHD2025','ESC2020']))

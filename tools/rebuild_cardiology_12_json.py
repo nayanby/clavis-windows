@@ -44,8 +44,7 @@ SECTIONS=[
  ('Foundations and physiological classification',[
   'Classify anatomical complexity separately from physiological stage',
   'Calculate Qp/Qs from an appropriately sampled oximetry run',
-  'Distinguish pressure loading from shunt-related chamber volume loading',
-  'Choose expert surveillance using physiological sequelae after repair']),
+  'Distinguish pressure loading from shunt-related chamber volume loading']),
  ('Atrial septal defects and atrioventricular septal anatomy',[
   'Explain the pulmonary flow murmur and fixed S2 splitting',
   'Recognize partial AV septal anatomy from axis conduction and AV-valve findings',
@@ -102,7 +101,8 @@ SECTIONS=[
  ('Other important congenital lesions',[
   'Distinguish isolated anomalous pulmonary venous drainage from an ASD',
   'Recognize cor triatriatum and differentiate it from mitral inflow disease',
-  'Assess anomalous aortic coronary origin and an ischemia-risk phenotype']),
+  'Assess anomalous aortic coronary origin and an ischemia-risk phenotype',
+  'Recognize adult ALCAPA and the indication to restore a two-coronary system']),
  ('General adult congenital management',[
   'Plan pregnancy and contraception using lesion-specific physiological risk',
   'Select endocarditis prophylaxis according to the actual high-risk indication',
@@ -138,6 +138,7 @@ ASSIGNMENTS={
  PREFIX+'048':(12,4),
  PREFIX+'049':(0,2),
  PREFIX+'050':(0,0),
+ PREFIX+'051':(11,3),
  'cardiology-rebuild-03-047':(5,0), 'cardiology-rebuild-03-048':(6,1),
 }
 

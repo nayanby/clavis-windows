@@ -4,20 +4,19 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 54,
+  "authoredQuestions": 55,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 50,
+  "newDraftQuestions": 51,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
       "section": "Foundations and physiological classification",
-      "plannedQuestions": 4,
+      "plannedQuestions": 3,
       "authoredQuestions": 3,
       "decisions": [
         "Classify anatomical complexity separately from physiological stage",
         "Calculate Qp/Qs from an appropriately sampled oximetry run",
-        "Distinguish pressure loading from shunt-related chamber volume loading",
-        "Choose expert surveillance using physiological sequelae after repair"
+        "Distinguish pressure loading from shunt-related chamber volume loading"
       ]
     },
     {
@@ -135,12 +134,13 @@
     },
     {
       "section": "Other important congenital lesions",
-      "plannedQuestions": 3,
-      "authoredQuestions": 3,
+      "plannedQuestions": 4,
+      "authoredQuestions": 4,
       "decisions": [
         "Distinguish isolated anomalous pulmonary venous drainage from an ASD",
         "Recognize cor triatriatum and differentiate it from mitral inflow disease",
-        "Assess anomalous aortic coronary origin and an ischemia-risk phenotype"
+        "Assess anomalous aortic coronary origin and an ischemia-risk phenotype",
+        "Recognize adult ALCAPA and the indication to restore a two-coronary system"
       ]
     },
     {
@@ -401,6 +401,11 @@
       "questionId": "cardiology-rebuild-12-043",
       "section": "Other important congenital lesions",
       "decision": "Assess anomalous aortic coronary origin and an ischemia-risk phenotype"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-051",
+      "section": "Other important congenital lesions",
+      "decision": "Recognize adult ALCAPA and the indication to restore a two-coronary system"
     },
     {
       "questionId": "cardiology-rebuild-12-044",

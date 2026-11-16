@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 54,
+  "targetQuestions": 55,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3847,6 +3847,90 @@
       "coverageDecision": "Assess anomalous aortic coronary origin and an ischemia-risk phenotype"
     },
     {
+      "id": "cardiology-rebuild-12-051",
+      "topic": "Other important congenital lesions",
+      "question": "An asymptomatic 30-year-old is found to have the left coronary artery originating from the pulmonary artery. There are extensive right-to-left coronary collaterals and retrograde flow into the pulmonary artery. LV ejection fraction is 58%. Which strategy is most appropriate?",
+      "options": [
+        "Use a negative stress study as the criterion for avoiding repair",
+        "Observe until LV ejection fraction falls because collateral supply is currently adequate",
+        "Refer for surgical restoration of a two-coronary system",
+        "Close the pulmonary origin alone and retain collateral-dependent single-coronary supply"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Adult ALCAPA and Restoration of Coronary Supply\n\nCorrect answer: Refer for surgical restoration of a two-coronary system\n\nWhy Adult Survival Does Not Establish Safety\n\n**ALCAPA connects the left coronary circulation to the pulmonary artery rather than the aorta.** After pulmonary pressure falls, adequate antegrade systemic-pressure coronary perfusion is lost.\n\nAdults who survive commonly have extensive collaterals from the right coronary artery. Blood can pass through these channels into the left coronary system and run off into the low-pressure pulmonary artery. This creates a coronary steal pathway and can leave myocardium vulnerable despite a normal resting ejection fraction.\n\nClinical manifestations include ischemia, ventricular dysfunction, mitral regurgitation and arrhythmia. Mitral regurgitation may reflect ischemic papillary dysfunction or ventricular remodeling rather than a primary congenital leaflet abnormality.\n\nDefine Anatomy and Myocardial Consequences\n\n**Cross-sectional coronary imaging establishes the origin and course.** Echocardiography evaluates ventricular and valve function and may demonstrate an enlarged right coronary artery or abnormal flow.\n\nCMR can assess ventricular function and scar; functional ischemia testing provides additional information but should not be used as a stand-alone guarantee against future events. Coronary anatomy, collateral pathways and myocardial viability inform the repair plan.\n\nSurgical Goal and Follow-Up\n\n**Current ACHD guidance recommends surgery for adults with ALCAPA.** Restore a two-coronary system, usually by reimplantation when anatomically feasible or another suitable reconstructive approach.\n\nThe precise operation depends on the distance and relationship of the anomalous origin to the aorta and surrounding structures. Closing the pulmonary origin without securing an adequate independent left-coronary supply is not the general objective.\n\nAssess associated mitral disease and ventricular injury during planning. After repair, follow coronary patency, ventricular recovery, residual mitral regurgitation and arrhythmias. Established scar may persist even when perfusion improves, so successful reconstruction does not remove the need for surveillance.\n\nUse a negative stress study as the criterion for avoiding repair: Stress imaging can help assess ischemia and myocardial consequences. A negative result does not reliably establish long-term safety in ALCAPA, and the surgical recommendation is not contingent on demonstrating inducible ischemia.\n\nObserve until LV ejection fraction falls because collateral supply is currently adequate: Collateral development explains survival into adulthood but does not eliminate ischemic or sudden-death risk. Preserved ejection fraction is not a reason to defer the recommended repair of ALCAPA until myocardial damage develops.\n\nClose the pulmonary origin alone and retain collateral-dependent single-coronary supply: Eliminating runoff can be part of reconstruction, but ligation alone leaves the left coronary territory dependent on collateral supply. The operative objective is a reliable two-coronary circulation, with the technique chosen for the anatomy.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Adult ALCAPA and Restoration of Coronary Supply</h2><p><strong>Correct answer: C — Refer for surgical restoration of a two-coronary system</strong></p><h3>Why Adult Survival Does Not Establish Safety</h3><ul><li><strong>ALCAPA connects the left coronary circulation to the pulmonary artery rather than the aorta.</strong> After pulmonary pressure falls, adequate antegrade systemic-pressure coronary perfusion is lost.<ul><li>Adults who survive commonly have extensive collaterals from the right coronary artery. Blood can pass through these channels into the left coronary system and run off into the low-pressure pulmonary artery. This creates a coronary steal pathway and can leave myocardium vulnerable despite a normal resting ejection fraction.</li><li>Clinical manifestations include ischemia, ventricular dysfunction, mitral regurgitation and arrhythmia. Mitral regurgitation may reflect ischemic papillary dysfunction or ventricular remodeling rather than a primary congenital leaflet abnormality.</li></ul></li></ul><h3>Define Anatomy and Myocardial Consequences</h3><ul><li><strong>Cross-sectional coronary imaging establishes the origin and course.</strong> Echocardiography evaluates ventricular and valve function and may demonstrate an enlarged right coronary artery or abnormal flow.<ul><li>CMR can assess ventricular function and scar; functional ischemia testing provides additional information but should not be used as a stand-alone guarantee against future events. Coronary anatomy, collateral pathways and myocardial viability inform the repair plan.</li></ul></li></ul><h3>Surgical Goal and Follow-Up</h3><ul><li><strong>Current ACHD guidance recommends surgery for adults with ALCAPA.</strong> Restore a two-coronary system, usually by reimplantation when anatomically feasible or another suitable reconstructive approach.<ul><li>The precise operation depends on the distance and relationship of the anomalous origin to the aorta and surrounding structures. Closing the pulmonary origin without securing an adequate independent left-coronary supply is not the general objective.</li><li>Assess associated mitral disease and ventricular injury during planning. After repair, follow coronary patency, ventricular recovery, residual mitral regurgitation and arrhythmias. Established scar may persist even when perfusion improves, so successful reconstruction does not remove the need for surveillance.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Use a negative stress study as the criterion for avoiding repair:</strong> Stress imaging can help assess ischemia and myocardial consequences. A negative result does not reliably establish long-term safety in ALCAPA, and the surgical recommendation is not contingent on demonstrating inducible ischemia.</li><li><strong>B — Observe until LV ejection fraction falls because collateral supply is currently adequate:</strong> Collateral development explains survival into adulthood but does not eliminate ischemic or sudden-death risk. Preserved ejection fraction is not a reason to defer the recommended repair of ALCAPA until myocardial damage develops.</li><li><strong>D — Close the pulmonary origin alone and retain collateral-dependent single-coronary supply:</strong> Eliminating runoff can be part of reconstruction, but ligation alone leaves the left coronary territory dependent on collateral supply. The operative objective is a reliable two-coronary circulation, with the technique chosen for the anatomy.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Adult ALCAPA and Restoration of Coronary Supply",
+        "sections": [
+          {
+            "heading": "Why Adult Survival Does Not Establish Safety",
+            "bullets": [
+              {
+                "text": "**ALCAPA connects the left coronary circulation to the pulmonary artery rather than the aorta.** After pulmonary pressure falls, adequate antegrade systemic-pressure coronary perfusion is lost.",
+                "children": [
+                  "Adults who survive commonly have extensive collaterals from the right coronary artery. Blood can pass through these channels into the left coronary system and run off into the low-pressure pulmonary artery. This creates a coronary steal pathway and can leave myocardium vulnerable despite a normal resting ejection fraction.",
+                  "Clinical manifestations include ischemia, ventricular dysfunction, mitral regurgitation and arrhythmia. Mitral regurgitation may reflect ischemic papillary dysfunction or ventricular remodeling rather than a primary congenital leaflet abnormality."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Define Anatomy and Myocardial Consequences",
+            "bullets": [
+              {
+                "text": "**Cross-sectional coronary imaging establishes the origin and course.** Echocardiography evaluates ventricular and valve function and may demonstrate an enlarged right coronary artery or abnormal flow.",
+                "children": [
+                  "CMR can assess ventricular function and scar; functional ischemia testing provides additional information but should not be used as a stand-alone guarantee against future events. Coronary anatomy, collateral pathways and myocardial viability inform the repair plan."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Surgical Goal and Follow-Up",
+            "bullets": [
+              {
+                "text": "**Current ACHD guidance recommends surgery for adults with ALCAPA.** Restore a two-coronary system, usually by reimplantation when anatomically feasible or another suitable reconstructive approach.",
+                "children": [
+                  "The precise operation depends on the distance and relationship of the anomalous origin to the aorta and surrounding structures. Closing the pulmonary origin without securing an adequate independent left-coronary supply is not the general objective.",
+                  "Assess associated mitral disease and ventricular injury during planning. After repair, follow coronary patency, ventricular recovery, residual mitral regurgitation and arrhythmias. Established scar may persist even when perfusion improves, so successful reconstruction does not remove the need for surveillance."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Stress imaging can help assess ischemia and myocardial consequences. A negative result does not reliably establish long-term safety in ALCAPA, and the surgical recommendation is not contingent on demonstrating inducible ischemia."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Collateral development explains survival into adulthood but does not eliminate ischemic or sudden-death risk. Preserved ejection fraction is not a reason to defer the recommended repair of ALCAPA until myocardial damage develops."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Eliminating runoff can be part of reconstruction, but ligation alone leaves the left coronary territory dependent on collateral supply. The operative objective is a reliable two-coronary circulation, with the technique chosen for the anatomy."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Recognize adult ALCAPA and the indication to restore a two-coronary system"
+    },
+    {
       "id": "cardiology-rebuild-12-044",
       "topic": "General adult congenital management",
       "question": "A 26-year-old with Eisenmenger syndrome from a large VSD is considering pregnancy. She is in functional class II on PAH treatment and has preserved LV ejection fraction. Which preconception recommendation best reflects her cardiovascular risk?",
@@ -4278,9 +4362,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 50,
+    "draftQuestions": 51,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 50
+    "newQuestionsAfterRedistribution": 51
   }
 }
