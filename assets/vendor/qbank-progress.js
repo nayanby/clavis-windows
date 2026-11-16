@@ -129,6 +129,11 @@
  .cnl-qbank-question-group{margin:16px 0;min-width:0}
  .cnl-qbank-question-card,.cnl-qbank-review-card{box-sizing:border-box;width:100%;padding:20px;border:1px solid #d6def1;border-radius:14px;background:#fff;margin:0}
  body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation{box-sizing:border-box;width:80%;max-width:80%;min-width:0;margin:16px auto 0!important;padding:20px!important;border:1px solid #d6def1!important;border-radius:14px!important;background:#fff!important;box-shadow:0 4px 16px rgba(41,38,100,.08)!important}
+ body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation,body .ai-quiz .ai-quiz-explain .cnl-notes-explanation{font-size:16px!important}
+ body .ai-quiz .ai-quiz-explain p{margin:0 0 5px!important}
+ body .ai-quiz .ai-quiz-explain .cnl-notes-explanation :is(h1,h2,p.boldside1){font-size:18px!important}
+ body .ai-quiz .ai-quiz-explain .cnl-notes-explanation :is(h3,h4,p.boldside2,p.boldside3){font-size:16px!important}
+ body .ai-quiz .ai-quiz-explain table{font-size:15px!important}
  @media(max-width:600px){body .ai-quiz .ai-quiz-explain.cnl-qbank-explanation{padding:14px!important}}
  .cnl-qbank-your-answer{font-weight:700}.cnl-qbank-session .ai-quiz-explain{display:block!important;max-height:none!important;overflow:visible!important}
  .cnl-qbank-session .ai-quiz-opt[data-candidate-answer]{box-shadow:inset 0 0 0 2px #775374}
