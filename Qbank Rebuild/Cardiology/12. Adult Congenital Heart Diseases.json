@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 39,
+  "targetQuestions": 40,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3027,6 +3027,84 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Recognize AV block and systemic AV-valve disease in congenitally corrected TGA"
+    },
+    {
+      "id": "cardiology-rebuild-12-036",
+      "topic": "Fontan and single-ventricle circulation",
+      "question": "An adult with an extracardiac Fontan has worsening exercise intolerance despite preserved systemic ventricular ejection fraction and no important AV-valve regurgitation. The conduit and branch pulmonary arteries are unobstructed. Pulmonary vascular resistance has increased, while ventricular filling pressure is unchanged. Which mechanism most directly reduces systemic output?",
+      "options": [
+        "Preserved ejection fraction ensures preserved stroke volume, so chronotropic limitation must explain the symptoms",
+        "Increased pulmonary resistance directly increases systemic ventricular systolic afterload",
+        "Increased pulmonary resistance produces failure of the subpulmonary ventricular pump",
+        "Reduced passive pulmonary flow limits systemic ventricular preload"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Pulmonary Flow and Preload Limitation in Fontan Circulation\n\nCorrect answer: Reduced passive pulmonary flow limits systemic ventricular preload\n\nPressure-Flow Relationship\n\n**The Fontan pathway connects systemic venous return to the pulmonary arteries without an intervening ventricle.** Flow through the lungs depends on a limited upstream-to-downstream pressure gradient and low resistance.\n\nConceptually, pulmonary flow depends on the difference between Fontan and pulmonary venous pressures divided by pulmonary vascular resistance. Increased resistance can reduce flow or require a higher upstream venous pressure to sustain it.\n\nThe resulting reduction in pulmonary venous return limits systemic ventricular end-diastolic volume and stroke volume. A normal ejection fraction therefore does not establish normal cardiac output or exclude Fontan circulatory failure.\n\nClinical Assessment and Treatment Implications\n\n**Assess the entire circuit when exercise capacity declines.** Ventricular systolic performance is only one component of the evaluation.\n\nLook for pathway or branch-artery obstruction, elevated ventricular filling pressure, AV-valve regurgitation, arrhythmia, collateral flow and pulmonary vascular limitation. Catheter assessment can define pressures and flow when noninvasive studies do not explain deterioration.\n\nVenous congestion and inadequate ventricular filling may coexist. Diuresis can relieve congestion but excessive volume removal can further reduce output; treatment requires attention to the individual pressure and flow profile.\n\nPulmonary vasodilators may improve exercise performance in selected patients without elevated ventricular end-diastolic pressure, but heterogeneous trial results do not support treating every Fontan patient identically. A mechanical pathway stenosis requires its own assessment rather than an assumption that vasodilator treatment will correct it. Exercise evaluation and serial clinical measurements help detect physiological deterioration that resting systolic imaging can miss.\n\nPreserved ejection fraction ensures preserved stroke volume, so chronotropic limitation must explain the symptoms: Chronotropic limitation is a real Fontan problem but is not established here. Ejection fraction is a proportion; an underfilled ventricle can eject a normal fraction while delivering a reduced absolute stroke volume.\n\nIncreased pulmonary resistance directly increases systemic ventricular systolic afterload: Systemic arterial resistance and outflow obstruction directly determine systemic ventricular ejection load. Pulmonary resistance lies upstream of ventricular filling in a Fontan circulation and primarily limits delivery of preload, although the entire circulation remains coupled.\n\nIncreased pulmonary resistance produces failure of the subpulmonary ventricular pump: This explains an important mechanism in a biventricular circulation with pulmonary vascular disease. A completed Fontan has no functioning subpulmonary ventricular pump between caval return and the pulmonary arteries.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nAHA scientific statement: pulmonary hypertension in congenital heart disease, 2023 — https://doi.org/10.1161/HHF.0000000000000080\n\nFontan pressure-flow profiling during stress and vasodilation, 2025 — https://doi.org/10.1152/ajpheart.00105.2025",
+      "explanationHtml": "<h2>Pulmonary Flow and Preload Limitation in Fontan Circulation</h2><p><strong>Correct answer: D — Reduced passive pulmonary flow limits systemic ventricular preload</strong></p><h3>Pressure-Flow Relationship</h3><ul><li><strong>The Fontan pathway connects systemic venous return to the pulmonary arteries without an intervening ventricle.</strong> Flow through the lungs depends on a limited upstream-to-downstream pressure gradient and low resistance.<ul><li>Conceptually, pulmonary flow depends on the difference between Fontan and pulmonary venous pressures divided by pulmonary vascular resistance. Increased resistance can reduce flow or require a higher upstream venous pressure to sustain it.</li><li>The resulting reduction in pulmonary venous return limits systemic ventricular end-diastolic volume and stroke volume. A normal ejection fraction therefore does not establish normal cardiac output or exclude Fontan circulatory failure.</li></ul></li></ul><h3>Clinical Assessment and Treatment Implications</h3><ul><li><strong>Assess the entire circuit when exercise capacity declines.</strong> Ventricular systolic performance is only one component of the evaluation.<ul><li>Look for pathway or branch-artery obstruction, elevated ventricular filling pressure, AV-valve regurgitation, arrhythmia, collateral flow and pulmonary vascular limitation. Catheter assessment can define pressures and flow when noninvasive studies do not explain deterioration.</li><li>Venous congestion and inadequate ventricular filling may coexist. Diuresis can relieve congestion but excessive volume removal can further reduce output; treatment requires attention to the individual pressure and flow profile.</li><li>Pulmonary vasodilators may improve exercise performance in selected patients without elevated ventricular end-diastolic pressure, but heterogeneous trial results do not support treating every Fontan patient identically. A mechanical pathway stenosis requires its own assessment rather than an assumption that vasodilator treatment will correct it. Exercise evaluation and serial clinical measurements help detect physiological deterioration that resting systolic imaging can miss.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Preserved ejection fraction ensures preserved stroke volume, so chronotropic limitation must explain the symptoms:</strong> Chronotropic limitation is a real Fontan problem but is not established here. Ejection fraction is a proportion; an underfilled ventricle can eject a normal fraction while delivering a reduced absolute stroke volume.</li><li><strong>B — Increased pulmonary resistance directly increases systemic ventricular systolic afterload:</strong> Systemic arterial resistance and outflow obstruction directly determine systemic ventricular ejection load. Pulmonary resistance lies upstream of ventricular filling in a Fontan circulation and primarily limits delivery of preload, although the entire circulation remains coupled.</li><li><strong>C — Increased pulmonary resistance produces failure of the subpulmonary ventricular pump:</strong> This explains an important mechanism in a biventricular circulation with pulmonary vascular disease. A completed Fontan has no functioning subpulmonary ventricular pump between caval return and the pulmonary arteries.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1161/HHF.0000000000000080\">AHA scientific statement: pulmonary hypertension in congenital heart disease, 2023</a></li><li><a href=\"https://doi.org/10.1152/ajpheart.00105.2025\">Fontan pressure-flow profiling during stress and vasodilation, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Pulmonary Flow and Preload Limitation in Fontan Circulation",
+        "sections": [
+          {
+            "heading": "Pressure-Flow Relationship",
+            "bullets": [
+              {
+                "text": "**The Fontan pathway connects systemic venous return to the pulmonary arteries without an intervening ventricle.** Flow through the lungs depends on a limited upstream-to-downstream pressure gradient and low resistance.",
+                "children": [
+                  "Conceptually, pulmonary flow depends on the difference between Fontan and pulmonary venous pressures divided by pulmonary vascular resistance. Increased resistance can reduce flow or require a higher upstream venous pressure to sustain it.",
+                  "The resulting reduction in pulmonary venous return limits systemic ventricular end-diastolic volume and stroke volume. A normal ejection fraction therefore does not establish normal cardiac output or exclude Fontan circulatory failure."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Clinical Assessment and Treatment Implications",
+            "bullets": [
+              {
+                "text": "**Assess the entire circuit when exercise capacity declines.** Ventricular systolic performance is only one component of the evaluation.",
+                "children": [
+                  "Look for pathway or branch-artery obstruction, elevated ventricular filling pressure, AV-valve regurgitation, arrhythmia, collateral flow and pulmonary vascular limitation. Catheter assessment can define pressures and flow when noninvasive studies do not explain deterioration.",
+                  "Venous congestion and inadequate ventricular filling may coexist. Diuresis can relieve congestion but excessive volume removal can further reduce output; treatment requires attention to the individual pressure and flow profile.",
+                  "Pulmonary vasodilators may improve exercise performance in selected patients without elevated ventricular end-diastolic pressure, but heterogeneous trial results do not support treating every Fontan patient identically. A mechanical pathway stenosis requires its own assessment rather than an assumption that vasodilator treatment will correct it. Exercise evaluation and serial clinical measurements help detect physiological deterioration that resting systolic imaging can miss."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Chronotropic limitation is a real Fontan problem but is not established here. Ejection fraction is a proportion; an underfilled ventricle can eject a normal fraction while delivering a reduced absolute stroke volume."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Systemic arterial resistance and outflow obstruction directly determine systemic ventricular ejection load. Pulmonary resistance lies upstream of ventricular filling in a Fontan circulation and primarily limits delivery of preload, although the entire circulation remains coupled."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "This explains an important mechanism in a biventricular circulation with pulmonary vascular disease. A completed Fontan has no functioning subpulmonary ventricular pump between caval return and the pulmonary arteries."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "AHA scientific statement: pulmonary hypertension in congenital heart disease, 2023",
+          "url": "https://doi.org/10.1161/HHF.0000000000000080"
+        },
+        {
+          "label": "Fontan pressure-flow profiling during stress and vasodilation, 2025",
+          "url": "https://doi.org/10.1152/ajpheart.00105.2025"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Explain passive pulmonary flow and sensitivity to pulmonary resistance"
     }
   ],
   "plannedQuestions": 55,
@@ -3035,9 +3113,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 35,
+    "draftQuestions": 36,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 35
+    "newQuestionsAfterRedistribution": 36
   }
 }

@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 39,
+  "authoredQuestions": 40,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -64,7 +64,8 @@
     "cardiology-rebuild-12-032",
     "cardiology-rebuild-12-033",
     "cardiology-rebuild-12-034",
-    "cardiology-rebuild-12-035"
+    "cardiology-rebuild-12-035",
+    "cardiology-rebuild-12-036"
   ],
   "sources": [
     {
@@ -190,21 +191,29 @@
     {
       "label": "AHA statement: cardiopulmonary exercise testing in congenital heart disease, 2025",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12074744/"
+    },
+    {
+      "label": "AHA scientific statement: pulmonary hypertension in congenital heart disease, 2023",
+      "url": "https://doi.org/10.1161/HHF.0000000000000080"
+    },
+    {
+      "label": "Fontan pressure-flow profiling during stress and vasodilation, 2025",
+      "url": "https://doi.org/10.1152/ajpheart.00105.2025"
     }
   ],
   "validation": {
-    "questions": 39,
+    "questions": 40,
     "answerDistribution": {
       "A": 10,
       "B": 10,
       "C": 10,
-      "D": 9
+      "D": 10
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 111,
+    "distractorRationales": 114,
     "questionStyles": {
       "direct": 5,
-      "clinical_scenario": 34
+      "clinical_scenario": 35
     },
     "status": "passed"
   },
@@ -301,7 +310,10 @@
     "Post-arterial-switch ischemic symptoms prompt assessment of reimplanted coronary anatomy; functional tests answer a complementary question.",
     "Double discordance is mapped to the systemic morphological RV and tricuspid valve, with spontaneous AV-block risk."
   ],
-  "nextWork": "Continue with Fontan physiology; foundations, remaining congenital lesions, general management and final whole-chapter review also remain pending.",
+  "fontanChecks": [
+    "Increased pulmonary resistance limits passive pulmonary flow and systemic ventricular preload; a preserved ejection fraction does not establish normal output."
+  ],
+  "nextWork": "Continue with Fontan complications, thromboprophylaxis and liver surveillance; foundations, remaining congenital lesions, general management and final whole-chapter review also remain pending.",
   "limitations": [
     "Four transferred questions retained verbatim with their original IDs.",
     "New content has author source checks, not independent clinician review.",

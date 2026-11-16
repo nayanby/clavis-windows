@@ -4,9 +4,9 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 39,
+  "authoredQuestions": 40,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 35,
+  "newDraftQuestions": 36,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
@@ -124,7 +124,7 @@
     {
       "section": "Fontan and single-ventricle circulation",
       "plannedQuestions": 5,
-      "authoredQuestions": 0,
+      "authoredQuestions": 1,
       "decisions": [
         "Explain passive pulmonary flow and sensitivity to pulmonary resistance",
         "Investigate failing Fontan and protein-losing enteropathy",
@@ -351,6 +351,11 @@
       "questionId": "cardiology-rebuild-12-035",
       "section": "Transposition and systemic right ventricle",
       "decision": "Recognize AV block and systemic AV-valve disease in congenitally corrected TGA"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-036",
+      "section": "Fontan and single-ventricle circulation",
+      "decision": "Explain passive pulmonary flow and sensitivity to pulmonary resistance"
     }
   ]
 }
