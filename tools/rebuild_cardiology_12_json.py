@@ -31,6 +31,9 @@ REFERENCES.update(fontan_references)
 from cardiology_12_other_questions import rows as other_rows, REFERENCES as other_references
 rows.extend(other_rows)
 REFERENCES.update(other_references)
+from cardiology_12_general_questions import rows as general_rows, REFERENCES as general_references
+rows.extend(general_rows)
+REFERENCES.update(general_references)
 
 DOC='12. Adult Congenital Heart Diseases'
 PREFIX='cardiology-rebuild-12-'
@@ -125,6 +128,7 @@ ASSIGNMENTS={
  PREFIX+'041':(11,0),
  PREFIX+'042':(11,1),
  PREFIX+'043':(11,2),
+ PREFIX+'044':(12,0),
  'cardiology-rebuild-03-047':(5,0), 'cardiology-rebuild-03-048':(6,1),
 }
 

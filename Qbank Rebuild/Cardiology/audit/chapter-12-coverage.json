@@ -4,9 +4,9 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 47,
+  "authoredQuestions": 48,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 43,
+  "newDraftQuestions": 44,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
@@ -146,7 +146,7 @@
     {
       "section": "General adult congenital management",
       "plannedQuestions": 5,
-      "authoredQuestions": 0,
+      "authoredQuestions": 1,
       "decisions": [
         "Plan pregnancy and contraception using lesion-specific physiological risk",
         "Select endocarditis prophylaxis according to the actual high-risk indication",
@@ -391,6 +391,11 @@
       "questionId": "cardiology-rebuild-12-043",
       "section": "Other important congenital lesions",
       "decision": "Assess anomalous aortic coronary origin and an ischemia-risk phenotype"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-044",
+      "section": "General adult congenital management",
+      "decision": "Plan pregnancy and contraception using lesion-specific physiological risk"
     }
   ]
 }

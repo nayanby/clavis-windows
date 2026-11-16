@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 47,
+  "authoredQuestions": 48,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -72,7 +72,8 @@
     "cardiology-rebuild-12-040",
     "cardiology-rebuild-12-041",
     "cardiology-rebuild-12-042",
-    "cardiology-rebuild-12-043"
+    "cardiology-rebuild-12-043",
+    "cardiology-rebuild-12-044"
   ],
   "sources": [
     {
@@ -218,21 +219,25 @@
     {
       "label": "EASL-ERN position paper on liver involvement in Fontan circulation, 2023",
       "url": "https://www.journal-of-hepatology.eu/article/S0168-8278%2823%2904992-9/fulltext"
+    },
+    {
+      "label": "ESC cardiovascular disease and pregnancy guideline, 2025",
+      "url": "https://doi.org/10.1093/eurheartj/ehaf193"
     }
   ],
   "validation": {
-    "questions": 47,
+    "questions": 48,
     "answerDistribution": {
       "A": 12,
       "B": 12,
       "C": 12,
-      "D": 11
+      "D": 12
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 135,
+    "distractorRationales": 138,
     "questionStyles": {
       "direct": 5,
-      "clinical_scenario": 42
+      "clinical_scenario": 43
     },
     "status": "passed"
   },

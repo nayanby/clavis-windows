@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 47,
+  "targetQuestions": 48,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3677,6 +3677,94 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Assess anomalous aortic coronary origin and an ischemia-risk phenotype"
+    },
+    {
+      "id": "cardiology-rebuild-12-044",
+      "topic": "General adult congenital management",
+      "question": "A 26-year-old with Eisenmenger syndrome from a large VSD is considering pregnancy. She is in functional class II on PAH treatment and has preserved LV ejection fraction. Which preconception recommendation best reflects her cardiovascular risk?",
+      "options": [
+        "Offer preconception VSD closure to remove the pregnancy risk",
+        "Consider pregnancy acceptable with routine obstetric follow-up because LV ejection fraction is preserved",
+        "Delay conception until symptoms improve to functional class I, then classify the pregnancy as low risk",
+        "Advise against pregnancy because of very high risk and arrange multidisciplinary counseling and reliable contraception"
+      ],
+      "correctIndex": 3,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Pregnancy Counseling in Eisenmenger Syndrome\n\nCorrect answer: Advise against pregnancy because of very high risk and arrange multidisciplinary counseling and reliable contraception\n\nRisk Is Determined by Physiology\n\n**Eisenmenger syndrome remains a very high-risk pregnancy condition despite modest symptoms or preserved LV systolic function.** Pregnancy-related circulatory changes can exceed the reserve of the pulmonary circulation and right ventricle.\n\nSystemic vasodilation may worsen right-to-left shunting, while changes in volume and flow can precipitate right-heart failure. Thromboembolism and paradoxical embolism add risk. Delivery and the postpartum period require particular attention; successful progression through early pregnancy does not establish safety.\n\nThe mWHO 2.0 framework places pulmonary arterial hypertension in class IV. Current guidance emphasizes transparent counseling about maternal and fetal risks, respect for patient decisions and involvement of a Pregnancy Heart Team with congenital and pulmonary-hypertension expertise.\n\nContraception and Medication Review\n\n**Discuss effective contraception before an unintended pregnancy occurs.** Choose the method with the patient after reviewing thrombotic risk, bleeding, drug interactions and procedural tolerance.\n\nEstrogen-containing contraception should be avoided in cyanotic ACHD because of thromboembolic risk. Long-acting options can be considered with specialist counseling; the insertion setting may need planning when hemodynamic reserve is limited.\n\nReview PAH drugs before conception. Endothelin receptor antagonists carry fetal risk, and some can reduce hormonal contraceptive effectiveness. Medication adjustment requires specialist oversight rather than abrupt withdrawal of essential treatment.\n\nIf Pregnancy Occurs\n\n**Arrange prompt expert review and shared decision-making.** Discuss all management options, including termination where appropriate, without delaying care or assuming the patient has chosen an option.\n\nIf pregnancy continues, coordinated maternal-fetal, ACHD, pulmonary-hypertension and anesthesia care is required throughout pregnancy and postpartum. The team should plan surveillance, treatment and delivery in an experienced center. The availability of intensive monitoring does not eliminate the underlying risk.\n\nOffer preconception VSD closure to remove the pregnancy risk: Closure is appropriate for selected shunts before irreversible pulmonary vascular disease develops. Established Eisenmenger physiology makes defect closure hazardous; it cannot be offered as a simple method of converting the patient to a safe pregnancy phenotype.\n\nConsider pregnancy acceptable with routine obstetric follow-up because LV ejection fraction is preserved: Preserved systemic LV function is reassuring in some congenital lesions but does not remove severe pulmonary vascular disease, right-heart risk or cyanotic physiology. This patient needs specialist counseling rather than routine follow-up alone.\n\nDelay conception until symptoms improve to functional class I, then classify the pregnancy as low risk: Functional improvement is desirable but does not establish reversal of Eisenmenger physiology. A symptom-class change alone cannot reclassify this pulmonary vascular disorder as a low-risk pregnancy condition.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC cardiovascular disease and pregnancy guideline, 2025 — https://doi.org/10.1093/eurheartj/ehaf193\n\nBosentan FDA prescribing information, revised November 2025 — https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021290s048%2C209279s015lbl.pdf",
+      "explanationHtml": "<h2>Pregnancy Counseling in Eisenmenger Syndrome</h2><p><strong>Correct answer: D — Advise against pregnancy because of very high risk and arrange multidisciplinary counseling and reliable contraception</strong></p><h3>Risk Is Determined by Physiology</h3><ul><li><strong>Eisenmenger syndrome remains a very high-risk pregnancy condition despite modest symptoms or preserved LV systolic function.</strong> Pregnancy-related circulatory changes can exceed the reserve of the pulmonary circulation and right ventricle.<ul><li>Systemic vasodilation may worsen right-to-left shunting, while changes in volume and flow can precipitate right-heart failure. Thromboembolism and paradoxical embolism add risk. Delivery and the postpartum period require particular attention; successful progression through early pregnancy does not establish safety.</li><li>The mWHO 2.0 framework places pulmonary arterial hypertension in class IV. Current guidance emphasizes transparent counseling about maternal and fetal risks, respect for patient decisions and involvement of a Pregnancy Heart Team with congenital and pulmonary-hypertension expertise.</li></ul></li></ul><h3>Contraception and Medication Review</h3><ul><li><strong>Discuss effective contraception before an unintended pregnancy occurs.</strong> Choose the method with the patient after reviewing thrombotic risk, bleeding, drug interactions and procedural tolerance.<ul><li>Estrogen-containing contraception should be avoided in cyanotic ACHD because of thromboembolic risk. Long-acting options can be considered with specialist counseling; the insertion setting may need planning when hemodynamic reserve is limited.</li><li>Review PAH drugs before conception. Endothelin receptor antagonists carry fetal risk, and some can reduce hormonal contraceptive effectiveness. Medication adjustment requires specialist oversight rather than abrupt withdrawal of essential treatment.</li></ul></li></ul><h3>If Pregnancy Occurs</h3><ul><li><strong>Arrange prompt expert review and shared decision-making.</strong> Discuss all management options, including termination where appropriate, without delaying care or assuming the patient has chosen an option.<ul><li>If pregnancy continues, coordinated maternal-fetal, ACHD, pulmonary-hypertension and anesthesia care is required throughout pregnancy and postpartum. The team should plan surveillance, treatment and delivery in an experienced center. The availability of intensive monitoring does not eliminate the underlying risk.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Offer preconception VSD closure to remove the pregnancy risk:</strong> Closure is appropriate for selected shunts before irreversible pulmonary vascular disease develops. Established Eisenmenger physiology makes defect closure hazardous; it cannot be offered as a simple method of converting the patient to a safe pregnancy phenotype.</li><li><strong>B — Consider pregnancy acceptable with routine obstetric follow-up because LV ejection fraction is preserved:</strong> Preserved systemic LV function is reassuring in some congenital lesions but does not remove severe pulmonary vascular disease, right-heart risk or cyanotic physiology. This patient needs specialist counseling rather than routine follow-up alone.</li><li><strong>C — Delay conception until symptoms improve to functional class I, then classify the pregnancy as low risk:</strong> Functional improvement is desirable but does not establish reversal of Eisenmenger physiology. A symptom-class change alone cannot reclassify this pulmonary vascular disorder as a low-risk pregnancy condition.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaf193\">ESC cardiovascular disease and pregnancy guideline, 2025</a></li><li><a href=\"https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021290s048%2C209279s015lbl.pdf\">Bosentan FDA prescribing information, revised November 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Pregnancy Counseling in Eisenmenger Syndrome",
+        "sections": [
+          {
+            "heading": "Risk Is Determined by Physiology",
+            "bullets": [
+              {
+                "text": "**Eisenmenger syndrome remains a very high-risk pregnancy condition despite modest symptoms or preserved LV systolic function.** Pregnancy-related circulatory changes can exceed the reserve of the pulmonary circulation and right ventricle.",
+                "children": [
+                  "Systemic vasodilation may worsen right-to-left shunting, while changes in volume and flow can precipitate right-heart failure. Thromboembolism and paradoxical embolism add risk. Delivery and the postpartum period require particular attention; successful progression through early pregnancy does not establish safety.",
+                  "The mWHO 2.0 framework places pulmonary arterial hypertension in class IV. Current guidance emphasizes transparent counseling about maternal and fetal risks, respect for patient decisions and involvement of a Pregnancy Heart Team with congenital and pulmonary-hypertension expertise."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Contraception and Medication Review",
+            "bullets": [
+              {
+                "text": "**Discuss effective contraception before an unintended pregnancy occurs.** Choose the method with the patient after reviewing thrombotic risk, bleeding, drug interactions and procedural tolerance.",
+                "children": [
+                  "Estrogen-containing contraception should be avoided in cyanotic ACHD because of thromboembolic risk. Long-acting options can be considered with specialist counseling; the insertion setting may need planning when hemodynamic reserve is limited.",
+                  "Review PAH drugs before conception. Endothelin receptor antagonists carry fetal risk, and some can reduce hormonal contraceptive effectiveness. Medication adjustment requires specialist oversight rather than abrupt withdrawal of essential treatment."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "If Pregnancy Occurs",
+            "bullets": [
+              {
+                "text": "**Arrange prompt expert review and shared decision-making.** Discuss all management options, including termination where appropriate, without delaying care or assuming the patient has chosen an option.",
+                "children": [
+                  "If pregnancy continues, coordinated maternal-fetal, ACHD, pulmonary-hypertension and anesthesia care is required throughout pregnancy and postpartum. The team should plan surveillance, treatment and delivery in an experienced center. The availability of intensive monitoring does not eliminate the underlying risk."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Closure is appropriate for selected shunts before irreversible pulmonary vascular disease develops. Established Eisenmenger physiology makes defect closure hazardous; it cannot be offered as a simple method of converting the patient to a safe pregnancy phenotype."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Preserved systemic LV function is reassuring in some congenital lesions but does not remove severe pulmonary vascular disease, right-heart risk or cyanotic physiology. This patient needs specialist counseling rather than routine follow-up alone."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Functional improvement is desirable but does not establish reversal of Eisenmenger physiology. A symptom-class change alone cannot reclassify this pulmonary vascular disorder as a low-risk pregnancy condition."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC cardiovascular disease and pregnancy guideline, 2025",
+          "url": "https://doi.org/10.1093/eurheartj/ehaf193"
+        },
+        {
+          "label": "Bosentan FDA prescribing information, revised November 2025",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021290s048%2C209279s015lbl.pdf"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Plan pregnancy and contraception using lesion-specific physiological risk"
     }
   ],
   "plannedQuestions": 55,
@@ -3685,9 +3773,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 43,
+    "draftQuestions": 44,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 43
+    "newQuestionsAfterRedistribution": 44
   }
 }
