@@ -1,7 +1,7 @@
 {
   "status": "review_in_progress_not_release_approved",
   "questions": 55,
-  "bankSha256": "cfb2cbc01ed43cbb94a66ea50856874601c3ba293c04a57cc076059e5957663c",
+  "bankSha256": "8ada384536226a1f59cc5d60f210ce6c2fab45352fda6789c856d9b87156be97",
   "reviewedScope": "All 55 stems and option sets; four transferred question explanations inspected, with initial output truncation requiring focused reread of pulmonary stenosis.",
   "findings": [
     {
@@ -24,6 +24,12 @@
       "action": "Replaced restricted tests with CMR angiography, 3D TEE and catheter balloon/coronary assessment; narrowed stem to self-expanding native-RVOT cycle-dependent fit analysis. Correct index retained.",
       "status": "revised",
       "source": "https://doi.org/10.1016/j.jcct.2023.06.005"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-050",
+      "action": "Replaced abstract framework recall with a repaired-TOF case distinguishing II-C, II-D, III-C and III-D; added all four physiological stage criteria with time windows and thresholds from the official 2025 AHA classification table. Correct answer index retained.",
+      "status": "revised",
+      "source": "https://professional.heart.org/en/science-news/2025-adult-congenital-heart-disease-anatomic-and-physiological-classification-system"
     }
   ],
   "remaining": [

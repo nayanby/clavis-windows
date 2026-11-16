@@ -255,8 +255,8 @@
     "minimumExplanationWords": 210,
     "distractorRationales": 159,
     "questionStyles": {
-      "direct": 7,
-      "clinical_scenario": 48
+      "clinical_scenario": 49,
+      "direct": 6
     },
     "status": "passed"
   },
@@ -356,7 +356,7 @@
   "fontanChecks": [
     "Increased pulmonary resistance limits passive pulmonary flow and systemic ventricular preload; a preserved ejection fraction does not establish normal output."
   ],
-  "nextWork": "Continue with remaining congenital lesions, foundations and general management, followed by whole-chapter coverage and medical review.",
+  "nextWork": "Complete whole-chapter clinical, explanation, distractor and source-coverage review of all 55 authored questions before release; no new Chapter 12 questions are installed yet.",
   "limitations": [
     "Four transferred questions retained verbatim with their original IDs.",
     "New content has author source checks, not independent clinician review.",

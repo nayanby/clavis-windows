@@ -693,8 +693,8 @@
         "minimumExplanationWords": 210,
         "distractorRationales": 159,
         "questionStyles": {
-          "clinical_scenario": 48,
-          "direct": 7
+          "clinical_scenario": 49,
+          "direct": 6
         },
         "status": "passed"
       },

@@ -24,23 +24,27 @@ rows=[Q(TOPIC,'Chamber Loading in Congenital Left-to-Right Shunts',
 
 REFERENCES['AP2025']=('AHA: 2025 ACHD anatomic and physiological classification','https://professional.heart.org/en/science-news/2025-adult-congenital-heart-disease-anatomic-and-physiological-classification-system')
 rows.append(Q(TOPIC,'Anatomical Complexity and Physiological Stage',
- 'Two adults have the same repaired congenital lesion. One has normal function and no significant sequelae; the other has recurrent hemodynamically important arrhythmia and recent heart-failure hospitalization. How should the ACHD anatomic-physiological framework represent this difference?',
- 'Retain the lesion-based anatomical category while assigning different physiological stages',[
- ('Assign the same combined classification because the original lesion is identical','Anatomy is only one axis. Physiological status adds information about current clinical burden, so identical lesions do not require identical combined classifications or follow-up intensity.'),
- ('Move the patient with heart failure to a higher anatomical category','Heart failure changes physiological burden but does not itself change the underlying congenital anatomical diagnosis. Relabeling anatomical complexity would obscure the distinction the two-axis framework is designed to preserve.'),
- ('Classify both by current NYHA class alone and omit the anatomical category','Functional class contributes to assessment but does not encode the congenital connections, prior repair or all relevant physiological findings. Arrhythmia, ventricular disease, hypoxemia and recent events also matter.')],
+ 'An adult with repaired tetralogy of Fallot without pulmonary atresia is now NYHA class II, with moderate pulmonary regurgitation. Four months ago the patient required hospitalization for heart failure. Which 2025 ACHD anatomic-physiological classification applies?',
+ 'II-D',[
+ ('II-C','TOF without pulmonary atresia has moderate anatomical complexity, and moderate valve dysfunction is a stage C feature. However, the heart-failure admission within 12 months establishes stage D despite the current improvement in functional class.'),
+ ('III-C','Great anatomical complexity includes TOF with pulmonary atresia and other complex circulations, not the supplied form of repaired TOF. This option also underestimates physiology by ignoring the recent heart-failure hospitalization.'),
+ ('III-D','Stage D correctly reflects the recent admission. Anatomical category III would fit, for example, pulmonary atresia or Fontan physiology; heart failure alone does not move ordinary repaired TOF from category II to III.')],
  [S('Two Complementary Axes',
   '**Anatomical complexity and current physiological burden answer different questions.** The anatomical categories are I, simple; II, moderate complexity; and III, great complexity. Physiological stages range from A to D.',
   'Anatomy describes the congenital lesion and circulation. Physiology reflects current sequelae and clinical status and can change over time. Repair does not automatically reclassify every lesion as anatomically simple or establish physiological stage A.'),
   S('Use the Current Criteria',
   '**The 2025 framework refines the physiological criteria.** Review symptoms, ventricular and valve function, shunts, pulmonary vascular disease, oxygenation, rhythm and recent clinical events rather than relying on a single reassuring measurement.',
   'Stage A describes a patient without relevant symptoms or sequelae, with normal exercise capacity and pulmonary pressure and no sustained arrhythmia. Increasing stages incorporate clinically important abnormalities; recent heart-failure hospitalization and recurrent hemodynamically significant or refractory arrhythmia are stage D features in the updated framework.',
-  'The time window and severity qualifications matter. For example, the updated criteria specify heart-failure hospitalization within the preceding 12 months. Do not substitute a vague lifetime history or copy an older staging table without checking the current definitions.'),
+  'The time window and severity qualifications matter. Heart-failure hospitalization within the preceding 12 months places this patient in D even after symptomatic improvement. Use the highest applicable physiological stage; neither current NYHA II nor preserved function on one measurement cancels a qualifying recent event.'),
   S('Apply Classification to Care',
-  '**The combined classification helps determine surveillance and specialist resource needs.** The two patients may require different visit intervals, investigations and procedural planning despite the same congenital diagnosis.',
+  '**The combined classification helps determine surveillance and specialist resource needs.** Patients with the same anatomical diagnosis may require different visit intervals, investigations and procedural planning because their physiological stages differ.',
   'Reassess stage when status changes, and investigate the cause rather than merely changing a label. The framework supports judgment; it does not replace lesion-specific management or evaluation of acquired disease.',
   'A small incidental congenital defect does not account for every later symptom. Conditions such as coronary disease, renal dysfunction or acquired valve disease need assessment under their own relevant guidance. Record the anatomical diagnosis and current physiological findings explicitly so the classification remains interpretable.')],
- ['ACHD2025','AP2025'],style='direct'))
+ ['ACHD2025','AP2025'],table=(['Stage','2025 physiological criteria'],[
+ ('A','Asymptomatic; no anatomical/hemodynamic sequelae or sustained arrhythmia; normal exercise capacity and pulmonary pressure.'),
+ ('B','Mild ventricular enlargement/dysfunction or native valve disease; normally functioning prosthetic valve; insignificant shunt; stable arrhythmia without treatment change for 12 months; pacemaker/ICD without ICD therapy for 12 months.'),
+ ('C','BNP/NT-proBNP ≥2× upper normal limit; significant shunt; resting saturation 86–92%; at least moderate valve disease or ventricular dysfunction; low-risk PAH; sustained/high-burden tachyarrhythmia needing drugs, ablation, cardioversion or ICD therapy within 12 months.'),
+ ('D','Heart-failure admission or endocarditis within 12 months; Eisenmenger syndrome; NYHA III/IV; recurrent hemodynamically important/refractory arrhythmia; resting saturation ≤85%; intermediate/high-risk PAH.')])))
 
 rows.append(Q('Other important congenital lesions','Adult ALCAPA and Restoration of Coronary Supply',
  'An asymptomatic 30-year-old is found to have the left coronary artery originating from the pulmonary artery. There are extensive right-to-left coronary collaterals and retrograde flow into the pulmonary artery. LV ejection fraction is 58%. Which strategy is most appropriate?',
