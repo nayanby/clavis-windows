@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology 13. Aortic Diseases and Peripheral Vascular Diseases",
+  "currentChapter": "Cardiology 14. Advanced ECG Interpretation and Electrophysiology",
   "chapters": [
     {
       "subject": "Neurology",
@@ -709,34 +709,36 @@
       "chapter": 13,
       "document": "13. Aortic Diseases and Peripheral Vascular Diseases",
       "file": "Cardiology/13. Aortic Diseases and Peripheral Vascular Diseases.json",
-      "status": "draft_in_progress",
+      "status": "installed_verified",
       "originalIdsPreserved": true,
       "existingQuestions": 3,
       "previouslyInstalledQuestions": 3,
-      "draftQuestions": 22,
+      "draftQuestions": 0,
       "coverageStatus": "incomplete_draft",
       "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-      "installedQuestions": 3,
-      "draftQuestionsWithheld": 22,
-      "runtimeStatus": "installed_redistributed_subset",
+      "installedQuestions": 48,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_reviewed_chapter",
       "validation": {
-        "questions": 25,
+        "questions": 48,
         "answerDistribution": {
-          "A": 7,
-          "B": 6,
-          "C": 6,
-          "D": 6
+          "A": 12,
+          "B": 12,
+          "C": 12,
+          "D": 12
         },
-        "minimumExplanationWords": 151,
-        "distractorRationales": 75,
+        "minimumExplanationWords": 103,
+        "distractorRationales": 141,
         "questionStyles": {
-          "clinical_scenario": 25
+          "clinical_scenario": 46,
+          "direct": 2
         },
         "status": "passed"
       },
-      "authoredQuestions": 25,
+      "authoredQuestions": 48,
       "plannedQuestions": 48,
-      "coverageMap": "Cardiology/audit/chapter-13-coverage.json"
+      "coverageMap": "Cardiology/audit/chapter-13-coverage.json",
+      "installedSha256": "7831e795e64d998c8761b124c46e86d745c2d0d19997f255127480eeed35c94a"
     },
     {
       "subject": "Cardiology",
@@ -1389,7 +1391,7 @@
     "sourceChapters": 15,
     "fullCoverage": false,
     "draftQuestionsNotInstalled": 74,
-    "currentAuthoredQuestions": 745,
-    "currentDraftQuestionsNotInstalled": 87
+    "currentAuthoredQuestions": 768,
+    "currentDraftQuestionsNotInstalled": 65
   }
 }

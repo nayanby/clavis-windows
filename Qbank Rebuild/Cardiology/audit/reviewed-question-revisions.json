@@ -137,6 +137,65 @@
       "revisedSha256": "b34ab7e6732849b91642c373bc916877d1f7d4c5c7d4c2afedccf04eed7b7a31",
       "reviewedAt": "2026-11-16",
       "reason": " Condensed teaching into structured bullets; stem, options, key and references preserved."
+    },
+    {
+      "questionId": "cardiology-rebuild-02-008",
+      "originalSha256": "e7f6b1847d441fe604383d5b76a3ad018b0c5808c8685a8c57b7e31a4d1ceac7",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching",
+        "options"
+      ],
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9876736/",
+        "https://doi.org/10.1016/j.jacc.2024.11.009"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "87673f1ca5c65312c52a303981847121648b0a65802b165d849f115cbb99ab5c",
+      "reviewedAt": "2026-11-16",
+      "reason": "Condensed explanations into concise teaching bullets; retained question ID, stem and correct answer position. Shortened distractor option wording without changing the clinical answer."
+    },
+    {
+      "questionId": "cardiology-rebuild-09-042",
+      "originalSha256": "3afe5fe8a79a9a94e98ff38c868e67f2a15e3ae020215154c5b3063bb7d77595",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching"
+      ],
+      "sources": [
+        "https://doi.org/10.1161/CIR.0000000000001106",
+        "https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-15/Pericardiocentesis-in-cardiac-tamponade-indications-and-practical-aspects/",
+        "https://doi.org/10.1093/eurheartj/ehaf192"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "9fcb0c5ba1c139ccf3fd408f5c077eb7c71629f32ef960985c96dde7ec3142d5",
+      "reviewedAt": "2026-11-16",
+      "reason": "Condensed explanations into concise teaching bullets; retained question ID, stem and correct answer position."
+    },
+    {
+      "questionId": "cardiology-rebuild-03-017",
+      "originalSha256": "28d0b296e7fa4efb9b8bdfddca7cd08afc296f6eb92a9346789742f095e37b3d",
+      "changedFields": [
+        "explanation",
+        "explanationHtml",
+        "explanationStyle",
+        "explanationTeaching",
+        "options"
+      ],
+      "sources": [
+        "https://doi.org/10.1093/eurheartj/ehaf194"
+      ],
+      "status": "author_source_checked",
+      "independentClinicianReview": false,
+      "revisedSha256": "0dd3a6ecdcfc64c85d1fe85d0f2b89114fcdd5dc2aaa0d5592faab94ee4fa27a",
+      "reviewedAt": "2026-11-16",
+      "reason": "Condensed explanations into concise teaching bullets; retained question ID, stem and correct answer position. Shortened distractor option wording without changing the clinical answer."
     }
   ]
 }

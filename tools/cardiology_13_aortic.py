@@ -207,3 +207,12 @@ Q('Symptomatic AAA Below the Elective Size Threshold',
  ('Begin therapeutic anticoagulation for mural thrombus as the principal treatment','Mural thrombus is common within AAA; it is not by itself an indication for anticoagulation or an explanation permitting delayed repair assessment.')],
  [('Symptomatic Disease',[B('**Attributable pain or tenderness warrants repair evaluation irrespective of usual elective diameter.**','Exclude alternative diagnoses, contained rupture and infection; absence of free rupture does not establish benign disease.')]),
  ('Immediate Care',[B('**Monitor, control pain and BP, and involve the vascular team.**','Stable patients permit rapid anatomical planning and optimization; deterioration requires emergency intervention.'),B('**CTA defines anatomy and complications.**','Aneurysm-related embolization, fistulation or rapid growth can also justify intervention below standard fusiform thresholds.'),B('**Long-term care continues after repair:** tobacco cessation, cardiovascular prevention and procedure-specific surveillance.')])])
+
+# Complete source frameworks within the existing decisions, avoiding duplicate MCQs.
+rows[0]['sections'][0][1].append(B('**Timing:** hyperacute <24 hours; acute 1–14 days; subacute 15–90 days; chronic >90 days.','Anatomical involvement and complications determine immediate treatment; duration is a separate classification axis.'))
+rows[14]['table']=(['Aortopathy (2022 ACC/AHA)','Selected repair criteria'],[
+ ['Sporadic root/ascending','≥5.5 cm; ≥5.0 cm reasonable at experienced centers; confirmed rapid growth or attributable symptoms'],
+ ['BAV root/ascending','≥5.5 cm; 5.0–5.4 cm with added dissection risk; ≥4.5 cm reasonable during surgical valve repair/replacement'],
+ ['Marfan root','≥5.0 cm; ≥4.5 cm with added high-risk features'],
+ ['Heritable disease/BAV growth','≥0.3 cm in one year is rapid growth; apply the relevant disease-specific framework']])
+rows[21]['sections'][0][1].append(B('**Suspected rupture:** new abdominal/back pain with hypotension, sometimes a pulsatile mass.','The complete triad is often absent; unstable patients need immediate vascular resuscitation and repair planning, not delay for routine surveillance imaging.'))

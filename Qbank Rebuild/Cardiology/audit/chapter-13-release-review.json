@@ -1,0 +1,44 @@
+{
+  "chapterNumber": 13,
+  "document": "13. Aortic Diseases and Peripheral Vascular Diseases",
+  "status": "passed",
+  "installed": true,
+  "reviewedAt": "2026-11-16",
+  "reviewedQuestionsSha256": "02d0d86d8ad4fc6d1f3775099846a9d91e1c3f297aea3db338dc9e98669b3c98",
+  "sourceDocumentSha256": "89a8747279d5379353f73c1a6683d6e97aea03631391c69e8760547808fc2854",
+  "questionCount": 48,
+  "coverageAudit": "chapter-13-coverage.json",
+  "sourceReview": "chapter-13-source-review.json",
+  "editorialReview": "chapter-13-editorial-review.json",
+  "validation": {
+    "questions": 48,
+    "answerDistribution": {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12
+    },
+    "minimumExplanationWords": 103,
+    "distractorRationales": 141,
+    "questionStyles": {
+      "clinical_scenario": 46,
+      "direct": 2
+    },
+    "status": "passed"
+  },
+  "checks": {
+    "singleBestAnswerAuthorReview": "passed",
+    "continuousTopicOrder": "passed",
+    "individualDistractorExplanations": "passed",
+    "sourceCoverageAndCurrentUpdates": "passed_for_documented_scope",
+    "stableIdsAndAnswerSlots": "passed",
+    "offlineRichTextAndRequiredStyles": "passed_offline_and_app_renderer_at_two_widths"
+  },
+  "limitations": [
+    "Full Harrison text was not accessed.",
+    "Verification is author source review, not independent clinician peer review.",
+    "Named guideline frameworks are explicit; treatment selection remains individualized."
+  ],
+  "installedPath": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\13. Aortic Diseases and Peripheral Vascular Diseases\\Questions\\23d4748ea19e17a0615b.json",
+  "installedSha256": "7831e795e64d998c8761b124c46e86d745c2d0d19997f255127480eeed35c94a"
+}

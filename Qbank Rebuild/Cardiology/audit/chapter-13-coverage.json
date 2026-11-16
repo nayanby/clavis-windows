@@ -1,9 +1,9 @@
 {
-  "status": "draft_in_progress",
+  "status": "installed_verified",
   "plannedQuestions": 48,
-  "authoredQuestions": 25,
+  "authoredQuestions": 48,
   "installedQuestions": 3,
-  "countPolicy": "45 new distinct decisions plus 3 transferred questions; provisional until consolidated source-coverage and duplication review, not official examination weightage.",
+  "countPolicy": "48 distinct decisions: 45 newly authored and 3 retained IDs, covering the four source sections with additional trial evidence; not official examination weightage.",
   "sections": [
     {
       "section": "Acute aortic syndromes",
@@ -112,31 +112,99 @@
     {
       "questionId": "cardiology-rebuild-13-022",
       "title": "Symptomatic AAA Below the Elective Size Threshold"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-023",
+      "title": "Calculating the Ankle–Brachial Index"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-024",
+      "title": "Exercise ABI for Exertional Symptoms"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-025",
+      "title": "Noncompressible Ankle Arteries"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-026",
+      "title": "Chronic Limb-Threatening Ischemia"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-027",
+      "title": "Localizing Chronic Arterial Occlusion"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-028",
+      "title": "Vascular Versus Neurogenic Claudication"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-029",
+      "title": "Lipid Lowering in Symptomatic PAD"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-030",
+      "title": "Single Antiplatelet Therapy for PAD"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-031",
+      "title": "Dual-Pathway Inhibition After Limb Revascularization"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-032",
+      "title": "DAPT After Endovascular PAD Treatment"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-033",
+      "title": "Cilostazol Dose and Interactions"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-034",
+      "title": "Structured Exercise for Claudication"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-035",
+      "title": "When to Revascularize Claudication"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-036",
+      "title": "WIfI Staging of a Threatened Limb"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-037",
+      "title": "BEST-CLI and Suitable Vein Conduit"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-038",
+      "title": "BASIL-2 and Infrapopliteal Revascularization"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-039",
+      "title": "Rutherford Acute Limb Ischemia Classification"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-040",
+      "title": "Initial Anticoagulation in Acute Limb Ischemia"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-041",
+      "title": "Immediately Threatened Limb"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-042",
+      "title": "Irreversible Limb Ischemia"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-043",
+      "title": "Compartment Syndrome After Revascularization"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-044",
+      "title": "Selecting Catheter-Directed Thrombolysis"
+    },
+    {
+      "questionId": "cardiology-rebuild-13-045",
+      "title": "Embolic Versus In-Situ Arterial Occlusion"
     }
   ],
-  "remainingDecisions": [
-    "ABI calculation",
-    "Exercise ABI",
-    "Noncompressible ABI and TBI",
-    "CLTI perfusion assessment",
-    "Anatomical localization",
-    "Vascular versus neurogenic claudication",
-    "Lipid lowering",
-    "Single antiplatelet therapy",
-    "Dual-pathway inhibition",
-    "Postprocedural DAPT",
-    "Cilostazol",
-    "Structured exercise",
-    "Claudication revascularization",
-    "WIfI",
-    "BEST-CLI",
-    "BASIL-2",
-    "ALI viability classification",
-    "Initial anticoagulation",
-    "Immediately threatened limb",
-    "Irreversible ischemia",
-    "Reperfusion compartment syndrome",
-    "Catheter thrombolysis selection",
-    "Embolic versus thrombotic occlusion"
-  ]
+  "remainingDecisions": []
 }

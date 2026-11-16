@@ -25,7 +25,9 @@ def main():
  audit=json.loads(AUDIT.read_text(encoding='utf-8'))
  for q in bank['questions']:
   if q['id'] not in EDITS or q.get('explanationStyle')=='concise_structured':continue
-  old=copy.deepcopy(q); d=q['explanationTeaching']; sections=[]
+  old=copy.deepcopy(q)
+  if callable(globals().get('EDIT_HOOK')):EDIT_HOOK(q)
+  d=q['explanationTeaching']; sections=[]
   html=['<h2>'+escape(d['title'])+'</h2>']; plain=[d['title']]
   answer='Correct answer: '+q['options'][q['correctIndex']]
   html.append('<p><strong>'+escape(answer)+'</strong></p>');plain.append(answer)

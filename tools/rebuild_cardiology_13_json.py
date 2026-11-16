@@ -20,6 +20,7 @@ if __name__=='__main__':
   rows.extend(pad_rows);REFERENCES.update(pad_refs)
  for r in rows:
   r['sections']=[(h,[(highlight_medical_values(t),[highlight_medical_values(c) for c in children]) for t,children in bullets]) for h,bullets in r['sections']]
+  if r['title'] in {'BEST-CLI and Suitable Vein Conduit','BASIL-2 and Infrapopliteal Revascularization'}:r['style']='direct'
  fixed={q['id']:q['correctIndex'] for q in existing['questions'] if q['id'].startswith(PREFIX)}
  save('Cardiology',13,DOC,rows,REFERENCES,'Local authoring draft; final clinical, source-coverage and rendering review pending. Full Harrison text not accessed.',preserved_answer_indices=fixed,additional_preserved_questions=originals)
  bank=read(source)
