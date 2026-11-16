@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 40,
+  "targetQuestions": 41,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3105,6 +3105,95 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Explain passive pulmonary flow and sensitivity to pulmonary resistance"
+    },
+    {
+      "id": "cardiology-rebuild-12-037",
+      "topic": "Fontan and single-ventricle circulation",
+      "question": "A 27-year-old with Fontan circulation develops edema, loose stools and serum albumin 2.1 g/dL. Urinary protein excretion is 120 mg/day, INR is 1.1 without anticoagulation, and there is no gastrointestinal bleeding. Which test most directly establishes excessive intestinal protein loss?",
+      "options": [
+        "Timed fecal alpha-1-antitrypsin clearance with a contemporaneous serum level",
+        "Fecal calprotectin concentration",
+        "Fecal pancreatic elastase concentration",
+        "Quantitative fecal fat excretion"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Confirming Protein-Losing Enteropathy After Fontan Palliation\n\nCorrect answer: Timed fecal alpha-1-antitrypsin clearance with a contemporaneous serum level\n\nMechanism and Differential Diagnosis\n\n**Fontan-associated protein-losing enteropathy reflects intestinal protein leakage in a circulation with abnormal venous and lymphatic pressures.** Edema and hypoalbuminemia are typical, but diarrhea is not obligatory.\n\nAssess renal protein loss, hepatic synthetic impairment, nutritional intake and other intestinal disease. The small urinary protein loss in this vignette is insufficient to explain the profound hypoalbuminemia. A normal INR does not exclude Fontan-associated liver disease, and more than one mechanism may coexist.\n\nLoss may include immunoglobulins and lymphocytes as well as albumin. Review nutritional status, infection risk and fluid balance rather than interpreting albumin as an isolated liver test.\n\nTest Collection and Interpretation\n\n**Alpha-1-antitrypsin clearance combines a timed stool collection with a serum concentration obtained during collection.** It accounts for circulating concentration and stool output better than an isolated random fecal concentration.\n\nMayo lists a reference clearance of 27 mL/24 hours or less. Interpret against the performing laboratory and stool consistency: diarrhea can increase clearance, and a higher threshold is used in some Fontan definitions. Do not apply a single cutoff without those qualifications.\n\nGastrointestinal bleeding can contribute protein to stool. Acid degradation also limits assessment of predominantly gastric protein loss; a negative test does not resolve every possible protein-losing disorder.\n\nEvaluate the Failing Fontan Circuit\n\n**Confirmation should trigger assessment for reversible hemodynamic and lymphatic contributors.** Preserved ventricular ejection fraction does not exclude an important Fontan circulation problem.\n\nEvaluate pathway obstruction, pulmonary resistance, ventricular filling pressure, AV-valve regurgitation and rhythm. Catheterization and specialist lymphatic imaging may be appropriate according to the findings.\n\nManagement combines nutritional support and careful fluid treatment with correction of identified lesions. Selected patients require targeted lymphatic interventions or advanced heart-failure and transplant assessment. Albumin infusion can provide temporary support in selected circumstances but does not by itself correct the cause of continuing intestinal loss.\n\nFecal calprotectin concentration: Calprotectin assesses intestinal inflammation and can support investigation of inflammatory bowel disease. It does not quantify plasma protein clearance into the intestine, which is the immediate diagnostic question in this Fontan patient.\n\nFecal pancreatic elastase concentration: Elastase helps evaluate exocrine pancreatic insufficiency in a patient with maldigestion or steatorrhea. A low result can also be misleading in watery stool; it does not directly establish enteric plasma protein loss.\n\nQuantitative fecal fat excretion: Fecal fat can document fat malabsorption and may assist a broader nutritional assessment. It measures loss of fat rather than plasma proteins, so it cannot directly confirm the suspected protein-losing enteropathy.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nMayo Clinic Laboratories: alpha-1-antitrypsin clearance, feces and serum — https://www.mayocliniclabs.com/api/sitecore/TestCatalog/DownloadTestCatalog?testId=604982\n\nKorean Fontan clinical practice consensus, 2025 — https://doi.org/10.4070/kcj.2025.0455",
+      "explanationHtml": "<h2>Confirming Protein-Losing Enteropathy After Fontan Palliation</h2><p><strong>Correct answer: A — Timed fecal alpha-1-antitrypsin clearance with a contemporaneous serum level</strong></p><h3>Mechanism and Differential Diagnosis</h3><ul><li><strong>Fontan-associated protein-losing enteropathy reflects intestinal protein leakage in a circulation with abnormal venous and lymphatic pressures.</strong> Edema and hypoalbuminemia are typical, but diarrhea is not obligatory.<ul><li>Assess renal protein loss, hepatic synthetic impairment, nutritional intake and other intestinal disease. The small urinary protein loss in this vignette is insufficient to explain the profound hypoalbuminemia. A normal INR does not exclude Fontan-associated liver disease, and more than one mechanism may coexist.</li><li>Loss may include immunoglobulins and lymphocytes as well as albumin. Review nutritional status, infection risk and fluid balance rather than interpreting albumin as an isolated liver test.</li></ul></li></ul><h3>Test Collection and Interpretation</h3><ul><li><strong>Alpha-1-antitrypsin clearance combines a timed stool collection with a serum concentration obtained during collection.</strong> It accounts for circulating concentration and stool output better than an isolated random fecal concentration.<ul><li>Mayo lists a reference clearance of 27 mL/24 hours or less. Interpret against the performing laboratory and stool consistency: diarrhea can increase clearance, and a higher threshold is used in some Fontan definitions. Do not apply a single cutoff without those qualifications.</li><li>Gastrointestinal bleeding can contribute protein to stool. Acid degradation also limits assessment of predominantly gastric protein loss; a negative test does not resolve every possible protein-losing disorder.</li></ul></li></ul><h3>Evaluate the Failing Fontan Circuit</h3><ul><li><strong>Confirmation should trigger assessment for reversible hemodynamic and lymphatic contributors.</strong> Preserved ventricular ejection fraction does not exclude an important Fontan circulation problem.<ul><li>Evaluate pathway obstruction, pulmonary resistance, ventricular filling pressure, AV-valve regurgitation and rhythm. Catheterization and specialist lymphatic imaging may be appropriate according to the findings.</li><li>Management combines nutritional support and careful fluid treatment with correction of identified lesions. Selected patients require targeted lymphatic interventions or advanced heart-failure and transplant assessment. Albumin infusion can provide temporary support in selected circumstances but does not by itself correct the cause of continuing intestinal loss.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — Fecal calprotectin concentration:</strong> Calprotectin assesses intestinal inflammation and can support investigation of inflammatory bowel disease. It does not quantify plasma protein clearance into the intestine, which is the immediate diagnostic question in this Fontan patient.</li><li><strong>C — Fecal pancreatic elastase concentration:</strong> Elastase helps evaluate exocrine pancreatic insufficiency in a patient with maldigestion or steatorrhea. A low result can also be misleading in watery stool; it does not directly establish enteric plasma protein loss.</li><li><strong>D — Quantitative fecal fat excretion:</strong> Fecal fat can document fat malabsorption and may assist a broader nutritional assessment. It measures loss of fat rather than plasma proteins, so it cannot directly confirm the suspected protein-losing enteropathy.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://www.mayocliniclabs.com/api/sitecore/TestCatalog/DownloadTestCatalog?testId=604982\">Mayo Clinic Laboratories: alpha-1-antitrypsin clearance, feces and serum</a></li><li><a href=\"https://doi.org/10.4070/kcj.2025.0455\">Korean Fontan clinical practice consensus, 2025</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Confirming Protein-Losing Enteropathy After Fontan Palliation",
+        "sections": [
+          {
+            "heading": "Mechanism and Differential Diagnosis",
+            "bullets": [
+              {
+                "text": "**Fontan-associated protein-losing enteropathy reflects intestinal protein leakage in a circulation with abnormal venous and lymphatic pressures.** Edema and hypoalbuminemia are typical, but diarrhea is not obligatory.",
+                "children": [
+                  "Assess renal protein loss, hepatic synthetic impairment, nutritional intake and other intestinal disease. The small urinary protein loss in this vignette is insufficient to explain the profound hypoalbuminemia. A normal INR does not exclude Fontan-associated liver disease, and more than one mechanism may coexist.",
+                  "Loss may include immunoglobulins and lymphocytes as well as albumin. Review nutritional status, infection risk and fluid balance rather than interpreting albumin as an isolated liver test."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Test Collection and Interpretation",
+            "bullets": [
+              {
+                "text": "**Alpha-1-antitrypsin clearance combines a timed stool collection with a serum concentration obtained during collection.** It accounts for circulating concentration and stool output better than an isolated random fecal concentration.",
+                "children": [
+                  "Mayo lists a reference clearance of 27 mL/24 hours or less. Interpret against the performing laboratory and stool consistency: diarrhea can increase clearance, and a higher threshold is used in some Fontan definitions. Do not apply a single cutoff without those qualifications.",
+                  "Gastrointestinal bleeding can contribute protein to stool. Acid degradation also limits assessment of predominantly gastric protein loss; a negative test does not resolve every possible protein-losing disorder."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Evaluate the Failing Fontan Circuit",
+            "bullets": [
+              {
+                "text": "**Confirmation should trigger assessment for reversible hemodynamic and lymphatic contributors.** Preserved ventricular ejection fraction does not exclude an important Fontan circulation problem.",
+                "children": [
+                  "Evaluate pathway obstruction, pulmonary resistance, ventricular filling pressure, AV-valve regurgitation and rhythm. Catheterization and specialist lymphatic imaging may be appropriate according to the findings.",
+                  "Management combines nutritional support and careful fluid treatment with correction of identified lesions. Selected patients require targeted lymphatic interventions or advanced heart-failure and transplant assessment. Albumin infusion can provide temporary support in selected circumstances but does not by itself correct the cause of continuing intestinal loss."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "Calprotectin assesses intestinal inflammation and can support investigation of inflammatory bowel disease. It does not quantify plasma protein clearance into the intestine, which is the immediate diagnostic question in this Fontan patient."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "Elastase helps evaluate exocrine pancreatic insufficiency in a patient with maldigestion or steatorrhea. A low result can also be misleading in watery stool; it does not directly establish enteric plasma protein loss."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Fecal fat can document fat malabsorption and may assist a broader nutritional assessment. It measures loss of fat rather than plasma proteins, so it cannot directly confirm the suspected protein-losing enteropathy."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "Mayo Clinic Laboratories: alpha-1-antitrypsin clearance, feces and serum",
+          "url": "https://www.mayocliniclabs.com/api/sitecore/TestCatalog/DownloadTestCatalog?testId=604982"
+        },
+        {
+          "label": "Korean Fontan clinical practice consensus, 2025",
+          "url": "https://doi.org/10.4070/kcj.2025.0455"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Investigate failing Fontan and protein-losing enteropathy"
     }
   ],
   "plannedQuestions": 55,
@@ -3113,9 +3202,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 36,
+    "draftQuestions": 37,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 36
+    "newQuestionsAfterRedistribution": 37
   }
 }

@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 40,
+  "authoredQuestions": 41,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -65,7 +65,8 @@
     "cardiology-rebuild-12-033",
     "cardiology-rebuild-12-034",
     "cardiology-rebuild-12-035",
-    "cardiology-rebuild-12-036"
+    "cardiology-rebuild-12-036",
+    "cardiology-rebuild-12-037"
   ],
   "sources": [
     {
@@ -199,21 +200,29 @@
     {
       "label": "Fontan pressure-flow profiling during stress and vasodilation, 2025",
       "url": "https://doi.org/10.1152/ajpheart.00105.2025"
+    },
+    {
+      "label": "Mayo Clinic Laboratories: alpha-1-antitrypsin clearance, feces and serum",
+      "url": "https://www.mayocliniclabs.com/api/sitecore/TestCatalog/DownloadTestCatalog?testId=604982"
+    },
+    {
+      "label": "Korean Fontan clinical practice consensus, 2025",
+      "url": "https://doi.org/10.4070/kcj.2025.0455"
     }
   ],
   "validation": {
-    "questions": 40,
+    "questions": 41,
     "answerDistribution": {
-      "A": 10,
+      "A": 11,
       "B": 10,
       "C": 10,
       "D": 10
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 114,
+    "distractorRationales": 117,
     "questionStyles": {
       "direct": 5,
-      "clinical_scenario": 35
+      "clinical_scenario": 36
     },
     "status": "passed"
   },
