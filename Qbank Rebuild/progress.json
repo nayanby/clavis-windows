@@ -107,7 +107,7 @@
       "status": "pending"
     }
   ],
-  "currentChapter": "Cardiology 14. Advanced ECG Interpretation and Electrophysiology",
+  "currentChapter": "Cardiology 15. Cardiovascular Pharmacology Antithrombotic Therapy and Landmark Trials",
   "chapters": [
     {
       "subject": "Neurology",
@@ -745,16 +745,16 @@
       "chapter": 14,
       "document": "14. Advanced ECG Interpretation and Electrophysiology",
       "file": "Cardiology/14. Advanced ECG Interpretation and Electrophysiology.json",
-      "status": "draft_in_progress",
+      "status": "installed_verified",
       "originalIdsPreserved": true,
       "existingQuestions": 45,
       "previouslyInstalledQuestions": 45,
-      "draftQuestions": 35,
+      "draftQuestions": 0,
       "coverageStatus": "review_pending",
       "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-      "installedQuestions": 45,
-      "draftQuestionsWithheld": 35,
-      "runtimeStatus": "installed_redistributed_subset",
+      "installedQuestions": 80,
+      "draftQuestionsWithheld": 0,
+      "runtimeStatus": "installed_reviewed_chapter",
       "validation": {
         "questions": 80,
         "answerDistribution": {
@@ -773,7 +773,8 @@
       },
       "authoredQuestions": 80,
       "plannedQuestions": 80,
-      "coverageMap": "Cardiology/audit/chapter-14-coverage.json"
+      "coverageMap": "Cardiology/audit/chapter-14-coverage.json",
+      "installedSha256": "39fd789713cdd589ca9219fdd651d15a3059b94f9d017cd47786111c45d67cfa"
     },
     {
       "subject": "Cardiology",
@@ -1411,6 +1412,6 @@
     "fullCoverage": false,
     "draftQuestionsNotInstalled": 74,
     "currentAuthoredQuestions": 803,
-    "currentDraftQuestionsNotInstalled": 100
+    "currentDraftQuestionsNotInstalled": 65
   }
 }

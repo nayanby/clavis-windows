@@ -1,0 +1,41 @@
+{
+  "chapterNumber": 14,
+  "document": "14. Advanced ECG Interpretation and Electrophysiology",
+  "status": "passed",
+  "installed": true,
+  "reviewedAt": "2026-11-16",
+  "reviewedQuestionsSha256": "282524bc05e8758007cff95bc0340a0546d0e4e76c0e425d08174ca2fd1bae8d",
+  "sourceDocumentSha256": "85e0e9abdea9af772704e6d55c98b4ed407d1f7757d29dfae62f76f4bd4bf921",
+  "questionCount": 80,
+  "coverageAudit": "chapter-14-coverage.json",
+  "sourceReview": "chapter-14-source-review.json",
+  "editorialReview": "chapter-14-editorial-review.json",
+  "validation": {
+    "questions": 80,
+    "answerDistribution": {
+      "A": 20,
+      "B": 20,
+      "C": 20,
+      "D": 20
+    },
+    "minimumExplanationWords": 100,
+    "distractorRationales": 234,
+    "questionStyles": {
+      "clinical_scenario": 75,
+      "direct": 5
+    },
+    "status": "passed"
+  },
+  "checks": {
+    "continuousTopicOrder": "passed",
+    "individualDistractorExplanations": "passed_except_two_calculations",
+    "stableIdsAndAnswerSlots": "passed",
+    "rendering": "passed_offline_and_app_two_widths"
+  },
+  "limitations": [
+    "Full Harrison text was not accessed.",
+    "Author source review is not independent clinician peer review."
+  ],
+  "installedPath": "C:\\Users\\ANT-PC\\OneDrive\\Cortex Windows\\data\\Qbank\\Cardiology\\14. Advanced ECG Interpretation and Electrophysiology\\Questions\\841ef689be4d26fd0bb7.json",
+  "installedSha256": "39fd789713cdd589ca9219fdd651d15a3059b94f9d017cd47786111c45d67cfa"
+}

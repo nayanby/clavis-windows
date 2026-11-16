@@ -32,9 +32,15 @@ def main():
   answer='Correct answer: '+q['options'][q['correctIndex']]
   html.append('<p><strong>'+escape(answer)+'</strong></p>');plain.append(answer)
   for heading,lines in EDITS[q['id']]:
-   sections.append(dict(heading=heading,bullets=[dict(text=s,children=[]) for s in lines]))
-   html.append('<h3>'+escape(heading)+'</h3><ul>'+''.join('<li>'+rich(s)+'</li>' for s in lines)+'</ul>')
-   plain.extend([heading,*lines])
+   bullets=[dict(text=s,children=[]) if isinstance(s,str) else dict(text=s[0],children=list(s[1])) for s in lines]
+   sections.append(dict(heading=heading,bullets=bullets))
+   html.append('<h3>'+escape(heading)+'</h3><ul>');plain.append(heading)
+   for b in bullets:
+    html.append('<li>'+rich(b['text']));plain.append(b['text'])
+    if b['children']:
+     html.append('<ul>'+''.join('<li>'+rich(c)+'</li>' for c in b['children'])+'</ul>');plain.extend(b['children'])
+    html.append('</li>')
+   html.append('</ul>')
   # Retain existing comparison tables and individual distractor reasoning.
   for t in d.get('tables',[]):
    html.append('<div class="table-wrap"><table><thead><tr>'+''.join('<th>'+rich(x)+'</th>' for x in t['headers'])+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+rich(x)+'</td>' for x in row)+'</tr>' for row in t['rows'])+'</tbody></table></div>')

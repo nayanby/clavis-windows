@@ -1,10 +1,10 @@
 {
-  "status": "draft_in_progress",
+  "status": "installed_verified",
   "plannedQuestions": 80,
   "authoredQuestions": 80,
   "existingQuestions": 45,
   "newDraftQuestions": 35,
-  "countPolicy": "45 retained decisions plus 35 uncovered decisions, provisional until complete source/overlap review; not official examination weightage.",
+  "countPolicy": "80 distinct decisions: 45 retained IDs and 35 additions for uncovered source topics; not official examination weightage.",
   "groups": [
     "Technical validity, axis, intervals and morphology",
     "AV conduction and pauses",
@@ -156,5 +156,6 @@
       "questionId": "cardiology-rebuild-14-035",
       "title": "Hyperkalemia With a Reassuring ECG"
     }
-  ]
+  ],
+  "remainingDecisions": []
 }

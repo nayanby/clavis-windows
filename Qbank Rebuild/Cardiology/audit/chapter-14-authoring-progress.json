@@ -1,31 +1,37 @@
 {
-  "status": "in_progress",
+  "status": "author_review_complete",
   "sourceDocumentSha256": "85e0e9abdea9af772704e6d55c98b4ed407d1f7757d29dfae62f76f4bd4bf921",
   "existingCanonicalQuestions": 45,
   "newDraftQuestions": 35,
   "provisionalPlannedTotal": 80,
   "countPolicy": "Retain 45 source-matched IDs and add approximately 35 uncovered high-yield decisions; revise after full source and duplicate review, not official examination weightage.",
-  "sourceReadStatus": "Partial full-text review; initial whole-document output was truncated and is not counted as a full read.",
+  "sourceReadStatus": "Completed with focused reads replacing truncated outputs.",
   "reviewedSourceRanges": [
-    "ECG foundations and opening rhythm sections from initial output",
-    "Axis/conduction and chamber/QRS sections, paragraphs 350–584",
-    "Electrolytes/drugs/channelopathies and opening other-disease sections, paragraphs 939–1108",
-    "Pacing and other-disease/mimic sections, paragraphs 1130–1225",
-    "Syncope section: initial broad read supplemented by focused paragraphs 1556–1604 after output truncation; management and diagnostic sections read"
-  ],
-  "sourceSectionsPending": [
-    "Remaining rate/rhythm text",
+    "Technical validity, intervals and rate/rhythm",
+    "Axis and conduction",
+    "Chamber/QRS morphology",
     "Ischemia/infarction",
-    "Arrhythmias/emergency rhythms",
-    "Remaining pacing/mimics and integrated reporting",
-    "Approach to tachyarrhythmia"
+    "Arrhythmia patterns",
+    "Electrolytes, drugs and channelopathies",
+    "Other diseases, pacing and mimics",
+    "Integrated reporting",
+    "Approach to tachyarrhythmia",
+    "Syncope evaluation and treatment"
   ],
+  "sourceSectionsPending": [],
   "sourceFindings": [
     "2026 Fifth Universal Definition and its classical Q-wave criteria independently confirmed in official JACC/AHA/ESC sources.",
     "Preserved original answer positions are uneven (A8 B5 C12 D20); final 80-question integration permits A20 B20 C20 D20 without changing original keys.",
     "Classical OH occurs WITHIN three minutes, not only after three minutes.",
     "Source statement that seizure loss of consciousness usually lasts over five minutes is misleading; the new explanation distinguishes typical brief convulsions from postictal impairment.",
-    "CSM hypersensitivity is distinguished from symptom-reproducing carotid sinus syndrome."
+    "CSM hypersensitivity is distinguished from symptom-reproducing carotid sinus syndrome.",
+    "All remaining source spans read in focused batches, including 185–349, 585–617, 618–938, 1109–1129 and 1226–1474; source review is complete for the chapter.",
+    "Forty-five transferred explanations manually condensed into topic-specific nested bullets, retaining tables and individualized distractor reasons. IDs and correct answer slots are stable.",
+    "Two numerical questions independently checked: 60/(24*0.020)=125/min and 400/(0.512**(1/3))=500 ms.",
+    "Syncope timing, symptom-reproducing carotid sinus syndrome, POTS exclusions, infrequent-event monitoring and selected reflex pacing are separated from broad positive-test labels.",
+    "Canadian POTS guideline DOI and publication details confirmed against PubMed 32145864; threshold distinguishes adults from ages 12–19.",
+    "VT versus SVT mechanisms, adenosine response limitations, pre-excited AF, acquired versus congenital long QT, pacing capture/sensing and PMT circuits retained in concise teaching notes.",
+    "All 80 explanations passed offline and actual app-renderer checks at two widths; narrow app screenshot visually inspected."
   ],
   "plannedNewDecisionsRemaining": [],
   "validation": {
@@ -44,7 +50,7 @@
     },
     "status": "passed"
   },
-  "nextWork": "Complete remaining source read, concise review of 45 transferred explanations and consolidated final clinical/layout review before release.",
+  "nextWork": "Install sealed chapter and verify runtime readback.",
   "integratedCanonicalQuestions": 80,
   "newDraftIntegrated": true
 }
