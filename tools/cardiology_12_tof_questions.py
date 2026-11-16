@@ -6,6 +6,7 @@ REFERENCES={
  'TOF_ARRHYTHMIA': ('AHA scientific statement: arrhythmias in repaired TOF, 2022', 'https://doi.org/10.1161/HAE.0000000000000084'),
  'TOF_ISTHMUS': ('Anatomical substrates and ablation in repaired congenital heart disease', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5013179/'),
  'TPVR_CORONARY': ('Coronary compression during transcatheter pulmonary valve assessment: multicentre experience', 'https://pubmed.ncbi.nlm.nih.gov/24065444/'),
+ 'TPVR_CT': ('SCCT/CHSS/SCAI white paper on CT guidance of RVOT intervention, 2023', 'https://doi.org/10.1016/j.jcct.2023.06.005'),
 }
 TOPIC='Tetralogy of Fallot and repaired RV outflow physiology'
 rows=[]
@@ -58,14 +59,14 @@ add(TOPIC,'Cardiac CT Before Native-RVOT Transcatheter Pulmonary Valve Treatment
    '**Expansion within the RVOT can compress a neighboring coronary artery.** The consequence can be acute ischemia, so coronary proximity is a central safety issue rather than an incidental imaging finding.',
    'Selected balloon-expandable conduit or RVOT procedures use test balloon inflation with simultaneous coronary angiography to assess compression. Apply the appropriate device-specific pathway; neither a generic negative test nor a simple coronary-distance estimate guarantees safety for every device.',
    'Demonstrated compression risk or unsuitable landing anatomy can favor surgical or another tailored approach. Assess associated lesions that may also need repair, and discuss valve durability, endocarditis, residual obstruction/regurgitation and follow-up. CT provides the device-fit dataset; complementary functional and invasive assessments remain relevant to the complete procedural decision.')],
- ['ACHD2025','TPVR_CORONARY'])
+ ['ACHD2025','TPVR_CORONARY','TPVR_CT'])
 
 add(TOPIC,'Pressure-Loaded RV After TOF Repair',
  'An adult with repaired TOF has worsening exercise tolerance. CMR pulmonary regurgitant fraction is 12%, but imaging shows substantial RVOT obstruction. RV systolic pressure is 90 mmHg while systemic systolic pressure is 120 mmHg; distal PA pressure is not elevated. Which next approach is most appropriate?',
  'Refer for assessment of relief of the residual RVOT obstruction',[
-  ('Defer intervention assessment until pulmonary regurgitant fraction reaches 25%','A regurgitant threshold addresses one form of pulmonary valve dysfunction. Significant obstructive pressure loading is another; the low regurgitant fraction does not negate the symptomatic RVOT problem.'),
-  ('Treat presumed PAH solely because RV systolic pressure is 90 mmHg','RV systolic pressure approximates PA systolic pressure only in the absence of important intervening obstruction. The supplied RVOT lesion and lower distal PA pressure localize the pressure load rather than establishing PAH.'),
-  ('Wait until RV end-systolic volume exceeds the regurgitation-related referral marker','Volume criteria are important in selected regurgitant repaired-TOF pathways. Waiting for that marker alone can overlook symptomatic pressure-overload disease and inappropriate application of one phenotype’s thresholds to another.')],
+  ('Repeat CMR after an interval to establish progressive RV volume enlargement','Serial CMR is useful in stable patients whose intervention indication remains uncertain, particularly with regurgitant volume loading. This patient already has worsening exercise tolerance and important obstructive pressure loading; documented volume progression is not a prerequisite for intervention assessment.'),
+  ('Undertake pulmonary vasodilator testing to guide PAH-directed treatment','Invasive pulmonary vascular assessment can be appropriate when elevated distal pulmonary pressure and resistance suggest PAH. Here the high pressure is proximal to the RVOT obstruction and distal PA pressure is not elevated; testing a presumed pulmonary arteriopathy does not address the demonstrated mechanical load.'),
+  ('Begin medical treatment for RV failure and reassess the obstruction after optimization','Medical optimization can support a patient with congestion or other ventricular failure contributors. It does not relieve a fixed outflow lesion, and the supplied presentation does not justify postponing anatomical intervention assessment for a mandatory drug trial.')],
  [S('Pressure Versus Volume Loading',
    '**Residual RVOT obstruction can create important pulmonary valve/outflow dysfunction despite little regurgitation.** Here RV pressure is 90/120 = 0.75 of systemic, exceeding two-thirds systemic pressure.',
    'Distinguish valvar, subvalvar, conduit and branch pulmonary arterial obstruction. Define where the pressure drop occurs and whether another lesion contributes to exercise limitation.',
