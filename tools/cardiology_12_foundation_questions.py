@@ -21,3 +21,23 @@ rows=[Q(TOPIC,'Chamber Loading in Congenital Left-to-Right Shunts',
   '**Match chamber size to the suspected lesion and quantify the actual flow.** Unexpected findings should prompt review for additional valve disease, anomalous veins, obstruction or pulmonary vascular disease.',
   'Echocardiography maps the communication and estimates pressures; CMR can quantify volumes and Qp/Qs when needed. Symptoms, attributable chamber enlargement and pulmonary vascular status influence intervention assessment. Do not select closure solely from a chamber label or assume that a small anatomical defect must have a large physiological effect.')],
  ['ACHD2025','ESC2020'],style='direct')]
+
+REFERENCES['AP2025']=('AHA: 2025 ACHD anatomic and physiological classification','https://professional.heart.org/en/science-news/2025-adult-congenital-heart-disease-anatomic-and-physiological-classification-system')
+rows.append(Q(TOPIC,'Anatomical Complexity and Physiological Stage',
+ 'Two adults have the same repaired congenital lesion. One has normal function and no significant sequelae; the other has recurrent hemodynamically important arrhythmia and recent heart-failure hospitalization. How should the ACHD anatomic-physiological framework represent this difference?',
+ 'Retain the lesion-based anatomical category while assigning different physiological stages',[
+ ('Assign the same combined classification because the original lesion is identical','Anatomy is only one axis. Physiological status adds information about current clinical burden, so identical lesions do not require identical combined classifications or follow-up intensity.'),
+ ('Move the patient with heart failure to a higher anatomical category','Heart failure changes physiological burden but does not itself change the underlying congenital anatomical diagnosis. Relabeling anatomical complexity would obscure the distinction the two-axis framework is designed to preserve.'),
+ ('Classify both by current NYHA class alone and omit the anatomical category','Functional class contributes to assessment but does not encode the congenital connections, prior repair or all relevant physiological findings. Arrhythmia, ventricular disease, hypoxemia and recent events also matter.')],
+ [S('Two Complementary Axes',
+  '**Anatomical complexity and current physiological burden answer different questions.** The anatomical categories are I, simple; II, moderate complexity; and III, great complexity. Physiological stages range from A to D.',
+  'Anatomy describes the congenital lesion and circulation. Physiology reflects current sequelae and clinical status and can change over time. Repair does not automatically reclassify every lesion as anatomically simple or establish physiological stage A.'),
+  S('Use the Current Criteria',
+  '**The 2025 framework refines the physiological criteria.** Review symptoms, ventricular and valve function, shunts, pulmonary vascular disease, oxygenation, rhythm and recent clinical events rather than relying on a single reassuring measurement.',
+  'Stage A describes a patient without relevant symptoms or sequelae, with normal exercise capacity and pulmonary pressure and no sustained arrhythmia. Increasing stages incorporate clinically important abnormalities; recent heart-failure hospitalization and recurrent hemodynamically significant or refractory arrhythmia are stage D features in the updated framework.',
+  'The time window and severity qualifications matter. For example, the updated criteria specify heart-failure hospitalization within the preceding 12 months. Do not substitute a vague lifetime history or copy an older staging table without checking the current definitions.'),
+  S('Apply Classification to Care',
+  '**The combined classification helps determine surveillance and specialist resource needs.** The two patients may require different visit intervals, investigations and procedural planning despite the same congenital diagnosis.',
+  'Reassess stage when status changes, and investigate the cause rather than merely changing a label. The framework supports judgment; it does not replace lesion-specific management or evaluation of acquired disease.',
+  'A small incidental congenital defect does not account for every later symptom. Conditions such as coronary disease, renal dysfunction or acquired valve disease need assessment under their own relevant guidance. Record the anatomical diagnosis and current physiological findings explicitly so the classification remains interpretable.')],
+ ['ACHD2025','AP2025'],style='direct'))

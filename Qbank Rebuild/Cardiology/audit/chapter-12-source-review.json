@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 53,
+  "authoredQuestions": 54,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -78,7 +78,8 @@
     "cardiology-rebuild-12-046",
     "cardiology-rebuild-12-047",
     "cardiology-rebuild-12-048",
-    "cardiology-rebuild-12-049"
+    "cardiology-rebuild-12-049",
+    "cardiology-rebuild-12-050"
   ],
   "sources": [
     {
@@ -236,20 +237,24 @@
     {
       "label": "ESC and partner societies: anesthesia for ACHD noncardiac surgery, 2026",
       "url": "https://academic.oup.com/ehjvshd/article/2/1/xwaf005/8539866"
+    },
+    {
+      "label": "AHA: 2025 ACHD anatomic and physiological classification",
+      "url": "https://professional.heart.org/en/science-news/2025-adult-congenital-heart-disease-anatomic-and-physiological-classification-system"
     }
   ],
   "validation": {
-    "questions": 53,
+    "questions": 54,
     "answerDistribution": {
       "A": 14,
-      "B": 13,
+      "B": 14,
       "C": 13,
       "D": 13
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 153,
+    "distractorRationales": 156,
     "questionStyles": {
-      "direct": 6,
+      "direct": 7,
       "clinical_scenario": 47
     },
     "status": "passed"
