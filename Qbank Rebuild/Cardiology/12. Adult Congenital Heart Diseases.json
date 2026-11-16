@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 52,
+  "targetQuestions": 53,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -68,6 +68,90 @@
       "sourceCheckedAt": "2026-11-15",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Calculate pulmonary-to-systemic flow ratio from correctly chosen oxygen samples"
+    },
+    {
+      "id": "cardiology-rebuild-12-049",
+      "topic": "Foundations and physiological classification",
+      "question": "Which pairing correctly describes the dominant chamber volume-loading pattern of an uncomplicated significant left-to-right shunt before advanced pulmonary vascular disease develops?",
+      "options": [
+        "ASD: right atrium and RV; VSD: left atrium and LV",
+        "ASD: left atrium and LV; VSD: right atrium and RV",
+        "ASD: right atrium and RV; VSD: isolated RV pressure loading without left-heart volume loading",
+        "ASD: isolated RV pressure loading; VSD: left atrium and LV"
+      ],
+      "correctIndex": 0,
+      "questionStyle": "direct",
+      "calculation": false,
+      "explanation": "Chamber Loading in Congenital Left-to-Right Shunts\n\nCorrect answer: ASD: right atrium and RV; VSD: left atrium and LV\n\nFollow the Recirculating Blood\n\n**The level of the communication determines where excess flow re-enters the circuit.** In an ASD, pulmonary venous blood reaching the left atrium can cross into the right atrium and increase RV filling.\n\nIn a VSD, left ventricular output diverted to the pulmonary circuit returns through the pulmonary veins to the left atrium and LV. Left-heart enlargement therefore helps quantify the physiological consequence of the ventricular shunt.\n\nA PDA also increases pulmonary venous return and left-heart volume loading. Anomalous pulmonary venous connection instead directs oxygenated venous blood into the systemic venous circuit, producing a right-sided volume burden.\n\nSeparate Pressure From Flow\n\n**Pressure transmission and excess flow are related but distinct.** A large nonrestrictive VSD may produce high RV and PA pressures, while a restrictive defect maintains a substantial LV-to-RV systolic gradient.\n\nHigh pulmonary pressure does not by itself prove high pulmonary vascular resistance. Interpret pressure together with flow and downstream filling pressure. Conversely, advanced pulmonary vascular disease may reduce the left-to-right shunt and alter the expected chamber pattern.\n\nValvar pulmonary stenosis produces RV pressure loading without a primary recirculating left-to-right shunt. Pulmonary regurgitation can cause RV volume loading without an ASD. Chamber enlargement narrows the physiological differential but does not establish the anatomical diagnosis alone.\n\nApply the Pattern to Imaging\n\n**Match chamber size to the suspected lesion and quantify the actual flow.** Unexpected findings should prompt review for additional valve disease, anomalous veins, obstruction or pulmonary vascular disease.\n\nEchocardiography maps the communication and estimates pressures; CMR can quantify volumes and Qp/Qs when needed. Symptoms, attributable chamber enlargement and pulmonary vascular status influence intervention assessment. Do not select closure solely from a chamber label or assume that a small anatomical defect must have a large physiological effect.\n\nASD: left atrium and LV; VSD: right atrium and RV: This reverses the usual diagnostic pattern. Atrial shunting increases right-sided filling, whereas pulmonary recirculation from a ventricular shunt returns to the left atrium and ventricle.\n\nASD: right atrium and RV; VSD: isolated RV pressure loading without left-heart volume loading: The ASD component is correct, and a large VSD can transmit pressure to the RV and pulmonary artery. However, a significant left-to-right VSD also increases pulmonary venous return and left-heart volume load; pressure transmission does not remove that effect.\n\nASD: isolated RV pressure loading; VSD: left atrium and LV: The VSD component is correct. In an uncomplicated ASD without advanced pulmonary vascular disease, increased RV filling volume is the primary load; isolated pressure overload suggests another or additional mechanism.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Chamber Loading in Congenital Left-to-Right Shunts</h2><p><strong>Correct answer: A — ASD: right atrium and RV; VSD: left atrium and LV</strong></p><h3>Follow the Recirculating Blood</h3><ul><li><strong>The level of the communication determines where excess flow re-enters the circuit.</strong> In an ASD, pulmonary venous blood reaching the left atrium can cross into the right atrium and increase RV filling.<ul><li>In a VSD, left ventricular output diverted to the pulmonary circuit returns through the pulmonary veins to the left atrium and LV. Left-heart enlargement therefore helps quantify the physiological consequence of the ventricular shunt.</li><li>A PDA also increases pulmonary venous return and left-heart volume loading. Anomalous pulmonary venous connection instead directs oxygenated venous blood into the systemic venous circuit, producing a right-sided volume burden.</li></ul></li></ul><h3>Separate Pressure From Flow</h3><ul><li><strong>Pressure transmission and excess flow are related but distinct.</strong> A large nonrestrictive VSD may produce high RV and PA pressures, while a restrictive defect maintains a substantial LV-to-RV systolic gradient.<ul><li>High pulmonary pressure does not by itself prove high pulmonary vascular resistance. Interpret pressure together with flow and downstream filling pressure. Conversely, advanced pulmonary vascular disease may reduce the left-to-right shunt and alter the expected chamber pattern.</li><li>Valvar pulmonary stenosis produces RV pressure loading without a primary recirculating left-to-right shunt. Pulmonary regurgitation can cause RV volume loading without an ASD. Chamber enlargement narrows the physiological differential but does not establish the anatomical diagnosis alone.</li></ul></li></ul><h3>Apply the Pattern to Imaging</h3><ul><li><strong>Match chamber size to the suspected lesion and quantify the actual flow.</strong> Unexpected findings should prompt review for additional valve disease, anomalous veins, obstruction or pulmonary vascular disease.<ul><li>Echocardiography maps the communication and estimates pressures; CMR can quantify volumes and Qp/Qs when needed. Symptoms, attributable chamber enlargement and pulmonary vascular status influence intervention assessment. Do not select closure solely from a chamber label or assume that a small anatomical defect must have a large physiological effect.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>B — ASD: left atrium and LV; VSD: right atrium and RV:</strong> This reverses the usual diagnostic pattern. Atrial shunting increases right-sided filling, whereas pulmonary recirculation from a ventricular shunt returns to the left atrium and ventricle.</li><li><strong>C — ASD: right atrium and RV; VSD: isolated RV pressure loading without left-heart volume loading:</strong> The ASD component is correct, and a large VSD can transmit pressure to the RV and pulmonary artery. However, a significant left-to-right VSD also increases pulmonary venous return and left-heart volume load; pressure transmission does not remove that effect.</li><li><strong>D — ASD: isolated RV pressure loading; VSD: left atrium and LV:</strong> The VSD component is correct. In an uncomplicated ASD without advanced pulmonary vascular disease, increased RV filling volume is the primary load; isolated pressure overload suggests another or additional mechanism.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Chamber Loading in Congenital Left-to-Right Shunts",
+        "sections": [
+          {
+            "heading": "Follow the Recirculating Blood",
+            "bullets": [
+              {
+                "text": "**The level of the communication determines where excess flow re-enters the circuit.** In an ASD, pulmonary venous blood reaching the left atrium can cross into the right atrium and increase RV filling.",
+                "children": [
+                  "In a VSD, left ventricular output diverted to the pulmonary circuit returns through the pulmonary veins to the left atrium and LV. Left-heart enlargement therefore helps quantify the physiological consequence of the ventricular shunt.",
+                  "A PDA also increases pulmonary venous return and left-heart volume loading. Anomalous pulmonary venous connection instead directs oxygenated venous blood into the systemic venous circuit, producing a right-sided volume burden."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Separate Pressure From Flow",
+            "bullets": [
+              {
+                "text": "**Pressure transmission and excess flow are related but distinct.** A large nonrestrictive VSD may produce high RV and PA pressures, while a restrictive defect maintains a substantial LV-to-RV systolic gradient.",
+                "children": [
+                  "High pulmonary pressure does not by itself prove high pulmonary vascular resistance. Interpret pressure together with flow and downstream filling pressure. Conversely, advanced pulmonary vascular disease may reduce the left-to-right shunt and alter the expected chamber pattern.",
+                  "Valvar pulmonary stenosis produces RV pressure loading without a primary recirculating left-to-right shunt. Pulmonary regurgitation can cause RV volume loading without an ASD. Chamber enlargement narrows the physiological differential but does not establish the anatomical diagnosis alone."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Apply the Pattern to Imaging",
+            "bullets": [
+              {
+                "text": "**Match chamber size to the suspected lesion and quantify the actual flow.** Unexpected findings should prompt review for additional valve disease, anomalous veins, obstruction or pulmonary vascular disease.",
+                "children": [
+                  "Echocardiography maps the communication and estimates pressures; CMR can quantify volumes and Qp/Qs when needed. Symptoms, attributable chamber enlargement and pulmonary vascular status influence intervention assessment. Do not select closure solely from a chamber label or assume that a small anatomical defect must have a large physiological effect."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 1,
+            "explanation": "This reverses the usual diagnostic pattern. Atrial shunting increases right-sided filling, whereas pulmonary recirculation from a ventricular shunt returns to the left atrium and ventricle."
+          },
+          {
+            "optionIndex": 2,
+            "explanation": "The ASD component is correct, and a large VSD can transmit pressure to the RV and pulmonary artery. However, a significant left-to-right VSD also increases pulmonary venous return and left-heart volume load; pressure transmission does not remove that effect."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "The VSD component is correct. In an uncomplicated ASD without advanced pulmonary vascular disease, increased RV filling volume is the primary load; isolated pressure overload suggests another or additional mechanism."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Distinguish pressure loading from shunt-related chamber volume loading"
     },
     {
       "id": "cardiology-rebuild-12-001",
@@ -4110,9 +4194,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 48,
+    "draftQuestions": 49,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 48
+    "newQuestionsAfterRedistribution": 49
   }
 }

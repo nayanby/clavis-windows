@@ -4,15 +4,15 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 52,
+  "authoredQuestions": 53,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 48,
+  "newDraftQuestions": 49,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
       "section": "Foundations and physiological classification",
       "plannedQuestions": 4,
-      "authoredQuestions": 1,
+      "authoredQuestions": 2,
       "decisions": [
         "Classify anatomical complexity separately from physiological stage",
         "Calculate Qp/Qs from an appropriately sampled oximetry run",
@@ -161,6 +161,11 @@
       "questionId": "cardiology-rebuild-01-015",
       "section": "Foundations and physiological classification",
       "decision": "Calculate Qp/Qs from an appropriately sampled oximetry run"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-049",
+      "section": "Foundations and physiological classification",
+      "decision": "Distinguish pressure loading from shunt-related chamber volume loading"
     },
     {
       "questionId": "cardiology-rebuild-12-001",

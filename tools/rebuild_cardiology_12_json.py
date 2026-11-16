@@ -34,6 +34,9 @@ REFERENCES.update(other_references)
 from cardiology_12_general_questions import rows as general_rows, REFERENCES as general_references
 rows.extend(general_rows)
 REFERENCES.update(general_references)
+from cardiology_12_foundation_questions import rows as foundation_rows, REFERENCES as foundation_references
+rows.extend(foundation_rows)
+REFERENCES.update(foundation_references)
 
 DOC='12. Adult Congenital Heart Diseases'
 PREFIX='cardiology-rebuild-12-'
@@ -133,6 +136,7 @@ ASSIGNMENTS={
  PREFIX+'046':(12,2),
  PREFIX+'047':(12,3),
  PREFIX+'048':(12,4),
+ PREFIX+'049':(0,2),
  'cardiology-rebuild-03-047':(5,0), 'cardiology-rebuild-03-048':(6,1),
 }
 
