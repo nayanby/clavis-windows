@@ -7,6 +7,7 @@ REFERENCES={
  'FONTAN_KOREA':('Korean Fontan clinical practice consensus, 2025','https://doi.org/10.4070/kcj.2025.0455'),
 }
 TOPIC='Fontan and single-ventricle circulation'
+def S(heading,lead,*details):return heading,[(lead,list(details))]
 rows=[Q(TOPIC,'Pulmonary Flow and Preload Limitation in Fontan Circulation',
  'An adult with an extracardiac Fontan has worsening exercise intolerance despite preserved systemic ventricular ejection fraction and no important AV-valve regurgitation. The conduit and branch pulmonary arteries are unobstructed. Pulmonary vascular resistance has increased, while ventricular filling pressure is unchanged. Which mechanism most directly reduces systemic output?',
  'Reduced passive pulmonary flow limits systemic ventricular preload',[
@@ -60,3 +61,23 @@ rows.append(Q(TOPIC,'Anticoagulation After Atrial Flutter in Fontan Circulation'
    'For adults without the high-risk features and without bleeding contraindications, current guidance recommends prophylaxis with aspirin or anticoagulation. That lower-risk choice should not be transferred to the present patient. Conversely, adding aspirin to an anticoagulant requires its own indication because combined treatment increases bleeding exposure.',
    'Evaluate the arrhythmia substrate and Fontan hemodynamics as well as prescribing thromboprophylaxis. Rhythm recurrence can impair filling and output, and may signal pathway or ventricular deterioration. Monitoring should include treatment adherence, bleeding, organ function and recurrent rhythm symptoms. The purpose of long-term prevention is distinct from decisions about anticoagulation around an urgent or planned cardioversion.'])])],
  ['ACHD2025','FONTAN_KOREA']))
+
+REFERENCES['FALD_EASL']=('EASL-ERN position paper on liver involvement in Fontan circulation, 2023','https://www.journal-of-hepatology.eu/article/S0168-8278%2823%2904992-9/fulltext')
+rows.append(Q(TOPIC,'Liver Surveillance in Fontan-Associated Cirrhosis',
+ 'A 32-year-old, 28 years after Fontan completion, has hepatology-confirmed cirrhosis. Aminotransferases are near normal, ultrasound visualization is adequate and no focal lesion is present. Which surveillance strategy best addresses the risk of hepatocellular carcinoma?',
+ 'Liver ultrasound at six-month intervals, with AFP as an adjunct',[
+ ('Annual aminotransferases, with liver imaging when enzymes rise','Annual laboratory assessment is part of Fontan organ surveillance, but aminotransferases may remain near normal despite advanced disease. Waiting for enzyme elevation can miss an asymptomatic hepatic tumor.'),
+ ('Annual elastography, with imaging for a focal lesion only if stiffness increases','Elastography can contribute longitudinal information, but stiffness is affected by venous congestion and does not screen directly for focal malignancy. A stable stiffness value does not replace scheduled tumor surveillance.'),
+ ('Scheduled repeat liver biopsy to detect early malignant transformation','Biopsy is useful for selected diagnostic or transplant-related questions and indeterminate lesions. Repeated nontargeted biopsy is not the routine method for detecting new focal HCC and exposes the patient to procedural risk and sampling limitations.')],
+ [S('Surveillance Despite Quiet Biochemistry',
+  '**Fontan-associated liver disease arises in the setting of chronic hepatic venous congestion and altered perfusion.** Fibrosis, cirrhosis and malignancy can develop without striking aminotransferase elevations.',
+  'Confirmed cirrhosis supports surveillance at least every six months under current ACHD guidance. EASL-ERN describes six-monthly ultrasound by experienced personnel, with AFP as an adjunct. A normal AFP does not exclude a tumor.',
+  'Use the surveillance plan appropriate to actual imaging quality and risk. Poor visualization or a suspicious lesion warrants specialist selection of cross-sectional imaging rather than repeated reliance on an inadequate ultrasound examination.'),
+  S('Interpreting Stiffness and Nodules',
+  '**Elastography measures a physical property influenced by both fibrosis and congestion.** A high value cannot be translated uncritically into a fibrosis stage using thresholds validated in an unrelated liver disease.',
+  'Serial imaging, laboratory trends and signs of portal hypertension complement one another. Falling platelet count, splenomegaly, varices or ascites merit assessment; ascites can also reflect the underlying cardiac circulation.',
+  'Fontan livers may contain benign regenerative nodules, so a new lesion requires expert characterization. Multiphase CT or MRI and selected biopsy may be needed when imaging remains indeterminate. Routine biopsy solely to track fibrosis is controversial and should have a clear potential to change management.'),
+  S('Coordinated Follow-Up',
+  '**Cardiology and hepatology should jointly interpret hepatic findings.** Assess the Fontan pathway, filling pressures, ventricular function and other contributors to venous congestion alongside liver disease.',
+  'Annual organ-system laboratory assessment remains useful but complements rather than replaces tumor surveillance. Advanced disease may affect procedural planning, anticoagulation decisions and consideration of isolated cardiac versus combined heart-liver transplantation. Those decisions require assessment of the overall circulation and hepatic complications rather than a single stiffness measurement.')],
+ ['ACHD2025','FALD_EASL']))

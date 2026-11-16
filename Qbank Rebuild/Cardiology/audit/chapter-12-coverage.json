@@ -4,9 +4,9 @@
   "chapter": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "plannedQuestions": 55,
-  "authoredQuestions": 42,
+  "authoredQuestions": 43,
   "existingQuestionsPreserved": 4,
-  "newDraftQuestions": 38,
+  "newDraftQuestions": 39,
   "countPolicy": "Provisional 55 distinct high-yield decisions selected from source topics; revise after detailed source, guideline and duplication review. Not official examination weightage.",
   "sections": [
     {
@@ -124,7 +124,7 @@
     {
       "section": "Fontan and single-ventricle circulation",
       "plannedQuestions": 5,
-      "authoredQuestions": 3,
+      "authoredQuestions": 4,
       "decisions": [
         "Explain passive pulmonary flow and sensitivity to pulmonary resistance",
         "Investigate failing Fontan and protein-losing enteropathy",
@@ -366,6 +366,11 @@
       "questionId": "cardiology-rebuild-12-038",
       "section": "Fontan and single-ventricle circulation",
       "decision": "Individualize thromboprophylaxis and evaluation of thromboembolism"
+    },
+    {
+      "questionId": "cardiology-rebuild-12-039",
+      "section": "Fontan and single-ventricle circulation",
+      "decision": "Apply current liver surveillance and interpret congestive liver findings"
     }
   ]
 }

@@ -3,7 +3,7 @@
   "document": "12. Adult Congenital Heart Diseases",
   "status": "draft_in_progress",
   "installedNewQuestions": false,
-  "authoredQuestions": 42,
+  "authoredQuestions": 43,
   "plannedQuestions": 55,
   "sourceDocumentSha256": "af069eb2e56a1df4b01158f4fff5e65a229000ba0de7ddf23780727376e3fcb7",
   "sourceHeadings": [
@@ -67,7 +67,8 @@
     "cardiology-rebuild-12-035",
     "cardiology-rebuild-12-036",
     "cardiology-rebuild-12-037",
-    "cardiology-rebuild-12-038"
+    "cardiology-rebuild-12-038",
+    "cardiology-rebuild-12-039"
   ],
   "sources": [
     {
@@ -209,21 +210,25 @@
     {
       "label": "Korean Fontan clinical practice consensus, 2025",
       "url": "https://doi.org/10.4070/kcj.2025.0455"
+    },
+    {
+      "label": "EASL-ERN position paper on liver involvement in Fontan circulation, 2023",
+      "url": "https://www.journal-of-hepatology.eu/article/S0168-8278%2823%2904992-9/fulltext"
     }
   ],
   "validation": {
-    "questions": 42,
+    "questions": 43,
     "answerDistribution": {
       "A": 11,
       "B": 11,
-      "C": 10,
+      "C": 11,
       "D": 10
     },
     "minimumExplanationWords": 210,
-    "distractorRationales": 120,
+    "distractorRationales": 123,
     "questionStyles": {
       "direct": 5,
-      "clinical_scenario": 37
+      "clinical_scenario": 38
     },
     "status": "passed"
   },

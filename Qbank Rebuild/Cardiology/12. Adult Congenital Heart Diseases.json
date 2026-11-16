@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 42,
+  "targetQuestions": 43,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3268,6 +3268,90 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Individualize thromboprophylaxis and evaluation of thromboembolism"
+    },
+    {
+      "id": "cardiology-rebuild-12-039",
+      "topic": "Fontan and single-ventricle circulation",
+      "question": "A 32-year-old, 28 years after Fontan completion, has hepatology-confirmed cirrhosis. Aminotransferases are near normal, ultrasound visualization is adequate and no focal lesion is present. Which surveillance strategy best addresses the risk of hepatocellular carcinoma?",
+      "options": [
+        "Annual elastography, with imaging for a focal lesion only if stiffness increases",
+        "Annual aminotransferases, with liver imaging when enzymes rise",
+        "Liver ultrasound at six-month intervals, with AFP as an adjunct",
+        "Scheduled repeat liver biopsy to detect early malignant transformation"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Liver Surveillance in Fontan-Associated Cirrhosis\n\nCorrect answer: Liver ultrasound at six-month intervals, with AFP as an adjunct\n\nSurveillance Despite Quiet Biochemistry\n\n**Fontan-associated liver disease arises in the setting of chronic hepatic venous congestion and altered perfusion.** Fibrosis, cirrhosis and malignancy can develop without striking aminotransferase elevations.\n\nConfirmed cirrhosis supports surveillance at least every six months under current ACHD guidance. EASL-ERN describes six-monthly ultrasound by experienced personnel, with AFP as an adjunct. A normal AFP does not exclude a tumor.\n\nUse the surveillance plan appropriate to actual imaging quality and risk. Poor visualization or a suspicious lesion warrants specialist selection of cross-sectional imaging rather than repeated reliance on an inadequate ultrasound examination.\n\nInterpreting Stiffness and Nodules\n\n**Elastography measures a physical property influenced by both fibrosis and congestion.** A high value cannot be translated uncritically into a fibrosis stage using thresholds validated in an unrelated liver disease.\n\nSerial imaging, laboratory trends and signs of portal hypertension complement one another. Falling platelet count, splenomegaly, varices or ascites merit assessment; ascites can also reflect the underlying cardiac circulation.\n\nFontan livers may contain benign regenerative nodules, so a new lesion requires expert characterization. Multiphase CT or MRI and selected biopsy may be needed when imaging remains indeterminate. Routine biopsy solely to track fibrosis is controversial and should have a clear potential to change management.\n\nCoordinated Follow-Up\n\n**Cardiology and hepatology should jointly interpret hepatic findings.** Assess the Fontan pathway, filling pressures, ventricular function and other contributors to venous congestion alongside liver disease.\n\nAnnual organ-system laboratory assessment remains useful but complements rather than replaces tumor surveillance. Advanced disease may affect procedural planning, anticoagulation decisions and consideration of isolated cardiac versus combined heart-liver transplantation. Those decisions require assessment of the overall circulation and hepatic complications rather than a single stiffness measurement.\n\nAnnual elastography, with imaging for a focal lesion only if stiffness increases: Elastography can contribute longitudinal information, but stiffness is affected by venous congestion and does not screen directly for focal malignancy. A stable stiffness value does not replace scheduled tumor surveillance.\n\nAnnual aminotransferases, with liver imaging when enzymes rise: Annual laboratory assessment is part of Fontan organ surveillance, but aminotransferases may remain near normal despite advanced disease. Waiting for enzyme elevation can miss an asymptomatic hepatic tumor.\n\nScheduled repeat liver biopsy to detect early malignant transformation: Biopsy is useful for selected diagnostic or transplant-related questions and indeterminate lesions. Repeated nontargeted biopsy is not the routine method for detecting new focal HCC and exposes the patient to procedural risk and sampling limitations.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nEASL-ERN position paper on liver involvement in Fontan circulation, 2023 — https://www.journal-of-hepatology.eu/article/S0168-8278%2823%2904992-9/fulltext",
+      "explanationHtml": "<h2>Liver Surveillance in Fontan-Associated Cirrhosis</h2><p><strong>Correct answer: C — Liver ultrasound at six-month intervals, with AFP as an adjunct</strong></p><h3>Surveillance Despite Quiet Biochemistry</h3><ul><li><strong>Fontan-associated liver disease arises in the setting of chronic hepatic venous congestion and altered perfusion.</strong> Fibrosis, cirrhosis and malignancy can develop without striking aminotransferase elevations.<ul><li>Confirmed cirrhosis supports surveillance at least every six months under current ACHD guidance. EASL-ERN describes six-monthly ultrasound by experienced personnel, with AFP as an adjunct. A normal AFP does not exclude a tumor.</li><li>Use the surveillance plan appropriate to actual imaging quality and risk. Poor visualization or a suspicious lesion warrants specialist selection of cross-sectional imaging rather than repeated reliance on an inadequate ultrasound examination.</li></ul></li></ul><h3>Interpreting Stiffness and Nodules</h3><ul><li><strong>Elastography measures a physical property influenced by both fibrosis and congestion.</strong> A high value cannot be translated uncritically into a fibrosis stage using thresholds validated in an unrelated liver disease.<ul><li>Serial imaging, laboratory trends and signs of portal hypertension complement one another. Falling platelet count, splenomegaly, varices or ascites merit assessment; ascites can also reflect the underlying cardiac circulation.</li><li>Fontan livers may contain benign regenerative nodules, so a new lesion requires expert characterization. Multiphase CT or MRI and selected biopsy may be needed when imaging remains indeterminate. Routine biopsy solely to track fibrosis is controversial and should have a clear potential to change management.</li></ul></li></ul><h3>Coordinated Follow-Up</h3><ul><li><strong>Cardiology and hepatology should jointly interpret hepatic findings.</strong> Assess the Fontan pathway, filling pressures, ventricular function and other contributors to venous congestion alongside liver disease.<ul><li>Annual organ-system laboratory assessment remains useful but complements rather than replaces tumor surveillance. Advanced disease may affect procedural planning, anticoagulation decisions and consideration of isolated cardiac versus combined heart-liver transplantation. Those decisions require assessment of the overall circulation and hepatic complications rather than a single stiffness measurement.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Annual elastography, with imaging for a focal lesion only if stiffness increases:</strong> Elastography can contribute longitudinal information, but stiffness is affected by venous congestion and does not screen directly for focal malignancy. A stable stiffness value does not replace scheduled tumor surveillance.</li><li><strong>B — Annual aminotransferases, with liver imaging when enzymes rise:</strong> Annual laboratory assessment is part of Fontan organ surveillance, but aminotransferases may remain near normal despite advanced disease. Waiting for enzyme elevation can miss an asymptomatic hepatic tumor.</li><li><strong>D — Scheduled repeat liver biopsy to detect early malignant transformation:</strong> Biopsy is useful for selected diagnostic or transplant-related questions and indeterminate lesions. Repeated nontargeted biopsy is not the routine method for detecting new focal HCC and exposes the patient to procedural risk and sampling limitations.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://www.journal-of-hepatology.eu/article/S0168-8278%2823%2904992-9/fulltext\">EASL-ERN position paper on liver involvement in Fontan circulation, 2023</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Liver Surveillance in Fontan-Associated Cirrhosis",
+        "sections": [
+          {
+            "heading": "Surveillance Despite Quiet Biochemistry",
+            "bullets": [
+              {
+                "text": "**Fontan-associated liver disease arises in the setting of chronic hepatic venous congestion and altered perfusion.** Fibrosis, cirrhosis and malignancy can develop without striking aminotransferase elevations.",
+                "children": [
+                  "Confirmed cirrhosis supports surveillance at least every six months under current ACHD guidance. EASL-ERN describes six-monthly ultrasound by experienced personnel, with AFP as an adjunct. A normal AFP does not exclude a tumor.",
+                  "Use the surveillance plan appropriate to actual imaging quality and risk. Poor visualization or a suspicious lesion warrants specialist selection of cross-sectional imaging rather than repeated reliance on an inadequate ultrasound examination."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Interpreting Stiffness and Nodules",
+            "bullets": [
+              {
+                "text": "**Elastography measures a physical property influenced by both fibrosis and congestion.** A high value cannot be translated uncritically into a fibrosis stage using thresholds validated in an unrelated liver disease.",
+                "children": [
+                  "Serial imaging, laboratory trends and signs of portal hypertension complement one another. Falling platelet count, splenomegaly, varices or ascites merit assessment; ascites can also reflect the underlying cardiac circulation.",
+                  "Fontan livers may contain benign regenerative nodules, so a new lesion requires expert characterization. Multiphase CT or MRI and selected biopsy may be needed when imaging remains indeterminate. Routine biopsy solely to track fibrosis is controversial and should have a clear potential to change management."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Coordinated Follow-Up",
+            "bullets": [
+              {
+                "text": "**Cardiology and hepatology should jointly interpret hepatic findings.** Assess the Fontan pathway, filling pressures, ventricular function and other contributors to venous congestion alongside liver disease.",
+                "children": [
+                  "Annual organ-system laboratory assessment remains useful but complements rather than replaces tumor surveillance. Advanced disease may affect procedural planning, anticoagulation decisions and consideration of isolated cardiac versus combined heart-liver transplantation. Those decisions require assessment of the overall circulation and hepatic complications rather than a single stiffness measurement."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "Elastography can contribute longitudinal information, but stiffness is affected by venous congestion and does not screen directly for focal malignancy. A stable stiffness value does not replace scheduled tumor surveillance."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Annual laboratory assessment is part of Fontan organ surveillance, but aminotransferases may remain near normal despite advanced disease. Waiting for enzyme elevation can miss an asymptomatic hepatic tumor."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "Biopsy is useful for selected diagnostic or transplant-related questions and indeterminate lesions. Repeated nontargeted biopsy is not the routine method for detecting new focal HCC and exposes the patient to procedural risk and sampling limitations."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "EASL-ERN position paper on liver involvement in Fontan circulation, 2023",
+          "url": "https://www.journal-of-hepatology.eu/article/S0168-8278%2823%2904992-9/fulltext"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Apply current liver surveillance and interpret congestive liver findings"
     }
   ],
   "plannedQuestions": 55,
@@ -3276,9 +3360,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 38,
+    "draftQuestions": 39,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 38
+    "newQuestionsAfterRedistribution": 39
   }
 }
