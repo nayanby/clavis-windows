@@ -7,7 +7,7 @@
   "headingIndex": 0,
   "document": "12. Adult Congenital Heart Diseases",
   "headingText": "Adult Congenital Heart Diseases",
-  "targetQuestions": 46,
+  "targetQuestions": 47,
   "status": "draft_in_progress",
   "authorship": "Original educational MCQs; not authenticated NEET-SS past questions",
   "sourceNote": "Original educational synthesis with preserved redistributed questions; incomplete additions remain uninstalled. Full Harrison text not accessed; independent clinician review not claimed.",
@@ -3593,6 +3593,90 @@
       "sourceCheckedAt": "2026-11-16",
       "reviewStatus": "source_checked_not_independently_clinician_reviewed",
       "coverageDecision": "Recognize cor triatriatum and differentiate it from mitral inflow disease"
+    },
+    {
+      "id": "cardiology-rebuild-12-043",
+      "topic": "Other important congenital lesions",
+      "question": "A 24-year-old has exertional chest pain and presyncope. Coronary CT shows the left coronary artery arising from the right sinus with a slit-like ostium and proximal intramural segment. Stress imaging demonstrates ischemia in its territory, without atherosclerotic disease. Which management strategy is most appropriate?",
+      "options": [
+        "Proceed directly to coronary stenting as for an atherosclerotic ostial lesion",
+        "Use antianginal medication with imaging surveillance as the definitive strategy",
+        "Refer for congenital coronary surgical repair assessment",
+        "Implant a prophylactic ICD before addressing the coronary anomaly"
+      ],
+      "correctIndex": 2,
+      "questionStyle": "clinical_scenario",
+      "calculation": false,
+      "explanation": "Ischemic Anomalous Aortic Coronary Origin\n\nCorrect answer: Refer for congenital coronary surgical repair assessment\n\nCombine Anatomy With Attributable Ischemia\n\n**Anomalous origin alone is not a complete risk description.** The ostial shape, takeoff angle, proximal narrowing and intramural or other course influence the potential for compromised perfusion.\n\nThe left coronary arising from the opposite sinus with an intramural segment is particularly concerning when exertional symptoms and territorial ischemia agree. This combination supports a causal relationship rather than incidental discovery of a benign anatomical variant.\n\nCT angiography usually provides detailed definition of origin and proximal course. Functional testing adds evidence about ischemia; a negative test in another patient does not automatically neutralize every high-risk anatomical feature.\n\nSelect an Anatomical Repair\n\n**Current ACHD guidance recommends surgery for symptomatic AAOCA or ischemia attributable to the anomalous artery.** The operation must be selected from the actual coronary and aortic-root anatomy.\n\nUnroofing may address a suitable intramural segment; reimplantation or another reconstruction may be preferred in other configurations. The relationship to an aortic commissure and potential valve injury matter. Avoid treating every interarterial or intramural variant with an identical operation.\n\nRestrict strenuous exertion pending specialist assessment in this symptomatic ischemic presentation. Review ventricular function, scar and arrhythmias, and coordinate postoperative reassessment before decisions about return to sport.\n\nLimits of Generalization\n\n**Asymptomatic anomalies require a separate risk discussion.** A retroaortic circumflex course, for example, does not carry the same implications as the supplied left-coronary phenotype.\n\nSurgical outcome assessment includes residual ischemia, recurrent symptoms, coronary patency and aortic regurgitation. Repair should not be presented as a guarantee against every future event. Conversely, an ICD or antianginal prescription does not remove a mechanically compromised coronary origin; those treatments answer different clinical questions.\n\nProceed directly to coronary stenting as for an atherosclerotic ostial lesion: PCI treats many acquired coronary stenoses and may have selected roles in congenital anomalies. This young patient has an intramural congenital origin abnormality, not an ordinary plaque lesion; anatomical surgical correction requires specialist consideration rather than automatic ostial stenting.\n\nUse antianginal medication with imaging surveillance as the definitive strategy: Medication and surveillance can be considered in selected patients whose risk and anatomy do not justify intervention, or when intervention is unsuitable. Attributable symptoms and demonstrated ischemia in this high-risk anatomical pattern support surgical treatment assessment.\n\nImplant a prophylactic ICD before addressing the coronary anomaly: An ICD is appropriate for selected patients with established arrhythmic indications, including some secondary-prevention settings. It does not correct the ischemic substrate, and the supplied history does not establish a standalone device indication in place of coronary repair.\n\nACC/AHA multisociety ACHD guideline, 2025 — https://doi.org/10.1016/j.jacc.2025.09.006\n\nESC adult congenital heart disease guideline, 2020 — https://doi.org/10.1093/eurheartj/ehaa554",
+      "explanationHtml": "<h2>Ischemic Anomalous Aortic Coronary Origin</h2><p><strong>Correct answer: C — Refer for congenital coronary surgical repair assessment</strong></p><h3>Combine Anatomy With Attributable Ischemia</h3><ul><li><strong>Anomalous origin alone is not a complete risk description.</strong> The ostial shape, takeoff angle, proximal narrowing and intramural or other course influence the potential for compromised perfusion.<ul><li>The left coronary arising from the opposite sinus with an intramural segment is particularly concerning when exertional symptoms and territorial ischemia agree. This combination supports a causal relationship rather than incidental discovery of a benign anatomical variant.</li><li>CT angiography usually provides detailed definition of origin and proximal course. Functional testing adds evidence about ischemia; a negative test in another patient does not automatically neutralize every high-risk anatomical feature.</li></ul></li></ul><h3>Select an Anatomical Repair</h3><ul><li><strong>Current ACHD guidance recommends surgery for symptomatic AAOCA or ischemia attributable to the anomalous artery.</strong> The operation must be selected from the actual coronary and aortic-root anatomy.<ul><li>Unroofing may address a suitable intramural segment; reimplantation or another reconstruction may be preferred in other configurations. The relationship to an aortic commissure and potential valve injury matter. Avoid treating every interarterial or intramural variant with an identical operation.</li><li>Restrict strenuous exertion pending specialist assessment in this symptomatic ischemic presentation. Review ventricular function, scar and arrhythmias, and coordinate postoperative reassessment before decisions about return to sport.</li></ul></li></ul><h3>Limits of Generalization</h3><ul><li><strong>Asymptomatic anomalies require a separate risk discussion.</strong> A retroaortic circumflex course, for example, does not carry the same implications as the supplied left-coronary phenotype.<ul><li>Surgical outcome assessment includes residual ischemia, recurrent symptoms, coronary patency and aortic regurgitation. Repair should not be presented as a guarantee against every future event. Conversely, an ICD or antianginal prescription does not remove a mechanically compromised coronary origin; those treatments answer different clinical questions.</li></ul></li></ul><h3>Other Options</h3><ul><li><strong>A — Proceed directly to coronary stenting as for an atherosclerotic ostial lesion:</strong> PCI treats many acquired coronary stenoses and may have selected roles in congenital anomalies. This young patient has an intramural congenital origin abnormality, not an ordinary plaque lesion; anatomical surgical correction requires specialist consideration rather than automatic ostial stenting.</li><li><strong>B — Use antianginal medication with imaging surveillance as the definitive strategy:</strong> Medication and surveillance can be considered in selected patients whose risk and anatomy do not justify intervention, or when intervention is unsuitable. Attributable symptoms and demonstrated ischemia in this high-risk anatomical pattern support surgical treatment assessment.</li><li><strong>D — Implant a prophylactic ICD before addressing the coronary anomaly:</strong> An ICD is appropriate for selected patients with established arrhythmic indications, including some secondary-prevention settings. It does not correct the ischemic substrate, and the supplied history does not establish a standalone device indication in place of coronary repair.</li></ul><h3>References</h3><ul><li><a href=\"https://doi.org/10.1016/j.jacc.2025.09.006\">ACC/AHA multisociety ACHD guideline, 2025</a></li><li><a href=\"https://doi.org/10.1093/eurheartj/ehaa554\">ESC adult congenital heart disease guideline, 2020</a></li></ul>",
+      "explanationTeaching": {
+        "title": "Ischemic Anomalous Aortic Coronary Origin",
+        "sections": [
+          {
+            "heading": "Combine Anatomy With Attributable Ischemia",
+            "bullets": [
+              {
+                "text": "**Anomalous origin alone is not a complete risk description.** The ostial shape, takeoff angle, proximal narrowing and intramural or other course influence the potential for compromised perfusion.",
+                "children": [
+                  "The left coronary arising from the opposite sinus with an intramural segment is particularly concerning when exertional symptoms and territorial ischemia agree. This combination supports a causal relationship rather than incidental discovery of a benign anatomical variant.",
+                  "CT angiography usually provides detailed definition of origin and proximal course. Functional testing adds evidence about ischemia; a negative test in another patient does not automatically neutralize every high-risk anatomical feature."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Select an Anatomical Repair",
+            "bullets": [
+              {
+                "text": "**Current ACHD guidance recommends surgery for symptomatic AAOCA or ischemia attributable to the anomalous artery.** The operation must be selected from the actual coronary and aortic-root anatomy.",
+                "children": [
+                  "Unroofing may address a suitable intramural segment; reimplantation or another reconstruction may be preferred in other configurations. The relationship to an aortic commissure and potential valve injury matter. Avoid treating every interarterial or intramural variant with an identical operation.",
+                  "Restrict strenuous exertion pending specialist assessment in this symptomatic ischemic presentation. Review ventricular function, scar and arrhythmias, and coordinate postoperative reassessment before decisions about return to sport."
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "Limits of Generalization",
+            "bullets": [
+              {
+                "text": "**Asymptomatic anomalies require a separate risk discussion.** A retroaortic circumflex course, for example, does not carry the same implications as the supplied left-coronary phenotype.",
+                "children": [
+                  "Surgical outcome assessment includes residual ischemia, recurrent symptoms, coronary patency and aortic regurgitation. Repair should not be presented as a guarantee against every future event. Conversely, an ICD or antianginal prescription does not remove a mechanically compromised coronary origin; those treatments answer different clinical questions."
+                ]
+              }
+            ]
+          }
+        ],
+        "tables": [],
+        "otherOptions": [
+          {
+            "optionIndex": 0,
+            "explanation": "PCI treats many acquired coronary stenoses and may have selected roles in congenital anomalies. This young patient has an intramural congenital origin abnormality, not an ordinary plaque lesion; anatomical surgical correction requires specialist consideration rather than automatic ostial stenting."
+          },
+          {
+            "optionIndex": 1,
+            "explanation": "Medication and surveillance can be considered in selected patients whose risk and anatomy do not justify intervention, or when intervention is unsuitable. Attributable symptoms and demonstrated ischemia in this high-risk anatomical pattern support surgical treatment assessment."
+          },
+          {
+            "optionIndex": 3,
+            "explanation": "An ICD is appropriate for selected patients with established arrhythmic indications, including some secondary-prevention settings. It does not correct the ischemic substrate, and the supplied history does not establish a standalone device indication in place of coronary repair."
+          }
+        ]
+      },
+      "references": [
+        {
+          "label": "ACC/AHA multisociety ACHD guideline, 2025",
+          "url": "https://doi.org/10.1016/j.jacc.2025.09.006"
+        },
+        {
+          "label": "ESC adult congenital heart disease guideline, 2020",
+          "url": "https://doi.org/10.1093/eurheartj/ehaa554"
+        }
+      ],
+      "sourceCheckedAt": "2026-11-16",
+      "reviewStatus": "source_checked_not_independently_clinician_reviewed",
+      "coverageDecision": "Assess anomalous aortic coronary origin and an ischemia-risk phenotype"
     }
   ],
   "plannedQuestions": 55,
@@ -3601,9 +3685,9 @@
     "originalIdsPreserved": true,
     "existingQuestions": 4,
     "previouslyInstalledQuestions": 4,
-    "draftQuestions": 42,
+    "draftQuestions": 43,
     "coverageStatus": "incomplete_requires_chapter_review",
     "explanationStructureStatus": "original_explanations_preserved_not_rewritten",
-    "newQuestionsAfterRedistribution": 42
+    "newQuestionsAfterRedistribution": 43
   }
 }
