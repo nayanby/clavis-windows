@@ -172,10 +172,9 @@
       this.zip.file('word/media/' + name, match[1], { base64: true });
       const id = this.relationship('image', 'media/' + name);
       const maxWidth = this.profile.contentWidthTwips * 635;
-      const width = Math.min(maxWidth, Math.max(1, image.width || 640) * 9525);
-      const height = width * Math.max(1, image.height || 480) / Math.max(1, image.width || 640);
-      const scale = Math.min(1, 6500000 / height);
-      const cx = Math.round(width * scale), cy = Math.round(height * scale);
+      // User's export size: 4 cm high (360,000 EMU per cm).
+      const cy = 1440000;
+      const cx = Math.round(Math.min(maxWidth, cy * Math.max(1, image.width || 640) / Math.max(1, image.height || 480)));
       const drawingId = ++this.drawingIndex;
       return `<w:p><w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="${cx}" cy="${cy}"/><wp:docPr id="${drawingId}" name="${name}" descr="${esc(image.alt)}"/><wp:cNvGraphicFramePr><a:graphicFrameLocks noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic><pic:nvPicPr><pic:cNvPr id="${drawingId}" name="${name}"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="${id}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>`;
     }

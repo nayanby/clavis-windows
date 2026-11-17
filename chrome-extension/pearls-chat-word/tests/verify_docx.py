@@ -48,6 +48,7 @@ for path in sorted((ROOT/'build/chat-word-qa').glob('*.docx')):
             assert posixpath.normpath('word/'+rel.get('Target')) in z.namelist()
         assert z.namelist().count('word/media/image1.png')==1
         Image.open(BytesIO(z.read('word/media/image1.png'))).verify()
+        assert all(extent.get('cy')=='1440000' for extent in d.xpath('//*[local-name()="inline"]/*[local-name()="extent"]')), 'Images must be 4 cm high'
         assert d.find('.//w:tbl/w:tr/w:trPr/w:tblHeader',NS) is not None
     opened=Document(path)
     assert len(opened.tables)==1

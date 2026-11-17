@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.4';
+  const VERSION='1.0.5';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],[data-markdown-copy="exclude"],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -50,7 +50,14 @@
     }
     for (const node of parent.childNodes) {
       if (node.nodeType === Node.TEXT_NODE) { if (node.textContent.trim()) pending.push(...inlines(node)); continue; }
-      if (node.nodeType !== Node.ELEMENT_NODE || hidden(node)) continue;
+      if (node.nodeType !== Node.ELEMENT_NODE) continue;
+      // Generated pictures are often wrapped in a preview button/link.
+      if (node.matches('button,[role="button"]') && !node.closest('[data-pearls-ignore],[hidden],[aria-hidden="true"]')) {
+        flush();
+        for (const img of node.querySelectorAll('img')) if (!hidden(img)) output.push(image(img));
+        continue;
+      }
+      if (hidden(node)) continue;
       const tag = node.tagName.toLowerCase();
       if (/^h[1-6]$/.test(tag)) { flush(); output.push({ type: 'heading', level: Number(tag[1]), runs: inlines(node) }); }
       else if (tag === 'p') {
@@ -90,6 +97,7 @@
       }
       else if (tag === 'hr') { flush(); output.push({ type: 'rule' }); }
       else if (/^(div|section|article|main|figure|figcaption|details|summary|dl|dt|dd|li)$/.test(tag)) { flush(); output.push(...blocks(node)); }
+      else if (node.querySelector('img')) { flush(); output.push(...blocks(node)); }
       else pending.push(...inlines(node));
     }
     flush(); return output;
@@ -212,9 +220,18 @@
             if (!cache.has(item.src)) cache.set(item.src, (async () => {
               const url = new URL(item.src, location.href);
               if (!/^(https?:|data:|blob:)$/.test(url.protocol)) throw Error('Unsupported image URL');
-              const response = await fetch(url.href, { credentials: 'same-origin', signal: AbortSignal.timeout(7000) });
-              if (!response.ok) throw Error('Image unavailable');
-              const blob = await response.blob();
+              let blob;
+              try {
+                const response = await fetch(url.href, { credentials: 'same-origin', signal: AbortSignal.timeout(15000) });
+                if (!response.ok) throw Error('Image unavailable');
+                blob = await response.blob();
+              } catch(error) {
+                // Extension fetch can read provider image CDNs that deny page CORS.
+                if (url.protocol !== 'https:' || !globalThis.chrome?.runtime?.sendMessage) throw error;
+                const resolved = await chrome.runtime.sendMessage({type:'PEARLS_FETCH_IMAGE',url:url.href});
+                if (!resolved?.data) throw Error(resolved?.error || 'Image unavailable');
+                blob = await (await fetch(resolved.data)).blob();
+              }
               if (!/^image\/(png|jpeg|gif|webp|svg\+xml)/i.test(blob.type) || blob.size > 8000000) throw Error('Image format or size unsupported');
               const bitmap = await createImageBitmap(blob);
               const scale = Math.min(1, 1800 / Math.max(bitmap.width, bitmap.height));

@@ -44,7 +44,7 @@ If earlier responses are not in the one-response dropdown, scroll to them in the
 
 The export includes the active conversation branch and history exposed by the chat page. It cannot recover deleted turns, inaccessible history or alternative branches. Expand collapsed material before exporting. Separate canvases, Claude artifacts and attached source documents are not automatically opened or exported. If traversal cannot maintain a continuous message sequence, export stops instead of silently producing a partial chat.
 
-Readable images are embedded as PNG. Browser restrictions can prevent downloading some remote or protected images; those keep a labelled source link and trigger a visible warning. Source URLs in an exported document can contain private chat identifiers; share the document accordingly.
+Readable images, including pictures inside preview buttons, are downloaded and embedded as PNG at 4 cm height. Width follows the image proportions up to the page width. The extension can retrieve images from the providers' image CDNs when page CORS prevents access. Browser restrictions can still prevent downloading some remote or protected images; those keep a labelled source link and trigger a visible warning. Source URLs in an exported document can contain private chat identifiers; share the document accordingly.
 
 Equations retain their LaTeX/text representation rather than becoming native Word equation objects. Interactive charts, videos and proprietary site widgets are outside the supported text/table/image export.
 

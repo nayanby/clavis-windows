@@ -69,6 +69,23 @@ async function run() {
     const resolved=await page.evaluate(()=>PearlsCapture.resolveImages(PearlsCapture.snapshot()));
     assert(resolved.messages[1].blocks.find(block=>block.type==='image').data.startsWith('data:image/png;base64,'));
     Object.assign(chat,resolved);
+    // Generated images nested in preview controls and links must be real media.
+    const imageCases=await page.evaluate(async()=>{
+      const src=document.querySelector('img[alt="Example diagram"]').src;
+      const fixture=document.createElement('div');
+      fixture.innerHTML=`<button><img alt="Generated picture" src="${src}" width="2" height="2"></button><p><a href="#"><img alt="Linked picture" src="${src}" width="2" height="2"></a></p>`;
+      const captured=PearlsCapture.blocks(fixture);
+      const result=await PearlsCapture.resolveImages({messages:[{blocks:captured}],warnings:[]});
+      const fetchOriginal=globalThis.fetch,sendOriginal=chrome.runtime.sendMessage;
+      let relayed=false;
+      globalThis.fetch=(url,...args)=>String(url).startsWith('https://images.oaiusercontent.com/')?Promise.reject(Error('CORS')):fetchOriginal(url,...args);
+      chrome.runtime.sendMessage=async request=>{relayed=request.type==='PEARLS_FETCH_IMAGE';return {data:src};};
+      try {
+        const fallback=await PearlsCapture.resolveImages({messages:[{blocks:[{type:'image',src:'https://images.oaiusercontent.com/test.png',alt:'CDN picture'}]}],warnings:[]});
+        return {types:captured.map(b=>b.type),data:result.messages[0].blocks.every(b=>b.data?.startsWith('data:image/png;base64,')),relayed,fallback:!!fallback.messages[0].blocks[0].data};
+      } finally {globalThis.fetch=fetchOriginal;chrome.runtime.sendMessage=sendOriginal;}
+    });
+    assert.deepEqual(imageCases.types,['image','image']);assert(imageCases.data&&imageCases.relayed&&imageCases.fallback);
     assert.equal(await page.evaluate(() => {
       const a = { role: 'assistant', id: 'a', blocks: [] }, b = { role: 'user', id: 'b', blocks: [] }, c = { role: 'assistant', id: 'c', blocks: [] };
       return PearlsCapture.merge([a,b],[b,c]).map(x => x.id).join(',');

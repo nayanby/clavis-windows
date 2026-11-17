@@ -24,6 +24,25 @@ chrome.action.onClicked.addListener(async tab => {
   }
 });
 chrome.runtime.onMessage.addListener((request, sender, reply) => {
+  if (request?.type === 'PEARLS_FETCH_IMAGE') {
+    try {
+      const source = new URL(sender.url), url = new URL(request.url);
+      if (!sender.tab || !['chatgpt.com','chat.openai.com','claude.ai','gemini.google.com'].includes(source.hostname)) return;
+      const allowed = ['chatgpt.com','chat.openai.com','claude.ai','gemini.google.com','oaiusercontent.com','googleusercontent.com'];
+      if (url.protocol !== 'https:' || url.port || !allowed.some(host=>url.hostname===host||url.hostname.endsWith('.'+host))) return reply({error:'Image host is not supported.'});
+      (async()=>{
+        const response=await fetch(url.href,{credentials:'omit',redirect:'error',signal:AbortSignal.timeout(15000)});
+        if(!response.ok || !/^image\/(png|jpeg|gif|webp|svg\+xml)(;|$)/i.test(response.headers.get('content-type')||'')) throw Error('Image unavailable or unsupported.');
+        if(Number(response.headers.get('content-length'))>8000000) throw Error('Image exceeds 8 MB.');
+        const reader=response.body.getReader();const chunks=[];let length=0;
+        try { while(true){const {done,value}=await reader.read();if(done)break;length+=value.length;if(length>8000000)throw Error('Image exceeds 8 MB.');chunks.push(value);} } finally {await reader.cancel();}
+        const bytes=new Uint8Array(length);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length;}
+        let binary='';for(let i=0;i<bytes.length;i+=32768)binary+=String.fromCharCode(...bytes.subarray(i,i+32768));
+        reply({data:'data:'+response.headers.get('content-type').split(';')[0]+';base64,'+btoa(binary)});
+      })().catch(error=>reply({error:error.message}));
+      return true;
+    } catch { reply({error:'Invalid image request.'});return; }
+  }
   if (request?.type === 'PEARLS_EXPORT_PROGRESS') {
     try {
       const source = new URL(sender.url);
