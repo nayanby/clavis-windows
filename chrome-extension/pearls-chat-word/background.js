@@ -24,6 +24,23 @@ chrome.action.onClicked.addListener(async tab => {
   }
 });
 chrome.runtime.onMessage.addListener((request, sender, reply) => {
+  if(request?.type==='PEARLS_RENDER_DIAGRAM'){
+    (async()=>{
+      const source=new URL(sender.url);
+      if(!sender.tab?.id||source.protocol!=='https:'||!['chatgpt.com','chat.openai.com','claude.ai','gemini.google.com'].includes(source.hostname)||!/^pearls-[a-f0-9-]{36}$/.test(request.key||''))throw Error('Invalid diagram source.');
+      await chrome.scripting.executeScript({target:{tabId:sender.tab.id},world:'MAIN',files:['vendor/html2canvas-page.min.js']});
+      const result=await chrome.scripting.executeScript({target:{tabId:sender.tab.id},world:'MAIN',args:[request.key],func:async key=>{
+        const node=document.querySelector('[data-pearls-render-key="'+key+'"]');
+        if(!node)throw Error('The diagram is no longer on the page.');
+        return globalThis.__pearlsPageRendererV1(node);
+      }});
+      if(result[0]?.error)throw Error(result[0].error.message||'Firefox diagram rendering failed.');
+      const image=result[0]?.result;
+      if(!image?.data?.startsWith('data:image/png;base64,')||image.data.length>32000000||!Number.isFinite(image.width)||!Number.isFinite(image.height)||image.width<1||image.height<1)throw Error('The diagram renderer returned an invalid image.');
+      reply(image);
+    })().catch(error=>reply({error:error.message}));
+    return true;
+  }
   if(request?.type==='PEARLS_CROP_VISUAL'){
     (async()=>{
       const source=new URL(sender.url);

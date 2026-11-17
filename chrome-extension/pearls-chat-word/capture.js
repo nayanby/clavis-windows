@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.13';
+  const VERSION='1.0.14';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -84,6 +84,15 @@
   async function renderDiagram(node){
     let nativeError='';
     try{const crop=await firefoxCrop(node);if(crop)return crop;}catch(error){nativeError=error.message;}
+    if(globalThis.browser?.runtime){
+      const attribute='data-pearls-render-key',previous=node.getAttribute(attribute),key='pearls-'+crypto.randomUUID();
+      try{
+        node.setAttribute(attribute,key);
+        const response=await browser.runtime.sendMessage({type:'PEARLS_RENDER_DIAGRAM',key});
+        if(!response?.data)throw Error(response?.error||'Firefox page renderer returned no image');
+        return response;
+      }finally{if(previous===null)node.removeAttribute(attribute);else node.setAttribute(attribute,previous);}
+    }
     if(!globalThis.html2canvas)return null;
     try{
       const canvas=await globalThis.html2canvas(node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')});
@@ -192,6 +201,7 @@
       }
       else if (tag === 'svg') {
         flush();
+        if(globalThis.browser?.runtime){output.push(diagram(node));continue;}
         const bytes = new TextEncoder().encode(new XMLSerializer().serializeToString(node));
         const base64 = btoa(Array.from(bytes, byte => String.fromCharCode(byte)).join(''));
         output.push({ type: 'image', src: 'data:image/svg+xml;base64,' + base64,

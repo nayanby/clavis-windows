@@ -26,6 +26,14 @@ vm.createContext(sandbox);vm.runInContext(fs.readFileSync(process.env.PEARLS_TES
   assert.equal(message({type:'PEARLS_EXPORT_PROGRESS',jobId:'job-1',phase:'complete'},{url:'https://chatgpt.com/c/example',tab:{id:7}},()=>{}),undefined);
   assert.equal(message({type:'PEARLS_OPEN_EXPORT',mode:'all'},{url:'https://chatgpt.com.evil.example/',tab:{id:8}},()=>{}),undefined);
   assert.equal(tabs.length,1);
+  const badRenderer=await new Promise(resolve=>message({type:'PEARLS_RENDER_DIAGRAM',key:'pearls-12345678-1234-1234-1234-123456789abc'},{url:'https://evil.example',tab:{id:7}},resolve));
+  assert(badRenderer.error);
+  const originalScriptRunner=sandbox.chrome.scripting.executeScript;
+  let pageCalls=0;
+  sandbox.chrome.scripting.executeScript=async options=>{assert.equal(options.world,'MAIN');pageCalls++;return options.func?[{result:{data:'data:image/png;base64,AQID',width:600,height:260}}]:[];};
+  const rendered=await new Promise(resolve=>message({type:'PEARLS_RENDER_DIAGRAM',key:'pearls-12345678-1234-1234-1234-123456789abc'},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
+  assert.equal(rendered.width,600);assert.equal(pageCalls,2);
+  sandbox.chrome.scripting.executeScript=originalScriptRunner;
   let cropOptions;
   sandbox.chrome.runtime.getBrowserInfo=async()=>({name:'Firefox'});
   sandbox.chrome.tabs.get=async()=>({active:true,url:'https://chatgpt.com/c/example',windowId:3});

@@ -13,7 +13,7 @@ def main():
     backup=ROOT/'build/extension-install-backups'/('pearls-'+str(time.time_ns())+'.zip');backup.parent.mkdir(parents=True,exist_ok=True)
     with ZipFile(ROOT/'outputs/pearls-chat-word/Pearls Chat to Word.zip') as z:
         assert z.testzip() is None
-        names=[name for name in z.namelist() if not name.endswith('/')];assert len(names)==20
+        names=[name for name in z.namelist() if not name.endswith('/')];assert len(names)==21
         updated=json.loads(z.read('Pearls Chat to Word/manifest.json'));assert updated['name']==original['name']
         planned=[]
         for name in names:
