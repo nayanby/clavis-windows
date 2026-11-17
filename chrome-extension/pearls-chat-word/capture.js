@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.7';
+  const VERSION='1.0.8';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],[data-markdown-copy="exclude"],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -60,7 +60,8 @@
     }
   }
   function isDiagram(node) {
-    if(!node.matches('div,section,figure,[role="img"]') || node.querySelector('table,ul,ol,pre,h1,h2,h3,h4'))return false;
+    if(!node.matches('div,section,figure,[role="img"]') || node.querySelector('table,ul,ol,pre'))return false;
+    if([...node.querySelectorAll('h1,h2,h3,h4')].some(el=>!/^\s*\d+(?:\.\d+)?\s*%\s*$/.test(el.textContent)))return false;
     const rect=node.getBoundingClientRect();
     if(rect.width<100||rect.height<60||node.textContent.length>2500)return false;
     if(node.matches('[role="img"],[data-diagram],[data-testid*="diagram"],.mermaid'))return true;
@@ -70,8 +71,14 @@
       return css.display==='grid'&&el.children.length>=4&&css.gridTemplateColumns.split(' ').length>=2;
     });
     if(!grid)return false;
-    // Capture the surrounding diagram card and its labels, or the grid itself.
-    return grid===node || (parseFloat(style.borderRadius)>0&&parseFloat(style.borderTopWidth)>0);
+    // Prefer the complete diagram wrapper, including legend/outcome cards.
+    // Many SmartArt wrappers have no visible border, unlike the inner grid.
+    if(grid===node || (parseFloat(style.borderRadius)>0&&parseFloat(style.borderTopWidth)>0))return true;
+    const branch=[...node.children].find(child=>child===grid||child.contains(grid));
+    const siblings=[...node.children].filter(child=>child!==branch&&!hidden(child));
+    return siblings.length>0 && siblings.every(child=>child.textContent.trim().length<=450)
+      && ![...node.querySelectorAll('p')].some(p=>p.textContent.trim().length>140)
+      && siblings.some(child=>/%/.test(child.textContent)||/legend|outcome|unaffected|carrier|affected/i.test(child.textContent));
   }
   function diagram(node) {
     let id=diagramIds.get(node);
