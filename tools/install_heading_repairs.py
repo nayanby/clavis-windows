@@ -1,5 +1,6 @@
 """Install verified staged heading repairs, retaining locked documents for retry."""
 import hashlib
+import argparse
 import json
 import shutil
 import time
@@ -8,7 +9,10 @@ from apply_clinical_template import DEFAULT_DATA, ROOT, sha
 
 
 def main():
-    output = ROOT / 'build/singleton-bs3'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--set', choices=('singleton-bs3','inverted-bs-parents'), default='singleton-bs3')
+    args = parser.parse_args()
+    output = ROOT / 'build' / args.set
     reports = json.loads((output / 'report.json').read_text(encoding='utf-8'))
     ready, locked, already = [], [], []
     for r in reports:
@@ -44,8 +48,8 @@ def main():
                 for r in written: (DEFAULT_DATA / 'files' / r['file']).write_bytes(z.read(r['file']))
             raise
     result = dict(installed=len(ready), alreadyInstalled=len(already), locked=locked,
-                  restoredBS3=sum(len(r['restoredBS3']) for r in ready),
-                  loneHeadingsUnnumbered=sum(len(r['changes']) for r in ready),
+                  restoredBS3=sum(len(r.get('restoredBS3', [])) for r in ready),
+                  headingsCorrected=sum(len(r['changes']) for r in ready),
                   backup=str(backup) if ready else None)
     (output / 'installation.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
     print(json.dumps(result, indent=2))
