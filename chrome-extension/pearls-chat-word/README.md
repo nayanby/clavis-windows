@@ -16,9 +16,11 @@ The extension requests `activeTab`, `scripting`, `downloads` and access to the f
 
 Open your conversation on **chatgpt.com**, **chat.openai.com**, **claude.ai** or **gemini.google.com**. Reload an already-open chat after installing the extension. Wait for the response to finish.
 
-A **Download entire chat** toolbar appears at the top of the chat. A **Download response** toolbar appears below each assistant response. Clicking either starts that export in a separate tab, then opens Chrome's save dialog. The exporter tab shows progress and any image or history limitations. Keep it open until the download starts.
+The extension runs on a chat page only after you click its browser icon. It no longer inserts controls or loads its renderer automatically while the chat loads.
 
-Clicking the extension icon displays a compact white floating toolbar at the upper right of the chat, with exactly two Word icons: **Download response** and **Download entire chat**. Hover over an icon to see its label. The response icon uses the assistant response most visible in the current viewport, or the latest response if none is visible. Click the extension icon again to dock the toolbar back at the top of the chat. Opening the toolbar does not navigate away from the conversation. The control under each response is also a compact Word icon aligned to the right.
+A single toolbar offers **Download response** and **Download entire chat**. There are no extra buttons below individual responses. Clicking either starts that export in a separate tab, then opens Chrome's save dialog. The exporter tab shows progress and any image or history limitations. Keep it open until the download starts.
+
+Clicking the extension icon displays a compact white floating toolbar at the upper right of the chat, with exactly two Word icons: **Download response** and **Download entire chat**. Hover over an icon to see its label. The response icon uses the assistant response most visible in the current viewport, or the latest response if none is visible. Click the extension icon again to dock the toolbar back at the top of the chat. Opening the toolbar does not navigate away from the conversation.
 
 A progress panel appears immediately below the toolbar you clicked. It shows chat collection, template formatting, actual Word-file packaging progress, the save step and download completion or cancellation. Export buttons are disabled during that job to prevent overlapping exports. The chat stays in front while a background export tab generates the document.
 

@@ -24,11 +24,11 @@ async function run() {
     await page.addScriptTag({ path: path.join(root, 'page-toolbar.js') });
     assert.equal(await page.locator('#stale-extension-toolbar').count(),0);
     assert.equal(await page.locator('[data-pearls-toolbar="chat"]').count(), 1);
-    assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(), 3);
+    assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(), 0);
     assert.equal(await page.locator('main [data-pearls-toolbar], [data-message-author-role] [data-pearls-toolbar]').count(),0,'Controls must not be inserted into chat-owned content');
     await page.evaluate(() => PearlsToolbar.render());
-    assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(), 3);
-    await page.locator('[data-pearls-toolbar="response"]').first().getByRole('button').click({timeout:8000});
+    assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(), 0);
+    await page.locator('[data-pearls-toolbar="chat"]').getByRole('button',{name:'Download response',exact:true}).click({timeout:8000});
     assert.equal(await page.evaluate(() => toolbarRequests[0].mode), 'single');
     assert.equal(await page.evaluate(() => toolbarRequests[0].id), 'a1');
     await page.locator('[data-pearls-toolbar="chat"]').getByRole('button',{name:'Download entire chat',exact:true}).click({timeout:5000});
@@ -217,7 +217,7 @@ async function run() {
     assert.equal(work.messages[1].blocks.filter(block=>block.type==='table').length,1);
     assert(!JSON.stringify(work).includes('Copy response'));
     await page.addScriptTag({path:path.join(root,'page-toolbar.js')});
-    assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(),2);
+    assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(),0);
     await page.evaluate(()=>PearlsToolbar.toggleOverlay());
     const workToolbar=page.locator('[data-pearls-toolbar="chat"]');
     assert.equal(await workToolbar.getByRole('button',{name:'Download response',exact:true}).isEnabled(),true);
@@ -233,7 +233,7 @@ async function run() {
       assert.equal(data.provider, provider); assert.equal(data.messages.length, 2);
       assert.equal(data.messages[1].role, 'assistant');
       await page.addScriptTag({path:path.join(root,'page-toolbar.js')});
-      assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(),1);
+      assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(),0);
       assert.equal(await page.locator('[data-pearls-toolbar="chat"]').count(),1);
     }
     // Exercise the exporter controller and automatic toolbar download path.

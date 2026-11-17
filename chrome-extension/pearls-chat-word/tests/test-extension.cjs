@@ -23,11 +23,14 @@ async function run() {
     const fixture = fs.readFileSync(path.join(__dirname, 'fixtures/chatgpt.html'), 'utf8');
     await context.route('https://chatgpt.com/**', route => route.fulfill({contentType:'text/html',body:fixture}));
     await page.goto('https://chatgpt.com/c/test-extension-fixture');
-    await page.locator('[data-pearls-toolbar="response"]').first().waitFor();
-    assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(),3);
+    assert.equal(await page.locator('[data-pearls-toolbar]').count(),0);
+    const testTabId=await worker.evaluate(async()=>{const tabs=await chrome.tabs.query({});return tabs.find(tab=>tab.url?.includes('/c/test-extension-fixture')).id;});
+    await worker.evaluate(async id=>{await chrome.scripting.executeScript({target:{tabId:id},files:['vendor/html2canvas.min.js','capture.js','page-toolbar.js']});},testTabId);
+    await page.locator('[data-pearls-toolbar="chat"]').waitFor();
+    assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(),0);
     await page.screenshot({path:path.join(output,'chat-toolbars.png'),fullPage:true});
     const opened = context.waitForEvent('page');
-    await page.locator('[data-pearls-toolbar="response"]').first().getByRole('button').click();
+    await page.locator('[data-pearls-toolbar="chat"]').getByRole('button',{name:'Download response',exact:true}).click();
     const exporter = await opened;
     await exporter.waitForLoadState('domcontentloaded');
     await exporter.waitForFunction(() => !document.getElementById('status').textContent.includes('Connecting') && document.getElementById('source').textContent.includes('ChatGPT'));

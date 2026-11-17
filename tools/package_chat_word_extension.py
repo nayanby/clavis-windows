@@ -17,7 +17,8 @@ def main():
     assert manifest['manifest_version']==3
     assert '<all_urls>' not in manifest.get('host_permissions',[])
     assert not any(p in manifest['permissions'] for p in ('cookies','history','debugger','nativeMessaging'))
-    for script in manifest['content_scripts']:
+    assert not manifest.get('content_scripts'), 'Chat pages must remain untouched until the extension icon is clicked'
+    for script in manifest.get('content_scripts',[]):
         for name in script['js']:assert name in files
     for name in files:assert (SOURCE/name).is_file(),name
     target=OUTPUT/'Pearls Chat to Word.zip'

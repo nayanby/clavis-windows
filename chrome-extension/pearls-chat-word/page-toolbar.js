@@ -4,7 +4,6 @@
   // Reloading an unpacked extension invalidates old listeners but can leave its
   // DOM behind. Remove those disabled controls before mounting the fresh ones.
   document.querySelectorAll('[data-pearls-toolbar]').forEach(host=>host.remove());
-  const controls = new WeakMap();
   const jobs = new Map();
   let top = null, scheduled = false, overlay = false;
   const style = `:host{display:flex!important;flex-direction:column!important;align-items:flex-end!important;clear:both!important;box-sizing:border-box!important;width:100%!important;margin:10px 0 12px!important;color-scheme:light!important}
@@ -118,14 +117,7 @@
     if(!entries.length&&!jobs.size){
       top.emptyHint=true;top.progress.hidden=false;top.progress.dataset.phase='preparing';top.progressLabel.textContent='No responses found. Open a conversation or refresh the chat.';top.progressBar.hidden=true;
     }else if(top.emptyHint){top.emptyHint=false;top.progress.hidden=true;top.progressBar.hidden=false;}
-    entries.forEach((entry,index) => {
-      let control = controls.get(entry.node);
-      if (!control?.host.isConnected) { control = create(); document.body.append(control.host); controls.set(entry.node, control); }
-      const rect=entry.node.getBoundingClientRect();
-      for(const [key,value]of Object.entries({position:'absolute',top:(rect.bottom+scrollY)+'px',left:'auto',right:Math.max(8,innerWidth-rect.right-scrollX)+'px',width:'max-content',margin:'0','z-index':'100'}))control.host.style.setProperty(key,value,'important');
-      control.index = index; control.entry = entry;
-      control.button.disabled = streaming || jobs.size>0;
-    });
+
   }
   function schedule() { if (!scheduled) { scheduled = true; setTimeout(render, 300); } }
   const observer = new MutationObserver(schedule);
