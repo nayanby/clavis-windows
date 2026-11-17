@@ -54,6 +54,8 @@ Chat sites change their HTML over time. If no responses are detected, leave the 
 
 ## Development
 
+Firefox builds are generated with `tools/package_firefox_chat_word_extension.py`. Load the generated Firefox manifest through `about:debugging` for a temporary unsigned installation. This build uses Firefox background scripts and Promise-based browser APIs. Reload the temporary add-on after updating these files, then refresh the chat. Download progress reports how many images were embedded and how many failed.
+
 All runtime assets are bundled. `build_template.py` regenerates the sanitized reference template and icons; it requires Python, lxml and Pillow. `tests/test-browser.cjs` runs browser fixture tests with Playwright. `tests/verify_docx.py` checks generated OOXML packages, heading styles, numbering and table fonts. QA files are not part of the extension ZIP.
 
 Chrome API references: [activeTab](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab), [scripting](https://developer.chrome.com/docs/extensions/reference/api/scripting), [downloads](https://developer.chrome.com/docs/extensions/reference/api/downloads). Third-party license notices are in `THIRD_PARTY_NOTICES.txt`.

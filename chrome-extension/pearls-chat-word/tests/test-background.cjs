@@ -6,7 +6,8 @@ const sandbox={URL,AbortSignal,Uint8Array,btoa,fetch:async()=>new Response(new U
   action:{onClicked:{addListener:fn=>{action=fn;}},setBadgeText:async()=>{},setTitle:async()=>{}},
   scripting:{executeScript:async options=>{scripts.push(options);if(options.func)await options.func();return [];}}
 }};
-vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(__dirname,'../background.js'),'utf8'),sandbox);
+sandbox.browser=sandbox.chrome;
+vm.createContext(sandbox);vm.runInContext(fs.readFileSync(process.env.PEARLS_TEST_BACKGROUND||path.join(__dirname,'../background.js'),'utf8'),sandbox);
 (async()=>{
   await action({id:7,url:'https://chatgpt.com/c/example'});
   assert.equal(toggles,1);assert.equal(tabs.length,0);assert.equal(scripts.length,2);

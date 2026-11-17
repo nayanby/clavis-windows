@@ -77,14 +77,15 @@ async function run() {
       fixture.innerHTML=`<button><img alt="Generated picture" src="${src}" width="2" height="2"></button><p><a href="#"><img alt="Linked picture" src="${src}" width="2" height="2"></a></p>`;
       const captured=PearlsCapture.blocks(fixture);
       const result=await PearlsCapture.resolveImages({messages:[{blocks:captured}],warnings:[]});
-      const fetchOriginal=globalThis.fetch,sendOriginal=chrome.runtime.sendMessage;
+      const fetchOriginal=globalThis.fetch,sendOriginal=chrome.runtime.sendMessage,browserOriginal=globalThis.browser;
       let relayed=false;
       globalThis.fetch=(url,...args)=>String(url).startsWith('https://images.oaiusercontent.com/')?Promise.reject(Error('CORS')):fetchOriginal(url,...args);
       chrome.runtime.sendMessage=async request=>{relayed=request.type==='PEARLS_FETCH_IMAGE';return {data:src};};
+      globalThis.browser={runtime:{sendMessage:chrome.runtime.sendMessage}};
       try {
         const fallback=await PearlsCapture.resolveImages({messages:[{blocks:[{type:'image',src:'https://images.oaiusercontent.com/test.png',alt:'CDN picture'}]}],warnings:[]});
         return {types:captured.map(b=>b.type),data:result.messages[0].blocks.every(b=>b.data?.startsWith('data:image/png;base64,')),relayed,fallback:!!fallback.messages[0].blocks[0].data};
-      } finally {globalThis.fetch=fetchOriginal;chrome.runtime.sendMessage=sendOriginal;}
+      } finally {globalThis.fetch=fetchOriginal;chrome.runtime.sendMessage=sendOriginal;globalThis.browser=browserOriginal;}
     });
     assert.deepEqual(imageCases.types,['image','image']);assert(imageCases.data&&imageCases.relayed&&imageCases.fallback);
     assert(await page.evaluate(()=>{
@@ -103,6 +104,7 @@ async function run() {
       const fixture=document.createElement('div');fixture.style.cssText='width:780px;background:white;padding:12px;font:20px Arial';
       fixture.innerHTML='<p>Carrier parents: Aa × Aa</p><div style="padding:20px"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center"><div>×</div><div>A</div><div>a</div><div>A</div><div style="background:oklch(96% 0.03 160);padding:20px;border-radius:8px">AA</div><div style="background:#f5eddf;padding:20px;border-radius:8px">Aa</div><div>a</div><div style="background:#f5eddf;padding:20px;border-radius:8px">Aa</div><div style="background:#f7e6e8;padding:20px;border-radius:8px">aa</div></div><div style="display:flex;justify-content:space-around;padding-top:20px"><div><h3>25%</h3><div>Unaffected noncarrier</div></div><div><h3>50%</h3><div>Unaffected carrier</div></div><div><h3>25%</h3><div>Affected</div></div></div></div><p>p^2+2pq+q^2=1</p><p><span class="katex"><annotation encoding="application/x-tex">x_{ij} + q^{2}</annotation></span></p><svg xmlns="http://www.w3.org/2000/svg" width="300" height="100"><rect width="300" height="100" fill="#e3f1ec"/><text x="20" y="55" font-size="24">SVG Diagram</text></svg>';
       document.body.append(fixture);
+      fixture.children[1].setAttribute('data-markdown-copy','exclude');
       try{
         const data=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks:PearlsCapture.blocks(fixture)}],warnings:[]});
         const images=data.messages[0].blocks.filter(b=>b.type==='image');
@@ -119,6 +121,20 @@ async function run() {
     assert.equal((visual.xml.match(/cy="1440000"/g)||[]).length,4);
     fs.writeFileSync(path.join(output,'diagram-example.docx'),Buffer.from(visual.bytes));
     fs.writeFileSync(path.join(output,'diagram-example.png'),Buffer.from(visual.png,'base64'));
+    assert(await page.evaluate(async()=>{
+      const message=document.querySelector('[data-message-author-role="assistant"]');
+      const visual=document.createElement('div');
+      visual.setAttribute('data-markdown-copy','exclude');
+      visual.style.cssText='display:flex;width:700px;gap:10px';
+      visual.innerHTML='<div style="padding:30px;background:#e3f1ec">AA — 25%</div><div style="padding:30px;background:#f5eddf">Aa — 50%</div><div style="padding:30px;background:#f7e6e8">aa — 25%</div>';
+      // A visual sibling outside .markdown was lost by the old reader.
+      message.append(visual);
+      try{
+        const data=await PearlsCapture.resolveImages(PearlsCapture.snapshot());
+        const block=data.messages.find(m=>m.id==='a1').blocks.find(b=>b.diagramId);
+        return !!block?.data&&block.alt.includes('AA')&&block.alt.includes('50%');
+      }finally{visual.remove();}
+    }));
     const headingCases=await page.evaluate(async({template,profile})=>{
       const h=(level,text)=>({type:'heading',level,runs:[{text}]});
       const cases=[

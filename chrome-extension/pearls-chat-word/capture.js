@@ -1,8 +1,8 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.8';
+  const VERSION='1.0.9';
   if (globalThis.PearlsCapture?.version===VERSION) return;
-  const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],[data-markdown-copy="exclude"],.sr-only,[aria-hidden="true"]';
+  const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   function site() {
@@ -13,7 +13,8 @@
     throw Error('Open a ChatGPT, Claude or Gemini conversation and click the extension icon there.');
   }
   function hidden(element) {
-    return element.matches(SKIP) || element.hidden || element.closest('[hidden],[aria-hidden="true"]');
+    return element.matches(SKIP) || element.hidden || element.closest('[hidden],[aria-hidden="true"]')
+      || (element.matches('[data-markdown-copy="exclude"]')&&!element.querySelector('img,svg,canvas')&&!isDiagram(element));
   }
   function inlines(node, format = {}) {
     if (node.nodeType === Node.TEXT_NODE) return [{ text: clean(node.nodeValue), ...format }];
@@ -64,11 +65,14 @@
     if([...node.querySelectorAll('h1,h2,h3,h4')].some(el=>!/^\s*\d+(?:\.\d+)?\s*%\s*$/.test(el.textContent)))return false;
     const rect=node.getBoundingClientRect();
     if(rect.width<100||rect.height<60||node.textContent.length>2500)return false;
-    if(node.matches('[role="img"],[data-diagram],[data-testid*="diagram"],.mermaid'))return true;
+    if(node.matches('[role="img"],[data-diagram],[data-testid*="diagram"],[data-d-component*="diagram"],[data-d-component*="chart"],[data-d-component*="punnett"],.mermaid'))return true;
     const style=getComputedStyle(node);
     const grid=[node,...node.querySelectorAll('div')].find(el=>{
       const css=getComputedStyle(el);
-      return css.display==='grid'&&el.children.length>=4&&css.gridTemplateColumns.split(' ').length>=2;
+      const grid=/^(inline-)?grid$/.test(css.display)&&el.children.length>=2&&css.gridTemplateColumns.split(' ').length>=2;
+      const flex=/^(inline-)?flex$/.test(css.display)&&el.children.length>=2
+        && [...el.children].filter(child=>/%/.test(child.textContent)&&child.textContent.trim().length<150).length>=2;
+      return grid||flex;
     });
     if(!grid)return false;
     // Prefer the complete diagram wrapper, including legend/outcome cards.
@@ -85,7 +89,7 @@
     if(!id){
       id='diagram-'+(++diagramSequence);diagramIds.set(node,id);
       const render=globalThis.html2canvas
-        ? globalThis.html2canvas(node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button,[data-markdown-copy="exclude"]')})
+        ? globalThis.html2canvas(node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')})
           .then(canvas=>({data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height}))
           .catch(()=>null)
         : Promise.resolve(null);
@@ -211,7 +215,7 @@
   function snapshot(provider = site()) {
     if (isStreaming(provider)) throw Error('The response is still being generated. Wait for it to finish, then refresh.');
     const messages = entries(provider).map((entry, index) => ({
-      id: entry.id || null, role: entry.role, blocks: contentImages(blocks(entry.root)),
+      id: entry.id || null, role: entry.role, blocks: contentImages(blocks(entry.node)),
       preview: entry.root.innerText?.trim().slice(0, 240) || entry.root.textContent.trim().slice(0, 240), index
     })).filter(message => message.blocks.length);
     if (!messages.length) throw Error('No chat messages were found. Open a conversation and let it finish loading. The site may also have changed its page layout.');
@@ -300,8 +304,9 @@
                 blob = await response.blob();
               } catch(error) {
                 // Extension fetch can read provider image CDNs that deny page CORS.
-                if (url.protocol !== 'https:' || !globalThis.chrome?.runtime?.sendMessage) throw error;
-                const resolved = await chrome.runtime.sendMessage({type:'PEARLS_FETCH_IMAGE',url:url.href});
+                const runtime=(globalThis.browser||globalThis.chrome)?.runtime;
+                if (url.protocol !== 'https:' || !runtime?.sendMessage) throw error;
+                const resolved = await runtime.sendMessage({type:'PEARLS_FETCH_IMAGE',url:url.href});
                 if (!resolved?.data) throw Error(resolved?.error || 'Image unavailable');
                 blob = await (await fetch(resolved.data)).blob();
               }
