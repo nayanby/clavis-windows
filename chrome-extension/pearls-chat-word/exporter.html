@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pearls Chat to Word</title><link rel="stylesheet" href="exporter.css"></head>
+<body><main>
+  <div class="brand"><img src="icons/48.png" alt=""><span>PEARLS · WORD EXPORT</span></div>
+  <h1>Keep the conversation.<br>Make it a Word document.</h1>
+  <p class="intro">Your Clinical Notes template, with editable headings, lists and tables.</p>
+  <section aria-labelledby="sourceHeading"><h2 id="sourceHeading">Chat source</h2><p id="source">Connecting to your chat…</p><button id="refresh" class="quiet" type="button">Refresh responses</button></section>
+  <label for="title">Document title</label><input id="title" maxlength="180" placeholder="Conversation title">
+  <div class="cards">
+    <section><h2>Entire chat</h2><p>Collect the conversation history available through the page.</p><label class="check"><input id="prompts" type="checkbox" checked> Include my messages</label><button id="all" disabled>Download entire chat</button></section>
+    <section><h2>One response</h2><label class="small" for="response">Choose an assistant response</label><select id="response" disabled></select><p id="preview" class="preview"></p><button id="single" disabled>Download this response</button></section>
+  </div>
+  <p id="status" role="status" aria-live="polite">Open a chat, then click the extension icon.</p>
+  <div id="warnings" role="note" hidden></div>
+  <footer>ChatGPT · Claude · Gemini<br>Generated on your computer. No API key, server or account connection.</footer>
+</main><script src="vendor/jszip.min.js"></script><script src="word-export.js"></script><script src="exporter.js"></script></body></html>
