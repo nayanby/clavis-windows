@@ -1,3 +1,32 @@
+/* Keep packaged readers on the current Word-reader spacing defaults. */
+(() => {
+  if (typeof CNL_PREFS_DEFAULT === 'undefined') return;
+  CNL_PREFS_DEFAULT.lineScale = 22;
+  CNL_PREFS_DEFAULT.paraScale = 2200;
+  if (typeof cnlReadStoredPrefs === 'function') cnlPrefs = cnlReadStoredPrefs();
+})();
+
+/* Numbered lists receive the same closing gap as the preceding bullet group. */
+(() => {
+  if (typeof cnlConsumerParagraphs !== 'function') return;
+  const original = cnlConsumerParagraphs;
+  cnlConsumerParagraphs = function (root) {
+    original(root);
+    const scale = cnlPrefs.paraScale / 1600;
+    root.querySelectorAll('.doc-block').forEach(block => {
+      if (block.closest('table')) return;
+      const list = block.querySelector(':scope > .doc-list');
+      const next = block.nextElementSibling;
+      if (!list || !next || !next.matches('.doc-block')) return;
+      const level = list.getAttribute('data-list-level');
+      if (level !== '0' && level !== '1') return;
+      if (!list.querySelector(':scope > .list-marker.is-bullet') ||
+          !next.querySelector(':scope > .doc-list > .list-marker.is-number')) return;
+      block.style.setProperty('padding-bottom', (0.5 * parseFloat(getComputedStyle(block).fontSize) * scale) + 'px', 'important');
+    });
+  };
+})();
+
 /* Word numId=0 explicitly cancels a list, including inherited style numbering. */
 (() => {
   if (typeof DocxPrototype === 'undefined') return;
