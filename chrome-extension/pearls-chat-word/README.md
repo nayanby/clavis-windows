@@ -18,7 +18,7 @@ Open your conversation on **chatgpt.com**, **chat.openai.com**, **claude.ai** or
 
 A **Download entire chat** toolbar appears at the top of the chat. A **Download response** toolbar appears below each assistant response. Clicking either starts that export in a separate tab, then opens Chrome's save dialog. The exporter tab shows progress and any image or history limitations. Keep it open until the download starts.
 
-Clicking the extension icon displays a floating toolbar directly over the chat, with exactly two buttons: **Download response** and **Download entire chat**. The response button uses the assistant response most visible in the current viewport, or the latest response if none is visible. Click the icon again to dock the toolbar back at the top of the chat. Opening the toolbar does not navigate away from the conversation.
+Clicking the extension icon displays a compact white floating toolbar at the upper right of the chat, with exactly two Word icons: **Download response** and **Download entire chat**. Hover over an icon to see its label. The response icon uses the assistant response most visible in the current viewport, or the latest response if none is visible. Click the extension icon again to dock the toolbar back at the top of the chat. Opening the toolbar does not navigate away from the conversation. The control under each response is also a compact Word icon aligned to the right.
 
 The export tab opens only after you choose a download. It also lets you adjust the title or export without your messages before making another download.
 

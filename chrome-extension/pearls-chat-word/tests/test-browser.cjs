@@ -33,7 +33,7 @@ async function run() {
     const floating=page.locator('[data-pearls-toolbar="chat"][data-placement="overlay"]');
     assert.equal(await floating.getByRole('button').count(),2);
     assert.equal(await floating.evaluate(el=>getComputedStyle(el).position),'fixed');
-    await page.screenshot({path:path.join(output,'two-button-toolbar.png'),clip:{x:430,y:5,width:420,height:72}});
+    await floating.screenshot({path:path.join(output,'two-button-toolbar.png')});
     await floating.getByRole('button',{name:'Download response',exact:true}).click();
     assert.equal(await page.evaluate(()=>toolbarRequests[2].mode),'single');
     assert.equal(await page.evaluate(()=>toolbarRequests[2].id),'a1');

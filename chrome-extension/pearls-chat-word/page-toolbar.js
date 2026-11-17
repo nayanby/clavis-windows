@@ -3,12 +3,17 @@
   if (globalThis.PearlsToolbar) return;
   const controls = new WeakMap();
   let top = null, scheduled = false, overlay = false;
-  const style = `:host{display:block!important;clear:both!important;box-sizing:border-box!important;margin:12px 0 18px!important;color-scheme:light!important}
-    :host([hidden]){display:none!important}:host([data-placement="top"]){position:sticky!important;top:0!important;z-index:100!important;margin:0 0 14px!important;padding-top:8px!important}
-    :host([data-placement="overlay"]){position:fixed!important;top:14px!important;left:50%!important;transform:translateX(-50%)!important;width:max-content!important;max-width:calc(100vw - 24px)!important;z-index:2147483600!important;margin:0!important;padding:0!important}
-    :host([data-placement="overlay"]) .identity{display:none}:host([data-placement="overlay"]) .bar{gap:8px;padding:8px;box-shadow:0 8px 35px #2c163236}:host([data-placement="overlay"]) button{padding:11px 15px}
-    *{box-sizing:border-box}.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid #ded4df;border-radius:10px;background:#faf7fa;padding:9px 12px;font:12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#654f65}
-    .brand{font-weight:700;letter-spacing:.035em}.hint{margin-left:8px;color:#807580;font-size:11px}button{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;border:0;border-radius:7px;background:#6f3d5d;color:white;padding:9px 12px;font:600 12px/1.2 system-ui;cursor:pointer}button:hover{background:#57304a}button:disabled{opacity:.5;cursor:default}button:focus-visible{outline:3px solid #93b9de;outline-offset:2px}.error{color:#a22340;font-size:11px;margin-top:5px}@media(max-width:600px){.hint{display:none}.bar{gap:8px;padding:8px}.brand{font-size:11px}:host([data-placement="top"]) .identity{display:none}:host([data-placement="overlay"]) button{padding:9px 10px;font-size:11px}}`;
+  const style = `:host{display:flex!important;flex-direction:column!important;align-items:flex-end!important;clear:both!important;box-sizing:border-box!important;width:100%!important;margin:10px 0 12px!important;color-scheme:light!important}
+    :host([hidden]){display:none!important}
+    :host([data-placement="top"]){position:sticky!important;top:8px!important;z-index:100!important;margin:0 0 12px!important;padding-top:8px!important}
+    :host([data-placement="overlay"]){position:fixed!important;top:96px!important;right:28px!important;left:auto!important;width:max-content!important;max-width:calc(100vw - 24px)!important;z-index:2147483600!important;margin:0!important;padding:0!important}
+    *{box-sizing:border-box}.bar{display:flex;align-items:center;gap:3px;border:1px solid #e1e5eb;border-radius:16px;background:#fffffffa;padding:6px 9px;font:12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#929292}
+    :host([data-placement="overlay"]) .bar{box-shadow:0 4px 18px #171b2610}
+    :host([data-placement="response"]) .bar{background:transparent;border-color:transparent;padding:2px 4px}
+    .identity{display:none}button{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:38px;height:38px;border:0;border-radius:9px;background:transparent;color:#9a9a9a;padding:6px;cursor:pointer}
+    button:hover{background:#f2f3f6;color:#6f3d5d}button:disabled{opacity:.4;cursor:default}button:focus-visible{outline:2px solid #3b82f6;outline-offset:1px}svg{width:25px;height:28px;display:block}
+    .button-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.error{color:#a22340;font:11px/1.5 system-ui;margin-top:5px;max-width:280px}
+    @media(max-width:600px){:host([data-placement="overlay"]){top:76px!important;right:12px!important}}`;
   const fingerprint = text => {
     let hash = 2166136261;
     for (const char of String(text)) { hash ^= char.codePointAt(0); hash = Math.imul(hash, 16777619); }
@@ -21,6 +26,17 @@
       return {entry,index,visible:Math.max(0,Math.min(rect.bottom,innerHeight)-Math.max(rect.top,65))};
     });
     return choices.filter(choice=>choice.visible>0).sort((a,b)=>b.visible-a.visible)[0] || choices.at(-1);
+  }
+  function icon(button,whole=false){
+    const label=document.createElement('span');label.className='button-label';label.textContent=whole?'Download entire chat':'Download response';
+    button.setAttribute('aria-label',label.textContent);button.title=label.textContent;
+    const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 28 30');svg.setAttribute('aria-hidden','true');
+    const add=(name,attrs)=>{const node=document.createElementNS(ns,name);for(const [key,value]of Object.entries(attrs))node.setAttribute(key,value);svg.append(node);return node;};
+    if(whole)add('path',{d:'M3 20V4a2 2 0 0 1 2-2h11',fill:'none',stroke:'currentColor','stroke-width':'1.8','stroke-linecap':'round'});
+    add('path',{d:'M9 5h9l6 6v15a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z',fill:'none',stroke:'currentColor','stroke-width':'2','stroke-linejoin':'round'});
+    add('path',{d:'M18 5v7h6',fill:'none',stroke:'currentColor','stroke-width':'2','stroke-linejoin':'round'});
+    add('path',{d:'m10 17 2 7 3-6 3 6 2-7',fill:'none',stroke:'currentColor','stroke-width':'1.9','stroke-linecap':'round','stroke-linejoin':'round'});
+    button.replaceChildren(svg,label);
   }
   function create(whole = false) {
     const host = document.createElement('div');
@@ -35,8 +51,9 @@
     const hint = document.createElement('span'); hint.className = 'hint'; hint.textContent = 'Clinical Notes template';
     label.append(brand, hint);
     const button = document.createElement('button'); button.type = 'button'; button.textContent = whole ? 'Download entire chat' : 'Download response';
+    icon(button,whole);
     const responseButton = whole ? document.createElement('button') : null;
-    if(responseButton){responseButton.type='button';responseButton.textContent='Download response';responseButton.title='Download the response currently in view';bar.append(label,responseButton,button);}
+    if(responseButton){responseButton.type='button';icon(responseButton);bar.append(label,responseButton,button);}
     else bar.append(label,button);
     const error = document.createElement('div'); error.className = 'error'; error.setAttribute('role','status');
     shadow.append(css, bar, error);
