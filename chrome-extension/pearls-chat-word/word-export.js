@@ -180,7 +180,7 @@
       const match = /^data:image\/png;base64,([\s\S]+)$/.exec(image.data || image.src || '');
       if (!match) {
         this.warnings.push('An image is represented by its caption and source link.');
-        return this.paragraph([{ text: image.alt || 'Image', italic: true }, ...(/^https?:/i.test(image.src || '') ? [{ text: ' — Source image', href: image.src }] : [])], options);
+        return this.paragraph([{ text: image.diagramId ? 'Diagram capture failed. Keep the source chat active and export again.' : image.alt || 'Image', italic: true }, ...(/^https?:/i.test(image.src || '') ? [{ text: ' — Source image', href: image.src }] : [])], options);
       }
       const name = 'image' + (++this.imageIndex) + '.png';
       this.zip.file('word/media/' + name, match[1], { base64: true });

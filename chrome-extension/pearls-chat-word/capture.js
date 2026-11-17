@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.12';
+  const VERSION='1.0.13';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -46,7 +46,7 @@
   let diagramSequence=0;
   async function firefoxCrop(node) {
     const runtime=globalThis.browser?.runtime;
-    if(!runtime?.getBrowserInfo||!runtime?.sendMessage||!node?.isConnected)return null;
+    if(!runtime?.sendMessage||!node?.isConnected)return null;
     const initial=node.getBoundingClientRect();
     // Taller/wider diagrams need the full-element renderer instead of a clipped viewport.
     if(initial.width>innerWidth-16||initial.height>innerHeight-110)return null;
@@ -62,10 +62,19 @@
       if(rect.left<0||rect.top<0||rect.right>innerWidth||rect.bottom>innerHeight)return null;
       // Ancestor scroll panes can clip an otherwise viewport-sized diagram.
       for(const [parent]of positions){const css=getComputedStyle(parent),r=parent.getBoundingClientRect();if(/auto|scroll|hidden|clip/.test(css.overflowX+' '+css.overflowY)&&(rect.left<r.left||rect.right>r.right||rect.top<r.top||rect.bottom>r.bottom))return null;}
-      const response=await runtime.sendMessage({type:'PEARLS_CROP_VISUAL',rect:{x:rect.left+scrollX,y:rect.top+scrollY,width:rect.width,height:rect.height}});
-      if(!response?.data?.startsWith('data:image/png;base64,'))return null;
-      return {data:response.data,width:rect.width,height:rect.height};
-    }catch(error){console.warn('Pearls native crop: '+error.message);return null;}
+      const response=await runtime.sendMessage({type:'PEARLS_CROP_VISUAL',rect:{x:rect.left,y:rect.top,width:rect.width,height:rect.height},viewport:{width:innerWidth,height:innerHeight}});
+      if(!response?.data?.startsWith('data:image/png;base64,'))throw Error(response?.error||'Firefox did not return screenshot data');
+      const bitmap=await createImageBitmap(await (await fetch(response.data)).blob());
+      try{
+        const scaleX=bitmap.width/innerWidth,scaleY=bitmap.height/innerHeight;
+        const x=Math.round(rect.left*scaleX),y=Math.round(rect.top*scaleY);
+        const width=Math.min(bitmap.width-x,Math.round(rect.width*scaleX)),height=Math.min(bitmap.height-y,Math.round(rect.height*scaleY));
+        if(width<1||height<1)throw Error('The screenshot crop is outside the viewport');
+        const canvas=document.createElement('canvas');canvas.width=width;canvas.height=height;
+        canvas.getContext('2d').drawImage(bitmap,x,y,width,height,0,0,width,height);
+        return {data:canvas.toDataURL('image/png'),width:rect.width,height:rect.height};
+      }finally{bitmap.close();}
+    }
     finally{
       for(const [el,value,priority]of controls){if(value)el.style.setProperty('visibility',value,priority);else el.style.removeProperty('visibility');}
       for(const [parent,x,y]of positions){parent.scrollLeft=x;parent.scrollTop=y;}
@@ -73,12 +82,13 @@
     }
   }
   async function renderDiagram(node){
-    const crop=await firefoxCrop(node);if(crop)return crop;
+    let nativeError='';
+    try{const crop=await firefoxCrop(node);if(crop)return crop;}catch(error){nativeError=error.message;}
     if(!globalThis.html2canvas)return null;
     try{
       const canvas=await globalThis.html2canvas(node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')});
       return {data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height};
-    }catch{return null;}
+    }catch(error){throw Error((nativeError?'Firefox screenshot: '+nativeError+'; ':'')+'diagram renderer: '+error.message);}
   }
   function normalizeDiagramColors(doc) {
     const canvas=doc.createElement('canvas');canvas.width=canvas.height=1;
@@ -326,8 +336,7 @@
             if(diagramsOnly&&!item.diagramId)continue;
             if(item.diagramId){
               const entry=diagramRenders.get(item.diagramId);
-              if(entry&&!entry.render)entry.render=renderDiagram(entry.node);
-              const rendered=await entry?.render;
+              const rendered=entry?await renderDiagram(entry.node):null;
               if(!rendered)throw Error('Diagram rendering failed');
               Object.assign(item,rendered);continue;
             }
@@ -360,10 +369,11 @@
               return canvas.toDataURL('image/png');
             })());
             item.data = await cache.get(item.src);
-          } catch {
-            const crop=item.elementId?await firefoxCrop(diagramRenders.get(item.elementId)?.node):null;
+          } catch(error) {
+            let crop=null;
+            try{crop=item.elementId?await firefoxCrop(diagramRenders.get(item.elementId)?.node):null;}catch(cropError){error=cropError;}
             if(crop)Object.assign(item,crop);
-            else result.warnings.push('An image could not be embedded: ' + item.alt + '. Its caption and source link are retained.');
+            else {item.captureError=error.message;result.warnings.push('An image could not be embedded: ' + item.alt + '. '+error.message);}
           }
         }
         if (item.blocks) await walk(item.blocks);

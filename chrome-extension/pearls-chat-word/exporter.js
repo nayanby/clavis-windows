@@ -75,8 +75,8 @@
     notify('collecting',mode==='all'?'Collecting chat history…':'Reading selected response…');
     try {
       const data = await invoke(mode, index);
-      let imageCount=0,missingImages=0;
-      function countMedia(items){for(const item of items||[]){if(item.type==='image'){if(item.data)imageCount++;else missingImages++;}countMedia(item.blocks);for(const entry of item.items||[])countMedia(entry.blocks);for(const row of item.rows||[])for(const cell of row.cells)countMedia(cell.blocks);}}
+      let imageCount=0,missingImages=0,firstCaptureError='';
+      function countMedia(items){for(const item of items||[]){if(item.type==='image'){if(item.data)imageCount++;else{missingImages++;firstCaptureError||=item.captureError||'';}}countMedia(item.blocks);for(const entry of item.items||[])countMedia(entry.blocks);for(const row of item.rows||[])for(const cell of row.cells)countMedia(cell.blocks);}}
       for(const message of data.messages)countMedia(message.blocks);
       notify('formatting','Applying your Word template…');
       // Refuse a response that shifted when the page loaded additional messages.
@@ -102,7 +102,10 @@
           settled=true;
           URL.revokeObjectURL(url); chrome.downloads.onChanged.removeListener(listener);
           status(delta.state.current === 'complete' ? 'Saved ' + filename : 'The download was cancelled or interrupted.', delta.state.current !== 'complete');
-          if(delta.state.current==='complete')notify('complete','Downloaded · '+imageCount+' images'+(missingImages?' · '+missingImages+' could not be embedded':'')+' · '+filename,100);
+          if(delta.state.current==='complete'){
+            const detail=missingImages?(firstCaptureError||(data.warnings||[]).find(text=>text.startsWith('An image could not be embedded:'))):'';
+            notify('complete','Downloaded · '+imageCount+' images'+(missingImages?' · '+missingImages+' missing. '+(detail||'Keep the source chat active and retry.'):' · '+filename),100);
+          }
         }
       };
       chrome.downloads.onChanged.addListener(listener);

@@ -8,7 +8,8 @@ fs.mkdirSync(output, { recursive: true });
 const template = [...fs.readFileSync(path.join(root, 'template/base.docx'))];
 const profile = JSON.parse(fs.readFileSync(path.join(root, 'template/profile.json')));
 async function run() {
-  const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, timeout:15000,args: ['--disable-background-networking', '--no-first-run'] });
+  const executable=process.env.PEARLS_FIXTURE_BROWSER||'C:/Program Files/Google/Chrome/Application/chrome.exe';
+  const browser = await chromium.launch({ executablePath:executable, headless: true, timeout:15000,args: ['--disable-background-networking', '--no-first-run'] });
   try {
     const page = await browser.newPage();
     const errors = []; page.on('pageerror', error => errors.push(error.message));page.on('console',msg=>{if(msg.text().startsWith('Pearls native crop:')||msg.text().startsWith('Crop test capture:'))console.log(msg.text());});
@@ -131,7 +132,7 @@ async function run() {
     fs.writeFileSync(path.join(output,'diagram-example.docx'),Buffer.from(visual.bytes));
     fs.writeFileSync(path.join(output,'diagram-example.png'),Buffer.from(visual.png,'base64'));
     await page.exposeFunction('pearlsTestCrop',async request=>{
-      const bytes=await page.screenshot({fullPage:true,clip:request.rect});
+      const bytes=await page.screenshot();
       return {data:'data:image/png;base64,'+bytes.toString('base64')};
     });
     const nativeCrop=await page.evaluate(async()=>{
