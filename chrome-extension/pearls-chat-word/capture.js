@@ -162,7 +162,7 @@
     }
     return left.concat(right.slice(overlap));
   }
-  async function conversation() {
+  async function conversation(onProgress = () => {}) {
     const provider = site(), container = scroller(provider), originalTop = container.scrollTop;
     let collected = [], topReached = false, bottomReached = false;
     try {
@@ -180,6 +180,7 @@
       for (let i = 0; i < 250; i++) {
         result = snapshot(provider);
         collected = merge(collected, result.messages);
+        onProgress({messages:collected.length});
         if (JSON.stringify(collected).length > 18000000) throw Error('This chat is too large for one export. Export individual responses instead.');
         const atBottom = container.scrollTop + container.clientHeight >= container.scrollHeight - 5;
         if (atBottom) {

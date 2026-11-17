@@ -13,9 +13,10 @@
   const declaration = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
   const headingStyles = ['Heading2', 'Heading3', 'BoldSide1', 'boldside2', 'Boldside3'];
   class Writer {
-    constructor(zip, profile) {
+    constructor(zip, profile, onProgress) {
       this.zip = zip; this.profile = profile; this.relationships = []; this.abstracts = []; this.numbers = [];
       this.sequence = 100; this.imageIndex = 0; this.drawingIndex = 0; this.warnings = [];
+      this.onProgress = onProgress;
     }
     relationship(type, target, external = false) {
       const id = 'rIdPearls' + (this.relationships.length + 1);
@@ -210,15 +211,15 @@
       this.zip.file('word/_rels/document.xml.rels', new XMLSerializer().serializeToString(relationships));
       const now = new Date().toISOString();
       this.zip.file('docProps/core.xml', `${declaration}<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>${esc(title)}</dc:title><dc:creator></dc:creator><cp:lastModifiedBy></cp:lastModifiedBy><dcterms:created xsi:type="dcterms:W3CDTF">${now}</dcterms:created></cp:coreProperties>`);
-      const bytes = await this.zip.generateAsync({ type: 'uint8array', compression: 'DEFLATE' });
+      const bytes = await this.zip.generateAsync({ type: 'uint8array', compression: 'DEFLATE' },meta=>this.onProgress?.(meta.percent));
       return { bytes, warnings: [...new Set(this.warnings)] };
     }
   }
   function alphabet(index) { let value = index + 1, text = ''; while (value) { value--; text = String.fromCharCode(65 + value % 26) + text; value = Math.floor(value / 26); } return text; }
-  async function create(chat, { title = chat.title || 'Conversation', includePrompts = true, single = false, templateBytes, profile } = {}) {
+  async function create(chat, { title = chat.title || 'Conversation', includePrompts = true, single = false, templateBytes, profile, onProgress } = {}) {
     if (!globalThis.JSZip) throw Error('The local Word packaging library could not load.');
     const zip = await JSZip.loadAsync(templateBytes);
-    const writer = new Writer(zip, profile);
+    const writer = new Writer(zip, profile, onProgress);
     let body = writer.paragraph([{ text: title }], { style: 'Heading1', heading: true, keepNext: true });
     const messages = chat.messages.filter(message => includePrompts || message.role === 'assistant');
     if (!messages.length) throw Error('No responses are available to export.');

@@ -18,7 +18,7 @@ async function run() {
     const chat = await page.evaluate(() => PearlsCapture.snapshot());
     assert.equal(chat.messages.length, 6);
     assert.equal(chat.messages.filter(m => m.role === 'assistant').length, 3);
-    await page.evaluate(() => { globalThis.toolbarRequests=[]; globalThis.chrome={runtime:{sendMessage:async value=>{toolbarRequests.push(value);return {ok:true};}}}; });
+    await page.evaluate(() => { globalThis.toolbarRequests=[];globalThis.autoCompleteJobs=true;globalThis.chrome={runtime:{onMessage:{addListener:fn=>{globalThis.progressListener=fn;}},sendMessage:async value=>{toolbarRequests.push(value);if(autoCompleteJobs)queueMicrotask(()=>PearlsToolbar.updateProgress(value.jobId,{phase:'complete',text:'Downloaded',percent:100}));return {ok:true};}}}; });
     await page.addScriptTag({ path: path.join(root, 'page-toolbar.js') });
     assert.equal(await page.locator('[data-pearls-toolbar="chat"]').count(), 1);
     assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(), 3);
@@ -39,6 +39,21 @@ async function run() {
     assert.equal(await page.evaluate(()=>toolbarRequests[2].id),'a1');
     await page.evaluate(()=>PearlsToolbar.toggleOverlay());
     assert.equal(await page.locator('[data-placement="overlay"]').count(),0);
+    await page.evaluate(()=>{autoCompleteJobs=false;PearlsToolbar.toggleOverlay();});
+    await floating.getByRole('button',{name:'Download response',exact:true}).click();
+    const jobId=await page.evaluate(()=>toolbarRequests.at(-1).jobId);
+    assert.equal(await floating.getByRole('progressbar').count(),1);
+    assert.equal(await floating.getByRole('button',{name:'Download response',exact:true}).isDisabled(),true);
+    await page.evaluate(jobId=>progressListener({type:'PEARLS_EXPORT_PROGRESS',jobId,phase:'packaging',text:'Creating Word file · 42%',percent:42}),jobId);
+    assert.equal(await floating.getByRole('progressbar').getAttribute('value'),'42');
+    await floating.screenshot({path:path.join(output,'toolbar-progress.png')});
+    await page.evaluate(jobId=>progressListener({type:'PEARLS_EXPORT_PROGRESS',jobId,phase:'complete',text:'Downloaded · Immunology.docx',percent:100}),jobId);
+    assert.equal(await floating.getByRole('button',{name:'Download response',exact:true}).isDisabled(),false);
+    await floating.getByRole('button',{name:'Download response',exact:true}).click();
+    await page.evaluate(()=>progressListener({type:'PEARLS_EXPORT_PROGRESS',jobId:toolbarRequests.at(-1).jobId,phase:'error',text:'The download was cancelled.'}));
+    assert.equal(await floating.getByRole('button',{name:'Download response',exact:true}).isDisabled(),false);
+    assert.equal(await floating.locator('.progress-label').textContent(),'The download was cancelled.');
+    await page.evaluate(()=>{autoCompleteJobs=true;PearlsToolbar.toggleOverlay();});
     const withToolbars = await page.evaluate(() => PearlsCapture.snapshot());
     assert.equal(JSON.stringify(withToolbars), JSON.stringify(chat));
     const captured = JSON.stringify(chat);
@@ -105,15 +120,16 @@ async function run() {
     exporter.on('pageerror',error=>errors.push(error.message));
     await exporter.addInitScript(data => {
       globalThis.mockDownloads=[];
+      globalThis.progressEvents=[];
       globalThis.chrome={
-        runtime:{getURL:file=>location.origin+'/'+file},
+        runtime:{getURL:file=>location.origin+'/'+file,sendMessage:async event=>{progressEvents.push(event);return {ok:true};}},
         scripting:{executeScript:async options=> {
           if(options.files)return [];
           const value=structuredClone(data);
           if(options.args[0]==='single')value.messages=[value.messages.filter(m=>m.role==='assistant')[options.args[1]]];
           return [{result:{value}}];
         }},
-        downloads:{download:async options=>{const bytes=[...new Uint8Array(await(await fetch(options.url)).arrayBuffer())];mockDownloads.push({...options,bytes});return mockDownloads.length;},onChanged:{addListener(){},removeListener(){}}}
+        downloads:{download:async options=>{const bytes=[...new Uint8Array(await(await fetch(options.url)).arrayBuffer())];mockDownloads.push({...options,bytes});return mockDownloads.length;},search:async options=>[{id:options.id,state:'complete'}],onChanged:{addListener(){},removeListener(){}}}
       };
     },chat);
     await exporter.route('**/*',route=>{
@@ -123,14 +139,16 @@ async function run() {
       if(!file.startsWith(root+path.sep)||!fs.existsSync(file))return route.fulfill({status:404,body:''});
       return route.fulfill({contentType:types[path.extname(file)]||'application/octet-stream',headers:{'Content-Security-Policy':"script-src 'self'; object-src 'none'"},body:fs.readFileSync(file)});
     });
-    await exporter.goto('https://pearls.test/exporter.html?tab=42&mode=single&responseId=a1&index=0');
+    await exporter.goto('https://pearls.test/exporter.html?tab=42&mode=single&responseId=a1&index=0&job=ui-job');
     await exporter.waitForFunction(()=>mockDownloads.length===1);
+    await exporter.waitForFunction(()=>progressEvents.some(event=>event.phase==='complete'));
+    assert.equal(await exporter.evaluate(()=>progressEvents.some(event=>event.phase==='packaging'&&event.percent===100)),true);
     assert.equal(await exporter.locator('#response').inputValue(),'0');
     assert.equal(await exporter.evaluate(()=>mockDownloads[0].filename),'Immunology Pearls - Response 1.docx');
     const uiDoc=await exporter.evaluate(()=>mockDownloads[0].bytes);
     fs.writeFileSync(path.join(output,'toolbar-response.docx'),Buffer.from(uiDoc));
     await exporter.screenshot({path:path.join(output,'exporter-ui.png'),fullPage:true});
-    await exporter.goto('https://pearls.test/exporter.html?tab=42&mode=all');
+    await exporter.goto('https://pearls.test/exporter.html?tab=42&mode=all&job=ui-all-job');
     await exporter.waitForFunction(()=>mockDownloads.length===1);
     assert.equal(await exporter.evaluate(()=>mockDownloads[0].filename),'Immunology Pearls.docx');
     await exporter.close();

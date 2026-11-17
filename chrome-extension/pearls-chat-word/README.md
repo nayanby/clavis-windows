@@ -20,7 +20,9 @@ A **Download entire chat** toolbar appears at the top of the chat. A **Download 
 
 Clicking the extension icon displays a compact white floating toolbar at the upper right of the chat, with exactly two Word icons: **Download response** and **Download entire chat**. Hover over an icon to see its label. The response icon uses the assistant response most visible in the current viewport, or the latest response if none is visible. Click the extension icon again to dock the toolbar back at the top of the chat. Opening the toolbar does not navigate away from the conversation. The control under each response is also a compact Word icon aligned to the right.
 
-The export tab opens only after you choose a download. It also lets you adjust the title or export without your messages before making another download.
+A progress panel appears immediately below the toolbar you clicked. It shows chat collection, template formatting, actual Word-file packaging progress, the save step and download completion or cancellation. Export buttons are disabled during that job to prevent overlapping exports. The chat stays in front while a background export tab generates the document.
+
+The temporary export tab opens in the background only after you choose a download, then closes after the file is saved. Progress stays below the on-page toolbar.
 
 - **Entire chat:** export the active conversation, optionally including your messages. Keep the exporter tab open while it traverses the chat.
 - **One response:** select a response from the dropdown, check its preview and choose **Download this response**. Use **Refresh responses** after the chat changes.
