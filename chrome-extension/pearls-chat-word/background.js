@@ -28,7 +28,7 @@ chrome.runtime.onMessage.addListener((request, sender, reply) => {
     try {
       const source = new URL(sender.url), url = new URL(request.url);
       if (!sender.tab || !['chatgpt.com','chat.openai.com','claude.ai','gemini.google.com'].includes(source.hostname)) return;
-      const allowed = ['chatgpt.com','chat.openai.com','claude.ai','gemini.google.com','oaiusercontent.com','googleusercontent.com'];
+      const allowed = ['chatgpt.com','chat.openai.com','images.openai.com','claude.ai','gemini.google.com','oaiusercontent.com','googleusercontent.com'];
       if (url.protocol !== 'https:' || url.port || !allowed.some(host=>url.hostname===host||url.hostname.endsWith('.'+host))) return reply({error:'Image host is not supported.'});
       (async()=>{
         const response=await fetch(url.href,{credentials:'omit',redirect:'error',signal:AbortSignal.timeout(15000)});

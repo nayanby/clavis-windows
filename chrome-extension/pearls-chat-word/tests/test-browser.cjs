@@ -86,6 +86,11 @@ async function run() {
       } finally {globalThis.fetch=fetchOriginal;chrome.runtime.sendMessage=sendOriginal;}
     });
     assert.deepEqual(imageCases.types,['image','image']);assert(imageCases.data&&imageCases.relayed&&imageCases.fallback);
+    assert(await page.evaluate(()=>{
+      const icon=document.createElement('img');icon.src='https://www.google.com/s2/favicons?domain=example.org&sz=32';
+      document.querySelector('[data-message-author-role="assistant"] .markdown').append(icon);
+      try{return !JSON.stringify(PearlsCapture.snapshot()).includes('/s2/favicons');}finally{icon.remove();}
+    }));
     assert.equal(await page.evaluate(() => {
       const a = { role: 'assistant', id: 'a', blocks: [] }, b = { role: 'user', id: 'b', blocks: [] }, c = { role: 'assistant', id: 'c', blocks: [] };
       return PearlsCapture.merge([a,b],[b,c]).map(x => x.id).join(',');

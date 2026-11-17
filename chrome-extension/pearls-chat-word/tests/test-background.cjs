@@ -25,8 +25,10 @@ vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(__dirname,'.
   assert.equal(message({type:'PEARLS_EXPORT_PROGRESS',jobId:'job-1',phase:'complete'},{url:'https://chatgpt.com/c/example',tab:{id:7}},()=>{}),undefined);
   assert.equal(message({type:'PEARLS_OPEN_EXPORT',mode:'all'},{url:'https://chatgpt.com.evil.example/',tab:{id:8}},()=>{}),undefined);
   assert.equal(tabs.length,1);
-  const image=await new Promise(resolve=>message({type:'PEARLS_FETCH_IMAGE',url:'https://images.oaiusercontent.com/example.png'},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
-  assert.equal(image.data,'data:image/png;base64,AQID');
+  for(const host of ['images.oaiusercontent.com','images.openai.com']){
+    const image=await new Promise(resolve=>message({type:'PEARLS_FETCH_IMAGE',url:'https://'+host+'/example.png'},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
+    assert.equal(image.data,'data:image/png;base64,AQID');
+  }
   const rejected=await new Promise(resolve=>message({type:'PEARLS_FETCH_IMAGE',url:'https://oaiusercontent.com.evil.example/a.png'},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
   assert(rejected.error);
   assert.equal(message({type:'PEARLS_FETCH_IMAGE',url:'https://images.oaiusercontent.com/a.png'},{url:'https://evil.example',tab:{id:7}},()=>{}),undefined);

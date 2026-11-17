@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.5';
+  const VERSION='1.0.6';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],[data-markdown-copy="exclude"],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -105,6 +105,15 @@
   function image(img) {
     return { type: 'image', src: img.currentSrc || img.src, alt: img.alt || 'Image', width: img.naturalWidth || img.width || 640, height: img.naturalHeight || img.height || 480 };
   }
+  function contentImages(items) {
+    return items.filter(item => {
+      if (item.type === 'image' && /(?:\/s2\/favicons|\/favicon(?:V2)?(?:[?.\/]|$))/i.test(item.src || '')) return false;
+      if(item.blocks)item.blocks=contentImages(item.blocks);
+      for(const entry of item.items||[])entry.blocks=contentImages(entry.blocks);
+      for(const row of item.rows||[])for(const cell of row.cells)cell.blocks=contentImages(cell.blocks);
+      return true;
+    });
+  }
   function entries(provider) {
     let candidates = [];
     if (provider === 'chatgpt') {
@@ -144,7 +153,7 @@
   function snapshot(provider = site()) {
     if (isStreaming(provider)) throw Error('The response is still being generated. Wait for it to finish, then refresh.');
     const messages = entries(provider).map((entry, index) => ({
-      id: entry.id || null, role: entry.role, blocks: blocks(entry.root),
+      id: entry.id || null, role: entry.role, blocks: contentImages(blocks(entry.root)),
       preview: entry.root.innerText?.trim().slice(0, 240) || entry.root.textContent.trim().slice(0, 240), index
     })).filter(message => message.blocks.length);
     if (!messages.length) throw Error('No chat messages were found. Open a conversation and let it finish loading. The site may also have changed its page layout.');
