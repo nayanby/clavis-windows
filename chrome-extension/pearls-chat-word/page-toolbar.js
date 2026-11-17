@@ -9,7 +9,8 @@
   let top = null, scheduled = false, overlay = false;
   const style = `:host{display:flex!important;flex-direction:column!important;align-items:flex-end!important;clear:both!important;box-sizing:border-box!important;width:100%!important;margin:10px 0 12px!important;color-scheme:light!important}
     :host([hidden]){display:none!important}
-    :host([data-placement="top"]){position:sticky!important;top:8px!important;z-index:100!important;margin:0 0 12px!important;padding-top:8px!important}
+    :host([data-placement="top"]){position:fixed!important;top:96px!important;right:28px!important;z-index:2147483600!important;width:max-content!important;margin:0!important}
+    :host([data-placement="response"]){position:absolute!important;width:max-content!important;margin:0!important}
     :host([data-placement="overlay"]){position:fixed!important;top:96px!important;right:28px!important;left:auto!important;width:max-content!important;max-width:calc(100vw - 24px)!important;z-index:2147483600!important;margin:0!important;padding:0!important}
     *{box-sizing:border-box}.bar{display:flex;align-items:center;gap:3px;border:1px solid #e1e5eb;border-radius:16px;background:#fffffffa;padding:6px 9px;font:12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#929292}
     :host([data-placement="overlay"]) .bar{box-shadow:0 4px 18px #171b2610}
@@ -104,13 +105,13 @@
     if (!entries.length && !overlay) { if (top) top.host.hidden = true; return; }
     if (!top?.host.isConnected) {
       top = create(true);
-      const main = document.querySelector('main,[role="main"]') || entries[0]?.node.parentElement || document.body;
-      main.prepend(top.host);
+      document.body.append(top.host);
     }
     top.host.hidden = false;
-    const destination=overlay?document.body:(document.querySelector('main,[role="main"]')||entries[0]?.node.parentElement||document.body);
+    const destination=document.body;
     if(top.host.parentElement!==destination)destination.prepend(top.host);
     if(top.host.getAttribute('data-placement')!==(overlay?'overlay':'top'))top.host.setAttribute('data-placement',overlay?'overlay':'top');
+    for(const [key,value]of Object.entries({position:'fixed',top:'96px',right:'28px',width:'max-content','z-index':'2147483600'}))top.host.style.setProperty(key,value,'important');
     const streaming = reader.isGenerating();
     top.button.disabled = streaming || !entries.length || jobs.size>0;
     top.responseButton.disabled = streaming || !entries.length || jobs.size>0;
@@ -119,13 +120,16 @@
     }else if(top.emptyHint){top.emptyHint=false;top.progress.hidden=true;top.progressBar.hidden=false;}
     entries.forEach((entry,index) => {
       let control = controls.get(entry.node);
-      if (!control?.host.isConnected) { control = create(); entry.node.append(control.host); controls.set(entry.node, control); }
+      if (!control?.host.isConnected) { control = create(); document.body.append(control.host); controls.set(entry.node, control); }
+      const rect=entry.node.getBoundingClientRect();
+      for(const [key,value]of Object.entries({position:'absolute',top:(rect.bottom+scrollY)+'px',left:'auto',right:Math.max(8,innerWidth-rect.right-scrollX)+'px',width:'max-content',margin:'0','z-index':'100'}))control.host.style.setProperty(key,value,'important');
       control.index = index; control.entry = entry;
       control.button.disabled = streaming || jobs.size>0;
     });
   }
   function schedule() { if (!scheduled) { scheduled = true; setTimeout(render, 300); } }
   const observer = new MutationObserver(schedule);
+  document.addEventListener('scroll',schedule,{passive:true,capture:true});
   observer.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-is-streaming','aria-busy'] });
   function toggleOverlay(){overlay=!overlay;render();if(overlay)top?.responseButton.focus({preventScroll:true});}
   globalThis.chrome?.runtime?.onMessage?.addListener(message=>{

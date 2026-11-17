@@ -8,7 +8,7 @@ fs.mkdirSync(output, { recursive: true });
 const template = [...fs.readFileSync(path.join(root, 'template/base.docx'))];
 const profile = JSON.parse(fs.readFileSync(path.join(root, 'template/profile.json')));
 async function run() {
-  const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, args: ['--disable-background-networking', '--no-first-run'] });
+  const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, timeout:15000,args: ['--disable-background-networking', '--no-first-run'] });
   try {
     const page = await browser.newPage();
     const errors = []; page.on('pageerror', error => errors.push(error.message));
@@ -25,12 +25,13 @@ async function run() {
     assert.equal(await page.locator('#stale-extension-toolbar').count(),0);
     assert.equal(await page.locator('[data-pearls-toolbar="chat"]').count(), 1);
     assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(), 3);
+    assert.equal(await page.locator('main [data-pearls-toolbar], [data-message-author-role] [data-pearls-toolbar]').count(),0,'Controls must not be inserted into chat-owned content');
     await page.evaluate(() => PearlsToolbar.render());
     assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(), 3);
-    await page.locator('[data-pearls-toolbar="response"]').first().getByRole('button').click();
+    await page.locator('[data-pearls-toolbar="response"]').first().getByRole('button').click({timeout:8000});
     assert.equal(await page.evaluate(() => toolbarRequests[0].mode), 'single');
     assert.equal(await page.evaluate(() => toolbarRequests[0].id), 'a1');
-    await page.locator('[data-pearls-toolbar="chat"]').getByRole('button',{name:'Download entire chat',exact:true}).click();
+    await page.locator('[data-pearls-toolbar="chat"]').getByRole('button',{name:'Download entire chat',exact:true}).click({timeout:5000});
     assert.equal(await page.evaluate(() => toolbarRequests[1].mode), 'all');
     await page.evaluate(()=>{scrollTo(0,0);PearlsToolbar.toggleOverlay();});
     const floating=page.locator('[data-pearls-toolbar="chat"][data-placement="overlay"]');
@@ -106,7 +107,15 @@ async function run() {
       document.body.append(fixture);
       fixture.children[1].setAttribute('data-markdown-copy','exclude');
       try{
-        const data=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks:PearlsCapture.blocks(fixture)}],warnings:[]});
+        const original=fixture.innerHTML;
+        let rasterCalls=0;const rasterOriginal=globalThis.html2canvas;
+        globalThis.html2canvas=(...args)=>{rasterCalls++;return rasterOriginal(...args);};
+        let captured;
+        try{captured=PearlsCapture.blocks(fixture);if(rasterCalls!==0)throw Error('Preview scan started diagram rendering');}
+        finally{globalThis.html2canvas=rasterOriginal;}
+        if(fixture.innerHTML!==original)throw Error('Scan changed the original diagram');
+        const data=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks:captured}],warnings:[]});
+        if(fixture.innerHTML!==original)throw Error('Export changed the original diagram');
         const images=data.messages[0].blocks.filter(b=>b.type==='image');
         if(!images[0]?.alt.includes('Unaffected noncarrier')||!images[0]?.alt.includes('Affected'))throw Error('Diagram legend was not included in the captured image');
         if(images.length!==2||images.some(b=>!b.data))throw Error('Diagram rasterization failed: '+JSON.stringify(data.warnings));
@@ -267,6 +276,6 @@ async function run() {
     assert.deepEqual(errors, []);
     console.log('PASS: automatic response/chat toolbars, click targets, all three adapters, full-chat traversal, repeated turns, response-only export, headings, equations, nested/restarted lists, image packaging, merged tables and escaping.');
     console.log('QA documents: ' + output);
-  } finally { await browser.close(); }
+  } catch(error){console.error(error);throw error;} finally { await browser.close(); }
 }
 run().catch(error => { console.error(error); process.exitCode = 1; });

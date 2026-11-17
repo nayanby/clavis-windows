@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.9';
+  const VERSION='1.0.10';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -88,12 +88,8 @@
     let id=diagramIds.get(node);
     if(!id){
       id='diagram-'+(++diagramSequence);diagramIds.set(node,id);
-      const render=globalThis.html2canvas
-        ? globalThis.html2canvas(node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')})
-          .then(canvas=>({data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height}))
-          .catch(()=>null)
-        : Promise.resolve(null);
-      diagramRenders.set(id,render);
+      // Scanning must remain read-only: clone/rasterize only during export.
+      diagramRenders.set(id,{node});
     }
     const rect=node.getBoundingClientRect();
     return {type:'image',diagramId:id,alt:node.getAttribute('aria-label')||'Diagram: '+node.textContent.trim().replace(/\s+/g,' ').slice(0,160),width:rect.width,height:rect.height};
@@ -262,14 +258,14 @@
       if (!topReached) throw Error('The start of the chat could not be reached. Expand earlier messages in the chat and retry.');
       let result;
       for (let i = 0; i < 250; i++) {
-        result = snapshot(provider);
+        result = await resolveImages(snapshot(provider),true);
         collected = merge(collected, result.messages);
         onProgress({messages:collected.length});
         if (JSON.stringify(collected).length > 18000000) throw Error('This chat is too large for one export. Export individual responses instead.');
         const atBottom = container.scrollTop + container.clientHeight >= container.scrollHeight - 5;
         if (atBottom) {
           await sleep(600);
-          const final = snapshot(provider);
+          const final = await resolveImages(snapshot(provider),true);
           collected = merge(collected, final.messages);
           if (container.scrollTop + container.clientHeight >= container.scrollHeight - 5) { bottomReached = true; break; }
         }
@@ -282,15 +278,19 @@
       return result;
     } finally { container.scrollTop = originalTop; }
   }
-  async function resolveImages(result) {
+  async function resolveImages(result,diagramsOnly=false) {
     const cache = new Map();
     async function walk(items) {
       for (const item of items || []) {
         if (item.type === 'image') {
           try {
             if(item.data)continue;
+            if(diagramsOnly&&!item.diagramId)continue;
             if(item.diagramId){
-              const rendered=await diagramRenders.get(item.diagramId);
+              const entry=diagramRenders.get(item.diagramId);
+              if(entry&&!entry.render&&globalThis.html2canvas)entry.render=globalThis.html2canvas(entry.node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')})
+                .then(canvas=>({data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height})).catch(()=>null);
+              const rendered=await entry?.render;
               if(!rendered)throw Error('Diagram rendering failed');
               Object.assign(item,rendered);continue;
             }
