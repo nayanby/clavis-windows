@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.10';
+  const VERSION='1.0.12';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -44,6 +44,42 @@
   const textOf = runs => runs.map(run => run.text).join('');
   const diagramIds=new WeakMap(),diagramRenders=new Map();
   let diagramSequence=0;
+  async function firefoxCrop(node) {
+    const runtime=globalThis.browser?.runtime;
+    if(!runtime?.getBrowserInfo||!runtime?.sendMessage||!node?.isConnected)return null;
+    const initial=node.getBoundingClientRect();
+    // Taller/wider diagrams need the full-element renderer instead of a clipped viewport.
+    if(initial.width>innerWidth-16||initial.height>innerHeight-110)return null;
+    const positions=[];
+    for(let parent=node.parentElement;parent;parent=parent.parentElement)positions.push([parent,parent.scrollLeft,parent.scrollTop]);
+    const originalX=scrollX,originalY=scrollY;
+    const controls=[...document.querySelectorAll('[data-pearls-toolbar]')].map(el=>[el,el.style.getPropertyValue('visibility'),el.style.getPropertyPriority('visibility')]);
+    try {
+      node.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'});
+      for(const [el]of controls)el.style.setProperty('visibility','hidden','important');
+      await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+      const rect=node.getBoundingClientRect();
+      if(rect.left<0||rect.top<0||rect.right>innerWidth||rect.bottom>innerHeight)return null;
+      // Ancestor scroll panes can clip an otherwise viewport-sized diagram.
+      for(const [parent]of positions){const css=getComputedStyle(parent),r=parent.getBoundingClientRect();if(/auto|scroll|hidden|clip/.test(css.overflowX+' '+css.overflowY)&&(rect.left<r.left||rect.right>r.right||rect.top<r.top||rect.bottom>r.bottom))return null;}
+      const response=await runtime.sendMessage({type:'PEARLS_CROP_VISUAL',rect:{x:rect.left+scrollX,y:rect.top+scrollY,width:rect.width,height:rect.height}});
+      if(!response?.data?.startsWith('data:image/png;base64,'))return null;
+      return {data:response.data,width:rect.width,height:rect.height};
+    }catch(error){console.warn('Pearls native crop: '+error.message);return null;}
+    finally{
+      for(const [el,value,priority]of controls){if(value)el.style.setProperty('visibility',value,priority);else el.style.removeProperty('visibility');}
+      for(const [parent,x,y]of positions){parent.scrollLeft=x;parent.scrollTop=y;}
+      scrollTo({left:originalX,top:originalY,behavior:'instant'});
+    }
+  }
+  async function renderDiagram(node){
+    const crop=await firefoxCrop(node);if(crop)return crop;
+    if(!globalThis.html2canvas)return null;
+    try{
+      const canvas=await globalThis.html2canvas(node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')});
+      return {data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height};
+    }catch{return null;}
+  }
   function normalizeDiagramColors(doc) {
     const canvas=doc.createElement('canvas');canvas.width=canvas.height=1;
     const ctx=canvas.getContext('2d',{willReadFrequently:true});
@@ -161,7 +197,9 @@
     flush(); return output;
   }
   function image(img) {
-    return { type: 'image', src: img.currentSrc || img.src, alt: img.alt || 'Image', width: img.naturalWidth || img.width || 640, height: img.naturalHeight || img.height || 480 };
+    let elementId=diagramIds.get(img);
+    if(!elementId){elementId='picture-'+(++diagramSequence);diagramIds.set(img,elementId);diagramRenders.set(elementId,{node:img});}
+    return { type: 'image',elementId, src: img.currentSrc || img.src, alt: img.alt || 'Image', width: img.naturalWidth || img.width || 640, height: img.naturalHeight || img.height || 480 };
   }
   function contentImages(items) {
     return items.filter(item => {
@@ -288,8 +326,7 @@
             if(diagramsOnly&&!item.diagramId)continue;
             if(item.diagramId){
               const entry=diagramRenders.get(item.diagramId);
-              if(entry&&!entry.render&&globalThis.html2canvas)entry.render=globalThis.html2canvas(entry.node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')})
-                .then(canvas=>({data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height})).catch(()=>null);
+              if(entry&&!entry.render)entry.render=renderDiagram(entry.node);
               const rendered=await entry?.render;
               if(!rendered)throw Error('Diagram rendering failed');
               Object.assign(item,rendered);continue;
@@ -323,7 +360,11 @@
               return canvas.toDataURL('image/png');
             })());
             item.data = await cache.get(item.src);
-          } catch { result.warnings.push('An image could not be embedded: ' + item.alt + '. Its caption and source link are retained.'); }
+          } catch {
+            const crop=item.elementId?await firefoxCrop(diagramRenders.get(item.elementId)?.node):null;
+            if(crop)Object.assign(item,crop);
+            else result.warnings.push('An image could not be embedded: ' + item.alt + '. Its caption and source link are retained.');
+          }
         }
         if (item.blocks) await walk(item.blocks);
         for (const entry of item.items || []) await walk(entry.blocks);

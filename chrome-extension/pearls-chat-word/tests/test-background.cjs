@@ -26,6 +26,16 @@ vm.createContext(sandbox);vm.runInContext(fs.readFileSync(process.env.PEARLS_TES
   assert.equal(message({type:'PEARLS_EXPORT_PROGRESS',jobId:'job-1',phase:'complete'},{url:'https://chatgpt.com/c/example',tab:{id:7}},()=>{}),undefined);
   assert.equal(message({type:'PEARLS_OPEN_EXPORT',mode:'all'},{url:'https://chatgpt.com.evil.example/',tab:{id:8}},()=>{}),undefined);
   assert.equal(tabs.length,1);
+  let cropOptions;
+  sandbox.chrome.runtime.getBrowserInfo=async()=>({name:'Firefox'});
+  sandbox.chrome.tabs.get=async()=>({active:true,url:'https://chatgpt.com/c/example',windowId:3});
+  sandbox.chrome.tabs.captureVisibleTab=async(windowId,options)=>{assert.equal(windowId,3);cropOptions=options;return 'data:image/png;base64,AQID';};
+  const cropped=await new Promise(resolve=>message({type:'PEARLS_CROP_VISUAL',rect:{x:20,y:40,width:600,height:300}},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
+  assert.equal(cropped.data,'data:image/png;base64,AQID');assert.equal(cropOptions.rect.width,600);assert.equal(cropOptions.scale,2);
+  const invalidCrop=await new Promise(resolve=>message({type:'PEARLS_CROP_VISUAL',rect:{x:-1,y:0,width:600,height:300}},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
+  assert(invalidCrop.error);
+  const foreignCrop=await new Promise(resolve=>message({type:'PEARLS_CROP_VISUAL',rect:{x:0,y:0,width:600,height:300}},{url:'https://evil.example/',tab:{id:7}},resolve));
+  assert(foreignCrop.error);
   for(const host of ['images.oaiusercontent.com','images.openai.com']){
     const image=await new Promise(resolve=>message({type:'PEARLS_FETCH_IMAGE',url:'https://'+host+'/example.png'},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
     assert.equal(image.data,'data:image/png;base64,AQID');

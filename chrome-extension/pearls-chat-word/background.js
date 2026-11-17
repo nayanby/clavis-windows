@@ -24,6 +24,22 @@ chrome.action.onClicked.addListener(async tab => {
   }
 });
 chrome.runtime.onMessage.addListener((request, sender, reply) => {
+  if(request?.type==='PEARLS_CROP_VISUAL'){
+    (async()=>{
+      const source=new URL(sender.url);
+      if(!sender.tab?.id||!['chatgpt.com','chat.openai.com','claude.ai','gemini.google.com'].includes(source.hostname)||source.protocol!=='https:')throw Error('Unsupported capture source.');
+      if(!chrome.runtime.getBrowserInfo)throw Error('Native crop is available in Firefox only.');
+      const r=request.rect;
+      if(!r||!['x','y','width','height'].every(key=>Number.isFinite(r[key]))||r.x<0||r.y<0||r.width<1||r.height<1||r.width>8000||r.height>8000||r.width*r.height>16000000)throw Error('Invalid crop bounds.');
+      const tab=await chrome.tabs.get(sender.tab.id);
+      if(!tab.active||tab.url!==sender.url)throw Error('Keep the source chat active while exporting diagrams.');
+      const data=await chrome.tabs.captureVisibleTab(tab.windowId,{format:'png',scale:2,rect:{x:r.x,y:r.y,width:r.width,height:r.height}});
+      const after=await chrome.tabs.get(sender.tab.id);
+      if(!after.active||after.url!==sender.url)throw Error('The source tab changed during capture.');
+      reply({data});
+    })().catch(error=>reply({error:error.message}));
+    return true;
+  }
   if (request?.type === 'PEARLS_FETCH_IMAGE') {
     try {
       const source = new URL(sender.url), url = new URL(request.url);

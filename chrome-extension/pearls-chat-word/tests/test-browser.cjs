@@ -11,7 +11,7 @@ async function run() {
   const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, timeout:15000,args: ['--disable-background-networking', '--no-first-run'] });
   try {
     const page = await browser.newPage();
-    const errors = []; page.on('pageerror', error => errors.push(error.message));
+    const errors = []; page.on('pageerror', error => errors.push(error.message));page.on('console',msg=>{if(msg.text().startsWith('Pearls native crop:')||msg.text().startsWith('Crop test capture:'))console.log(msg.text());});
     await page.route('**/*', route => route.fulfill({ contentType: 'text/html', body: fs.readFileSync(path.join(__dirname, 'fixtures/chatgpt.html'), 'utf8') }));
     await page.goto('https://chatgpt.com/c/test-fixture');
     await page.addScriptTag({ path: path.join(root, 'vendor/html2canvas.min.js') });
@@ -130,6 +130,28 @@ async function run() {
     assert.equal((visual.xml.match(/cy="1440000"/g)||[]).length,4);
     fs.writeFileSync(path.join(output,'diagram-example.docx'),Buffer.from(visual.bytes));
     fs.writeFileSync(path.join(output,'diagram-example.png'),Buffer.from(visual.png,'base64'));
+    await page.exposeFunction('pearlsTestCrop',async request=>{
+      const bytes=await page.screenshot({fullPage:true,clip:request.rect});
+      return {data:'data:image/png;base64,'+bytes.toString('base64')};
+    });
+    const nativeCrop=await page.evaluate(async()=>{
+      const savedBrowser=globalThis.browser,savedRaster=globalThis.html2canvas;
+      let requests=0,rasterCalls=0;
+      const fixture=document.createElement('div');fixture.style.cssText='width:650px;margin:20px';
+      fixture.innerHTML='<p>OUTSIDE BEFORE</p><div data-diagram aria-label="Complete inheritance chart" style="height:250px;background:#eef7ef;padding:15px;box-sizing:border-box"><div style="display:flex;justify-content:space-around"><span>AA</span><span>Aa</span><span>aa</span></div><div style="display:flex;justify-content:space-around;margin-top:130px"><span>25% noncarrier</span><span>50% carrier</span><span>25% affected</span></div></div><p>OUTSIDE AFTER</p>';
+      document.body.append(fixture);
+      const initialScroll=scrollY,original=fixture.innerHTML;
+      globalThis.browser={runtime:{getBrowserInfo:async()=>({name:'Firefox'}),sendMessage:async request=>{requests++;try{return await pearlsTestCrop(request);}catch(error){console.error("Crop test capture:",error.message);throw error;}}}};
+      globalThis.html2canvas=(...args)=>{rasterCalls++;return savedRaster(...args);};
+      try{
+        const data=await PearlsCapture.resolveImages({messages:[{blocks:PearlsCapture.blocks(fixture)}],warnings:[]});
+        const image=data.messages[0].blocks.find(b=>b.type==='image');
+        return {requests,rasterCalls,width:image.width,height:image.height,png:image.data?.split(',')[1],restored:scrollY===initialScroll&&fixture.innerHTML===original,types:data.messages[0].blocks.map(b=>b.type)};
+      }finally{fixture.remove();globalThis.browser=savedBrowser;globalThis.html2canvas=savedRaster;}
+    });
+    assert.equal(nativeCrop.requests,1);assert.equal(nativeCrop.rasterCalls,0);assert(nativeCrop.restored);
+    assert.equal(nativeCrop.width,650);assert.equal(nativeCrop.height,250);assert.deepEqual(nativeCrop.types,['paragraph','image','paragraph']);
+    fs.writeFileSync(path.join(output,'firefox-native-crop.png'),Buffer.from(nativeCrop.png,'base64'));
     assert(await page.evaluate(async()=>{
       const message=document.querySelector('[data-message-author-role="assistant"]');
       const visual=document.createElement('div');
