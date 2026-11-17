@@ -29,6 +29,7 @@ for path in sorted((ROOT/'build/chat-word-qa').glob('*.docx')):
             if sid is not None and sid.get('{'+W+'}val') in ('Heading1','Heading2','Heading3','Heading4','BoldSide1','boldside2','Boldside3'):
                 headings+=1;assert p.find('w:pPr/w:numPr',NS) is None
         assert headings>=5
+        assert len(d.findall('.//w:pPr/w:pStyle[@w:val="Heading1"]',NS))==1
         # Native body lists still have actual nonzero numbering references.
         num_ids={x.get('{'+W+'}numId') for x in n.findall('w:num',NS)}
         for num in d.findall('.//w:numPr/w:numId',NS):assert num.get('{'+W+'}val') in num_ids
@@ -37,6 +38,8 @@ for path in sorted((ROOT/'build/chat-word-qa').glob('*.docx')):
             if E.QName(child).localname=='num':seen_num=True
             if E.QName(child).localname=='abstractNum':assert not seen_num
         for p in d.findall('.//w:tc//w:p',NS):
+            sid=p.find('w:pPr/w:pStyle',NS)
+            assert sid is None or sid.get('{'+W+'}val') in ('Normal','level1','level2','level3','ChatCode')
             for run in p.findall('w:r',NS):
                 if run.find('w:t',NS) is not None:
                     assert run.find('w:rPr/w:sz',NS).get('{'+W+'}val')=='19'

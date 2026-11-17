@@ -11,6 +11,7 @@
     chrome.runtime.sendMessage({type:'PEARLS_EXPORT_PROGRESS',jobId,phase,text,percent}).catch(()=>{});
   }
   let chat = null, busy = false;
+  let titleWasEdited=false;
   const status = (text, error = false) => { $('status').textContent = text; $('status').classList.toggle('error', error); if(error)notify('error',text); };
   function setBusy(value) {
     busy = value;
@@ -81,7 +82,10 @@
         fetch(chrome.runtime.getURL('template/base.docx')).then(response => { if (!response.ok) throw Error('Word template could not load.'); return response.arrayBuffer(); }),
         fetch(chrome.runtime.getURL('template/profile.json')).then(response => { if (!response.ok) throw Error('Template settings could not load.'); return response.json(); })
       ]);
-      const title = $('title').value.trim() || data.title || 'Conversation';
+      const first=data.messages[0]?.blocks[0];
+      const sourceTitle=mode==='single'&&first?.type==='heading'&&!/^\s*(?:[IVXLCDM]+|[A-Za-z]|\d+)[.)]\s+/i.test(first.runs.map(run=>run.text).join(''))?first.runs.map(run=>run.text).join('').trim():'';
+      const title = (!titleWasEdited&&sourceTitle) || $('title').value.trim() || data.title || 'Conversation';
+      if(!titleWasEdited&&sourceTitle)$('title').value=title;
       const generated = await PearlsWord.create(data, { title, includePrompts: mode === 'single' || $('prompts').checked, single: mode === 'single', templateBytes: template, profile,
         onProgress:percent=>notify('packaging','Creating Word file · '+Math.round(percent)+'%',percent) });
       const url = URL.createObjectURL(new Blob([generated.bytes], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' }));
@@ -112,6 +116,7 @@
     finally { setBusy(false); }
   }
   $('refresh').addEventListener('click', scan);
+  $('title').addEventListener('input',()=>{titleWasEdited=true;});
   $('response').addEventListener('change', preview);
   $('all').addEventListener('click', () => download('all'));
   $('single').addEventListener('click', () => download('single'));

@@ -1,6 +1,9 @@
 /* Small on-page controls; content and native chat controls are never replaced. */
 (() => {
   if (globalThis.PearlsToolbar) return;
+  // Reloading an unpacked extension invalidates old listeners but can leave its
+  // DOM behind. Remove those disabled controls before mounting the fresh ones.
+  document.querySelectorAll('[data-pearls-toolbar]').forEach(host=>host.remove());
   const controls = new WeakMap();
   const jobs = new Map();
   let top = null, scheduled = false, overlay = false;
@@ -105,10 +108,15 @@
       main.prepend(top.host);
     }
     top.host.hidden = false;
+    const destination=overlay?document.body:(document.querySelector('main,[role="main"]')||entries[0]?.node.parentElement||document.body);
+    if(top.host.parentElement!==destination)destination.prepend(top.host);
     if(top.host.getAttribute('data-placement')!==(overlay?'overlay':'top'))top.host.setAttribute('data-placement',overlay?'overlay':'top');
     const streaming = reader.isGenerating();
     top.button.disabled = streaming || !entries.length || jobs.size>0;
     top.responseButton.disabled = streaming || !entries.length || jobs.size>0;
+    if(!entries.length&&!jobs.size){
+      top.emptyHint=true;top.progress.hidden=false;top.progress.dataset.phase='preparing';top.progressLabel.textContent='No responses found. Open a conversation or refresh the chat.';top.progressBar.hidden=true;
+    }else if(top.emptyHint){top.emptyHint=false;top.progress.hidden=true;top.progressBar.hidden=false;}
     entries.forEach((entry,index) => {
       let control = controls.get(entry.node);
       if (!control?.host.isConnected) { control = create(); entry.node.append(control.host); controls.set(entry.node, control); }

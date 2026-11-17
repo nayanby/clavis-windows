@@ -11,7 +11,7 @@
     return doc;
   }
   const declaration = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
-  const headingStyles = ['Heading2', 'Heading3', 'BoldSide1', 'boldside2', 'Boldside3'];
+  const headingStyles = ['Heading1', 'Heading2', 'Heading3', 'Heading4', 'boldside2', 'Boldside3'];
   class Writer {
     constructor(zip, profile, onProgress) {
       this.zip = zip; this.profile = profile; this.relationships = []; this.abstracts = []; this.numbers = [];
@@ -56,32 +56,18 @@
     }
     headingPlan(blocks) {
       const headings = blocks.filter(block => block.type === 'heading');
-      const explicit = headings.filter(block => !block.inferred);
-      const minimum = Math.min(...(explicit.length ? explicit : headings).map(block => block.level), 6);
-      const stack = [], groups = new Map(), plans = new Map();
+      const romanToken=heading=>/^\s*([IVXLCDM]+)[.)]\s+/i.exec(textOf(heading.runs))?.[1].toUpperCase();
+      const romanDepth=Math.min(...headings.filter(heading=>!heading.inferred&&(romanToken(heading)?.length>1||/^[IVX]$/.test(romanToken(heading)||''))).map(heading=>heading.level));
+      const plans = new Map();
       for (const heading of headings) {
-        let rank = heading.inferred ? (stack.length ? Math.min(stack[stack.length - 1].rank + 1, 4) : 0) : Math.max(0, Math.min(4, heading.level - minimum));
-        // Consecutive bold-only headings are siblings, rather than a descending ladder.
-        if (heading.inferred && stack.at(-1)?.heading.inferred) rank = stack.at(-1).rank;
-        while (stack.length && stack.at(-1).rank >= rank) stack.pop();
-        const parent = stack.at(-1)?.heading || null;
-        const group = [...groups.keys()].find(key => key.parent === parent && key.rank === rank) || { parent, rank };
-        if (!groups.has(group)) groups.set(group, []);
-        groups.get(group).push(heading);
-        plans.set(heading, { rank, style: headingStyles[rank] });
-        stack.push({ heading, rank });
-      }
-      for (const siblings of groups.values()) {
-        siblings.forEach((heading, index) => {
-          const plan = plans.get(heading);
-          if (!['Heading3', 'Boldside3'].includes(plan.style)) return;
-          const text = textOf(heading.runs).replace(/^\s*(?:[A-Za-z]|\d{1,3})[.)]\s+/, '');
-          // Preserve original inline emphasis while removing only a heading prefix.
-          const removed = textOf(heading.runs).length - text.length;
-          let remaining = removed;
-          plan.runs = heading.runs.map(run => { const count = Math.min(remaining, run.text.length); remaining -= count; return { ...run, text: run.text.slice(count) }; });
-          if (siblings.length > 1) plan.runs.unshift({ text: alphabet(index) + '. ' });
-        });
+        const text=textOf(heading.runs);
+        let level=Math.max(2,Math.min(6,heading.level||2));
+        if(heading.inferred)level=6;
+        else if(romanToken(heading)&&heading.level===romanDepth)level=2;
+        else if(/^\s*[A-Za-z][.)]\s+/.test(text))level=3;
+        else if(/^\s*\d+[.)]\s+/.test(text))level=4;
+        // The document title is the sole H1. Preserve every source prefix exactly.
+        plans.set(heading,{style:headingStyles[level-1]});
       }
       return plans;
     }
@@ -99,9 +85,11 @@
       return id;
     }
     blocks(blocks, options = {}) {
-      const plans = this.headingPlan(blocks || []);
+      const plans = options.table ? new Map() : this.headingPlan(blocks || []);
       return (blocks || []).map(block => {
         if (block.type === 'heading') {
+          // Labels within cells are table text, never clinical outline headings.
+          if(options.table)return this.paragraph(block.runs.map(run=>({...run,bold:true})),{...options,style:'Normal'});
           const plan = plans.get(block);
           return this.paragraph(plan.runs || block.runs, { style: plan.style, heading: true, keepNext: true, table: options.table });
         }
@@ -172,7 +160,7 @@
         const header = table.rows[i]?.cells.length && table.rows[i].cells.every(cell => cell.header);
         rows += `<w:tr><w:trPr><w:cantSplit/>${header ? '<w:tblHeader/>' : ''}</w:trPr>${cells}</w:tr>`;
       }
-      return `<w:tbl><w:tblPr><w:tblW w:w="${width * count}" w:type="dxa"/><w:tblBorders>${borders}</w:tblBorders><w:tblLayout w:type="fixed"/></w:tblPr>${grid}${rows}</w:tbl><w:p/>`;
+      return `<w:tbl><w:tblPr><w:tblW w:w="${width * count}" w:type="dxa"/><w:tblBorders>${borders}</w:tblBorders><w:tblLayout w:type="fixed"/></w:tblPr>${grid}${rows}</w:tbl>${options.table?'<w:p/>':''}`;
     }
     image(image, options) {
       const match = /^data:image\/png;base64,([\s\S]+)$/.exec(image.data || image.src || '');
@@ -227,7 +215,9 @@
     let assistantIndex = 0, userIndex = 0;
     for (const message of messages) {
       if (!single) body += writer.paragraph([{ text: message.role === 'assistant' ? 'Response ' + (++assistantIndex) : 'My message ' + (++userIndex) }], { style: 'ChatRole', keepNext: true });
-      body += writer.blocks(message.blocks);
+      let blocks=message.blocks;
+      if(single&&blocks[0]?.type==='heading'&&textOf(blocks[0].runs).trim().toLocaleLowerCase()===title.trim().toLocaleLowerCase())blocks=blocks.slice(1);
+      body += writer.blocks(blocks);
     }
     return writer.finish(body, title);
   }

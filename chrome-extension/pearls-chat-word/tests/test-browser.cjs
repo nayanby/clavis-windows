@@ -19,7 +19,9 @@ async function run() {
     assert.equal(chat.messages.length, 6);
     assert.equal(chat.messages.filter(m => m.role === 'assistant').length, 3);
     await page.evaluate(() => { globalThis.toolbarRequests=[];globalThis.autoCompleteJobs=true;globalThis.chrome={runtime:{onMessage:{addListener:fn=>{globalThis.progressListener=fn;}},sendMessage:async value=>{toolbarRequests.push(value);if(autoCompleteJobs)queueMicrotask(()=>PearlsToolbar.updateProgress(value.jobId,{phase:'complete',text:'Downloaded',percent:100}));return {ok:true};}}}; });
+    await page.evaluate(()=>{const stale=document.createElement('div');stale.setAttribute('data-pearls-toolbar','chat');stale.id='stale-extension-toolbar';document.body.append(stale);});
     await page.addScriptTag({ path: path.join(root, 'page-toolbar.js') });
+    assert.equal(await page.locator('#stale-extension-toolbar').count(),0);
     assert.equal(await page.locator('[data-pearls-toolbar="chat"]').count(), 1);
     assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(), 3);
     await page.evaluate(() => PearlsToolbar.render());
@@ -74,6 +76,39 @@ async function run() {
     assert.equal(await page.evaluate(() => { try { PearlsCapture.merge([{id:'a'}],[{id:'z'}]); return false; } catch { return true; } }), true);
     await page.addScriptTag({ path: path.join(root, 'vendor/jszip.min.js') });
     await page.addScriptTag({ path: path.join(root, 'word-export.js') });
+    const headingCases=await page.evaluate(async({template,profile})=>{
+      const h=(level,text)=>({type:'heading',level,runs:[{text}]});
+      const cases=[
+        [h(1,'Main'),h(2,'I. Classification'),h(2,'II. Predominantly Antibody Deficiencies')],
+        [h(1,'Main'),h(2,'1. First'),h(2,'2. Second')],
+        [h(1,'Main'),h(2,'First'),h(2,'Second')],
+      ];
+      const results=[];
+      for(const blocks of cases){
+        const doc=await PearlsWord.create({messages:[{role:'assistant',blocks}]},{single:true,title:'Heading checks',templateBytes:new Uint8Array(template),profile});
+        const zip=await JSZip.loadAsync(doc.bytes);const parsed=new DOMParser().parseFromString(await zip.file('word/document.xml').async('string'),'application/xml');
+        results.push([...parsed.getElementsByTagNameNS('http://schemas.openxmlformats.org/wordprocessingml/2006/main','p')].map(p=>p.textContent));
+      }
+      return results;
+    },{template,profile});
+    assert(headingCases[0].includes('I. Classification'));
+    assert(headingCases[0].includes('II. Predominantly Antibody Deficiencies'));
+    assert(!headingCases[0].some(text=>/^[A-Z]\. [IVX]+\./.test(text)));
+    assert(headingCases[1].includes('1. First'));assert(headingCases[1].includes('2. Second'));
+    assert(headingCases[2].includes('First'));assert(headingCases[2].includes('Second'));
+    assert(!headingCases[2].includes('A. First'));
+    const hierarchy=await page.evaluate(async({template,profile})=>{
+      const h=(level,text)=>({type:'heading',level,runs:[{text}]});
+      const doc=await PearlsWord.create({messages:[{role:'assistant',blocks:[h(1,'Major Immunodeficiency Syndromes'),h(2,'I. Classification'),h(3,'A. Functional Classification'),h(2,'II. Predominantly Antibody Deficiencies'),h(3,'A. Bruton Disease')]}]},{single:true,title:'Major Immunodeficiency Syndromes',templateBytes:new Uint8Array(template),profile});
+      const zip=await JSZip.loadAsync(doc.bytes);const parsed=new DOMParser().parseFromString(await zip.file('word/document.xml').async('string'),'application/xml');
+      const ns='http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+      return [...parsed.getElementsByTagNameNS(ns,'p')].map(p=>({text:p.textContent,style:p.getElementsByTagNameNS(ns,'pStyle')[0]?.getAttributeNS(ns,'val')}));
+    },{template,profile});
+    assert.equal(hierarchy.filter(p=>p.style==='Heading1').length,1);
+    assert.equal(hierarchy.find(p=>p.text==='Major Immunodeficiency Syndromes').style,'Heading1');
+    assert.equal(hierarchy.find(p=>p.text==='I. Classification').style,'Heading2');
+    assert.equal(hierarchy.find(p=>p.text==='II. Predominantly Antibody Deficiencies').style,'Heading2');
+    assert.equal(hierarchy.find(p=>p.text==='A. Functional Classification').style,'Heading3');
     for (const [name, messages, single, includePrompts] of [
       ['full-chat', chat.messages, false, true],
       ['single-response', [chat.messages[1]], true, false],
@@ -86,11 +121,16 @@ async function run() {
         const numbers = await zip.file('word/numbering.xml').async('string');
         const parsed = new DOMParser().parseFromString(xml, 'application/xml');
         const paragraphs = [...parsed.getElementsByTagNameNS('http://schemas.openxmlformats.org/wordprocessingml/2006/main','p')].map(p => p.textContent);
+        for(const cell of parsed.getElementsByTagNameNS('http://schemas.openxmlformats.org/wordprocessingml/2006/main','tc')){
+          for(const style of cell.getElementsByTagNameNS('http://schemas.openxmlformats.org/wordprocessingml/2006/main','pStyle')){
+            if(/Heading|BoldSide|boldside/i.test(style.getAttributeNS('http://schemas.openxmlformats.org/wordprocessingml/2006/main','val')))throw Error('A table label was exported as an outline heading.');
+          }
+        }
         return { bytes: [...doc.bytes], xml, numbers, paragraphs, warnings: doc.warnings };
       }, { chat, messages, single, includePrompts, template, profile });
       assert(result.xml.includes('Bone marrow'));
       assert(result.xml.includes('Sole Subsection'));
-      assert(!result.paragraphs.includes('A. Sole Subsection'));
+      assert(result.paragraphs.includes('A. Sole Subsection'));
       assert(result.paragraphs.includes('A. IgG'), JSON.stringify(result.paragraphs));
       assert(result.paragraphs.includes('B. IgM'));
       assert(!result.xml.includes('numId w:val="0"'));
@@ -101,6 +141,19 @@ async function run() {
       if (!includePrompts) assert(!result.xml.includes('Explain immunoglobulins'));
       fs.writeFileSync(path.join(output, name + '.docx'), Buffer.from(result.bytes));
     }
+    // The new ChatGPT Work markup must not silently produce disabled controls.
+    await page.unroute('**/*');await page.route('**/*',route=>route.fulfill({contentType:'text/html',body:fs.readFileSync(path.join(__dirname,'fixtures/chatgpt-work.html'),'utf8')}));
+    await page.goto('https://chatgpt.com/c/work-fixture');await page.addScriptTag({path:path.join(root,'capture.js')});
+    const work=await page.evaluate(()=>PearlsCapture.snapshot());
+    assert.equal(work.messages.length,4);assert.equal(work.messages[1].id,'work-a1');assert.equal(work.messages[1].role,'assistant');
+    assert.equal(work.messages[1].blocks.filter(block=>block.type==='table').length,1);
+    assert(!JSON.stringify(work).includes('Copy response'));
+    await page.addScriptTag({path:path.join(root,'page-toolbar.js')});
+    assert.equal(await page.locator('[data-pearls-toolbar="response"]').count(),2);
+    await page.evaluate(()=>PearlsToolbar.toggleOverlay());
+    const workToolbar=page.locator('[data-pearls-toolbar="chat"]');
+    assert.equal(await workToolbar.getByRole('button',{name:'Download response',exact:true}).isEnabled(),true);
+    assert.equal(await workToolbar.evaluate(el=>el.parentElement===document.body),true);
     // Adapters are exercised against local synthetic pages, not live user chats.
     for (const [provider, url, fixture] of [
       ['claude','https://claude.ai/chat/test', '<div data-testid="user-message">Question</div><div data-testid="assistant-message"><div class="font-claude-response"><div class="standard-markdown"><h2>Claude heading</h2><p>Answer.</p></div></div></div>'],
@@ -144,7 +197,7 @@ async function run() {
     await exporter.waitForFunction(()=>progressEvents.some(event=>event.phase==='complete'));
     assert.equal(await exporter.evaluate(()=>progressEvents.some(event=>event.phase==='packaging'&&event.percent===100)),true);
     assert.equal(await exporter.locator('#response').inputValue(),'0');
-    assert.equal(await exporter.evaluate(()=>mockDownloads[0].filename),'Immunology Pearls - Response 1.docx');
+    assert.equal(await exporter.evaluate(()=>mockDownloads[0].filename),'Immunoglobulin Classes - Response 1.docx');
     const uiDoc=await exporter.evaluate(()=>mockDownloads[0].bytes);
     fs.writeFileSync(path.join(output,'toolbar-response.docx'),Buffer.from(uiDoc));
     await exporter.screenshot({path:path.join(output,'exporter-ui.png'),fullPage:true});

@@ -1,7 +1,8 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  if (globalThis.PearlsCapture) return;
-  const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
+  const VERSION='1.0.4';
+  if (globalThis.PearlsCapture?.version===VERSION) return;
+  const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],[data-markdown-copy="exclude"],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   function site() {
@@ -99,11 +100,15 @@
   function entries(provider) {
     let candidates = [];
     if (provider === 'chatgpt') {
-      candidates = [...document.querySelectorAll('[data-message-author-role="user"],[data-message-author-role="assistant"]')].map(node => ({
-        node, role: node.getAttribute('data-message-author-role'),
-        root: node.querySelector('.markdown,.prose,[class*="whitespace-pre-wrap"]') || node,
-        id: node.getAttribute('data-message-id') || node.closest('[data-message-id]')?.getAttribute('data-message-id') || node.closest('article[data-testid]')?.getAttribute('data-testid')
-      }));
+      // ChatGPT's newer Work UI uses search units and response-body attributes
+      // instead of data-message-author-role. Support both DOM generations.
+      const selector='[data-message-author-role="user"],[data-message-author-role="assistant"],[data-chatgpt-search-unit-key],[data-response-body],[data-markdown-text-style="assistant-message"],[data-turn="user"],[data-turn="assistant"]';
+      candidates = [...document.querySelectorAll(selector)].map(node => {
+        const key=node.getAttribute('data-chatgpt-search-unit-key')||'';
+        const role=node.getAttribute('data-message-author-role') || node.getAttribute('data-turn') || /:(user|assistant)$/.exec(key)?.[1] || (node.matches('[data-response-body],[data-markdown-text-style="assistant-message"]')?'assistant':null);
+        const root=node.querySelector('[data-response-body],[data-markdown-text-style="assistant-message"],.markdown,.prose,[class*="whitespace-pre-wrap"]')||node;
+        return {node,role,root,id:node.getAttribute('data-message-id')||root.getAttribute('data-response-body')||node.getAttribute('data-response-body')||node.getAttribute('data-chatgpt-search-message-ids')?.trim().split(/\s+/)[0]||node.closest('[data-message-id]')?.getAttribute('data-message-id')||key||node.closest('article[data-testid]')?.getAttribute('data-testid')};
+      }).filter(entry=>entry.role==='user'||entry.role==='assistant');
     } else if (provider === 'claude') {
       candidates = [...document.querySelectorAll('[data-testid="user-message"],[data-testid="assistant-message"],.font-claude-response')].map(node => ({
         node, root: node.querySelector('.standard-markdown,.markdown,.prose') || node,
@@ -229,7 +234,7 @@
     result.warnings = [...new Set(result.warnings)];
     return result;
   }
-  globalThis.PearlsCapture = { snapshot, conversation, resolveImages, merge, blocks,
+  globalThis.PearlsCapture = { version:VERSION, snapshot, conversation, resolveImages, merge, blocks,
     responseTargets: () => entries(site()).filter(entry => entry.role === 'assistant'),
     isGenerating: () => isStreaming(site())
   };

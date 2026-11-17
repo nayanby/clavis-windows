@@ -34,10 +34,10 @@ If earlier responses are not in the one-response dropdown, scroll to them in the
 
 - Your retained template supplies page geometry, Averia Serif Libre typography, plum/navy headings and emphasis styles. Install Averia Serif Libre on the computer that opens the Word document to match the template exactly.
 - Headings are real named Word paragraph styles, with **no list inheritance or numId=0 markers**. A BS3 heading is never exported as a bullet.
-- Heading levels retain parent/child order. Blue headings receive A./B./C. prefixes only when they have multiple siblings beneath the same parent.
+- Only the document title uses H1. Roman-numbered sections use H2; lettered subsections use H3; numeric sub-subsections use H4. The exporter preserves heading prefixes exactly and never adds, removes or renumbers them. For a single response, its opening title becomes the document title without a duplicate chat-title heading.
 - Short standalone bold-only labels are recognized as headings. Medical statements, body paragraphs and actual list items retain their source structure.
 - Bullets and numbering are native editable Word lists, including nesting, list starts and separate restarts. Abstract numbering definitions are written before concrete list instances.
-- Tables are editable Word tables with repeating header rows, light borders, merged cells and text exactly one point smaller than the body.
+- Tables are editable Word tables with repeating header rows, light borders, merged cells and text exactly one point smaller than the body. Bold row labels remain table text, without heading shading or forced uppercase.
 - Inline bold, italics, links, highlights, subscript, superscript, code and quotations are retained. The extension formats content; it does not rewrite or fact-check it.
 
 ## Content limits
