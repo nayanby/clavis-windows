@@ -1,3 +1,8 @@
+html2canvas 1.4.1 is used under the MIT license.
+Copyright (c) 2012 Niklas von Hertzen
+https://github.com/niklasvh/html2canvas
+Full license: vendor/html2canvas.LICENSE.txt
+
 JSZip 3.10.1 is used under the MIT license.
 Copyright (c) 2009-2016 Stuart Knightley, David Duponchel, Franz Buchinger, António Afonso
 https://github.com/Stuk/jszip

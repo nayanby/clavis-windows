@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.6';
+  const VERSION='1.0.7';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],[data-markdown-copy="exclude"],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -41,6 +41,52 @@
     return [...node.childNodes].flatMap(child => inlines(child, next));
   }
   const textOf = runs => runs.map(run => run.text).join('');
+  const diagramIds=new WeakMap(),diagramRenders=new Map();
+  let diagramSequence=0;
+  function normalizeDiagramColors(doc) {
+    const canvas=doc.createElement('canvas');canvas.width=canvas.height=1;
+    const ctx=canvas.getContext('2d',{willReadFrequently:true});
+    const modern=/(?:oklch|oklab|lch|lab|color)\(/i;
+    for(const el of doc.querySelectorAll('*')){
+      const css=doc.defaultView.getComputedStyle(el);
+      for(const property of ['color','background-color','border-top-color','border-right-color','border-bottom-color','border-left-color','outline-color','text-decoration-color']){
+        const value=css.getPropertyValue(property);
+        if(!modern.test(value))continue;
+        ctx.clearRect(0,0,1,1);ctx.fillStyle=value;ctx.fillRect(0,0,1,1);
+        const [r,g,b,a]=ctx.getImageData(0,0,1,1).data;
+        el.style.setProperty(property,`rgba(${r},${g},${b},${a/255})`,'important');
+      }
+      for(const property of ['box-shadow','text-shadow'])if(modern.test(css.getPropertyValue(property)))el.style.setProperty(property,'none','important');
+    }
+  }
+  function isDiagram(node) {
+    if(!node.matches('div,section,figure,[role="img"]') || node.querySelector('table,ul,ol,pre,h1,h2,h3,h4'))return false;
+    const rect=node.getBoundingClientRect();
+    if(rect.width<100||rect.height<60||node.textContent.length>2500)return false;
+    if(node.matches('[role="img"],[data-diagram],[data-testid*="diagram"],.mermaid'))return true;
+    const style=getComputedStyle(node);
+    const grid=[node,...node.querySelectorAll('div')].find(el=>{
+      const css=getComputedStyle(el);
+      return css.display==='grid'&&el.children.length>=4&&css.gridTemplateColumns.split(' ').length>=2;
+    });
+    if(!grid)return false;
+    // Capture the surrounding diagram card and its labels, or the grid itself.
+    return grid===node || (parseFloat(style.borderRadius)>0&&parseFloat(style.borderTopWidth)>0);
+  }
+  function diagram(node) {
+    let id=diagramIds.get(node);
+    if(!id){
+      id='diagram-'+(++diagramSequence);diagramIds.set(node,id);
+      const render=globalThis.html2canvas
+        ? globalThis.html2canvas(node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button,[data-markdown-copy="exclude"]')})
+          .then(canvas=>({data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height}))
+          .catch(()=>null)
+        : Promise.resolve(null);
+      diagramRenders.set(id,render);
+    }
+    const rect=node.getBoundingClientRect();
+    return {type:'image',diagramId:id,alt:node.getAttribute('aria-label')||'Diagram: '+node.textContent.trim().replace(/\s+/g,' ').slice(0,160),width:rect.width,height:rect.height};
+  }
   function blocks(parent) {
     const output = [];
     let pending = [];
@@ -59,6 +105,7 @@
       }
       if (hidden(node)) continue;
       const tag = node.tagName.toLowerCase();
+      if(isDiagram(node)){flush();output.push(diagram(node));continue;}
       if (/^h[1-6]$/.test(tag)) { flush(); output.push({ type: 'heading', level: Number(tag[1]), runs: inlines(node) }); }
       else if (tag === 'p') {
         flush();
@@ -86,6 +133,10 @@
       else if (tag === 'pre') { flush(); output.push({ type: 'code', text: clean((node.querySelector('code') || node).textContent) }); }
       else if (tag === 'blockquote') { flush(); output.push({ type: 'quote', blocks: blocks(node) }); }
       else if (tag === 'img') { flush(); output.push(image(node)); }
+      else if (tag === 'canvas') {
+        flush();try{output.push({type:'image',data:node.toDataURL('image/png'),alt:node.getAttribute('aria-label')||'Diagram',width:node.width,height:node.height});}
+        catch{output.push({type:'image',alt:'Diagram could not be read'});}
+      }
       else if (tag === 'svg') {
         flush();
         const bytes = new TextEncoder().encode(new XMLSerializer().serializeToString(node));
@@ -157,7 +208,7 @@
       preview: entry.root.innerText?.trim().slice(0, 240) || entry.root.textContent.trim().slice(0, 240), index
     })).filter(message => message.blocks.length);
     if (!messages.length) throw Error('No chat messages were found. Open a conversation and let it finish loading. The site may also have changed its page layout.');
-    const warnings = entries(provider).some(entry => entry.root.querySelector('canvas,video,iframe')) ? ['This response contains an interactive canvas, video or embedded frame. Its interactive content is not included in the Word file.'] : [];
+    const warnings = entries(provider).some(entry => entry.root.querySelector('video,iframe')) ? ['This response contains video or an embedded frame. Its interactive content is not included in the Word file.'] : [];
     return { provider, title: document.title.replace(/\s*[-–|]\s*(ChatGPT|Claude|Gemini).*$/i, '').trim(), url: location.href, messages, warnings };
   }
   function scroller(provider) {
@@ -226,6 +277,12 @@
       for (const item of items || []) {
         if (item.type === 'image') {
           try {
+            if(item.data)continue;
+            if(item.diagramId){
+              const rendered=await diagramRenders.get(item.diagramId);
+              if(!rendered)throw Error('Diagram rendering failed');
+              Object.assign(item,rendered);continue;
+            }
             if (!cache.has(item.src)) cache.set(item.src, (async () => {
               const url = new URL(item.src, location.href);
               if (!/^(https?:|data:|blob:)$/.test(url.protocol)) throw Error('Unsupported image URL');
@@ -242,10 +299,15 @@
                 blob = await (await fetch(resolved.data)).blob();
               }
               if (!/^image\/(png|jpeg|gif|webp|svg\+xml)/i.test(blob.type) || blob.size > 8000000) throw Error('Image format or size unsupported');
-              const bitmap = await createImageBitmap(blob);
+              // Chromium cannot decode SVG blobs with createImageBitmap reliably.
+              let bitmap;
+              if(blob.type.startsWith('image/svg+xml')){
+                const src=URL.createObjectURL(blob),img=new Image();
+                try{img.src=src;await img.decode();bitmap=img;}finally{URL.revokeObjectURL(src);}
+              }else bitmap=await createImageBitmap(blob);
               const scale = Math.min(1, 1800 / Math.max(bitmap.width, bitmap.height));
               const canvas = document.createElement('canvas'); canvas.width = Math.max(1, Math.round(bitmap.width * scale)); canvas.height = Math.max(1, Math.round(bitmap.height * scale));
-              canvas.getContext('2d').drawImage(bitmap, 0, 0, canvas.width, canvas.height); bitmap.close();
+              canvas.getContext('2d').drawImage(bitmap, 0, 0, canvas.width, canvas.height); bitmap.close?.();
               return canvas.toDataURL('image/png');
             })());
             item.data = await cache.get(item.src);

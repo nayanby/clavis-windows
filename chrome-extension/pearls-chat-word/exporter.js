@@ -47,7 +47,7 @@
     notify('preparing','Reading chat…');
     try {
       if (!Number.isInteger(tabId) || tabId <= 0) throw Error('Open a chat and click the extension icon there.');
-      await chrome.scripting.executeScript({ target: { tabId }, files: ['capture.js'] });
+      await chrome.scripting.executeScript({ target: { tabId }, files: ['vendor/html2canvas.min.js','capture.js'] });
       chat = await invoke('scan');
       $('source').textContent = ({ chatgpt: 'ChatGPT', claude: 'Claude', gemini: 'Gemini' }[chat.provider] || 'Chat') + ' · ' + chat.title;
       if (!$('title').value.trim()) $('title').value = chat.title || 'Conversation';

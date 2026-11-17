@@ -14,7 +14,7 @@ async function openExporter(tab, request = {}) {
 chrome.action.onClicked.addListener(async tab => {
   try {
     if (!['chatgpt.com','chat.openai.com','claude.ai','gemini.google.com'].includes(new URL(tab.url).hostname)) throw Error('Open a ChatGPT, Claude or Gemini conversation.');
-    await chrome.scripting.executeScript({target:{tabId:tab.id},files:['capture.js','page-toolbar.js']});
+    await chrome.scripting.executeScript({target:{tabId:tab.id},files:['vendor/html2canvas.min.js','capture.js','page-toolbar.js']});
     await chrome.scripting.executeScript({target:{tabId:tab.id},func:()=>globalThis.PearlsToolbar.toggleOverlay()});
     await chrome.action.setBadgeText({tabId:tab.id,text:''});
     await chrome.action.setTitle({tabId:tab.id,title:'Show Word download toolbar'});

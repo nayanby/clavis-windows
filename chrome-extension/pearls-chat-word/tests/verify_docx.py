@@ -17,6 +17,13 @@ for path in sorted((ROOT/'build/chat-word-qa').glob('*.docx')):
         for name in z.namelist():
             if name.endswith(('.xml','.rels')):E.fromstring(z.read(name))
         d=E.fromstring(z.read('word/document.xml'));s=E.fromstring(z.read('word/styles.xml'));n=E.fromstring(z.read('word/numbering.xml'))
+        if path.name=='diagram-example.docx':
+            assert len(d.xpath('//*[local-name()="drawing"]'))==2
+            assert all(e.get('cy')=='1440000' for e in d.xpath('//*[local-name()="inline"]/*[local-name()="extent"]'))
+            assert d.findall('.//w:vertAlign[@w:val="superscript"]',NS)
+            assert d.findall('.//w:vertAlign[@w:val="subscript"]',NS)
+            print('PASS',path.name,'diagram PNGs, 4 cm image height, superscripts and subscripts')
+            continue
         types=z.read('[Content_Types].xml')
         assert b'wordprocessingml.document.main+xml' in types
         assert b'template.main+xml' not in types

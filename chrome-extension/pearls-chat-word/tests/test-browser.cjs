@@ -14,6 +14,7 @@ async function run() {
     const errors = []; page.on('pageerror', error => errors.push(error.message));
     await page.route('**/*', route => route.fulfill({ contentType: 'text/html', body: fs.readFileSync(path.join(__dirname, 'fixtures/chatgpt.html'), 'utf8') }));
     await page.goto('https://chatgpt.com/c/test-fixture');
+    await page.addScriptTag({ path: path.join(root, 'vendor/html2canvas.min.js') });
     await page.addScriptTag({ path: path.join(root, 'capture.js') });
     const chat = await page.evaluate(() => PearlsCapture.snapshot());
     assert.equal(chat.messages.length, 6);
@@ -98,6 +99,25 @@ async function run() {
     assert.equal(await page.evaluate(() => { try { PearlsCapture.merge([{id:'a'}],[{id:'z'}]); return false; } catch { return true; } }), true);
     await page.addScriptTag({ path: path.join(root, 'vendor/jszip.min.js') });
     await page.addScriptTag({ path: path.join(root, 'word-export.js') });
+    const visual=await page.evaluate(async({template,profile})=>{
+      const fixture=document.createElement('div');fixture.style.cssText='width:780px;background:white;padding:12px;font:20px Arial';
+      fixture.innerHTML='<p>Carrier parents: Aa × Aa</p><div style="border:1px solid #ddd;border-radius:16px;padding:20px"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center"><div>×</div><div>A</div><div>a</div><div>A</div><div style="background:oklch(96% 0.03 160);padding:20px;border-radius:8px">AA</div><div style="background:#f5eddf;padding:20px;border-radius:8px">Aa</div><div>a</div><div style="background:#f5eddf;padding:20px;border-radius:8px">Aa</div><div style="background:#f7e6e8;padding:20px;border-radius:8px">aa</div></div><div style="display:flex;justify-content:space-around;padding-top:20px"><span>25% unaffected</span><span>50% carriers</span><span>25% affected</span></div></div><p>p^2+2pq+q^2=1</p><p><span class="katex"><annotation encoding="application/x-tex">x_{ij} + q^{2}</annotation></span></p><svg xmlns="http://www.w3.org/2000/svg" width="300" height="100"><rect width="300" height="100" fill="#e3f1ec"/><text x="20" y="55" font-size="24">SVG Diagram</text></svg>';
+      document.body.append(fixture);
+      try{
+        const data=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks:PearlsCapture.blocks(fixture)}],warnings:[]});
+        const images=data.messages[0].blocks.filter(b=>b.type==='image');
+        if(images.length!==2||images.some(b=>!b.data))throw Error('Diagram rasterization failed: '+JSON.stringify(data.warnings));
+        const doc=await PearlsWord.create(data,{single:true,title:'Inheritance Diagram',templateBytes:new Uint8Array(template),profile});
+        const zip=await JSZip.loadAsync(doc.bytes),xml=await zip.file('word/document.xml').async('string');
+        return {bytes:[...doc.bytes],png:images[0].data.split(',')[1],xml,types:data.messages[0].blocks.map(b=>b.type)};
+      }finally{fixture.remove();}
+    },{template,profile});
+    assert.deepEqual(visual.types,['paragraph','image','paragraph','paragraph','image']);
+    assert(visual.xml.includes('w:val="superscript"')&&visual.xml.includes('w:val="subscript"'));
+    assert(!visual.xml.includes('p^2')&&!visual.xml.includes('q^{2}')&&!visual.xml.includes('x_{ij}'));
+    assert.equal((visual.xml.match(/cy="1440000"/g)||[]).length,4);
+    fs.writeFileSync(path.join(output,'diagram-example.docx'),Buffer.from(visual.bytes));
+    fs.writeFileSync(path.join(output,'diagram-example.png'),Buffer.from(visual.png,'base64'));
     const headingCases=await page.evaluate(async({template,profile})=>{
       const h=(level,text)=>({type:'heading',level,runs:[{text}]});
       const cases=[

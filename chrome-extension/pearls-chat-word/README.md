@@ -46,7 +46,9 @@ The export includes the active conversation branch and history exposed by the ch
 
 Readable images, including pictures inside preview buttons, are downloaded and embedded as PNG at 4 cm height. Width follows the image proportions up to the page width. The extension can retrieve images from the providers' image CDNs when page CORS prevents access. Browser restrictions can still prevent downloading some remote or protected images; those keep a labelled source link and trigger a visible warning. Source URLs in an exported document can contain private chat identifiers; share the document accordingly.
 
-Equations retain their LaTeX/text representation rather than becoming native Word equation objects. Interactive charts, videos and proprietary site widgets are outside the supported text/table/image export.
+Formula powers and indices are exported as native Word superscript and subscript text (for example p² and q²). Other equation text is retained without creating native Word equation objects.
+
+Inline visual grids, labelled diagram cards, SVG diagrams and readable canvases are embedded as PNG images at 4 cm height. Ordinary comparison tables remain editable Word tables. Diagram rendering runs locally using the bundled html2canvas library. Cross-origin frames, videos and separate proprietary site widgets are outside the supported export.
 
 Chat sites change their HTML over time. If no responses are detected, leave the conversation open, refresh the extension and retry. This version has automated tests against representative DOM fixtures for all three sites; live signed-in site layouts still need user verification.
 

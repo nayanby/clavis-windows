@@ -5,6 +5,20 @@
   const REL = 'http://schemas.openxmlformats.org/package/2006/relationships';
   const esc = text => String(text ?? '').replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\ufffe\uffff]/g, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const textOf = runs => (runs || []).map(run => run.text).join('');
+  function formulaRuns(run) {
+    if(run.code||run.href||run.sub||run.sup)return [run];
+    const text=String(run.text||'');
+    if(!run.math&&!/[A-Za-z0-9)]\^(?:\{|[0-9])/.test(text))return [run];
+    const pattern=/([_^])(?:\{([^{}]+)\}|([A-Za-z0-9+−-]))/g;
+    const result=[];let start=0;
+    for(const match of text.matchAll(pattern)){
+      if(match.index>start)result.push({...run,text:text.slice(start,match.index)});
+      result.push({...run,text:match[2]||match[3],sub:match[1]==='_',sup:match[1]==='^'});
+      start=match.index+match[0].length;
+    }
+    if(start<text.length)result.push({...run,text:text.slice(start)});
+    return result.length?result:[run];
+  }
   function xml(text) {
     const doc = new DOMParser().parseFromString(text, 'application/xml');
     if (doc.querySelector('parsererror')) throw Error('The Word template contains invalid XML.');
@@ -24,7 +38,7 @@
       return id;
     }
     runs(runs, { heading = false, table = false, header = false } = {}) {
-      return (runs || []).map(run => {
+      return (runs || []).flatMap(formulaRuns).map(run => {
         const properties = [];
         if (run.bold && !heading) properties.push('<w:rStyle w:val="SubtleEmphasis"/>');
         if (run.bold) properties.push('<w:b/>');

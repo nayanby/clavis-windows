@@ -11,6 +11,7 @@ OUTPUT=ROOT/'outputs/pearls-chat-word'
 def main():
     OUTPUT.mkdir(parents=True,exist_ok=True)
     files=['manifest.json','background.js','capture.js','page-toolbar.js','exporter.html','exporter.css','exporter.js','word-export.js','README.md','THIRD_PARTY_NOTICES.txt','artifact.md','template/base.docx','template/profile.json','vendor/jszip.min.js']
+    files += ['vendor/html2canvas.min.js','vendor/html2canvas.LICENSE.txt']
     files += [f'icons/{size}.png' for size in (16,32,48,128)]
     manifest=json.loads((SOURCE/'manifest.json').read_text())
     assert manifest['manifest_version']==3
