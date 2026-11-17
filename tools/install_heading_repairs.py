@@ -10,7 +10,7 @@ from apply_clinical_template import DEFAULT_DATA, ROOT, sha
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--set', choices=('singleton-bs3','inverted-bs-parents'), default='singleton-bs3')
+    parser.add_argument('--set', choices=('singleton-bs3','inverted-bs-parents','portable-bs3'), default='singleton-bs3')
     args = parser.parse_args()
     output = ROOT / 'build' / args.set
     reports = json.loads((output / 'report.json').read_text(encoding='utf-8'))
