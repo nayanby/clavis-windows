@@ -155,7 +155,7 @@ async function run() {
       }finally{fixture.remove();}
     },{template,profile});
     assert.deepEqual(visual.types,['paragraph','image','paragraph','paragraph','image']);
-    assert(visual.xml.includes('w:val="superscript"')&&visual.xml.includes('w:val="subscript"'));
+    assert(visual.xml.includes('w:val="superscript"')&&visual.xml.includes('<m:sSup>')&&visual.xml.includes('<m:sSub>'));
     assert(!visual.xml.includes('p^2')&&!visual.xml.includes('q^{2}')&&!visual.xml.includes('x_{ij}'));
     assert.equal((visual.xml.match(/cy="1440000"/g)||[]).length,4);
     fs.writeFileSync(path.join(output,'diagram-example.docx'),Buffer.from(visual.bytes));

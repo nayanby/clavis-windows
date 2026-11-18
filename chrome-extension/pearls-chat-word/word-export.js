@@ -5,8 +5,59 @@
   const REL = 'http://schemas.openxmlformats.org/package/2006/relationships';
   const esc = text => String(text ?? '').replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\ufffe\uffff]/g, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const textOf = runs => (runs || []).map(run => run.text).join('');
+  const mr = text => `<m:r><m:t xml:space="preserve">${esc(text)}</m:t></m:r>`;
+  const fraction = (a,b) => `<m:f><m:num>${a}</m:num><m:den>${b}</m:den></m:f>`;
+  const scripts = (base,sub,sup) => sub && sup
+    ? `<m:sSubSup><m:e>${base}</m:e><m:sub>${sub}</m:sub><m:sup>${sup}</m:sup></m:sSubSup>`
+    : `<m:${sub?'sSub':'sSup'}><m:e>${base}</m:e><m:${sub?'sub':'sup'}>${sub||sup}</m:${sub?'sub':'sup'}></m:${sub?'sSub':'sSup'}>`;
+  const radical = (base,degree='') => `<m:rad><m:radPr>${degree?'':'<m:degHide m:val="1"/>'}</m:radPr><m:deg>${degree}</m:deg><m:e>${base}</m:e></m:rad>`;
+  function mathML(node) {
+    const children=[...node.children], parts=children.map(mathML);
+    switch(node.localName) {
+      case 'annotation': case 'annotation-xml': return '';
+      case 'semantics': return parts[0]||'';
+      case 'mfrac': return fraction(parts[0]||'',parts[1]||'');
+      case 'msub': return scripts(parts[0],parts[1],'');
+      case 'msup': return scripts(parts[0],'',parts[1]);
+      case 'msubsup': return scripts(parts[0],parts[1],parts[2]);
+      case 'msqrt': return radical(parts.join(''));
+      case 'mroot': return radical(parts[0],parts[1]);
+      case 'mtable': return `<m:m>${parts.join('')}</m:m>`;
+      case 'mtr': return `<m:mr>${parts.join('')}</m:mr>`;
+      case 'mtd': return `<m:e>${parts.join('')}</m:e>`;
+      case 'mfenced': return mr(node.getAttribute('open')||'(')+parts.join(mr(node.getAttribute('separators')||','))+mr(node.getAttribute('close')||')');
+      case 'mspace': return mr(' ');
+      default: return children.length?parts.join(''):mr(node.textContent);
+    }
+  }
+  // TeX fallback for sources without accessible MathML; never print command syntax.
+  function texMath(source) {
+    const text=source.replace(/^\\[([]|\\[)\]]$/g,'').replace(/^\$\$?|\$\$?$/g,'');let i=0;
+    const symbols={times:'×',cdot:'·',pm:'±',le:'≤',leq:'≤',ge:'≥',geq:'≥',neq:'≠',approx:'≈',infty:'∞',alpha:'α',beta:'β',gamma:'γ',delta:'δ',Delta:'Δ',theta:'θ',lambda:'λ',mu:'μ',pi:'π',sigma:'σ',Sigma:'Σ',sum:'∑',int:'∫',rightarrow:'→',to:'→',quad:' ',qquad:'  '};
+    function atom(){
+      if(i>=text.length)return '';
+      const c=text[i++];
+      if(c==='{'){const value=sequence('}');if(text[i]==='}')i++;return value;}
+      if(c==='\\'){
+        const match=/^[A-Za-z]+/.exec(text.slice(i));if(!match)return mr(text[i++]||'');
+        const name=match[0];i+=name.length;
+        if(['frac','dfrac','tfrac'].includes(name))return fraction(atom(),atom());
+        if(name==='sqrt')return radical(atom());
+        if(['text','textrm','textnormal','mathrm','mathbf','mathit','operatorname','mathsf'].includes(name))return atom();
+        if(['left','right','displaystyle','textstyle'].includes(name))return '';
+        return mr(symbols[name]??name);
+      }
+      return mr(c);
+    }
+    function sequence(end){let out='';while(i<text.length&&text[i]!==end){let base=atom(),sub='',sup='';while(text[i]==='_'||text[i]==='^'){const kind=text[i++],value=atom();if(kind==='_')sub=value;else sup=value;}out+=sub||sup?scripts(base,sub,sup):base;}return out;}
+    return sequence(null);
+  }
+  function equation(run){
+    if(run.mathml){const doc=new DOMParser().parseFromString(run.mathml,'application/xml');if(!doc.querySelector('parsererror'))return `<m:oMath>${mathML(doc.documentElement)}</m:oMath>`;}
+    return `<m:oMath>${texMath(String(run.text||''))}</m:oMath>`;
+  }
   function formulaRuns(run) {
-    if(run.code||run.href||run.sub||run.sup)return [run];
+    if(run.math||run.code||run.href||run.sub||run.sup)return [run];
     const text=String(run.text||'');
     if(!run.math&&!/[A-Za-z0-9)]\^(?:\{|[0-9])/.test(text))return [run];
     const pattern=/([_^])(?:\{([^{}]+)\}|([A-Za-z0-9+−-]))/g;
@@ -39,6 +90,7 @@
     }
     runs(runs, { heading = false, table = false, header = false } = {}) {
       return (runs || []).flatMap(formulaRuns).map(run => {
+        if (run.math) return equation(run);
         const properties = [];
         if (run.bold && !heading) properties.push('<w:rStyle w:val="SubtleEmphasis"/>');
         if (run.bold) properties.push('<w:b/>');
@@ -195,7 +247,7 @@
     async finish(body, title) {
       const doc = xml(await this.zip.file('word/document.xml').async('string'));
       const section = new XMLSerializer().serializeToString(doc.getElementsByTagNameNS(W, 'sectPr')[0]);
-      const document = `${declaration}<w:document xmlns:w="${W}" xmlns:r="${R}" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><w:body>${body}${section}</w:body></w:document>`;
+      const document = `${declaration}<w:document xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="${W}" xmlns:r="${R}" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><w:body>${body}${section}</w:body></w:document>`;
       const parsed = xml(document);
       // Keep OOXML property order valid even when several inline formats combine.
       const rOrder = 'rStyle rFonts b bCs i iCs caps smallCaps strike dstrike outline shadow emboss imprint noProof snapToGrid vanish webHidden color spacing w kern position sz szCs highlight u effect bdr shd fitText vertAlign rtl cs em lang eastAsianLayout specVanish oMath rPrChange'.split(' ');

@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.15';
+  const VERSION='1.0.16';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -25,7 +25,7 @@
     // KaTeX duplicates its visible and accessible representations. Preserve LaTeX once.
     if (node.matches('.katex,.MathJax,mjx-container,math')) {
       const latex = node.querySelector('annotation[encoding="application/x-tex"]')?.textContent;
-      return [{ text: latex || node.getAttribute('aria-label') || node.textContent, ...format, math: true }];
+      return [{ text: latex || node.getAttribute('aria-label') || node.textContent, ...format, math: true, mathml: (node.matches('math') ? node : node.querySelector('math'))?.outerHTML }];
     }
     const next = { ...format };
     if (tag === 'strong' || tag === 'b') next.bold = true;
