@@ -102,6 +102,35 @@ async function run() {
     assert.equal(await page.evaluate(() => { try { PearlsCapture.merge([{id:'a'}],[{id:'z'}]); return false; } catch { return true; } }), true);
     await page.addScriptTag({ path: path.join(root, 'vendor/jszip.min.js') });
     await page.addScriptTag({ path: path.join(root, 'word-export.js') });
+    const galleryResult=await page.evaluate(async({template,profile})=>{
+      const message=document.createElement('div');message.setAttribute('data-message-author-role','assistant');message.setAttribute('data-message-id','gallery-test');
+      const gallery=document.createElement('div');gallery.style.cssText='display:grid;grid-template-columns:repeat(3,130px);gap:8px';
+      for(let i=0;i<3;i++){const tile=document.createElement('div');tile.style.cssText='height:100px;background:#e9eff2;border-radius:20px';gallery.append(tile);}
+      message.append(gallery);document.body.append(message);
+      try{
+        const before=PearlsCapture.snapshot().messages.find(row=>row.id==='gallery-test');
+        if(before.blocks.some(block=>block.diagramId))throw Error('Loading gallery was misclassified as a diagram');
+        const pending=await PearlsCapture.resolveImages({messages:[before],warnings:[]});
+        if(!pending.warnings.some(text=>text.includes('still loading')))throw Error('Loading gallery was silently exported');
+        setTimeout(()=>{
+          gallery.replaceChildren();
+          for(const color of ['#174e80','#1d7047','#8c365a']){
+            const canvas=document.createElement('canvas');canvas.width=120;canvas.height=80;const ctx=canvas.getContext('2d');ctx.fillStyle=color;ctx.fillRect(0,0,120,80);ctx.fillStyle='white';ctx.fillRect(20,20,50,35);
+            const img=document.createElement('img');img.src=canvas.toDataURL();img.width=120;img.height=80;img.alt='Loaded photograph';gallery.append(img);
+          }
+        },200);
+        const position=scrollY;
+        await PearlsCapture.prepareVisuals(PearlsCapture.responseTargets().length-1);
+        const captured=PearlsCapture.snapshot().messages.find(row=>row.id==='gallery-test');
+        const resolved=await PearlsCapture.resolveImages({messages:[captured],warnings:[]});
+        const images=resolved.messages[0].blocks.filter(block=>block.type==='image');
+        if(images.length!==3||images.some(image=>!image.data||image.diagramId))throw Error('Photo gallery must export individual loaded images');
+        const doc=await PearlsWord.create(resolved,{single:true,title:'Loaded Photo Gallery',templateBytes:new Uint8Array(template),profile});
+        const zip=await JSZip.loadAsync(doc.bytes),xml=await zip.file('word/document.xml').async('string');
+        return {images:images.length,drawings:(xml.match(/<w:drawing>/g)||[]).length,restored:scrollY===position,warnings:resolved.warnings};
+      }finally{message.remove();}
+    },{template,profile});
+    assert.equal(galleryResult.images,3);assert.equal(galleryResult.drawings,3);assert(galleryResult.restored);assert.deepEqual(galleryResult.warnings,[]);
     const visual=await page.evaluate(async({template,profile})=>{
       const fixture=document.createElement('div');fixture.style.cssText='width:780px;background:white;padding:12px;font:20px Arial';
       fixture.innerHTML='<p>Carrier parents: Aa × Aa</p><div style="padding:20px"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center"><div>×</div><div>A</div><div>a</div><div>A</div><div style="background:oklch(96% 0.03 160);padding:20px;border-radius:8px">AA</div><div style="background:#f5eddf;padding:20px;border-radius:8px">Aa</div><div>a</div><div style="background:#f5eddf;padding:20px;border-radius:8px">Aa</div><div style="background:#f7e6e8;padding:20px;border-radius:8px">aa</div></div><div style="display:flex;justify-content:space-around;padding-top:20px"><div><h3>25%</h3><div>Unaffected noncarrier</div></div><div><h3>50%</h3><div>Unaffected carrier</div></div><div><h3>25%</h3><div>Affected</div></div></div></div><p>p^2+2pq+q^2=1</p><p><span class="katex"><annotation encoding="application/x-tex">x_{ij} + q^{2}</annotation></span></p><svg xmlns="http://www.w3.org/2000/svg" width="300" height="100"><rect width="300" height="100" fill="#e3f1ec"/><text x="20" y="55" font-size="24">SVG Diagram</text></svg>';

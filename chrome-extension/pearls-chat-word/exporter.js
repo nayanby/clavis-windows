@@ -28,6 +28,7 @@
         if (action === 'all') return { value: await reader.resolveImages(await reader.conversation(update=>{
           if(jobId)globalThis.PearlsToolbar?.updateProgress(jobId,{phase:'collecting',text:'Collecting chat · '+update.messages+' messages…'});
         })) };
+        await reader.prepareVisuals(selectedId);
         const data = reader.snapshot();
         const responses = data.messages.filter(message => message.role === 'assistant');
         const response = responses[selectedId];

@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.14';
+  const VERSION='1.0.15';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -117,6 +117,8 @@
   }
   function isDiagram(node) {
     if(!node.matches('div,section,figure,[role="img"]') || node.querySelector('table,ul,ol,pre'))return false;
+    // Photo galleries and their loading skeletons are not SmartArt diagrams.
+    if(node.querySelector('img,picture')||(!node.textContent.trim()&&!node.querySelector('svg,canvas')))return false;
     if([...node.querySelectorAll('h1,h2,h3,h4')].some(el=>!/^\s*\d+(?:\.\d+)?\s*%\s*$/.test(el.textContent)))return false;
     const rect=node.getBoundingClientRect();
     if(rect.width<100||rect.height<60||node.textContent.length>2500)return false;
@@ -149,6 +151,44 @@
     const rect=node.getBoundingClientRect();
     return {type:'image',diagramId:id,alt:node.getAttribute('aria-label')||'Diagram: '+node.textContent.trim().replace(/\s+/g,' ').slice(0,160),width:rect.width,height:rect.height};
   }
+  function imagePlaceholder(node){
+    if(!node.matches('div,section,figure')||node.textContent.trim()||node.querySelector('img,picture,svg,canvas,table'))return false;
+    const css=getComputedStyle(node),children=[...node.children];
+    return /grid|flex/.test(css.display)&&children.length>=2&&children.length<=8&&children.every(child=>{
+      const r=child.getBoundingClientRect(),s=getComputedStyle(child);
+      return r.width>=70&&r.height>=70&&(parseFloat(s.borderRadius)>0||s.backgroundColor!=='rgba(0, 0, 0, 0)');
+    });
+  }
+  async function prepareVisuals(index=null){
+    let targets=entries(site());
+    if(index!==null)targets=targets.filter(entry=>entry.role==='assistant').slice(Number(index),Number(index)+1);
+    const positions=new Map(),originalX=scrollX,originalY=scrollY,deadline=Date.now()+18000;
+    const remember=node=>{for(let p=node.parentElement;p;p=p.parentElement)if(!positions.has(p))positions.set(p,[p.scrollLeft,p.scrollTop]);};
+    async function reveal(node){
+      remember(node);node.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'});
+      await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+      await sleep(100);
+    }
+    try{
+      for(const entry of targets){
+        const galleries=[...entry.node.querySelectorAll('div,section,figure')].filter(imagePlaceholder);
+        for(const gallery of galleries){
+          if(Date.now()>=deadline)break;
+          await reveal(gallery);
+          while(gallery.isConnected&&imagePlaceholder(gallery)&&Date.now()<deadline)await sleep(120);
+        }
+        for(const img of entry.node.querySelectorAll('img')){
+          if(Date.now()>=deadline)break;
+          if(/\/s2\/favicons|\/favicon/i.test(img.currentSrc||img.src))continue;
+          await reveal(img);
+          while(!img.complete&&Date.now()<deadline)await sleep(120);
+        }
+      }
+    }finally{
+      for(const [node,[x,y]]of positions){node.scrollLeft=x;node.scrollTop=y;}
+      scrollTo({left:originalX,top:originalY,behavior:'instant'});
+    }
+  }
   function blocks(parent) {
     const output = [];
     let pending = [];
@@ -167,6 +207,7 @@
       }
       if (hidden(node)) continue;
       const tag = node.tagName.toLowerCase();
+      if(imagePlaceholder(node)){flush();output.push({type:'image',pending:true,alt:'Image gallery is still loading'});continue;}
       if(isDiagram(node)){flush();output.push(diagram(node));continue;}
       if (/^h[1-6]$/.test(tag)) { flush(); output.push({ type: 'heading', level: Number(tag[1]), runs: inlines(node) }); }
       else if (tag === 'p') {
@@ -219,7 +260,9 @@
   function image(img) {
     let elementId=diagramIds.get(img);
     if(!elementId){elementId='picture-'+(++diagramSequence);diagramIds.set(img,elementId);diagramRenders.set(elementId,{node:img});}
-    return { type: 'image',elementId, src: img.currentSrc || img.src, alt: img.alt || 'Image', width: img.naturalWidth || img.width || 640, height: img.naturalHeight || img.height || 480 };
+    const lazy=img.getAttribute('data-src')||img.getAttribute('data-original');
+    const src=/^data:/i.test(img.currentSrc||img.src)&&/^https?:/i.test(lazy||'')?lazy:img.currentSrc||img.src;
+    return { type: 'image',elementId, src, alt: img.alt || 'Image', width: img.naturalWidth || img.width || 640, height: img.naturalHeight || img.height || 480 };
   }
   function contentImages(items) {
     return items.filter(item => {
@@ -316,6 +359,7 @@
       if (!topReached) throw Error('The start of the chat could not be reached. Expand earlier messages in the chat and retry.');
       let result;
       for (let i = 0; i < 250; i++) {
+        await prepareVisuals();
         result = await resolveImages(snapshot(provider),true);
         collected = merge(collected, result.messages);
         onProgress({messages:collected.length});
@@ -344,6 +388,7 @@
           try {
             if(item.data)continue;
             if(diagramsOnly&&!item.diagramId)continue;
+            if(item.pending)throw Error('Images are still loading in the chat. Wait for the photographs to appear, then export again.');
             if(item.diagramId){
               const entry=diagramRenders.get(item.diagramId);
               const rendered=entry?await renderDiagram(entry.node):null;
@@ -395,7 +440,7 @@
     result.warnings = [...new Set(result.warnings)];
     return result;
   }
-  globalThis.PearlsCapture = { version:VERSION, snapshot, conversation, resolveImages, merge, blocks,
+  globalThis.PearlsCapture = { version:VERSION, snapshot, conversation, resolveImages, prepareVisuals, merge, blocks,
     responseTargets: () => entries(site()).filter(entry => entry.role === 'assistant'),
     isGenerating: () => isStreaming(site())
   };

@@ -48,6 +48,8 @@ The export includes the active conversation branch and history exposed by the ch
 
 Readable images, including pictures inside preview buttons, are downloaded and embedded as PNG at 4 cm height. Width follows the image proportions up to the page width. The extension can retrieve images from the providers' image CDNs when page CORS prevents access. Browser restrictions can still prevent downloading some remote or protected images; those keep a labelled source link and trigger a visible warning. Source URLs in an exported document can contain private chat identifiers; share the document accordingly.
 
+Photo galleries are exported as individual images, not rasterized as SmartArt. Before capture, the exporter temporarily scrolls image areas into view and waits for lazy-loaded photographs, then restores the scroll position. Empty loading grids are never accepted as finished diagrams; unresolved loading areas produce an explicit warning instead of a blank tile image.
+
 Formula powers and indices are exported as native Word superscript and subscript text (for example p² and q²). Other equation text is retained without creating native Word equation objects.
 
 Inline visual grids, labelled diagram cards, SVG diagrams and readable canvases are embedded as PNG images at 4 cm height. Ordinary comparison tables remain editable Word tables. Diagram rendering runs locally using the bundled html2canvas library. Cross-origin frames, videos and separate proprietary site widgets are outside the supported export.
