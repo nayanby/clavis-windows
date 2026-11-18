@@ -171,7 +171,7 @@ function cnlStudyTree(saved, savedOnly = false) {
     return node;
   };
 
-  cnlH1LibraryRecords().forEach(record => {
+  (savedOnly ? [] : cnlH1LibraryRecords()).forEach(record => {
     const name = String(record.folderName || 'Unfiled') || 'Unfiled';
     const stem = cnlStudyStem(record);
     const label = String(record.displayName || stem);
@@ -207,17 +207,7 @@ function cnlStudyTree(saved, savedOnly = false) {
     if (Number.isFinite(row.item.chapterOrder)) chapter.order = row.item.chapterOrder;
   });
 
-  let list = Array.from(folders.values());
-  if (savedOnly) {
-    list.forEach(folder => {
-      folder.chapters.forEach(chapter => {
-        chapter.heads = chapter.heads.filter(head => head.row);
-      });
-      folder.chapters = folder.chapters.filter(chapter =>
-        chapter.heads.length || chapter.others.length);
-    });
-    list = list.filter(folder => folder.chapters.length);
-  }
+  const list = Array.from(folders.values());
   list.forEach(folder => folder.chapters.sort((a, b) =>
     (a.order ?? cnlStudyOrdinal(a.label)) - (b.order ?? cnlStudyOrdinal(b.label))
       || a.label.localeCompare(b.label, undefined, {numeric:true})));
@@ -227,23 +217,6 @@ function cnlStudyTree(saved, savedOnly = false) {
 function cnlStudyCover(chapter) {
   const have = chapter.heads.filter(head => head.row).length + chapter.others.length;
   return { have, total: Math.max(chapter.heads.length, have) };
-}
-
-function cnlStudyQbankTree(saved) {
-  const general = saved.rows.filter(row => row.item.navigationGroup === 'general');
-  const tree = cnlStudyTree({rows: saved.rows.filter(row => row.item.navigationGroup !== 'general')});
-  general.forEach(row => {
-    if (!tree.some(group => group.name === row.folder)) tree.push({name:row.folder,chapters:[]});
-  });
-  tree.forEach(group => {
-    group.chapters.forEach(chapter => {
-      chapter.heads = chapter.heads.filter(head => head.row);
-    });
-    const rows = general.filter(row => row.folder === group.name);
-    group.chapters.unshift({folder:group.name,label:'General',docKey:'__general__',
-      record:null,heads:[],others:rows,isGeneral:true,order:0});
-  });
-  return tree.sort((a,b) => a.name.localeCompare(b.name));
 }
 
 function cnlStudyGroupOf(tree, nav) {
@@ -344,12 +317,13 @@ async function cnlStudyRender(spec) {
   setup.textContent = '';
   list.textContent = '';
 
-  const saved = await spec.load();
+  const saved = nav.creating ? {rows: []} : await spec.load();
   if (!saved) {
     cnlListHint(list, 'Could not load your saved ' + spec.plural + '. Reopen this tab to try again.');
     return;
   }
-  const tree = spec.nav === 'quiz' ? cnlStudyQbankTree(saved) : cnlStudyTree(saved);
+  const browsingQbank = spec.nav === 'quiz' && !nav.creating;
+  const tree = cnlStudyTree(saved, browsingQbank);
   const level = nav.chapter ? 2 : nav.subject ? 1 : 0;
   const group = level ? cnlStudyGroupOf(tree, nav) : null;
   const chapter = level === 2 ? cnlStudyChapterOf(group, nav) : null;
@@ -361,7 +335,7 @@ async function cnlStudyRender(spec) {
   // The breadcrumb appears only once there is somewhere to go back to. On the
   // subject grid the tab's own heading already names the level, so a bar here
   // would repeat it and add a rule for nothing.
-  if (level) {
+  if (level || nav.creating) {
     const bar = document.createElement('div');
     bar.className = 'cnl-study-bar';
     const back = document.createElement('button');
@@ -374,13 +348,15 @@ async function cnlStudyRender(spec) {
         if(nav.bookmarks.bank){nav.bookmarks.bank='';nav.bookmarks.bankLabel='';}
         else if(nav.bookmarks.chapter){nav.bookmarks.chapter='';nav.bookmarks.chapterLabel='';}
         else nav.bookmarks=null;
-      }else if (level === 2) nav.chapter = ''; else nav.subject = '';
+      }else if (level === 2) nav.chapter = '';
+      else if (level === 1) nav.subject = '';
+      else nav.creating = false;
       cnlStudyRender(spec);
     });
     bar.appendChild(back);
     const path = document.createElement('div');
     path.className = 'cnl-study-path';
-    path.textContent = [spec.root, nav.subject, nav.chapter && nav.chapterLabel]
+    path.textContent = [spec.root, nav.creating && 'Create Qbank', nav.subject, nav.chapter && nav.chapterLabel]
       .filter(Boolean).join('  \u203a  ');
     bar.appendChild(path);
     setup.appendChild(bar);
@@ -392,7 +368,7 @@ async function cnlStudyRender(spec) {
     cnlStudyPaintBookmarks(list,group,spec);return;
   }
 
-  if (spec.fields && !(spec.nav==='quiz'&&chapter?.isGeneral)) {
+  if (spec.fields && (spec.nav !== 'quiz' || nav.creating)) {
     const fields = document.createElement('div');
     fields.className = 'cnl-study-fields';
     spec.fields(fields, nav);
@@ -406,14 +382,14 @@ async function cnlStudyRender(spec) {
 
   if (level === 0) cnlStudyPaintSubjects(list, tree, spec);
   else if (level === 1) cnlStudyPaintChapters(list, group, spec);
-  else if (chapter.isGeneral) cnlStudyPaintQuizModules(list, {chapters:[chapter]}, spec);
+  else if (browsingQbank) cnlStudyPaintQuizModules(list, {chapters:[chapter]}, spec);
   else cnlStudyPaintHeadings(list, chapter, spec);
 }
 
 function cnlStudyPaintSubjects(host, tree, spec) {
   if (!tree.length) {
     cnlListHint(host, spec.nav === 'quiz'
-      ? 'No Qbank modules yet. Import HTML or create a quiz from a topic.'
+      ? (cnlStudyNav.quiz.creating ? 'No Deep Dive notes are available.' : 'No Qbank modules yet. Import HTML or select Create Qbank.')
       : 'Nothing is in the library yet. Add notes in Deep Dive first.');
     return;
   }
@@ -438,7 +414,9 @@ function cnlStudyPaintSubjects(host, tree, spec) {
     name.textContent = group.name;
     const count = document.createElement('div');
     count.className = 'subject-count';
-    count.textContent = spec.nav === 'quiz'
+    count.textContent = spec.nav === 'quiz' && cnlStudyNav.quiz.creating
+      ? cnlCount(group.chapters.length, 'chapter')
+      : spec.nav === 'quiz'
       ? cnlCount(cnlStudyQuizModules(group).length, 'module')
       : cnlCount(group.chapters.length, 'chapter')
         + (tally.total ? ' \u00b7 ' + tally.have + '/' + tally.total + ' ' + spec.short : '');
@@ -458,7 +436,7 @@ function cnlStudyPaintSubjects(host, tree, spec) {
 }
 
 function cnlStudyPaintChapters(host, group, spec) {
-  if(spec.nav==='quiz'){
+  if(spec.nav==='quiz' && !cnlStudyNav.quiz.creating){
     const modules=cnlStudyQuizModules(group),count=modules.reduce((n,{row})=>n+window.cnlQbank.marked(row.item).length,0);
     const tile=cnlStudyRow('★ Bookmarks',cnlCount(count,'bookmarked question'),()=>{
       cnlStudyNav.quiz.bookmarks={chapter:'',bank:''};cnlStudyRender(spec);
@@ -477,17 +455,18 @@ function cnlStudyPaintChapters(host, group, spec) {
     const number = document.createElement('div');
     number.className = 'chapter-number';
     const order=chapter.order ?? cnlStudyOrdinal(chapter.label);
-    number.textContent = chapter.isGeneral ? '' : 'Chapter ' + (order===Number.MAX_SAFE_INTEGER ? index+1 : order);
+    number.textContent = 'Chapter ' + (order===Number.MAX_SAFE_INTEGER ? index+1 : order);
     const name = document.createElement('div');
     name.className = 'chapter-name';
     name.textContent = chapter.label.replace(/^\s*(?:\d+|[IVXLCDM]+)[. _-]+/i,'');
     const meta = document.createElement('div');
     meta.className = 'chapter-meta';
-    meta.textContent = chapter.isGeneral ? cnlCount(chapter.others.length,'module')
+    meta.textContent = spec.nav === 'quiz'
+      ? (cnlStudyNav.quiz.creating ? cnlCount(chapter.heads.length, 'heading') : cnlCount(cover.have, 'Qbank'))
       : (cover.total ? cover.have + '/' + cover.total + ' ' + spec.short : 'nothing saved yet')
       + (chapter.record ? '' : ' \u00b7 note is not in the library');
     card.append(number, name, meta);
-    if (!chapter.isGeneral) cnlLibraryNumberRow(card,order===Number.MAX_SAFE_INTEGER ? index + 1 : order,name);
+    cnlLibraryNumberRow(card,order===Number.MAX_SAFE_INTEGER ? index + 1 : order,name);
     card.addEventListener('click', () => {
       const nav = cnlStudyNav[spec.nav];
       nav.chapter = chapter.docKey;
@@ -555,7 +534,7 @@ function cnlStudyPaintHeadings(host, chapter, spec) {
       : cnlStudyRow(label,spec.missingDetail,()=>cnlStudyCreate(spec,chapter,topic.label)));
   });
   if (!rows.length) {
-    cnlListHint(host, spec.nav === 'quiz' ? 'No saved quizzes in this document yet.'
+    cnlListHint(host, spec.nav === 'quiz' ? 'This note has no Deep Dive headings.'
       : 'This note has no headings listed yet. The button above works through the whole note, or open it in Deep Dive first.');
     return;
   }
@@ -729,7 +708,12 @@ const cnlStudyQuiz = {
   },
   actions(host, state) {
     const nav = state.nav;
-    if (state.level === 0) {
+    if (!nav.creating) {
+      if (state.level !== 0) return;
+      cnlStudyButton(host, 'Create Qbank', () => {
+        nav.creating = true;
+        cnlStudyRender(cnlStudyQuiz);
+      }, true);
       cnlStudyButton(host, 'Convert to JSON', () => window.cnlConvertQbankHtml());
       cnlStudyButton(host, 'Import HTML Qbank', () => window.cnlImportQbankHtml(() => cnlStudyRender(cnlStudyQuiz)));
       cnlStudyButton(host, 'Create a quiz from a topic', async () => {
@@ -761,7 +745,7 @@ const cnlStudyQuiz = {
       ), true);
       return;
     }
-    if (state.chapter.isGeneral) return;
+    if (!state.chapter) return;
     if (state.chapter.record) {
       cnlStudyButton(host, 'Write a quiz for every heading in this note', () => cnlStudyRunNotes(
         cnlStudyQuiz,

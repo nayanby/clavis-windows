@@ -756,6 +756,10 @@ def _read_quiz_records(study_root: Path) -> list[dict]:
     root = paths.quizzes_dir(Path(study_root).resolve().parent).resolve()
     for path in _quiz_record_files(study_root):
         payload = _read_json(path)
+        if isinstance(payload, dict) and isinstance(payload.get('quizzes'), list):
+            rows.extend(row for row in payload['quizzes']
+                        if isinstance(row, dict) and _quiz_row_id(row))
+            continue
         if isinstance(payload, dict) and _quiz_row_id(payload):
             parts = path.relative_to(root).parts
             if len(parts) in (4, 5) and parts[1] == 'General':
