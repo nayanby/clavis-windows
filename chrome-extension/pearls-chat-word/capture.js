@@ -1,10 +1,19 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.16';
+  const VERSION='1.0.17';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+  function citation(element) {
+    if (element.matches('[data-citation],[data-citation-index],[data-testid*="citation"],.citation,.citation-marker,.citation-container')) return true;
+    if (element.tagName !== 'A' || element.querySelector('img')) return false;
+    const label = element.textContent.trim();
+    // Source chips can be plain links after the site has flattened its markup.
+    return element.matches('[data-testid="webpage-citation-pill"],a[role="doc-biblioref"]')
+      || /^(?:\[?\d+\]?|CDC(?: Stacks)?|WHO|NIH|PubMed|NCBI|NICE|FDA|NHS)(?:\s*\+\d+)?$/i.test(label)
+      || /^(?:https?:\/\/|www\.)\S+$/i.test(label);
+  }
   function site() {
     const host = location.hostname;
     if (host === 'chatgpt.com' || host === 'chat.openai.com') return 'chatgpt';
@@ -13,7 +22,7 @@
     throw Error('Open a ChatGPT, Claude or Gemini conversation and click the extension icon there.');
   }
   function hidden(element) {
-    return element.matches(SKIP) || element.hidden || element.closest('[hidden],[aria-hidden="true"]')
+    return citation(element) || element.matches(SKIP) || element.hidden || element.closest('[hidden],[aria-hidden="true"]')
       || (element.matches('[data-markdown-copy="exclude"]')&&!element.querySelector('img,svg,canvas')&&!isDiagram(element));
   }
   function inlines(node, format = {}) {
@@ -36,9 +45,7 @@
     if (tag === 'mark') next.highlight = true;
     if (tag === 'sub') next.sub = true;
     if (tag === 'sup') next.sup = true;
-    if (tag === 'a') {
-      try { const href = new URL(node.getAttribute('href'), location.href); if (/^(https?:|mailto:)$/.test(href.protocol)) next.href = href.href; } catch {}
-    }
+    // Keep substantive linked prose as plain text, without exporting hyperlinks.
     return [...node.childNodes].flatMap(child => inlines(child, next));
   }
   const textOf = runs => runs.map(run => run.text).join('');
@@ -219,7 +226,7 @@
         const runs = inlines(node);
         const words = runs.filter(run => run.text.trim());
         const text = textOf(runs).trim();
-        const heading = words.length && words.every(run => run.bold) && text.length < 100 && text.split(/\s+/).length <= 12 && !/[.!?;:]$/.test(text);
+        const heading = !node.closest('li') && words.length && words.every(run => run.bold) && text.length < 100 && text.split(/\s+/).length <= 12 && !/[.!?;:]$/.test(text);
         if (text) output.push({ type: heading ? 'heading' : 'paragraph', ...(heading ? { level: 6, inferred: true } : {}), runs });
         // Inline image positions are preserved as image paragraphs after the caption text.
         for (const img of node.querySelectorAll('img')) output.push(image(img));

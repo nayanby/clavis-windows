@@ -173,8 +173,9 @@
             if (item.value !== null && Number.isFinite(item.value)) number = this.numbering(block, depth, item.value);
             let used = false;
             for (const child of item.blocks) {
-              if (!used && child.type === 'paragraph') {
-                output += this.paragraph(child.runs, { ...options, style: 'level' + (Math.min(depth, 2) + 1), number, depth }); used = true;
+              if (!used && (child.type === 'paragraph' || child.type === 'heading')) {
+                const runs = child.type === 'heading' ? child.runs.map(run => ({ ...run, bold: true })) : child.runs;
+                output += this.paragraph(runs, { ...options, style: 'level' + (Math.min(depth, 2) + 1), number, depth }); used = true;
               } else {
                 if (!used) { output += this.paragraph([], { ...options, number, depth }); used = true; }
                 output += this.blocks([child], { ...options, depth: child.type === 'list' ? depth + 1 : depth, indent: child.type === 'paragraph' ? 260 + depth * 260 : options.indent });
@@ -276,7 +277,6 @@
     let body = writer.paragraph([{ text: title }], { style: 'Heading1', heading: true, keepNext: true });
     const messages = chat.messages.filter(message => includePrompts || message.role === 'assistant');
     if (!messages.length) throw Error('No responses are available to export.');
-    if (chat.url && /^https?:/.test(chat.url)) body += writer.paragraph([{ text: 'Source conversation', href: chat.url }], { style: 'ChatMetadata' });
     let assistantIndex = 0, userIndex = 0;
     for (const message of messages) {
       if (!single) body += writer.paragraph([{ text: message.role === 'assistant' ? 'Response ' + (++assistantIndex) : 'My message ' + (++userIndex) }], { style: 'ChatRole', keepNext: true });
