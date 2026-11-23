@@ -5,9 +5,17 @@ from zipfile import ZipFile
 from lxml import etree as E
 W='http://schemas.openxmlformats.org/wordprocessingml/2006/main';N={'w':W};Q=lambda v:'{'+W+'}'+v
 
-def apply_spans(raw,choices):
+def apply_spans(raw,choices,reset_strong=False):
  with ZipFile(io.BytesIO(raw)) as z:
   d=E.fromstring(z.read('word/document.xml'));paragraphs=d.findall('.//w:p',N);before=''.join(d.xpath('//w:t/text()',namespaces=N));marked=0
+  if reset_strong:
+   # Reduce an earlier highlighting pass without discarding subsequent edits.
+   for style in d.xpath('//w:rStyle[@w:val="Strong"]',namespaces=N):
+    style.set(Q('val'),'SubtleEmphasis')
+    pr=style.getparent()
+    for child in list(pr):
+     if child.tag==Q('shd') and child.get(Q('fill'),'').upper() in {'FFFFCC','FFF1BD','FFFF00'}:pr.remove(child)
+     if child.tag==Q('highlight') and child.get(Q('val'))=='yellow':pr.remove(child)
   for choice in choices:
    p=paragraphs[choice['paragraph']];text=''.join(p.xpath('.//w:t/text()',namespaces=N));ranges=[]
    for phrase in choice['spans']:
@@ -53,4 +61,4 @@ def apply_spans(raw,choices):
 
 if __name__=='__main__':
  import argparse
- a=argparse.ArgumentParser();a.add_argument('document',type=Path);a.add_argument('review',type=Path);args=a.parse_args();data,count=apply_spans(args.document.read_bytes(),json.loads(args.review.read_text(encoding='utf-8')));args.document.write_bytes(data);print('Applied Strong to',count,'reviewed exam-point spans')
+ a=argparse.ArgumentParser();a.add_argument('document',type=Path);a.add_argument('review',type=Path);a.add_argument('--reset-strong',action='store_true');args=a.parse_args();data,count=apply_spans(args.document.read_bytes(),json.loads(args.review.read_text(encoding='utf-8')),reset_strong=args.reset_strong);args.document.write_bytes(data);print('Applied Strong to',count,'reviewed exam-point spans')
