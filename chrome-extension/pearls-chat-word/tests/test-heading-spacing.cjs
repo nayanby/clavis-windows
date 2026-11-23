@@ -1,0 +1,12 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {chromium}=require('playwright');
+(async()=>{const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});try{
+const page=await browser.newPage(),root=path.resolve(__dirname,'..');await page.goto('about:blank');for(const file of ['vendor/jszip.min.js','word-export.js'])await page.addScriptTag({path:path.join(root,file)});
+const result=await page.evaluate(async({template,profile})=>{
+ const blocks=[];for(let level=2;level<=6;level++){blocks.push({type:'paragraph',runs:[{text:'Body before heading'}]},{type:'rule'},{type:'heading',level,runs:[{text:' \t '},{text:'\u00a0  Heading '+level,bold:true},{text:' with internal spaces'}]});}
+ const doc=await PearlsWord.create({messages:[{role:'assistant',blocks}]},{single:true,title:'  Title',templateBytes:new Uint8Array(template),profile}),zip=await JSZip.loadAsync(doc.bytes),xml=await zip.file('word/document.xml').async('string'),ns='http://schemas.openxmlformats.org/wordprocessingml/2006/main',parsed=new DOMParser().parseFromString(xml,'application/xml');
+ return {bytes:[...doc.bytes],paragraphs:[...parsed.getElementsByTagNameNS(ns,'p')].map(p=>({text:p.textContent,style:p.getElementsByTagNameNS(ns,'pStyle')[0]?.getAttributeNS(ns,'val'),before:p.getElementsByTagNameNS(ns,'spacing')[0]?.getAttributeNS(ns,'before'),beforeLines:p.getElementsByTagNameNS(ns,'spacing')[0]?.getAttributeNS(ns,'beforeLines')}))};
+},{template:[...fs.readFileSync(path.join(root,'template/base.docx'))],profile:JSON.parse(fs.readFileSync(path.join(root,'template/profile.json')))});
+const headings=result.paragraphs.filter(p=>/Heading|boldside|Boldside/.test(p.style));assert.equal(headings.length,6);for(const p of headings){assert.equal(p.before,'0');assert.equal(p.beforeLines,'0');assert.equal(p.text,p.text.trimStart());}assert(!result.paragraphs.some(p=>!p.text.trim()));assert(headings.some(p=>p.text==='Heading 2 with internal spaces'));
+const out=path.resolve(root,'../../build/chat-word-qa');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'heading-spacing.docx'),Buffer.from(result.bytes));console.log('PASS: all six heading levels have zero space before and no leading whitespace; no empty separator paragraphs before headings; internal spaces preserved');
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1)});

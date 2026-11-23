@@ -114,6 +114,17 @@
       const style = options.style || 'Normal';
       const props = [`<w:pStyle w:val="${style}"/>`];
       if (options.keepNext) props.push('<w:keepNext/>');
+      if (options.heading) {
+        // Override both point- and line-based spacing inherited from the template.
+        props.push('<w:spacing w:before="0" w:beforeLines="0" w:beforeAutospacing="0"/>');
+        let leading = true;
+        runs = (runs || []).map(run => {
+          if (!leading) return run;
+          const text = String(run.text || '').replace(/^[\s\u200b]+/u, '');
+          if (text) leading = false;
+          return { ...run, text };
+        }).filter(run => run.text !== '');
+      }
       // Headings receive NO numPr, including numId=0. Their styles have no list ancestry.
       if (options.number) props.push(`<w:numPr><w:ilvl w:val="${options.depth || 0}"/><w:numId w:val="${options.number}"/></w:numPr>`);
       if (options.table) props.push('<w:spacing w:before="0" w:after="30" w:line="250" w:lineRule="auto"/>');
@@ -152,7 +163,7 @@
     }
     blocks(blocks, options = {}) {
       const plans = options.table ? new Map() : this.headingPlan(blocks || []);
-      return (blocks || []).map(block => {
+      return (blocks || []).map((block, index) => {
         if (block.type === 'heading') {
           // Labels within cells are table text, never clinical outline headings.
           if(options.table)return this.paragraph(block.runs.map(run=>({...run,bold:true})),{...options,style:'Normal'});
@@ -162,7 +173,7 @@
         if (block.type === 'paragraph') return this.paragraph(block.runs, options);
         if (block.type === 'code') return String(block.text).split('\n').map(line => this.paragraph([{ text: line || ' ', code: true }], { ...options, style: 'ChatCode' })).join('');
         if (block.type === 'quote') return this.blocks(block.blocks, { ...options, indent: 300 });
-        if (block.type === 'rule') return this.paragraph([{ text: ' ' }], options);
+        if (block.type === 'rule') return blocks[index + 1]?.type === 'heading' ? '' : this.paragraph([{ text: ' ' }], options);
         if (block.type === 'image') return this.image(block, options);
         if (block.type === 'table') return this.table(block, options);
         if (block.type === 'list') {
