@@ -40,6 +40,9 @@ vm.createContext(sandbox);vm.runInContext(fs.readFileSync(process.env.PEARLS_TES
   sandbox.chrome.tabs.captureVisibleTab=async(windowId,options)=>{assert.equal(windowId,3);cropOptions=options;return 'data:image/png;base64,AQID';};
   const cropped=await new Promise(resolve=>message({type:'PEARLS_CROP_VISUAL',rect:{x:20,y:40,width:600,height:300}},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
   assert.equal(cropped.data,'data:image/png;base64,AQID');assert.equal(cropOptions.format,'png');assert.equal(cropOptions.rect,undefined);
+  delete sandbox.chrome.runtime.getBrowserInfo;
+  const chromeCrop=await new Promise(resolve=>message({type:'PEARLS_CROP_VISUAL',rect:{x:20,y:40,width:600,height:300}},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
+  assert.equal(chromeCrop.data,'data:image/png;base64,AQID','Chrome must support the native screenshot path too');
   const invalidCrop=await new Promise(resolve=>message({type:'PEARLS_CROP_VISUAL',rect:{x:-1,y:0,width:600,height:300}},{url:'https://chatgpt.com/c/example',tab:{id:7}},resolve));
   assert(invalidCrop.error);
   const foreignCrop=await new Promise(resolve=>message({type:'PEARLS_CROP_VISUAL',rect:{x:0,y:0,width:600,height:300}},{url:'https://evil.example/',tab:{id:7}},resolve));

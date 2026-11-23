@@ -2,6 +2,8 @@
 
 Chrome extension for ChatGPT, Claude and Gemini. Download the active chat or one assistant response as a genuine editable `.docx` using your Clinical Notes Templatex styles. Runs locally; no API key, native app or server is required.
 
+Flowcharts and SmartArt diagrams export as complete PNG images. Version 1.0.18 uses real Chrome screenshots to preserve text, arrows and background colours, stitching tall diagrams into a single image. Keep the source chat tab active during capture; the exporter restores its scroll position afterward. Images retain the configured 4 cm export height.
+
 ## Install
 
 1. Extract the ZIP to a permanent folder. Keep the folder after installation.

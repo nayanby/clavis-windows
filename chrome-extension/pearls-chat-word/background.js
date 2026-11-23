@@ -45,7 +45,6 @@ chrome.runtime.onMessage.addListener((request, sender, reply) => {
     (async()=>{
       const source=new URL(sender.url);
       if(!sender.tab?.id||!['chatgpt.com','chat.openai.com','claude.ai','gemini.google.com'].includes(source.hostname)||source.protocol!=='https:')throw Error('Unsupported capture source.');
-      if(!chrome.runtime.getBrowserInfo)throw Error('Native crop is available in Firefox only.');
       const r=request.rect;
       if(!r||!['x','y','width','height'].every(key=>Number.isFinite(r[key]))||r.x<0||r.y<0||r.width<1||r.height<1||r.width>8000||r.height>8000||r.width*r.height>16000000)throw Error('Invalid crop bounds.');
       const tab=await chrome.tabs.get(sender.tab.id);

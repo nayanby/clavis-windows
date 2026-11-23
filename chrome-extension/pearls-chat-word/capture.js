@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.17';
+  const VERSION='1.0.18';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -50,13 +50,55 @@
   }
   const textOf = runs => runs.map(run => run.text).join('');
   const diagramIds=new WeakMap(),diagramRenders=new Map();
-  let diagramSequence=0;
+  let diagramSequence=0,lastScreenshotAt=0;
+  async function tiledVisual(node,runtime) {
+    const positions=[];
+    for(let parent=node.parentElement;parent;parent=parent.parentElement)positions.push([parent,parent.scrollLeft,parent.scrollTop]);
+    const originalX=scrollX,originalY=scrollY;
+    const controls=[...document.querySelectorAll('[data-pearls-toolbar]')].map(el=>[el,el.style.visibility]);
+    const initial=node.getBoundingClientRect(),canvas=document.createElement('canvas');
+    if(initial.width*initial.height>16000000)return null;
+    const nextFrame=()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+    let scale=0;
+    function visible(){
+      const rect=node.getBoundingClientRect();
+      const clip={left:Math.max(0,rect.left),top:Math.max(90,rect.top),right:Math.min(innerWidth,rect.right),bottom:Math.min(innerHeight-8,rect.bottom)};
+      for(const [parent]of positions){const css=getComputedStyle(parent),r=parent.getBoundingClientRect();if(/auto|scroll|hidden|clip/.test(css.overflowX)){clip.left=Math.max(clip.left,r.left);clip.right=Math.min(clip.right,r.right);}if(/auto|scroll|hidden|clip/.test(css.overflowY)){clip.top=Math.max(clip.top,r.top);clip.bottom=Math.min(clip.bottom,r.bottom);}}
+      return {rect,clip};
+    }
+    try{
+      for(const [el]of controls)el.style.visibility='hidden';
+      let y=0,tiles=0;
+      while(y<initial.height-1){
+        let x=0,rowBottom=Infinity;
+        while(x<initial.width-1){
+          if(++tiles>80)throw Error('Diagram exceeds the screenshot tile limit');
+          node.scrollIntoView({block:'start',inline:'start',behavior:'instant'});
+          for(const [parent]of positions){const css=getComputedStyle(parent),r=parent.getBoundingClientRect(),n=node.getBoundingClientRect();if(/auto|scroll/.test(css.overflowY))parent.scrollTop+=n.top+y-Math.max(100,r.top+8);if(/auto|scroll/.test(css.overflowX))parent.scrollLeft+=n.left+x-Math.max(8,r.left+8);}
+          let n=node.getBoundingClientRect();scrollTo({left:scrollX+n.left+x-8,top:scrollY+n.top+y-100,behavior:'instant'});
+          await nextFrame();
+          const {rect,clip}=visible();
+          const left=Math.max(x,clip.left-rect.left),top=Math.max(y,clip.top-rect.top),right=Math.min(initial.width,clip.right-rect.left),bottom=Math.min(initial.height,clip.bottom-rect.top);
+          if(left>x+1||top>y+1||right<=x+1||bottom<=y+1)return null;
+          // Chrome permits at most two visible-tab captures per second.
+          await sleep(Math.max(0,550-(Date.now()-lastScreenshotAt)));
+          const response=await runtime.sendMessage({type:'PEARLS_CROP_VISUAL',rect:{x:rect.left+left,y:rect.top+top,width:right-left,height:bottom-top},viewport:{width:innerWidth,height:innerHeight}});lastScreenshotAt=Date.now();
+          if(!response?.data?.startsWith('data:image/png;base64,'))throw Error(response?.error||'Screenshot unavailable');
+          const bitmap=await createImageBitmap(await(await fetch(response.data)).blob());
+          try{const sx=bitmap.width/innerWidth,sy=bitmap.height/innerHeight;if(!scale){scale=sx;canvas.width=Math.round(initial.width*scale);canvas.height=Math.round(initial.height*scale);}canvas.getContext('2d').drawImage(bitmap,(rect.left+left)*sx,(rect.top+top)*sy,(right-left)*sx,(bottom-top)*sy,left*scale,top*scale,(right-left)*scale,(bottom-top)*scale);}finally{bitmap.close();}
+          rowBottom=Math.min(rowBottom,bottom);x=right;
+        }
+        y=rowBottom;
+      }
+      return {data:canvas.toDataURL('image/png'),width:initial.width,height:initial.height};
+    }finally{for(const [parent,x,y]of positions){parent.scrollLeft=x;parent.scrollTop=y;}scrollTo({left:originalX,top:originalY,behavior:'instant'});for(const [el,value]of controls)el.style.visibility=value;}
+  }
   async function firefoxCrop(node) {
-    const runtime=globalThis.browser?.runtime;
+    const runtime=(globalThis.browser||globalThis.chrome)?.runtime;
     if(!runtime?.sendMessage||!node?.isConnected)return null;
     const initial=node.getBoundingClientRect();
     // Taller/wider diagrams need the full-element renderer instead of a clipped viewport.
-    if(initial.width>innerWidth-16||initial.height>innerHeight-110)return null;
+    if(initial.width>innerWidth-16||initial.height>innerHeight-110)return tiledVisual(node,runtime);
     const positions=[];
     for(let parent=node.parentElement;parent;parent=parent.parentElement)positions.push([parent,parent.scrollLeft,parent.scrollTop]);
     const originalX=scrollX,originalY=scrollY;
@@ -66,10 +108,12 @@
       for(const [el]of controls)el.style.setProperty('visibility','hidden','important');
       await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
       const rect=node.getBoundingClientRect();
-      if(rect.left<0||rect.top<0||rect.right>innerWidth||rect.bottom>innerHeight)return null;
+      if(rect.left<0||rect.top<0||rect.right>innerWidth||rect.bottom>innerHeight)return tiledVisual(node,runtime);
       // Ancestor scroll panes can clip an otherwise viewport-sized diagram.
-      for(const [parent]of positions){const css=getComputedStyle(parent),r=parent.getBoundingClientRect();if(/auto|scroll|hidden|clip/.test(css.overflowX+' '+css.overflowY)&&(rect.left<r.left||rect.right>r.right||rect.top<r.top||rect.bottom>r.bottom))return null;}
+      for(const [parent]of positions){const css=getComputedStyle(parent),r=parent.getBoundingClientRect();if(/auto|scroll|hidden|clip/.test(css.overflowX+' '+css.overflowY)&&(rect.left<r.left||rect.right>r.right||rect.top<r.top||rect.bottom>r.bottom))return tiledVisual(node,runtime);}
+      await sleep(Math.max(0,550-(Date.now()-lastScreenshotAt)));
       const response=await runtime.sendMessage({type:'PEARLS_CROP_VISUAL',rect:{x:rect.left,y:rect.top,width:rect.width,height:rect.height},viewport:{width:innerWidth,height:innerHeight}});
+      lastScreenshotAt=Date.now();
       if(!response?.data?.startsWith('data:image/png;base64,'))throw Error(response?.error||'Firefox did not return screenshot data');
       const bitmap=await createImageBitmap(await (await fetch(response.data)).blob());
       try{
@@ -91,14 +135,26 @@
   async function renderDiagram(node){
     let nativeError='';
     try{const crop=await firefoxCrop(node);if(crop)return crop;}catch(error){nativeError=error.message;}
-    if(globalThis.browser?.runtime){
+    const runtime=(globalThis.browser||globalThis.chrome)?.runtime;
+    if(runtime){
       const attribute='data-pearls-render-key',previous=node.getAttribute(attribute),key='pearls-'+crypto.randomUUID();
       try{
         node.setAttribute(attribute,key);
-        const response=await browser.runtime.sendMessage({type:'PEARLS_RENDER_DIAGRAM',key});
-        if(!response?.data)throw Error(response?.error||'Firefox page renderer returned no image');
+        const response=await runtime.sendMessage({type:'PEARLS_RENDER_DIAGRAM',key});
+        if(!response?.data)throw Error(response?.error||'Page renderer returned no image');
         return response;
-      }finally{if(previous===null)node.removeAttribute(attribute);else node.setAttribute(attribute,previous);}
+      }catch(error){nativeError+=(nativeError?'; ':'')+error.message;}
+      finally{if(previous===null)node.removeAttribute(attribute);else node.setAttribute(attribute,previous);}
+    }
+    if(node.matches('svg')){
+      const clone=node.cloneNode(true),originals=[node,...node.querySelectorAll('*')],copies=[clone,...clone.querySelectorAll('*')];
+      const properties=['fill','stroke','stroke-width','color','font-family','font-size','font-style','font-weight','text-anchor','dominant-baseline','letter-spacing','visibility'];
+      for(let i=0;i<originals.length;i++){const css=getComputedStyle(originals[i]);for(const property of properties)copies[i].style.setProperty(property,css.getPropertyValue(property));}
+      for(const script of clone.querySelectorAll('script'))script.remove();
+      const rect=node.getBoundingClientRect();clone.setAttribute('xmlns','http://www.w3.org/2000/svg');clone.setAttribute('width',rect.width);clone.setAttribute('height',rect.height);
+      const img=new Image();img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(clone));await img.decode();
+      const canvas=document.createElement('canvas');canvas.width=Math.round(rect.width*2);canvas.height=Math.round(rect.height*2);const ctx=canvas.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);
+      return {data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height};
     }
     if(!globalThis.html2canvas)return null;
     try{
@@ -123,14 +179,19 @@
     }
   }
   function isDiagram(node) {
-    if(!node.matches('div,section,figure,[role="img"]') || node.querySelector('table,ul,ol,pre'))return false;
+    if(!node.matches('div,section,figure,[role="img"]'))return false;
+    const explicit=node.matches('[role="img"],[data-diagram],[data-testid*="diagram"],[data-d-component*="diagram"],[data-d-component*="chart"],[data-d-component*="flow"],[data-d-component*="smart"],[data-d-component*="punnett"],.mermaid,.flowchart,.smartart');
+    if(!explicit&&node.querySelector('table,ul,ol,pre'))return false;
     // Photo galleries and their loading skeletons are not SmartArt diagrams.
-    if(node.querySelector('img,picture')||(!node.textContent.trim()&&!node.querySelector('svg,canvas')))return false;
-    if([...node.querySelectorAll('h1,h2,h3,h4')].some(el=>!/^\s*\d+(?:\.\d+)?\s*%\s*$/.test(el.textContent)))return false;
+    if((!explicit&&node.querySelector('img,picture'))||(!node.textContent.trim()&&!node.querySelector('svg,canvas,img')))return false;
     const rect=node.getBoundingClientRect();
-    if(rect.width<100||rect.height<60||node.textContent.length>2500)return false;
-    if(node.matches('[role="img"],[data-diagram],[data-testid*="diagram"],[data-d-component*="diagram"],[data-d-component*="chart"],[data-d-component*="punnett"],.mermaid'))return true;
+    if(rect.width<100||rect.height<60||node.textContent.length>4500)return false;
+    if(explicit)return true;
     const style=getComputedStyle(node);
+    const cards=[...node.querySelectorAll('div,section')].filter(el=>{const css=getComputedStyle(el),r=el.getBoundingClientRect();return r.width>60&&r.height>24&&el.textContent.trim()&&(parseFloat(css.borderTopWidth)>0||(!['transparent','rgba(0, 0, 0, 0)'].includes(css.backgroundColor)));});
+    const arrows=/[↓↑→←↘↙⇓⇒⟶]/.test(node.textContent)||!!node.querySelector('svg path,svg line,svg polygon');
+    if(arrows&&cards.length>=2&&node.children.length<=14&&!node.querySelector('h1,h2')&&!node.matches('.markdown,.prose,[data-message-author-role]'))return true;
+    if([...node.querySelectorAll('h1,h2,h3,h4')].some(el=>!/^\s*\d+(?:\.\d+)?\s*%\s*$/.test(el.textContent)))return false;
     const grid=[node,...node.querySelectorAll('div')].find(el=>{
       const css=getComputedStyle(el);
       const grid=/^(inline-)?grid$/.test(css.display)&&el.children.length>=2&&css.gridTemplateColumns.split(' ').length>=2;
@@ -249,13 +310,7 @@
       }
       else if (tag === 'svg') {
         flush();
-        if(globalThis.browser?.runtime){output.push(diagram(node));continue;}
-        const bytes = new TextEncoder().encode(new XMLSerializer().serializeToString(node));
-        const base64 = btoa(Array.from(bytes, byte => String.fromCharCode(byte)).join(''));
-        output.push({ type: 'image', src: 'data:image/svg+xml;base64,' + base64,
-          alt: node.getAttribute('aria-label') || node.querySelector('title')?.textContent || 'Diagram',
-          width: node.viewBox?.baseVal.width || node.width?.baseVal.value || 640,
-          height: node.viewBox?.baseVal.height || node.height?.baseVal.value || 480 });
+        output.push(diagram(node));
       }
       else if (tag === 'hr') { flush(); output.push({ type: 'rule' }); }
       else if (/^(div|section|article|main|figure|figcaption|details|summary|dl|dt|dd|li)$/.test(tag)) { flush(); output.push(...blocks(node)); }
