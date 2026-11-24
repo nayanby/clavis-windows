@@ -157,7 +157,8 @@ async function run() {
     assert.deepEqual(visual.types,['paragraph','image','paragraph','paragraph','image']);
     assert(visual.xml.includes('w:val="superscript"')&&visual.xml.includes('<m:sSup>')&&visual.xml.includes('<m:sSub>'));
     assert(!visual.xml.includes('p^2')&&!visual.xml.includes('q^{2}')&&!visual.xml.includes('x_{ij}'));
-    assert.equal((visual.xml.match(/cy="1440000"/g)||[]).length,4);
+    assert.equal((visual.xml.match(/cy="2160000"/g)||[]).length,2);
+    assert([...visual.xml.matchAll(/cy="(\d+)"/g)].every(m=>Number(m[1])<=2160000));
     fs.writeFileSync(path.join(output,'diagram-example.docx'),Buffer.from(visual.bytes));
     fs.writeFileSync(path.join(output,'diagram-example.png'),Buffer.from(visual.png,'base64'));
     await page.exposeFunction('pearlsTestCrop',async request=>{

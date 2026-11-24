@@ -31,11 +31,11 @@ for(const script of clone.querySelectorAll('script'))script.remove();
 const rect=node.getBoundingClientRect(),width=Math.max(1,rect.width),height=Math.max(1,rect.height);
 clone.setAttribute('xmlns','http://www.w3.org/2000/svg');clone.setAttribute('width',width);clone.setAttribute('height',height);
 const image=new Image();image.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(clone));await image.decode();
-const canvas=document.createElement('canvas');canvas.width=Math.round(width*2);canvas.height=Math.round(height*2);
+const canvas=document.createElement('canvas');canvas.width=Math.round(width*4);canvas.height=Math.round(height*4);
 const context=canvas.getContext('2d');context.fillStyle='#ffffff';context.fillRect(0,0,canvas.width,canvas.height);context.drawImage(image,0,0,canvas.width,canvas.height);
 return {data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height};
 }
-const canvas=await renderer(node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')});
+const canvas=await renderer(node,{backgroundColor:'#ffffff',scale:Math.min(4,Math.sqrt(32000000/Math.max(1,node.getBoundingClientRect().width*node.getBoundingClientRect().height))),logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')});
 return {data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height};
 }});
 })();

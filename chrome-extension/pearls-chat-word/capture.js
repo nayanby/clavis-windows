@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.19';
+  const VERSION='1.0.21';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -134,11 +134,11 @@
   }
   async function renderDiagram(node){
     let nativeError='';
-    try{const crop=await firefoxCrop(node);if(crop)return crop;}catch(error){nativeError=error.message;}
     const runtime=(globalThis.browser||globalThis.chrome)?.runtime;
     if(runtime){
-      const attribute='data-pearls-render-key',previous=node.getAttribute(attribute),key='pearls-'+crypto.randomUUID();
+      const attribute='data-pearls-render-key',previous=node.getAttribute(attribute);
       try{
+        const key='pearls-'+crypto.randomUUID();
         node.setAttribute(attribute,key);
         const response=await runtime.sendMessage({type:'PEARLS_RENDER_DIAGRAM',key});
         if(!response?.data)throw Error(response?.error||'Page renderer returned no image');
@@ -153,14 +153,14 @@
       for(const script of clone.querySelectorAll('script'))script.remove();
       const rect=node.getBoundingClientRect();clone.setAttribute('xmlns','http://www.w3.org/2000/svg');clone.setAttribute('width',rect.width);clone.setAttribute('height',rect.height);
       const img=new Image();img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(clone));await img.decode();
-      const canvas=document.createElement('canvas');canvas.width=Math.round(rect.width*2);canvas.height=Math.round(rect.height*2);const ctx=canvas.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);
+      const canvas=document.createElement('canvas');canvas.width=Math.round(rect.width*4);canvas.height=Math.round(rect.height*4);const ctx=canvas.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);
       return {data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height};
     }
-    if(!globalThis.html2canvas)return null;
+    if(!globalThis.html2canvas){const crop=await firefoxCrop(node);if(crop)return crop;return null;}
     try{
-      const canvas=await globalThis.html2canvas(node,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')});
+      const canvas=await globalThis.html2canvas(node,{backgroundColor:'#ffffff',scale:Math.min(4,Math.sqrt(32000000/Math.max(1,node.getBoundingClientRect().width*node.getBoundingClientRect().height))),logging:false,useCORS:true,onclone:normalizeDiagramColors,ignoreElements:el=>el.matches('[data-pearls-ignore],button')});
       return {data:canvas.toDataURL('image/png'),width:canvas.width,height:canvas.height};
-    }catch(error){throw Error((nativeError?'Firefox screenshot: '+nativeError+'; ':'')+'diagram renderer: '+error.message);}
+    }catch(error){try{const crop=await firefoxCrop(node);if(crop)return crop;}catch(cropError){nativeError+='; '+cropError.message;}throw Error((nativeError?'Firefox screenshot: '+nativeError+'; ':'')+'diagram renderer: '+error.message);}
   }
   function normalizeDiagramColors(doc) {
     const canvas=doc.createElement('canvas');canvas.width=canvas.height=1;
@@ -480,7 +480,7 @@
                 const src=URL.createObjectURL(blob),img=new Image();
                 try{img.src=src;await img.decode();bitmap=img;}finally{URL.revokeObjectURL(src);}
               }else bitmap=await createImageBitmap(blob);
-              const scale = Math.min(1, 1800 / Math.max(bitmap.width, bitmap.height));
+              const scale = Math.min(1, 4096 / Math.max(bitmap.width, bitmap.height));
               const canvas = document.createElement('canvas'); canvas.width = Math.max(1, Math.round(bitmap.width * scale)); canvas.height = Math.max(1, Math.round(bitmap.height * scale));
               canvas.getContext('2d').drawImage(bitmap, 0, 0, canvas.width, canvas.height); bitmap.close?.();
               return canvas.toDataURL('image/png');
