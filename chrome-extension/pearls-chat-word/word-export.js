@@ -76,7 +76,7 @@
     return doc;
   }
   const declaration = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
-  const headingStyles = ['Heading1', 'Heading2', 'Heading3', 'Heading4', 'boldside2', 'Boldside3'];
+  const headingStyles = ['Heading1', 'Heading2', 'BoldSide1', 'Boldside3', 'Boldside3', 'Boldside3'];
   class Writer {
     constructor(zip, profile, onProgress) {
       this.zip = zip; this.profile = profile; this.relationships = []; this.abstracts = []; this.numbers = [];
@@ -134,15 +134,20 @@
     headingPlan(blocks) {
       const headings = blocks.filter(block => block.type === 'heading');
       const romanToken=heading=>/^\s*([IVXLCDM]+)[.)]\s+/i.exec(textOf(heading.runs))?.[1].toUpperCase();
-      const romanDepth=Math.min(...headings.filter(heading=>!heading.inferred&&(romanToken(heading)?.length>1||/^[IVX]$/.test(romanToken(heading)||''))).map(heading=>heading.level));
+      const isRomanSection = heading => {
+        const token = romanToken(heading);
+        return token && (token.length > 1 || /^[IVX]$/.test(token));
+      };
       const plans = new Map();
       for (const heading of headings) {
         const text=textOf(heading.runs);
         let level=Math.max(2,Math.min(6,heading.level||2));
-        if(heading.inferred)level=6;
-        else if(romanToken(heading)&&heading.level===romanDepth)level=2;
+        // Numbered section labels can be rendered as bold paragraphs by chat sites.
+        // Recognize their semantic level before falling back to source HTML depth.
+        if(isRomanSection(heading))level=2;
         else if(/^\s*[A-Za-z][.)]\s+/.test(text))level=3;
         else if(/^\s*\d+[.)]\s+/.test(text))level=4;
+        else if(heading.inferred)level=6;
         // The document title is the sole H1. Preserve every source prefix exactly.
         plans.set(heading,{style:headingStyles[level-1]});
       }
@@ -231,14 +236,14 @@
           const merge = entry.rows > 1 ? `<w:vMerge${entry.continuation ? '' : ' w:val="restart"'}/>` : '';
           const shade = header ? 'E7E1E4' : i % 2 ? 'F8F6F8' : 'FFFFFF';
           const content = entry.continuation ? '<w:p/>' : this.blocks(entry.cell.blocks, { ...options, table: true, header });
-          cells += `<w:tc><w:tcPr><w:tcW w:w="${width * entry.span}" w:type="dxa"/>${entry.span > 1 ? '<w:gridSpan w:val="' + entry.span + '"/>' : ''}${merge}<w:shd w:fill="${shade}"/><w:tcMar><w:top w:w="65" w:type="dxa"/><w:left w:w="80" w:type="dxa"/><w:bottom w:w="65" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tcMar><w:vAlign w:val="center"/></w:tcPr>${content || '<w:p/>'}${/<\/w:tbl>$/.test(content) ? '<w:p/>' : ''}</w:tc>`;
+          cells += `<w:tc><w:tcPr><w:tcW w:w="${width * entry.span}" w:type="dxa"/>${entry.span > 1 ? '<w:gridSpan w:val="' + entry.span + '"/>' : ''}${merge}<w:shd w:fill="${shade}"/><w:tcMar><w:top w:w="80" w:type="dxa"/><w:left w:w="80" w:type="dxa"/><w:bottom w:w="80" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tcMar><w:vAlign w:val="center"/></w:tcPr>${content || '<w:p/>'}${/<\/w:tbl>$/.test(content) ? '<w:p/>' : ''}</w:tc>`;
           cursor += entry.span;
         }
         while (cursor < count) { cells += '<w:tc><w:p/></w:tc>'; cursor++; }
         const header = table.rows[i]?.cells.length && table.rows[i].cells.every(cell => cell.header);
-        rows += `<w:tr><w:trPr><w:cantSplit/>${header ? '<w:tblHeader/>' : ''}</w:trPr>${cells}</w:tr>`;
+        rows += `<w:tr><w:trPr><w:cantSplit/><w:trHeight w:val="0" w:hRule="auto"/>${header ? '<w:tblHeader/>' : ''}</w:trPr>${cells}</w:tr>`;
       }
-      return `<w:tbl><w:tblPr><w:tblW w:w="${width * count}" w:type="dxa"/><w:tblBorders>${borders}</w:tblBorders><w:tblLayout w:type="fixed"/></w:tblPr>${grid}${rows}</w:tbl>${options.table?'<w:p/>':''}`;
+      return `<w:tbl><w:tblPr><w:tblStyle w:val="PearlsTable"/><w:tblW w:w="${width * count}" w:type="dxa"/><w:jc w:val="center"/><w:tblCellSpacing w:w="0" w:type="dxa"/><w:tblBorders>${borders}</w:tblBorders><w:tblLayout w:type="fixed"/><w:tblLook w:val="0220" w:firstRow="1" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr>${grid}${rows}</w:tbl>${options.table?'<w:p/>':''}`;
     }
     image(image, options) {
       const match = /^data:image\/png;base64,([\s\S]+)$/.exec(image.data || image.src || '');

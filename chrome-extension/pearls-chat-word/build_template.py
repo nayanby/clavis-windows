@@ -19,6 +19,9 @@ def main():
     output=HERE/'template';output.mkdir(exist_ok=True)
     with ZipFile(SOURCE) as source:
         styles=E.fromstring(source.read('word/styles.xml'))
+        # Ship the reusable library table design in every exported document.
+        for old in styles.findall("w:style[@w:styleId='PearlsTable']",NS):styles.remove(old)
+        styles.append(E.fromstring((HERE.parents[1]/'assets/word/PearlsTable.xml').read_bytes()))
         original=E.fromstring(source.read('word/document.xml'))
         section=deepcopy(original.find('w:body/w:sectPr',NS))
         # Page geometry comes from the reference. Export documents have no sample footer.

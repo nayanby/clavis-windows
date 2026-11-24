@@ -228,7 +228,7 @@ async function run() {
     assert.equal(hierarchy.find(p=>p.text==='Major Immunodeficiency Syndromes').style,'Heading1');
     assert.equal(hierarchy.find(p=>p.text==='I. Classification').style,'Heading2');
     assert.equal(hierarchy.find(p=>p.text==='II. Predominantly Antibody Deficiencies').style,'Heading2');
-    assert.equal(hierarchy.find(p=>p.text==='A. Functional Classification').style,'Heading3');
+    assert.equal(hierarchy.find(p=>p.text==='A. Functional Classification').style,'BoldSide1');
     for (const [name, messages, single, includePrompts] of [
       ['full-chat', chat.messages, false, true],
       ['single-response', [chat.messages[1]], true, false],

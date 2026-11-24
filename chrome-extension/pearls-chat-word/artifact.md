@@ -12,7 +12,7 @@ BoldSide1 uppercase plum with bottom rule; BS2 unshaded plum; BS3 unshaded navy.
 Body bold runs use the template SubtleEmphasis navy. Selected source highlights are pastel yellow.
 Lists: filled circle, hollow circle, square; nested ordered sequences remain native Word lists.
 All abstract numbering definitions precede num instances. A fresh num instance restarts each list.
-Only the document title uses H1. Roman sections use H2 and lettered subsections H3.
+Only the document title uses H1. Roman sections use H2 and lettered subsections BoldSide 1, then BoldSide 3.
 Source heading prefixes are preserved exactly; automatic heading numbering is disabled.
 Tables: repeating header row, light borders, template colours, cell spans and native editable text.
 Section geometry, style properties, theme and font table come from the retained reference.
