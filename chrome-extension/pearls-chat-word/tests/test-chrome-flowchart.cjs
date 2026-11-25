@@ -63,6 +63,18 @@ const result=await page.evaluate(async({template,profile})=>{
  if(inlineForkBlocks.map(block=>block.type).join(',')!=='paragraph,image,paragraph'||!['HFE genetic testing','Other genotypes','Assess hepatic fibrosis'].every(text=>inlineForkBlocks[1].alt.includes(text)))throw Error('An inline fork and visually aligned cards must stay together with the preceding and following steps');
  await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks:inlineForkBlocks}],warnings:[]});
  if(!inlineForkBlocks[1].data?.startsWith('data:image/png;base64,'))throw Error('Inline fork did not render into an image');
+ const rasterFork='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="320" height="30"><path d="M160 0v10H20v20M160 10h140v20" fill="none" stroke="#a00"/></svg>');
+ branching.innerHTML=`<section><p>Editable introduction</p><h3>Elevated TSAT and serum ferritin</h3><div>${unknownIcon}</div><p>HFE genetic testing</p><p><img width="320" height="30" src="${rasterFork}"></p></section><section><div data-diagram style="height:80px;display:grid;grid-template-columns:1fr 1fr"><div>C282Y homozygous with iron overload</div><div>Other genotypes and MRI liver iron quantification</div></div><div>${unknownIcon}</div><h3>Assess hepatic fibrosis and end-organ damage</h3><p>Editable conclusion</p></section>`;
+ await branching.querySelector('img').decode();
+ const splitBlocks=PearlsCapture.blocks(branching);
+ if(splitBlocks.filter(block=>block.type==='image').length!==4)throw Error('Fixture must reproduce the four independent images in the failed Word export');
+ const recovered=PearlsCapture.responseBlocks(branching);
+ if(recovered.map(block=>block.type).join(',')!=='paragraph,image,paragraph'||!recovered[1].alt.includes('Assess hepatic fibrosis'))throw Error('A raster fork and detached branch diagram must be joined across wrapper boundaries');
+ const recoveredData=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks:recovered}],warnings:[]});
+ const recoveredDoc=await PearlsWord.create(recoveredData,{single:true,title:'Recovered branch',templateBytes:new Uint8Array(template),profile});
+ const recoveredZip=await JSZip.loadAsync(recoveredDoc.bytes);
+ const recoveredXml=await recoveredZip.file('word/document.xml').async('string');
+ if((recoveredXml.match(/<w:drawing>/g)||[]).length!==1||!recoveredXml.includes('Editable introduction')||!recoveredXml.includes('Editable conclusion'))throw Error('The detached branch must export as exactly one Word drawing with editable prose');
  branching.remove();
  const blocks=PearlsCapture.blocks(fixture),data=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks}],warnings:[]});
  const image=data.messages[0].blocks.find(b=>b.type==='image');if(!image?.data)throw Error(JSON.stringify(data.warnings));

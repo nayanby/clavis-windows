@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.28';
+  const VERSION='1.0.29';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -64,7 +64,7 @@
     return [...node.childNodes].flatMap(child => inlines(child, next));
   }
   const textOf = runs => runs.map(run => run.text).join('');
-  const diagramIds=new WeakMap(),diagramRenders=new Map();
+  const diagramIds=new WeakMap(),diagramRenders=new Map(),blockNodes=new WeakMap();
   let diagramSequence=0,lastScreenshotAt=0;
   async function tiledVisual(node,runtime) {
     const positions=[];
@@ -278,7 +278,8 @@
       const splitBranch = fork(layout) && lanes(children[index + 1]);
       const wrappedBranch = lanes(layout) && [...layout.children].some(child => fork(child) && !lanes(child));
       if (!splitBranch && !wrappedBranch) continue;
-      const hasLabel = splitBranch && !!layout.textContent.trim();
+      const hasLabel = splitBranch && !!layout.textContent.trim() && !layout.querySelector('p,h1,h2,h3,h4,h5,h6,ul,ol,table');
+      if (splitBranch && layout.textContent.trim() && !hasLabel) continue;
       if (!hasLabel && !step(children[index - 1])) continue;
       let start = hasLabel ? index : index - 1, end = index + Number(splitBranch);
       while (step(children[start - 2]) && arrow(children[start - 1])) start -= 2;
@@ -289,24 +290,32 @@
     }
     return groups;
   }
-  async function renderDiagramGroup(nodes) {
-    const parent = nodes[0].parentElement;
-    if (!parent || nodes.some(node => node.parentElement !== parent)) return null;
+  async function renderDiagramGroup(nodes, rangeParent) {
+    const parent = rangeParent || nodes[0].parentElement;
+    if (!parent || nodes.some(node => rangeParent ? !parent.contains(node) : node.parentElement !== parent)) return null;
     const wrapper = document.createElement('div');
     const css = getComputedStyle(parent);
     const layout = ['display', 'flex-direction', 'align-items', 'justify-items', 'grid-template-columns', 'gap'];
     for (const property of layout) wrapper.style.setProperty(property, css.getPropertyValue(property));
-    const clones = nodes.map(node => node.cloneNode(true));
-    nodes.forEach((node, index) => {
-      const canvases = node.matches('canvas') ? [node] : [...node.querySelectorAll('canvas')];
-      const clone = clones[index];
-      const copies = clone.matches('canvas') ? [clone] : [...clone.querySelectorAll('canvas')];
-      canvases.forEach((canvas, position) => {
-        if (canvas.width && canvas.height) copies[position].getContext('2d')?.drawImage(canvas, 0, 0);
+    if (rangeParent) {
+      const range = document.createRange();
+      range.setStartBefore(nodes[0]);
+      range.setEndAfter(nodes.at(-1));
+      wrapper.append(range.cloneContents());
+      parent.append(wrapper);
+    } else {
+      const clones = nodes.map(node => node.cloneNode(true));
+      nodes.forEach((node, index) => {
+        const canvases = node.matches('canvas') ? [node] : [...node.querySelectorAll('canvas')];
+        const clone = clones[index];
+        const copies = clone.matches('canvas') ? [clone] : [...clone.querySelectorAll('canvas')];
+        canvases.forEach((canvas, position) => {
+          if (canvas.width && canvas.height) copies[position].getContext('2d')?.drawImage(canvas, 0, 0);
+        });
       });
-    });
-    wrapper.append(...clones);
-    nodes.at(-1).after(wrapper);
+      wrapper.append(...clones);
+      nodes.at(-1).after(wrapper);
+    }
     try {
       await Promise.allSettled([...wrapper.querySelectorAll('img')].map(img => {
         img.loading = 'eager';
@@ -364,6 +373,10 @@
     const groups = branchingFlowcharts(parent);
     const grouped = new Set();
     let pending = [];
+    function addTextBlock(node, block) {
+      blockNodes.set(block, node);
+      output.push(block);
+    }
     function flush() {
       if (textOf(pending).trim()) output.push({ type: 'paragraph', runs: pending });
       pending = [];
@@ -394,7 +407,7 @@
       const tag = node.tagName.toLowerCase();
       if(imagePlaceholder(node)){flush();output.push({type:'image',pending:true,alt:'Image gallery is still loading'});continue;}
       if(isDiagram(node)){flush();output.push(diagram(node));continue;}
-      if (/^h[1-6]$/.test(tag)) { flush(); output.push({ type: 'heading', level: Number(tag[1]), runs: inlines(node) }); }
+      if (/^h[1-6]$/.test(tag)) { flush(); addTextBlock(node, { type: 'heading', level: Number(tag[1]), runs: inlines(node) }); }
       else if (tag === 'p') {
         flush();
         const pictures = [...node.querySelectorAll(node.textContent.trim() ? 'img' : 'img,svg')].filter(img => !arrowGlyph(img));
@@ -406,7 +419,7 @@
         const words = runs.filter(run => run.text.trim());
         const text = textOf(runs).trim();
         const heading = !node.closest('li') && words.length && words.every(run => run.bold) && text.length < 100 && text.split(/\s+/).length <= 12 && !/[.!?;:]$/.test(text);
-        if (text) output.push({ type: heading ? 'heading' : 'paragraph', ...(heading ? { level: 6, inferred: true } : {}), runs });
+        if (text) addTextBlock(node, { type: heading ? 'heading' : 'paragraph', ...(heading ? { level: 6, inferred: true } : {}), runs });
         // Inline image positions are preserved as image paragraphs after the caption text.
         for (const img of pictures) output.push(img.matches('svg') ? diagram(img) : image(img));
       }
@@ -587,7 +600,42 @@
     return { provider, title: document.title.replace(/\s*[-–|]\s*(ChatGPT|Claude|Gemini).*$/i, '').trim(), url: location.href, messages, warnings };
   }
   function responseBlocks(node) {
-    return contentImages(combineFlowcharts(blocks(node)));
+    return contentImages(combineFlowcharts(rejoinBranchGraphics(blocks(node), node)));
+  }
+  function rejoinBranchGraphics(items, parent) {
+    const groupByStart = new Map();
+    const textNode = item => item?.runs && blockNodes.get(item);
+    const arrow = item => {
+      if (item?.runs) return !!arrowText(textOf(item.runs));
+      const { width, height } = item || {};
+      return item?.alt === 'Diagram: ' && width >= 8 && height >= 8 && width <= 96 && height <= 96
+        && width / height >= 0.67 && width / height <= 1.5;
+    };
+    for (let i = 2; i < items.length - 2; i++) {
+      const [fork, cards, nextArrow, nextLabel] = items.slice(i, i + 4);
+      if (fork.type !== 'image' || fork.width < 100 || fork.width / fork.height < 5
+        || !cards?.diagramId || cards.fullHeight || !/^Diagram: .{20}/s.test(cards.alt)
+        || !textNode(items[i - 1]) || !arrow(items[i - 2]) || !arrow(nextArrow) || !textNode(nextLabel)) continue;
+      let start = i - 1, end = i + 3;
+      while (textNode(items[start - 2]) && arrow(items[start - 1])) start -= 2;
+      while (arrow(items[end + 1]) && textNode(items[end + 2])) end += 2;
+      const first = textNode(items[start]), last = textNode(items[end]);
+      if (!first || !last || first === last) continue;
+      const image = diagram(first);
+      diagramRenders.set(image.diagramId, { nodes: [first, last], rangeParent: parent });
+      const alt = items.slice(start, end + 1).map(item => item.runs ? textOf(item.runs) : item.alt).join(' ');
+      groupByStart.set(start, { end, image: { ...image, fullHeight: true, alt } });
+      i = end;
+    }
+    const output = [];
+    for (let index = 0; index < items.length; index++) {
+      const group = groupByStart.get(index);
+      if (group) {
+        output.push(group.image);
+        index = group.end;
+      } else output.push(items[index]);
+    }
+    return output;
   }
   function scroller(provider) {
     const first = entries(provider)[0]?.node;
@@ -665,7 +713,7 @@
             if(item.pending)throw Error('Images are still loading in the chat. Wait for the photographs to appear, then export again.');
             if(item.diagramId){
               const entry=diagramRenders.get(item.diagramId);
-              const rendered = entry?.nodes ? await renderDiagramGroup(entry.nodes) : entry ? await renderDiagram(entry.node) : null;
+              const rendered = entry?.nodes ? await renderDiagramGroup(entry.nodes, entry.rangeParent) : entry ? await renderDiagram(entry.node) : null;
               if(!rendered)throw Error('Diagram rendering failed');
               Object.assign(item,rendered);continue;
             }
