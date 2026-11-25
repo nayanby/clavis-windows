@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.24';
+  const VERSION='1.0.25';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -235,6 +235,66 @@
     const rect=node.getBoundingClientRect();
     return {type:'image',diagramId:id,alt:node.getAttribute('aria-label')||'Diagram: '+node.textContent.trim().replace(/\s+/g,' ').slice(0,160),width:rect.width,height:rect.height};
   }
+  function branchingFlowcharts(parent) {
+    const groups = new Map();
+    const children = [...parent.childNodes].filter(node => node.nodeType === Node.ELEMENT_NODE || node.textContent.trim());
+    const element = node => node?.nodeType === Node.ELEMENT_NODE;
+    const step = node => element(node) && node.textContent.trim().length > 0 && node.textContent.trim().length <= 240
+      && !node.querySelector('img,svg,canvas,table,ul,ol,pre') && !arrowText(node.textContent);
+    const arrow = node => {
+      if (!element(node)) return false;
+      if (arrowText(node.textContent)) return true;
+      const icon = node.matches('img,svg') ? node : node.querySelector('img,svg');
+      if (!icon || node.textContent.trim()) return false;
+      const { width, height } = icon.getBoundingClientRect();
+      return !!arrowGlyph(icon) || (width >= 8 && height >= 8 && width <= 80 && height <= 80 && width / height >= 0.5 && width / height <= 2);
+    };
+    const lanes = node => element(node) && [node, ...node.querySelectorAll('div,section')].some(row => {
+      const display = getComputedStyle(row).display;
+      if (!/^(inline-)?(grid|flex)$/.test(display) || row.children.length < 2 || row.children.length > 5) return false;
+      const [first, second] = row.children;
+      const a = first.getBoundingClientRect(), b = second.getBoundingClientRect();
+      return first.textContent.trim() && second.textContent.trim() && a.width >= 60 && b.width >= 60
+        && Math.abs(a.top - b.top) <= 8 && (a.right <= b.left + 2 || b.right <= a.left + 2);
+    });
+    const fork = node => {
+      if (!element(node) || node.textContent.trim()) return false;
+      const svg = node.matches('svg') ? node : node.querySelector('svg');
+      if (!svg?.querySelector('path,line,polyline,polygon')) return false;
+      const { width, height } = svg.getBoundingClientRect();
+      return width >= 100 && height > 0 && width >= height * 2;
+    };
+    for (let index = 1; index < children.length - 1; index++) {
+      if (!step(children[index - 1]) || !fork(children[index]) || !lanes(children[index + 1])) continue;
+      let start = index - 1, end = index + 1;
+      while (step(children[start - 2]) && arrow(children[start - 1])) start -= 2;
+      while (arrow(children[end + 1]) && step(children[end + 2])) end += 2;
+      const nodes = children.slice(start, end + 1);
+      groups.set(nodes[0], nodes);
+      index = end;
+    }
+    return groups;
+  }
+  async function renderDiagramGroup(nodes) {
+    const parent = nodes[0].parentElement;
+    if (!parent || nodes.some(node => node.parentElement !== parent)) return null;
+    const wrapper = document.createElement('div');
+    const css = getComputedStyle(parent);
+    const layout = ['display', 'flex-direction', 'align-items', 'justify-items', 'grid-template-columns', 'gap'];
+    for (const property of layout) wrapper.style.setProperty(property, css.getPropertyValue(property));
+    const clones = nodes.map(node => node.cloneNode(true));
+    wrapper.append(...clones);
+    nodes.at(-1).after(wrapper);
+    try {
+      await Promise.allSettled([...wrapper.querySelectorAll('img')].map(img => {
+        img.loading = 'eager';
+        return img.decode();
+      }));
+      return await renderDiagram(wrapper);
+    } finally {
+      wrapper.remove();
+    }
+  }
   function imagePlaceholder(node){
     if(!node.matches('div,section,figure')||node.textContent.trim()||node.querySelector('img,picture,svg,canvas,table'))return false;
     const css=getComputedStyle(node),children=[...node.children];
@@ -275,12 +335,24 @@
   }
   function blocks(parent) {
     const output = [];
+    const groups = branchingFlowcharts(parent);
+    const grouped = new Set();
     let pending = [];
     function flush() {
       if (textOf(pending).trim()) output.push({ type: 'paragraph', runs: pending });
       pending = [];
     }
     for (const node of parent.childNodes) {
+      if (grouped.has(node)) continue;
+      const group = groups.get(node);
+      if (group) {
+        flush();
+        group.forEach(member => grouped.add(member));
+        const item = diagram(node);
+        diagramRenders.set(item.diagramId, { nodes: group });
+        output.push({ ...item, fullHeight: true, alt: group.map(member => member.textContent.trim()).filter(Boolean).join(' ') });
+        continue;
+      }
       if (node.nodeType === Node.TEXT_NODE) { if (node.textContent.trim()) pending.push(...inlines(node)); continue; }
       if (node.nodeType !== Node.ELEMENT_NODE) continue;
       // Generated pictures are often wrapped in a preview button/link.
@@ -561,7 +633,7 @@
             if(item.pending)throw Error('Images are still loading in the chat. Wait for the photographs to appear, then export again.');
             if(item.diagramId){
               const entry=diagramRenders.get(item.diagramId);
-              const rendered=entry?await renderDiagram(entry.node):null;
+              const rendered=entry?.nodes ? await renderDiagramGroup(entry.nodes) : entry ? await renderDiagram(entry.node) : null;
               if(!rendered)throw Error('Diagram rendering failed');
               Object.assign(item,rendered);continue;
             }

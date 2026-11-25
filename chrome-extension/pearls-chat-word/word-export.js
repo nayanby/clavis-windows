@@ -257,7 +257,7 @@
       const maxWidth = this.profile.contentWidthTwips * 635;
       // Give multi-step flowcharts extra height so their labels remain readable.
       const ratio = Math.max(1, image.width || 640) / Math.max(1, image.height || 480);
-      const cy = Math.round(Math.min(image.flowchart ? 7200000 : 2160000, maxWidth / ratio));
+      const cy = Math.round(Math.min(image.flowchart || image.fullHeight ? 7200000 : 2160000, maxWidth / ratio));
       const cx = Math.round(Math.min(maxWidth, cy * ratio));
       const drawingId = ++this.drawingIndex;
       return `<w:p><w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="${cx}" cy="${cy}"/><wp:docPr id="${drawingId}" name="${name}" descr="${esc(image.alt)}"/><wp:cNvGraphicFramePr><a:graphicFrameLocks noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic><pic:nvPicPr><pic:cNvPr id="${drawingId}" name="${name}"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="${id}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>`;
