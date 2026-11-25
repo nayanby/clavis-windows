@@ -58,6 +58,11 @@ const result=await page.evaluate(async({template,profile})=>{
  const scopedZip=await JSZip.loadAsync(scopedDoc.bytes);
  const scopedXml=await scopedZip.file('word/document.xml').async('string');
  if((scopedXml.match(/<w:drawing>/g)||[]).length!==2||!scopedXml.includes('Outside before branch')||!scopedXml.includes('Outside after branch')||!scopedXml.includes('Editable after graphic'))throw Error('Word must embed two graphics and preserve editable prose');
+ branching.innerHTML=`<p>Outside before branch</p><h3>Elevated TSAT and serum ferritin</h3><p>${unknownIcon}</p><p>HFE genetic testing<br><span><svg aria-hidden="true" width="540" height="50"><path d="M270 0v20H45v25M270 20h225v25" fill="none" stroke="#a00"/></svg></span></p><br><div><div style="display:inline-block;vertical-align:top;width:240px;background:#def;padding:20px">C282Y homozygous</div> <div style="display:inline-block;vertical-align:top;width:240px;background:#efd;padding:20px">Other genotypes</div></div><p>${unknownIcon}</p><h3>Assess hepatic fibrosis</h3><p>Outside after branch</p>`;
+ const inlineForkBlocks=PearlsCapture.responseBlocks(branching);
+ if(inlineForkBlocks.map(block=>block.type).join(',')!=='paragraph,image,paragraph'||!['HFE genetic testing','Other genotypes','Assess hepatic fibrosis'].every(text=>inlineForkBlocks[1].alt.includes(text)))throw Error('An inline fork and visually aligned cards must stay together with the preceding and following steps');
+ await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks:inlineForkBlocks}],warnings:[]});
+ if(!inlineForkBlocks[1].data?.startsWith('data:image/png;base64,'))throw Error('Inline fork did not render into an image');
  branching.remove();
  const blocks=PearlsCapture.blocks(fixture),data=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks}],warnings:[]});
  const image=data.messages[0].blocks.find(b=>b.type==='image');if(!image?.data)throw Error(JSON.stringify(data.warnings));

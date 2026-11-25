@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Pearls Chat to Word",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "Export a ChatGPT, Claude or Gemini conversation or response as an editable Word file in your Clinical Notes template.",
   "permissions": [
     "activeTab",

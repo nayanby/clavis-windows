@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.27';
+  const VERSION='1.0.28';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -237,7 +237,7 @@
   }
   function branchingFlowcharts(parent) {
     const groups = new Map();
-    const children = [...parent.childNodes].filter(node => node.nodeType === Node.ELEMENT_NODE || node.textContent.trim());
+    const children = [...parent.childNodes].filter(node => node.nodeType === Node.ELEMENT_NODE ? !node.matches('br,[data-pearls-ignore]') : node.textContent.trim());
     const element = node => node?.nodeType === Node.ELEMENT_NODE;
     const step = node => element(node) && node.textContent.trim().length > 0 && node.textContent.trim().length <= 240
       && !node.querySelector('img,svg,canvas,table,ul,ol,pre') && !arrowText(node.textContent);
@@ -249,22 +249,22 @@
       const { width, height } = icon.getBoundingClientRect();
       return !!arrowGlyph(icon) || (width >= 8 && height >= 8 && width <= 80 && height <= 80 && width / height >= 0.5 && width / height <= 2);
     };
-    const lanes = node => element(node) && [node, ...node.querySelectorAll('div,section')].some(row => {
-      const display = getComputedStyle(row).display;
-      if (!/^(inline-)?(grid|flex)$/.test(display) || row.children.length < 2 || row.children.length > 5) return false;
-      const [first, second] = row.children;
-      const a = first.getBoundingClientRect(), b = second.getBoundingClientRect();
-      return first.textContent.trim() && second.textContent.trim() && a.width >= 60 && b.width >= 60
-        && Math.abs(a.top - b.top) <= 8 && (a.right <= b.left + 2 || b.right <= a.left + 2);
+    const lanes = node => element(node) && [node, ...node.querySelectorAll('div,section,figure,td,tr')].some(row => {
+      const cards = [...row.children].filter(child => child.textContent.trim()).map(child => child.getBoundingClientRect())
+        .filter(rect => rect.width >= 60 && rect.height >= 16);
+      return cards.length >= 2 && cards.length <= 5 && cards.some((a, index) => cards.slice(index + 1).some(b =>
+        Math.abs(a.top - b.top) <= 12 && (a.right <= b.left + 2 || b.right <= a.left + 2)));
     });
     const fork = node => {
-      if (!element(node) || node.textContent.trim()) return false;
-      const svg = node.matches('svg') ? node : node.querySelector('svg');
-      if (svg?.querySelector('path,line,polyline,polygon')) {
-        const { width, height } = svg.getBoundingClientRect();
-        return width >= 100 && height > 0 && width >= height * 2;
-      }
+      if (!element(node)) return false;
+      const visuals = node.matches('svg,img,canvas') ? [node] : [...node.querySelectorAll('svg,img,canvas')];
+      if (visuals.some(visual => {
+        const { width, height } = visual.getBoundingClientRect();
+        return width >= 85 && height > 0 && height <= 100 && width >= height * 2.5
+          && (visual.matches('svg') ? !!visual.querySelector('path,line,polyline,polygon') : height <= 65);
+      })) return true;
       return [node, ...node.querySelectorAll('div,span')].some(line => {
+        if (line.textContent.trim()) return false;
         const { width, height } = line.getBoundingClientRect();
         const style = getComputedStyle(line);
         return width >= 100 && height <= 50 && width >= height * 2
@@ -272,13 +272,15 @@
             || (height <= 4 && !['transparent', 'rgba(0, 0, 0, 0)'].includes(style.backgroundColor)));
       });
     };
-    for (let index = 1; index < children.length; index++) {
-      if (!step(children[index - 1]) || !element(children[index])) continue;
+    for (let index = 0; index < children.length; index++) {
+      if (!element(children[index])) continue;
       const layout = children[index];
       const splitBranch = fork(layout) && lanes(children[index + 1]);
-      const wrappedBranch = lanes(layout) && [...layout.children].some(fork);
+      const wrappedBranch = lanes(layout) && [...layout.children].some(child => fork(child) && !lanes(child));
       if (!splitBranch && !wrappedBranch) continue;
-      let start = index - 1, end = index + Number(splitBranch);
+      const hasLabel = splitBranch && !!layout.textContent.trim();
+      if (!hasLabel && !step(children[index - 1])) continue;
+      let start = hasLabel ? index : index - 1, end = index + Number(splitBranch);
       while (step(children[start - 2]) && arrow(children[start - 1])) start -= 2;
       while (arrow(children[end + 1]) && step(children[end + 2])) end += 2;
       const nodes = children.slice(start, end + 1);
@@ -295,6 +297,14 @@
     const layout = ['display', 'flex-direction', 'align-items', 'justify-items', 'grid-template-columns', 'gap'];
     for (const property of layout) wrapper.style.setProperty(property, css.getPropertyValue(property));
     const clones = nodes.map(node => node.cloneNode(true));
+    nodes.forEach((node, index) => {
+      const canvases = node.matches('canvas') ? [node] : [...node.querySelectorAll('canvas')];
+      const clone = clones[index];
+      const copies = clone.matches('canvas') ? [clone] : [...clone.querySelectorAll('canvas')];
+      canvases.forEach((canvas, position) => {
+        if (canvas.width && canvas.height) copies[position].getContext('2d')?.drawImage(canvas, 0, 0);
+      });
+    });
     wrapper.append(...clones);
     nodes.at(-1).after(wrapper);
     try {
@@ -302,6 +312,10 @@
         img.loading = 'eager';
         return img.decode();
       }));
+      try {
+        const screenshot = await firefoxCrop(wrapper);
+        if (screenshot) return screenshot;
+      } catch { /* Fall back to the whole-element renderer. */ }
       return await renderDiagram(wrapper);
     } finally {
       wrapper.remove();
