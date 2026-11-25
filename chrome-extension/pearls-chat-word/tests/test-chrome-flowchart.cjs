@@ -6,6 +6,32 @@ await page.setContent('<style>body{margin:0;padding:130px 30px 500px;font:18px A
 let requests=0;
 await page.exposeFunction('nativeScreenshot',async()=>{requests++;return {data:'data:image/png;base64,'+(await page.screenshot()).toString('base64')};});
 for(const file of ['vendor/jszip.min.js','capture.js','word-export.js'])await page.addScriptTag({path:path.join(root,file)});
+if(process.env.PEARLS_BRANCH_EXPORT){
+ const replay=await page.evaluate(async encoded=>{
+  const zip=await JSZip.loadAsync(encoded,{base64:true});
+  const xml=new DOMParser().parseFromString(await zip.file('word/document.xml').async('string'),'application/xml');
+  const rels=new DOMParser().parseFromString(await zip.file('word/_rels/document.xml.rels').async('string'),'application/xml');
+  const destinations=new Map([...rels.getElementsByTagNameNS('*','Relationship')].map(rel=>[rel.getAttribute('Id'),rel.getAttribute('Target')]));
+  const paragraphs=[...xml.getElementsByTagNameNS('*','body')[0].children];
+  const text=node=>[...node.getElementsByTagNameNS('*','t')].map(run=>run.textContent).join('');
+  const start=paragraphs.findIndex(node=>text(node)==='Elevated TSAT and serum ferritin');
+  if(start<0)throw Error('Could not locate the failed branch in the source export');
+  const blocks=[];
+  for(const node of paragraphs.slice(start-1,start+8)){
+   const drawing=node.getElementsByTagNameNS('*','docPr')[0];
+   if(!drawing){blocks.push({type:'paragraph',runs:[{text:text(node)}]});continue;}
+   const blip=node.getElementsByTagNameNS('*','blip')[0];
+   const id=blip.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships','embed');
+   const png=await zip.file('word/'+destinations.get(id)).async('base64');
+   blocks.push({type:'image',alt:drawing.getAttribute('descr'),data:'data:image/png;base64,'+png});
+  }
+  const result=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks}],warnings:[]});
+  return result.messages[0].blocks.map(block=>({type:block.type,alt:block.alt}));
+ },fs.readFileSync(process.env.PEARLS_BRANCH_EXPORT).toString('base64'));
+ assert.deepEqual(replay.map(block=>block.type),['paragraph','image','paragraph']);
+ assert.match(replay[1].alt,/HFE genetic testing.*Other genotypes.*Assess hepatic fibrosis/);
+ console.log('PASS: replayed actual Word export and combined its four detached images into one flowchart');
+}
 const result=await page.evaluate(async({template,profile})=>{
  globalThis.chrome={runtime:{sendMessage:async request=>{if(request.type!=='PEARLS_CROP_VISUAL')throw Error('Only real screenshots allowed');return nativeScreenshot();}}};
  globalThis.html2canvas=()=>{throw Error('HTML rasterizer must not be used');};
@@ -75,6 +101,13 @@ const result=await page.evaluate(async({template,profile})=>{
  const recoveredZip=await JSZip.loadAsync(recoveredDoc.bytes);
  const recoveredXml=await recoveredZip.file('word/document.xml').async('string');
  if((recoveredXml.match(/<w:drawing>/g)||[]).length!==1||!recoveredXml.includes('Editable introduction')||!recoveredXml.includes('Editable conclusion'))throw Error('The detached branch must export as exactly one Word drawing with editable prose');
+ branching.innerHTML=`<p>Editable introduction</p><section style="border:1px solid #bbb;border-radius:14px;padding:10px;text-align:center;background:#f8f8f8"><h3>Elevated TSAT and serum ferritin</h3>${unknownIcon}<p>HFE genetic testing</p><img width="320" height="30" src="${rasterFork}"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="border:1px solid #ccc;border-radius:8px;padding:20px">C282Y homozygous</div><div style="border:1px solid #ccc;border-radius:8px;padding:20px">Other genotypes</div></div>${unknownIcon}<h3>Assess hepatic fibrosis and end-organ damage</h3></section><p>Editable conclusion</p>`;
+ await branching.querySelector('img').decode();
+ const panel=branching.querySelector('section'), panelRect=panel.getBoundingClientRect();
+ const panelBlocks=PearlsCapture.responseBlocks(branching);
+ if(panelBlocks.map(block=>block.type).join(',')!=='paragraph,image,paragraph'||!panelBlocks[1].branchPanel)throw Error('The complete bordered panel must be selected for direct capture');
+ await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks:panelBlocks}],warnings:[]});
+ if(panelBlocks[1].width!==panelRect.width||panelBlocks[1].height!==panelRect.height||!panelBlocks[1].data)throw Error('The screenshot must match the entire bordered panel');
  branching.remove();
  const blocks=PearlsCapture.blocks(fixture),data=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks}],warnings:[]});
  const image=data.messages[0].blocks.find(b=>b.type==='image');if(!image?.data)throw Error(JSON.stringify(data.warnings));

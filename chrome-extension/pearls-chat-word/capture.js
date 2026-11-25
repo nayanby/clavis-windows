@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.29';
+  const VERSION='1.0.30';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -235,6 +235,28 @@
     const rect=node.getBoundingClientRect();
     return {type:'image',diagramId:id,alt:node.getAttribute('aria-label')||'Diagram: '+node.textContent.trim().replace(/\s+/g,' ').slice(0,160),width:rect.width,height:rect.height};
   }
+  function isBranchPanel(node) {
+    if (!node.matches('div,section,figure') || node.matches('.markdown,.prose,[data-message-author-role]')
+      || node.querySelector('table,ul,ol,pre')) return false;
+    const style = getComputedStyle(node);
+    if (parseFloat(style.borderTopWidth) <= 0 || parseFloat(style.borderTopLeftRadius) <= 0) return false;
+    const fork = [...node.querySelectorAll('img,svg,canvas')].find(visual => {
+      const { width, height } = visual.getBoundingClientRect();
+      const ratio = visual.naturalWidth && visual.naturalHeight ? visual.naturalWidth / visual.naturalHeight : width / height;
+      return width >= 85 && height > 0 && height <= 100 && ratio >= 5;
+    });
+    if (!fork) return false;
+    const forkBounds = fork.getBoundingClientRect();
+    const cards = [...node.querySelectorAll('div,section')].filter(card => {
+      const css = getComputedStyle(card), bounds = card.getBoundingClientRect();
+      return !!card.textContent.trim() && parseFloat(css.borderTopWidth) > 0 && parseFloat(css.borderTopLeftRadius) > 0
+        && bounds.width >= 120 && bounds.height >= 35 && bounds.top >= forkBounds.bottom - 8;
+    });
+    return cards.some((card, index) => cards.slice(index + 1).some(other => {
+      const a = card.getBoundingClientRect(), b = other.getBoundingClientRect();
+      return Math.abs(a.top - b.top) <= 12 && (a.right <= b.left + 2 || b.right <= a.left + 2);
+    }));
+  }
   function branchingFlowcharts(parent) {
     const groups = new Map();
     const children = [...parent.childNodes].filter(node => node.nodeType === Node.ELEMENT_NODE ? !node.matches('br,[data-pearls-ignore]') : node.textContent.trim());
@@ -275,6 +297,7 @@
     for (let index = 0; index < children.length; index++) {
       if (!element(children[index])) continue;
       const layout = children[index];
+      if (isBranchPanel(layout)) continue;
       const splitBranch = fork(layout) && lanes(children[index + 1]);
       const wrappedBranch = lanes(layout) && [...layout.children].some(child => fork(child) && !lanes(child));
       if (!splitBranch && !wrappedBranch) continue;
@@ -406,6 +429,11 @@
       if (hidden(node)) continue;
       const tag = node.tagName.toLowerCase();
       if(imagePlaceholder(node)){flush();output.push({type:'image',pending:true,alt:'Image gallery is still loading'});continue;}
+      if (isBranchPanel(node)) {
+        flush();
+        output.push({ ...diagram(node), fullHeight: true, branchPanel: true });
+        continue;
+      }
       if(isDiagram(node)){flush();output.push(diagram(node));continue;}
       if (/^h[1-6]$/.test(tag)) { flush(); addTextBlock(node, { type: 'heading', level: Number(tag[1]), runs: inlines(node) }); }
       else if (tag === 'p') {
@@ -701,6 +729,70 @@
       return result;
     } finally { container.scrollTop = originalTop; }
   }
+  async function combineRenderedBranches(items) {
+    const output = [];
+    const label = item => item?.runs ? textOf(item.runs).trim() : '';
+    const dimensions = item => {
+      if (!item?.data?.startsWith('data:image/png;base64,iVBORw0KGgo') || item.data.length < 54) return null;
+      const header = Uint8Array.from(atob(item.data.slice(22, 54)), character => character.charCodeAt(0));
+      const view = new DataView(header.buffer);
+      return { width: view.getUint32(16), height: view.getUint32(20) };
+    };
+    const arrow = item => {
+      const size = dimensions(item);
+      return item?.alt === 'Diagram: ' && size && size.width <= 384 && size.height <= 384
+        && size.width / size.height >= 0.67 && size.width / size.height <= 1.5;
+    };
+    for (let index = 0; index < items.length; index++) {
+      const group = items.slice(index, index + 7);
+      const [start, down, decision, fork, cards, join, end] = group;
+      const forkSize = dimensions(fork), cardSize = dimensions(cards);
+      if (!label(start) || !label(decision) || !label(end) || !arrow(down) || !arrow(join)
+        || !forkSize || !cardSize || !['Image', 'Diagram: '].includes(fork.alt)
+        || forkSize.width / forkSize.height < 5 || cardSize.width / cardSize.height < 1.4
+        || !/^Diagram: .{20}/s.test(cards.alt)) {
+        output.push(start);
+        continue;
+      }
+      const canvas = document.createElement('canvas');
+      const width = 760, cardHeight = (width - 40) * cardSize.height / cardSize.width;
+      const heights = [58, 40, 58, 56, cardHeight, 40, 58];
+      const height = 24 + heights.reduce((sum, value) => sum + value, 0);
+      canvas.width = width * 2;
+      canvas.height = Math.ceil(height * 2);
+      const ctx = canvas.getContext('2d');
+      ctx.scale(2, 2);
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, width, height);
+      ctx.fillStyle = '#17212e';
+      ctx.font = '600 21px Arial, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      let top = 12;
+      try {
+        for (const [offset, item] of group.entries()) {
+          const rowHeight = heights[offset];
+          if (item.runs) ctx.fillText(label(item), width / 2, top + rowHeight / 2, width - 40);
+          else {
+            const bitmap = await createImageBitmap(await (await fetch(item.data)).blob());
+            try {
+              const maxWidth = offset === 4 ? width - 40 : offset === 3 ? (width - 40) / 2 : 26;
+              const scale = Math.min(maxWidth / bitmap.width, rowHeight / bitmap.height);
+              const w = bitmap.width * scale, h = bitmap.height * scale;
+              ctx.drawImage(bitmap, (width - w) / 2, top + (rowHeight - h) / 2, w, h);
+            } finally { bitmap.close(); }
+          }
+          top += rowHeight;
+        }
+        output.push({ type: 'image', fullHeight: true, width, height, data: canvas.toDataURL('image/png'),
+          alt: [label(start), label(decision), cards.alt, label(end)].join(' → ') });
+        index += group.length - 1;
+      } catch {
+        output.push(start);
+      }
+    }
+    return output;
+  }
   async function resolveImages(result,diagramsOnly=false) {
     const cache = new Map();
     async function walk(items) {
@@ -713,7 +805,11 @@
             if(item.pending)throw Error('Images are still loading in the chat. Wait for the photographs to appear, then export again.');
             if(item.diagramId){
               const entry=diagramRenders.get(item.diagramId);
-              const rendered = entry?.nodes ? await renderDiagramGroup(entry.nodes, entry.rangeParent) : entry ? await renderDiagram(entry.node) : null;
+              let rendered;
+              if (item.branchPanel && entry?.node) {
+                try { rendered = await firefoxCrop(entry.node); } catch { /* Try the whole-element renderer below. */ }
+              }
+              if (!rendered && entry) rendered = entry.nodes ? await renderDiagramGroup(entry.nodes, entry.rangeParent) : await renderDiagram(entry.node);
               if(!rendered)throw Error('Diagram rendering failed');
               Object.assign(item,rendered);continue;
             }
@@ -758,7 +854,10 @@
         for (const row of item.rows || []) for (const cell of row.cells) await walk(cell.blocks);
       }
     }
-    for (const message of result.messages) await walk(message.blocks);
+    for (const message of result.messages) {
+      await walk(message.blocks);
+      if (!diagramsOnly) message.blocks = await combineRenderedBranches(message.blocks);
+    }
     result.warnings = [...new Set(result.warnings)];
     return result;
   }
