@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.21';
+  const VERSION='1.0.24';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -25,10 +25,25 @@
     return citation(element) || element.matches(SKIP) || element.hidden || element.closest('[hidden],[aria-hidden="true"]')
       || (element.matches('[data-markdown-copy="exclude"]')&&!element.querySelector('img,svg,canvas')&&!isDiagram(element));
   }
+  function arrowText(label) {
+    const match = /^([←↑→↓↔↕↖↗↘↙⇐⇑⇒⇓⇔⇕⟵⟶⟷⬅⬆⬇➡])[\uFE0E\uFE0F]?$/.exec(label.trim());
+    const glyph = match?.[1] || '';
+    return ({ '⬅': '←', '⬆': '↑', '⬇': '↓', '➡': '→' })[glyph] || glyph;
+  }
+  function arrowGlyph(element) {
+    const label = element.getAttribute('alt') || element.getAttribute('aria-label') || element.querySelector('title')?.textContent || '';
+    const source = (element.getAttribute('src') || '').split(/[?#]/)[0];
+    const directions = { down: '↓', up: '↑', left: '←', right: '→' };
+    const named = /(?:^|[\s/_-])(?:arrow|chevron)[-_ ](down|up|left|right)(?=$|[.\s_-])/i.exec(`${label} ${element.getAttribute('class') || ''} ${source}`);
+    const emoji = /\/(2190|2191|2192|2193|2b05|2b06|2b07|27a1)(?:-fe0f)?\.(?:svg|png|webp)$/i.exec(source);
+    return arrowText(label) || (named ? directions[named[1].toLowerCase()] : '') || (emoji ? arrowText(String.fromCodePoint(parseInt(emoji[1], 16))) : '');
+  }
   function inlines(node, format = {}) {
     if (node.nodeType === Node.TEXT_NODE) return [{ text: clean(node.nodeValue), ...format }];
     if (node.nodeType !== Node.ELEMENT_NODE || hidden(node)) return [];
     const tag = node.tagName.toLowerCase();
+    const arrow = node.matches('img,svg') && arrowGlyph(node);
+    if (arrow) return [{ text: arrow, ...format }];
     if (tag === 'br') return [{ text: '\n', ...format }];
     if (tag === 'img') return [{ text: node.alt || '[Image]', ...format }];
     // KaTeX duplicates its visible and accessible representations. Preserve LaTeX once.
@@ -183,13 +198,14 @@
     const explicit=node.matches('[role="img"],[data-diagram],[data-testid*="diagram"],[data-d-component*="diagram"],[data-d-component*="chart"],[data-d-component*="flow"],[data-d-component*="smart"],[data-d-component*="punnett"],.mermaid,.flowchart,.smartart');
     if(!explicit&&node.querySelector('table,ul,ol,pre'))return false;
     // Photo galleries and their loading skeletons are not SmartArt diagrams.
-    if((!explicit&&node.querySelector('img,picture'))||(!node.textContent.trim()&&!node.querySelector('svg,canvas,img')))return false;
+    const pictures = [...node.querySelectorAll('img')];
+    if((!explicit&&(node.querySelector('picture')||pictures.some(img=>!arrowGlyph(img))))||(!node.textContent.trim()&&!node.querySelector('svg,canvas,img')))return false;
     const rect=node.getBoundingClientRect();
     if(rect.width<100||rect.height<60||node.textContent.length>4500)return false;
     if(explicit)return true;
     const style=getComputedStyle(node);
     const cards=[...node.querySelectorAll('div,section')].filter(el=>{const css=getComputedStyle(el),r=el.getBoundingClientRect();return r.width>60&&r.height>24&&el.textContent.trim()&&(parseFloat(css.borderTopWidth)>0||(!['transparent','rgba(0, 0, 0, 0)'].includes(css.backgroundColor)));});
-    const arrows=/[↓↑→←↘↙⇓⇒⟶]/.test(node.textContent)||!!node.querySelector('svg path,svg line,svg polygon');
+    const arrows=/[↓↑→←↘↙⇓⇒⟶]/.test(node.textContent)||pictures.some(arrowGlyph)||!!node.querySelector('svg path,svg line,svg polygon');
     if(arrows&&cards.length>=2&&node.children.length<=14&&!node.querySelector('h1,h2')&&!node.matches('.markdown,.prose,[data-message-author-role]'))return true;
     if([...node.querySelectorAll('h1,h2,h3,h4')].some(el=>!/^\s*\d+(?:\.\d+)?\s*%\s*$/.test(el.textContent)))return false;
     const grid=[node,...node.querySelectorAll('div')].find(el=>{
@@ -270,7 +286,10 @@
       // Generated pictures are often wrapped in a preview button/link.
       if (node.matches('button,[role="button"]') && !node.closest('[data-pearls-ignore],[hidden],[aria-hidden="true"]')) {
         flush();
-        for (const img of node.querySelectorAll('img')) if (!hidden(img)) output.push(image(img));
+        for (const img of node.querySelectorAll('img')) if (!hidden(img)) {
+          const arrow = arrowGlyph(img);
+          output.push(arrow ? { type: 'paragraph', runs: [{ text: arrow }] } : image(img));
+        }
         continue;
       }
       if (hidden(node)) continue;
@@ -280,8 +299,9 @@
       if (/^h[1-6]$/.test(tag)) { flush(); output.push({ type: 'heading', level: Number(tag[1]), runs: inlines(node) }); }
       else if (tag === 'p') {
         flush();
-        if (node.querySelector('img') && !node.textContent.trim()) {
-          for (const img of node.querySelectorAll('img')) output.push(image(img));
+        const pictures = [...node.querySelectorAll(node.textContent.trim() ? 'img' : 'img,svg')].filter(img => !arrowGlyph(img));
+        if (pictures.length && !node.textContent.trim() && ![...node.querySelectorAll('img,svg')].some(arrowGlyph)) {
+          for (const img of pictures) output.push(img.matches('svg') ? diagram(img) : image(img));
           continue;
         }
         const runs = inlines(node);
@@ -290,7 +310,7 @@
         const heading = !node.closest('li') && words.length && words.every(run => run.bold) && text.length < 100 && text.split(/\s+/).length <= 12 && !/[.!?;:]$/.test(text);
         if (text) output.push({ type: heading ? 'heading' : 'paragraph', ...(heading ? { level: 6, inferred: true } : {}), runs });
         // Inline image positions are preserved as image paragraphs after the caption text.
-        for (const img of node.querySelectorAll('img')) output.push(image(img));
+        for (const img of pictures) output.push(img.matches('svg') ? diagram(img) : image(img));
       }
       else if (tag === 'ul' || tag === 'ol') {
         flush();
@@ -303,6 +323,7 @@
       }
       else if (tag === 'pre') { flush(); output.push({ type: 'code', text: clean((node.querySelector('code') || node).textContent) }); }
       else if (tag === 'blockquote') { flush(); output.push({ type: 'quote', blocks: blocks(node) }); }
+      else if ((tag === 'img' || tag === 'svg') && arrowGlyph(node)) pending.push(...inlines(node));
       else if (tag === 'img') { flush(); output.push(image(node)); }
       else if (tag === 'canvas') {
         flush();try{output.push({type:'image',data:node.toDataURL('image/png'),alt:node.getAttribute('aria-label')||'Diagram',width:node.width,height:node.height});}
@@ -314,7 +335,7 @@
       }
       else if (tag === 'hr') { flush(); output.push({ type: 'rule' }); }
       else if (/^(div|section|article|main|figure|figcaption|details|summary|dl|dt|dd|li)$/.test(tag)) { flush(); output.push(...blocks(node)); }
-      else if (node.querySelector('img')) { flush(); output.push(...blocks(node)); }
+      else if ([...node.querySelectorAll('img')].some(img => !arrowGlyph(img))) { flush(); output.push(...blocks(node)); }
       else pending.push(...inlines(node));
     }
     flush(); return output;
@@ -325,6 +346,92 @@
     const lazy=img.getAttribute('data-src')||img.getAttribute('data-original');
     const src=/^data:/i.test(img.currentSrc||img.src)&&/^https?:/i.test(lazy||'')?lazy:img.currentSrc||img.src;
     return { type: 'image',elementId, src, alt: img.alt || 'Image', width: img.naturalWidth || img.width || 640, height: img.naturalHeight || img.height || 480 };
+  }
+  function renderFlowchart(rows) {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    const font = '20px Arial, sans-serif';
+    context.font = font;
+    const width = Math.min(660, Math.max(180, ...rows.map(row => context.measureText(row).width + 48)));
+    const lines = rows.flatMap(row => {
+      const arrow = arrowText(row);
+      if (arrow) return [{ text: arrow, arrow: true }];
+      const wrapped = [];
+      let line = '';
+      for (const word of row.split(/\s+/)) {
+        const next = line ? `${line} ${word}` : word;
+        if (line && context.measureText(next).width > width - 48) {
+          wrapped.push({ text: line });
+          line = word;
+        } else line = next;
+      }
+      wrapped.push({ text: line });
+      return wrapped;
+    });
+    const height = 32 + lines.reduce((sum, line) => sum + (line.arrow ? 36 : 28), 0);
+    const scale = Math.min(3, 8192 / height);
+    canvas.width = Math.ceil(width * scale);
+    canvas.height = Math.ceil(height * scale);
+    context.scale(scale, scale);
+    context.fillStyle = '#ffffff';
+    context.fillRect(0, 0, width, height);
+    context.fillStyle = '#17212e';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    let y = 16;
+    for (const line of lines) {
+      const lineHeight = line.arrow ? 36 : 28;
+      context.font = line.arrow ? '28px Arial, sans-serif' : font;
+      context.fillText(line.text, width / 2, y + lineHeight / 2, width - 48);
+      y += lineHeight;
+    }
+    return { data: canvas.toDataURL('image/png'), width, height };
+  }
+  function combineFlowcharts(items) {
+    const label = block => block?.runs ? textOf(block.runs).trim() : '';
+    const isStep = text => text && !arrowText(text) && text.length <= 240 && !text.includes('\n');
+    const imageBlock = rows => ({ type: 'image', flowchart: rows, alt: rows.join(' ') });
+    const iconSignature = block => {
+      const entry = diagramRenders.get(block?.diagramId || block?.elementId);
+      const node = entry?.node;
+      if (!node?.matches('img,svg') || node.getAttribute('alt') || node.getAttribute('aria-label') || node.textContent.trim()) return '';
+      const { width, height } = node.getBoundingClientRect();
+      if (width < 8 || height < 8 || width > 64 || height > 64 || width / height < 0.5 || width / height > 2) return '';
+      return node.matches('img') ? block.src || '' : node.innerHTML;
+    };
+    const output = [];
+    for (let index = 0; index < items.length;) {
+      const first = label(items[index]);
+      const lines = first.split(/\n/).map(line => line.trim()).filter(Boolean);
+      if (lines.length >= 3 && lines.length % 2 === 1 && lines.every((line, position) => position % 2 ? arrowText(line) : isStep(line))) {
+        output.push(imageBlock(lines));
+        index++;
+        continue;
+      }
+      let end = index;
+      let repeatedIcon = '';
+      let inferredArrows = 0;
+      if (isStep(first)) {
+        while (isStep(label(items[end + 2]))) {
+          const connector = items[end + 1];
+          if (!arrowText(label(connector))) {
+            const signature = iconSignature(connector);
+            if (!signature || (repeatedIcon && signature !== repeatedIcon)) break;
+            repeatedIcon = signature;
+            inferredArrows++;
+          }
+          end += 2;
+        }
+      }
+      if (inferredArrows === 1) {
+        end = index;
+        while (arrowText(label(items[end + 1])) && isStep(label(items[end + 2]))) end += 2;
+      }
+      if (end > index) output.push(imageBlock(items.slice(index, end + 1).map((item, offset) => offset % 2 ? arrowText(label(item)) || '↓' : label(item))));
+      else output.push(items[index]);
+      index = end + 1;
+    }
+    return output;
   }
   function contentImages(items) {
     return items.filter(item => {
@@ -374,7 +481,7 @@
   function snapshot(provider = site()) {
     if (isStreaming(provider)) throw Error('The response is still being generated. Wait for it to finish, then refresh.');
     const messages = entries(provider).map((entry, index) => ({
-      id: entry.id || null, role: entry.role, blocks: contentImages(blocks(entry.node)),
+      id: entry.id || null, role: entry.role, blocks: contentImages(combineFlowcharts(blocks(entry.node))),
       preview: entry.root.innerText?.trim().slice(0, 240) || entry.root.textContent.trim().slice(0, 240), index
     })).filter(message => message.blocks.length);
     if (!messages.length) throw Error('No chat messages were found. Open a conversation and let it finish loading. The site may also have changed its page layout.');
@@ -389,7 +496,7 @@
     }
     return document.scrollingElement;
   }
-  const messageKey = message => message.id ? message.role + ':' + message.id : message.role + ':' + JSON.stringify(message.blocks);
+  const messageKey = message => message.id ? message.role + ':' + message.id : message.role + ':' + JSON.stringify(message.blocks, (key, value) => value?.flowchart ? { type: value.type, flowchart: value.flowchart } : value);
   // Sequence overlap, rather than a Set of text, preserves repeated identical turns.
   function merge(left, right) {
     if (!left.length) return right.slice();
@@ -449,6 +556,7 @@
         if (item.type === 'image') {
           try {
             if(item.data)continue;
+            if(item.flowchart){Object.assign(item,renderFlowchart(item.flowchart));continue;}
             if(diagramsOnly&&!item.diagramId)continue;
             if(item.pending)throw Error('Images are still loading in the chat. Wait for the photographs to appear, then export again.');
             if(item.diagramId){
@@ -502,7 +610,7 @@
     result.warnings = [...new Set(result.warnings)];
     return result;
   }
-  globalThis.PearlsCapture = { version:VERSION, snapshot, conversation, resolveImages, prepareVisuals, merge, blocks,
+  globalThis.PearlsCapture = { version:VERSION, snapshot, conversation, resolveImages, prepareVisuals, merge, blocks, combineFlowcharts,
     responseTargets: () => entries(site()).filter(entry => entry.role === 'assistant'),
     isGenerating: () => isStreaming(site())
   };
