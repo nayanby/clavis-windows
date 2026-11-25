@@ -1,6 +1,6 @@
 /* Read rendered chat content only. Never execute, click or submit chat content. */
 (() => {
-  const VERSION='1.0.26';
+  const VERSION='1.0.27';
   if (globalThis.PearlsCapture?.version===VERSION) return;
   const SKIP = 'button,script,style,noscript,textarea,input,select,nav,[role="button"],[data-pearls-ignore],.sr-only,[aria-hidden="true"]';
   const clean = value => String(value || '').replace(/\u00a0/g, ' ');
@@ -260,13 +260,25 @@
     const fork = node => {
       if (!element(node) || node.textContent.trim()) return false;
       const svg = node.matches('svg') ? node : node.querySelector('svg');
-      if (!svg?.querySelector('path,line,polyline,polygon')) return false;
-      const { width, height } = svg.getBoundingClientRect();
-      return width >= 100 && height > 0 && width >= height * 2;
+      if (svg?.querySelector('path,line,polyline,polygon')) {
+        const { width, height } = svg.getBoundingClientRect();
+        return width >= 100 && height > 0 && width >= height * 2;
+      }
+      return [node, ...node.querySelectorAll('div,span')].some(line => {
+        const { width, height } = line.getBoundingClientRect();
+        const style = getComputedStyle(line);
+        return width >= 100 && height <= 50 && width >= height * 2
+          && ((parseFloat(style.borderTopWidth) > 0 && (parseFloat(style.borderLeftWidth) > 0 || parseFloat(style.borderRightWidth) > 0))
+            || (height <= 4 && !['transparent', 'rgba(0, 0, 0, 0)'].includes(style.backgroundColor)));
+      });
     };
-    for (let index = 1; index < children.length - 1; index++) {
-      if (!step(children[index - 1]) || !fork(children[index]) || !lanes(children[index + 1])) continue;
-      let start = index - 1, end = index + 1;
+    for (let index = 1; index < children.length; index++) {
+      if (!step(children[index - 1]) || !element(children[index])) continue;
+      const layout = children[index];
+      const splitBranch = fork(layout) && lanes(children[index + 1]);
+      const wrappedBranch = lanes(layout) && [...layout.children].some(fork);
+      if (!splitBranch && !wrappedBranch) continue;
+      let start = index - 1, end = index + Number(splitBranch);
       while (step(children[start - 2]) && arrow(children[start - 1])) start -= 2;
       while (arrow(children[end + 1]) && step(children[end + 2])) end += 2;
       const nodes = children.slice(start, end + 1);
@@ -553,23 +565,14 @@
   function snapshot(provider = site()) {
     if (isStreaming(provider)) throw Error('The response is still being generated. Wait for it to finish, then refresh.');
     const messages = entries(provider).map((entry, index) => ({
-      id: entry.id || null, role: entry.role, blocks: responseBlocks(entry.node, entry.role),
+      id: entry.id || null, role: entry.role, blocks: responseBlocks(entry.node),
       preview: entry.root.innerText?.trim().slice(0, 240) || entry.root.textContent.trim().slice(0, 240), index
     })).filter(message => message.blocks.length);
     if (!messages.length) throw Error('No chat messages were found. Open a conversation and let it finish loading. The site may also have changed its page layout.');
     const warnings = entries(provider).some(entry => entry.root.querySelector('video,iframe')) ? ['This response contains video or an embedded frame. Its interactive content is not included in the Word file.'] : [];
     return { provider, title: document.title.replace(/\s*[-–|]\s*(ChatGPT|Claude|Gemini).*$/i, '').trim(), url: location.href, messages, warnings };
   }
-  function responseBlocks(node, role) {
-    if (role === 'assistant') {
-      const hasVisual = [...node.querySelectorAll('img,svg,canvas,[data-diagram],.mermaid,.flowchart,.smartart')]
-        .some(visual => !visual.closest('[data-pearls-ignore],[hidden],[aria-hidden="true"],.katex,.MathJax,mjx-container')
-          && !/\/s2\/favicons|\/favicon/i.test(visual.getAttribute('src') || '')
-          && visual.getBoundingClientRect().width > 0 && visual.getBoundingClientRect().height > 0);
-      if (hasVisual || (node.innerText || '').split('\n').some(arrowText)) {
-        return [{ ...diagram(node), fullHeight: true, wholeResponse: true }];
-      }
-    }
+  function responseBlocks(node) {
     return contentImages(combineFlowcharts(blocks(node)));
   }
   function scroller(provider) {
@@ -581,7 +584,6 @@
     return document.scrollingElement;
   }
   const messageKey = message => message.id ? message.role + ':' + message.id : message.role + ':' + JSON.stringify(message.blocks, (key, value) => {
-    if (value?.wholeResponse) return { type: value.type, diagramId: value.diagramId };
     if (value?.flowchart) return { type: value.type, flowchart: value.flowchart };
     return value;
   });
@@ -649,11 +651,7 @@
             if(item.pending)throw Error('Images are still loading in the chat. Wait for the photographs to appear, then export again.');
             if(item.diagramId){
               const entry=diagramRenders.get(item.diagramId);
-              let rendered;
-              if (entry && item.wholeResponse) {
-                try { rendered = await firefoxCrop(entry.node); } catch { /* Try whole-element rendering below. */ }
-              }
-              if (!rendered && entry) rendered = entry.nodes ? await renderDiagramGroup(entry.nodes) : await renderDiagram(entry.node);
+              const rendered = entry?.nodes ? await renderDiagramGroup(entry.nodes) : entry ? await renderDiagram(entry.node) : null;
               if(!rendered)throw Error('Diagram rendering failed');
               Object.assign(item,rendered);continue;
             }
@@ -687,7 +685,6 @@
             })());
             item.data = await cache.get(item.src);
           } catch(error) {
-            if (item.wholeResponse) throw Error(`Could not capture the full response as an image. Keep the source chat active and retry. ${error.message}`);
             let crop=null;
             try{crop=item.elementId?await firefoxCrop(diagramRenders.get(item.elementId)?.node):null;}catch(cropError){error=cropError;}
             if(crop)Object.assign(item,crop);
