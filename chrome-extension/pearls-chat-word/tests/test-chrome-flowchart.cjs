@@ -43,6 +43,16 @@ const result=await page.evaluate(async({template,profile})=>{
  const branchZip=await JSZip.loadAsync(branchDoc.bytes);
  const branchXml=await branchZip.file('word/document.xml').async('string');
  if((branchXml.match(/<w:drawing>/g)||[]).length!==1||!branchXml.includes('Outside after branch'))throw Error('Word must contain one image for the branch and keep surrounding prose');
+ const wholeBlocks=PearlsCapture.responseBlocks(branching,'assistant');
+ if(wholeBlocks.length!==1||!wholeBlocks[0].wholeResponse)throw Error('A response with visuals must export as a single capture');
+ const wholeData=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks:wholeBlocks}],warnings:[]});
+ const wholeDoc=await PearlsWord.create(wholeData,{single:true,title:'Full response',templateBytes:new Uint8Array(template),profile});
+ const wholeZip=await JSZip.loadAsync(wholeDoc.bytes);
+ const wholeXml=await wholeZip.file('word/document.xml').async('string');
+ if((wholeXml.match(/<w:drawing>/g)||[]).length!==1||/<w:t[^>]*>[^<]*Outside after branch/.test(wholeXml)||branching.innerHTML!==branchMarkup)throw Error('Word must embed the entire visual response as one drawing');
+ const plain=document.createElement('div');
+ plain.innerHTML='<p>Editable text-only note</p>';
+ if(PearlsCapture.responseBlocks(plain,'assistant')[0]?.type!=='paragraph')throw Error('Text-only notes must remain editable');
  branching.remove();
  const blocks=PearlsCapture.blocks(fixture),data=await PearlsCapture.resolveImages({messages:[{role:'assistant',blocks}],warnings:[]});
  const image=data.messages[0].blocks.find(b=>b.type==='image');if(!image?.data)throw Error(JSON.stringify(data.warnings));
